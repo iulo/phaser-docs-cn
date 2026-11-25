@@ -742,9 +742,9 @@ Web Audio API具有从您的音频源提取频率,波形,以及其他数据的�
      }
      ```
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 - [samme](https://github.com/samme)

@@ -95,9 +95,9 @@ var vp9Video = scene.sys.game.device.video.vp9;    // Can this device play vp9 v
 var webmVideo = scene.sys.game.device.video.webm;  // Can this device play webm video files?
 ```
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 

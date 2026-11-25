@@ -321,9 +321,9 @@ var mask = container.createBitmapMask();
 - 容器控制儿童属性(位置,角度,α,可见,.etc),但组不会.
 - 游戏对象可以添加到许多组中,但只能添加到一个容器中(`exclusive`模式).
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 

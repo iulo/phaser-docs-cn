@@ -16,6 +16,8 @@ from opencc import OpenCC
 
 
 LABELS = {
+    "Author Credits": "作者署名",
+    "Content on this page includes work by:": "本页包含以下作者贡献的内容。",
     "Constructor": "构造函数", "Parameters": "参数", "Returns": "返回值",
     "Description": "说明", "Default": "默认值", "Examples": "示例",
     "Example": "示例", "Since": "引入版本", "Scope": "作用域", "Type": "类型",

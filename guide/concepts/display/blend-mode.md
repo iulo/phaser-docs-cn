@@ -68,9 +68,9 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/dis
 - `'XOR'`,或 ,或 , `Phaser.BlendModes.XOR`,或 ,或 , `27`
   - 形状在其他地方都重叠和正常地画出来时,是透明的。
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 

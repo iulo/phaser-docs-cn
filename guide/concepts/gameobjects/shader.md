@@ -330,9 +330,9 @@ var baseShader = new Phaser.Display.BaseShader(key, fragmentSrc, vertexSrc, unif
       - 示例: `color: { type: '3f', value: {x: 0, y: 0, z: 0}}`
     - `'4f'`:`initValue`是浮标编号`{x, y, z, w}`.
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 

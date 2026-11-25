@@ -123,9 +123,9 @@ gameObject.setMask(mask); // image.mask = mask;
     var shape = mask.geometryMask;
     ```
 
-## 作者的信用额度 {#author-credits}
+## 作者署名 {#author-credits}
 
-本页的内容包括下列工作:
+本页包含以下作者贡献的内容。
 
 - [RexRainbow](https://github.com/rexrainbow)
 
