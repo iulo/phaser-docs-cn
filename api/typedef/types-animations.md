@@ -6,12 +6,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> Animation {#static-animation}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 是 |  | 动画将关联的密钥, 即 spirite. animations. play( 关键) |
+| key | string | 是 |  | 动画将关联的键, 即 spirite. animations. play( 关键) |
 | frames | string \| Array.\<[Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe)> | 是 |  | 要么是字符串,在这种情况下它将使用与匹配键的纹理中的所有框架,要么是动画框架配置对象的数组. |
 | sortFrames | boolean | 是 | true | 如果您为 `frames` 提供了字符串, 您可以选择对框架名称进行数字排序 。 |
-| defaultTextureKey | string | 是 | null | 动画的所有帧都将使用纹理的密钥。 每个帧可以覆盖 。 |
+| defaultTextureKey | string | 是 | null | 动画的所有帧都将使用纹理的键。 每个帧可以覆盖 。 |
 | frameRate | number | 是 |  | 帧每秒播放的帧速率( 如果持续时间为空, 默认为 24) |
 | duration | number | 是 |  | 动画播放时间为毫秒。 如果不是来自 frameRate 。 |
 | skipMissedFrames | boolean | 是 | true | 如果时间滞后, 跳过框架, 还是总是向前? |
@@ -26,7 +26,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/Animation.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/Animation.js#L1)  
 引入版本：3.0.0
 
@@ -36,16 +36,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AnimationFrame {#static-animationframe}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 是 |  | 纹理管理器内用于此动画框架的纹理密钥 。 |
-| frame | string \| number | 是 |  | 用于此动画框架的纹理内框架的密钥或索引号。 |
+| key | string | 是 |  | 纹理管理器内用于此动画框架的纹理键 。 |
+| frame | string \| number | 是 |  | 用于此动画框架的纹理内框架的键或索引号。 |
 | duration | number | 是 | 0 | 动画的这个帧的长度,以ms表示. |
-| visible | boolean | 是 |  | 母游戏对象是否在此动画框中可见 ? |
+| visible | boolean | 是 |  | 父游戏对象是否在此动画框中可见 ? |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/AnimationFrame.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/AnimationFrame.js#L1)  
 引入版本：3.0.0
 
@@ -55,7 +55,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GenerateFrameNames {#static-generateframenames}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | prefix | string | 是 | "''" | 如果使用 `frames` 的幅度或阵列, 将字符串附加到每个生成的框名中。 |
 | start | number | 是 | 0 | 如果不提供`frames`,则返回第一个帧的编号。 |
@@ -67,7 +67,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/GenerateFrameNames.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/GenerateFrameNames.js#L1)  
 引入版本：3.0.0
 
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GenerateFrameNumbers {#static-generateframenumbers}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 是 | 0 | 动画的起始帧. |
 | end | number | 是 | -1 | 动画的结局框架. |
@@ -87,7 +87,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/GenerateFrameNumbers.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/GenerateFrameNumbers.js#L1)  
 引入版本：3.0.0
 
@@ -99,7 +99,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 动画将关联的密钥, 即 spirite. animations. play( 关键) |
+| key | string | 否 | 动画将关联的键, 即 spirite. animations. play( 关键) |
 | 类型 | string | 否 | 基于帧的动画(相对于基于骨的动画) |
 | frames | Array.\<[Phaser.Types.Animations.JSONAnimationFrame](/api/typedef/types-animations#jsonanimationframe)> | 否 | 本动画内部的动画Frame天体阵列. |
 | frameRate | number | 否 | 帧每秒播放的帧速率( 如果持续时间为空, 默认为 24) |
@@ -116,7 +116,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/JSONAnimation.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/JSONAnimation.js#L1)  
 引入版本：3.0.0
 
@@ -128,13 +128,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理的密钥 此动画Frame 使用. |
-| frame | string \| number | 否 | 本动画Frame使用的纹理内框架的密钥 。 |
+| key | string | 否 | 纹理的键 此动画Frame 使用. |
+| frame | string \| number | 否 | 本动画Frame使用的纹理内框架的键 。 |
 | duration | number | 否 | 播放时此帧应显示的额外时间( ms) 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/JSONAnimationFrame.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/JSONAnimationFrame.js#L1)  
 引入版本：3.0.0
 
@@ -151,7 +151,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/JSONAnimations.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/JSONAnimations.js#L1)  
 引入版本：3.0.0
 
@@ -163,7 +163,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 动画要播放的基于字符串的密钥,或动画实例. |
+| key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 动画要播放的基于字符串的键,或动画实例. |
 | frameRate | number | 是 | 帧每秒播放的帧速率( 如果持续时间为空, 默认为 24) |
 | duration | number | 是 | 动画播放时间为毫秒。 如果不是来自 frameRate 。 |
 | delay | number | 是 | 延迟开始重播。 数值以毫秒计 。 |
@@ -175,12 +175,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | hideOnComplete | boolean | 是 | 动画完成时, should smart. visible=假? |
 | skipMissedFrames | boolean | 是 | 如果时间滞后, 跳过框架, 还是总是向前? |
 | startFrame | number | 是 | 动画的框式开始从此播放. |
-| timeScale | number | 是 | 用于重播此动画的时间尺度. |
+| timeScale | number | 是 | 用于重播此动画的时间缩放倍率. |
 | randomFrame | boolean | 是 | 从随机选择的框架开始播放此动画 ? |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Animations
+**所属**: Phaser.Types.Animations
 > 源码：[src/animations/typedefs/PlayAnimationConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/typedefs/PlayAnimationConfig.js#L1)  
 引入版本：3.50.0
 

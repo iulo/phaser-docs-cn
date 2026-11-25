@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的设备的音频回放能力 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.audio`从任何场景。
 
@@ -28,7 +28,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Audio.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Audio.js#L9)  
 引入版本：3.0.0
 
@@ -40,7 +40,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的浏览器类型和版本 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.browser`从任何场景。
 
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Browser.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Browser.js#L9)  
 引入版本：3.0.0
 
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的浏览器的画布特性 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.canvasFeatures`从任何场景。
 
@@ -87,7 +87,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/CanvasFeatures.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/CanvasFeatures.js#L9)  
 引入版本：3.0.0
 
@@ -99,7 +99,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的浏览器的特性 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.features`从任何场景。
 
@@ -109,9 +109,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | canvasBitBltShift | boolean | 否 | 如果画布支持当源区域与目的区域重叠时, 将“ 复制” 比特Blt 本身为 True。 用于快速像素复制操作。 将使用 `null` 如果无法确定, `false` 打开 iOS 和不起作用的Safari。 |
 | file | boolean | 否 | 指示文件、 文件阅读器、 文件列表和 Blob API 是否全部可用, 允许在浏览器内进行文件读取操作 。 |
 | fileSystem | boolean | 否 | 指示是否可用的文件系统 API( requestFileSystem),允许沙盒本地文件存储访问 。 |
-| getUserMedia | boolean | 否 | 显示是否有可用的 getUserMedia API。 用于访问相机和麦克风输入。 注意: Firefox( 低于 21) 的旧版本可能报告支持, 但实际操作不正确 。 |
+| getUserMedia | boolean | 否 | 显示是否有可用的 getUserMedia API。 用于访问摄像机和麦克风输入。 注意: Firefox( 低于 21) 的旧版本可能报告支持, 但实际操作不正确 。 |
 | littleEndian | boolean | 否 | 显示设备是否使用小端字节排序。 只有在浏览器支持 TypedArray 时才会被检测。 如果无法确定端位, 将变为 `null` 。 |
-| localStorage | boolean | 否 | 指出浏览器会话之间是否有持续使用的密钥值数据可用Web存储 localStorage API。 |
+| localStorage | boolean | 否 | 指出浏览器会话之间是否有持续使用的键值数据可用Web存储 localStorage API。 |
 | pointerLock | boolean | 否 | 指示是否可用的指针锁 API,允许鼠标光标被隐藏并锁定到游戏画布上,用于第一人称样式输入. |
 | stableSort | boolean | 否 | 表示浏览器的Array.sort执行是否稳定,意思是等元在排序后保留其原来的相对顺序. |
 | support32bit | boolean | 否 | 指示设备是否支持32位像素使用 ArrayBuffer 和 键入数组视图(Uint8ClampedArray / Int32Array) 来操纵画布图像数据。需要小端字节排序 。 |
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Features.js#L11](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Features.js#L11)  
 引入版本：3.0.0
 
@@ -133,7 +133,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的浏览器的全屏幕支持 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.fullscreen`从任何场景。
 
@@ -147,7 +147,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Fullscreen.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Fullscreen.js#L7)  
 引入版本：3.0.0
 
@@ -159,7 +159,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的浏览器的输入支持 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.input`从任何场景。
 
@@ -172,7 +172,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Input.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Input.js#L9)  
 引入版本：3.0.0
 
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 
 确定运行此 Phaser Game 实例的设备的操作系统 。
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.os`从任何场景。
 
@@ -213,7 +213,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/OS.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/OS.js#L7)  
 引入版本：3.0.0
 
@@ -226,7 +226,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 确定运行此 Phaser Game 实例的浏览器的视频支持 。
 
-这些值在游戏的后缀序列中只读,并被包含在内.
+这些值在游戏启动时初始化，供只读访问。
 
 然后通过内部游戏系统引用,并可供您访问
 透过`this.sys.game.device.video`从任何场景。
@@ -246,7 +246,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Device
+**所属**: Phaser.Device
 > 源码：[src/device/Video.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/Video.js#L9)  
 引入版本：3.0.0
 

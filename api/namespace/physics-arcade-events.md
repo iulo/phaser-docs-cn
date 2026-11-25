@@ -16,9 +16,9 @@ static
 
 **说明:**
 
-拱廊物理世界碰撞事件.
+Arcade 物理世界碰撞事件.
 
-如果两个天体碰撞... 至少其中一个天体的[onCollide](/api/class/physics-arcade-body#onCollide)属性被设定为`true`, 则本次活动由Arcade物理世界实例发出。
+如果两个物理体碰撞... 至少其中一个物理体的[onCollide](/api/class/physics-arcade-body#onCollide)属性被设定为`true`, 则本次活动由Arcade物理世界实例发出。
 
 它提供了处理碰撞事件的一种替代手段,而不是使用回调方法.
 
@@ -48,9 +48,9 @@ static
 
 **说明:**
 
-拱廊物理世界重叠事件.
+Arcade 物理世界重叠事件.
 
-如果两个天体重叠_并且_其中至少有一个天体的[onOverlap](/api/class/physics-arcade-body#onOverlap)属性设定为`true`,则本次活动由Arcade Physics World example发出.
+如果两个物理体重叠_并且_其中至少有一个物理体的[onOverlap](/api/class/physics-arcade-body#onOverlap)属性设定为`true`,则本次活动由Arcade Physics World example发出.
 
 它提供了处理重叠事件的一种替代手段,而不是使用回调方法。
 
@@ -80,7 +80,7 @@ static
 
 **说明:**
 
-街机物理世界暂停事件.
+Arcade 物理世界暂停事件.
 
 本次事件是由一个Arcade物理世界实例在暂停时发出的.
 
@@ -100,7 +100,7 @@ static
 
 **说明:**
 
-拱廊物理世界复出事件.
+Arcade 物理世界复出事件.
 
 本次事件由Arcade物理世界实例发出,当它从暂停状态恢复时.
 
@@ -120,9 +120,9 @@ static
 
 **说明:**
 
-街机物理台式电路碰撞事件.
+Arcade 物理台式电路碰撞事件.
 
-如果一个身体与一个图案碰撞,则该事件由Arcade Physics World example发出,其[onCollide](/api/class/physics-arcade-body#onCollide)属性被设定为`true`。
+如果一个物理体与一个图案碰撞,则该事件由Arcade Physics World example发出,其[onCollide](/api/class/physics-arcade-body#onCollide)属性被设定为`true`。
 
 它提供了处理碰撞事件的一种替代手段,而不是使用回调方法.
 
@@ -134,8 +134,8 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 碰撞中涉及的游戏对象。 这是 `body` 的母体 。 |
-| tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 | 尸体的瓦片相撞了 尸体的瓦片上 |
-| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 游戏对象的弧形物理体 参与碰撞。 |
+| tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 | 物理体的瓦片相撞了 物理体的瓦片上 |
+| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 游戏对象的Arcade 物理体 参与碰撞。 |
 
 
 > 源码：[src/physics/arcade/events/TILE_COLLIDE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/events/TILE_COLLIDE_EVENT.js#L7)  
@@ -151,9 +151,9 @@ static
 
 **说明:**
 
-街机物理事件 泰尔重叠事件
+Arcade 物理事件 泰尔重叠事件
 
-如果一个身体与一个图案重叠_, 并且它的[onOverlap](/api/class/physics-arcade-body#onOverlap)属性被设置为`true`, 则此事件由Arcade Physics World example发出。
+如果一个物理体与一个图案重叠_, 并且它的[onOverlap](/api/class/physics-arcade-body#onOverlap)属性被设置为`true`, 则此事件由Arcade Physics World example发出。
 
 它提供了处理重叠事件的一种替代手段,而不是使用回调方法。
 
@@ -166,7 +166,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 重叠中涉及的游戏对象。 这是 `body` 的母程序 。 |
 | tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 | 车身的瓦片重叠。 |
-| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 游戏对象的弧形物理体 涉及重叠。 |
+| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 游戏对象的Arcade 物理体 涉及重叠。 |
 
 
 > 源码：[src/physics/arcade/events/TILE_OVERLAP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/events/TILE_OVERLAP_EVENT.js#L7)  
@@ -182,7 +182,7 @@ static
 
 **说明:**
 
-街机物理世界大事件.
+Arcade 物理世界大事件.
 
 如果一个机构与世界边界进行接触, 则这个事件由Arcade Physics World example发出。 它的[onWorldBounds](/api/class/physics-arcade-body#onWorldBounds) 属性被设定为`true`。
 
@@ -193,11 +193,11 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 撞到世界极限的拱廊物理体 |
-| up | boolean | 否 | 尸体被挡住了吗? |
-| down | boolean | 否 | 尸体被挡住了吗? |
-| left | boolean | 否 | 尸体被挡住了吗? |
-| right | boolean | 否 | 尸体被挡住了吗? |
+| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 撞到世界极限的Arcade 物理体 |
+| up | boolean | 否 | 物理体被挡住了吗? |
+| down | boolean | 否 | 物理体被挡住了吗? |
+| left | boolean | 否 | 物理体被挡住了吗? |
+| right | boolean | 否 | 物理体被挡住了吗? |
 
 
 > 源码：[src/physics/arcade/events/WORLD_BOUNDS_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/events/WORLD_BOUNDS_EVENT.js#L7)  
@@ -213,9 +213,9 @@ static
 
 **说明:**
 
-拱廊物理世界步步事件.
+Arcade 物理世界步步事件.
 
-当物理步骤运行时, 由 Arcade Physics World 实例发出此事件。 发送时间_ 之后_ 天体和碰撞器已更新 。
+当物理步骤运行时, 由 Arcade Physics World 实例发出此事件。 发送时间_ 之后_ 物理体和碰撞器已更新 。
 
 在高帧度的设定中,这可以是每个游戏帧的多次.
 

@@ -4,7 +4,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 图像是用于在游戏中显示静态图像的轻量级游戏对象,例如标识,背景,景色或其他非动画元素. 图像可以有输入事件和物理体,或者被调色,有色或滚动. 图像和Sprite的主要区别在于,由于没有动画组件,无法给图像动画.
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -106,7 +106,7 @@ var mask = image.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 

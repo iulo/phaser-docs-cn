@@ -357,7 +357,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-文字中风颜色.
+文字描边颜色.
 
 
 > 源码：[src/gameobjects/text/TextStyle.js#L122](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/TextStyle.js#L122)  
@@ -373,7 +373,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-文字中风厚度.
+文字描边粗细.
 
 
 > 源码：[src/gameobjects/text/TextStyle.js#L132](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/TextStyle.js#L132)  
@@ -513,7 +513,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 只有当文本对象有不止一行文字时,对齐才有效。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | align | string | 是 | "'left'" | 多行文本的文本对齐。 |
 
@@ -640,7 +640,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果给出了某个物体,则设定该物体的`fontFamily`,`fontSize`和`fontStyle`属性.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | font | string \| object | 否 |  | 要设置的字体家族或字体设置 。 |
 | updateText | boolean | 是 | true | 是否立即更新文本 。 |
@@ -737,7 +737,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置要绘制的最大行数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | max | number | 是 | 0 | 绘制的最大行数 。 |
 
@@ -791,7 +791,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 调用此方法总是重报父文本对象, 所以只有在您实际更改阴影设置时才调用它 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 横向阴影抵消。 |
 | y | number | 是 | 0 | 垂直阴影抵消。 |
@@ -820,7 +820,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设定阴影模糊半径 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | blur | number | 是 | 0 | 阴影模糊半径。 |
 
@@ -844,7 +844,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设影色.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color | string | 是 | "'#000'" | 阴色. |
 
@@ -892,7 +892,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设阴偏.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 横向阴影抵消。 |
 | y | number | 是 | 0 | 垂直阴影抵消。 |
@@ -943,8 +943,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| color | string \| CanvasGradient | CanvasPattern | 否 | 中风颜色. |
-| thickness | number | 否 | 中风厚度。 |
+| color | string \| CanvasGradient | CanvasPattern | 否 | 描边颜色. |
+| thickness | number | 否 | 描边粗细。 |
 
 
 **返回值:** [Phaser.GameObjects.Text](/api/class/gameobjects-text) - 父文本对象 。
@@ -966,7 +966,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置文本样式。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | style | [Phaser.Types.GameObjects.Text.TextStyle](/api/typedef/types-gameobjects-text#textstyle) | 否 |  | 要设置的样式设置 。 |
 | updateText | boolean | 是 | true | 是否立即更新文本 。 |
@@ -1018,7 +1018,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 无法通过回调来删除包装 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | TextStyleWordWrapCallback | 否 |  | 用于包装文本的自定义函数。 它将收到两个参数: 文本( 要包装的字符串) , textObject( 此文本实例) 。 它应该将包装的行作为数组或带有新行字符的字符串返回, 以指示中断点的发生地点 。 |
 | scope | object | 是 | null | 引用回调时将适用的范围 。 |
@@ -1045,7 +1045,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 擦除宽度的包件时通过无值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number \| null | 否 |  | 线条的最大宽度, 以像素表示。 设置为无法删除包线 。 |
 | useAdvancedWrap | boolean | 是 | false | 是否使用高级的包线算法。 如果为真, 空格会崩溃, 空格会从线条中剪切。 如果错误, 空格和空格会照原样保留 。 |

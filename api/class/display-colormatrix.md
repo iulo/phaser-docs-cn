@@ -46,7 +46,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将一个α- 光线色效果应用到这个 ColorMatrix 上。 它将颜色替换为灰度的描述原α, 黑色代表透明, 白色代表不透明, 并设置为全色 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -70,7 +70,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将一个α对亮度的颜色效果应用到这个 ColorMatrix 上。这可以将颜色替换成灰度的描述原α,其中白色代表透明,黑色代表不透明,并设置全α.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -94,7 +94,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 设置此 ColorMatrix 为黑色, 只保留 alpha。 用于您只想要 alpha 的大小写 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -118,7 +118,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 设定此颜色Matrix为黑白 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -142,7 +142,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 以给定的量修改此 ColorMatrix 的亮度 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 0 | 适用于此 ColorMatrix 的亮度。 0( 黑色) 到 1 之间 。 |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -167,7 +167,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将亮度对α颜色效果应用到此 ColorMatrix 上。这保存了 RGB, 但用颜色的亮度取代了α 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -191,7 +191,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将亮度对阿尔法颜色效果应用到这个 ColorMatrix 上。这保存了 RGB,但用颜色的亮度来取代α, 反转 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -215,7 +215,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将棕色调应用到这个 ColorMatrix 上.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -239,7 +239,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 以给定的量来更改此 ColorMatrix 的对比度 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 0 | 适用于此 ColorMatrix 的对比度 。 |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -264,7 +264,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 消除此颜色Matrix( 从它中移走颜色) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -288,7 +288,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将不饱和光辉应用到此 ColorMatrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -333,7 +333,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 设定此颜色Matrix为灰度 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 1 | 灰度尺度(0为黑色). |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -358,7 +358,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 以给定的值旋转此颜色Matrix的色调 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rotation | number | 是 | 0 | 适用于此 ColorMatrix 的 hue 旋转量, 以度计 。 |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -383,7 +383,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将 kodachrome 颜色效果应用到此 ColorMatrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -407,7 +407,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将一个三进制的颜色调用到此 ColorMatrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -431,7 +431,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将给定的矩阵`a`与目前的`_matrix`相乘.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | a | Array.\<number> | 否 |  | 5x4 阵列与 ColorMatrix._matrix 相乘 。 |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -456,7 +456,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 转换此 ColorMatrix 以获得负值 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -480,7 +480,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将夜视调应用到这个 ColorMatrix 上.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | intensity | number | 是 | 0.1 | 这种效果的强度. |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -505,7 +505,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将极性颜色效果应用到此 ColorMatrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -548,7 +548,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 以给定的量更改此颜色Matrix的饱和度 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 0 | 适用于此 ColorMatrix 的饱和度 。 |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
@@ -573,7 +573,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 应用 sepia 语调来达到这个 ColorMatrix 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -621,7 +621,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将此 ColorMatrix 的值移动到 BGR 顺序。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -645,7 +645,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将一个技术色彩效果应用到此色彩Matrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 
@@ -669,7 +669,7 @@ ColorMatrix类创建了可用于遮阳和图形操作的5x4矩阵,它提供了�
 将古董的针孔颜色效果应用到这个 ColorMatrix 上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | multiply | boolean | 是 | false | 乘以产生的 ColorMatrix(`true`),或设置它(`false`) ? |
 

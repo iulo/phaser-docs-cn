@@ -6,17 +6,17 @@ Mesh游戏对象允许您制作一组纹理化的顶点,并操纵这些顶点的
 
 包括支持从网格,模型数据或波前OBJ文件生成网格数据.
 
-尽管您可以使用此来渲染3D对象, 但其主要用途是显示更复杂的Sprites, 或者Sprites, 您需要精细控制顶点位置才能在游戏中实现特殊效果。 请注意, 渲染仍然使用 Phaser的正图相机进行( 在通过 `projectionMesh` 转换后, 请参看 `setPerspective` 、 `setOrtho` 和 `panZ` 方法 ) 。 因此, 所有深度和面部测试都最终在正图空间进行 。
+尽管您可以使用此来渲染3D对象, 但其主要用途是显示更复杂的Sprites, 或者Sprites, 您需要精细控制顶点位置才能在游戏中实现特殊效果。 请注意, 渲染仍然使用 Phaser的正图摄像机进行( 在通过 `projectionMesh` 转换后, 请参看 `setPerspective` 、 `setOrtho` 和 `panZ` 方法 ) 。 因此, 所有深度和面部测试都最终在正图空间进行 。
 
 渲染过程会通过这个 Mesh 的面孔进行排列,并渲染出每个被认为在镜头中看到的面孔。没有使用深度缓冲,因此,你应该注意不要使用具有过多顶点的模型数据,或者重叠几何,或者你可能遇到z深度的战斗。 Mesh 的设计是为了允许更先进的2D布局,而不是显示3D对象,尽管它可以达到一定程度.
 
-简言之,如果想要重制 Crysis,请使用3D引擎,而不是Mesh。但是,如果你想在游戏中轻松添加一些小的趣味的3D元素,或者创造一些涉及顶点拼写的特殊效果,这个对象对你是正确的。网格数据成为WebGL批次的一部分,就像标准Sprite一样,所以不会引入额外的遮阳器。因为网格像任何其他Sprite一样,在WebGL批次中产生顶点,所以也可以在网格上使用所有常见的Game Object组件,如定制管道,面具,混合模式或纹理等.
+简言之,如果想要重制 Crysis,请使用3D引擎,而不是Mesh。但是,如果你想在游戏中轻松添加一些小的趣味的3D元素,或者创造一些涉及顶点拼写的特殊效果,这个对象对你是正确的。网格数据成为WebGL批次的一部分,就像标准Sprite一样,所以不会引入额外的遮阳器。因为网格像任何其他Sprite一样,在WebGL批次中产生顶点,所以也可以在网格上使用所有常见的Game Object组件,如定制管道,遮罩,混合模式或纹理等.
 
 注意, Mesh 天体仅为 WebGL,没有 Canvas 对应的 。
 
 网格起源总是0.5×0.5,不能改变.
 
-## 基本使用 {#basic-usage}
+## 基本用法 {#basic-usage}
 
 1. 装入纹理
 
@@ -152,7 +152,7 @@ Mesh游戏对象允许您制作一组纹理化的顶点,并操纵这些顶点的
    );
    ```
 
-   - `key`: OBJ缓存中模型数据要添加到这个 Mesh 中的密钥.
+   - `key`: OBJ缓存中模型数据要添加到这个 Mesh 中的键.
    - `scale`: 模型数据缩放的数值。默认为`1`。
    - `x`,`y`,`z`:用这个金额将型号x/y/z位置翻译.
    - `rotateX`,`rotateY`,`rotateZ`:用这个数值旋转x/y/z轴上的模型,以弧度表示.
@@ -247,8 +247,8 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于本Plan
   // plane.play(key, ignoreIfPlaying);
   ```
 
-  - `key`:动画密钥字符串,或动画配置
-    - 动画的字符串密钥
+  - `key`:动画键字符串,或动画配置
+    - 动画的字符串键
     - 动画配置, 以覆盖默认配置
 
       ```js
@@ -274,21 +274,21 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于本Plan
   // plane.playReverse(key, ignoreIfPlaying);
   ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 延迟后播放
 
   ```js
   plane.playAfterDelay(key, delay);
   ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 重复后播放
 
   ```js
   plane.playAfterRepeat(key, repeatCount);
   ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 
 #### 停下来 {#stop}
 
@@ -380,7 +380,7 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于本Plan
     var repeatDelay = plane.anims.yoyo;
     ```
 
-- 当前动画密钥
+- 当前动画键
 
   ```js
   var key = plane.anims.getName();
@@ -491,7 +491,7 @@ var mask = plane.createBitmapMask();
   var mesh = new MyMesh(scene, x, y, texture, frame);
   ```
 
-## 控制器 {#control}
+## 控制 {#control}
 
 ### 视图 {#view}
 

@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Group
+**所属**: Phaser.Types.GameObjects.Group
 > 源码：[src/gameobjects/group/typedefs/GroupCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/typedefs/GroupCallback.js#L1)  
 引入版本：3.0.0
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Group
+**所属**: Phaser.Types.GameObjects.Group
 > 源码：[src/gameobjects/group/typedefs/GroupClassTypeConstructor.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/typedefs/GroupClassTypeConstructor.js#L1)  
 引入版本：3.0.0
 
@@ -30,7 +30,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GroupConfig {#static-groupconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | classType | function | 是 | "Sprite" | 设置 QQlink 选项 Phaser.GameObjects.Group#classType}. |
 | 名称 | string | 是 | "''" | 设置 QQLink Phaser.GameObjects.Group#name}. |
@@ -45,7 +45,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Group
+**所属**: Phaser.Types.GameObjects.Group
 > 源码：[src/gameobjects/group/typedefs/GroupConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/typedefs/GroupConfig.js#L1)  
 引入版本：3.0.0
 
@@ -64,18 +64,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 `key` 需要。 QQlink 链接 Phaser.GameObjects.Group#defaultKey}没有被使用。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| Array.\<string> | 否 |  | 每个新游戏对象的纹理密钥。 必须为非提供对象创建 。 |
+| key | string \| Array.\<string> | 否 |  | 每个新游戏对象的纹理键。 必须为非提供对象创建 。 |
 | classType | function | 是 |  | 每个新游戏对象的类. |
-| frame | string \| Array.\<string> | number | Array.\<number> | 是 | null | 每个新游戏对象的纹理框架. |
+| frame | string \| Array.\<string> | number | Array.\<number> | 是 | null | 每个新游戏对象的纹理帧. |
 | quantity | number | 是 | false | 要创建的游戏对象数。 如果设定, 则会覆盖 `frameQuantity` 值。 使用 `frameQuantity` 来进行更高级的控制 。 |
 | visible | boolean | 是 | true | 每个新游戏对象的可见状态. |
 | active | boolean | 是 | true | 每个新游戏对象的活跃状态 。 |
 | repeat | number | 是 | 0 | 每个`key`×`frame`组合的次数将*重复*(在第一次组合之后). |
 | randomKey | boolean | 是 | false | 随机选择 `key` 。 |
 | randomFrame | boolean | 是 | false | 随机选择 `frame` 。 |
-| yoyo | boolean | 是 | false | 通过`key`和`frame`向前移动后向后移动,选择密钥和帧. |
+| yoyo | boolean | 是 | false | 通过`key`和`frame`向前移动后向后移动,选择键和帧. |
 | frameQuantity | number | 是 | 1 | 每一次`frame`的次数应加一个`key`. |
 | max | number | 是 | 0 | 创建新游戏对象的最大数量. 0 并非最大. |
 | setXY | object | 是 |  | 选项在QQlink Phaser.Actions.SetXY} 中命名 。 |
@@ -91,7 +91,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Group
+**所属**: Phaser.Types.GameObjects.Group
 > 源码：[src/gameobjects/group/typedefs/GroupCreateConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/typedefs/GroupCreateConfig.js#L1)  
 引入版本：3.0.0
 
@@ -103,7 +103,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Group
+**所属**: Phaser.Types.GameObjects.Group
 > 源码：[src/gameobjects/group/typedefs/GroupMultipleCreateCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/typedefs/GroupMultipleCreateCallback.js#L1)  
 引入版本：3.0.0
 

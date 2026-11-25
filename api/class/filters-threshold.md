@@ -10,7 +10,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 阈值为存储范围,有两边,每个边对每个通道都有值,介于0到1之间,如果两个边缘相同,则阈值没有内插,并且会输出0到1. 每个通道也可以反转.
 
-通过过滤列表组件,将阈值效应添加到相机中:
+通过过滤列表组件,将阈值效应添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -24,7 +24,7 @@ camera.filters.external.addThreshold();
 `new Threshold(camera, [edge1], [edge2], [invert])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机。 |
 | edge1 | number \| Array.\<number> | 是 | 0.5 | 阈值的第一个边缘。 这可能是 RGBA 频道的数组, 或者一个单一的号码, 用于所有 4 频道 。 |
@@ -146,7 +146,7 @@ camera.filters.external.addThreshold();
 这保证了第一边缘不会大于第二边缘,它可能会在边缘之间互换通道来保证这一点.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | edge1 | number \| Array.\<number> | 是 | 0.5 | 阈值的第一个边缘。 这可能是 RGBA 频道的数组, 或者一个单一的号码, 用于所有 4 频道 。 |
 | edge2 | number \| Array.\<number> | 是 | 0.5 | 阈值的第二个边缘。 这可能是 RGBA 频道的数组, 或者一个单一的数字来应用到所有 4 频道 。 |
@@ -171,7 +171,7 @@ camera.filters.external.addThreshold();
 设置阈值过滤器每个通道的反转状态。 当一个通道被反转时, 其输出会翻转: 输出0 的像素, 而输出1 的反转。 它可以用来创建负值或反转的每个通道的阈值效果。 如果不提供 `invert`, 所有通道默认为 `false` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | invert | boolean \| Array.\<boolean> | 是 | false | 是否每个频道都倒转。 这可能是 RGBA 频道的数组, 或者一个布尔来应用到所有 4 频道 。 |
 

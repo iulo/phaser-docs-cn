@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个使遮罩过滤器效果的RenderNode,用来使用遮罩纹理选择性显示或隐藏游戏对象的区域.
 
-面具是从一个 [Phaser.Filters.Mask](/api/class/filters-mask) 控制器,它既可以提供静态的 GL 纹理,也可以提供动态渲染的游戏对象作为遮罩。当使用遮罩游戏对象时,如果使用,这个节点将重新将其放入每个框架的纹理中。 `autoUpdate` 已启用,或何时启用 `needsUpdate` 标记。可以选择将面具反转,这样,掩盖的区域就被显示而不是隐藏。
+遮罩是从一个 [Phaser.Filters.Mask](/api/class/filters-mask) 控制器,它既可以提供静态的 GL 纹理,也可以提供动态渲染的游戏对象作为遮罩。当使用遮罩游戏对象时,如果使用,这个节点将重新将其放入每个框架的纹理中。 `autoUpdate` 已启用,或何时启用 `needsUpdate` 标记。可以选择将遮罩反转,这样,掩盖的区域就被显示而不是隐藏。
 
 这个节点将源图像绑定在纹理单元0上,将遮罩纹理绑定在纹理单元1上,然后将`invert`旗传递到碎片遮蔽器上,以控制遮罩极性.
 
@@ -76,11 +76,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | controller | [Phaser.Filters.Mask](/api/class/filters-mask) | 否 | 提供遮罩纹理和更新旗帜的过滤控制器. |
-| textures | Array.\<WebGLTexture> | 否 | 要填充的纹理阵列。 面具纹理被写入索引 1 。 |
+| textures | Array.\<WebGLTexture> | 否 | 要填充的纹理阵列。 遮罩纹理被写入索引 1 。 |
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文,用于确定动态纹理更新的尺寸. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterMask.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterMask.js#L45)  
@@ -98,7 +98,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设置遮罩过滤器所需的遮蔽制服。
 
-将`uMaskSampler`制服套在纹理单元1上,这样,口罩纹理的碎片遮蔽样品就会通过`invert`布林旗来控制口罩是正常应用的还是倒置的.
+将`uMaskSampler`制服套在纹理单元1上,这样,遮罩纹理的碎片遮蔽样品就会通过`invert`布林旗来控制遮罩是正常应用的还是倒置的.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -107,7 +107,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterMask.js#L72](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterMask.js#L72)  

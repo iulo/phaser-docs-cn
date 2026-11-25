@@ -447,7 +447,7 @@ var mask = txt.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 

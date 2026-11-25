@@ -136,14 +136,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在给定的图形对象上绘制此曲线。
 
-曲线是使用 `Graphics.strokePoints` 绘制的, 所以无论当前图形的中风颜色是什么, 都会绘制。 图形对象在绘图前没有清除, 因此曲线会出现在其他已显示对象的上方 。
+曲线是使用 `Graphics.strokePoints` 绘制的, 所以无论当前图形的描边颜色是什么, 都会绘制。 图形对象在绘图前没有清除, 因此曲线会出现在其他已显示对象的上方 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 绘制此曲线的图形实例 。 |
 | pointsTotal | number | 是 | 32 | 曲线的分辨率。 其产生的值越高, 其产生的光滑度就越高, 其代价就是渲染性能。 |
@@ -170,7 +170,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 您可以控制界限的准确性。 给出的值用于绘制曲线的几点。 更高的值在计算速度上更准确 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | out | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 |  | 将界限存储到的矩形。 如果错误, 将创建新对象 。 |
 | accuracy | number | 是 | 16 | 界限计算精度. |
@@ -297,7 +297,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 得到曲线上相对位置的点,以弧长表示.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -338,7 +338,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 将返回`1 + divisions`点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -368,7 +368,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从曲线中获取随机点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -399,7 +399,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将返回`1 + divisions`点。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | divisions | number | 是 | "this.defaultDivisions" | 师拟制之数. |
 | stepRate | number | 是 |  | 点间步数。 用于计算分区变弱时返回的点数。 如果分区为正数, 则忽略 。 |
@@ -424,7 +424,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 曲线起始处获得点数.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -452,7 +452,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在曲线上相对位置获得单位矢量正切。 如果子类不使用分析正切导出来覆盖这种方法, 则正切值大致为将小三角形分开两个点取样, 并计算它们之间正常方向向量。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -481,7 +481,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在曲线的相对位置上,按弧长得到一个单位矢量正切值。
 
-**Tags:**
+**标签:**
 
  - generic
 

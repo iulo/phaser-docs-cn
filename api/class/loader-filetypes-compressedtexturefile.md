@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string | 否 | 此文件使用的密钥 。 |
+| key | string | 否 | 此文件使用的键 。 |
 | entry | [Phaser.Types.Loader.FileTypes.CompressedTextureFileEntry](/api/typedef/types-loader-filetypes#compressedtexturefileentry) | 否 | 要加载的压缩纹理文件条目 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -95,7 +95,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-在每个文件完成加载时调用。 减少待加文件的计数, 并在加载多图集配置时, 解析已完成的 JSON , 以动态排队方式列出地图集中引用的每个纹理的二进制实例, 以及任何相关的普通地图。 装入器的基础 URL、 路径和前缀在此过程中临时调整到多图集设置中, 然后恢复 。
+在每个文件完成加载时调用。 减少待加文件的计数, 并在加载多图集配置时, 解析已完成的 JSON , 以动态排队方式列出地图集中引用的每个纹理的二进制实例, 以及任何相关的普通地图。 资源加载器的基础 URL、 路径和前缀在此过程中临时调整到多图集设置中, 然后恢复 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -103,7 +103,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 已完成处理的文件 。 |
 
 
-**Overrides:** Phaser.Loader.MultiFile#onFileComplete
+**重写:** Phaser.Loader.MultiFile#onFileComplete
 
 
 > 源码：[src/loader/filetypes/CompressedTextureFile.js#L103](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/CompressedTextureFile.js#L103)  

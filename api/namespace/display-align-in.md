@@ -18,12 +18,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其下边缘与`alignIn`游戏对象的下边缘相匹配,其水平中心与`alignIn`的横向中心对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -49,12 +49,12 @@ static
 
 取一个给定的游戏对象并校对, 使其位于另一个对象的左下角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -80,12 +80,12 @@ static
 
 取一个给定的游戏对象并校对, 使其定位在下方右角 `alignIn` 游戏对象。 右边缘 `gameObject` 匹配到右边 `alignIn`,然后将下边缘 `gameObject` 匹配到 `alignIn`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -111,12 +111,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其定位在另一个对象的中心。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -142,12 +142,12 @@ static
 
 选择一个特定的游戏对象并与之对齐,使其左边缘与 `alignIn`游戏对象的左边缘相冲,其垂直中心与 `alignIn` 的垂直中心相匹配。这可将游戏对象置于参考对象的左中心内部位置。可选择的偏移可以应用来调整任意一轴的最后一个位置。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -173,12 +173,12 @@ static
 
 取一个给定的游戏对象并校正它, 使其相对于另一个游戏对象的位置。 所使用的对齐基于 `position` 参数, 是一个 `ALIGN_CONST` 值, 如 `LEFT_CENTER` 或 `TOP_RIGHT` 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -205,12 +205,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其右边缘与`alignIn`游戏对象的右边缘相冲,其垂直中心与`alignIn`游戏对象的垂直中心对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -236,12 +236,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其顶端边缘与`alignIn`游戏对象的顶端边缘相冲,横向居中.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -267,12 +267,12 @@ static
 
 取下给定的游戏对象并校对,使其位于`alignIn`游戏对象的左上角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -298,12 +298,12 @@ static
 
 取一个给定的游戏对象并校对,使其定位在`alignIn`游戏对象的右上角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |

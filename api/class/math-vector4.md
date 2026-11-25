@@ -335,7 +335,7 @@ The z component of this Vector.
 将这个矢量向给定矢量进发.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | v | [Phaser.Math.Vector4](/api/class/math-vector4) | 否 |  | 向内插插管4号 |
 | t | number | 是 | 0 | 插值百分比,介于0到1之间. |

@@ -40,7 +40,7 @@ static
 
 **说明:**
 
-设置此游戏对象物质体的碰撞类别。 此数字必须是 2^0 (= 1) 和 2^31 之间的两个功率。 两个具有不同碰撞组的天体( 见 [#setCollisionGroup](#setCollisionGroup)) 只有在它们的碰撞类别包含在碰撞口罩中时才会碰撞( 见 [#setCollidesWith](#setCollidesWith)) 。
+设置此游戏对象物质体的碰撞类别。 此数字必须是 2^0 (= 1) 和 2^31 之间的两个功率。 两个具有不同碰撞组的物理体( 见 [#setCollisionGroup](#setCollisionGroup)) 只有在它们的碰撞类别包含在碰撞遮罩中时才会碰撞( 见 [#setCollidesWith](#setCollidesWith)) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -90,12 +90,12 @@ static
 
 设置一个调用符, 当游戏对象的物质主体开始与另一个对象相撞时, 将引用该调用符。 调用符会发送一个 `Phaser.Types.Physics.Matter.MatterCollisionData` 对象 。
 
-这不会改变身体碰撞的类别、组或过滤器。这些必须设置在召回之外。
+这不会改变物理体碰撞的类别、组或过滤器。这些必须设置在召回之外。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| callback | function | 否 | 召回,当这个身体 开始与另一个碰撞。 |
+| callback | function | 否 | 召回,当这个物理体 开始与另一个碰撞。 |
 
 
 **返回值:** [Phaser.Physics.Matter.Components.Collision](/api/namespace/physics-matter-components-collision) - 此游戏对象实例 。
@@ -114,9 +114,9 @@ static
 
 **说明:**
 
-设置一个调用符, 当此游戏对象的物质体正与另一个天体积极碰撞时, 将引用每个步骤。 调用符会发送一个 `Phaser.Types.Physics.Matter.MatterCollisionData` 对象 。
+设置一个调用符, 当此游戏对象的物质体正与另一个物理体积极碰撞时, 将引用每个步骤。 调用符会发送一个 `Phaser.Types.Physics.Matter.MatterCollisionData` 对象 。
 
-这不会改变身体碰撞的类别、组或过滤器。这些必须设置在召回之外。
+这不会改变物理体碰撞的类别、组或过滤器。这些必须设置在召回之外。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -142,12 +142,12 @@ static
 
 设置一个调用符, 当此游戏对象的物质体停止与另一个对象碰撞时, 将引用该调用符。 调用符会发送一个 `Phaser.Types.Physics.Matter.MatterCollisionData` 对象 。
 
-这不会改变身体碰撞的类别、组或过滤器。这些必须设置在召回之外。
+这不会改变物理体碰撞的类别、组或过滤器。这些必须设置在召回之外。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| callback | function | 否 | 当身体停止与另一个身体碰撞时,召回来引用。 |
+| callback | function | 否 | 当物理体停止与另一个物理体碰撞时,召回来引用。 |
 
 
 **返回值:** [Phaser.Physics.Matter.Components.Collision](/api/namespace/physics-matter-components-collision) - 此游戏对象实例 。
@@ -168,12 +168,12 @@ static
 
 设置一个调用符, 当此游戏对象的物质体与特定的机构碰撞时, 将引用该调用符。 调用符会发送到另一个机构, 并同时发送一个 `Phaser.Types.Physics.Matter.MatterCollisionData` 对象 。
 
-这不会改变身体碰撞的类别、组或过滤器。这些必须设置在召回之外。
+这不会改变物理体碰撞的类别、组或过滤器。这些必须设置在召回之外。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | MatterJS.Body \| Array.\<MatterJS.Body> | 否 | 身体,或一系列身体, 测试与碰撞。 |
+| body | MatterJS.Body \| Array.\<MatterJS.Body> | 否 | 物理体,或一系列物理体, 测试与碰撞。 |
 | callback | function | 否 | 当这个机构与特定机构发生碰撞时,可召回援引。 |
 
 

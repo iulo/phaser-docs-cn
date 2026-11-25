@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象被添加到场景中 。 |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 游戏对象被添加到的景色 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/ADDED_TO_SCENE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/ADDED_TO_SCENE_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -33,7 +33,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/BOOT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/BOOT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 提到事件发生的场景 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/CREATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/CREATE_EVENT.js#L7)  
 引入版本：3.17.0
 
@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/DESTROY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -92,7 +92,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 暂停时传递到此场景的可选数据对象 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/PAUSE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/PAUSE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 场景系统后更新事件.
 
-此事件由游戏主循环步骤中由场景发送.
+场景会在游戏主循环的更新步骤中触发此事件。
 
 场景单步的事件流程如下:
 
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/POST_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/POST_UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -130,7 +130,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 场景系统预渲染事件.
 
-此事件由游戏主循环步骤中由场景发送.
+场景会在游戏主循环的更新步骤中触发此事件。
 
 场景单步的事件流程如下:
 
@@ -151,7 +151,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) \| [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 制造场景的造型者 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/PRE_RENDER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/PRE_RENDER_EVENT.js#L7)  
 引入版本：3.53.0
 
@@ -160,7 +160,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 场景系统预更新事件.
 
-此事件由游戏主循环步骤中由场景发送.
+场景会在游戏主循环的更新步骤中触发此事件。
 
 场景单步的事件流程如下:
 
@@ -180,7 +180,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/PRE_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/PRE_UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -200,7 +200,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 启动时传递给此场景的可选数据对象 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/READY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/READY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -218,7 +218,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象被删除于场景 。 |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 游戏对象被删除的场景 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/REMOVED_FROM_SCENE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/REMOVED_FROM_SCENE_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -227,7 +227,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 场景系统变迁事件.
 
-此事件由游戏主循环步骤中由场景发送.
+场景会在游戏主循环的更新步骤中触发此事件。
 
 场景单步的事件流程如下:
 
@@ -248,7 +248,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) \| [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 制造场景的造型者 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/RENDER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/RENDER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -267,7 +267,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 一个可选的数据对象,在恢复时被传递到此场景. |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/RESUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/RESUME_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -289,7 +289,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 关闭时传递给此场景的可选数据对象 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/SHUTDOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/SHUTDOWN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -308,7 +308,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 被发送到睡眠时传递到此场景的可选数据对象. |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/SLEEP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/SLEEP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -325,7 +325,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/START_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -353,7 +353,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 过渡完成的场景 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/TRANSITION_COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/TRANSITION_COMPLETE_EVENT.js#L7)  
 引入版本：3.5.0
 
@@ -382,7 +382,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | from | [Phaser.Scene](/api/class/scene) | 否 | 参考正在过渡的场景。 |
 | duration | number | 否 | 过渡期以毫秒计。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/TRANSITION_INIT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/TRANSITION_INIT_EVENT.js#L7)  
 引入版本：3.5.0
 
@@ -408,7 +408,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | target | [Phaser.Scene](/api/class/scene) | 否 | 参考正在向外过渡的场景. |
 | duration | number | 否 | 过渡期以毫秒计。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/TRANSITION_OUT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/TRANSITION_OUT_EVENT.js#L7)  
 引入版本：3.5.0
 
@@ -440,7 +440,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | from | [Phaser.Scene](/api/class/scene) | 否 | 参考正在过渡的场景。 |
 | duration | number | 否 | 过渡期以毫秒计。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/TRANSITION_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/TRANSITION_START_EVENT.js#L7)  
 引入版本：3.5.0
 
@@ -467,7 +467,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | from | [Phaser.Scene](/api/class/scene) | 否 | 参考正在过渡的场景。 |
 | duration | number | 否 | 过渡期以毫秒计。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/TRANSITION_WAKE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/TRANSITION_WAKE_EVENT.js#L7)  
 引入版本：3.5.0
 
@@ -476,7 +476,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 场景系统更新事件.
 
-此事件由游戏主循环步骤中由场景发送.
+场景会在游戏主循环的更新步骤中触发此事件。
 
 场景单步的事件流程如下:
 
@@ -496,7 +496,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -515,7 +515,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 | data | any | 是 | 醒悟时传递给这个场景的可选数据对象. |
 
-**Member of:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
+**所属:** [Phaser.Scenes.Events](/api/namespace/scenes-events)
 > 源码：[src/scene/events/WAKE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/events/WAKE_EVENT.js#L7)  
 引入版本：3.0.0
 

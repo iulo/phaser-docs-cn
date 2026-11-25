@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseConfig {#static-noiseconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.Noise.NoiseQuadConfig](/api/typedef/types-gameobjects-noise#noisequadconfig) | 是 |  | 此噪声将使用的配置对象 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Noise
+**所属**: Phaser.Types.GameObjects.Noise
 > 源码：[src/gameobjects/noise/typedefs/NoiseConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/typedefs/NoiseConfig.js#L1)  
 引入版本：4.0.0
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseQuadConfig {#static-noisequadconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | noiseOffset | Array.\<number> | 是 | "[ 0, 0 ]" | 噪音纹理的抵消 |
 | noisePower | number | 是 |  | 噪声值的表示符。 下值去除低值; 高值去除高值 。 |
@@ -35,7 +35,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Noise
+**所属**: Phaser.Types.GameObjects.Noise
 > 源码：[src/gameobjects/noise/typedefs/NoiseQuadConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/typedefs/NoiseQuadConfig.js#L1)  
 引入版本：4.0.0
 

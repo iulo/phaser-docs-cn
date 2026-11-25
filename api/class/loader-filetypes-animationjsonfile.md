@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-animationjsonfile)
 
-适合装入器装入的单张动画 JSON 文件.
+适合资源加载器装入的单张动画 JSON 文件.
 
 这些是使用Phaser.Loader.LoaderPlugin#动画法创建的,一般不直接创建.
 
@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.json`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. json" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 | dataKey | string | 是 | 当 JSON 文件加载时, 将只存储此属性到缓存 。 |
@@ -70,7 +70,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-装入程序结束后, 装入器完成队列中的所有文件后调用 。
+装入程序结束后, 资源加载器完成队列中的所有文件后调用 。
 
 
 > 源码：[src/loader/filetypes/AnimationJSONFile.js#L64](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AnimationJSONFile.js#L64)  
@@ -89,7 +89,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile 自动调用。 此方法控制了文件在加载数据中的额外工作 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/AnimationJSONFile.js#L48](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AnimationJSONFile.js#L48)  

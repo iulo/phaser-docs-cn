@@ -13,19 +13,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 添加到纹理管理器中的纹理密钥. |
+| key | string | 否 | 添加到纹理管理器中的纹理键. |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 提及纹理管理器中添加的纹理. |
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/ADD_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/ADD_EVENT.js#L7)  
 引入版本：3.0.0
 
 ## ADD_KEY {#add_key}
 
 
-**说明:** 纹理添加密钥事件 。
+**说明:** 纹理添加键事件 。
 
-当添加了给定密钥的纹理时,此事件由纹理管理器发出.
+当添加了给定键的纹理时,此事件由纹理管理器发出.
 
 使用:`this.textures.on('addtexture-key', listener)`,从场内听这个事件.
 
@@ -33,7 +33,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 提及纹理管理器中添加的纹理. |
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/ADD_KEY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/ADD_KEY_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -49,9 +49,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 无法加载到纹理管理器的纹理密钥 。 |
+| key | string | 否 | 无法加载到纹理管理器的纹理键 。 |
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/ERROR_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/ERROR_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -69,10 +69,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理管理器装入的纹理密钥 。 |
+| key | string | 否 | 纹理管理器装入的纹理键 。 |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 纹理管理器装入的纹理参考文献 。 |
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/LOAD_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/LOAD_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -85,7 +85,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 完全准备继续前的同步事件。 当完成时, 纹理管理器通过游戏发布此事件
 例子,它告诉游戏继续启动。
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/READY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/READY_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -103,25 +103,25 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从纹理管理器中移除的纹理密钥. |
+| key | string | 否 | 从纹理管理器中移除的纹理键. |
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/REMOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/REMOVE_EVENT.js#L7)  
 引入版本：3.0.0
 
 ## REMOVE_KEY {#remove_key}
 
 
-**说明:** 纹理删除密钥事件 。
+**说明:** 纹理删除键事件 。
 
-当带给定密钥的纹理被移除时,此事件由纹理管理器发出.
+当带给定键的纹理被移除时,此事件由纹理管理器发出.
 
 使用:`this.textures.on('removetexture-key', listener)`,从场内听这个事件.
 
 如果您还有游戏对象仍然使用已删除的纹理, 它们会开始投掷
 下一次尝试渲染时出错。 请确定清除此事件处理器中所有纹理的使用 。
 
-**Member of:** [Phaser.Textures.Events](/api/namespace/textures-events)
+**所属:** [Phaser.Textures.Events](/api/namespace/textures-events)
 > 源码：[src/textures/events/REMOVE_KEY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/REMOVE_KEY_EVENT.js#L7)  
 引入版本：3.60.0
 

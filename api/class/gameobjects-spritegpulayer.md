@@ -745,7 +745,7 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 当此 SpriteGPULayer 添加到场景时调用。 将它与场景的更新列表一起注册, 以便它接收 `preUpdate` 调用每个帧 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/spritegpulayer/SpriteGPULayer.js#L416](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/spritegpulayer/SpriteGPULayer.js#L416)  
@@ -984,10 +984,10 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 
 **说明:**
 
-返回用于阴影程序特性的列表。 阴影程序编译时使用此列表 。
+返回用于着色器程序特性的列表。 着色器程序编译时使用此列表 。
 
 
-**返回值:** Array.\<string> - 一组特性,可以在阴影程序中启用。
+**返回值:** Array.\<string> - 一组特性,可以在着色器程序中启用。
 
 
 > 源码：[src/gameobjects/spritegpulayer/SpriteGPULayer.js#L468](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/spritegpulayer/SpriteGPULayer.js#L468)  
@@ -1086,10 +1086,10 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/spritegpulayer/SpriteGPULayer.js#L1632](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/spritegpulayer/SpriteGPULayer.js#L1632)  
@@ -1130,7 +1130,7 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 当这个 SpriteGPULayer 从场景中移除时调用。 从场景的更新列表中调用它, 因此它不再收到 `preUpdate` 的呼叫 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/spritegpulayer/SpriteGPULayer.js#L428](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/spritegpulayer/SpriteGPULayer.js#L428)  
@@ -1151,7 +1151,7 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 缓冲器没有调整大小 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 要删除的成员索引 。 |
 | count | number | 是 | 1 | 要删除的成员数,默认为 1. |
@@ -1178,7 +1178,7 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 这是一项昂贵的操作,因为它需要更新整个缓冲器,需要许多帧才能完成.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | count | number | 否 |  | 斯普里特GPULayer中的新成员数. |
 | clear | boolean | 是 | false | 是否清除缓冲器 。 |
@@ -1216,9 +1216,9 @@ SpriteGPULayer是一个包含成员对象集合的复合对象。它将这些对
 
 **说明:**
 
-设定动画的启用状态。 这将启用或禁用阴影程序中的动画。 动画加到 `addMember` 时会自动调用这种方法, 所以您不需要手动调用它 。
+设定动画的启用状态。 这将启用或禁用着色器程序中的动画。 动画加到 `addMember` 时会自动调用这种方法, 所以您不需要手动调用它 。
 
-每部被启用的动画在阴影程序里都有成本,特别是低端设备可能无法编译大量动画,所以在启用许多动画时要小心.
+每部被启用的动画在着色器程序里都有成本,特别是低端设备可能无法编译大量动画,所以在启用许多动画时要小心.
 
 注意动画即使没有被任何成员使用,也不会自动禁用,可能成员太多,无法高效使用.
 

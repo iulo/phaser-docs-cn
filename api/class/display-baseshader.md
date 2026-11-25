@@ -4,9 +4,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个BaseShader是一个小资源类,它包含GLSL代码用于遮蔽器.
 
-它包含着色器的密钥,源代码,以及可选元数据. Phaser不强制执行特定的着色器类型:源代码可以是片段着色器,顶点着色器,甚至可能是GLSL不完整片段. 它作为原始源代码存储,可以按您的意愿被检索和编译. `Phaser.GameObjects.Shader`和`Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader`都可以使用这些密钥.
+它包含着色器的键,源代码,以及可选元数据. Phaser不强制执行特定的着色器类型:源代码可以是片段着色器,顶点着色器,甚至可能是GLSL不完整片段. 它作为原始源代码存储,可以按您的意愿被检索和编译. `Phaser.GameObjects.Shader`和`Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader`都可以使用这些键.
 
-基片包存储在缓存中,通过`this.cache.shaders`在一个场景中可用,并通过一个独特的基于密钥的字符串来引用。通过`this.cache.shaders.get(key)`来获取它们。
+基片包存储在缓存中,通过`this.cache.shaders`在一个场景中可用,并通过一个独特的基于键的字符串来引用。通过`this.cache.shaders.get(key)`来获取它们。
 
 底片包由 GLSL 文件加载器在加载外部着色器资源时自动创建。它们也可以在运行时创建,允许您使用动态生成的阴影源代码 。
 
@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 此阴影的密钥。 必须是在阴影缓存中独有的 。 |
+| key | string | 否 | 此阴影的键。 必须是在阴影缓存中独有的 。 |
 | glsl | string | 否 | 遮荫器的GLSL源代码. |
 | metadata | object | 是 | 此阴影码的额外元数据 。 |
 
@@ -54,7 +54,7 @@ GLSL 源代码用于遮蔽器。 此代码的使用不是由 Phaser 指定。 �
 
 **说明:**
 
-这个阴影码的密钥,在这个 Phaser 游戏实例的阴影缓存中独一无二.
+这个阴影码的键,在这个 Phaser 游戏实例的阴影缓存中独一无二.
 
 
 > 源码：[src/display/shader/BaseShader.js#L40](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/shader/BaseShader.js#L40)  

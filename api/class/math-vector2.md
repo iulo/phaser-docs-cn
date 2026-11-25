@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Vector2([x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 | 0 | x 组件,或具有`x`和`y`特性的物体. |
 | y | number | 是 | "x" | y组件. |
@@ -342,7 +342,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 检查这个矢量是否与给定的矢量大致相等 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | v | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 |  | 与这个矢量比较的矢量 。 |
 | epsilon | number | 是 | 0.0001 | 宽容的价值。 |
@@ -426,7 +426,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将这个矢量向给定矢量进发.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | src | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 |  | 向内插插进的矢量2 |
 | t | number | 是 | 0 | 插值百分比,介于0到1之间. |
@@ -743,7 +743,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设定 `x` 财务报告和已审计财务报表 `y` 向量的组件 `x` 财务报告和已审计财务报表 `y` 价值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 此矢量的x值设置 。 |
 | y | number | 是 | "x" | 此矢量的 Y 值设置 。 |
@@ -840,7 +840,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此方法为`Vector2.set`的别名.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 此矢量的x值设置 。 |
 | y | number | 是 | "x" | 此矢量的 Y 值设置 。 |
@@ -865,7 +865,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 从给定的角度和长度设置此矢量的 x 和 y 组件。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | angle | number | 否 |  | 从正X轴的角度,以弧度表示. |
 | length | number | 是 | 1 | 与源之远. |
@@ -965,7 +965,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态下向量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L840](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L840)  
@@ -983,7 +983,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态左向量2,以参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L816](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L816)  
@@ -1001,7 +1001,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态1矢量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L852](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L852)  
@@ -1019,7 +1019,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态右向量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L804](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L804)  
@@ -1037,7 +1037,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态上升矢量2,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L828](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L828)  
@@ -1055,7 +1055,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 静态零矢量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L792](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L792)  

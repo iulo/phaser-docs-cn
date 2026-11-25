@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-audiospritefile)
 
-一个适合装入器加载的音频Sprite文件 。
+一个适合资源加载器加载的音频Sprite文件 。
 
 这些是使用Phaser.Loader.LoaderPlugin#audioSprite方法创建的,一般不直接创建.
 
@@ -16,12 +16,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | jsonURL | string | 否 | 绝对或相对的 URL 来从 json 文件装入。 或者一个 良好形成的 JSON 对象来代替 。 |
 | audioURL | Object | 是 | 装入音频文件的绝对或相对 URL。 如果是空的, 则通过解析 JSON 文件来获取 。 |
 | audioConfig | any | 是 | 音频配置选项 。 |
-| audioXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 音频文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
-| jsonXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于 json 文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| audioXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 音频文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
+| jsonXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于 json 文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 ---
 
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 已完成处理的文件 。 |
 
 
-**Overrides:** Phaser.Loader.MultiFile#onFileComplete
+**重写:** Phaser.Loader.MultiFile#onFileComplete
 
 
 > 源码：[src/loader/filetypes/AudioSpriteFile.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AudioSpriteFile.js#L85)  

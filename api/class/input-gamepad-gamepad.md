@@ -436,7 +436,7 @@ Gamepad 右键集群的顶部按钮是否被按下? 如果 Gamepad 没有此按�
 摧毁这个 Gamepad 实例,其按钮和轴,并发布它持有的外部引用.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/input/gamepad/Gamepad.js#L477](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/Gamepad.js#L477)  

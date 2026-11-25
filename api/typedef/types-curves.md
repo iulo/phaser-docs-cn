@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> EllipseCurveConfig {#static-ellipsecurveconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 椭圆形的x坐标. |
 | y | number | 是 | 0 | 椭圆形的y坐标. |
@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Curves
+**所属**: Phaser.Types.Curves
 > 源码：[src/curves/typedefs/EllipseCurveConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/curves/typedefs/EllipseCurveConfig.js#L1)  
 
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Curves
+**所属**: Phaser.Types.Curves
 > 源码：[src/curves/typedefs/JSONCurve.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/curves/typedefs/JSONCurve.js#L1)  
 引入版本：3.0.0
 
@@ -60,7 +60,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Curves
+**所属**: Phaser.Types.Curves
 > 源码：[src/curves/typedefs/JSONEllipseCurve.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/curves/typedefs/JSONEllipseCurve.js#L1)  
 引入版本：3.0.0
 
@@ -80,7 +80,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Curves
+**所属**: Phaser.Types.Curves
 > 源码：[src/curves/typedefs/JSONPath.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/curves/typedefs/JSONPath.js#L1)  
 引入版本：3.0.0
 

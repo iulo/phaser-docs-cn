@@ -11,10 +11,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new NoAudioSound(manager, key, [config])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | manager | [Phaser.Sound.NoAudioSoundManager](/api/class/sound-noaudiosoundmanager) | 否 |  | 引用当前声音管理器实例 。 |
-| key | string | 否 |  | 声音的密钥 。 |
+| key | string | 否 |  | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "{}" | 包含默认声音设置的可选配置对象。 |
 
 ---
@@ -89,10 +89,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 
-**Fires:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
+**触发事件:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L200](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L200)  
@@ -156,7 +156,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-声音的密钥 。
+声音的键 。
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L69](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L69)  
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 显示声音或当前声音标记是否循环的旗帜 。
 
 
-**Fires:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
+**触发事件:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L225](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L225)  
@@ -226,7 +226,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 布尔表示声音是否变音。 获取或设置此声音的变音状态 。
 
 
-**Fires:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
+**触发事件:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L164](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L164)  
@@ -247,7 +247,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 总是在iOS / Safari 上返回0,因为它不支持立体式泛纳节点.
 
 
-**Fires:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
+**触发事件:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L236](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L236)  
@@ -282,7 +282,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 播放此声音的速度。 值为 1.0 以全速播放音频, 值为 0. 5 以半速播放音频, 值为 2.0 将音频的播放速度增加一倍 。
 
 
-**Fires:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
+**触发事件:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L187](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L187)  
@@ -301,7 +301,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 代表此声音的播放位置的属性, 以秒计。 设置到特定值后, 将当前播放的播放移动到该位置。 给出的值被夹在 0 到当前标记持续时间之间。 设置一个已停止的声音的搜索没有效果 。
 
 
-**Fires:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
+**触发事件:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L212](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L212)  
@@ -333,7 +333,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-一个持有声音实际回放率值的属性,在它的回放率和调值与全局率和调值结合之后.
+一个持有声音实际回放率值的属性,在它的回放率和补间与全局率和补间结合之后.
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L101](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L101)  
@@ -352,7 +352,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 获取或设置此声音的音量,值介于 0(静态)到 1(全音量)之间.
 
 
-**Fires:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
+**触发事件:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L176](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L176)  
@@ -452,10 +452,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 摧毁此声音和所有相关事件,并标记它,以便从声音管理器中移除.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
-**Fires:** [Phaser.Sound.Events#event:DESTROY](/api/event/sound-events#destroy)
+**触发事件:** [Phaser.Sound.Events#event:DESTROY](/api/event/sound-events#destroy)
 
 
 > 源码：[src/sound/noaudio/NoAudioSound.js#L488](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSound.js#L488)  
@@ -493,7 +493,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 播放此声音, 或其中的特定标记。 可选的配置对象可以覆盖此调用默认的回放设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | markerName | string \| [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "''" | 如果您想要播放标记, 请在此提供标记名称。 或者, 此参数可以是 SoundConfig 对象 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 |  | 如果未提供标记名称, 可选的音效配置对象将应用到此标记或整个音效上。 它会被记住, 用于当前音节的未来播放 。 |
@@ -574,7 +574,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+设置此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

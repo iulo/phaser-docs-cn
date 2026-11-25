@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/BlockyConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/BlockyConfig.js#L1)  
 引入版本：4.0.0
 
@@ -23,7 +23,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GradientMapConfig {#static-gradientmapconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | ramp | [Phaser.Display.ColorRamp](/api/class/display-colorramp) \| [Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) | [Phaser.Display.ColorBand](/api/class/display-colorband) | Array.\<([Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) | [Phaser.Display.ColorBand](/api/class/display-colorband))> | 是 |  | 拟使用的彩色斜坡. |
 | dither | boolean | 是 | false | 是否将渐变输出抖动 。 |
@@ -34,7 +34,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/GradientMapConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/GradientMapConfig.js#L1)  
 引入版本：4.0.0
 
@@ -44,7 +44,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ImageLightConfig {#static-imagelightconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | normalMap | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__NORMAL'" | 图像光效果普通映射所用的纹理。 这应该与被过滤的对象匹配。 默认是平面照明 。 |
 | environmentMap | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__WHITE'" | 图像光效应环境图所用的纹理 。 |
@@ -56,7 +56,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/ImageLightConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/ImageLightConfig.js#L1)  
 引入版本：4.0.0
 
@@ -68,7 +68,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/ImageLightSourceCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/ImageLightSourceCallback.js#L1)  
 引入版本：4.0.0
 
@@ -78,17 +78,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> KeyConfig {#static-keyconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "[1, 1, 1]" | 用于键的颜色。 它可以是六进制码数或字符串, 3 个数字的阵列在 0 到 1 之间, 也可以是 color 对象 。 |
 | alpha | number | 是 | 1 | 需要移除的α 的量。 应该是 0 到 1 之间的值, 但是您可以在此范围之外 , 以获得不同的效果 。 |
-| isolate | boolean | 是 | false | 是否保持区域匹配密钥颜色。 如果选中, 匹配密钥颜色的区域将被保留, 其余区域将被删除。 如果错误, 匹配密钥色的区域将被删除, 其他区域将被保留 。 |
+| isolate | boolean | 是 | false | 是否保持区域匹配键颜色。 如果选中, 匹配键颜色的区域将被保留, 其余区域将被删除。 如果错误, 匹配键色的区域将被删除, 其他区域将被保留 。 |
 | threshold | number | 是 | 0.0625 | 键色的阈值。 如果像素和键色之间的差小于阈值, 则像素被认为是键色。 这应该是 0 到 1 之间的值。 默认阈值是 1 / 16, 对于大多数图像来说, 是一个很好的起点 。 |
 | feather | number | 是 | 0 | 键色的羽毛值。 阈值以外的像素, 但仍在羽毛内部, 将是部分匹配值。 这应该是 0 到 1 之间的值 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/KeyConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/KeyConfig.js#L1)  
 引入版本：4.0.0
 
@@ -98,18 +98,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NormalToolsConfig {#static-normaltoolsconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rotation | number | 是 | 0 | 普通地图的二维旋转弧度。 对于更高级的控件, 操纵过滤器的 `viewMatrix` 来控制 3D 旋转 。 |
 | rotationSource | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| [Phaser.Types.Filters.NormalToolsSourceCallback](/api/typedef/types-filters#normaltoolssourcecallback) | null | 是 | null | 旋转的来源。 如果函数, 则会叫它来获得旋转。 如果游戏对象, 则它会用来从游戏对象的世界变换得到旋转。 如果无效, 旋转将不会被过滤器更新 。 ] |
-| facingPower | number | 是 | 1 | 操纵正常人面对相机的倾向。 更高的值会让正常人向相机弯曲; 较低的值会让它们弯曲。 这对建议2D场景的深度很有用 。 |
-| outputRatio | boolean | 是 | false | 如果真,输出会是一个灰色的纹理,白色区域是正常人面对相机的区域,在正交时会逐渐变黑,这可以作为其他效果的基点. |
-| ratioVector | [Phaser.Math.Vector3](/api/class/math-vector3) | 是 | "[0, 0, 1]" | 比例输出所用的矢量。 这是比例的计算方向。 默认是相机的前进方向。 操纵此方向可以突出显示地图中正面临特定方向的部分。 只有在 outputRatio 属实时才会使用 。 |
+| facingPower | number | 是 | 1 | 操纵正常人面对摄像机的倾向。 更高的值会让正常人向摄像机弯曲; 较低的值会让它们弯曲。 这对建议2D场景的深度很有用 。 |
+| outputRatio | boolean | 是 | false | 如果真,输出会是一个灰色的纹理,白色区域是正常人面对摄像机的区域,在正交时会逐渐变黑,这可以作为其他效果的基点. |
+| ratioVector | [Phaser.Math.Vector3](/api/class/math-vector3) | 是 | "[0, 0, 1]" | 比例输出所用的矢量。 这是比例的计算方向。 默认是摄像机的前进方向。 操纵此方向可以突出显示地图中正面临特定方向的部分。 只有在 outputRatio 属实时才会使用 。 |
 | ratioRadius | number | 是 | 1 | 比例输出时, 需要考虑一个半球的多少。 1 时, 将计算整个半球的比例。 0时, 将计算一个点的比例。 这使用与 `PanoramaBlur.radius` 相同的算法。 只有在 outputRatio 属实时才使用 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/NormalToolsConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/NormalToolsConfig.js#L1)  
 引入版本：4.0.0
 
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/NormalToolsSourceCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/NormalToolsSourceCallback.js#L1)  
 引入版本：4.0.0
 
@@ -131,7 +131,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> PanoramaBlurConfig {#static-panoramablurconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | radius | number | 是 | 1 | 模糊效应的半径。 1 个样本 整个半球; 0 个样本 单个点。 |
 | samplesX | number | 是 | 32 | 沿着X轴采集的样本数量。 更多的样本会产生更准确的模糊, 但以性能为代价。 总体中的X轴通常比Y轴要宽 。 |
@@ -140,7 +140,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/PanoramaBlurConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/PanoramaBlurConfig.js#L1)  
 引入版本：4.0.0
 
@@ -150,7 +150,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> QuantizeConfig {#static-quantizeconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | steps | Array.\<number> | 是 | "[ 8, 8, 8, 8 ]" | 每个频道使用的步数. |
 | gamma | Array.\<number> | 是 | "[ 1, 1, 1, 1 ]" | 伽玛每个通道的应用能力. |
@@ -160,7 +160,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Filters
+**所属**: Phaser.Types.Filters
 > 源码：[src/filters/typedefs/QuantizeConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/typedefs/QuantizeConfig.js#L1)  
 引入版本：4.0.0
 

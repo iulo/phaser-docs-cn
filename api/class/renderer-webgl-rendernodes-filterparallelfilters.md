@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | padding | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 | 第一次过滤通道上将应用到已显示区域周围的粘贴板。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
 
 
 **返回值:** [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) - 包含最终复合输出的绘图上下文 。

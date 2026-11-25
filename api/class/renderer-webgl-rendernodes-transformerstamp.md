@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-transformerstamp)
 
-一个RenderNode,它为一个像邮票的游戏对象计算和存储世界空间四角圆顶,例如一个没有受到相机变换影响的直接进入世界空间的Samp或类似对象.
+一个RenderNode,它为一个像邮票的游戏对象计算和存储世界空间四角圆顶,例如一个没有受到摄像机变换影响的直接进入世界空间的Samp或类似对象.
 
-这是`TransformerImage` RenderNode的修改版。 与 `TransformerImage` 不同的是, 这个节点完全跳过相机矩阵乘法, 意思是 产生的四位坐标位于世界空间而不是相机投影屏幕空间。 这使得它适合管理自己世界对屏幕定位的物体, 如 Stamp Game Object 。
+这是`TransformerImage` RenderNode的修改版。 与 `TransformerImage` 不同的是, 这个节点完全跳过摄像机矩阵乘法, 意思是 产生的四位坐标位于世界空间而不是摄像机投影屏幕空间。 这使得它适合管理自己世界对屏幕定位的物体, 如 Stamp Game Object 。
 
 在`run`呼叫中,节点应用Game Object的位置,旋转,尺度,翻转,以及显示源来计算已渲染的四角四角最后的顶点,将其存储在`quad` Float32Array中. Vertex 圆环也酌情应用,以防止子像素渲染工艺品.
 
@@ -89,7 +89,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-为给定的像邮票的游戏对象计算世界空间四极顶点,并将其存储在`quad` Float32箭头中,供随后的节点使用。此计算中故意排除了相机矩阵。
+为给定的像邮票的游戏对象计算世界空间四极顶点,并将其存储在`quad` Float32箭头中,供随后的节点使用。此计算中故意排除了摄像机矩阵。
 
 这种方法解决了帧偏移和显示源到本地空间角坐标,应用水平和垂直翻转(在未设定自定义枢轴时调整偏移),然后从Game Object的位置,旋转和比例构建图案变换矩阵. 四个角顶点通过矩阵通过`setQuad`进行预测,当需要顶点圆形时,每个坐标被绕到最近的整数,以避免子像素渲染工艺品.
 
@@ -103,7 +103,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | element | object | 是 | 游戏对象中的特定元素。 用于由多个四位元组成的对象, 这里没有使用 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/transformer/TransformerStamp.js#L74](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/transformer/TransformerStamp.js#L74)  

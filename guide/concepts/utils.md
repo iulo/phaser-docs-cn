@@ -295,7 +295,7 @@ Phaser收集了提供各种功能的公用功能和辅助器类,设计简化了�
   - `startIndex`:包括从.默认到0的可选起始索引。
   - `endIndex` : 排除可选的搜索端索引。 默认为 `array` 长度 。
 
-  例1:获得第一个匹配特定值的财产的项目
+  例1:获得第一个匹配特定值的属性的项目
 
   ```js
   var array = [
@@ -392,7 +392,7 @@ Phaser收集了提供各种功能的公用功能和辅助器类,设计简化了�
 
   - `value`:在阵列中查找的值。
   - `array`:要搜索的阵列,必须排序.
-  - `key`: 一个可选属性密钥。 如果指定数组元素属性, 将对照值检查 。
+  - `key`: 一个可选属性键。 如果指定数组元素属性, 将对照值检查 。
 
   Example 1
 
@@ -1081,8 +1081,8 @@ GetAdvancedValue(source, key, defaultValue)
 ```
 
 - `source`: 用来获取值的物体。
-- `key` :要检索的值的密钥。
-- `defaultValue` : 如果密钥不存在, 默认值将返回 。
+- `key` :要检索的值的键。
+- `defaultValue` : 如果键不存在, 默认值将返回 。
 
 示例
 
@@ -1106,15 +1106,15 @@ console.log(Phaser.Utils.Objects.GetAdvancedValue(source, 'f', 100));  // 100 (d
 
 ### 获取快速 VALUE {#getfastvalue}
 
-在源对象的顶级内查找密钥,或返回 `defaultValue`。
+在源对象的顶级内查找键,或返回 `defaultValue`。
 
 ```js
 GetFastValue(source, key, defaultValue)
 ```
 
 - `source`: 用来获取值的物体。
-- `key` :要检索的值的密钥。
-- `defaultValue` : 如果密钥不存在, 默认值将返回 。
+- `key` :要检索的值的键。
+- `defaultValue` : 如果键不存在, 默认值将返回 。
 
 示例
 
@@ -1138,10 +1138,10 @@ GetMinMaxValue(source, key, min, max, defaultValue)
 ```
 
 - `source`: 用来获取值的物体。
-- `key` :要检索的值的密钥。
+- `key` :要检索的值的键。
 - `min` : 允许的最小值。
 - `max` : 允许的最大值。
-- `defaultValue` : 如果密钥不存在, 默认值将返回 。
+- `defaultValue` : 如果键不存在, 默认值将返回 。
 
 示例
 
@@ -1163,8 +1163,8 @@ GetValue(source, key, defaultValue)
 ```
 
 - `source`: 用来获取值的物体。
-- `key` :要检索的值的密钥。
-- `defaultValue` : 如果密钥不存在, 默认值将返回 。
+- `key` :要检索的值的键。
+- `defaultValue` : 如果键不存在, 默认值将返回 。
 
 示例
 
@@ -1180,14 +1180,14 @@ console.log(Phaser.Utils.Objects.GetValue(source, 'a.b.z', 0));  // Output: 0 (d
 
 ### 全部散开 {#hasall}
 
-检查对象是否有所有指定的密钥 。
+检查对象是否有所有指定的键 。
 
 ```js
 HasAll(source, keys)
 ```
 
 - `source` : 检查对象。
-- `keys`:要检查的密钥阵列.
+- `keys`:要检查的键阵列.
 
 示例
 
@@ -1201,14 +1201,14 @@ console.log(Phaser.Utils.Objects.HasAll(obj, ['a', 'b', 'c']));  // Output: true
 
 ### 任何变速器 {#hasany}
 
-检查对象是否有指定的密钥。
+检查对象是否有指定的键。
 
 ```js
 HasAny(source, keys)
 ```
 
 - `source` : 检查对象。
-- `keys`:要检查的密钥阵列.
+- `keys`:要检查的键阵列.
 
 示例
 
@@ -1222,14 +1222,14 @@ console.log(Phaser.Utils.Objects.HasAny(obj, ['b', 'c']));  // Output: true ('b'
 
 ### 已实现 {#hasvalue}
 
-检查对象是否有带有特定值的密钥。
+检查对象是否有带有特定值的键。
 
 ```js
 HasValue(source, key)
 ```
 
 - `source` : 检查对象。
-- `key` :要检查的密钥.
+- `key` :要检查的键.
 
 示例
 
@@ -1295,7 +1295,7 @@ MergeRight(obj1, obj2)
 ```
 
 - `obj1`:第一个合并对象.
-- `obj2`: 合并的第二个对象。 此对象的密钥也存在于 `obj1` 中, 将会复制到 `obj1` 。
+- `obj2`: 合并的第二个对象。 此对象的键也存在于 `obj1` 中, 将会复制到 `obj1` 。
 
 示例
 ```js
@@ -1311,7 +1311,7 @@ console.log(obj2);    // Output: { b: 20, c: 30, d: 40 } (unchanged)
 
 ### 选择 {#pick}
 
-返回只包含在所提供对象上发现的 `keys` 的新对象。如果找不到密钥,则返回空对象。
+返回只包含在所提供对象上发现的 `keys` 的新对象。如果找不到键,则返回空对象。
 
 ```js
 Pick(source, keys)

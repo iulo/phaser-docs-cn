@@ -78,9 +78,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 每个斜线对象对应于一个 JavaScript 对象在此数组中。它有一个 `id` (独有), `name` (按平面排列), `type` (按平面排列), `rotation` (顺时针度), `properties` (如果有的话) `visible` 状态( E)`true` 如果可见, `false` 否则, `x` 财务报告和已审计财务报表 `y` 坐标(以像素表示,相对于平方块),和 a `width` 财务报告和已审计财务报表 `height` (以像素计).
 
-对象牌有: `gid` 属性(代表的瓦片的GID),a `flippedHorizontal` 财产,a `flippedVertical` 财产,和 `flippedAntiDiagonal` 属性。 QQlink 中 [http://docs.mapeditor.org/en/latest/reference/tmx-map-format/](http://docs.mapeditor.org/en/latest/reference/tmx-map-format/)QQQ 已转移文档 包含翻转和旋转信息 。
+对象牌有: `gid` 属性(代表的瓦片的GID),a `flippedHorizontal` 属性,a `flippedVertical` 属性,和 `flippedAntiDiagonal` 属性。 QQlink 中 [http://docs.mapeditor.org/en/latest/reference/tmx-map-format/](http://docs.mapeditor.org/en/latest/reference/tmx-map-format/)QQQ 已转移文档 包含翻转和旋转信息 。
 
-聚线有 `polyline` 属性,指与点相对应的一组对象,每个点都有 `x` 财产和a `y` 。多边形在其结构上具有相同的数组。 `polygon` 属性。文本对象有 `text` 属性。
+聚线有 `polyline` 属性,指与点相对应的一组对象,每个点都有 `x` 属性和a `y` 。多边形在其结构上具有相同的数组。 `polygon` 属性。文本对象有 `text` 属性。
 
 矩形和椭圆形的`rectangle`或`ellipse`属性设置为`true`.
 

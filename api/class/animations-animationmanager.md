@@ -48,7 +48,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此地图应随动画管理器的[#add](#add)和[#create](#create)方法而修改.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/animations/AnimationManager.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L85)  
@@ -67,7 +67,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 参考Phaser.Game案例.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/animations/AnimationManager.js#L53](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L53)  
@@ -154,7 +154,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 纹理管理器的参考文献.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/animations/AnimationManager.js#L63](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L63)  
@@ -200,14 +200,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 添加动画的密钥。 动画将随其更新, 必须是独一无二的 。 |
+| key | string | 否 | 添加动画的键。 动画将随其更新, 必须是独一无二的 。 |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 动画管理器中应当添加的动画. |
 
 
 **返回值:** [Phaser.Animations.AnimationManager](/api/class/animations-animationmanager) - 此动画管理器.
 
 
-**Fires:** [Phaser.Animations.Events#event:ADD_ANIMATION](/api/event/animations-events#add_animation)
+**触发事件:** [Phaser.Animations.Events#event:ADD_ANIMATION](/api/event/animations-events#add_animation)
 
 
 > 源码：[src/animations/AnimationManager.js#L282](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L282)  
@@ -261,7 +261,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-游戏靴后注册事件听众.
+游戏靴后注册事件监听器.
 
 
 > 源码：[src/animations/AnimationManager.js#L130](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L130)  
@@ -281,13 +281,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 动画是全球性的。 动画一旦创建, 您可以在游戏中任意场景中使用, 而不是特定场景 。
 
-如果给定了一个无效的密钥, 此方法将返回 `false` 。
+如果给定了一个无效的键, 此方法将返回 `false` 。
 
-如果您通过动画管理器中已经存在的动画的密钥,该动画将被返回.
+如果您通过动画管理器中已经存在的动画的键,该动画将被返回.
 
-只有在密钥有效且尚未使用时,才会创建全新的动画.
+只有在键有效且尚未使用时,才会创建全新的动画.
 
-如果您希望重新使用已有的密钥, 请先拨打 `AnimationManager.remove`, 然后拨打这种方法 。
+如果您希望重新使用已有的键, 请先拨打 `AnimationManager.remove`, 然后拨打这种方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -295,10 +295,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | config | [Phaser.Types.Animations.Animation](/api/typedef/types-animations#animation) | 否 | 动画的配置设置 。 |
 
 
-**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation), false - 创建的动画, 或者如果密钥已经使用的话, `false` 。
+**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation), false - 创建的动画, 或者如果键已经使用的话, `false` 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ADD_ANIMATION](/api/event/animations-events#add_animation)
+**触发事件:** [Phaser.Animations.Events#event:ADD_ANIMATION](/api/event/animations-events#add_animation)
 
 
 > 源码：[src/animations/AnimationManager.js#L498](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L498)  
@@ -360,7 +360,7 @@ Aseprite是一个强大的动画图案编辑器和像素艺术工具.
 
 测试时采用了Aeprite 1.2.25.
 
-这将导出一个 png 和 json 文件, 您可以使用 Aseprite 装入器装入, 即 :
+这将导出一个 png 和 json 文件, 您可以使用 Aseprite 资源加载器装入, 即 :
 
 ```javascript
 function preload ()
@@ -393,7 +393,7 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 装入的 Aseprite 地图集的密钥。 它一定是在调用此方法之前装入的 。 |
+| key | string | 否 | 装入的 Aseprite 地图集的键。 它一定是在调用此方法之前装入的 。 |
 | tags | Array.\<string> | 是 | 标记名称的数组。 如果提供了, 将只创建此数组中的动画 。 |
 | target | [Phaser.Animations.AnimationManager](/api/class/animations-animationmanager) \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 是 | 创建此目标 Sprite 上的动画。 如果不给出, 将在此动画管理器中在全球创建 。 |
 
@@ -417,7 +417,7 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 销毁此动画管理器并清理动画定义和对其他对象的引用。 这种方法不应直接调用。 它将自动调用, 作为对 Phaser.Game 实例中的 `destroy` 事件的回应 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/animations/AnimationManager.js#L1056](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L1056)  
@@ -433,9 +433,9 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 
 **说明:**
 
-检查是否在动画管理器内已经使用给定的密钥 。
+检查是否在动画管理器内已经使用给定的键 。
 
-动画是全局的。 一个场景中创建的密钥可以从游戏中的任何其他场景中使用, 它们不是场景特定 。
+动画是全局的。 一个场景中创建的键可以从游戏中的任何其他场景中使用, 它们不是场景特定 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -462,7 +462,7 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 从 JSON 对象装入此动画管理器的动画和设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | string \| [Phaser.Types.Animations.JSONAnimations](/api/typedef/types-animations#jsonanimations) | [Phaser.Types.Animations.JSONAnimation](/api/typedef/types-animations#jsonanimation) | 否 |  | JSON反对分析. |
 | clearCurrentAnimations | boolean | 是 | false | 如果设置为 `true`, 则将删除当前动画( `anims.clear()`) 。 如果设置为 `false`( 默认) , 则将添加 `data` 中的动画 。 |
@@ -484,13 +484,13 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 
 **说明:**
 
-从纹理密钥和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
+从纹理键和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
 
 生成基于字符串的框架名称的对象,由给定的 [Phaser.Types.Animations.GenerateFrameNames](/api/typedef/types-animations#generateframenames) 配置.
 
 这是一个帮助方法,旨在方便您从纹理图集中提取所有框架名称.
 
-如果你用一个图案表工作, 请参看 `generateFrameNumbers` 方法。
+如果你用一个精灵表工作, 请参看 `generateFrameNumbers` 方法。
 
 Example:
 
@@ -515,7 +515,7 @@ this.anims.create({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 包含动画帧的纹理的密钥. |
+| key | string | 否 | 包含动画帧的纹理的键. |
 | config | [Phaser.Types.Animations.GenerateFrameNames](/api/typedef/types-animations#generateframenames) | 是 | 动画框架名称的配置对象. |
 
 
@@ -535,17 +535,17 @@ this.anims.create({
 
 **说明:**
 
-从纹理密钥和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
+从纹理键和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
 
 生成带有编号框架名称的物体, 由给定的 [Phaser.Types.Animations.GenerateFrameNumbers](/api/typedef/types-animations#generateframenumbers) 配置 。
 
 如果你正在用纹理图集工作,请参见`generateFrameNames`方法.
 
-这是一种帮助方法,旨在方便您从图示工作表提取帧.
+这是一种帮助方法,旨在方便您从精灵表提取帧.
 
 Example:
 
-如果您有一个名为`explosion`的图案表,其中包含12帧,那么您就可以使用下列方法调用这种方法:
+如果您有一个名为`explosion`的精灵表,其中包含12帧,那么您就可以使用下列方法调用这种方法:
 
 `this.anims.generateFrameNumbers('explosion', { start: 0, end: 11 })`.
 
@@ -576,7 +576,7 @@ this.anims.create({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 包含动画帧的纹理的密钥. |
+| key | string | 否 | 包含动画帧的纹理的键. |
 | config | [Phaser.Types.Animations.GenerateFrameNumbers](/api/typedef/types-animations#generateframenumbers) | 是 | 动画框架的配置对象 。 |
 
 
@@ -598,7 +598,7 @@ this.anims.create({
 
 以键向动画管理器获取动画.
 
-如果没有给定的密钥动画存在, 返回 `undefined` 。
+如果没有给定的键动画存在, 返回 `undefined` 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -622,15 +622,15 @@ this.anims.create({
 
 **说明:**
 
-返回使用给定的纹理的所有动画密钥的数组。结果中将包含的只有至少一个使用此纹理的动画Frame条目的动画。
+返回使用给定的纹理的所有动画键的数组。结果中将包含的只有至少一个使用此纹理的动画Frame条目的动画。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 纹理,或纹理,或框架实例中唯一基于字符串的密钥 。 |
+| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 纹理,或纹理,或框架实例中唯一基于字符串的键 。 |
 
 
-**返回值:** Array.\<string> - 具有给定纹理特征的动画密钥阵列。
+**返回值:** Array.\<string> - 具有给定纹理特征的动画键阵列。
 
 
 > 源码：[src/animations/AnimationManager.js#L816](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L816)  
@@ -681,7 +681,7 @@ this.anims.create({
 **返回值:** [Phaser.Animations.AnimationManager](/api/class/animations-animationmanager) - 此动画管理器.
 
 
-**Fires:** [Phaser.Animations.Events#event:PAUSE_ALL](/api/event/animations-events#pause_all)
+**触发事件:** [Phaser.Animations.Events#event:PAUSE_ALL](/api/event/animations-events#pause_all)
 
 
 > 源码：[src/animations/AnimationManager.js#L856](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L856)  
@@ -722,20 +722,20 @@ this.anims.create({
 
 **说明:**
 
-根据给定的密钥,从此动画管理器中删除动画 。
+根据给定的键,从此动画管理器中删除动画 。
 
 这是一个全球动作。 一旦动画被移除, 游戏对象无法继续使用它 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要删除的动画密钥 。 |
+| key | string | 否 | 要删除的动画键 。 |
 
 
 **返回值:** [Phaser.Animations.Animation](/api/class/animations-animation) - 动画管理器中被删除的动画实例.
 
 
-**Fires:** [Phaser.Animations.Events#event:REMOVE_ANIMATION](/api/event/animations-events#remove_animation)
+**触发事件:** [Phaser.Animations.Events#event:REMOVE_ANIMATION](/api/event/animations-events#remove_animation)
 
 
 > 源码：[src/animations/AnimationManager.js#L971](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L971)  
@@ -788,7 +788,7 @@ this.anims.create({
 **返回值:** [Phaser.Animations.AnimationManager](/api/class/animations-animationmanager) - 此动画管理器.
 
 
-**Fires:** [Phaser.Animations.Events#event:RESUME_ALL](/api/event/animations-events#resume_all)
+**触发事件:** [Phaser.Animations.Events#event:RESUME_ALL](/api/event/animations-events#resume_all)
 
 
 > 源码：[src/animations/AnimationManager.js#L1001](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationManager.js#L1001)  
@@ -818,12 +818,12 @@ this.anims.create({
 
 儿童1:3000ms 延迟 儿童2:2000ms 延迟 儿童3:1000ms 延迟 儿童4:0ms 延迟 儿童4:0ms 延迟 儿童4:0 ms 延迟 儿童4:0 ms 延迟 儿童4:0 ms 延迟 儿童4:0 ms 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童3:1000 ms 延迟 儿童4: 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4:0 ms 延迟 延迟 儿童4: 延迟 儿童4:0 m 延迟 儿童3: 延迟 延迟 延迟 延迟 儿童3: 儿童3 000 ms 延迟 延迟 延迟 儿童3: 延迟 儿童3 000 ms 延迟 儿童3: 延迟 儿童3: 儿童3: 儿童3 m m m m 延迟 儿童3: 儿童3 m 儿童3 延迟 延迟 儿童3: 延迟 儿童3 延迟 儿童3 000 ms 延迟 儿童3 儿童3 儿童3 儿童3 ms 延迟 延迟 儿童3 ms 儿童 儿童 延迟 儿童 儿童3 延迟 儿童 儿童3 儿童3: 延迟 延迟 儿童3 儿童 延迟 儿童3 儿童 儿童3: 儿童3: 儿童3 儿童 儿童 儿童 儿童 儿童3 儿童3 000 ms 延迟 儿童 延迟 儿童3 儿童3 儿童3 儿童 儿童3 儿童3 儿童3 儿童3 儿童3 儿童3: 儿童3 儿童3
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | children | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列可以播放动画。 它们必须有动画组件 。 |
@@ -847,7 +847,7 @@ this.anims.create({
 
 **说明:**
 
-返回基于给定密钥的动画数据为 JavaScript 对象。或者,如果没有定义密钥,它会返回所有动画的数据为对象的数组。
+返回基于给定键的动画数据为 JavaScript 对象。或者,如果没有定义键,它会返回所有动画的数据为对象的数组。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

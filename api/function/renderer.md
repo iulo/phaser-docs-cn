@@ -28,23 +28,23 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-引用 Canvas 渲染器、 Canvas 渲染上下文、 游戏对象、 相机和母矩阵, 然后执行以下步骤 :
+引用 Canvas 渲染器、 Canvas 渲染上下文、 游戏对象、 摄像机和母矩阵, 然后执行以下步骤 :
 
-1. 检查源的α与相机α结合。 如果 0 或 更小, 则中止 。
+1. 检查源的α与摄像机α结合。 如果 0 或 更小, 则中止 。
 
-2. 使用相机和游戏对象矩阵,并把它们乘以,如果给出的话,与母矩阵结合。
+2. 使用摄像机和游戏对象矩阵,并把它们乘以,如果给出的话,与母矩阵结合。
 
 3. 设置上下文的混合模式,以作为游戏对象所使用的模式。
 
-4. 设定上下文的α值,以游戏对象与相机结合使用。
+4. 设定上下文的α值,以游戏对象与摄像机结合使用。
 
 5. 保存上下文状态。
 
 6. 通过 setTransform 将最终矩阵值设置到上下文中。
 
-7. 如果游戏对象有纹理框架, imageSmoothingEnabled 以帧. source 设置。scaleMode.
+7. 如果游戏对象有纹理帧, imageSmoothingEnabled 以帧. source 设置。scaleMode.
 
-8. 如果游戏对象没有纹理框架,imageSmoothingEnabled则基于Render.antalias设定.
+8. 如果游戏对象没有纹理帧,imageSmoothingEnabled则基于Render.antalias设定.
 
 此功能仅用于内部, 大部分Canvas Renderer 类都使用它 。
 
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) | 否 | 参考当前活跃的Canvas渲染器. |
 | ctx | CanvasRenderingContext2D | 否 | 设置转换的画布上下文 。 |
 | src | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 正在渲染游戏对象。 可以是扩展基类的任意类型 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在制作游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在制作游戏对象的摄像机 。 |
 | parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 父变换矩阵,在渲染前应用到 Game Object 上. |
 
 
@@ -127,7 +127,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于定义最大动画帧数的 ShaderAddition Config。此功能被 TilemapGPULayer 使用 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | maxAnims | number | 否 |  | 支持的动画框架的最大数量。此值作为 `MAX_ANIM_FRAMES` 预处理器常数注入着色器中。 |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
@@ -152,7 +152,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 `normal`变量必须在碎片遮蔽器中可用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -174,7 +174,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于对纹理应用的 shaderAddition 配置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -196,7 +196,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回一个用于有界纹理取样的阴影添加连接。 如果纹理坐标位于纹理界限之外, 则有界纹理取样器将返回透明像素 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -218,7 +218,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于定义碎片遮蔽器中的灯光和核心照明算法的ShaderAddition Config。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -240,7 +240,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于定义多文本阴影中纹理计数的ShaderAddition Config。此功能被其他添加用于处理纹理的正确数量。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | maxTextures | number | 否 |  | 着色器支持的最大纹理数量。 此值用于设置碎片着色器中定义的 `TEXTURE_COUNT` 预处理器 。 |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
@@ -263,7 +263,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于定义平坦普通的阴影添加配置。用于点亮没有普通地图的物体。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -285,7 +285,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回一个向碎片遮蔽器头注入 `getNormalFromMap` 函数的ShaderAddition Config, 并在碎片处理过程中在当前的纹理坐标上对普通地图进行样本。 由此产生的正常矢量被照明管道用于将每个像素的照明应用到纹理上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -307,7 +307,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回一个阴影附加配置,通过 `outTexCoord` 变量从顶点着色器获取纹理坐标。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -329,7 +329,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 创建并返回一个 ShaderAddition Config,该图形将 GLSL 片段阴影页眉注入,为从一个统一的分辨率序列中查找纹理分辨率提供辅助功能,该功能用于多文本渲染,其中每个绑定纹理可能具有不同的大小。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -351,7 +351,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 创建一个用于 WebGL 着色器中多文本采样的 ShaderAddTion Config。 返回的配置将 `getTexture` GLSL 函数注入到碎片遮蔽器头中, 其构建为一个如果... 的链条, 选择基于纹理 ID 的 `maxTextures` 纹理单位。 它还注入一个单行进程, 通过该函数对当前碎片颜色进行样本 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | maxTextures | number | 是 | 1 | 支持的纹理单位数量。 如果... else 链条, 确定纹理选择中产生多少分支 。 |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
@@ -374,7 +374,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回一个显示器附加配置,将 `inFrame` 声明为顶点属性,并通过 `outFrame` 变化的碎片着色器传递给碎片着色器。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -398,7 +398,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 `rotation`变量必须在顶点渲染器中可用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -420,7 +420,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 创建并返回一个 `ShaderAdditionConfig`, 读取 `inTexDatum`顶点属性的旋转值, 并把它暴露为顶点阴影处理阶段的 `float rotation` 变量。 此添加被标记为用照明阴影, 从而能够进行方向和正常的照明计算, 以计算所渲染几何的旋转 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -439,10 +439,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-返回一个 `ShaderAdditionConfig`, 将普通地图采样添加到 TilemapGPULayer 着色器中。 添加的样本通过 `uNormSampler` 来显示正常地图纹理, 将存储的 RGB 值从 [0, 1] 范围解码回 [ 1, 1] 范围中的正态方向矢量, 通过 `Samples` 对象曝光结果, 以便其他阴影添加( 如照明计算) 能够消耗它。 添加的标记为 `LIGHTING`, 意味着它只有在使用照明通道时才会生效 。
+返回一个 `ShaderAdditionConfig`, 将普通地图采样添加到 TilemapGPULayer 着色器中。 添加的样本通过 `uNormSampler` 来显示法线贴图纹理, 将存储的 RGB 值从 [0, 1] 范围解码回 [ 1, 1] 范围中的正态方向矢量, 通过 `Samples` 对象曝光结果, 以便其他阴影添加( 如照明计算) 能够消耗它。 添加的标记为 `LIGHTING`, 意味着它只有在使用照明通道时才会生效 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -460,12 +460,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 创建并返回一个能够平滑像素艺术渲染的 ShaderAddition Config 。
 
-当应用到着色器时,此添加会用块状的采样方法取代标准纹理坐标插值,在使用texel边界时保留脆度像素边缘,同时应用子像素反异名,结果是像素艺术资产在非整流尺度上放大或制成,保留尖端,干净的边缘,而不是双线性过滤带来的模糊度.
+当应用到着色器时,此添加会用块状的采样方法取代标准纹理坐标插值,在使用texel边界时保留脆度像素边缘,同时应用子像素反异名,结果是像素艺术资源在非整流尺度上放大或制成,保留尖端,干净的边缘,而不是双线性过滤带来的模糊度.
 
 内部使用`GL_OES_standard_derivatives` WebGL扩展计算每片裂纹衍生信息,通过`getBlockyTexCoord` GLSL帮助器驱动反异名边缘混合.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -487,7 +487,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回用于在框架内夹住坐标的阴影添加配置。这可以防止框架边缘的流血。然而,它会在框架边界上形成硬边。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -509,7 +509,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 返回一个用于在框架内包装坐标的阴影添加配置。 这样会让纹理在框架的界限内重复 - 这使得一个 TileSprite 工作。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disable | boolean | 是 | false | 是否在创建时禁用阴影添加 。 |
 
@@ -650,11 +650,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 设置或清除给定的荫影程序管理器上所有与照明相关的制服.
 
-`enable`是`true`时,此函数会查询Scene的灯光管理器对相机可见的所有活动灯光进行查询,并将它们的位置,颜色,强度,以及光度作为统一的阵列上传到遮荫层。它也会上传环境光色,相机变换,以及普通的地图纹理单元。通过上传笔光和散射阈值制服,可以选择地实现自我遮蔽。
+`enable`是`true`时,此函数会查询Scene的灯光管理器对摄像机可见的所有活动灯光进行查询,并将它们的位置,颜色,强度,以及光度作为统一的阵列上传到遮荫层。它也会上传环境光色,摄像机变换,以及普通的地图纹理单元。通过上传笔光和散射阈值制服,可以选择地实现自我遮蔽。
 
 当 `enable`是 `false`时,所有先前设置的照明制服都会从程序管理器中移除. 如果Scene没有活动光管理器,则函数会提前返回而无需做任何更改.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -663,7 +663,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | ---- | ---- | -------- | ----------- |
 | enable | boolean | 否 | 是否启用照明 。 |
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 绘图康特实例。 |
-| programManager | [Phaser.Renderer.WebGL.ProgramManager](/api/class/renderer-webgl-programmanager) | 否 | 阴影程序管理器实例 。 |
+| programManager | [Phaser.Renderer.WebGL.ProgramManager](/api/class/renderer-webgl-programmanager) | 否 | 着色器程序管理器实例 。 |
 | textureUnit | number | 否 | 用于普通地图的纹理单元。 |
 | vec | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 一种矢量2 实例。 |
 | selfShadow | boolean | 是 | 是否启用自我阴影 。 |

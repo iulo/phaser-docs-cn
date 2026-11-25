@@ -2,11 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-staticgroup)
 
-拱廊物理静态组对象.
+Arcade 物理静态组对象.
 
-静态组是一个游戏对象的容器,每个物体都有静态的弧形物理体。静态体固定在原位,从不因速度、重力或碰撞而移动。它们对于平台、墙壁、地板和其他不可移动的障碍等水平几何来说是理想的。 由于其位置在游戏游戏中从未改变,因此它们比动态体更能发挥这种作用。
+静态组是一个游戏对象的容器,每个物体都有静态的Arcade 物理体。静态体固定在原位,从不因速度、重力或碰撞而移动。它们对于平台、墙壁、地板和其他不可移动的障碍等水平几何来说是理想的。 由于其位置在游戏游戏中从未改变,因此它们比动态体更能发挥这种作用。
 
-如果游戏对象还没有一个,则该组创建或添加的所有游戏对象将自动获得一个静态弧形物理体。如果添加了一个已经拥有动态体的游戏对象,则该体将被销毁,并被静态体所取代。
+如果游戏对象还没有一个,则该组创建或添加的所有游戏对象将自动获得一个静态Arcade 物理体。如果添加了一个已经拥有动态体的游戏对象,则该体将被销毁,并被静态体所取代。
 
 它的动态对应器是[Phaser.Physics.Arcade.Group](/api/class/physics-arcade-group).
 
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理静态组碰撞类.
+Arcade 物理静态组碰撞类.
 
 它可以设置为任何有效的碰撞位域值 。
 
@@ -92,7 +92,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理静态组碰撞罩.
+Arcade 物理静态组碰撞罩.
 
 详见`setCollidesWith`方法.
 
@@ -129,7 +129,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此游戏对象的文字表达。 内部由 Phaser 使用, 但可供您自定义的类使用 。
 
 
-**Overrides:** Phaser.GameObjects.Group# 类型
+**重写:** Phaser.GameObjects.Group# 类型
 
 
 > 源码：[src/physics/arcade/StaticPhysicsGroup.js#L143](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticPhysicsGroup.js#L143)  
@@ -285,7 +285,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-多个组成员后引用的内部调用通过`createMultiple`同时创建. 呼叫[Phaser.Physics.Arcade.StaticGroup#refresh](/api/class/physics-arcade-staticgroup#refresh),以同步所有静态物理体与母游戏对象当前位置.
+多个组成员后引用的内部调用通过`createMultiple`同时创建. 呼叫[Phaser.Physics.Arcade.StaticGroup#refresh](/api/class/physics-arcade-staticgroup#refresh),以同步所有静态物理体与父游戏对象当前位置.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -306,7 +306,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将本组中的每个静态物理体重置到其母游戏对象的当前位置。 手动调整任何成员的位置后调用此功能, 使其身体保持同步。 身体大小不会被这种方法所改变; 使用 [Phaser.Physics.Arcade.Components.Enable#refreshBody](/api/namespace/physics-arcade-components-enable#refreshBody)来调整一个天体的大小 。
+将本组中的每个静态物理体重置到其父游戏对象的当前位置。 手动调整任何成员的位置后调用此功能, 使其物理体保持同步。 物理体大小不会被这种方法所改变; 使用 [Phaser.Physics.Arcade.Components.Enable#refreshBody](/api/namespace/physics-arcade-components-enable#refreshBody)来调整一个物理体的大小 。
 
 
 **返回值:** [Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup) - 这个团体。

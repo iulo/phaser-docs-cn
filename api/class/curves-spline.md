@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 斯普林曲线(Spline Curve)是一种通过一系列控制点的平滑曲线,它使用Catmull-Rom插值来产生一个自然外观的路径,与贝塞尔曲线不同,每个控制点都精确被访问,因此很容易定义对象所遵循的精确路径.
 
-当您需要通过多个路标,例如相机多利轨道,弹射飞行路径,或游戏角色的巡逻路径等平滑路径时使用 Spline 曲线. 点可以在施工时添加,也可以通过`addPoint`和`addPoints`递增.
+当您需要通过多个路标,例如摄像机多利轨道,弹射飞行路径,或游戏角色的巡逻路径等平滑路径时使用 Spline 曲线. 点可以在施工时添加,也可以通过`addPoint`和`addPoints`递增.
 
 **构造函数**
 
@@ -177,7 +177,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 根据长度在曲线中相对位置获得点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -230,7 +230,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得曲线的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -240,7 +240,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getStartPoint
+**重写:** Phaser.Curves.Curve#getStartPoint
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。

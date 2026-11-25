@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-用于渲染数据的 RenderNode 密钥 。
+用于渲染数据的 RenderNode 键 。
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterQuad.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterQuad.js#L43)  
@@ -119,7 +119,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | normalMapRotation | number | 是 | 普通地图纹理的旋转。 如果省略, 将使用 Game Object 的旋转 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterQuad.js#L97](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterQuad.js#L97)  

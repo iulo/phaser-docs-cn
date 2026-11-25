@@ -90,7 +90,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此处理器的默认配置对象。 与构造器中通过的 `config` 对象合并 。
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#defaultConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#defaultConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerStrip.js#L50](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerStrip.js#L50)  

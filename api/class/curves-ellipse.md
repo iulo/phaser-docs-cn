@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Ellipse([x], [y], [xRadius], [yRadius], [startAngle], [endAngle], [clockwise], [rotation])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| [Phaser.Types.Curves.EllipseCurveConfig](/api/typedef/types-curves#ellipsecurveconfig) | 是 | 0 | 椭圆的x坐标,或椭圆曲线配置对象. |
 | y | number | 是 | 0 | 椭圆形的y坐标. |
@@ -283,7 +283,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回给定的正态位置 `t` 的此曲线点, 0 是起始点, 1 是终点点。 结果将计算起始角、 结束角、 顺时针方向和椭圆旋转 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -336,7 +336,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得曲线的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -346,7 +346,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getStartPoint
+**重写:** Phaser.Curves.Curve#getStartPoint
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。

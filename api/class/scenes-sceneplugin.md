@@ -32,7 +32,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此 ScenePlugin 属于的场景的密钥 。
+此 ScenePlugin 属于的场景的键 。
 
 
 > 源码：[src/scene/ScenePlugin.js#L65](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/ScenePlugin.js#L65)  
@@ -133,7 +133,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果“ autoStart” 是真的, 或者设定了“ 活动” 属性, 将 Scene 添加到 Scene 管理器中并启动 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 一个独特的键用于引用景色,即`MainMenu`或`Level1`. |
 | sceneConfig | [Phaser.Types.Scenes.SceneType](/api/typedef/types-scenes#scenetype) | 否 |  | 场景的配置 |
@@ -161,7 +161,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 也就是说它会让其他的幕后人物 都更受欢迎
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -188,11 +188,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-基于给定的密钥获取一个场景 。
+基于给定的键获取一个场景 。
 
 如果将实际的场景传递到这种方法,可以用来检查其目前是否在场景管理器内,或者没有.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -222,7 +222,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获取 Scene 列表中的 Scene 的数值索引 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -251,7 +251,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复还景定地位.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -280,7 +280,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 检查给定的场景是否运行 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -309,7 +309,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 检查给定的场景是否暂停 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -338,7 +338,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 检查给定的场景是否在睡觉.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -367,7 +367,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 检查给定的场景是否可见 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -396,9 +396,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 发射给定的场景,并与这个场景平行运行.
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -430,7 +430,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这意味着它会超越其他场景的顶部
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -462,7 +462,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这意味着它会让另一个场景出现
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -492,7 +492,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 将 Scene 列表中的一个位置下移 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -521,7 +521,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 将 Scenes 列表中的一个位置移动到上 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -550,9 +550,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 暂停场景 - 这阻止了更新步骤的发生, 但它仍然可以实现 。
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -582,11 +582,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从场景管理器中删除场景。
 
-场景从局部场景阵列中移除,其密钥从密钥缓存中清除出来,然后将Scene.Systems.destroy调用.
+场景从局部场景阵列中移除,其键从键缓存中清除出来,然后将Scene.Systems.destroy调用.
 
 如果SceneManager在使用这种方法时正在处理Scenes,它会为下一次更新序列排队操作.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -615,7 +615,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 重开场景。
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -641,9 +641,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 恢复场景 - 重新开始更新循环 。
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -673,13 +673,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 运行给定的景区, 但不会改变此景区的状况 。
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
 如果给定的场景暂停, 将会恢复它。 如果睡觉, 它将唤醒它。 如果完全不运行, 则会开始 。
 
 如果您希望打开模式景, 请使用此选项, 请使用当前模式景上的 `pause` , 然后使用模式景中的 `run` 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -711,7 +711,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这意味着它会做出低于所有其他的幕后。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -740,7 +740,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设置给定景区的活跃状态。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -771,7 +771,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设置给定景色的可见状态。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -801,9 +801,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 使场景睡眠(没有更新,没有渲染),但不会关闭.
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -833,9 +833,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 关闭这个场景,运行给定的。
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -867,7 +867,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这发生在下一次场景管理器更新时,而不是立即.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -899,7 +899,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这控制了这些物品的提供和更新顺序。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -929,9 +929,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 使这个场景睡眠,然后开始给定的场景.
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -975,7 +975,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 目标场景会发出事件 `transitioninit` 当场景 `init` 方法。它会发出事件 `transitionstart` 时 `create` 如果现场正在睡觉,被唤醒,它会发出事件 `transitionwake` 而不是这两个,作为幕后 `init` 财务报告和已审计财务报表 `create` 当场景醒过来时,不引用方法。
 
-当过渡时间结束时, 将会发出 `transitioncomplete` 事件。 当场景关闭时, 全部听众都会被清除, 但如果它被送入睡眠时则不会被清除 。
+当过渡时间结束时, 将会发出 `transitioncomplete` 事件。 当场景关闭时, 全部监听器都会被清除, 但如果它被送入睡眠时则不会被清除 。
 
 必须理解,转换的持续时间始于您称之为这种方法的瞬间。 如果您正在转换到包含延迟进程, 如等待文件加载, 则即使发生这种情况, 时间仍然会算低。 如果游戏本身暂停, 或者有其他原因导致此Scase更新循环停止, 那么过渡也会暂停。 此时, 有一些检查可以防止您意外停止转换 Scue, 但是如果你有代码可以覆盖这个理解, 在目标完成前, 输入事件可能永远无法解锁 。
 
@@ -988,7 +988,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** boolean - 如果过渡开始,则使用`true`,否则使用`false`.
 
 
-**Fires:** [Phaser.Scenes.Events#event:TRANSITION_OUT](/api/event/scenes-events#transition_out)
+**触发事件:** [Phaser.Scenes.Events#event:TRANSITION_OUT](/api/event/scenes-events#transition_out)
 
 
 > 源码：[src/scene/ScenePlugin.js#L244](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/ScenePlugin.js#L244)  
@@ -1006,9 +1006,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 使场景醒悟(启动更新和渲染).
 
-下一场场景管理器更新时, 将不会立即发生这种情况 。
+此操作将在场景管理器下次更新时执行。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse

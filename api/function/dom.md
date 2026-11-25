@@ -55,7 +55,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-检查文档的 readyState 。 如果文档已经完整或交互, 它会立即引用给定的调用符。 如果不是, 它会注册事件听众在文档准备完毕时检测。 在 Cordova 环境中, 它会为 `deviceready` 事件收听; 否则它会为 `DOMContentLoaded` 和窗口的 `load` 事件收看, 并首先引用调用调用符。 如果文档主体尚未可用, 则会回到短时间后再引用调用符。 自动由 Phaser.Game 实例调用。 通常不应该直接访问 。
+检查文档的 readyState 。 如果文档已经完整或交互, 它会立即引用给定的调用符。 如果不是, 它会注册事件监听器在文档准备完毕时检测。 在 Cordova 环境中, 它会为 `deviceready` 事件收听; 否则它会为 `DOMContentLoaded` 和窗口的 `load` 事件收看, 并首先引用调用调用符。 如果文档主体尚未可用, 则会回到短时间后再引用调用符。 自动由 Phaser.Game 实例调用。 通常不应该直接访问 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -98,7 +98,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 尝试使用一系列浏览器API确定屏幕方向,如果没有的话,则回落到比较视图的维度.
 
-它检查了屏幕方向 API( 屏幕方向 ) 。`screen.orientation`, `screen.mozOrientation`, `screen.msOrientation`),遗产 `window.orientation` 财产(在 iOS),该 `window.matchMedia` API,最后作为最后手段,简单进行宽度比高比较.
+它检查了屏幕方向 API( 屏幕方向 ) 。`screen.orientation`, `screen.mozOrientation`, `screen.msOrientation`),遗产 `window.orientation` 属性(在 iOS),该 `window.matchMedia` API,最后作为最后手段,简单进行宽度比高比较.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

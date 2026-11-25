@@ -127,10 +127,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 #### mute: boolean {#mute-boolean}
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager穆特( 穆特)
+**重写:** Phaser.Sound.BaseSoundManager穆特( 穆特)
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L537](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L537)  
@@ -144,10 +144,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 #### volume: number {#volume-number}
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager数量
+**重写:** Phaser.Sound.BaseSoundManager数量
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L577](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L577)  
@@ -217,11 +217,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager添加( 添加 )
+**重写:** Phaser.Sound.BaseSoundManager添加( 添加 )
 
 
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 新声闻例.
@@ -268,13 +268,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 音频数据可以是基数64编码字符串,音频介质类型数据uri,也可以是ArrayBuffer实例.
 
-`audioKey`是用于将解码音频保存到音频缓存的密钥.
+`audioKey`是用于将解码音频保存到音频缓存的键.
 
 与其通过单个条目,不如通过`Phaser.Types.Sound.DecodeAudioConfig`对象的数组作为第一个也是唯一的参数。
 
 解码是一个Async过程,所以要注意听好事件,知道解码完成的时间.
 
-一旦音频解码,它就可以添加到声音管理器中,或者通过它的密钥播放.
+一旦音频解码,它就可以添加到声音管理器中,或者通过它的键播放.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -283,7 +283,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | audioData | ArrayBuffer \| string | 是 | 音频数据,要么是一个基数64编码字符串,一个音频媒体类型的数据uri,要么是一个ArrayBuffer实例. |
 
 
-**Fires:** [Phaser.Sound.Events#event:DECODED](/api/event/sound-events#decoded), [Phaser.Sound.Events#event:DECODED_ALL](/api/event/sound-events#decoded_all)
+**触发事件:** [Phaser.Sound.Events#event:DECODED](/api/event/sound-events#decoded), [Phaser.Sound.Events#event:DECODED_ALL](/api/event/sound-events#decoded_all)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L234](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L234)  
@@ -302,7 +302,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 呼叫 Phaser.Sound.BaseSoundManager#destroy 方法并清理所有Web Audio API相关资源.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#销毁
+**重写:** Phaser.Sound.BaseSoundManager#销毁
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L485](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L485)  
@@ -321,10 +321,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果 Phaser.Sound.WebAudioSoundManager# pauseOnBlur 设定为真实, 则内部用于挖掘声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onBlur
+**重写:** Phaser.Sound.BaseSoundManager#onBlur
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L391](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L391)  
@@ -343,10 +343,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果 Phaser.Sound.WebAudioSoundManager# pauseOnBlur 设定为真实,则内部用于恢复声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onFocus
+**重写:** Phaser.Sound.BaseSoundManager#onFocus
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L407](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L407)  
@@ -390,7 +390,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在此 Web 音频上下文设置空间音频听器的 X 和 Y 位置 。
 
-如果您将这种方法调用为没有参数, 它会默认为游戏画布的中点。 根据您正在制作的游戏类型, 您可能需要调用这种方法来不断重置听众位置为相机卷轴 。
+如果您将这种方法调用为没有参数, 它会默认为游戏画布的中点。 根据您正在制作的游戏类型, 您可能需要调用这种方法来不断重置监听器位置为摄像机卷轴 。
 
 调用这种方法对 HTML5Audio 没有任何作用 。
 
@@ -398,10 +398,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 是 | 空间音频听器的 x 位置 。 |
-| y | number | 是 | 空间音频听众的y位置 。 |
+| y | number | 是 | 空间音频监听器的y位置 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#setListenerPosition
+**重写:** Phaser.Sound.BaseSoundManager#setListenerPosition
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L315](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L315)  
@@ -428,7 +428,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSoundManager](/api/class/sound-webaudiosoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L519](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L519)  
@@ -455,7 +455,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSoundManager](/api/class/sound-webaudiosoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L559](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L559)  
@@ -476,7 +476,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 更多关于这个问题如何在这里处理,[this article](https://medium.com/@pgoloskokovic/unlocking-web-audio-the-smarter-way-8858218c0e09)。
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#解锁
+**重写:** Phaser.Sound.BaseSoundManager#解锁
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L340](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L340)  
@@ -497,7 +497,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 删除游戏中被破坏的声音并更新每个活动声音.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -506,10 +506,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | delta | number | 否 | 三角洲时间已经过去 自上个框架。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#更新日期
+**重写:** Phaser.Sound.BaseSoundManager#更新日期
 
 
-**Fires:** [Phaser.Sound.Events#event:UNLOCKED](/api/event/sound-events#unlocked)
+**触发事件:** [Phaser.Sound.Events#event:UNLOCKED](/api/event/sound-events#unlocked)
 
 
 > 源码：[src/sound/webaudio/WebAudioSoundManager.js#L425](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSoundManager.js#L425)  

@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-触摸管理器是否启用, 可用布尔控制。 可以在苍蝇上切换 。
+触摸管理器是否启用, 可用布尔控制。 可以在运行时切换 。
 
 
 > 源码：[src/input/touch/TouchManager.js#L55](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/touch/TouchManager.js#L55)  
@@ -66,7 +66,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-活动听众是被`window.top`或`window`迷上了吗?
+活动监听器是被`window.top`或`window`迷上了吗?
 
 此设定在 `boot` 序列中。 如果浏览器无法访问 `window.top`, 如在跨源iframe 环境中, 此属性会被设定为 `false` , 而事件被连接到 `window` 中 。
 
@@ -269,7 +269,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-启动触摸事件听众运行, 只要输入目标设定。
+启动触摸事件监听器运行, 只要输入目标设定。
 
 如果在游戏配置中启用了触摸输入,则自动使用这种方法。但是,如果需要将输入捕获延迟到游戏的稍后阶段,您可以手动调用。
 

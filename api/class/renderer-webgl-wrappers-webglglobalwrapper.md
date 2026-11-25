@@ -71,7 +71,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 当`force`是真实的,而`state`是未定义的时,则使用当前状态来重置所有参数.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 是 |  | 要设置的状态。 如果未定义, 当前状态用于 `force` 谓 `true`. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -94,7 +94,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新绑定状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -116,7 +116,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新活动纹理单位状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -138,7 +138,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新数组缓冲器(ARRAY_BUFFER)绑定状态。这可以绑定用于向GPU提供顶点属性数据的顶点缓冲对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -160,7 +160,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新索引数组缓冲状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -182,7 +182,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新帧缓冲状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -204,7 +204,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新当前绑定的 WebGL 遮阳程序,使用`gl.useProgram`调用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -226,7 +226,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新缓冲状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -248,7 +248,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新混合状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -270,7 +270,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新混合颜色。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -292,7 +292,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新混合启用状态 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -316,7 +316,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 方程常当分别.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -340,7 +340,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 职能总是被视为单独的。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -362,7 +362,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新用于在`gl.clear`被调用颜色缓冲位点时填充颜色缓冲器的 RGBA 颜色值 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -384,7 +384,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新色彩写掩码,用于控制在渲染过程中将哪些 RGBA 色彩组件写入色彩缓冲器.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -406,7 +406,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新阴沟面部状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -428,7 +428,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新深度测试状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -450,7 +450,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新剪刀状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -472,7 +472,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新剪刀盒状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -494,7 +494,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新已启用的剪刀状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -516,7 +516,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新星格状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -538,7 +538,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新在使用 Stencil 缓冲位点调用 `gl.clear` 时用于清除 Stencil 缓冲的值 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -560,7 +560,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新已启用的天线状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -582,7 +582,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新音阶函数状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -604,7 +604,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新速率操作状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -626,7 +626,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新纹理状态, 创建纹理时生效。 包括 `flipY` 和 `premultiplyAlpha` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -648,7 +648,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新 `UNPACK_FLIP_Y_WEBGL`像素存储参数,该参数控制上传到GPU时是否垂直翻转纹理图像数据.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -670,7 +670,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新`UNPACK_PREMULTIPLY_ALPHA_WEBGL`像素存储参数,在纹理图像数据上传到GPU时,它控制α通道是否被预先多倍化到RGB组件中.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -694,7 +694,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 请注意, VAO 自动受到 `elementArrayBuffer` 和 WebGL 中写入的任何属性设置的约束。 当绑定 VAO 时, 确保其他约束 , 如您所希望的那样, 前后会生效 。 当使用 `update` 时, VAO 默认先设定 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |
@@ -716,7 +716,7 @@ WebGL全局状态的包装器,包括混合模式,纹理绑定,剪刀测试,天�
 更新视图状态。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | [Phaser.Types.Renderer.WebGL.WebGLGlobalParameters](/api/typedef/types-renderer-webgl#webglglobalparameters) | 否 |  | 州以设. |
 | force | boolean | 是 | false | 如果 `true`,则无论目前状态如何,状态都会被设定. |

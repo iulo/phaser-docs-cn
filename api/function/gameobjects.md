@@ -34,7 +34,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| factoryType | string | 否 | 您想要从游戏对象数据库中移除的工厂密钥 。 |
+| factoryType | string | 否 | 您想要从游戏对象数据库中移除的工厂键 。 |
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L205](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L205)  
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| factoryType | string | 否 | 您想要从游戏对象创建器中移除的工厂密钥 。 |
+| factoryType | string | 否 | 您想要从游戏对象创建器中移除的工厂键 。 |
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L173)  
@@ -95,7 +95,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 分析一个 Retro 字体配置对象,并构建一个 `BitmapFontData` 结构,可以传递到 BitmapText 构造器,以使用固定的宽度 retro 字体渲染文本.
 
-复古字体是一个包含一个统一的字符网格的纹理,每个单元格的宽度和高度都是一样的。这个函数读取配置,查看源纹理框架,然后在`config.chars`定义的每个字符上进行重排,计算其像素位置和纹理内正常的紫外线坐标。生成的数据对象将每个字符代码映射到自己的格律条目,并适合在Bitmap字体缓存中注册。
+复古字体是一个包含一个统一的字符网格的纹理,每个单元格的宽度和高度都是一样的。这个函数读取配置,查看源纹理帧,然后在`config.chars`定义的每个字符上进行重排,计算其像素位置和纹理内正常的紫外线坐标。生成的数据对象将每个字符代码映射到自己的格律条目,并适合在Bitmap字体缓存中注册。
 
 如果 `config.chars` 是空字符串,则函数返回 `undefined` 而不产生任何数据 。
 
@@ -130,10 +130,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 解析位图字体的场景 。 |
-| fontName | string | 否 | 添加到位图字体缓存的字体密钥 。 |
-| textureKey | string | 否 | 比特玛普方块纹理的密钥. |
-| frameKey | string | 否 | 比特玛普方格纹理框架的密钥. |
-| xmlKey | string | 否 | 字体的 XML 数据解析的密钥 。 |
+| fontName | string | 否 | 添加到位图字体缓存的字体键 。 |
+| textureKey | string | 否 | 比特玛普方块纹理的键. |
+| frameKey | string | 否 | 比特玛普方格纹理帧的键. |
+| xmlKey | string | 否 | 字体的 XML 数据解析的键 。 |
 | xSpacing | number | 是 | 每个字母之间要添加的x轴间隔。 |
 | ySpacing | number | 是 | 线高的Y轴间隔。 |
 
@@ -155,10 +155,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 为位图字体缓存分析一个 XML 字体到位图字体数据 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | xml | XMLDocument | 否 |  | XML 文档从中解析字体 。 |
-| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 创建 uv 数据时要考虑的纹理框架 。 |
+| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 创建 uv 数据时要考虑的纹理帧 。 |
 | xSpacing | number | 是 | 0 | 每个字母之间要添加的x轴间隔。 |
 | ySpacing | number | 是 | 0 | 线高的Y轴间隔。 |
 
@@ -226,17 +226,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-计算给定的游戏对象和相机的变换矩阵,如果提供的话,在母矩阵中计算。
+计算给定的游戏对象和摄像机的变换矩阵,如果提供的话,在母矩阵中计算。
 
 注意此结果包含 _References_ to the Transform Matrices,而不是新实例。因此,您应该立即使用它们的值,或者将其复制到自己的矩阵中,因为一旦推出另一个游戏对象,它们就会被替换 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | src | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 计算变换矩阵的游戏对象 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 用于渲染游戏对象的相机 。 |
-| parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 母容器的变换矩阵,如果有的话。 |
-| ignoreCameraPosition | boolean | 是 | false | 相机的翻译是否应当忽略? 这就是在屏幕上移动相机的原因, 但是当相机被传送到帧缓冲器时, 却应该忽略它 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 用于渲染游戏对象的摄像机 。 |
+| parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 父容器的变换矩阵,如果有的话。 |
+| ignoreCameraPosition | boolean | 是 | false | 摄像机的翻译是否应当忽略? 这就是在屏幕上移动摄像机的原因, 但是当摄像机被传送到帧缓冲器时, 却应该忽略它 。 |
 
 
 **返回值:** [Phaser.Types.GameObjects.GetCalcMatrixResults](/api/typedef/types-gameobjects#getcalcmatrixresults) - 包含更新的变换矩阵的结果对象.

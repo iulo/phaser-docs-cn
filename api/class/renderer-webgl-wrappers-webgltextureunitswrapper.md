@@ -87,7 +87,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 这应该是将纹理绑在一个单位上的唯一方法.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | texture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) \| null | 否 |  | 绑定的纹理,或解封单位的纹理无效. |
 | unit | number | 否 |  | 纹理单位将纹理绑定在. |
@@ -113,7 +113,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 主动纹理单位可更改以适应装订.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | textures | Array.\<([Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) \| null | undefined)> | 否 |  | 绑定的纹理。 无效值将不绑定。 未定义的值将被跳过 。 |
 | force | boolean | 是 | false | 如果是真的,它会约束所有纹理,即使它们已经捆绑了. |

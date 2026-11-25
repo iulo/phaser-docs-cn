@@ -16,16 +16,16 @@ static
 
 **说明:**
 
-设置此天体的调试值。
+设置此物理体的调试值。
 
 机构只有在已启用整个Arcade Physics 调试时才会绘制调试。 请注意, 绘制调试显示时需要花费性能, 生产中不应该使用调试 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| showBody | boolean | 否 | 设定为 `true` , 以使此天体将其大纲变成调试显示 。 |
-| showVelocity | boolean | 否 | 设定为 `true` , 以使此天体为调试显示制成一个速度标记 。 |
-| bodyColor | number | 否 | 向调试显示器渲染时的车体轮廓颜色 。 |
+| showBody | boolean | 否 | 设定为 `true` , 以使此物理体将其大纲变成调试显示 。 |
+| showVelocity | boolean | 否 | 设定为 `true` , 以使此物理体为调试显示制成一个速度标记 。 |
+| bodyColor | number | 否 | 向调试显示器渲染时的物理体轮廓颜色 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Debug](/api/namespace/physics-arcade-components-debug) - 此游戏对象 。
@@ -44,12 +44,12 @@ static
 
 **说明:**
 
-设置调试显示时的车体轮廓颜色。
+设置调试显示时的物理体轮廓颜色。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 向调试显示器渲染时的车体轮廓颜色 。 |
+| value | number | 否 | 向调试显示器渲染时的物理体轮廓颜色 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Debug](/api/namespace/physics-arcade-components-debug) - 此游戏对象 。
@@ -70,7 +70,7 @@ static
 
 **说明:**
 
-调试显示时的车体轮廓颜色 。
+调试显示时的物理体轮廓颜色 。
 
 
 > 源码：[src/physics/arcade/components/Debug.js#L103](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/components/Debug.js#L103)  
@@ -86,7 +86,7 @@ static
 
 **说明:**
 
-设定为 `true` , 以使此天体将其大纲变成调试显示 。
+设定为 `true` , 以使此物理体将其大纲变成调试显示 。
 
 
 > 源码：[src/physics/arcade/components/Debug.js#L61](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/components/Debug.js#L61)  
@@ -102,7 +102,7 @@ static
 
 **说明:**
 
-设定为 `true` , 以使此天体为调试显示制成一个速度标记 。
+设定为 `true` , 以使此物理体为调试显示制成一个速度标记 。
 
 
 > 源码：[src/physics/arcade/components/Debug.js#L82](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/components/Debug.js#L82)  

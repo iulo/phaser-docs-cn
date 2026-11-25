@@ -56,7 +56,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 您可以选择为每个成功添加到数组的项目指定一个调用回调 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 要添加的数组 。 |
 | item | any \| Array.\<any> | 否 |  | 将项目,或项目数组添加到数组中。 |
@@ -190,7 +190,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | ---- | ---- | -------- | ----------- |
 | value | number | 否 | 数组中要搜索的值 。 |
 | array | array | 否 | 要搜索的阵列, 必须排序 。 |
-| key | string | 是 | 选项属性密钥。 如果指定数组元素的属性, 将对照值检查 。 |
+| key | string | 是 | 选项属性键。 如果指定数组元素的属性, 将对照值检查 。 |
 
 
 **返回值:** number, any - 数组中找到的最近值,或者如果给出了`key`,则与匹配属性值最接近的对象.
@@ -275,7 +275,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 您也可以指定一个负的 `startIndex`, 如 `-1`, 可以在阵列的末尾开始搜索
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 要搜索的阵列 。 |
 | property | string | 是 |  | 在每个阵列元素上测试的属性 。 |
@@ -300,14 +300,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 从数组返回随机元素。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | Array.\<T> | 否 |  | 随机选择条目的数组。 |
 | startIndex | number | 是 | 0 | 选择的启动索引 。 |
@@ -486,7 +486,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 `start`和`end`的某些值(如NaN/underfinding/null)目前被强制为0;对于前置兼容性,确保通过实际数字。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 是 | 0 | 范围开始。 |
 | end | number | 是 | null | 范围结束。 |
@@ -516,7 +516,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 根据[Vladimir Agafonkin](https://www.npmjs.com/~mourner)的代码
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | arr | array | 否 |  | 重新排列位置的阵列 。 |
 | k | number | 否 |  | K-th元素指数. |
@@ -669,7 +669,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 从给定数组中删除随机对象并返回。如果没有属于指定范围的数组项目,或者没有随机选择的索引项目,则返回无效。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 从随机元素中移除的数组 。 |
 | start | number | 是 | 0 | 启动搜索的阵列索引 。 |
@@ -717,7 +717,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将数组起始的元素移到尾部,将进程的所有项目移到尾部。“旋转”发生在左边。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 向左移动的阵列。 此阵列已被修改 。 |
 | total | number | 是 | 1 | 移转数组的次数 。 |
@@ -740,7 +740,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将数组末尾的元素移动到起始处,将进程的所有项目都移到开始处。“旋转”发生在右边。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 向右移动的数组。 此数组已被修改 。 |
 | total | number | 是 | 1 | 移转数组的次数 。 |
@@ -765,7 +765,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 当`startIndex`为零或更大,`startIndex`小于`endIndex`时,一个范围被认为是安全的,`endIndex`不会超过阵列的长度.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | array | 否 |  | 要检查的阵列 。 |
 | startIndex | number | 否 |  | 范围包含的起始索引。 必须是0 或大于 `endIndex` 。 |
@@ -844,7 +844,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 原阵列直接修改后返回.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -984,7 +984,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1024,7 +1024,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1064,7 +1064,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1104,7 +1104,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1144,7 +1144,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1184,13 +1184,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | amount | number | 是 | 1 | 左转90度矩阵旋转的次数. |
@@ -1229,13 +1229,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | direction | number \| string | 是 | 90 | 以 90、 -90、 270、 - 270、 180 或 -180 等度值旋转矩阵的量。 或 `rotateLeft`、 `rotateRight` 或 `rotate180` 的字符串命令。 如果给出了未识别值, 矩阵将不会旋转 。 |
@@ -1270,13 +1270,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | amount | number | 是 | 1 | 顺时针旋转矩阵的次数 90 度 。 |
@@ -1313,13 +1313,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要翻译的矩阵矩阵 。 |
 | x | number | 是 | 0 | 水平翻译矩阵的金额 。 |
@@ -1357,7 +1357,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -1585,11 +1585,11 @@ NULL OP 回调函数 。
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | source | object | 否 | 取回该值的对象 。 |
-| key | string | 否 | 从对象中获取的属性名称。如果一个属性被嵌入,则其先前属性的名称应当用点分隔(`.`) - `banner.hideBanner` 返回该值的值 `hideBanner` 中存储对象的属性 `banner` 财产的损益 `source` 对象。 |
+| key | string | 否 | 从对象中获取的属性名称。如果一个属性被嵌入,则其先前属性的名称应当用点分隔(`.`) - `banner.hideBanner` 返回该值的值 `hideBanner` 中存储对象的属性 `banner` 属性的损益 `source` 对象。 |
 | defaultValue | * | 否 | 如果 `key` 在 `source` 对象中找不到, 返回值 。 |
 
 
-**返回值:** * - 请求的密钥值 。
+**返回值:** * - 请求的键值 。
 
 
 > 源码：[src/utils/object/GetAdvancedValue.js#L10](https://github.com/phaserjs/phaser/blob/v4.1.0/src/utils/object/GetAdvancedValue.js#L10)  
@@ -1603,14 +1603,14 @@ NULL OP 回调函数 。
 
 **说明:**
 
-从源对象的顶级获取给定的密钥值。如果源不是对象(即是虚构的,数字的,或字符串),或者如果源上不存在密钥,则返回defaultValue。
+从源对象的顶级获取给定的键值。如果源不是对象(即是虚构的,数字的,或字符串),或者如果源上不存在键,则返回defaultValue。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | source | object | 否 | 搜索对象 |
-| key | string | 否 | 源属性的密钥。 必须在源对象的顶端存在( 无周期) |
-| defaultValue | * | 是 | 如果密钥不存在, 则使用默认值 。 |
+| key | string | 否 | 源属性的键。 必须在源对象的顶端存在( 无周期) |
+| defaultValue | * | 是 | 如果键不存在, 则使用默认值 。 |
 
 
 **返回值:** * - 如果找到值; 否则, defaultValue( 如果未提供则取消)
@@ -1627,7 +1627,7 @@ NULL OP 回调函数 。
 
 **说明:**
 
-使用给定的密钥从源对象中获取一个数值,然后将其夹到 `min`和 `max` 定义的包容性范围。如果该属性不存在于源对象上,则使用 `defaultValue` 。通过将密钥名称与点分隔,可以访问 Nested 属性。返回的值总是在指定的界限内。
+使用给定的键从源对象中获取一个数值,然后将其夹到 `min`和 `max` 定义的包容性范围。如果该属性不存在于源对象上,则使用 `defaultValue` 。通过将键名称与点分隔,可以访问 Nested 属性。返回的值总是在指定的界限内。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1680,12 +1680,12 @@ const height = GetValue(source, 'render.screen.height', 600);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | source | object | 否 | 试图从中获取值的主对象。 如果在此找不到, 则选中 `altSource` 。 |
-| key | string | 否 | 从对象中获取的属性名称。如果一个属性被嵌入,则其先前属性的名称应当用点分隔(`.`) - `banner.hideBanner` 返回该值的值 `hideBanner` 中存储对象的属性 `banner` 财产的损益 `source` 对象。 |
+| key | string | 否 | 从对象中获取的属性名称。如果一个属性被嵌入,则其先前属性的名称应当用点分隔(`.`) - `banner.hideBanner` 返回该值的值 `hideBanner` 中存储对象的属性 `banner` 属性的损益 `source` 对象。 |
 | defaultValue | * | 否 | 如果 `key` 在 `source` 对象中找不到, 返回值 。 |
 | altSource | object | 是 | 用于从中获取值的替代对象。 如果属性存在于 `source` 中, 那么 `altSource` 将不使用 。 |
 
 
-**返回值:** * - 请求的密钥值 。
+**返回值:** * - 请求的键值 。
 
 
 > 源码：[src/utils/object/GetValue.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/utils/object/GetValue.js#L7)  
@@ -1699,16 +1699,16 @@ const height = GetValue(source, 'render.screen.height', 600);
 
 **说明:**
 
-验证一个对象是否包含所有请求的密钥
+验证一个对象是否包含所有请求的键
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| source | object | 否 | 用于检查密钥存在的对象 。 |
-| keys | Array.\<string> | 否 | 用于确保源对象包含的密钥数组 。 |
+| source | object | 否 | 用于检查键存在的对象 。 |
+| keys | Array.\<string> | 否 | 用于确保源对象包含的键数组 。 |
 
 
-**返回值:** boolean - 如果源对象包含所有密钥,则`true`,否则则`false`.
+**返回值:** boolean - 如果源对象包含所有键,则`true`,否则则`false`.
 
 
 > 源码：[src/utils/object/HasAll.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/utils/object/HasAll.js#L7)  
@@ -1722,16 +1722,16 @@ const height = GetValue(source, 'render.screen.height', 600);
 
 **说明:**
 
-验证对象至少包含一个请求的密钥
+验证对象至少包含一个请求的键
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| source | object | 否 | 用于检查密钥存在的对象 。 |
-| keys | Array.\<string> | 否 | 搜索对象的密钥数组 。 |
+| source | object | 否 | 用于检查键存在的对象 。 |
+| keys | Array.\<string> | 否 | 搜索对象的键数组 。 |
 
 
-**返回值:** boolean - 如果源对象至少包含一个密钥,则`true`,否则则`false`.
+**返回值:** boolean - 如果源对象至少包含一个键,则`true`,否则则`false`.
 
 
 > 源码：[src/utils/object/HasAny.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/utils/object/HasAny.js#L7)  
@@ -1745,7 +1745,7 @@ const height = GetValue(source, 'render.screen.height', 600);
 
 **说明:**
 
-确定源对象是否拥有自己的属性和指定的密钥。 这在内部使用 `hasOwnProperty`, 因此只检查拥有( 非继承) 属性 。
+确定源对象是否拥有自己的属性和指定的键。 这在内部使用 `hasOwnProperty`, 因此只检查拥有( 非继承) 属性 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1790,14 +1790,14 @@ const height = GetValue(source, 'render.screen.height', 600);
 
 **说明:**
 
-执行两个平面对象的浅析合并, 返回一个包含全部属性的全新的对象。 输入对象都不被修改。 当两个对象中都存在相同的密钥时, obj1 值优先于obj2 值 。
+执行两个平面对象的浅析合并, 返回一个包含全部属性的全新的对象。 输入对象都不被修改。 当两个对象中都存在相同的键时, obj1 值优先于obj2 值 。
 
 仅此为浅复制。 深嵌嵌套件不会被克隆, 所以请确定只使用此功能于单个嵌套级的物体 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| obj1 | object | 否 | 基对象。 在发生密钥冲突时, 它的属性优先 。 |
+| obj1 | object | 否 | 基对象。 在发生键冲突时, 它的属性优先 。 |
 | obj2 | object | 否 | 次要对象。结果中添加了此对象特有的属性。 |
 
 
@@ -1817,13 +1817,13 @@ const height = GetValue(source, 'render.screen.height', 600);
 
 通过克隆 `obj1`来创建新对象,然后使用"右胜"策略将 `obj2` 的值合并到其中.
 
-仅包含在 `obj1` 考虑。对于每个键在 `obj2` 中也存在 `obj1`,从 `obj2` 覆盖克隆值。在 `obj2` 但缺席 `obj1` 完全忽略。这与标准合并不同,在 `obj2` 无法引入新密钥——它只能覆盖已有的密钥。
+仅包含在 `obj1` 考虑。对于每个键在 `obj2` 中也存在 `obj1`,从 `obj2` 覆盖克隆值。在 `obj2` 但缺席 `obj1` 完全忽略。这与标准合并不同,在 `obj2` 无法引入新键——它只能覆盖已有的键。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | obj1 | object | 否 | 第一个合并对象 。 |
-| obj2 | object | 否 | 第二个要合并的对象。 此对象的密钥也存在于 `obj1` 中, 将会复制到 `obj1` 。 |
+| obj2 | object | 否 | 第二个要合并的对象。 此对象的键也存在于 `obj1` 中, 将会复制到 `obj1` 。 |
 
 
 **返回值:** object - 合并对象。 `obj1`和 `obj2` 都没有修改 。
@@ -1845,7 +1845,7 @@ const height = GetValue(source, 'render.screen.height', 600);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| object | object | 否 | 选择所提供密钥的对象 。 |
+| object | object | 否 | 选择所提供键的对象 。 |
 | keys | array | 否 | 从提供的对象获取的一系列属性 。 |
 
 
@@ -1886,11 +1886,11 @@ console.log(data.world.position.y); // 300
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | source | object | 否 | 设置值的对象 。 |
-| key | string | 否 | 对象中的财产名称。 如果一个财产被嵌入, 其前几个属性的名称应该用点( `.`) 分隔 。 |
+| key | string | 否 | 对象中的属性名称。 如果一个属性被嵌入, 其前几个属性的名称应该用点( `.`) 分隔 。 |
 | value | any | 否 | 如果在源对象中找到, 设置到属性的值 。 |
 
 
-**返回值:** boolean - 如果属性密钥有效且值设定,则使用`true`,否则使用`false`.
+**返回值:** boolean - 如果属性键有效且值设定,则使用`true`,否则使用`false`.
 
 
 > 源码：[src/utils/object/SetValue.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/utils/object/SetValue.js#L7)  
@@ -1950,7 +1950,7 @@ console.log(data.world.position.y); // 300
 将返回: `**c64**`
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | str | string \| number | object | 否 |  | 目标字符串. `toString()`将调用在字符串上,这意味着您也可以通过像数字这样的常见数据类型. |
 | len | number | 是 | 0 | 由此产生的加长字符串的总长度 。 |

@@ -16,7 +16,7 @@ static
 
 **说明:**
 
-在指定的层的瓷砖坐标处计算有趣的面。 有趣的面用于优化与瓷砖的碰撞。 这种方法大多用于在仅更改一个瓷砖时优化再计算面。
+在指定的层的瓦片坐标处计算有趣的面。 有趣的面用于优化与瓦片的碰撞。 这种方法大多用于在仅更改一个瓦片时优化再计算面。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -42,7 +42,7 @@ static
 
 **说明:**
 
-计算层内指定(在砖座坐标)所有可碰撞的瓷砖的有趣面。 “ 有趣的面” 是可碰撞瓷砖的暴露边缘, 具体来说, 任何没有与邻近的另一块可碰撞瓷砖共享的面。 例如, 如果两块可碰撞瓷砖坐在一起, 其之间的共享边缘不是有趣的面, 因为相互移动的物理体永远不会与之碰撞。 只有有趣的面在碰撞解析过程中进行测试, 避免了内缘问题, 并保持碰撞检查的效率。 此功能在瓷砖放置或移走时自动调用, 并且大多由瓷砖系统内部使用 。
+计算层内指定(在砖座坐标)所有可碰撞的瓦片的有趣面。 “ 有趣的面” 是可碰撞瓦片的暴露边缘, 具体来说, 任何没有与邻近的另一块可碰撞瓦片共享的面。 例如, 如果两块可碰撞瓦片坐在一起, 其之间的共享边缘不是有趣的面, 因为相互移动的物理体永远不会与之碰撞。 只有有趣的面在碰撞解析过程中进行测试, 避免了内缘问题, 并保持碰撞检查的效率。 此功能在瓦片放置或移走时自动调用, 并且大多由瓦片系统内部使用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -50,7 +50,7 @@ static
 | tileX | number | 否 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -67,9 +67,9 @@ static
 
 **说明:**
 
-检查给定的瓦片坐标是否在相机的可见范围内, 用于同位素瓦片层。 用于在瓦片卷曲中确定是否应该制取一个瓦片 。
+检查给定的瓦片坐标是否在摄像机的可见范围内, 用于同位素瓦片层。 用于在瓦片卷曲中确定是否应该制取一个瓦片 。
 
-瓦片坐标首先通过层的瓦片对世界的转换转换转换成世界空间,然后对照相机的世界观矩形测试所形成的位置,再由层的`cullPaddingX`值和`cullPaddingY`值(以瓦片单位表示)进行扩展,以避免在视图端的边缘出现瓦片,补丁抵消从每个瓦片的中心测量.
+瓦片坐标首先通过层的瓦片对世界的转换转换转换成世界空间,然后对照摄像机的世界观矩形测试所形成的位置,再由层的`cullPaddingX`值和`cullPaddingY`值(以瓦片单位表示)进行扩展,以避免在视图端的边缘出现瓦片,补丁抵消从每个瓦片的中心测量.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -96,7 +96,7 @@ static
 
 **说明:**
 
-复制源长方形区域的瓷砖到层内的新目的地( 全部在瓷砖坐标中指定) 。 此复制所有瓷砖属性, 并重新计算目的地区域的碰撞信息 。
+复制源长方形区域的瓦片到层内的新目的地( 全部在瓦片坐标中指定) 。 此复制所有瓦片属性, 并重新计算目的地区域的碰撞信息 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -124,7 +124,7 @@ static
 
 **说明:**
 
-为每个匹配层中给定的瓷砖索引的对象创建 Sprite。 您可以选择指定每个瓷砖是否在 Sprite 创建后被替换为新瓷砖。 如果您想要在转换成 Sprite 的级别下置特殊瓷砖, 但想要在转换后将瓷砖本身替换为地板瓷砖或类似的瓷砖, 则此操作是有用的 。
+为每个匹配层中给定的瓦片索引的对象创建 Sprite。 您可以选择指定每个瓦片是否在 Sprite 创建后被替换为新瓦片。 如果您想要在转换成 Sprite 的级别下置特殊瓦片, 但想要在转换后将瓦片本身替换为地板瓦片或类似的瓦片, 则此操作是有用的 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -133,7 +133,7 @@ static
 | replacements | number \| Array.\<number> | 否 | 将转换的瓦片转换为 . 设置为 `null` 使瓦片保持不变。 如果给出了数组, 则假定它是与索引数组的一对一映射 。 |
 | spriteConfig | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 否 | 配置对象可以传递到Sprite创建者(即场景. make.sprite)中. |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 创造内在的斯普丽特的场景. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于确定每块瓦片的世界 XY 位置的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于确定每块瓦片的世界 XY 位置的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -153,7 +153,7 @@ static
 
 **说明:**
 
-计算相机视窗内给定的正交式平面图板层内的瓦片坐标界限。结果会说明每根轴上层的位置、尺度和粘贴。这在内部被凸轮平面图板函数用来确定需要制导的瓦片。
+计算摄像机视窗内给定的正交式平面图板层内的瓦片坐标界限。结果会说明每根轴上层的位置、尺度和粘贴。这在内部被凸轮平面图板函数用来确定需要制导的瓦片。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -178,10 +178,10 @@ static
 
 **说明:**
 
-返回相机视图端口内所显示的图片。 粘合器避免渲染出屏幕外的图片, 提高性能。 相机的世界视野范围被计算并折叠到缩放的图片大小, 同时考虑到凸起的粘贴( 用图片表示) 。 如果该图层启用 `skipCull`, 或它的滚动因子与 1 不同, 则使用全层维度, 从而包含所有图片。 此功能由 lomap 渲染 管道内部使用 。
+返回摄像机视口内所显示的图片。 粘合器避免渲染出屏幕外的图片, 提高性能。 摄像机的世界视野范围被计算并折叠到缩放的图片大小, 同时考虑到凸起的粘贴( 用图片表示) 。 如果该图层启用 `skipCull`, 或它的滚动因子与 1 不同, 则使用全层维度, 从而包含所有图片。 此功能由 lomap 渲染 管道内部使用 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 监控库尔的摄像机 |
@@ -205,7 +205,7 @@ static
 
 **说明:**
 
-设置图层的矩形区域( 以瓷砖坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
+设置图层的矩形区域( 以瓦片坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -242,8 +242,8 @@ static
 | tileX | number | 否 | 左最瓦索引(在瓦座坐标中)用作过滤区域的来源. |
 | tileY | number | 否 | 用于过滤区域源头的最顶部的瓦片索引(在瓦片坐标中). |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -269,7 +269,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | index | number | 否 | 要搜索的瓦片索引值 。 |
-| skip | number | 否 | 返回前跳过匹配的瓷砖的次数 。 |
+| skip | number | 否 | 返回前跳过匹配的瓦片的次数 。 |
 | reverse | boolean | 否 | 如果真有, 它会逆向扫描层, 从右下方开始。 否则它会从左上方扫描 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
@@ -300,8 +300,8 @@ static
 | tileX | number | 否 | 左最瓦索引(在瓦座坐标中)用作过滤区域的来源. |
 | tileY | number | 否 | 用于过滤区域源头的最顶部的瓦片索引(在瓦片坐标中). |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -326,13 +326,13 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| callback | EachTileCallback | 否 | 回调。 指定区域的每一块瓷砖都将连同其数组中的索引和数组本身一起传递给这个回调。 |
+| callback | EachTileCallback | 否 | 回调。 指定区域的每一块瓦片都将连同其数组中的索引和数组本身一起传递给这个回调。 |
 | context | object | 否 | 恢复召回的场合 。 |
 | tileX | number | 否 | 左最瓦索引(在瓦座坐标中)用作过滤区域的来源. |
 | tileY | number | 否 | 用于过滤区域源头的最顶部的瓦片索引(在瓦片坐标中). |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -378,8 +378,8 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileX | number | 否 | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓷砖 。 |
-| tileY | number | 否 | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓷砖 。 |
+| tileX | number | 否 | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓦片 。 |
+| tileY | number | 否 | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓦片 。 |
 | nonNull | boolean | 否 | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
@@ -405,10 +405,10 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| worldX | number | 否 | 从(以像素形式给出)获取瓷砖的 X 位置 |
+| worldX | number | 否 | 从(以像素形式给出)获取瓦片的 X 位置 |
 | worldY | number | 否 | Y 位置从 (以像素形式给出) 获取牌 |
 | nonNull | boolean | 否 | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -428,14 +428,14 @@ static
 
 **说明:**
 
-获得一个瓦片的四个角, 因其瓦片空间坐标, 作为世界空间矢量2 位置的阵列。 返回的位置是该层的世界位置、 尺度和相机卷轴的偏移, 并被命令: 上左、 上右、 下右、 下左。
+获得一个瓦片的四个角, 因其瓦片空间坐标, 作为世界空间矢量2 位置的阵列。 返回的位置是该层的世界位置、 尺度和摄像机卷轴的偏移, 并被命令: 上左、 上右、 下右、 下左。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 计算瓷砖角的世界空间位置时,使用其滚动抵消的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 计算瓦片角的世界空间位置时,使用其滚动抵消的摄像机. |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -455,7 +455,7 @@ static
 
 **说明:**
 
-获得正确的函数以获取基于地图方向的瓷砖角。
+获得正确的函数以获取基于地图方向的瓦片角。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -463,7 +463,7 @@ static
 | orientation | number | 否 | 蒂拉玛普方向常数. |
 
 
-**返回值:** function - 用于获取给定地图方向的瓷砖角的函数。
+**返回值:** function - 用于获取给定地图方向的瓦片角的函数。
 
 
 > 源码：[src/tilemaps/components/GetTileCornersFunction.js#L12](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/GetTileCornersFunction.js#L12)  
@@ -489,8 +489,8 @@ static
 | tileX | number | 否 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -512,14 +512,14 @@ static
 
 获取与指定图层中的形状重叠的牌。形状必须是圆形、线形、矩形或三角形。形状应在世界坐标中。
 
-**Note:** 目前这种方法只与正交形的平面层配合.
+**注意:** 目前这种方法只与正交形的平面层配合.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | shape | [Phaser.Geom.Circle](/api/class/geom-circle) \| [Phaser.Geom.Line](/api/class/geom-line) | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 | 世界的形状( 像素) 坐标 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -548,8 +548,8 @@ static
 | worldY | number | 否 | 地球和坐标是该地区左上角 |
 | width | number | 否 | 面积宽度. |
 | height | number | 否 | 地区高度. |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于计算返回的瓷砖的相机。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 否 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于计算返回的瓦片的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -718,8 +718,8 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileX | number | 否 | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓷砖 。 |
-| tileY | number | 否 | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓷砖 。 |
+| tileX | number | 否 | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓦片 。 |
+| tileY | number | 否 | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓦片 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -746,7 +746,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | 世界位置的X坐标. |
 | worldY | number | 否 | 世界位置的Y坐标. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于计算返回的瓷砖的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于计算返回的瓦片的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -766,7 +766,7 @@ static
 
 **说明:**
 
-计算属于相机视图端口的六边形斜拉线层的砖格索引边界。该界限表示层的交错轴(x或y)、六边形长度、瓦片缩放、层面抵消和凸起等,返回需要渲染的砖柱和线的面积。这在六边形砖块的内部使用。
+计算属于摄像机视口的六边形斜拉线层的砖格索引边界。该界限表示层的交错轴(x或y)、六边形长度、瓦片缩放、层面抵消和凸起等,返回需要渲染的砖柱和线的面积。这在六边形砖块的内部使用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -791,10 +791,10 @@ static
 
 **说明:**
 
-返回相机视图端的图片。 内部使用此图片。
+返回摄像机视图端的图片。 内部使用此图片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 监控库尔的摄像机 |
@@ -825,7 +825,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 将瓦座坐标转换为世界位置时使用的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 将瓦座坐标转换为世界位置时使用的摄像机. |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -853,7 +853,7 @@ static
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 计算世界坐标时用到的相机,用瓦片值计算. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 计算世界坐标时用到的摄像机,用瓦片值计算. |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -882,11 +882,11 @@ static
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 | 是否将平面坐标向下绕至最近的整数 。 |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算平面 XY坐标时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算平面 XY坐标时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓷砖单位.
+**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓦片单位.
 
 
 > 源码：[src/tilemaps/components/HexagonalWorldToTileXY.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/HexagonalWorldToTileXY.js#L9)  
@@ -928,10 +928,10 @@ static
 
 **说明:**
 
-返回相机视图端的图片。 内部使用此图片。
+返回摄像机视图端的图片。 内部使用此图片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 监控库尔的摄像机 |
@@ -963,7 +963,7 @@ static
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -986,18 +986,18 @@ static
 从世界 XY 坐标( 像素) 转换为等位的平面 XY 坐标( 平面单位), 以图层位置、 缩放和滚动为因数。 这将返回一个新的矢量2 对象或更新给定的 `point` 对象 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | worldX | number | 否 |  | 要转换的x坐标,以像素表示,而不是用瓦片表示. |
 | worldY | number | 否 |  | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 |  | 是否将平板坐标向下折叠到最近的整数 。 |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 |  | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | originTop | boolean | 是 | true | 何为等位牌的正面 ? 顶部( 默认, 真实) 还是底部 ? (假) |
 
 
-**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓷砖单位.
+**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓦片单位.
 
 
 > 源码：[src/tilemaps/components/IsometricWorldToTileXY.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/IsometricWorldToTileXY.js#L9)  
@@ -1050,7 +1050,7 @@ static
 | worldX | number | 否 | x坐标,以像素表示. |
 | worldY | number | 否 | y坐标,以像素表示. |
 | recalculateFaces | boolean | 否 | `true` 如果砖边碰撞面部数据应该重新计算. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1121,7 +1121,7 @@ static
 
 **说明:**
 
-删除指定层中瓷砖坐标的瓦片,并更新层的碰撞信息。
+删除指定层中瓦片坐标的瓦片,并更新层的碰撞信息。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1158,7 +1158,7 @@ static
 | worldY | number | 否 | y坐标,以像素表示. |
 | replaceWithNull | boolean | 否 | 如果为真, 这将用无效的砖来取代指定位置的瓦, 而不是以 - 1 的索引为单位的砖。 |
 | recalculateFaces | boolean | 否 | 如果面额数据应重新计算,则使用`true`。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1201,17 +1201,17 @@ static
 
 **说明:**
 
-扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓷砖,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
+扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓦片,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| findIndex | number | 否 | 查找的瓷砖索引 。 |
+| findIndex | number | 否 | 查找的瓦片索引 。 |
 | newIndex | number | 否 | 以瓦片代替的索引 。 |
 | tileX | number | 否 | 左最瓦座坐标(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 最顶部的瓦座坐标(在瓦座坐标中),作为该地区的起源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1228,7 +1228,7 @@ static
 
 **说明:**
 
-返回相机视图端的图片。 内部使用此图片。
+返回摄像机视图端的图片。 内部使用此图片。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1260,11 +1260,11 @@ static
 此函数既更新了层的碰撞指数(它影响到将来放置的任何瓦片),又更新了除`updateLayer`是虚假的外,层中所有与给定索引匹配的现有瓦片.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | indexes | number \| array | 否 |  | 或单瓦索引,或单瓦索引的数组。 |
 | collides | boolean | 否 |  | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 否 |  | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 否 |  | 更新后是否重新计算瓦片面孔 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | updateLayer | boolean | 是 | true | 如果选中的话, 请更新层上的当前牌。 如果没有设置牌, 则设置为不实 。 |
 
@@ -1285,12 +1285,12 @@ static
 设定一个图片的碰撞范围, 其指数介于指定的 `start`和 `stop`( 包括) 之间。 使用起始值为 10, 止值为 14 的图片, 将设置为 10、 11、 12、 13 和 14 的碰撞范围, 如果启用碰撞( 真实) 或 禁用( 假) , `collides` 参数控制会设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 否 |  | 设定碰撞的瓦片的第一个索引. |
-| stop | number | 否 |  | 设定碰撞的瓷砖的最后一个索引 。 |
+| stop | number | 否 |  | 设定碰撞的瓦片的最后一个索引 。 |
 | collides | boolean | 否 |  | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 否 |  | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 否 |  | 更新后是否重新计算瓦片面孔 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | updateLayer | boolean | 是 | true | 如果选中的话, 请更新层上的当前牌。 如果没有设置牌, 则设置为不实 。 |
 
@@ -1315,7 +1315,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | indexes | Array.\<number> | 否 | 一系列的瓦片索引, 以排除碰撞更新。 带有这些索引的图案不会改变其碰撞状态 。 |
 | collides | boolean | 否 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 否 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 否 | 更新后是否重新计算瓦片面孔 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1339,7 +1339,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | properties | object | 否 | 具有瓦片属性和相应值的对象,应当检查。 |
 | collides | boolean | 否 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 否 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 否 | 更新后是否重新计算瓦片面孔 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1362,7 +1362,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | collides | boolean | 否 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 否 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 否 | 更新后是否重新计算瓦片面孔 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1385,7 +1385,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileIndex | number | 否 | 设置碰撞布林的瓦片索引 。 |
-| collides | boolean | 否 | 瓷砖指数是否应该碰撞? |
+| collides | boolean | 否 | 瓦片指数是否应该碰撞? |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1405,10 +1405,10 @@ static
 内部使用的方法设置一个瓦片的碰撞状态。 这不会重新计算有趣的面孔 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 |  | 启动碰撞的瓦片。 |
-| collides | boolean | 是 | true | 瓷砖是否应该碰撞? |
+| collides | boolean | 是 | true | 瓦片是否应该碰撞? |
 
 
 > 源码：[src/tilemaps/components/SetTileCollision.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/SetTileCollision.js#L7)  
@@ -1456,7 +1456,7 @@ static
 | tileX | number | 否 | 左最瓦的坐标用来作为该地区的起源. |
 | tileY | number | 否 | 最顶部的瓦片坐标用来作为该地区的起源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | callback | function | 否 | 当瓦片被碰撞时将引用的回调 。 |
 | callbackContext | object | 否 | 调用时的上下文 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
@@ -1475,7 +1475,7 @@ static
 
 **说明:**
 
-在指定的层内, 将牌片划入长方形区域( 以瓷砖坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓷砖索引, 并且不会改变碰撞信息 。
+在指定的层内, 将牌片划入长方形区域( 以瓦片坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓦片索引, 并且不会改变碰撞信息 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1483,7 +1483,7 @@ static
 | tileX | number | 否 | 左最瓦的索引(在瓦座坐标中)作为区域的起源. |
 | tileY | number | 否 | 以砖座坐标为最顶的瓦片索引作为区域的起源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1500,7 +1500,7 @@ static
 
 **说明:**
 
-返回相机视图端的图层中的界限。这是由 cull 牌函数内部使用的。
+返回摄像机视图端的图层中的界限。这是由 cull 牌函数内部使用的。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1525,10 +1525,10 @@ static
 
 **说明:**
 
-返回相机视图端的图片。 内部使用此图片。
+返回摄像机视图端的图片。 内部使用此图片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 |  | 提列玛普层要采取行动。 |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 监控库尔的摄像机 |
@@ -1560,7 +1560,7 @@ static
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1586,7 +1586,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 转换时用于计算卷轴偏移的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 转换时用于计算卷轴偏移的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1615,11 +1615,11 @@ static
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 | 是否将平板坐标向下折叠到最近的整数 。 |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓷砖单位.
+**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓦片单位.
 
 
 > 源码：[src/tilemaps/components/StaggeredWorldToTileXY.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/StaggeredWorldToTileXY.js#L9)  
@@ -1642,11 +1642,11 @@ static
 | ---- | ---- | -------- | ----------- |
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** number - Y的位置在瓷砖单位。
+**返回值:** number - Y的位置在瓦片单位。
 
 
 > 源码：[src/tilemaps/components/StaggeredWorldToTileY.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/StaggeredWorldToTileY.js#L7)  
@@ -1672,7 +1672,7 @@ static
 | tileX | number | 否 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1695,7 +1695,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来计算瓦片坐标世界位置的摄像机。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1723,7 +1723,7 @@ static
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 将瓦片坐标转换为世界像素值时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 将瓦片坐标转换为世界像素值时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1749,7 +1749,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
@@ -1781,7 +1781,7 @@ static
 | tileX | number | 否 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | weightedIndexes | Array.\<object> | 否 | 随机化过程中随机抽取的一组对象。 其形式应该是 : { 指数: 0, 重量: 4} 或{ 指数: [0], 重量: 4( 如果您想从多块的索引中抽取 ) 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
@@ -1806,11 +1806,11 @@ static
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | 要转换的x坐标,以像素表示,而不是用瓦片表示. |
 | snapToFloor | boolean | 否 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** number - 以瓷砖单位表示的 X 位置 。
+**返回值:** number - 以瓦片单位表示的 X 位置 。
 
 
 > 源码：[src/tilemaps/components/WorldToTileX.js#L12](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/WorldToTileX.js#L12)  
@@ -1835,11 +1835,11 @@ static
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 | 是否将平板坐标向下折叠到最近的整数 。 |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓷砖单位.
+**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - XY位置在瓦片单位.
 
 
 > 源码：[src/tilemaps/components/WorldToTileXY.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/WorldToTileXY.js#L9)  
@@ -1862,11 +1862,11 @@ static
 | ---- | ---- | -------- | ----------- |
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 否 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | 提列玛普层要采取行动。 |
 
 
-**返回值:** number - Y的位置在瓷砖单位。
+**返回值:** number - Y的位置在瓦片单位。
 
 
 > 源码：[src/tilemaps/components/WorldToTileY.js#L12](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/components/WorldToTileY.js#L12)  

@@ -6,7 +6,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 斯普丽特和图像游戏对象的主要区别在于无法动画图像。因此,斯普丽特需要花费更长的时间来处理,并且由于动画组件而具有更大的API脚印。如果不需要动画,那么可以安全地使用图像来替换所有情况下的斯普丽特.
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 静态图像的纹理
 
@@ -16,7 +16,7 @@ this.load.image(key, url);
 
 参考文献: [load image](/guide/concepts/loader#image)
 
-## 装入地图集 {#load-atlas}
+## 加载纹理图集 {#load-atlas}
 
 动画图像的图集
 
@@ -129,7 +129,7 @@ var mask = sprite.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 
@@ -222,8 +222,8 @@ var mask = sprite.createBitmapMask();
     // sprite.play(key, ignoreIfPlaying);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
-    - 动画的字符串密钥
+  - `key`:动画键字符串,或动画配置
+    - 动画的字符串键
     - 动画配置, 以覆盖默认配置
 
         ```javascript
@@ -249,23 +249,23 @@ var mask = sprite.createBitmapMask();
     // sprite.playReverse(key, ignoreIfPlaying);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 延迟后播放
 
     ```javascript
     sprite.playAfterDelay(key, delay);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 重复后播放
 
     ```javascript
     sprite.playAfterRepeat(key, repeatCount);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 
-### 链 {#chain}
+### 链式播放 {#chain}
 
 - 链条下一张动画
 
@@ -273,14 +273,14 @@ var mask = sprite.createBitmapMask();
     sprite.chain(key);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 链条下一场和下一场动画
 
     ```javascript
     sprite.chain(key0).chain(key1);
     ```
 
-  - `key0`,`key1`:动画密钥串,或动画配置
+  - `key0`,`key1`:动画键串,或动画配置
 
 ### 停下来 {#stop}
 
@@ -395,7 +395,7 @@ sprite.anims.restart();
     var repeatDelay = sprite.anims.yoyo;
     ```
 
-- 当前动画密钥
+- 当前动画键
 
     ```javascript
     var key = sprite.anims.getName();

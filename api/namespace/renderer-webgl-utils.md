@@ -146,11 +146,11 @@ static
 
 设置或清除给定的荫影程序管理器上所有与照明相关的制服.
 
-`enable`是`true`时,此函数会查询Scene的灯光管理器对相机可见的所有活动灯光进行查询,并将它们的位置,颜色,强度,以及光度作为统一的阵列上传到遮荫层。它也会上传环境光色,相机变换,以及普通的地图纹理单元。通过上传笔光和散射阈值制服,可以选择地实现自我遮蔽。
+`enable`是`true`时,此函数会查询Scene的灯光管理器对摄像机可见的所有活动灯光进行查询,并将它们的位置,颜色,强度,以及光度作为统一的阵列上传到遮荫层。它也会上传环境光色,摄像机变换,以及普通的地图纹理单元。通过上传笔光和散射阈值制服,可以选择地实现自我遮蔽。
 
 当 `enable`是 `false`时,所有先前设置的照明制服都会从程序管理器中移除. 如果Scene没有活动光管理器,则函数会提前返回而无需做任何更改.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -159,7 +159,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | enable | boolean | 否 | 是否启用照明 。 |
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 绘图康特实例。 |
-| programManager | [Phaser.Renderer.WebGL.ProgramManager](/api/class/renderer-webgl-programmanager) | 否 | 阴影程序管理器实例 。 |
+| programManager | [Phaser.Renderer.WebGL.ProgramManager](/api/class/renderer-webgl-programmanager) | 否 | 着色器程序管理器实例 。 |
 | textureUnit | number | 否 | 用于普通地图的纹理单元。 |
 | vec | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 一种矢量2 实例。 |
 | selfShadow | boolean | 是 | 是否启用自我阴影 。 |

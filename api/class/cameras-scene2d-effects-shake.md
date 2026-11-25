@@ -2,13 +2,13 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/cameras-scene2d-effects-shake)
 
-相机摇晃效应.
+摄像机摇晃效应.
 
-此效果会以一个随机量来震动相机的视图,以指定的强度,每个帧为界.
+此效果会以一个随机量来震动摄像机的视图,以指定的强度,每个帧为界.
 
-只有相机查看端被移动。 它显示的物体没有受到影响, 即它们的位置不会改变 。
+只有摄像机查看端被移动。 它显示的物体没有受到影响, 即它们的位置不会改变 。
 
-效果会在相机本身上发出几个事件,您也可以指定一个`onUpdate`调回,如果需要,每个帧都会在效果的持续时间里引用.
+效果会在摄像机本身上发出几个事件,您也可以指定一个`onUpdate`调回,如果需要,每个帧都会在效果的持续时间里引用.
 
 **构造函数**
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-相机这个效果属于。
+摄像机这个效果属于。
 
 
 > 源码：[src/cameras/2d/effects/Shake.js#L37](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Shake.js#L37)  
@@ -137,7 +137,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 效果完成后内部调用.
 
 
-**Fires:** [Phaser.Cameras.Scene2D.Events#event:SHAKE_COMPLETE](/api/event/cameras-scene2d-events#shake_complete)
+**触发事件:** [Phaser.Cameras.Scene2D.Events#event:SHAKE_COMPLETE](/api/event/cameras-scene2d-events#shake_complete)
 
 
 > 源码：[src/cameras/2d/effects/Shake.js#L259](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Shake.js#L259)  
@@ -153,7 +153,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-预降步骤用于此效果,由相机自动调用.
+预降步骤用于此效果,由摄像机自动调用.
 
 
 > 源码：[src/cameras/2d/effects/Shake.js#L198](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Shake.js#L198)  
@@ -169,7 +169,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重置此相机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
+重置此摄像机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
 
 
 > 源码：[src/cameras/2d/effects/Shake.js#L279](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Shake.js#L279)  
@@ -185,22 +185,22 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-在特定期间,通过给定的强度来摇动相机。
+在特定期间,通过给定的强度来摇动摄像机。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | duration | number | 是 | 100 | 效果持续时间以毫秒计. |
 | intensity | number \| [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 0.05 | 摇动的强度. |
 | force | boolean | 是 | false | 强制摇动效果立即启动, 即使已经运行 。 |
-| callback | [Phaser.Types.Cameras.Scene2D.CameraShakeCallback](/api/typedef/types-cameras-scene2d#camerashakecallback) | 是 |  | 将在此效果持续期间引用每个帧。 它会被发送两个参数: 引用相机和0到1之间的进度量, 说明效果有多完整 。 |
-| context | any | 是 |  | 引用回调时的上下文。 默认为相机所属的场景 。 |
+| callback | [Phaser.Types.Cameras.Scene2D.CameraShakeCallback](/api/typedef/types-cameras-scene2d#camerashakecallback) | 是 |  | 将在此效果持续期间引用每个帧。 它会被发送两个参数: 引用摄像机和0到1之间的进度量, 说明效果有多完整 。 |
+| context | any | 是 |  | 引用回调时的上下文。 默认为摄像机所属的场景 。 |
 
 
-**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的相机。
+**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的摄像机。
 
 
-**Fires:** [Phaser.Cameras.Scene2D.Events#event:SHAKE_START](/api/event/cameras-scene2d-events#shake_start), [Phaser.Cameras.Scene2D.Events#event:SHAKE_COMPLETE](/api/event/cameras-scene2d-events#shake_complete)
+**触发事件:** [Phaser.Cameras.Scene2D.Events#event:SHAKE_START](/api/event/cameras-scene2d-events#shake_start), [Phaser.Cameras.Scene2D.Events#event:SHAKE_COMPLETE](/api/event/cameras-scene2d-events#shake_complete)
 
 
 > 源码：[src/cameras/2d/effects/Shake.js#L143](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Shake.js#L143)  
@@ -216,7 +216,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此效果的主要更新环路。 自动由相机调用 。
+此效果的主要更新循环。 自动由摄像机调用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

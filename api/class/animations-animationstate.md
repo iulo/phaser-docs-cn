@@ -79,7 +79,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 不直接修改此地图的内容,而是使用 `add`, `create` 财务报告和已审计财务报表 `remove` 使用该类的方法。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/animations/AnimationState.js#L80](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L80)  
@@ -135,7 +135,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 当新动画装入此组件时设定此值, 并且应当作为只读处理, 因为一旦重播开始后更改它不会改变动画。 要更改延迟, 请在 `PlayAnimationConfig` 对象中提供新值 。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_delay`.
+在Phaser 3.50之前,这批属性是私有的,称为`_delay`.
 
 
 > 源码：[src/animations/AnimationState.js#L241](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L241)  
@@ -257,7 +257,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个内部触发器, 告诉组件它是否应该以反向模式( “ true” ) 播放动画 。 使用这个触发器是因为 `forward` 可以通过 `yoyo` 特性更改 。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_reverse`.
+在Phaser 3.50之前,这批属性是私有的,称为`_reverse`.
 
 
 > 源码：[src/animations/AnimationState.js#L362](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L362)  
@@ -323,7 +323,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-当当前动画完成时,要装入此动画组件的下一个动画的密钥,实例,或配置.
+当当前动画完成时,要装入此动画组件的下一个动画的键,实例,或配置.
 
 如果没有动画排队的话, 将会是 `null` 。
 
@@ -433,7 +433,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 当新动画装入此组件时, 此值会被设定, 并且应该作为只读处理, 因为一旦开始播放时更改它不会改变动画。 要改变重复次数, 请在 `PlayAnimationConfig`Z 对象中提供新值 。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_repeat`.
+在Phaser 3.50之前,这批属性是私有的,称为`_repeat`.
 
 
 > 源码：[src/animations/AnimationState.js#L257](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L257)  
@@ -473,7 +473,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 您可以在 `PlayAnimationConfig` 对象中提供新值来改变重复延迟 。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_repeatDelay`.
+在Phaser 3.50之前,这批属性是私有的,称为`_repeatDelay`.
 
 
 > 源码：[src/animations/AnimationState.js#L275](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L275)  
@@ -546,7 +546,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 纹理管理器的参考文献.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/animations/AnimationState.js#L70](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L70)  
@@ -562,13 +562,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-时间尺度因子.
+时间缩放倍率因子.
 
 您可以调整此值, 以修改当前播放的动画的时间跨度。 例如, 设定为 2 会让动画播放速度快一倍 。 或者设定为 0. 5 将会让动画慢下来 。
 
 您可以在运行时更改此值, 或者通过 `PlayAnimationConfig` 设置它 。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_timeScale`.
+在Phaser 3.50之前,这批属性是私有的,称为`_timeScale`.
 
 
 > 源码：[src/animations/AnimationState.js#L161](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L161)  
@@ -590,7 +590,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 您可以在 `PlayAnimationConfig` 对象中提供新值来更改 Yyo。
 
-在Phaser 3.50之前,这批财产是私有的,称为`_yoyo`.
+在Phaser 3.50之前,这批属性是私有的,称为`_yoyo`.
 
 
 > 源码：[src/animations/AnimationState.js#L292](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L292)  
@@ -654,7 +654,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_COMPLETE](/api/event/animations-events#animation_complete)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_COMPLETE](/api/event/animations-events#animation_complete)
 
 
 > 源码：[src/animations/AnimationState.js#L1309](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1309)  
@@ -672,15 +672,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 创建本地特指此 Sprite 的新动画 。
 
-当一个Sprite拥有一个动画时,它被从全球动画管理器中保留出来,这意味着你可以自由地使用可能已经定义的密钥。除非您特别需要一个Sprite来拥有一个独特的动画,否则您应该倾向于使用全球动画,因为这样可以跨多个Sprite使用同一动画,保存在内存上。然而,如果这个Sprite是唯一使用这个动画的人,那么在这里创建它是明智的。
+当一个Sprite拥有一个动画时,它被从全球动画管理器中保留出来,这意味着你可以自由地使用可能已经定义的键。除非您特别需要一个Sprite来拥有一个独特的动画,否则您应该倾向于使用全球动画,因为这样可以跨多个Sprite使用同一动画,保存在内存上。然而,如果这个Sprite是唯一使用这个动画的人,那么在这里创建它是明智的。
 
-如果给定了一个无效的密钥, 此方法将返回 `false` 。
+如果给定了一个无效的键, 此方法将返回 `false` 。
 
-如果您通过本地已经存在的动画的密钥,该动画会被返回.
+如果您通过本地已经存在的动画的键,该动画会被返回.
 
-只有在密钥有效且本Sprite尚未使用时,才会创建全新的动画.
+只有在键有效且本Sprite尚未使用时,才会创建全新的动画.
 
-如果您希望重新使用已有的密钥,请先拨打`remove`方法,然后拨打这个方法.
+如果您希望重新使用已有的键,请先拨打`remove`方法,然后拨打这个方法.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -688,7 +688,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | config | [Phaser.Types.Animations.Animation](/api/typedef/types-animations#animation) | 否 | 动画的配置设置 。 |
 
 
-**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation), false - 创建的动画, 或者如果密钥已经使用的话, `false` 。
+**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation), false - 创建的动画, 或者如果键已经使用的话, `false` 。
 
 
 > 源码：[src/animations/AnimationState.js#L1699](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1699)  
@@ -750,7 +750,7 @@ Aseprite是一个强大的动画图案编辑器和像素艺术工具.
 
 测试时采用了Aeprite 1.2.25.
 
-这将导出一个 png 和 json 文件, 您可以使用 Aseprite 装入器装入, 即 :
+这将导出一个 png 和 json 文件, 您可以使用 Aseprite 资源加载器装入, 即 :
 
 ```javascript
 function preload ()
@@ -789,7 +789,7 @@ sprite.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 装入的 Aseprite 地图集的密钥。 它一定是在调用此方法之前装入的 。 |
+| key | string | 否 | 装入的 Aseprite 地图集的键。 它一定是在调用此方法之前装入的 。 |
 | tags | Array.\<string> | 是 | 标记名称的数组。 如果提供了, 将只创建此数组中的动画 。 |
 
 
@@ -811,7 +811,7 @@ sprite.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]
 
 摧毁这个动画组件 。
 
-未注册事件听众并清理其参考文献.
+未注册事件监听器并清理其参考文献.
 
 
 > 源码：[src/animations/AnimationState.js#L1961](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1961)  
@@ -827,7 +827,7 @@ sprite.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]
 
 **说明:**
 
-检查是否已经将给定的密钥在存储在这个 Sprite 上的动画中局部使用 。
+检查是否已经将给定的键在存储在这个 Sprite 上的动画中局部使用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -851,7 +851,7 @@ sprite.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]
 
 **说明:**
 
-从纹理密钥和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
+从纹理键和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
 
 生成基于字符串的框架名称的对象,由给定的 [Phaser.Types.Animations.GenerateFrameNames](/api/typedef/types-animations#generateframenames) 配置.
 
@@ -880,7 +880,7 @@ this.anims.create({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 包含动画帧的纹理的密钥. |
+| key | string | 否 | 包含动画帧的纹理的键. |
 | config | [Phaser.Types.Animations.GenerateFrameNames](/api/typedef/types-animations#generateframenames) | 是 | 动画框架名称的配置对象. |
 
 
@@ -900,13 +900,13 @@ this.anims.create({
 
 **说明:**
 
-从纹理密钥和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
+从纹理键和配置对象生成 [Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe) 对象的阵列 。
 
 生成带有编号框架名称的物体, 由给定的 [Phaser.Types.Animations.GenerateFrameNumbers](/api/typedef/types-animations#generateframenumbers) 配置 。
 
 如果你正在用纹理图集工作,请参见`generateFrameNames`方法.
 
-这是一种帮助方法,旨在方便您从图示工作表提取帧.
+这是一种帮助方法,旨在方便您从精灵表提取帧.
 
 Example:
 
@@ -937,7 +937,7 @@ this.anims.create({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 包含动画帧的纹理的密钥. |
+| key | string | 否 | 包含动画帧的纹理的键. |
 | config | [Phaser.Types.Animations.GenerateFrameNumbers](/api/typedef/types-animations#generateframenumbers) | 是 | 动画框架的配置对象 。 |
 
 
@@ -967,7 +967,7 @@ this.anims.create({
 | key | string | 否 | 动画的钥匙要取回. |
 
 
-**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation) - 动画,或如果密钥无效,则使用 `null` 。
+**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation) - 动画,或如果键无效,则使用 `null` 。
 
 
 > 源码：[src/animations/AnimationState.js#L1667](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1667)  
@@ -983,10 +983,10 @@ this.anims.create({
 
 **说明:**
 
-返回当前由此组件显示的动画框架的密钥 。
+返回当前由此组件显示的动画框架的键 。
 
 
-**返回值:** string - 动画框架的密钥当前由此组件显示, 或者如果没有加载动画, 则使用空字符串 。
+**返回值:** string - 动画框架的键当前由此组件显示, 或者如果没有加载动画, 则使用空字符串 。
 
 
 > 源码：[src/animations/AnimationState.js#L554](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L554)  
@@ -1002,12 +1002,12 @@ this.anims.create({
 
 **说明:**
 
-返回当前装入此组件的动画密钥 。
+返回当前装入此组件的动画键 。
 
 在Phaser 3.50之前,这种方法被称为`getCurrentKey`.
 
 
-**返回值:** string - 动画当前装入此组件的密钥, 或者如果没有装入则装入空字符串 。
+**返回值:** string - 动画当前装入此组件的键, 或者如果没有装入则装入空字符串 。
 
 
 > 源码：[src/animations/AnimationState.js#L539](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L539)  
@@ -1068,7 +1068,7 @@ this.anims.create({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 是 | 被移除动画的密钥. |
+| key | string | 是 | 被移除动画的键. |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 是 | 被移除的动画. |
 
 
@@ -1088,7 +1088,7 @@ this.anims.create({
 用于将动画加载到此组件的内部方法.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1163,7 +1163,7 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于这个S
 
 全球动画的好处是,多部Sprite可以全部播放相同的动画,而无需重复数据。你可以一次一次地在任意的Sprite上播放。
 
-以下代码显示如何创建全球重复动画。 动画将从装入密钥“ muybridge” 的图示工作表中的所有框架创建 :
+以下代码显示如何创建全球重复动画。 动画将从装入键“ muybridge” 的精灵表中的所有框架创建 :
 
 ```javascript
 var config = {
@@ -1191,16 +1191,16 @@ this.add.sprite(x, y).play('run');
 this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 ```
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
-如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的密钥.
+如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的键.
 
 关于此方面的更多细节,请参看`PlayAnimationConfig`配置对象的文档.
 
 另外,关于动画创作的进一步详情,请参见动画管理器中的文档.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | ignoreIfPlaying | boolean | 是 | false | 如果这款动画已经播放了,那么就忽略这个电话. |
@@ -1209,7 +1209,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/animations/AnimationState.js#L799](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L799)  
@@ -1245,7 +1245,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/animations/AnimationState.js#L699](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L699)  
@@ -1268,7 +1268,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 如果目前没有动画运行,则给定的动画会立即开始.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | repeatCount | number | 是 | 1 | 动画在下一部开始前要重复多少次?. |
@@ -1277,7 +1277,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/animations/AnimationState.js#L748](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L748)  
@@ -1299,7 +1299,7 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于这个S
 
 全球动画的好处是,多部Sprite可以全部播放相同的动画,而无需重复数据。你可以一次一次地在任意的Sprite上播放。
 
-以下代码显示如何创建全球重复动画。 动画将从装入密钥“ muybridge” 的图示工作表中的所有框架创建 :
+以下代码显示如何创建全球重复动画。 动画将从装入键“ muybridge” 的精灵表中的所有框架创建 :
 
 ```javascript
 var config = {
@@ -1327,16 +1327,16 @@ this.add.sprite(x, y).playReverse('run');
 this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 ```
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
-如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的密钥.
+如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的键.
 
 关于此方面的更多细节,请参看`PlayAnimationConfig`配置对象的文档.
 
 另外,关于动画创作的进一步详情,请参见动画管理器中的文档.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | ignoreIfPlaying | boolean | 是 | false | 如果动画已经播放了,那么就忽略这个电话. |
@@ -1345,7 +1345,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/animations/AnimationState.js#L894](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L894)  
@@ -1382,17 +1382,17 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 
 **说明:**
 
-从此 Sprite 中移除本地创建的动画, 其依据是给定的密钥 。
+从此 Sprite 中移除本地创建的动画, 其依据是给定的键 。
 
 一旦动画被移除,这个Sprite无法在不重新创建的情况下再次播放.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要删除的动画密钥 。 |
+| key | string | 否 | 要删除的动画键 。 |
 
 
-**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation) - 从此 Sprite 中删除的动画实例, 如果密钥是有效的 。
+**返回值:** [Phaser.Animations.Animation](/api/class/animations-animation) - 从此 Sprite 中删除的动画实例, 如果键是有效的 。
 
 
 > 源码：[src/animations/AnimationState.js#L1932](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1932)  
@@ -1417,7 +1417,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 如果`includeDelay`,它也会在延迟到期后发射`ANIMATION_START`事件,否则,播放会立即开始.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | includeDelay | boolean | 是 | false | 是否包含动画重启时的延迟值 。 |
 | resetRepeats | boolean | 是 | false | 是否重设重置计数器? |
@@ -1426,7 +1426,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_RESTART](/api/event/animations-events#animation_restart)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_RESTART](/api/event/animations-events#animation_restart)
 
 
 > 源码：[src/animations/AnimationState.js#L1253](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1253)  
@@ -1485,7 +1485,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 
 **说明:**
 
-设定给定的动画框架为当前框架,并将其应用到母游戏对象,根据需要调整大小和来源.
+设定给定的动画框架为当前框架,并将其应用到父游戏对象,根据需要调整大小和来源.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1496,7 +1496,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 此动画组件所属的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_UPDATE](/api/event/animations-events#animation_update), [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_UPDATE](/api/event/animations-events#animation_update), [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/animations/AnimationState.js#L1564](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1564)  
@@ -1519,7 +1519,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 值以当前帧为主,动画中这个距离有多远,不以动画的持续时间为主.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 0 | 进度值, 0 到 1 之间 。 |
 
@@ -1568,7 +1568,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 
 **说明:**
 
-根据密钥加载动画, 并设置所有重启所需的内部值。 如果没有延迟, 也会点燃启动事件 。
+根据键加载动画, 并设置所有重启所需的内部值。 如果没有延迟, 也会点燃启动事件 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1579,7 +1579,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/animations/AnimationState.js#L975](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L975)  
@@ -1605,7 +1605,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/animations/AnimationState.js#L1347](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1347)  
@@ -1638,7 +1638,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/animations/AnimationState.js#L1385](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1385)  
@@ -1665,7 +1665,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 在Phaser 3.50之前,这种方法被称为`stopOnRepeat`,没有参数.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | repeatCount | number | 是 | 1 | 动画在停播前要重复多少次?. |
 
@@ -1673,7 +1673,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/animations/AnimationState.js#L1411](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1411)  
@@ -1706,7 +1706,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 拥有此动画组件的游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/animations/AnimationState.js#L1446](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationState.js#L1446)  

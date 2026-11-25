@@ -2,11 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-arcadephysics)
 
-弧形物理插件属于一个场景,并设置和管理了该场景的物理模拟,它也有一些有用的移动和旋转弧形物理体的方法.
+Arcade 物理插件属于一个场景,并设置和管理了该场景的物理模拟,它也有一些有用的移动和旋转Arcade 物理体的方法.
 
 你可以从场内使用`this.physics`访问它.
 
-弧形物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
+Arcade 物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
 
 **构造函数**
 
@@ -123,12 +123,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 注意: 游戏对象不会持续跟踪目标, 如果目标在转机时改变位置, 则游戏对象不会修改其方向 。 注: 游戏对象到达目的地坐标后不会停止移动 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有弧形物理体的游戏对象. |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有Arcade 物理体的游戏对象. |
 | x | number | 否 |  | 坐标加速到 |
 | y | number | 否 |  | y协调加速向上. |
-| speed | number | 是 | 60 | 以每秒平方像素为单位的加速度( 速度变化) 。 |
+| speed | number | 是 | 60 | 以像素每二次方秒为单位的加速度( 速度变化) 。 |
 | xSpeedMax | number | 是 | 500 | 游戏对象所能达到的最大x速度. |
 | ySpeedMax | number | 是 | 500 | 游戏对象可以达到的最大y速度. |
 
@@ -156,11 +156,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 注意: 游戏对象不会持续跟踪目标, 如果目标在转机时改变位置, 则游戏对象不会修改其方向 。 注: 游戏对象到达目的地坐标后不会停止移动 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有弧形物理体的游戏对象. |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有Arcade 物理体的游戏对象. |
 | destination | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 要移动的游戏对象。 可以是任何对象, 但必须有可见的 x/y 属性 。 |
-| speed | number | 是 | 60 | 以每秒平方像素为单位的加速度( 速度变化) 。 |
+| speed | number | 是 | 60 | 以像素每二次方秒为单位的加速度( 速度变化) 。 |
 | xSpeedMax | number | 是 | 500 | 游戏对象所能达到的最大x速度. |
 | ySpeedMax | number | 是 | 500 | 游戏对象可以达到的最大y速度. |
 
@@ -181,22 +181,22 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-查找最接近源点或对象的“身体”或“游戏对象”。
+查找最接近源点或对象的“物理体”或“游戏对象”。
 
-如果通过 `targets` 参数,这个方法会发现其中最接近的。目标可以是Arcade Physics Game Objects,动态天体,或静态天体。
+如果通过 `targets` 参数,这个方法会发现其中最接近的。目标可以是Arcade Physics Game Objects,动态物理体,或静态物理体。
 
 如果没有通过`targets`参数,这种方法会找到最接近的动态正体.
 
 如果两个或两个以上的目标与源点的距离完全相同,则只返回第一个目标.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| source | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 | 任何具有公共`x`和`y`属性的天体,如游戏对象或几何对象. |
+| source | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 | 任何具有公共`x`和`y`属性的物理体,如游戏对象或几何对象. |
 | targets | Array.\<Target> | 是 | 目标 |
 
 
@@ -228,7 +228,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 可提供两个调用。 如果发生碰撞, 并且两个碰撞物体被传递给它, 则引用 `collideCallback` 。
 
-弧形物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
+Arcade 物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -258,11 +258,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这一先进方法专门用于测试单个Sprite和一组Tile对象之间的碰撞.
 
-您通常应该使用 `collide` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓷砖过滤和调压, 以及自动处理有趣的面部碰撞 。
+您通常应该使用 `collide` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓦片过滤和调压, 以及自动处理有趣的面部碰撞 。
 
 这种方法提供给那些想要检查与特定平面在一层中碰撞的人,而无需在相关的平面上设置任何碰撞属性。这样您就可以在小平面上进行快速动态碰撞。因此,对于给这种方法的平面阵列,您在将平面传递到这种方法之前,不应进行挤压或检查。
 
-重要: 使用这种方法跳过 Tilemap 层使用的 `interesting faces` 系统。 这意味着, 如果您说出一行或一列的瓷砖, 或者跳进或走过这些瓷砖, 就可以在有趣的面值计算被跳过时被卡在瓷砖的边缘上。 然而, 对于动态地图上的快速点火小碰撞设定测试, 这个方法可以证明非常有用 。
+重要: 使用这种方法跳过 Tilemap 层使用的 `interesting faces` 系统。 这意味着, 如果您说出一行或一列的瓦片, 或者跳进或走过这些瓦片, 就可以在有趣的面值计算被跳过时被卡在瓦片的边缘上。 然而, 对于动态地图上的快速点火小碰撞设定测试, 这个方法可以证明非常有用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -277,7 +277,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** boolean - 如果有对象重叠(与 `overlapOnly`),则为真;如果有重叠对象被分离,则为真。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide)
 
 
 > 源码：[src/physics/arcade/ArcadePhysics.js#L291](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadePhysics.js#L291)  
@@ -345,9 +345,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-查找距离源点或对象最远的天体或游戏对象。
+查找距离源点或对象最远的物理体或游戏对象。
 
-如果通过 `targets` 参数, 这种方法会发现其中最远的。 目标可以是Arcade Physics Game Objects, 动态天体, 或是静态天体 。
+如果通过 `targets` 参数, 这种方法会发现其中最远的。 目标可以是Arcade Physics Game Objects, 动态物理体, 或是静态物理体 。
 
 如果没有通过`targets`参数,这种方法会发现最远的动态正体.
 
@@ -356,7 +356,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| source | any | 否 | 任何具有公共`x`和`y`属性的天体,如游戏对象或几何对象. |
+| source | any | 否 | 任何具有公共`x`和`y`属性的物理体,如游戏对象或几何对象. |
 | targets | Array.\<[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)> \| Array.\<[Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)> | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 是 | 目标 |
 
 
@@ -398,9 +398,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将给定的显示对象以稳定的速度移动到 x/y 坐标。 如果您指定 maxTime, 则会调整速度( 覆盖您设定的) , 从而以该秒数到达目的地。 时间因浏览器定时器的工作方式而大致相同 。 注意: 显示对象不会持续跟踪目标 。 如果目标在中转时改变位置, 显示对象不会改变方向 。 注意: 一旦到达目的地坐标, 显示对象不会停止移动 。 注意: 不考虑加速、 maxVelocityZ或拖动( 如果您设置拖动或加速度太高, 此对象不会移动) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有弧形物理体的游戏对象. |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有Arcade 物理体的游戏对象. |
 | x | number | 否 |  | 坐标是X,朝向。 |
 | y | number | 否 |  | 向着Y方向移动 |
 | speed | number | 是 | 60 | 它会移动的速度, 以像素每秒( 默认为 60 像素/ 秒) 计 。 |
@@ -426,10 +426,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将指定的显示对象以稳定的速度移动到目标对象。 如果您指定 maxTime, 它将调整速度( 覆盖您设定的) , 从而以该秒数到达目标对象。 时间因浏览器定时器的工作方式而大致相同。 注意: 显示对象不会持续跟踪目标。 如果目标在转弯时改变位置, 显示对象不会改变方向 。 注意: 表示对象到达目标坐标后不会停止移动 。 注意: 不考虑加速、 maxVelocity或拖动( 如果您设置了拖动或加速度太高, 此对象可能不会移动) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有弧形物理体的游戏对象. |
-| destination | object | 否 |  | 任何具有公共`x`和`y`属性的天体,如游戏对象或几何对象. |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 任何带有Arcade 物理体的游戏对象. |
+| destination | object | 否 |  | 任何具有公共`x`和`y`属性的物理体,如游戏对象或几何对象. |
 | speed | number | 是 | 60 | 它会移动的速度, 以像素每秒( 默认为 60 像素/ 秒) 计 。 |
 | maxTime | number | 是 | 0 | 给出的时间以毫秒(1 000 = 1 秒) 。 如果设置速度调整, 对象将以给定的 ms 数到达目的地 。 |
 
@@ -505,21 +505,21 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这种方法将搜索给定的圆形区域,并返回所有与之重叠的物理体的阵列。它可以返回动态、静态体或两者的混合体。
 
-尸体只需与要考虑的搜索区域相交,不需要完全控制在其中.
+物理体与搜索区域相交即可计入结果，无需完全位于其中。
 
-如果设定使用RTree(默认为RTree),那么搜索速度相当快,否则搜索是O(N)的动态天体.
+如果设定使用RTree(默认为RTree),那么搜索速度相当快,否则搜索是O(N)的动态物理体.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 区域中心的x坐标 搜索内部。 |
 | y | number | 否 |  | 区域中心的y坐标 搜索内部。 |
 | radius | number | 否 |  | 搜索区域半径在内部。 |
-| includeDynamic | boolean | 是 | true | 搜索中是否应该包括动态天体? |
-| includeStatic | boolean | 是 | false | 搜索内容应该包括静态尸体吗? |
+| includeDynamic | boolean | 是 | true | 搜索中是否应该包括动态物理体? |
+| includeStatic | boolean | 是 | false | 搜索内容应该包括静态物理体吗? |
 
 
-**返回值:** Array.\<[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)>, Array.\<[Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)> - 一系列与指定区域重叠的天体.
+**返回值:** Array.\<[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)>, Array.\<[Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)> - 一系列与指定区域重叠的物理体.
 
 
 > 源码：[src/physics/arcade/ArcadePhysics.js#L677](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadePhysics.js#L677)  
@@ -537,22 +537,22 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这种方法将搜索给定的矩形区域,并返回所有与它重叠的物理体的阵列。它可以返回动态、静态体或两者的混合体。
 
-尸体只需与要考虑的搜索区域相交,不需要完全控制在其中.
+物理体与搜索区域相交即可计入结果，无需完全位于其中。
 
-如果设定使用RTree(默认为RTree),那么搜索速度极快,否则搜索是O(N)的动态天体.
+如果设定使用RTree(默认为RTree),那么搜索速度极快,否则搜索是O(N)的动态物理体.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 左上方的x坐标 搜索区域内部。 |
 | y | number | 否 |  | 左上方的坐标 搜索区域内部。 |
 | width | number | 否 |  | 搜索区域宽度 。 |
 | height | number | 否 |  | 搜索区域高度 |
-| includeDynamic | boolean | 是 | true | 搜索中是否应该包括动态天体? |
-| includeStatic | boolean | 是 | false | 搜索内容应该包括静态尸体吗? |
+| includeDynamic | boolean | 是 | true | 搜索中是否应该包括动态物理体? |
+| includeStatic | boolean | 是 | false | 搜索内容应该包括静态物理体吗? |
 
 
-**返回值:** Array.\<[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)>, Array.\<[Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)> - 一系列与指定区域重叠的天体.
+**返回值:** Array.\<[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)>, Array.\<[Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)> - 一系列与指定区域重叠的物理体.
 
 
 > 源码：[src/physics/arcade/ArcadePhysics.js#L650](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadePhysics.js#L650)  
@@ -570,7 +570,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这种高级方法专门用于测试单个Sprite和一组Tile对象之间的重叠.
 
-您通常应该使用 `overlap` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓷砖过滤和调压, 以及自动处理有趣的面部碰撞 。
+您通常应该使用 `overlap` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓦片过滤和调压, 以及自动处理有趣的面部碰撞 。
 
 这种方法是提供给想要检查与特定平面重叠层的,而无需在相关的平面上设置任何碰撞属性的人的。这样您就可以对小平面进行快速动态重叠测试。因此,对于给这种方法的平面阵列,您在传递到这种方法之前,不应进行挤压或检查。
 
@@ -587,7 +587,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** boolean - 如果有对象重叠, 则为真 。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
 
 
 > 源码：[src/physics/arcade/ArcadePhysics.js#L324](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadePhysics.js#L324)  
@@ -660,7 +660,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 考虑到角度( 度) 和速度计算速度, 并把它作为矢量返回, 或者设置到给定的矢量对象。 一种使用方法是: velocityFromAngle( 角, 200, sprite. body. velocity) , 它会直接将数值设置到该向量的速率上, 而不是创建新的矢量对象 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | angle | number | 否 |  | 按顺时针正向计算的角度(下行=90正向,右行=0正向,上行=90负向) |
 | speed | number | 是 | 60 | 它的速度会移动,以每秒像素计. |
@@ -686,7 +686,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 考虑到旋转( 弧度) 和速度计算速度并把它作为矢量返回, 或者设置到给定矢量对象。 一种使用方法是: velocityFromRotation( 旋转, 200, spride. body. velocity) , 它会直接将数值设置到该图示的速度上, 而不是创建新的矢量对象 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rotation | number | 否 |  | 弧度角度. |
 | speed | number | 是 | 60 | 它的速度会移动,以每秒像素计. |

@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象被添加到场景中 。 |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 游戏对象被添加到的景色 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/ADDED_TO_SCENE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/ADDED_TO_SCENE_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -34,7 +34,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 正在被销毁的游戏对象 。 |
 | fromScene | boolean | 否 | `True` 如果游戏对象被场景所破坏, `false` 如果不是的话。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/DESTROY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -52,7 +52,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象被删除于场景 。 |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 游戏对象被删除的场景 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/REMOVED_FROM_SCENE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/REMOVED_FROM_SCENE_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 完成回放的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_COMPLETE_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -97,7 +97,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | width | number | 否 | 视频的宽度. |
 | height | number | 否 | 视频的高度. |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_CREATED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_CREATED_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -115,7 +115,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 丢出错误的视频游戏对象 。 |
 | event | DOMException \| string | 否 | 浏览器在回放时提出的本地 DOM 事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_ERROR_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_ERROR_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -137,7 +137,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 视频游戏对象 , 举办此事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_LOCKED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_LOCKED_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -161,7 +161,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 循环的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_LOOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_LOOP_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -179,7 +179,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 启动此事件的视频游戏对象 。 |
 | event | DOMException \| string | 否 | 浏览器在回放时提出的本地 DOM 事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_METADATA_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_METADATA_EVENT.js#L7)  
 引入版本：3.80.0
 
@@ -198,7 +198,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 开始播放的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_PLAYING_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_PLAYING_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -218,7 +218,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 开始播放的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_PLAY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_PLAY_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -235,7 +235,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 完成搜索的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_SEEKED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_SEEKED_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -253,7 +253,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 开始寻找的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_SEEKING_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_SEEKING_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -283,7 +283,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 丢出错误的视频游戏对象 。 |
 | event | Event | 否 | 浏览器在回放时提出的本地 DOM 事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_STALLED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_STALLED_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -301,7 +301,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 停止播放的视频游戏对象 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_STOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_STOP_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -324,7 +324,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 发布此事件的视频游戏对象 。 |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 创造的纹理。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_TEXTURE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_TEXTURE_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -342,7 +342,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 视频游戏对象 , 举办此事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_UNLOCKED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_UNLOCKED_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -362,7 +362,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | video | [Phaser.GameObjects.Video](/api/class/gameobjects-video) | 否 | 开始播放的视频游戏对象 。 |
 | event | DOMException \| string | 否 | 浏览器在回放时提出的本地 DOM 事件 。 |
 
-**Member of:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
+**所属:** [Phaser.GameObjects.Events](/api/namespace/gameobjects-events)
 > 源码：[src/gameobjects/events/VIDEO_UNSUPPORTED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/events/VIDEO_UNSUPPORTED_EVENT.js#L7)  
 引入版本：3.60.0
 

@@ -58,7 +58,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在性能方面,使用3切游戏对象相当于连续有3个Sprites. 使用9切游戏对象相当于连续9个Sprites,这个对象的顶点全部进行批次,可以与显示列表上的其他Sprites和图形共存,而不会引起任何额外的间接费用.
 
-如果在 Tetricure Packer 7.1.0 或以上 并用 json 地图集导出, 此游戏对象现在可以自动填充其值。 如果是这样的话, 您可以只创建此游戏对象, 而不指定任何超出纹理密钥和框架的字段, 它会从地图集中提取区域数据 。
+如果在 Tetricure Packer 7.1.0 或以上 并用 json 地图集导出, 此游戏对象现在可以自动填充其值。 如果是这样的话, 您可以只创建此游戏对象, 而不指定任何超出纹理键和框架的字段, 它会从地图集中提取区域数据 。
 
 此对象不支持纹理包件的修剪纹理, 修剪干扰了纹理正确拉伸的能力 。
 
@@ -67,12 +67,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new NineSlice(scene, x, y, texture, [frame], [width], [height], [leftWidth], [rightWidth], [topHeight], [bottomHeight], [tileX], [tileY])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 |  | 这个游戏对象的中心在世界的横向位置. |
 | y | number | 否 |  | 这个游戏对象的中心在世界的垂直位置. |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 |  | 游戏对象正在用此渲染的纹理的可选框架 。 |
 | width | number | 是 | 256 | 九切游戏对象的宽度。 您可以调整创建后的宽度 。 |
 | height | number | 是 | 256 | 九切游戏对象的高度。 如果这是 3 切片对象, 高度将固定到纹理高度, 无法更改 。 |
@@ -365,7 +365,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 它检查是否将锡克属性设定为 0xffffff 以外的值, 或者锡克模式不是默认的 Phaser.TintModes.MULTIPLY 。 这表明游戏对象已有锡值 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -402,7 +402,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此游戏对象的横向起源。 来源图示了游戏对象大小和位置之间的关系。 默认值为 0. 5, 表示所有游戏对象的位置都基于其中心。 设定值为 0 表示该位置与游戏对象左侧有关 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#originX
+**重写:** Phaser.GameObjects.Components.Origin#originX
 
 
 > 源码：[src/gameobjects/nineslice/NineSlice.js#L1118](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/nineslice/NineSlice.js#L1118)  
@@ -421,7 +421,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此游戏对象的垂直来源。 来源图示了游戏对象大小和位置之间的关系。 默认值为 0. 5, 表示所有游戏对象的位置都是基于其中心。 设定值为 0 表示当前位置与游戏对象顶端相关 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#originY
+**重写:** Phaser.GameObjects.Components.Origin#originY
 
 
 > 源码：[src/gameobjects/nineslice/NineSlice.js#L1143](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/nineslice/NineSlice.js#L1143)  
@@ -818,7 +818,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 立即将颜色值设定为0xffffff,将锡类型设定为"倍数",这导致纹理没有明显变化.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -871,13 +871,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 数值在0到1之间。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0.5 | 水平源值 。 |
 | y | number | 是 | "x" | 垂直源值。 如果定义不明确, 则将设定为 `x` 值 。 |
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#setOrigin
+**重写:** Phaser.GameObjects.Components.Origin#setOrigin
 
 
 **返回值:** [Phaser.GameObjects.NineSlice](/api/class/gameobjects-nineslice) - 此游戏对象实例 。
@@ -927,9 +927,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重置此九切游戏对象的大小, 以匹配当前纹理框架 。
+重置此九切游戏对象的大小, 以匹配当前纹理帧 。
 
-对于一个3-slice对象,此设定高度以匹配帧高度并刷新紫外线坐标。对于一个9-slice对象来说,只有紫外线才刷新。当纹理框架发生变化时,此名称会自动调用,通常不需要直接调用。
+对于一个3-slice对象,此设定高度以匹配帧高度并刷新紫外线坐标。对于一个9-slice对象来说,只有紫外线才刷新。当纹理帧发生变化时,此名称会自动调用,通常不需要直接调用。
 
 
 **返回值:** [Phaser.GameObjects.NineSlice](/api/class/gameobjects-nineslice) - 此游戏对象实例 。
@@ -955,7 +955,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 请注意,您不能将9号切片改为3号切片,反之亦然。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 256 | 九切游戏对象的宽度。 您可以调整创建后的宽度 。 |
 | height | number | 是 | 256 | 九切游戏对象的高度。 如果这是 3 切片对象, 高度将固定到纹理高度, 无法更改 。 |
@@ -990,12 +990,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 要删除一个叫 `clearTint` 的锡, 或者用这个没有参数的法调用 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color | number | 是 | "0xffffff" | 将该符号应用到整个游戏对象中 。 |
 
@@ -1032,12 +1032,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 - Phaser.TintModes.HARD_LIGHT
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | mode | [Phaser.TintModes](/api/namespace/tintmodes) | 是 | "Phaser.TintModes.MULTIPLY" | 使用锡金模式 。 |
 
@@ -1112,9 +1112,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-更新顶点紫外线坐标。在创建九角星游戏对象时,或者在纹理框架发生变化时,此名称会自动被称作。
+更新顶点紫外线坐标。在创建九角星游戏对象时,或者在纹理帧发生变化时,此名称会自动被称作。
 
-不同于 `updateVertices` 方法, 如果九切会改变大小, 您不需要使用这种方法。 只有它会改变纹理框架 。
+不同于 `updateVertices` 方法, 如果九切会改变大小, 您不需要使用这种方法。 只有它会改变纹理帧 。
 
 
 > 源码：[src/gameobjects/nineslice/NineSlice.js#L504](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/nineslice/NineSlice.js#L504)  

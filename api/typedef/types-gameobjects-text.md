@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/GetTextSizeObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/GetTextSizeObject.js#L1)  
 引入版本：3.0.0
 
@@ -38,7 +38,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextConfig.js#L1)  
 引入版本：3.0.0
 
@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextMetrics.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextMetrics.js#L1)  
 引入版本：3.0.0
 
@@ -83,7 +83,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextPadding.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextPadding.js#L1)  
 引入版本：3.18.0
 
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 文本样式所用的文本阴影配置对象。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | offsetX | number | 是 | 0 | 阴之横向偏移. |
 | offsetY | number | 是 | 0 | 阴之垂直偏. |
@@ -107,7 +107,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextShadow.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextShadow.js#L1)  
 引入版本：3.0.0
 
@@ -120,7 +120,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 文本游戏对象所用的文本样式配置对象。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | fontFamily | string | 是 | "'Courier'" | 文本对象将渲染的字体。 这是 Canvas 样式的字体字符串 。 |
 | fontSize | number \| string | 是 | "'16px'" | 字体大小,作为 CSS 大小字符串. |
@@ -129,7 +129,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | backgroundColor | string | 是 |  | 文本对象后面的固态填充颜色。 以 `#ff0` 等 CSS 字符串颜色为背景 。 |
 | color | string \| CanvasGradient | CanvasPattern | 是 | "'#fff'" | 文字的颜色。 以 CSS 字符串颜色如 `#fff` 或 `rgb()` 。 |
 | stroke | string \| CanvasGradient | CanvasPattern | 是 | "'#fff'" | 如果 `strokeThickness` 属性大于 0, 则按下文字所用的颜色 。 |
-| strokeThickness | number | 是 | 0 | 文字周围的中风厚度。 设置为零, 以不中风 。 |
+| strokeThickness | number | 是 | 0 | 文字周围的描边粗细。 设置为零, 以不中风 。 |
 | shadow | [Phaser.Types.GameObjects.Text.TextShadow](/api/typedef/types-gameobjects-text#textshadow) | 是 |  | 文本阴影配置对象 。 |
 | padding | [Phaser.Types.GameObjects.Text.TextPadding](/api/typedef/types-gameobjects-text#textpadding) | 是 |  | 一个文本铺设对象 。 |
 | align | string | 是 | "'left'" | 文本的对齐。仅影响多行文本。 `left`, `right`, `center` 或 或 时 间 `justify`. |
@@ -148,7 +148,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextStyle.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextStyle.js#L1)  
 引入版本：3.0.0
 
@@ -161,7 +161,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 文本样式配置所用的文本文字包配置对象。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 |  | 文字的文字包装应考虑的宽度 。 |
 | callback | TextStyleWordWrapCallback | 是 |  | 启用文字包时提供自定义的回调 。 |
@@ -170,7 +170,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Text
+**所属**: Phaser.Types.GameObjects.Text
 > 源码：[src/gameobjects/text/typedefs/TextWordWrap.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/typedefs/TextWordWrap.js#L1)  
 引入版本：3.0.0
 

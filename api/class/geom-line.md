@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Line([x1], [y1], [x2], [y2])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x1 | number | 是 | 0 | 线路起点的x坐标. |
 | y1 | number | 是 | 0 | 线路起点的y坐标. |
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 电话 `start` 财务报告和已审计财务报表 `end` 点数在此运行前随算法对整数起作用而四舍五入。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线条. |
 | stepRate | number | 是 | 1 | 控制沿线对点进行取样的密度。一个值为 1 返回每个整数坐标;一个值为 2 返回其他坐标,等等。 |
@@ -139,7 +139,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复制一行的值到目的地行 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -238,12 +238,12 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 注意,如果您提供了串联阈值,所产生的阵列可能并不总是包含`quantity`点.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线条对象. |
 | ease | string \| function | 否 |  | 使用方便。 这可以是 EaseMap 的字符串, 也可以是自定义函数 。 |
@@ -270,7 +270,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 获取给定线的中点 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -299,7 +299,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 将指定线段定义的无限线上最接近点到指定点。请注意,返回点将投射到全线上,而不是夹在段端点上。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -331,7 +331,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 线的正常是从它中指向垂直的矢量.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -360,7 +360,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 获得一个点的线,这个线的长度是一定的百分数.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -389,7 +389,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 获得一个点的线,这个线的长度是一定的百分数.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -419,7 +419,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 返回一个与本行起始对应的矢量2对象。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -447,7 +447,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 返回一个与本行末尾相对应的矢量2对象。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -479,7 +479,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 提供a `stepRate` 以确保线上每个点之间的特定距离。设置 `quantity` 改为: `0` 提供时 `stepRate`.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -515,7 +515,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 另见`GetEasedPoints`,以按照易性类型或输入函数将点数分布到横线的方法.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -546,7 +546,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 返回此行上随机选择的点, 并按其长度以统一分布方式选择。 如果提供了矢量2, 它将与结果一起被覆盖并返回; 否则将创建一个新的矢量2 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -719,7 +719,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 将给定线的端点都通过指定的水平和垂直量翻译,在保留长度和角度的同时,有效将线向2D空间中的新位置移动.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -773,7 +773,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 返回给定行上的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -827,7 +827,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度的给定角度绕其中点旋转一条线。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -856,7 +856,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度以给定角度绕一个点旋转一条线 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -886,7 +886,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度以给定角度绕给定坐标旋转一条线 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -943,7 +943,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 设置线端点的新坐标 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x1 | number | 是 | 0 | 线路起点的x坐标. |
 | y1 | number | 是 | 0 | 线路起点的y坐标. |
@@ -969,7 +969,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 设置一条线到给定的位置、角度和长度。
 
-**Tags:**
+**标签:**
 
  - generic
 

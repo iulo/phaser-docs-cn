@@ -16,7 +16,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 如果纹理将被多个游戏对象使用,或者要跨多个景区使用,则应当使用动态纹理,因为纹理是全球存储的.
 
-如果纹理不会在游戏中显示,而是会被用于像面具或遮阳器之类的东西,你应该使用动态纹理.
+如果纹理不会在游戏中显示,而是会被用于像遮罩或遮阳器之类的东西,你应该使用动态纹理.
 
 需要在一个游戏对象上显示纹理的纹理时,您应该使用一个Render纹理,因为它为您提供了将图像和动态纹理包裹在一起的便利.
 
@@ -121,15 +121,15 @@ rt.draw(entries);
   - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
   - 平面图层.
   - A组,内容将依次加以修改和绘制。
-  - 集装箱,内装物将按顺序完全悬挂和抽取。
+  - 容器,内装物将按顺序完全悬挂和抽取。
   - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
   - 另一种动态纹理,或称Render纹理.
-  - 纹理框架实例 。
+  - 纹理帧实例 。
   - 字符串。 用于从纹理管理器中查找纹理 。
 - `x`, `y`: 绘制框架的 x/y 位置,或对对象应用的偏移.
-  - 如果物体是团体、集装箱或显示清单,则在儿童位置上加座标*。
+  - 如果物体是团体、容器或显示清单,则在儿童位置上加座标*。
   - 对于所有其他类型的天体,坐标是准确的.
-- `alpha`,`tint`:只有纹理框架使用.
+- `alpha`,`tint`:只有纹理帧使用.
   - 游戏对象在绘制时使用自己的α和锡值.
 
 ## 擦除 {#erase}
@@ -143,16 +143,16 @@ rt.erase(entries);
   - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
   - 平面图层.
   - A组,内容将依次加以修改和绘制。
-  - 集装箱,内装物将按顺序完全悬挂和抽取。
+  - 容器,内装物将按顺序完全悬挂和抽取。
   - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
   - 另一种动态纹理,或称Render纹理.
-  - 纹理框架实例 。
+  - 纹理帧实例 。
   - 字符串。 用于从纹理管理器中查找纹理 。
 - `x`, `y`: 绘制框架的 x/y 位置,或对对象应用的偏移.
-  - 如果物体是团体、集装箱或显示清单,则在儿童位置上加座标*。
+  - 如果物体是团体、容器或显示清单,则在儿童位置上加座标*。
   - 对于所有其他类型的天体,坐标是准确的.
 
-## 绘制框架 {#draw-frame}
+## 绘制帧 {#draw-frame}
 
 ```javascript
 rt.stamp(key, frame, x, y, {
@@ -180,7 +180,7 @@ rt.drawFrame(key, frame, x, y);
 
 - `x`, `y` : 左上方位置
 
-## 绘制重复框架 {#draw-repeat-frames}
+## 重复绘制帧 {#draw-repeat-frames}
 
 - 重复装满大小的帧
 
@@ -214,10 +214,10 @@ rt.drawFrame(key, frame, x, y);
             - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
             - 平面图层.
             - A组,内容将依次加以修改和绘制。
-            - 集装箱,内装物将按顺序完全悬挂和抽取。
+            - 容器,内装物将按顺序完全悬挂和抽取。
             - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
             - 另一种动态纹理,或称Render纹理.
-            - 纹理框架实例 。
+            - 纹理帧实例 。
             - 字符串。 用于从纹理管理器中查找纹理 。
     - 绘制框架
 
@@ -248,7 +248,7 @@ rt.drawFrame(key, frame, x, y);
 
 ## 内部相机 {#internal-camera}
 
-内部相机 `rt.camera`
+内部摄像机 `rt.camera`
 
 - 滚动( 抵销)
 
@@ -327,13 +327,13 @@ rt.setGlobalTint(tint);
 
 ## 保存纹理 {#save-texture}
 
-使用给定的密钥在纹理管理器中存储此纹理的复制件 。
+使用给定的键在纹理管理器中存储此纹理的复制件 。
 
 ```javascript
 rt.saveTexture(key);
 ```
 
-再一次调用 `saveTexture` 将无法保存同一纹理的另一副本, 它只会重命名现有副本的密钥 。
+再一次调用 `saveTexture` 将无法保存同一纹理的另一副本, 它只会重命名现有副本的键 。
 
 ## 其他属性 {#other-properties}
 
@@ -347,7 +347,7 @@ var mask = rt.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 

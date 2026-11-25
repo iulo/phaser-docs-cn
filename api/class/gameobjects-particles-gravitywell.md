@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new GravityWell([x], [y], [power], [epsilon], [gravity])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| [Phaser.Types.GameObjects.Particles.GravityWellConfig](/api/typedef/types-gameobjects-particles#gravitywellconfig) | 是 | 0 | 引力井的x坐标,在世界空间。 |
 | y | number | 是 | 0 | 引力井的Y坐标,在世界空间。 |
@@ -144,7 +144,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | step | number | 否 | 三角洲值除以1000. |
 
 
-**Overrides:** Phaser.GameObjects.Particles.ParticleProcessor#更新日期
+**重写:** Phaser.GameObjects.Particles.ParticleProcessor#更新日期
 
 
 > 源码：[src/gameobjects/particles/GravityWell.js#L95](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/GravityWell.js#L95)  

@@ -10,7 +10,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 绳子源头总是0.5×0.5,不能更改.
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -26,7 +26,7 @@ var rope = this.add.rope(x, y, texture, frame, points, horizontal);
 ```
 
 - `points` :
-  - 数字:将纹理框架分割成的片段。
+  - 数字:将纹理帧分割成的片段。
   - 数字数组:包含顶点数据的数组。
 - `horizontal` :
   - `true` : 此绳索的垂直对齐 。
@@ -83,7 +83,7 @@ var rope = this.make.rope({
     var rope = new MyRope(scene, x, y, texture, frame, points, horizontal);
     ```
 
-## 来源 {#origin}
+## 原点 {#origin}
 
 绳子源头总是0.5×0.5,不能更改.
 
@@ -97,7 +97,7 @@ rope.setPoints(points);
 ```
 
 - `points` :
-  - 数字:将纹理框架分割成的片段。
+  - 数字:将纹理帧分割成的片段。
   - 数字数组:包含顶点数据的数组。
 - `colors` : 包含此绳索颜色数据的可选阵列。 每对顶点有一个颜色值 。
 - `alphas`: 包含此绳索的α数据的可选数组。 每对顶点有一个α值 。
@@ -142,7 +142,7 @@ rope.play(key);
 - `ignoreIfPlaying`: 如果动画已经播放, 请忽略此调。 默认值为 `false` 。
 - `startFrame`:可选地从此帧索引开始播放动画。默认值为`0`。
 
-## 阿尔法 {#alpha}
+## 不透明度（Alpha） {#alpha}
 
 - 单字母
 

@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new WebGLFramebufferWrapper(renderer, colorAttachments, [addStencilBuffer], [addDepthBuffer])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 这个WebGLFramebuffer属于的渲染器. |
 | colorAttachments | Array.\<[Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper)> | 否 |  | 写着颜色像素的颜色纹理。 如果是空的, 画布将被用作颜色附件。 默认情况下只使用第一个颜色附件 WebGL1 。 |

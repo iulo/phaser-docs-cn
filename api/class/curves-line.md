@@ -58,7 +58,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 曲线内弧长的分数。
 
 
-**Overrides:** Phaser.Curves.Curve#arcLengthDivisions
+**重写:** Phaser.Curves.Curve#arcLengthDivisions
 
 
 > 源码：[src/curves/LineCurve.js#L70](https://github.com/phaserjs/phaser/blob/v4.1.0/src/curves/LineCurve.js#L70)  
@@ -134,7 +134,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 曲线使用 `Graphics.lineBetween` 绘制, 因此将绘制当前图形线条颜色。 图形对象在绘制前没有清除, 因此曲线将出现在已经显示的其他任何颜色的上方 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -144,7 +144,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 | 绘制此曲线的图形实例 。 |
 
 
-**Overrides:** Phaser.Curves.Curve画画
+**重写:** Phaser.Curves.Curve画画
 
 
 **返回值:** [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) - 曲线绘制对象的图形。
@@ -189,7 +189,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矩形,其中位置和维度与此曲线的界限相匹配。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -199,7 +199,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 用于存储边框的矩形对象。 如果不给定新的矩形, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getBounds
+**重写:** Phaser.Curves.Curve#getBounds
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 矩形天体持有此曲线的界限。 如果给它 `out` , 则它就是此天体 。
@@ -220,7 +220,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得沿线相对位置的点,其中0为起点,1为终点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -249,7 +249,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得线上指定位置的点数。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -260,7 +260,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getPointAt
+**重写:** Phaser.Curves.Curve#getPointAt
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。
@@ -282,7 +282,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 返回此曲线的分辨率。 对于 LineCurve , 分辨率等于请求的分区数, 如果没有提供, 则默认为 1 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | divisions | number | 是 | 1 | 师数数要考. |
 
@@ -305,7 +305,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得曲线的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -315,7 +315,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getStartPoint
+**重写:** Phaser.Curves.Curve#getStartPoint
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。
@@ -336,7 +336,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得线条的斜度作为单位矢量.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -347,7 +347,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 存储结果的向量 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getTangent
+**重写:** Phaser.Curves.Curve#getTangent
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 切向量.
@@ -376,7 +376,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | divisions | number | 是 | 分数可选. |
 
 
-**Overrides:** Phaser.Curves.Curve#getUtoTmapping
+**重写:** Phaser.Curves.Curve#getUtoTmapping
 
 
 **返回值:** number - 等距离值 。

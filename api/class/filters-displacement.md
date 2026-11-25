@@ -8,9 +8,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 移位效应是一种视效技术,它根据移位图的值改变像素在图像或纹理中的位置。这种效应用于在平坦元素中产生深度、表面异常或扭曲的幻觉。它可用于人物、对象或背景,以加强现实主义、传递运动或实现各种结构外观。
 
-此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大相机 。
+此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大摄像机 。
 
-通过过滤列表组件将离散效应添加到相机中:
+通过过滤列表组件将离散效应添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -24,10 +24,10 @@ camera.filters.external.addDisplacement();
 `new Displacement(camera, [texture], [x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机。 |
-| texture | string | 是 | "'__WHITE'" | 用于移位的纹理中唯一基于字符串的密钥,它必须存在于纹理管理器中. |
+| texture | string | 是 | "'__WHITE'" | 用于移位的纹理中唯一基于字符串的键,它必须存在于纹理管理器中. |
 | x | number | 是 | 0.005 | 水平移位量,一个很小的浮点数,如0.005。 |
 | y | number | 是 | 0.005 | 垂直移位的数量,一个非常小的浮点数,如0.005。 |
 
@@ -90,7 +90,7 @@ camera.filters.external.addDisplacement();
 
 **说明:**
 
-应用水平移位的量。 像素中的最大水平移位是 `x` 乘以显示过滤器的相机宽度的0.5倍。
+应用水平移位的量。 像素中的最大水平移位是 `x` 乘以显示过滤器的摄像机宽度的0.5倍。
 
 
 > 源码：[src/filters/Displacement.js#L56](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Displacement.js#L56)  
@@ -106,7 +106,7 @@ camera.filters.external.addDisplacement();
 
 **说明:**
 
-应用垂直移位的量。像素中最大垂直移位是 `y` 乘以显示过滤器的相机高度的0.5倍。
+应用垂直移位的量。像素中最大垂直移位是 `y` 乘以显示过滤器的摄像机高度的0.5倍。
 
 
 > 源码：[src/filters/Displacement.js#L68](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Displacement.js#L68)  
@@ -140,10 +140,10 @@ camera.filters.external.addDisplacement();
 
 **说明:**
 
-返回此过滤器在渲染时所需的额外粘贴量。 粘贴值会说明超出相机输出的原始范围的影响 。
+返回此过滤器在渲染时所需的额外粘贴量。 粘贴值会说明超出摄像机输出的原始范围的影响 。
 
 
-**Overrides:** Phaser.Filters.Controller#getPadding
+**重写:** Phaser.Filters.Controller#getPadding
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 贴板矩形
@@ -167,9 +167,9 @@ camera.filters.external.addDisplacement();
 您只能使用整个纹理, 而不是来自纹理图集或图示表的框 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| texture | string | 是 | "'__WHITE'" | 用于移位的纹理中唯一基于字符串的密钥,它必须存在于纹理管理器中. |
+| texture | string | 是 | "'__WHITE'" | 用于移位的纹理中唯一基于字符串的键,它必须存在于纹理管理器中. |
 
 
 **返回值:** [Phaser.Filters.Displacement](/api/class/filters-displacement) - 此过滤控制器 。

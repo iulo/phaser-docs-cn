@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 A Vector3是一个代表3D空间中点或方向的数学对象,由三个组件定义:`x`,`y`,和`z`.
 
-矢量3 对象在 Phaser 的 3D 数学工具中被使用,包括矩阵转换、四角旋转、相机未投影和 3D- 2D 投影。它们通常用于与 3D 渲染器、 自定义的阴影或任何需要代表三维空间中的位置、方向或正常的代码合作。
+矢量3 对象在 Phaser 的 3D 数学工具中被使用,包括矩阵转换、四角旋转、摄像机未投影和 3D- 2D 投影。它们通常用于与 3D 渲染器、 自定义的阴影或任何需要代表三维空间中的位置、方向或正常的代码合作。
 
 该类包括常见的矢量操作方法,如增减,缩放,正常化,点和交叉产物,线性插值,以及矩阵3,矩阵4和Quaternion对象的变换.
 
@@ -455,7 +455,7 @@ The z component of this Vector.
 矢量3.x = 阵列[offset] 矢量3.y = 阵列[offset + 1] 矢量3.z = 阵列[offset + 2] 矢量3.z = 阵列[offset + 2] 矢量3.y = 数组[offset + 2] 矢量3.z = 矢量3.z = 数组[offset + 2] 矢量3.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | array | Array.\<number> | 否 |  | 要从中获取这个矢量的数值阵列 。 |
 | offset | number | 是 | 0 | 向数组中输入的偏移索引 。 |
@@ -520,7 +520,7 @@ The z component of this Vector.
 将这个矢量向给定矢量进发.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | v | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 |  | 向内插插管3号 |
 | t | number | 是 | 0 | 插值因子,介于0到1之间. |
@@ -1047,7 +1047,7 @@ The z component of this Vector.
 
 静态背向量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1047](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1047)  
@@ -1065,7 +1065,7 @@ The z component of this Vector.
 
 静态下向量3,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1023](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1023)  
@@ -1083,7 +1083,7 @@ The z component of this Vector.
 
 静态前向矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1035](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1035)  
@@ -1101,7 +1101,7 @@ The z component of this Vector.
 
 静态左向量3,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L999](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L999)  
@@ -1119,7 +1119,7 @@ The z component of this Vector.
 
 静态1矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1059](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1059)  
@@ -1137,7 +1137,7 @@ The z component of this Vector.
 
 静态右向量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L987](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L987)  
@@ -1155,7 +1155,7 @@ The z component of this Vector.
 
 静态上升矢量3, 用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1011](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1011)  
@@ -1173,7 +1173,7 @@ The z component of this Vector.
 
 静态零矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L975](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L975)  

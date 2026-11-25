@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: [Phaser.GameObjects.Particles.Zones.DeathZone](/api/class/gameobjects-particles-zones-deathzone) | [Phaser.Types.GameObjects.Particles.ParticleEmitterDeathZoneConfig](/api/typedef/types-gameobjects-particles#particleemitterdeathzoneconfig) | [Phaser.Types.GameObjects.Particles.DeathZoneSource](/api/typedef/types-gameobjects-particles#deathzonesource)
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/DeathZoneObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/DeathZoneObject.js#L1)  
 引入版本：3.60.0
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/DeathZoneSource.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/DeathZoneSource.js#L1)  
 引入版本：3.0.0
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/DeathZoneSourceCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/DeathZoneSourceCallback.js#L1)  
 引入版本：3.0.0
 
@@ -52,7 +52,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EdgeZoneSource.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EdgeZoneSource.js#L1)  
 引入版本：3.0.0
 
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EdgeZoneSourceCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EdgeZoneSourceCallback.js#L1)  
 引入版本：3.0.0
 
@@ -80,7 +80,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpCustomEmitConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpCustomEmitConfig.js#L1)  
 引入版本：3.0.0
 
@@ -97,7 +97,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpCustomUpdateConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpCustomUpdateConfig.js#L1)  
 引入版本：3.0.0
 
@@ -110,7 +110,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 定义一个能产生一个跨区域连续递增值的操作。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 否 |  | 初标值. |
 | end | number | 否 |  | 终极值. |
@@ -120,7 +120,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpEaseConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpEaseConfig.js#L1)  
 引入版本：3.0.0
 
@@ -133,7 +133,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 定义一个在插值数据集中持续递增的操作。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | values | Array.\<number> | 否 |  | 要插入的数字值的数组。 |
 | interpolation | string \| function | 是 | "'Linear'" | 插值函数。 通常为 `linear` 、 `bezier` 或 `catmull` 或自定义函数 。 |
@@ -142,7 +142,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpInterpolationConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpInterpolationConfig.js#L1)  
 引入版本：3.60.0
 
@@ -153,11 +153,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 ### \<static> EmitterOpOnEmitCallback {#static-emitteroponemitcallback}
 
 
-返回的值设定了粒子生命中的财产,即发射时的财产。
+返回的值设定了粒子生命中的属性,即发射时的属性。
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpOnEmitCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpOnEmitCallback.js#L1)  
 引入版本：3.0.0
 
@@ -169,7 +169,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: number | Array.\<number> | [Phaser.Types.GameObjects.Particles.EmitterOpOnEmitCallback](/api/typedef/types-gameobjects-particles#emitteroponemitcallback) | [Phaser.Types.GameObjects.Particles.EmitterOpRandomConfig](/api/typedef/types-gameobjects-particles#emitteroprandomconfig) | [Phaser.Types.GameObjects.Particles.EmitterOpRandomMinMaxConfig](/api/typedef/types-gameobjects-particles#emitteroprandomminmaxconfig) | [Phaser.Types.GameObjects.Particles.EmitterOpSteppedConfig](/api/typedef/types-gameobjects-particles#emitteropsteppedconfig) | [Phaser.Types.GameObjects.Particles.EmitterOpCustomEmitConfig](/api/typedef/types-gameobjects-particles#emitteropcustomemitconfig)
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpOnEmitType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpOnEmitType.js#L1)  
 引入版本：3.18.0
 
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpOnUpdateCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpOnUpdateCallback.js#L1)  
 引入版本：3.0.0
 
@@ -196,7 +196,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: [Phaser.Types.GameObjects.Particles.EmitterOpOnUpdateCallback](/api/typedef/types-gameobjects-particles#emitteroponupdatecallback) | [Phaser.Types.GameObjects.Particles.EmitterOpEaseConfig](/api/typedef/types-gameobjects-particles#emitteropeaseconfig) | [Phaser.Types.GameObjects.Particles.EmitterOpCustomUpdateConfig](/api/typedef/types-gameobjects-particles#emitteropcustomupdateconfig) | [Phaser.Types.GameObjects.Particles.EmitterOpInterpolationConfig](/api/typedef/types-gameobjects-particles#emitteropinterpolationconfig)
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpOnUpdateType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpOnUpdateType.js#L1)  
 引入版本：3.18.0
 
@@ -215,7 +215,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpRandomConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpRandomConfig.js#L1)  
 引入版本：3.0.0
 
@@ -236,7 +236,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpRandomMinMaxConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpRandomMinMaxConfig.js#L1)  
 引入版本：3.0.0
 
@@ -257,7 +257,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitterOpSteppedConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitterOpSteppedConfig.js#L1)  
 引入版本：3.0.0
 
@@ -269,7 +269,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: [Phaser.Types.GameObjects.Particles.ParticleEmitterEdgeZoneConfig](/api/typedef/types-gameobjects-particles#particleemitteredgezoneconfig) | [Phaser.Types.GameObjects.Particles.ParticleEmitterRandomZoneConfig](/api/typedef/types-gameobjects-particles#particleemitterrandomzoneconfig) | [Phaser.GameObjects.Particles.Zones.EdgeZone](/api/class/gameobjects-particles-zones-edgezone) | [Phaser.GameObjects.Particles.Zones.RandomZone](/api/class/gameobjects-particles-zones-randomzone)
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitZoneData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitZoneData.js#L1)  
 引入版本：3.60.0
 
@@ -281,7 +281,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: [Phaser.GameObjects.Particles.Zones.EdgeZone](/api/class/gameobjects-particles-zones-edgezone) | [Phaser.GameObjects.Particles.Zones.RandomZone](/api/class/gameobjects-particles-zones-randomzone)
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/EmitZoneObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/EmitZoneObject.js#L1)  
 引入版本：3.60.0
 
@@ -291,7 +291,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GravityWellConfig {#static-gravitywellconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 引力井的x坐标,在世界空间。 |
 | y | number | 是 | 0 | 引力井的Y坐标,在世界空间。 |
@@ -301,7 +301,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/GravityWellConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/GravityWellConfig.js#L1)  
 引入版本：3.0.0
 
@@ -313,7 +313,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleClassConstructor.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleClassConstructor.js#L1)  
 引入版本：3.0.0
 
@@ -323,7 +323,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ParticleData {#static-particledata}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tint | [Phaser.Types.GameObjects.Particles.ParticleDataValue](/api/typedef/types-gameobjects-particles#particledatavalue) | 是 | "{min:0xffffff,max:0xffffff}" | 未提供说明 |
 | alpha | [Phaser.Types.GameObjects.Particles.ParticleDataValue](/api/typedef/types-gameobjects-particles#particledatavalue) | 是 | "{min:1,max:1}" | 未提供说明 |
@@ -342,7 +342,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleData.js#L1)  
 引入版本：3.60.0
 
@@ -359,7 +359,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleDataValue.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleDataValue.js#L1)  
 引入版本：3.60.0
 
@@ -371,7 +371,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleDeathCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleDeathCallback.js#L1)  
 引入版本：3.0.0
 
@@ -381,7 +381,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ParticleEmitterAnimConfig {#static-particleemitteranimconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | anims | string \| Array.\<string> | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | Array.\<[Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig)> | 是 |  | 一个或多个动画名称,或播放动画配置对象. |
 | cycle | boolean | 是 | false | 动画是连续(真)还是随机(假)分配. |
@@ -389,7 +389,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterAnimConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterAnimConfig.js#L1)  
 引入版本：3.60.0
 
@@ -408,7 +408,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterBounds.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterBounds.js#L1)  
 引入版本：3.0.0
 
@@ -427,7 +427,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterBoundsAlt.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterBoundsAlt.js#L1)  
 引入版本：3.0.0
 
@@ -439,7 +439,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterCallback.js#L1)  
 引入版本：3.0.0
 
@@ -519,7 +519,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterConfig.js#L1)  
 引入版本：3.0.0
 
@@ -536,7 +536,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterCreatorConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterCreatorConfig.js#L1)  
 引入版本：3.60.0
 
@@ -546,14 +546,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ParticleEmitterDeathZoneConfig {#static-particleemitterdeathzoneconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | source | [Phaser.Types.GameObjects.Particles.DeathZoneSource](/api/typedef/types-gameobjects-particles#deathzonesource) | 否 |  | 代表区块的形状。 请见 XQLink Phaser.GameObjects.Particles.Zones.DeathZone# source}. |
 | 类型 | string | 是 | "'onEnter'" | "onEnter"或"onLeave". |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterDeathZoneConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterDeathZoneConfig.js#L1)  
 引入版本：3.0.0
 
@@ -563,7 +563,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ParticleEmitterEdgeZoneConfig {#static-particleemitteredgezoneconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | source | [Phaser.Types.GameObjects.Particles.EdgeZoneSource](/api/typedef/types-gameobjects-particles#edgezonesource) | 否 |  | 代表区块的形状。 请见 XQLink Phaser.GameObjects.Particles.Zones.EdgeZone# source}. |
 | 类型 | string | 否 |  | 尖端的。 |
@@ -575,7 +575,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterEdgeZoneConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterEdgeZoneConfig.js#L1)  
 引入版本：3.0.0
 
@@ -587,13 +587,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| frames | Array.\<number> \| Array.\<string> | Array.\<[Phaser.Textures.Frame](/api/class/textures-frame)> | 是 | 纹理框架的组合 。 |
-| cycle | boolean | 是 | 纹理框架是连续(真)还是随机(假)指定. |
-| quantity | number | 是 | 接收每个纹理框架的连续粒子数, 当 `cycle` 属实 。 |
+| frames | Array.\<number> \| Array.\<string> | Array.\<[Phaser.Textures.Frame](/api/class/textures-frame)> | 是 | 纹理帧的组合 。 |
+| cycle | boolean | 是 | 纹理帧是连续(真)还是随机(假)指定. |
+| quantity | number | 是 | 接收每个纹理帧的连续粒子数, 当 `cycle` 属实 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterFrameConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterFrameConfig.js#L1)  
 引入版本：3.0.0
 
@@ -630,7 +630,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterOps.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterOps.js#L1)  
 引入版本：3.60.0
 
@@ -647,7 +647,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleEmitterRandomZoneConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleEmitterRandomZoneConfig.js#L1)  
 引入版本：3.0.0
 
@@ -659,7 +659,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/ParticleSortCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/ParticleSortCallback.js#L1)  
 引入版本：3.60.0
 
@@ -675,7 +675,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/RandomZoneSource.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/RandomZoneSource.js#L1)  
 引入版本：3.0.0
 
@@ -687,7 +687,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.Particles
+**所属**: Phaser.Types.GameObjects.Particles
 > 源码：[src/gameobjects/particles/typedefs/RandomZoneSourceCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/typedefs/RandomZoneSourceCallback.js#L1)  
 引入版本：3.0.0
 

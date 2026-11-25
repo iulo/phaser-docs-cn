@@ -22,7 +22,7 @@ static
 
 一个 Phaser 输入事件数据对象.
 
-此对象将传递给已注册的事件的听众, 并允许您停止任何进一步的传播 。
+此对象将传递给已注册的事件的监听器, 并允许您停止任何进一步的传播 。
 
 
 > 源码：[src/input/typedefs/EventData.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/typedefs/EventData.js#L7)  

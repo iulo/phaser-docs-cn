@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | manager | [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) | 否 | 引用此纹理属于的纹理管理器 。 |
-| key | string | 否 | 此纹理中独特的基于字符串的密钥 。 |
+| key | string | 否 | 此纹理中独特的基于字符串的键 。 |
 | source | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 否 | 用于创建纹理的源数组,通常为图像,但也可以是Canvas. |
 | width | number | 是 | 纹理的宽度。 这是可选的, 并且自动从源图像中导出 。 |
 | height | number | 是 | 纹理的高度。 这是可选的, 并且自动从源图像中衍生出来 。 |
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将唯一框架键与框架对象连接在一起的密钥值对象对。
+将唯一框架键与框架对象连接在一起的键值对象对。
 
 
 > 源码：[src/textures/Texture.js#L88](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L88)  
@@ -106,7 +106,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 包括`__BASE`框架在内的此纹理中框架的总数.
 
-纹理总是包含至少1帧,因为每个纹理默认包含一个`__BASE`帧,此外,任何额外的帧也被添加到其中,比如在解析Sprite工作表或纹理图集时.
+纹理总是包含至少1帧,因为每个纹理默认包含一个`__BASE`帧,此外,任何额外的帧也被添加到其中,比如在解析精灵表或纹理图集时.
 
 
 > 源码：[src/textures/Texture.js#L116](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L116)  
@@ -122,7 +122,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此纹理中独特的基于字符串的密钥 。
+此纹理中独特的基于字符串的键 。
 
 
 > 源码：[src/textures/Texture.js#L59](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L59)  
@@ -239,9 +239,9 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 
 **说明:**
 
-以“框架”的密钥或索引为基础,从此纹理中获取框架。
+以“框架”的键或索引为基础,从此纹理中获取框架。
 
-在纹理图集框架中,通常用密钥来引用。在Sprite工作表框架中,用索引来引用。名称不通过值返回基本纹理。
+在纹理图集框架中,通常用键来引用。在精灵表框架中,用索引来引用。名称不通过值返回基本纹理。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -249,7 +249,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 | 名称 | string \| number | 是 | 要从此纹理中获取框架的字符串名称,或整数索引。 |
 
 
-**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理框架 。
+**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理帧 。
 
 
 > 源码：[src/textures/Texture.js#L238](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L238)  
@@ -296,7 +296,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 如果这个纹理是图集中的图案工作表, 并且您需要知道图案工作表的总界限, 则此功能是有用的 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | sourceIndex | number | 是 | 0 | 纹理源的索引以获取框架的界限 。 |
 
@@ -322,7 +322,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 如果您想要随机指定一个框架到游戏对象, 则有用, 因为您可以从返回的数组中选择一个随机元素 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | includeBase | boolean | 是 | false | 在输出阵列中包含 `__BASE`框架吗 ? |
 
@@ -346,13 +346,13 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 返回给定的纹理源中所有框架的数组。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | sourceIndex | number | 否 |  | 纹理源代码的索引来获取框架 。 |
 | includeBase | boolean | 是 | false | 在输出阵列中包含 `__BASE`框架吗 ? |
 
 
-**返回值:** Array.\<[Phaser.Textures.Frame](/api/class/textures-frame)> - 一系列纹理框架 。
+**返回值:** Array.\<[Phaser.Textures.Frame](/api/class/textures-frame)> - 一系列纹理帧 。
 
 
 > 源码：[src/textures/Texture.js#L298](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L298)  
@@ -418,15 +418,15 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 
 **说明:**
 
-检查是否在此纹理中存在匹配给定密钥的框架 。
+检查是否在此纹理中存在匹配给定键的框架 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| 名称 | string | 否 | 要检查的框架的密钥 。 |
+| 名称 | string | 否 | 要检查的框架的键 。 |
 
 
-**返回值:** boolean - 如果此纹理中存在匹配密钥的框架, 则为真 。
+**返回值:** boolean - 如果此纹理中存在匹配键的框架, 则为真 。
 
 
 > 源码：[src/textures/Texture.js#L223](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L223)  
@@ -449,10 +449,10 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| 名称 | string | 否 | 要删除的框架的密钥 。 |
+| 名称 | string | 否 | 要删除的框架的键 。 |
 
 
-**返回值:** boolean - 如果此纹理中移除了匹配密钥的框架, 则为真 。
+**返回值:** boolean - 如果此纹理中移除了匹配键的框架, 则为真 。
 
 
 > 源码：[src/textures/Texture.js#L194](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/Texture.js#L194)  
@@ -475,7 +475,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 每个"正规"源条目只能有一个数据源.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | [Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource) \| Array.\<[Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource)> | 否 |  | 源头图像数据. |
 | startIndex | number | 是 | 0 | 第一个源更新的索引。如果有多个数据要素,它们将应用于后续的索引。 |
@@ -552,7 +552,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 任何相关的`dataSource`成员必须更新。见[Phaser.Textures.Texture#setDataSource](/api/class/textures-texture#setDataSource)。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | [Phaser.Textures.TextureSource](/api/class/textures-texturesource) \| [Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource) | Array.\<[Phaser.Textures.TextureSource](/api/class/textures-texturesource)> | Array.\<[Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource)> | 否 |  | 源头图像数据. |
 | startIndex | number | 是 | 0 | 第一个源更新的索引。如果有多个数据要素,它们将应用于后续的索引。 |
@@ -588,7 +588,7 @@ AFrame是一个纹理源的矩形区域,具有独特的索引或字符串键.
 
 注意, 仅支持 CLAMP_ TO_ EDGE 的非纹理功率。 如果为这样的纹理指定了另一个包模式, 则会忽略它 。
 
-**Tags:**
+**标签:**
 
  - webglonly
 

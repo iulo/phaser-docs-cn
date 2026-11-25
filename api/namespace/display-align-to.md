@@ -18,12 +18,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其顶端边缘与`alignTo`游戏对象的底部相冲,并横向以它为中心.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -49,12 +49,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其直接置于`alignTo`游戏对象下方,其左边缘与`alignTo`左边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -80,12 +80,12 @@ static
 
 取出一个给定的游戏对象并与之对齐,使其直接置于下方,并冲到其他游戏对象的右边缘。右边缘 `gameObject` 与右边对齐 `alignTo`,然后将顶端 `gameObject` 放在最下端边沿 `alignTo`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -111,12 +111,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其下边缘与`alignTo`的下边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -142,12 +142,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其垂直中心匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -173,12 +173,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其顶边缘与`alignTo`顶端对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -202,14 +202,14 @@ static
 
 **说明:**
 
-在一个游戏对象上, 在指定位置, 将其对齐。 所使用的对齐基于 `position` 参数,这是 `Phaser.Display.Align` 财产,例如 `LEFT_CENTER` 或 或 时 间 `TOP_RIGHT`.
+在一个游戏对象上, 在指定位置, 将其对齐。 所使用的对齐基于 `position` 参数,这是 `Phaser.Display.Align` 属性,例如 `LEFT_CENTER` 或 或 时 间 `TOP_RIGHT`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -236,12 +236,12 @@ static
 
 取一个给定的游戏对象并校对,使其立即放置在`alignTo`游戏对象的右侧,并与其底边对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -267,12 +267,12 @@ static
 
 使用一个给定的游戏对象并校对它,使其左边缘与`alignTo`游戏对象的右边缘冲出,并与其垂直中心匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -298,12 +298,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其左边缘与`alignTo`游戏对象的右边缘相冲,其顶边缘与`alignTo`的顶边缘相匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -329,12 +329,12 @@ static
 
 取一个给定的游戏对象并校正它,使其直接放在上方 `alignTo` 游戏对象, 水平中心。 下边缘 `gameObject` 以顶端边缘定位的冲 `alignTo`,则它们的中心X坐标匹配。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -360,12 +360,12 @@ static
 
 取一个给定的游戏对象并与之对齐,使其下边缘与`alignTo`游戏对象的上边缘相冲,左边缘对齐。结果 `gameObject`出现在`alignTo`的正上方,锚在它的左侧。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -391,12 +391,12 @@ static
 
 取一个给定的游戏对象并校对,使其直接位于`alignTo`游戏对象上方,其右边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |

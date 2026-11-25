@@ -346,7 +346,7 @@ var particles = this.add.particles(x, y, texture, {
 - `maxParticles`
   - `0` : Unlimited.
   - `> 0` : 硬限制粒子物体的数量.
-- `frames`:一个或多个纹理框架,或配置对象.
+- `frames`:一个或多个纹理帧,或配置对象.
   - 字符串或数字值
   - 字符串或数字值的矩阵
   - 配置对象 :
@@ -423,7 +423,7 @@ var particles = this.add.particles(x, y, texture, {
 - `name`
 - [`particleClass`](#custom-particle-class)
 
-## 控制器 {#control}
+## 控制 {#control}
 
 - Start
 
@@ -525,14 +525,14 @@ var particles = this.add.particles(x, y, texture, {
     emitter.stopFollow();
     ```
 
-## 框架 {#frame}
+## 帧 {#frame}
 
 ```javascript
 emitter.setEmitterFrame(frames);
 // emitter.setEmitterFrame(frames, pickRandom, quantity);
 ```
 
-- `frames`:一个或多个纹理框架,或配置对象.
+- `frames`:一个或多个纹理帧,或配置对象.
   - 字符串或数字值
   - 字符串或数字值的矩阵
   - 配置对象 :
@@ -833,7 +833,7 @@ emitter.setAnim(anims);
     var count = emitter.getParticleCount();
     ```
 
-- 活性粒子与矩形几何天体或弧形物理天体重叠.
+- 活性粒子与矩形几何天体或Arcade 物理天体重叠.
 
     ```javascript
     var particles = emitter.overlap(target);
@@ -858,7 +858,7 @@ emitter.setAnim(anims);
     particle.getBounds();
     ```
 
-### 调制令 {#render-order}
+### 渲染顺序 {#render-order}
 
 - 按属性排序
 
@@ -866,7 +866,7 @@ emitter.setAnim(anims);
     emitter.setSortProperty(property, ascending);
     ```
 
-  - `property` : 财产 `Particle` 班级来排序。
+  - `property` : 属性 `Particle` 班级来排序。
   - `ascending`: 粒子是按上升还是下降顺序排序的吗?
 - 以回调方式排序
 
@@ -1097,7 +1097,7 @@ emitter.deathZones.length = 0;
     })
     ```
 
-## 界 界 {#bounds}
+## 边界 {#bounds}
 
 - 添加界限
 
@@ -1236,7 +1236,7 @@ var mask = emitter.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 

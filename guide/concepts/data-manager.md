@@ -2,7 +2,7 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/data-manager)
 
-数据管理器是一个允许您存储、查询和获取密钥/值对等信息的组件。此信息被隔离到数据管理器的母端 。
+数据管理器是一个允许您存储、查询和获取键/值对等信息的组件。此信息被隔离到数据管理器的母端 。
 
 Phaser 3 默认情况下, 游戏中有一个数据管理器的例子, 叫做“ 注册”。 除此之外, 每个游戏都有数据管理器的例子。 最后, 所有游戏对象也可以有一个数据管理器的例子。 此外, 如果您需要, 您可以创建自己的实例并管理这些实例 。
 
@@ -115,7 +115,7 @@ sprite.data.set('playerName', 'Vasquez');
 
 如果数据成功设定, 将会释放 `SET_DATA` 事件 。
 
-或者, 如果密钥已经存在于数据管理器中, 那么其先前的值将被新值覆盖, 而将释放 `CHANGE_DATA` 事件。 请参看事件 一节 。
+或者, 如果键已经存在于数据管理器中, 那么其先前的值将被新值覆盖, 而将释放 `CHANGE_DATA` 事件。 请参看事件 一节 。
 
 #### 设置多值 {#setting-multiple-values}
 
@@ -134,7 +134,7 @@ sprite.setData({ playerName: 'Hicks', weapon: 'M41A Pulse Rifle', score: 0 });
 sprite.data.set({ playerName: 'Hicks', weapon: 'M41A Pulse Rifle', score: 0 });
 ```
 
-在此情况下, 3 个新值将设定为数据管理器, 并带有密钥 `playerName`, `weapon` 财务报告和已审计财务报表 `score`A. 财务和预算 `SET_DATA` 事件会为每个事件释放。例如,如果其中两个值是新值,一个值是更新了先前的值,那么您将得到两个值。 `SET_DATA` 活动及1 `CHANGE_DATA` 活动。
+在此情况下, 3 个新值将设定为数据管理器, 并带有键 `playerName`, `weapon` 财务报告和已审计财务报表 `score`A. 财务和预算 `SET_DATA` 事件会为每个事件释放。例如,如果其中两个值是新值,一个值是更新了先前的值,那么您将得到两个值。 `SET_DATA` 活动及1 `CHANGE_DATA` 活动。
 
 传递到 `set` 方法的天体只重复一个深的一级。如果通过一个嵌入对象,例如:
 
@@ -146,7 +146,7 @@ this.data.set({ playerName: 'Hicks', weapon: { name: 'M41A Pulse Rifle', ammo: 1
 
 #### 将一个已有对象合并到数据管理器中 {#merge-an-existing-object-into-the-data-manager}
 
-您可以使用 `merge` 方法从已有对象中填充密钥/值对的数据管理器 :
+您可以使用 `merge` 方法从已有对象中填充键/值对的数据管理器 :
 
 ```js
 const weapon = { name: 'M41A Pulse Rifle', ammo: 10 };
@@ -161,11 +161,11 @@ this.data.merge(weapon, true);
 sprite.data.merge(weapon, true);
 ```
 
-第一个参数是合并到数据管理器的对象。 第二个参数是布尔 `overwrite`。 如果 `true`, 它将用对象的值覆盖数据管理器中的任何现有值。 如果 `false`, 它将跳过数据管理器中已经存在的任何密钥 。
+第一个参数是合并到数据管理器的对象。 第二个参数是布尔 `overwrite`。 如果 `true`, 它将用对象的值覆盖数据管理器中的任何现有值。 如果 `false`, 它将跳过数据管理器中已经存在的任何键 。
 
-如果数据管理器中不存在密钥, 则会创建并释放 `SET_DATA`事件。 如果密钥存在, `overwrite`为 `true`, 将会更新, 并释放 `CHANGE_DATA`事件 。
+如果数据管理器中不存在键, 则会创建并释放 `SET_DATA`事件。 如果键存在, `overwrite`为 `true`, 将会更新, 并释放 `CHANGE_DATA`事件 。
 
-所有规则都与`set`方法一样适用,因为对象只重复一层深,密钥对大小写敏感等等.
+所有规则都与`set`方法一样适用,因为对象只重复一层深,键对大小写敏感等等.
 
 #### 以对象为值 {#using-objects-as-values}
 
@@ -202,9 +202,9 @@ sprite.getData('playerName');
 sprite.data.get('playerName');
 ```
 
-如果密钥存在于数据管理器中, 则该值将被返回。 如果密钥不存在, 则 `undefined` 将被返回 。
+如果键存在于数据管理器中, 则该值将被返回。 如果键不存在, 则 `undefined` 将被返回 。
 
-要同时获得数个值, 需要通过一系列密钥 :
+要同时获得数个值, 需要通过一系列键 :
 
 ```js
 //  In the Registry
@@ -239,7 +239,7 @@ score += 10;
 
 在这种情况下, `score` 值是存储在数据管理器中的值的复制件。 尽管您修改了, 添加了 10 个, 但数据管理器不会意识到这个变化。 如果您再给 `get` 打电话, 返回的值将是原始值, 而不是更新的值 。
 
-为避免这种情况,使用数据管理器的`values`财产:
+为避免这种情况,使用数据管理器的`values`属性:
 
 ```js
 const score = this.data.values.score;
@@ -286,7 +286,7 @@ this.data.inc('score', -10);
 
 注意 `inc` 特性只在值为标准时才有效 JavaScript 数字数据类型。如果尝试加长字符串,它会将数值附加到字符串的末尾。 `"10"` 将变成 `"1010"`。如果尝试并加长布尔,它将被转换为第一个数字,即。 `true` 变成 `1` 财务报告和已审计财务报表 `false` 变成 `0`中,将数字值错误地添加到对象中,将实际破坏原对象,代之以字符串 `[object Object]` 并附上你的电话号码。所以请务必只打电话。 `inc` 数字数据类型。
 
-基本上, 打电话和电话没有区别 `inc` 方法,并仅通过 `values` 财产,但 `inc` 方法调用是可链的。
+基本上, 打电话和电话没有区别 `inc` 方法,并仅通过 `values` 属性,但 `inc` 方法调用是可链的。
 
 ### 切换数据 {#toggle-data}
 
@@ -354,7 +354,7 @@ this.data.remove('playerName');
 sprite.data.remove('playerName');
 ```
 
-如果密钥存在于数据管理器中, 将会被移除, 并释放一个 `REMOVE_DATA` 事件。 如果密钥不存在, 则不会发生任何事件 。
+如果键存在于数据管理器中, 将会被移除, 并释放一个 `REMOVE_DATA` 事件。 如果键不存在, 则不会发生任何事件 。
 
 您可以通过将一系列字符串传递到 `remove` 方法, 立即删除多个值 :
 
@@ -382,9 +382,9 @@ const playerName = this.data.pop('playerName');
 const playerName = sprite.data.pop('playerName');
 ```
 
-如果数据管理器中不存在密钥,则返回 `undefined` 。
+如果数据管理器中不存在键,则返回 `undefined` 。
 
-每个成功移除的密钥,无论用何种方法去除,都会发出`REMOVE_DATA`事件.
+每个成功移除的键,无论用何种方法去除,都会发出`REMOVE_DATA`事件.
 
 和设置数据一样,如果数据管理器已被冻结,则不会删除任何值.
 
@@ -411,7 +411,7 @@ sprite.data.reset();
 
 #### 已经 {#has}
 
-第一个,也是最简单的,是`has`方法。此检查可以检查数据管理器是否有匹配给定字符串的密钥 :
+第一个,也是最简单的,是`has`方法。此检查可以检查数据管理器是否有匹配给定字符串的键 :
 
 ```js
 //  In the Registry
@@ -424,7 +424,7 @@ this.data.has('playerName');
 sprite.data.has('playerName');
 ```
 
-如果数据管理器中存在密钥, 它会返回 `true`, 否则它会返回 `false`。 和 JavaScript 中所有密钥的使用一样, 请记住, 这是高度区分大小写 。
+如果数据管理器中存在键, 它会返回 `true`, 否则它会返回 `false`。 和 JavaScript 中所有键的使用一样, 请记住, 这是高度区分大小写 。
 
 #### 数 {#count}
 
@@ -493,13 +493,13 @@ sprite.data.each((parent, key, value) => {
 });
 ```
 
-调用将发送三个参数:数据管理器的母参数、密钥和值。如果您指定了额外的参数,它们将在这三个参数之后发送。
+调用将发送三个参数:数据管理器的母参数、键和值。如果您指定了额外的参数,它们将在这三个参数之后发送。
 
 数据管理器不使用,或期望调回的值返回,所以如果您想要修改发送给您的调回的值,就必须通过正常的数据管理器方法进行修改.
 
 #### 查询 {#query}
 
-`query`方法允许您搜索数据管理器的密钥, 以匹配给定的正则表达式。 然后返回包含任何匹配密钥/ 值对的对象 。
+`query`方法允许您搜索数据管理器的键, 以匹配给定的正则表达式。 然后返回包含任何匹配键/ 值对的对象 。
 
 例如,假设我们用一些不同的武器 给数据管理员寄了信息:
 
@@ -520,7 +520,7 @@ this.data.set({
 const rifles = this.data.query(/Rifle/);
 ```
 
-返回对象将包含所有匹配的密钥/ 值对 :
+返回对象将包含所有匹配的键/ 值对 :
 
 ```js
 {
@@ -535,7 +535,7 @@ const rifles = this.data.query(/Rifle/);
 
 #### 电话 `list` 财务报告和已审计财务报表 `values` 属性 {#the-list-and-values-properties}
 
-`list`属性是一个包含数据管理器中所有密钥的数组:
+`list`属性是一个包含数据管理器中所有键的数组:
 
 ```js
 //  In the Registry
@@ -605,7 +605,7 @@ sprite.on('setdata', (parent, key, value) => {
 myData.destroy();
 ```
 
-这将发出一个 `DESTROY` 事件,删除所有听众,并清除它持有的与其他对象的引用 。
+这将发出一个 `DESTROY` 事件,删除所有监听器,并清除它持有的与其他对象的引用 。
 
 请注意, 如果一个场景是关闭而不是销毁, 那么数据管理器将会坚持并保留其中的所有数据。 如果您想要在场景关闭时从数据管理器中清除数据, 那么您应该为关闭事件收听, 并给其数据管理器打电话 `reset` :
 

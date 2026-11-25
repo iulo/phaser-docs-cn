@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseSimplex2DConfig {#static-noisesimplex2dconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseSimplex2D.NoiseSimplex2DQuadConfig](/api/typedef/types-gameobjects-noisesimplex2d#noisesimplex2dquadconfig) | 是 |  | 此噪声Simplex2D 将使用的配置对象 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.NoiseSimplex2D
+**所属**: Phaser.Types.GameObjects.NoiseSimplex2D
 > 源码：[src/gameobjects/noise/noisesimplex2d/typedefs/NoiseSimplex2DConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/noisesimplex2d/typedefs/NoiseSimplex2DConfig.js#L1)  
 引入版本：4.0.0
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseSimplex2DQuadConfig {#static-noisesimplex2dquadconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | noiseCells | Array.\<number> | 是 | "[ 32, 32 ]" | 每个维度的单元格数。 |
 | noisePeriod | Array.\<number> | 是 |  | 模式重现前每个维度中有多少个单元格。默认情况下,这与`noiseCells`相同。 |
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.NoiseSimplex2D
+**所属**: Phaser.Types.GameObjects.NoiseSimplex2D
 > 源码：[src/gameobjects/noise/noisesimplex2d/typedefs/NoiseSimplex2DQuadConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/noisesimplex2d/typedefs/NoiseSimplex2DQuadConfig.js#L1)  
 引入版本：4.0.0
 

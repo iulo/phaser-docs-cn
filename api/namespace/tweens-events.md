@@ -181,7 +181,7 @@ tween.pause();
 
 当一个属性在反复旋转时, 此事件由 Tween 发送 。
 
-只有Tween拥有一个具有重复计数集的财产,此事件才会被发送.
+只有Tween拥有一个具有重复计数集的属性,此事件才会被发送.
 
 如果一个Tween有`repeatDelay`的设定,此事件将在延迟到期后点燃.
 
@@ -204,9 +204,9 @@ tween.on('repeat', listener);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
-| key | string | 否 | 目标上的财产,刚刚重复, 即`x`或`scaleY`, 或者任何你正在调整的财产。 |
+| key | string | 否 | 目标上的属性,刚刚重复, 即`x`或`scaleY`, 或者任何你正在调整的属性。 |
 | target | any | 否 | 重复的目标对象。 通常是一个游戏对象, 但可以是任意类型的 。 |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 
 
@@ -342,7 +342,7 @@ tween.on('stop', listener);
 
 正在改变目标3个属性的Tween会发出这个事件,每次改变3次,每次一次.
 
-**Note:** 这是一个非常高频事件,可能多次发出,每个帧.
+**注意:** 这是一个非常高频事件,可能多次发出,每个帧.
 
 听听Tween案使用`Tween.on('update', listener)`的音效,即:
 
@@ -362,8 +362,8 @@ tween.on('update', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | key | string | 否 | 目标上刚刚更新的属性,即`x`或`scaleY`,或者任何你正在调整的属性. |
 | target | any | 否 | 更新的目标对象。 通常是一个游戏对象, 但可以是任意类型的 。 |
-| current | number | 否 | 已调整的财产的当前值 。 |
-| previous | number | 否 | 更新前的已调整财产的上一个值 。 |
+| current | number | 否 | 已调整的属性的当前值 。 |
+| previous | number | 否 | 更新前的已调整属性的上一个值 。 |
 
 
 > 源码：[src/tweens/events/TWEEN_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_UPDATE_EVENT.js#L7)  
@@ -381,13 +381,13 @@ tween.on('update', listener);
 
 阳事件.
 
-每当有财产在给Yoyos发短信时, 都会有特温公司发出信号。
+每当有属性在给Yoyos发短信时, 都会有特温公司发出信号。
 
 只有Tween拥有了`yoyo`设定的属性,此事件才会被发出.
 
 如果Tween有`hold`值,则在持有到期时发出此事件.
 
-本次活动是为每个财产和每个目标,即Yoyos的。例如,如果一个Tween正在更新2个财产,并且有10个目标,则这次活动将发出20次(每目标两次),所以请小心如何使用它!
+本次活动是为每个属性和每个目标,即Yoyos的。例如,如果一个Tween正在更新2个属性,并且有10个目标,则这次活动将发出20次(每目标两次),所以请小心如何使用它!
 
 听听Tween案使用`Tween.on('yoyo', listener)`的音效,即:
 
@@ -406,9 +406,9 @@ tween.on('yoyo', listener);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
-| key | string | 否 | 目标上的财产 刚刚Yoyo'd, 即`x`或`scaleY`, 或任何你正在调整的财产。 |
+| key | string | 否 | 目标上的属性 刚刚Yoyo'd, 即`x`或`scaleY`, 或任何你正在调整的属性。 |
 | target | any | 否 | 原为yoyod的目标对象,通常为游戏对象,但可以是任意类型. |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 
 

@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | manager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用当前声音管理器实例 。 |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 ---
@@ -103,7 +103,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-声音的密钥 。
+声音的键 。
 
 
 > 源码：[src/sound/BaseSound.js#L50](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSound.js#L50)  
@@ -183,7 +183,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-一个持有声音实际回放率值的财产,在它的回放率和调值与全局率和调值结合之后.
+一个持有声音实际回放率值的属性,在它的回放率和补间与全局率和补间结合之后.
 
 
 > 源码：[src/sound/BaseSound.js#L82](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSound.js#L82)  
@@ -283,10 +283,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 摧毁此声音和所有相关事件,并标记它,以便从声音管理器中移除.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
-**Fires:** [Phaser.Sound.Events#event:DESTROY](/api/event/sound-events#destroy)
+**触发事件:** [Phaser.Sound.Events#event:DESTROY](/api/event/sound-events#destroy)
 
 
 > 源码：[src/sound/BaseSound.js#L469](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSound.js#L469)  
@@ -328,7 +328,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 它总是从一开始播放声音。 如果您想要从特定时间开始播放, 您可以设置配置对象的“ seek” 设置, 提供给此调用, 到该值 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | markerName | string \| [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "''" | 如果您想要播放标记, 请在此提供标记名称。 或者, 此参数可以是 SoundConfig 对象 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 |  | 如果未提供标记名称, 可选的音效配置对象将应用到此标记或整个音效上。 它会被记住, 用于当前音节的未来播放 。 |

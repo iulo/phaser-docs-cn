@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-matter-pointerconstraint)
 
-指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动身体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动身体的任何部分。 如果它确实击中, 并且身体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
+指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动物理体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动物理体的任何部分。 如果它确实击中, 并且物理体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
 
 您可以通过创建上的`options`对象来调整约束的硬度,长度和其他属性.
 
@@ -52,7 +52,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-目前拖着的尸体,如果有的话。
+目前拖着的物理体,如果有的话。
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L124](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L124)  
@@ -68,7 +68,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-点球手在输入下行事件处理时与之互动的相机.
+点球手在输入下行事件处理时与之互动的摄像机.
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L81](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L81)  
@@ -84,7 +84,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-用于附着在身体上的原生物质约束.
+用于附着在物理体上的原生物质约束.
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L142](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L142)  
@@ -198,7 +198,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-扫描当前 Matery World 中所有活动体,看看是否有任何天体被 Pointer 击中。发现的 _ first one_ 被设定为活动约束体 。
+扫描当前 Matery World 中所有活动体,看看是否有任何物理体被 Pointer 击中。发现的 _ first one_ 被设定为活动约束体 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -206,10 +206,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 引用启动拖曳的指针 。 |
 
 
-**返回值:** boolean - 如果发现尸体并设定了`true`, 否则是`false`.
+**返回值:** boolean - 如果发现物理体并设定了`true`, 否则是`false`.
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:DRAG_START](/api/event/physics-matter-events#drag_start)
+**触发事件:** [Phaser.Physics.Matter.Events#event:DRAG_START](/api/event/physics-matter-events#drag_start)
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L194](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L194)  
@@ -225,7 +225,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-扫描当前天体以确定其部分是否被点击。如果找到一部分,则将它设定为`constraint.bodyB`属性以及本类的`body`属性。该部分也设定了。
+扫描当前物理体以确定其部分是否被点击。如果找到一部分,则将它设定为`constraint.bodyB`属性以及本类的`body`属性。该部分也设定了。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -234,7 +234,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | position | [Phaser.Math.Vector2](/api/class/math-vector2) | 否 | 一个翻译的命中测试位置 |
 
 
-**返回值:** boolean - 如果身体的一部分被击中,则`true`,否则则`false`.
+**返回值:** boolean - 如果物理体的一部分被击中,则`true`,否则则`false`.
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L236](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L236)  
@@ -252,7 +252,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 已按下一个指针到场景上 。
 
-如果此约束没有主动指针, 那么在_ next_ call to `update` 期间, 将设定一个命中测试以对世界上所有活动体进行。 如果找到一个身体, 它将受到此约束, 拖曳开始 。
+如果此约束没有主动指针, 那么在_ next_ call to `update` 期间, 将设定一个命中测试以对世界上所有活动体进行。 如果找到一个物理体, 它将受到此约束, 拖曳开始 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -294,12 +294,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-阻止指针控制器 拖动身体任何进一步。
+阻止指针控制器 拖动物理体任何进一步。
 
-如果在主动拖曳一个身体时释放指针,则自动调用。或者,你可以手动调用,以释放一个身体不受约束,而不必先释放指针。
+如果在主动拖曳一个物理体时释放指针,则自动调用。或者,你可以手动调用,以释放一个物理体不受约束,而不必先释放指针。
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:DRAG_END](/api/event/physics-matter-events#drag_end)
+**触发事件:** [Phaser.Physics.Matter.Events#event:DRAG_END](/api/event/physics-matter-events#drag_end)
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L332](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L332)  
@@ -318,7 +318,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 内部更新处理器。 在“ 关键” 步骤前已调用 。
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:DRAG](/api/event/physics-matter-events#drag)
+**触发事件:** [Phaser.Physics.Matter.Events#event:DRAG](/api/event/physics-matter-events#drag)
 
 
 > 源码：[src/physics/matter-js/PointerConstraint.js#L280](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/PointerConstraint.js#L280)  

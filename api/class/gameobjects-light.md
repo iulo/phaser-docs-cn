@@ -107,7 +107,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果此游戏对象是否由相机绘制, 控制此位码。 通常不直接设定, 而是直接调用 `Camera.ignore`, 但是您可以直接使用相机设置此属性 。 id 属性 :
+如果此游戏对象是否由摄像机绘制, 控制此位码。 通常不直接设定, 而是直接调用 `Camera.ignore`, 但是您可以直接使用摄像机设置此属性 。 id 属性 :
 
 
 > 源码：[src/gameobjects/lights/Light.js#L115](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/lights/Light.js#L115)  
@@ -239,7 +239,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 lit游戏对象被认为是z=0. 因此,如果z大于光的半径,光不会影响它们,强值在0到半径/2之间.
 
-这不是一个真实的位置,也不会受到视角或相机位置的影响。它不会被设定为 `setTo`使用中选择 `setZ` 设置它,或 `setZNormal` 以设定半径的一小部分。
+这不是一个真实的位置,也不会受到视角或摄像机位置的影响。它不会被设定为 `setTo`使用中选择 `setZ` 设置它,或 `setZNormal` 以设定半径的一小部分。
 
 
 > 源码：[src/gameobjects/lights/Light.js#L82](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/lights/Light.js#L82)  
@@ -443,12 +443,12 @@ lit游戏对象被认为是z=0. 因此,如果z大于光的半径,光不会影响
 
 **说明:**
 
-将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的相机排除列表检查游戏对象 。
+将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的摄像机排除列表检查游戏对象 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的摄像机 。 |
 
 
 **返回值:** boolean - 如果游戏对象应该被渲染, 否则会弄虚作假 。

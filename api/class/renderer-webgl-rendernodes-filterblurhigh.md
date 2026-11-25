@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前用于确定渲染解析度的绘图上下文 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterBlurHigh.js#L38](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterBlurHigh.js#L38)  

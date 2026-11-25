@@ -32,7 +32,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-键入的查询表 WebGL 键入常数( 小时值) , 将每个 GLSL 数据类型映射到其统一的设置函数、 组件计数、 字节大小每个组件, 以及显示该类型是否为矩阵的旗帜。 当将统一值上传到阴影程序时使用, 这样正确 。 WebGL 调用是自动选择的,用于每种制服的申报类型。
+键入的查询表 WebGL 键入常数( 小时值) , 将每个 GLSL 数据类型映射到其统一的设置函数、 组件计数、 字节大小每个组件, 以及显示该类型是否为矩阵的旗帜。 当将统一值上传到着色器程序时使用, 这样正确 。 WebGL 调用是自动选择的,用于每种制服的申报类型。
 
 
 > 源码：[src/renderer/webgl/wrappers/WebGLShaderSetterWrapper.js#L36](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/wrappers/WebGLShaderSetterWrapper.js#L36)  

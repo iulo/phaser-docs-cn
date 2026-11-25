@@ -15,13 +15,13 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 `new Blitter(scene, [x], [y], [texture], [frame])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 它只能在任何特定时间属于一个景点 。 |
 | x | number | 是 | 0 | 世界空间中此游戏对象的x坐标 。 |
 | y | number | 是 | 0 | 游戏对象在世界空间中的y坐标 。 |
-| texture | string | 是 | "'__DEFAULT'" | 游戏对象用于渲染的纹理密钥。 纹理管理器中必须已经存在 。 |
-| frame | string \| number | 是 | 0 | 此游戏对象将使用的纹理框架。 只有在纹理有多个框架, 如纹理图集或 Sprite 工作表时才会设置 。 |
+| texture | string | 是 | "'__DEFAULT'" | 游戏对象用于渲染的纹理键。 纹理管理器中必须已经存在 。 |
+| frame | string \| number | 是 | 0 | 此游戏对象将使用的纹理帧。 只有在纹理有多个框架, 如纹理图集或 精灵表时才会设置 。 |
 
 ---
 
@@ -511,7 +511,7 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 鲍勃在给定坐标处创建,相对闪光器,并使用给定帧. 鲍勃可以使用属于捆绑在闪光器上的纹理的任何帧.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | Bob的x位置. Bob坐标相对闪光物体的位置. |
 | y | number | 否 |  | Bob的y位置 。 Bob 坐标相对于闪光物体的位置 。 |
@@ -539,7 +539,7 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 在此闪烁器内创建多个 Bob 对象, 然后将每个对象传递到指定的回调 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | CreateCallback | 否 |  | 创建 bb 后调用。 将会发送两个参数: 鲍勃 和 鲍勃 索引 。 |
 | quantity | number | 否 |  | 鲍勃的设定数量 |
@@ -570,7 +570,7 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 如果数量被设定为10,你提供2帧,那么20个Bob将创建. 10个与第一个帧,10个与第二个帧.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | quantity | number | 否 |  | 鲍勃的设定数量 |
 | frame | string \| number | [Phaser.Textures.Frame](/api/class/textures-frame) | Array.\<string> | Array.\<number> | Array.\<[Phaser.Textures.Frame](/api/class/textures-frame)> | 是 |  | Bobs将使用的框架。 它必须是闪光纹理的一部分 。 |
@@ -612,10 +612,10 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/blitter/Blitter.js#L297](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/blitter/Blitter.js#L297)  

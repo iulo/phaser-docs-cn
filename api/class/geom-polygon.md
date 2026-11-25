@@ -191,7 +191,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 更多信息见[https://github.com/mapbox/earcut](https://github.com/mapbox/earcut)
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | Array.\<number> | 否 |  | 一个平坦的顶点坐标阵列,如\[x0,y0,x1,y1,x2,y2,.\] |
 | holeIndices | Array.\<number> | 是 |  | 如果有孔指数阵列(例如12顶点输入的[5, 8]),则指一个孔有顶点5-7,另一个孔有8-11。 |
@@ -216,7 +216,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 计算多边形的边界 AABB 矩形。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -245,7 +245,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 将一个多边形的所有点存储到一个按照顺序\[x,y,x,y,x\]排列的平整数组中,即多边形的每个点,按照定义的顺序,对应该点的X和Y坐标的后产生的数组的两个元素.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -274,7 +274,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 返回含有多边形周边各点坐标的矢量2对象阵列,其数值以给定的数量或stepRate值为准。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -355,7 +355,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 反转多边形点的顺序。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -421,12 +421,12 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 取一个多边形对象,并通过道格拉斯-佩克和拉达尔远程算法的组合来运行来简化点数。简化在保留多边形形状的同时会大幅降低点数,在处理时会给予巨大的性能助推,同时也会减少视觉噪声。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | polygon | [Phaser.Geom.Polygon](/api/class/geom-polygon) | 否 |  | 要简化的多边形。 多边形将按原位修改并返回。 |
 | tolerance | number | 是 | 1 | 影响简化的量(与点坐标相同的度量). |
@@ -455,7 +455,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 多边形在位置上被修改,并返回相同的多边形对象。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -483,7 +483,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 翻译给定的多边形的点。
 
-**Tags:**
+**标签:**
 
  - generic
 

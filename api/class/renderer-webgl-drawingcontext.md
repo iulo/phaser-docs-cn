@@ -63,7 +63,7 @@ DrawingContext
 
 **说明:**
 
-此上下文使用的相机。 使用 `setCamera` 设置此功能, 以确保视图矩阵更新 。 在渲染前确保此功能不是 `null` 。
+此上下文使用的摄像机。 使用 `setCamera` 设置此功能, 以确保视图矩阵更新 。 在渲染前确保此功能不是 `null` 。
 
 
 > 源码：[src/renderer/webgl/DrawingContext.js#L52](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/DrawingContext.js#L52)  
@@ -322,7 +322,7 @@ DrawingContext
 autoClear 设置被设定为虚假, 除非指定。 这是因为大多数克隆人参考了用于积累绘图操作的现有帧缓冲器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | preserveAutoClear | boolean | 是 | false | 是否保留 autoClear 设置 。 |
 
@@ -362,12 +362,12 @@ autoClear 设置被设定为虚假, 除非指定。 这是因为大多数克隆�
 
 **说明:**
 
-锁定绘图康文本用于使用。 这阻止 `release` 返回其池中, 直到使用合适的密钥调用 `unlock` 。 这用于临时绘图康文本, 可能返回池中 。
+锁定绘图康文本用于使用。 这阻止 `release` 返回其池中, 直到使用合适的键调用 `unlock` 。 这用于临时绘图康文本, 可能返回池中 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | any | 否 | 锁定绘图连接的密钥 。 |
+| key | any | 否 | 锁定绘图连接的键 。 |
 
 
 > 源码：[src/renderer/webgl/DrawingContext.js#L536](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/DrawingContext.js#L536)  
@@ -470,7 +470,7 @@ autoClear 设置被设定为虚假, 除非指定。 这是因为大多数克隆�
 
 **说明:**
 
-设定绘图康特的相机 。
+设定绘图康特的摄像机 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

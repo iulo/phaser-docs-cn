@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态零矢量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L792](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L792)  
@@ -27,7 +27,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态右向量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L804](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L804)  
@@ -43,7 +43,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态左向量2,以参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L816](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L816)  
@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态上升矢量2,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L828](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L828)  
@@ -75,7 +75,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态下向量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L840](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L840)  
@@ -91,7 +91,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态1矢量2,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector2.js#L852](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector2.js#L852)  
@@ -107,7 +107,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态零矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L975](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L975)  
@@ -123,7 +123,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态右向量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L987](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L987)  
@@ -139,7 +139,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态左向量3,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L999](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L999)  
@@ -155,7 +155,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态上升矢量3, 用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1011](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1011)  
@@ -171,7 +171,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态下向量3,供参考使用.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1023](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1023)  
@@ -187,7 +187,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态前向矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1035](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1035)  
@@ -203,7 +203,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态背向量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1047](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1047)  
@@ -219,7 +219,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 静态1矢量3,用于参考.
 
-这个常数是用于比较操作的,不应直接修改.
+此常量用于比较操作。请勿直接修改。
 
 
 > 源码：[src/math/Vector3.js#L1059](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/Vector3.js#L1059)  

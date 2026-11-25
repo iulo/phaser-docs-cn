@@ -97,7 +97,7 @@ var viewport = scene.scale.getViewPort();
 
 ## 成员 {#members}
 
-- 未修改的游戏大小, 如游戏配置( 原始宽度 / 高度) 中要求的, 如用于世界界限, 相机等
+- 未修改的游戏大小, 如游戏配置( 原始宽度 / 高度) 中要求的, 如用于世界界限, 摄像机等
 
     ```javascript
     var gameSize = scene.scale.gameSize;

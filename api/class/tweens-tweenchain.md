@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 播放会立即开始, 除非已配置 _ first_ Tween 暂停 。
 
-请注意,特温斯不会操纵任何以下划线开头的目标属性.
+请注意,补间动画不会操纵任何以下划线开头的目标属性.
 
 **构造函数**
 
@@ -178,13 +178,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-建立"特温斯"的序列,连锁到另一个,并加入到这个特温钱中.
+建立"补间动画"的序列,连锁到另一个,并加入到这个特温钱中.
 
 串排按顺序播放, 从开始到完成。 您可以选择设置链条重复您想要的多次 。 一旦链条播放完毕, 或者如果设置了重复, 链条中的所有串排都会自动被销毁 。 要覆盖此选项, 请设置“ persist” 参数为“ true ” 。
 
 播放会立即开始, 除非已配置 _ first_ Tween 暂停 。
 
-请注意,特温斯不会操纵任何以下划线开头的目标属性.
+请注意,补间动画不会操纵任何以下划线开头的目标属性.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -211,7 +211,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 立即摧毁这个特温琴, 废除它的所有引用。
 
 
-**Overrides:** Phaser.Tweens.BaseTween#销毁
+**重写:** Phaser.Tweens.BaseTween#销毁
 
 
 > 源码：[src/tweens/tween/TweenChain.js#L534](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenChain.js#L534)  
@@ -281,7 +281,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Tweens.TweenChain](/api/class/tweens-tweenchain) - 此特云钦例.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
 
 
 > 源码：[src/tweens/tween/TweenChain.js#L66](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenChain.js#L66)  
@@ -327,7 +327,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** boolean - 如果TweenChain完成了,就用`true`, 否则用`false`.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop)
 
 
 > 源码：[src/tweens/tween/TweenChain.js#L271](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenChain.js#L271)  
@@ -512,7 +512,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** boolean - 如果 TweenChain 完成并应该从 Tween 管理器中移除, 返回 `true`, 否则返回 `false` 。
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop), [Phaser.Tweens.Events#event:TWEEN_START](/api/event/tweens-events#tween_start)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop), [Phaser.Tweens.Events#event:TWEEN_START](/api/event/tweens-events#tween_start)
 
 
 > 源码：[src/tweens/tween/TweenChain.js#L380](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenChain.js#L380)  

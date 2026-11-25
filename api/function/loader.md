@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | urls | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig)> | 是 | 装入音频的绝对或相对的 URL 。 |
 | config | any | 是 | 包含 HTML5Audio 的 `instances` 属性的对象。默认为 1 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
@@ -113,7 +113,7 @@ Blob 和数据 URI 总是被接受并立即返回, 不论格式如何。 对于�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入器 Plugin 以安装类型 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 资源加载器 Plugin 以安装类型 。 |
 
 
 > 源码：[src/loader/FileTypesManager.js#L22](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/FileTypesManager.js#L22)  
@@ -129,12 +129,12 @@ Blob 和数据 URI 总是被接受并立即返回, 不论格式如何。 对于�
 
 由文件类型直接调用的稳定方法.
 
-键是用来通过装入器加载文件的函数的参考,即`image`.
+键是用来通过资源加载器加载文件的函数的参考,即`image`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 将用作加载器Plugin中方法名的密钥 。 |
+| key | string | 否 | 将用作加载器Plugin中方法名的键 。 |
 | factoryFunction | function | 否 | 当LaugerPlugin.key被引用时,将调用函数 。 |
 
 
@@ -238,10 +238,10 @@ Blob 和数据 URI 总是被接受并立即返回, 不论格式如何。 对于�
 
 创建一个带有默认值的 XHRSettings 对象。
 
-XHRSettings 对象用于: Phaser 装入器在制作 XMLHttp 请求调用以获取外部资产,例如图像、音频、 JSON 和其他文件时。您可以将自定义的 XHRSettings 对象传递给单个文件装入调用(例如, `this.load.image`) 在每个文件的基础上推翻默认请求配置,或通过加载器设置全局默认 `xhr` 属性。在从服务器上加载需要认证证书、自定义头、特定的 MIME 类型覆盖或非默认响应类型时,此功能是有用的。
+XHRSettings 对象用于: Phaser 资源加载器在制作 XMLHttp 请求调用以获取外部资源,例如图像、音频、 JSON 和其他文件时。您可以将自定义的 XHRSettings 对象传递给单个文件装入调用(例如, `this.load.image`) 在每个文件的基础上推翻默认请求配置,或通过加载器设置全局默认 `xhr` 属性。在从服务器上加载需要认证证书、自定义头、特定的 MIME 类型覆盖或非默认响应类型时,此功能是有用的。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | responseType | XMLHttpRequestResponseType | 是 | "''" | The responseType, such as 'text'. |
 | async | boolean | 是 | true | XHR请求是否使用同步? |

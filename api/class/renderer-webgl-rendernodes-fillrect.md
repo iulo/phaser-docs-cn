@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-fillrect)
 
-将一个固态、平面、平面、平色的矩形转换成WebGL的导管。 它使用一个提供的变形矩阵将四个角顶点转换成两个三角形, 并提交到`BatchHandlerTriFlat`节点, 并支持每个角的锡色和可选的照明。 这个节点用于全屏色填充、背景覆盖、 相机效果, 以及任何不需要纹理的矩形几何 。
+将一个固态、平面、平面、平色的矩形转换成WebGL的导管。 它使用一个提供的变形矩阵将四个角顶点转换成两个三角形, 并提交到`BatchHandlerTriFlat`节点, 并支持每个角的锡色和可选的照明。 这个节点用于全屏色填充、背景覆盖、 摄像机效果, 以及任何不需要纹理的矩形几何 。
 
 **构造函数**
 
@@ -85,7 +85,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | lighting | boolean | 否 | 是否将照明效果应用到矩形上 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/FillRect.js#L71](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/FillRect.js#L71)  

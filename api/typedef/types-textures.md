@@ -9,10 +9,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 `DynamicTexture.capture`方法的配置对象.
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | transform | 'local' \| 'world' | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | "'world'" | 应用其他配置设置后使用的转换 。 “ 本地” 使用 Game Object 的属性 。 “ 世界” 使用 GameObject 的 `parentContainer` 值计算世界位置 。 也可以提供 `TransformMatrix`, 直接使用 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 将游戏对象渲染成动态图时使用的相机。 如果没有指定, 请使用动态图自己的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 将游戏对象渲染成动态图时使用的摄像机。 如果没有指定, 请使用动态图自己的摄像机 。 |
 | x | number | 是 |  | ××位置. |
 | y | number | 是 |  | 位置是Y的,你应该知道 |
 | alpha | number | 是 |  | 阿尔法值. |
@@ -28,7 +28,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/CaptureConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/CaptureConfig.js#L1)  
 引入版本：4.0.0
 
@@ -52,7 +52,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/CompressedTextureData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/CompressedTextureData.js#L1)  
 引入版本：3.60.0
 
@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/MipmapType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/MipmapType.js#L1)  
 引入版本：3.60.0
 
@@ -95,7 +95,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/PixelConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/PixelConfig.js#L1)  
 引入版本：3.16.0
 
@@ -108,7 +108,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 `DynamicTexture.repeat`方法的配置选项.
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tilePositionX | number | 是 | 0 | 纹理的横向滚动位置 。 |
 | tilePositionY | number | 是 | 0 | 纹理的垂直滚动位置 。 |
@@ -118,7 +118,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/RepeatConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/RepeatConfig.js#L1)  
 引入版本：4.0.0
 
@@ -128,18 +128,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SpriteSheetConfig {#static-spritesheetconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | frameWidth | number | 否 |  | 每个帧的固定宽度. |
 | frameHeight | number | 是 |  | 每个帧的固定高度。 如果不设定, 则会使用 frameWidth 来作为高度 。 |
 | startFrame | number | 是 | 0 | 跳过多个框架。 当一个纹理中存在多个图案工作表时有用 。 |
-| endFrame | number | 是 | -1 | 从Sprite工作表提取的框架总数。 -1 的默认值表示“ 提取全部框架 ”。 |
+| endFrame | number | 是 | -1 | 从精灵表提取的框架总数。 -1 的默认值表示“ 提取全部框架 ”。 |
 | margin | number | 是 | 0 | 如果框架已绘制了边距, 请在此指定金额 。 |
 | spacing | number | 是 | 0 | 如果画框之间有间隔,请在此指定金额。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/SpriteSheetConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/SpriteSheetConfig.js#L1)  
 引入版本：3.0.0
 
@@ -149,20 +149,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SpriteSheetFromAtlasConfig {#static-spritesheetfromatlasconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| atlas | string | 否 |  | 用于找到此 Sprite 工作表的纹理图集的密钥 。 |
-| frame | string | 否 |  | 用于找到此 Sprite 工作表的纹理图集框架的密钥 。 |
+| atlas | string | 否 |  | 用于找到此 精灵表的纹理图集的键 。 |
+| frame | string | 否 |  | 用于找到此 精灵表的纹理图集框架的键 。 |
 | frameWidth | number | 否 |  | 每个帧的固定宽度. |
 | frameHeight | number | 是 |  | 每个帧的固定高度。 如果不设定, 则会使用 frameWidth 来作为高度 。 |
 | startFrame | number | 是 | 0 | 跳过多个框架。 当一个纹理中存在多个图案工作表时有用 。 |
-| endFrame | number | 是 | -1 | 从Sprite工作表提取的框架总数。 -1 的默认值表示“ 提取全部框架 ”。 |
+| endFrame | number | 是 | -1 | 从精灵表提取的框架总数。 -1 的默认值表示“ 提取全部框架 ”。 |
 | margin | number | 是 | 0 | 如果框架已绘制了边距, 请在此指定金额 。 |
 | spacing | number | 是 | 0 | 如果画框之间有间隔,请在此指定金额。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/SpriteSheetFromAtlasConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/SpriteSheetFromAtlasConfig.js#L1)  
 引入版本：3.0.0
 
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 `DynamicTexture.stamp`方法的配置对象.
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | alpha | number | 是 | 1 | 邮票所用的α值 。 |
 | tint | number | 是 | "0xffffff" | 印章所用的颜色值。 WebGL 仅此而已 。 |
@@ -190,7 +190,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/StampConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/StampConfig.js#L1)  
 引入版本：3.60.0
 
@@ -202,7 +202,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement | [Phaser.GameObjects.RenderTexture](/api/class/gameobjects-rendertexture) | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | [Phaser.Types.Textures.CompressedTextureData](/api/typedef/types-textures#compressedtexturedata) | [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) | Uint8Array
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/TextureSource.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/TextureSource.js#L1)  
 引入版本：4.0.0
 
@@ -214,7 +214,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: HTMLImageElement | HTMLCanvasElement | HTMLVideoElement
 
-**Member of**: Phaser.Types.Textures
+**所属**: Phaser.Types.Textures
 > 源码：[src/textures/typedefs/TextureSourceElement.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/typedefs/TextureSourceElement.js#L1)  
 引入版本：4.0.0
 

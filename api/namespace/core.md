@@ -80,7 +80,7 @@ static
 | game | [Phaser.Game](/api/class/game) | 否 | 可见度处理器正在研究的游戏实例 。 |
 
 
-**Fires:** [Phaser.Core.Events#event:BLUR](/api/event/core-events#blur), [Phaser.Core.Events#event:FOCUS](/api/event/core-events#focus), [Phaser.Core.Events#event:HIDDEN](/api/event/core-events#hidden), [Phaser.Core.Events#event:VISIBLE](/api/event/core-events#visible)
+**触发事件:** [Phaser.Core.Events#event:BLUR](/api/event/core-events#blur), [Phaser.Core.Events#event:FOCUS](/api/event/core-events#focus), [Phaser.Core.Events#event:HIDDEN](/api/event/core-events#hidden), [Phaser.Core.Events#event:VISIBLE](/api/event/core-events#visible)
 
 
 > 源码：[src/core/VisibilityHandler.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/VisibilityHandler.js#L9)  

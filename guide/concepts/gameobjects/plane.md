@@ -16,7 +16,7 @@ Plane Game Object 也有动画组件,允许您像使用Sprite一样在Plane上�
 
 飞机的原产地始终是0.5×0.5,而且_不能更改_.
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -106,8 +106,8 @@ var plane = this.make.plane({
     // plane.play(key, ignoreIfPlaying);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
-    - 动画的字符串密钥
+  - `key`:动画键字符串,或动画配置
+    - 动画的字符串键
     - 动画配置, 以覆盖默认配置
 
       ```javascript
@@ -133,21 +133,21 @@ var plane = this.make.plane({
     // plane.playReverse(key, ignoreIfPlaying);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 延迟后播放
 
     ```javascript
     plane.playAfterDelay(key, delay);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 - 重复后播放
 
     ```javascript
     plane.playAfterRepeat(key, repeatCount);
     ```
 
-  - `key`:动画密钥字符串,或动画配置
+  - `key`:动画键字符串,或动画配置
 
 ### 停下来 {#stop}
 
@@ -239,7 +239,7 @@ var plane = this.make.plane({
     var repeatDelay = plane.anims.yoyo;
     ```
 
-- 当前动画密钥
+- 当前动画键
 
     ```javascript
     var key = plane.anims.getName();
@@ -303,7 +303,7 @@ var mask = plane.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 

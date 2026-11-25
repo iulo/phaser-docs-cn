@@ -143,14 +143,14 @@ static
 
 **说明:**
 
-返回的值设定了粒子生命中的财产,即发射时的财产。
+返回的值设定了粒子生命中的属性,即发射时的属性。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 是 | 粒子 粒子 粒子 粒子 |
-| key | string | 是 | 财产名称. |
-| value | number | 是 | 财产的当前价值 。 |
+| key | string | 是 | 属性名称. |
+| value | number | 是 | 属性的当前价值 。 |
 
 
 **返回值:** number - 地产的新价值.
@@ -186,9 +186,9 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 | t | number | 否 | 粒子的正常寿命,在 0(起始)至 1(结束)之间. |
-| value | number | 否 | 财产的当前价值 。 |
+| value | number | 否 | 属性的当前价值 。 |
 
 
 **返回值:** number - 地产的新价值.

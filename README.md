@@ -1,6 +1,6 @@
 # Phaser 4 中文文档
 
-Phaser 4 的非官方简体中文文档。站点包含[官方 Guide 的中文译文](guide/index.md)、[Phaser v4.1.0 API 参考](api/index.md)、[3 → 4 迁移指南](guide/migration.md)和[着色器指南](guide/shaders.md)。每页提供英文原文链接。Guide 和 API 使用机器翻译，代码示例和 API 标识符沿用原文。
+Phaser 4 的非官方简体中文文档。站点包含[官方 Guide 的中文译文](guide/index.md)、[Phaser v4.1.0 API 参考](api/index.md)、[Phaser Editor v5 手册](editor/index.md)、[3 → 4 迁移指南](guide/migration.md)和[着色器指南](guide/shaders.md)。每页提供英文原文链接。Guide、API 和 Editor 手册以机器翻译为主，保留原文的代码示例和 API 标识符。
 
 ## 本地开发
 
@@ -9,6 +9,8 @@ pnpm install --frozen-lockfile
 pnpm dev
 pnpm build
 ```
+
+只更新一个部分时，可给翻译脚本加 `--section guide`、`--section api` 或 `--section editor`。术语、标题和常见句式的校对规则放在 `scripts/translation-glossary.json`。
 
 构建产物位于 `.vitepress/dist`，包含 Pagefind 全文搜索索引，可用 `pnpm preview` 预览。
 

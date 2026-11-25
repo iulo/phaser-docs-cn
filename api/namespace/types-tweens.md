@@ -33,7 +33,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | target | any | 否 | 之目标. |
-| key | string | 否 | 目标财产。 |
+| key | string | 否 | 目标属性。 |
 | value | number | 否 | 目标属性的当前值 。 |
 | targetIndex | number | 否 | 特温内部目标指数. |
 | totalTargets | number | 否 | 此图文中目标总数. |
@@ -57,7 +57,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | target | any | 否 | 之目标. |
-| key | string | 否 | 目标财产。 |
+| key | string | 否 | 目标属性。 |
 | value | number | 否 | 目标属性的当前值 。 |
 | targetIndex | number | 否 | 特温内部目标指数. |
 | totalTargets | number | 否 | 此图文中目标总数. |
@@ -81,7 +81,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | target | any | 否 | 之目标. |
-| key | string | 否 | 目标财产。 |
+| key | string | 否 | 目标属性。 |
 | value | number | 否 | 目标属性的当前值 。 |
 | targetIndex | number | 否 | 特温内部目标指数. |
 | totalTargets | number | 否 | 此图文中目标总数. |
@@ -288,8 +288,8 @@ static
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 引见丁未科散馆人员. |
 | target | any | 否 | Tween 当前的目标。 如果这个 Tween 具有多个目标, 仅此一次将引用在召回之前更新的单项目标 。 |
-| key | string | 否 | 目标正在更新的财产 。 |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| key | string | 否 | 目标正在更新的属性 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 | param | any | 否 | 任何值通过`onRepeatParams`。 |
 
@@ -363,8 +363,8 @@ static
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 引见丁未科散馆人员. |
 | target | any | 否 | Tween 当前的目标。 如果这个 Tween 具有多个目标, 仅此一次将引用在召回之前更新的单项目标 。 |
-| key | string | 否 | 目标正在更新的财产 。 |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| key | string | 否 | 目标正在更新的属性 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 | param | any | 否 | 任何值通过`onUpdateParams`。 |
 
@@ -384,8 +384,8 @@ static
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 引见丁未科散馆人员. |
 | target | any | 否 | Tween 当前的目标。 如果这个 Tween 具有多个目标, 仅此一次将引用在召回之前更新的单项目标 。 |
-| key | string | 否 | 目标正在更新的财产 。 |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| key | string | 否 | 目标正在更新的属性 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 | param | any | 否 | 任何值通过`onYoyoParams`。 |
 

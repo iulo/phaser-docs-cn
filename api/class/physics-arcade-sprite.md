@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-sprite)
 
-弧形物理Sprite是一款具有弧形物理体和相关组件的Sprite. 弧形物理提供轻量级,快速的AABB(轴相匹配的边框)和圆形碰撞系统,适合大多数2D游戏需求.
+Arcade 物理Sprite是一款具有Arcade 物理体和相关组件的Sprite. Arcade 物理提供轻量级,快速的AABB(轴相匹配的边框)和圆形碰撞系统,适合大多数2D游戏需求.
 
-物理体可以是动态(受速度、加速度和重力的影响)或静态(固定在原位,其他天体不可移动),一旦将星标添加到弧形物理组或世界,其`body`属性便会有人居住,你可以控制运动,应用力,设定碰撞界限,并应对重叠和对撞机回调.
+物理体可以是动态(受速度、加速度和重力的影响)或静态(固定在原位,其他物理体不可移动),一旦将星标添加到Arcade 物理组或世界,其`body`属性便会有人居住,你可以控制运动,应用力,设定碰撞界限,并应对重叠和碰撞器回调.
 
 街机玻璃与街机玻璃之间的主要区别在于,您不能给街机玻璃与街机玻璃相配合动画。 如果您不需要动画, 您可以安全使用街机玻璃与街诀玻璃相配合的街机玻璃。
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 ---
@@ -292,10 +292,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-附加在此游戏对象上的弧形物理体。 当将这个星标添加到弧形物理组或通过 `physics.add.existing` 启用时, 将自动设定。 使用此引用应用速度、 加速、 重力和其他物理属性。 如果该星标是作为静态物理对象创建的, 则它将是一个动态的 `Body`( 默认) 或 `StaticBody` 。
+附加在此游戏对象上的Arcade 物理体。 当将这个星标添加到Arcade 物理组或通过 `physics.add.existing` 启用时, 将自动设定。 使用此引用应用速度、 加速、 重力和其他物理属性。 如果该星标是作为静态物理对象创建的, 则它将是一个动态的 `Body`( 默认) 或 `StaticBody` 。
 
 
-**Overrides:** Phaser.GameObjects.Sprite身体的伤痛
+**重写:** Phaser.GameObjects.Sprite身体的伤痛
 
 
 > 源码：[src/physics/arcade/ArcadeSprite.js#L92](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadeSprite.js#L92)  

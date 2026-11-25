@@ -4,9 +4,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 混合过滤控制器 。
 
-此过滤控制器管理相机的混合效果。 混合效果允许您使用特定的混合模式对视图应用另一个纹理。 这支持WebGL中无法使用的混合模式 。
+此过滤控制器管理摄像机的混合效果。 混合效果允许您使用特定的混合模式对视图应用另一个纹理。 这支持WebGL中无法使用的混合模式 。
 
-通过过滤列表组件向相机添加了混合效应:
+通过过滤列表组件向摄像机添加了混合效应:
 
 ```js
 const camera = this.cameras.main;
@@ -19,9 +19,9 @@ camera.filters.external.addBlend();
 `new Blend(camera, [texture], [blendMode], [amount], [color])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | texture | string | 是 | "'__WHITE'" | 纹理适用于视图. |
 | blendMode | [Phaser.BlendModes](/api/namespace/blendmodes) | 是 | "Phaser.BlendModes.NORMAL" | 用于视图的混合模式 。 |
 | amount | number | 是 | 1 | 混合效果的大小适用于视图。 0 时, 原图像被保存。 1 时, 混合纹理被完全应用。 预期范围为 0 到 1, 但您可以在此范围之外进行不同效果 。 |
@@ -156,9 +156,9 @@ camera.filters.external.addBlend();
 设置混合用的纹理。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| texture | string | 是 | "'__WHITE'" | 用于混合的纹理中唯一基于字符串的密钥,它必须存在于纹理管理器中. |
+| texture | string | 是 | "'__WHITE'" | 用于混合的纹理中唯一基于字符串的键,它必须存在于纹理管理器中. |
 
 
 **返回值:** [Phaser.Filters.Blend](/api/class/filters-blend) - 此过滤控制器 。

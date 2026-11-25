@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Container
+**所属**: Phaser.Types.GameObjects.Container
 > 源码：[src/gameobjects/container/typedefs/ContainerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/container/typedefs/ContainerConfig.js#L1)  
 引入版本：3.50.0
 

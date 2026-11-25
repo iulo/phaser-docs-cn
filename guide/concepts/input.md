@@ -764,7 +764,7 @@ Touch-position = (current-touch-position * smooth-factor) + (previous-touch-posi
 !!! note
 在预装阶段没有启动触摸输入事件 。
 
-### 使用量 {#usage}
+### 用法 {#usage}
 
 - 正在按下触摸/ 鼠标按钮。 通常在 `update()` 游戏循环中使用 :
 
@@ -849,7 +849,7 @@ Touch-position = (current-touch-position * smooth-factor) + (previous-touch-posi
 
 ### 光标 {#cursor}
 
-### 使用量 {#usage-1}
+### 用法 {#usage-1}
 
 References:
 
@@ -898,7 +898,7 @@ scene.input.manager.canvas.style.cursor = cursor;
 
 ## 键盘输入 {#keyboard-input}
 
-### 快速开始( E) {#quick-start}
+### 快速开始 {#quick-start}
 
 - 键盘下/ 是键盘上
 
@@ -955,7 +955,7 @@ scene.input.manager.canvas.style.cursor = cursor;
 
 ### 密钥对象 {#key-object}
 
-- 获取密钥对象
+- 获取键对象
 
   ```js
   var keyObject = scene.input.keyboard.addKey("W"); // see `Key map` section
@@ -968,10 +968,10 @@ scene.input.manager.canvas.style.cursor = cursor;
   var keyObject = scene.input.keyboard.addKey("W", enableCapture, emitOnRepeat);
   ```
 
-  - `enableCapture`:在本地DOM浏览器事件上自动调用`preventDefault`,用于添加密钥代码.
+  - `enableCapture`:在本地DOM浏览器事件上自动调用`preventDefault`,用于添加键代码.
   - `emitOnRepeat` : 控件在被扣下时是否会连续发出一个"下"事件(真),或者只发出一次事件(假,默认).
 
-- 获取密钥对象
+- 获取键对象
 
   ```js
   var keyObjects = scene.input.keyboard.addKeys("W,S,A,D"); // keyObjects.W, keyObjects.S, keyObjects.A, keyObjects.D
@@ -989,7 +989,7 @@ scene.input.manager.canvas.style.cursor = cursor;
   }); // keyObjects.up, keyObjects.down, keyObjects.left, keyObjects.right
   ```
 
-- 删除密钥对象
+- 删除键对象
 
   ```js
   scene.input.keyboard.removeKey("W");
@@ -997,18 +997,18 @@ scene.input.manager.canvas.style.cursor = cursor;
   // scene.input.keyboard.removeKey(key, destroy, removeCapture);
   ```
 
-  - `destroy`: 在每个已删除的密钥对象上调用 `Key.destroy`
-  - `removeCapture` : 删除此插件欠下的密钥对象的全部密钥抓取吗 ?
+  - `destroy`: 在每个已删除的键对象上调用 `Key.destroy`
+  - `removeCapture` : 删除此插件欠下的键对象的全部键抓取吗 ?
 
-- 删除全部密钥对象
+- 删除全部键对象
 
   ```js
   scene.input.keyboard.removeAllKeys(true);
   // scene.input.keyboard.removeAllKeys(destroy, removeCapture);
   ```
 
-  - `destroy`: 在每个已删除的密钥对象上调用 `Key.destroy`
-  - `removeCapture` : 删除此插件欠下的密钥对象的全部密钥抓取吗 ?
+  - `destroy`: 在每个已删除的键对象上调用 `Key.destroy`
+  - `removeCapture` : 删除此插件欠下的键对象的全部键抓取吗 ?
 
 - 键下/键上状态
 
@@ -1031,13 +1031,13 @@ scene.input.manager.canvas.style.cursor = cursor;
 
 ### 光标键的密钥对象 {#key-object-of-cursorkeys}
 
-1. 获取密钥状态对象
+1. 获取键状态对象
 
    ```js
    var cursorKeys = scene.input.keyboard.createCursorKeys();
    ```
 
-1. 获取密钥状态
+1. 获取键状态
 
    ```js
    var isUpDown = cursorKeys.up.isDown;
@@ -1062,7 +1062,7 @@ scene.input.manager.canvas.style.cursor = cursor;
    });
    ```
 
-   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的听众.
+   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的监听器.
    - `event.stopPropagation()` 停止它到达任何其它场景。
 
 1. 键盘下/键盘上
@@ -1076,7 +1076,7 @@ scene.input.manager.canvas.style.cursor = cursor;
    });
    ```
 
-   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的听众.
+   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的监听器.
    - `event.stopPropagation()` 停止它到达任何其它场景。
    - 启动`event.preventDefault()`停止向本地DOM传播事件.
 
@@ -1094,7 +1094,7 @@ scene.input.manager.canvas.style.cursor = cursor;
    - `event.key` : `'a'`
    - `event.keyCode` : `65`
    - `event.code` : `'KeyA'`
-   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的听众.
+   - `event.stopImmediatePropagation()`: 停止在目前场景中引用任何进一步的监听器.
    - `event.stopPropagation()` 停止它到达任何其它场景。
 
 ### 销毁密钥对象 {#destroy-key-object}
@@ -1144,7 +1144,7 @@ keyObject.destroy();
      - 以[key map](#key-map)表示,例如:`[Phaser.Input.Keyboard.KeyCodes.UP, ... ]`
      - 数字,例如:`[38, 38, 40, 40]`
    - `resetOnWrongKey` 设置 `true` 以重置组合键,但按错键时。
-   - `maxKeyDelay`: 每个密钥按键之间的最大延迟。 设置 `0` 以禁用此特性 。
+   - `maxKeyDelay`: 每个键按键之间的最大延迟。 设置 `0` 以禁用此特性 。
    - `resetOnMatch`:设置`true`,用于在之前匹配时重置组合.
    - `deleteOnMatch` 设置 `true` 以匹配时删除此组合。
 

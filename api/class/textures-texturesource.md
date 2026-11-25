@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new TextureSource(texture, source, [width], [height], [flipY])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 这个纹理源属于的纹理. |
 | source | [Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource) | 否 |  | 源头图像数据. |
@@ -373,7 +373,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置纹理上传时WebGL纹理的`UNPACK_FLIP_Y_WEBGL`旗.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 是否应该将WebGL纹理在纹理上传的Y轴上翻转? |
 
@@ -403,7 +403,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 注意, 仅支持 CLAMP_ TO_ EDGE 的非纹理功率。 如果为这样的纹理指定了另一个包模式, 则会忽略它 。
 
-**Tags:**
+**标签:**
 
  - webglonly
 

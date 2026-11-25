@@ -27,7 +27,7 @@ static
 
 **说明:**
 
-可以自定义 Scases 。 使用它来创建游戏对象。 场景开始时, 由 Scase 管理器调用此方法, 由 `init()` 和 `preload()` 之后的 Scase 。 如果装入器 Plugin 是从 `preload()` 之后开始的, 那么只有在装入完成后才调用此方法 。
+可以自定义 Scases 。 使用它来创建游戏对象。 场景开始时, 由 Scase 管理器调用此方法, 由 `init()` 和 `preload()` 之后的 Scase 。 如果资源加载器 Plugin 是从 `preload()` 之后开始的, 那么只有在装入完成后才调用此方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -69,7 +69,7 @@ static
 
 **说明:**
 
-可以在您自己的屏幕上定义。 使用它来装入资产。 这种方法由场景管理器调用, 仅当场景有加载器普卢金时, 才会使用 `init()` 和 `create()` 之前。 完成此方法后, 如果加载器普卢京的队列不是空的, 则加载器普卢琴将自动启动 。
+可以在您自己的屏幕上定义。 使用它来装入资源。 这种方法由场景管理器调用, 仅当场景有加载器普卢金时, 才会使用 `init()` 和 `create()` 之前。 完成此方法后, 如果加载器普卢京的队列不是空的, 则加载器普卢琴将自动启动 。
 
 
 > 源码：[src/scene/typedefs/ScenePreloadCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/ScenePreloadCallback.js#L1)  

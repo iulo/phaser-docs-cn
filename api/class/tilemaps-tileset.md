@@ -9,10 +9,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Tileset(name, firstgid, [tileWidth], [tileHeight], [tileMargin], [tileSpacing], [tileProperties], [tileData], [tileOffset])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 地图数据中的平板名称. |
-| firstgid | number | 否 |  | 这个瓷砖的首个瓷砖索引包含. |
+| firstgid | number | 否 |  | 这个瓦片的首个瓦片索引包含. |
 | tileWidth | number | 是 | 32 | 每片瓦的宽度( 像素). |
 | tileHeight | number | 是 | 32 | 每块瓦的高度(像素). |
 | tileMargin | number | 是 | 0 | 工作表中所有瓦片的边距( 像素) 。 |
@@ -312,12 +312,12 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-如果且只有在此 Tileset 包含给定的瓷砖索引时, 返回 true 。
+如果且只有在此 Tileset 包含给定的瓦片索引时, 返回 true 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 
 
 **返回值:** boolean - 
@@ -362,12 +362,12 @@ WebGL渲染器使用的gl纹理.
 
 返回要使用的瓦片的ID,根据瓦片的动画属性,给底片和时间。
 
-如果瓷砖没有动画化,这种方法返回基瓦ID.
+如果瓦片没有动画化,这种方法返回基瓦ID.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 | milliseconds | number | 否 | 以毫秒计的当前时间 。 |
 
 
@@ -387,7 +387,7 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-从瓷砖索引获取或创建地图到动画数据索引。 `TilemapGPULayer` 使用此图片进行动画 。
+从瓦片索引获取或创建地图到动画数据索引。 `TilemapGPULayer` 使用此图片进行动画 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -395,7 +395,7 @@ WebGL渲染器使用的gl纹理.
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 拟用之造化器. |
 
 
-**返回值:** Map.\<number, number> - 从瓷砖索引到动画数据索引的地图.
+**返回值:** Map.\<number, number> - 从瓦片索引到动画数据索引的地图.
 
 
 > 源码：[src/tilemaps/Tileset.js#L567](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tileset.js#L567)  
@@ -411,7 +411,7 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-获取或创建包含此瓷砖动画数据的纹理。 使用 `TilemapGPULayer` 来动画瓦片 。
+获取或创建包含此瓦片动画数据的纹理。 使用 `TilemapGPULayer` 来动画瓦片 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -440,7 +440,7 @@ WebGL渲染器使用的gl纹理.
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 
 
 **返回值:** object - 
@@ -459,12 +459,12 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-获取存储在 Tileset 中的瓷砖数据。 如果此 Tileset 中未包含瓷砖索引, 返回无效。 这通常在 Tiled 中定义, 并同时包含 Tileset 碰撞信息和地形映射 。
+获取存储在 Tileset 中的瓦片数据。 如果此 Tileset 中未包含瓦片索引, 返回无效。 这通常在 Tiled 中定义, 并同时包含 Tileset 碰撞信息和地形映射 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 
 
 **返回值:** object, undefined - 
@@ -483,12 +483,12 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-获取存储在 Tileset 中的瓷砖属性。 如果此 Tileset 中未包含瓷砖索引, 返回无效。 这通常在 Tilest 编辑器下 Tiled 中定义 。
+获取存储在 Tileset 中的瓦片属性。 如果此 Tileset 中未包含瓦片索引, 返回无效。 这通常在 Tilest 编辑器下 Tiled 中定义 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 
 
 **返回值:** object, undefined - 
@@ -507,12 +507,12 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-返回给定的瓷砖索引的蒂莱塞特图像中的纹理坐标(以像素表示的UV)。如果该蒂莱塞特中未包含瓷砖索引,则返回无效。
+返回给定的瓦片索引的蒂莱塞特图像中的纹理坐标(以像素表示的UV)。如果该蒂莱塞特中未包含瓦片索引,则返回无效。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileIndex | number | 否 | 地图上所有瓷砖上瓷砖的独有的标识. |
+| tileIndex | number | 否 | 地图上所有瓦片上瓦片的独有的标识. |
 
 
 **返回值:** object - 表示蒂莱塞特图像中左上角紫外线坐标的表单 { x, y} 对象。
@@ -531,12 +531,12 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-设置与此 Tileset 相关的图像, 并更新瓷砖数据( 数列, 列等) 。
+设置与此 Tileset 相关的图像, 并更新瓦片数据( 数列, 列等) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 包含瓷砖的图像 。 |
+| texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 包含瓦片的图像 。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset) - 此 Tilest 对象 。
@@ -605,10 +605,10 @@ WebGL渲染器使用的gl纹理.
 
 **说明:**
 
-更新瓷砖纹理坐标和瓷砖数据。
+更新瓦片纹理坐标和瓦片数据。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | imageWidth | number | 否 |  | 图像切片的(预期)宽度 。 |
 | imageHeight | number | 否 |  | 图像切片的(预期)高度。 |

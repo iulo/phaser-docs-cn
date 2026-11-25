@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-filtercolormatrix)
 
-将颜色矩阵滤镜效果应用到游戏对象或相机上的RenderNode. 色彩矩阵是一个5x4浮点矩阵,它可以转换输出中每个像素的红色,绿色,蓝色和α通道,能够实现灰度,sepia音调,hue旋转,亮度,对比度,饱和度调整等视觉效果.
+将颜色矩阵滤镜效果应用到游戏对象或摄像机上的RenderNode. 色彩矩阵是一个5x4浮点矩阵,它可以转换输出中每个像素的红色,绿色,蓝色和α通道,能够实现灰度,sepia音调,hue旋转,亮度,对比度,饱和度调整等视觉效果.
 
 这个节点由Phaser滤波管内部使用,并由一个[Phaser.Filters.ColorMatrix](/api/class/filters-colormatrix)控制器驱动,它提供了矩阵数据和作为制服传递到碎片遮蔽器的α值.
 
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterColorMatrix.js#L39](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterColorMatrix.js#L39)  

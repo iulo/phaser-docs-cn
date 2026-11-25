@@ -114,7 +114,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | v3 | number | 否 | 扭曲的右下角的v坐标 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad# 批量着
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad# 批量着
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L194](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L194)  
@@ -138,7 +138,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | renderOptions | [Phaser.Types.Renderer.WebGL.RenderNodes.BatchHandlerQuadRenderOptions](/api/typedef/types-renderer-webgl-rendernodes#batchhandlerquadrenderoptions) | 否 | 选项。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#updateRenderOptions
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#updateRenderOptions
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L111](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L111)  
@@ -154,10 +154,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-应用任何待处理的选项更改活动阴影程序, 即按要求启用或取消 `TexCoordFrameClamp`和 `TexCoordFrameWrap` 阴影程序添加。 当 `updateRenderOptions` 发现变化时, 在当前批次被冲走后, 使用此选项。 另请使用父 `BatchHandlerQuad` 执行处理共享阴影配置 。
+应用任何待处理的选项更改活动着色器程序, 即按要求启用或取消 `TexCoordFrameClamp`和 `TexCoordFrameWrap` 着色器程序添加。 当 `updateRenderOptions` 发现变化时, 在当前批次被冲走后, 使用此选项。 另请使用父 `BatchHandlerQuad` 执行处理共享阴影配置 。
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#updateShaderConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandlerQuad#updateShaderConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L156](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTileSprite.js#L156)  

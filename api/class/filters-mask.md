@@ -6,19 +6,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 此过滤器控制器管理一个掩码效果 。
 
-面具使用纹理来隐藏输入的部分,它将面具的α在相应的texel中输入的颜色和α相乘.
+遮罩使用纹理来隐藏输入的部分,它将遮罩的α在相应的texel中输入的颜色和α相乘.
 
-面具可以反转, 开关他们隐藏的东西和他们展示的东西。
+遮罩可以反转, 开关他们隐藏的东西和他们展示的东西。
 
-面具可以使用纹理或游戏对象。如果使用游戏对象,面具会使游戏对象变成动态图案,并使用该图案。当游戏对象改变时,面具会自动更新,除非`autoUpdate`旗设定为`false`。
+遮罩可以使用纹理或游戏对象。如果使用游戏对象,遮罩会使游戏对象变成动态图案,并使用该图案。当游戏对象改变时,遮罩会自动更新,除非`autoUpdate`旗设定为`false`。
 
 当遮罩过滤器被用作内部过滤器时,遮罩将匹配被过滤的对象/视图。这对创建随对象而来的效果是有用的,例如意在匹配动画图案的效果。
 
-当遮罩滤镜被用作外部滤镜时,遮罩会匹配相机的上下文,这对创建覆盖整个视图的效果很有用.
+当遮罩滤镜被用作外部滤镜时,遮罩会匹配摄像机的上下文,这对创建覆盖整个视图的效果很有用.
 
-在创建掩码时可以指定一个可选的 `viewCamera`。如果不使用,则会通过当前相机或默认相机查看掩码对象,如果没有其他选项,则会通过默认相机查看。例如,在正常渲染流外向动态图渲染时。
+在创建掩码时可以指定一个可选的 `viewCamera`。如果不使用,则会通过当前摄像机或默认摄像机查看掩码对象,如果没有其他选项,则会通过默认摄像机查看。例如,在正常渲染流外向动态图渲染时。
 
-通过过滤列表组件,将遮罩效果添加到相机中:
+通过过滤列表组件,将遮罩效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -33,14 +33,14 @@ camera.filters.external.addMask(texture, true, myCamera);
 `new Mask(camera, [mask], [invert], [viewCamera], [viewTransform], [scaleFactor])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机。 |
 | mask | string \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 是 | "'__WHITE'" | 遮罩的来源。 这可以是用于遮罩的独特的基于字符串的纹理键, 它必须存在于纹理管理器中。 或者它可以是 Game Object, 在这种情况下, 遮罩会让 Game Objects 变成动态图解并使用 。 |
-| invert | boolean | 是 | false | 是否要反转面具 。 |
-| viewCamera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 使用 Game Object 渲染面具时使用的相机。 如果没有指定, 请使用该场景的 `main` 相机 。 |
+| invert | boolean | 是 | false | 是否要反转遮罩 。 |
+| viewCamera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 使用 Game Object 渲染遮罩时使用的摄像机。 如果没有指定, 请使用该场景的 `main` 摄像机 。 |
 | viewTransform | 'local' \| 'world' | 是 | "'world'" | 使用 Game Object 渲染掩码时使用的转换 。 “ 本地” 使用 Game October 的属性 。 “ 世界” 使用 GameObject 的 `parentContainer` 值来计算世界位置 。 |
-| scaleFactor | number | 是 | 1 | 适用于底部面具纹理的尺度因子。 可用于平衡内存使用和所需的面具精度。 这只调整纹理的大小; 您还必须调整面具大小以匹配, 例如, scaleFactor为0. 5, 您的面具可能是带有0. 5 尺度的容器。 当组合尺度因子、 对象转换和相机转换时, 很容易使事情变得复杂, 所以在使用此选项时要尽量精确 。 |
+| scaleFactor | number | 是 | 1 | 适用于底部遮罩纹理的尺度因子。 可用于平衡内存使用和所需的遮罩精度。 这只调整纹理的大小; 您还必须调整遮罩大小以匹配, 例如, scaleFactor为0. 5, 您的遮罩可能是带有0. 5 尺度的容器。 当组合尺度因子、 对象转换和摄像机转换时, 很容易使事情变得复杂, 所以在使用此选项时要尽量精确 。 |
 
 ---
 
@@ -101,7 +101,7 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 **说明:**
 
-面具的内在纹理
+遮罩的内在纹理
 
 
 > 源码：[src/filters/Mask.js#L77](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Mask.js#L77)  
@@ -117,7 +117,7 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 **说明:**
 
-是否反转面具。 反转面具会切换它隐藏的和显示的 。
+是否反转遮罩。 反转遮罩会切换它隐藏的和显示的 。
 
 
 > 源码：[src/filters/Mask.js#L109](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Mask.js#L109)  
@@ -149,7 +149,7 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 **说明:**
 
-是否需要更新面具, 一次。 仅当面具是 Game Object 时才适用。 如果 `true` , 面具将在下一次渲染前更新。 当面具是 Game Ocject 时, 自动设置为 `true`, 但面具更新后关闭 。
+是否需要更新遮罩, 一次。 仅当遮罩是 Game Object 时才适用。 如果 `true` , 遮罩将在下一次渲染前更新。 当遮罩是 Game Ocject 时, 自动设置为 `true`, 但遮罩更新后关闭 。
 
 
 > 源码：[src/filters/Mask.js#L132](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Mask.js#L132)  
@@ -181,7 +181,7 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 **说明:**
 
-用于制作面具的相机。 如果未指定, 则使用当前渲染相机, 或者失败, 即内部相机 。
+用于制作遮罩的摄像机。 如果未指定, 则使用当前渲染摄像机, 或者失败, 即内部摄像机 。
 
 
 > 源码：[src/filters/Mask.js#L159](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Mask.js#L159)  
@@ -233,10 +233,10 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 销毁此过滤器, 释放所有引用和资源 。
 
-如果为面具游戏对象创建了动态纹理,它也会被销毁.
+如果为遮罩游戏对象创建了动态纹理,它也会被销毁.
 
 
-**Overrides:** Phaser.Filters.Controller#销毁
+**重写:** Phaser.Filters.Controller#销毁
 
 
 > 源码：[src/filters/Mask.js#L294](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Mask.js#L294)  
@@ -257,7 +257,7 @@ camera.filters.external.addMask(texture, true, myCamera);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 用于面具的游戏对象 。 |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 用于遮罩的游戏对象 。 |
 
 
 **返回值:** [Phaser.Filters.Mask](/api/class/filters-mask) - 此过滤控制器 。
@@ -276,12 +276,12 @@ camera.filters.external.addMask(texture, true, myCamera);
 
 **说明:**
 
-设置一个静态纹理作为遮罩使用, 由纹理管理器的密钥查找。 任何先前指定的遮罩 Game Object 都被清除。 与 Game Objects 掩码不同, 静态纹理掩码不会在帧之间自动更新 。
+设置一个静态纹理作为遮罩使用, 由纹理管理器的键查找。 任何先前指定的遮罩 Game Object 都被清除。 与 Game Objects 掩码不同, 静态纹理掩码不会在帧之间自动更新 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| texture | string | 是 | "'__WHITE'" | 用于遮罩的纹理中唯一基于字符串的密钥,它必须存在于纹理管理器中. |
+| texture | string | 是 | "'__WHITE'" | 用于遮罩的纹理中唯一基于字符串的键,它必须存在于纹理管理器中. |
 
 
 **返回值:** [Phaser.Filters.Mask](/api/class/filters-mask) - 此过滤控制器 。

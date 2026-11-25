@@ -6,7 +6,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/fx)
 
 内置的FX包括:巴雷尔,布隆,布卢尔,博凯,圆,彩色马特里克斯,流离失所,格洛,渐变,皮克斯拉特,影子,闪电,维涅特和擦拭.
 
-FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效果并控制堆叠顺序。例如,你可以同时对Sprite应用发光和阴光效应。相机也可以应用FX,它影响它们所创造的一切,并让你创造效果,如“zoom模糊”或像素。
+FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效果并控制堆叠顺序。例如,你可以同时对Sprite应用发光和阴光效应。摄像机也可以应用FX,它影响它们所创造的一切,并让你创造效果,如“zoom模糊”或像素。
 
 - [Barrel Distortion](#barrel) :一个很好的夹/凸起扭曲效果.
 - [Bloom](#bloom):在任意游戏对象中添加开花,带有自定义的偏移,模糊的强度,步骤和颜色.
@@ -25,7 +25,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
 
 基于纹理的游戏对象也支持Pre FX,包括:图像,Sprite,TileSprite,Text,RenderTexture,视频.
 
-所有游戏对象和相机支持 Post FX 。 这些是游戏对象被渲染后应用的效果 。
+所有游戏对象和摄像机支持 Post FX 。 这些是游戏对象被渲染后应用的效果 。
 
 - 作者:理查德·戴维
 - 预fx, 和后fx 阴影效果
@@ -50,7 +50,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     - 使用时`amount`大于`1`.
   - `amount`:适用于枪管效果的扭曲量。
     - `1` : 无扭曲
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addBarrel(amount);
@@ -96,7 +96,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `blurStrength`, `strength`: 开花效果的模糊/宽度过程的强度,默认值为`1`.
   - `steps` : 运行 Bloom 效果的步骤数。 此值应该总是整数。 默认值是 `4` 。
     - 值越高,布鲁姆越平滑,但代价是指数性地增加gl操作.
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addBloom(color, offsetX, offsetY, blurStrength, strength, steps);
@@ -151,7 +151,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `color`:模糊的颜色,作为六进制值。默认值为`0xffffff`。
   - `steps` : 运行模糊效果的步骤数。 此值应该总是整数 。
     - 值越高,越平滑,模糊度越高,但代价是指数性地增加gl操作.
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addBlur(quality, x, y, strength, color, steps);
@@ -200,7 +200,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `radius`:波音效应的半径,默认值为`0.5`.
   - `amount` : bokeh效应的金额。默认值为 `1`.
   - `contrast`: bokeh效应的颜色对比值。默认值为`0.2`。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addBlur(quality, x, y, strength, color, steps);
@@ -248,7 +248,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `contrast`: bokeh效应的颜色对比值。默认值为`0.2`。
   - `blurX`, `blurY` :水平/垂直模糊度的大小.
   - `strength` :模糊的强度.
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addTiltShift(radius, amount, contrast, blurX, blurY, strength);
@@ -300,7 +300,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `scale` : 圆的大小。默认值为 `1`.
     - `1` : 基础纹理的全尺寸.
   - `feather`: 将羽毛的量从环面应用到圆形上。 默认值为 `0.005` 。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addCircle(thickness, color, backgroundColor, scale, feather);
@@ -346,7 +346,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     var effect = gameObject.preFX.addColorMatrix();
     ```
 
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addColorMatrix();
@@ -479,7 +479,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     - `multiply` : 乘以产生的颜色Matrix(`true`),或设置(`false`) ?
       - `true` :乘以结果.
       - `false` : 设置结果。默认行为。
-  - LSD: 将一个三进制的颜色调值应用到这个 ColorMatrix 上.
+  - LSD: 将一个三进制的颜色补间应用到这个 ColorMatrix 上.
 
     ```javascript
     effect.lsd(multiply);
@@ -551,10 +551,10 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     var effect = gameObject.preFX.addDisplacement(texture, x, y);
     ```
 
-  - `texture`:用于移位的纹理中唯一基于字符串的密钥,它必须存在于纹理管理器中。默认值为`'__WHITE'`。
+  - `texture`:用于移位的纹理中唯一基于字符串的键,它必须存在于纹理管理器中。默认值为`'__WHITE'`。
     - 您只能使用整个纹理, 而不是来自纹理图集或图示表的框 。
   - `x`, `y`: 应用的水平/垂直移位量。默认值为 `0.005` 。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addDisplacement(texture, x, y);
@@ -612,7 +612,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     - `true`:只有光线被画出来
     - `false` : 画出发光和纹理, 默认行为 。
   - `quality` : 仅供 PostFX 使用。 设定此 Glow 效果的质量。 默认为 0.1 。 无法更改创建后 。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addGlow(color, outerStrength, innerStrength, knockout, quality, distance);
@@ -665,7 +665,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `size`:梯度分为多少个"圆",如分布在纹理的整个高度.
     - `0` : 平滑梯度。 默认行为 。
     - 其他:逆向块状效应.
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addGradient(color1, color2, alpha, fromX, fromY, toX, toY, size);
@@ -714,7 +714,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
     ```
 
   - `amount`:应用的像素的量,以像素表示.
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addPixelate(amount);
@@ -764,7 +764,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `color` : 阴影的颜色。默认值是 `0x000000`.
   - `samples`: 阴影效应将运行的样本数量。 `1`和 `12`之间的整数。
   - `intensity`: 阴影效应的强度。 默认值为 `1` 。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addShadow(x, y, decay, power, color, samples, intensity);
@@ -815,7 +815,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `lineWidth`:闪电效应的线宽。默认值为`0.5`。
   - `gradient`:闪电效应的梯度。默认值为`3`。
   - `reveal` :这种闪光效应是揭示还是被添加到目标中?
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addShine(speed, lineWidth, gradient, reveal);
@@ -862,7 +862,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `x`, `y` : 阴极效应的横向/纵向抵消。值介于 `0` 财务报告和已审计财务报表 `1`默认值为 `0.5`.
   - `radius`: 阴极效应的半径。 值介于 `0` 和 `1`之间。 默认值为 `0.5` 。
   - `strength`: 阴极效应的强度。默认值为`0.5`。
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addVignette(x, y, radius, strength);
@@ -913,7 +913,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `axis` :擦拭效果的轴.
     - `0`: 左到右, 或右到左
     - `1`: 下到上,或上到下
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addWipe(wipeWidth, direction, axis);
@@ -964,7 +964,7 @@ FX可以被启用在所有常见类型的游戏对象上,并且可以堆叠效�
   - `axis` :擦拭效果的轴.
     - `0`: 左到右, 或右到左
     - `1`: 下到上,或上到下
-- 将 fx 后添加到游戏对象, 或相机
+- 将 fx 后添加到游戏对象, 或摄像机
 
     ```javascript
     var effect = gameObject.postFX.addReveal(wipeWidth, direction, axis);

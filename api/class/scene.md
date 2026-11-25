@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| config | string \| [Phaser.Types.Scenes.SettingsConfig](/api/typedef/types-scenes#settingsconfig) | 是 | 场景密钥或场景特定配置设置. |
+| config | string \| [Phaser.Types.Scenes.SettingsConfig](/api/typedef/types-scenes#settingsconfig) | 是 | 场景键或场景特定配置设置. |
 
 ---
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景游戏对象工厂.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L131](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L131)  
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考全球动画管理器.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L54](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L54)  
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考全球缓存 。
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L65](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L65)  
@@ -90,7 +90,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景摄像机经理
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L120](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L120)  
@@ -108,7 +108,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 属于此场景的游戏对象显示列表 。
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L164](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L164)  
@@ -128,7 +128,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参见全球数据管理器的`registry`属性.
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L186](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L186)  
@@ -146,7 +146,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景特异性事件 Emitter.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L109](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L109)  
@@ -164,7 +164,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考Phaser.Game案例.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L43)  
@@ -182,7 +182,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景输入管理器插件 。
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L199](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L199)  
@@ -200,7 +200,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景灯光管理器插件 。
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L175](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L175)  
@@ -218,7 +218,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景装填器插件 。
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L210](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L210)  
@@ -236,7 +236,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景游戏对象创建者.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L142](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L142)  
@@ -252,7 +252,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-场景物质物理插件 。
+场景Matter 物理插件 。
 
 只有当 Scene 注射地图中定义了此属性, 插件才会被安装和配置 。
 
@@ -270,7 +270,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-场景拱廊物理插件。
+场景Arcade 物理插件。
 
 只有当 Scene 注射地图中定义了此属性, 插件才会被安装和配置 。
 
@@ -308,7 +308,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考全球数据管理器.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L76](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L76)  
@@ -342,7 +342,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考全球比例管理器 。
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L265](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L265)  
@@ -360,7 +360,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 引用场景管理器插件 。
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L153](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L153)  
@@ -378,7 +378,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 音效管理器的参考文献.
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L87](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L87)  
@@ -412,7 +412,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 纹理管理器的参考文献.
 
-只有在 Scene 注射图中定义此属性时, 才能使用 。
+只有在场景注入映射中定义了此属性，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L98](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L98)  
@@ -430,7 +430,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景时间和时钟插件 。
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L221](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L221)  
@@ -448,7 +448,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 场景 Tween 管理器插件 。
 
-只有Scene注射图中定义并安装插件时,此属性才会可用.
+在场景注入映射中定义此属性并安装对应插件后，场景才可使用它。
 
 
 > 源码：[src/scene/Scene.js#L232](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Scene.js#L232)  

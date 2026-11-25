@@ -33,7 +33,7 @@ var circle1 = Phaser.Geom.Circle.Clone(circle0);
   graphics.fillCircleShape(circle);
   ```
 
-- 划线形状
+- 绘制形状的描边
 
   ```js
   // graphics.lineStyle(lineWidth, color, alpha);   // color: 0xRRGGBB
@@ -326,7 +326,7 @@ var ellipse1 = Phaser.Geom.Ellipse.Clone(ellipse0);
   graphics.fillEllipseShape(ellipse);
   ```
 
-- 划线形状
+- 绘制形状的描边
 
   ```js
   // graphics.lineStyle(lineWidth, color, alpha);   // color: 0xRRGGBB
@@ -1099,7 +1099,7 @@ var polygon1 = Phaser.Geom.Polygon.Clone(polygon0);
   graphics.fillPoints(polygon.points, true);
   ```
 
-- 划线形状
+- 绘制形状的描边
 
   ```js
   // graphics.lineStyle(lineWidth, color, alpha);   // color: 0xRRGGBB
@@ -1282,7 +1282,7 @@ var rect1 = Phaser.Geom.Rectangle.Clone(rect0);
   graphics.fillRectShape(rect);
   ```
 
-- 划线形状
+- 绘制形状的描边
 
   ```js
   // graphics.lineStyle(lineWidth, color, alpha);   // color: 0xRRGGBB
@@ -1745,7 +1745,7 @@ var out = Phaser.Geom.Triangle.BuildFromPolygon(data);
   graphics.fillTriangleShape(triangle);
   ```
 
-- 划线形状
+- 绘制形状的描边
 
   ```js
   // graphics.lineStyle(lineWidth, color, alpha);   // color: 0xRRGGBB

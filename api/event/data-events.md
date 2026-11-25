@@ -18,18 +18,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | parent | any | 否 | 引用此事件的数据管理器所属对象 。 |
-| key | string | 否 | 数据管理器内数据项的独有密钥 。 |
+| key | string | 否 | 数据管理器内数据项的独有键 。 |
 | value | any | 否 | 数据管理器中此项目的新值 。 |
 | previousValue | any | 否 | 数据管理器中此项目的上一个值 。 |
 
-**Member of:** [Phaser.Data.Events](/api/namespace/data-events)
+**所属:** [Phaser.Data.Events](/api/namespace/data-events)
 > 源码：[src/data/events/CHANGE_DATA_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/events/CHANGE_DATA_EVENT.js#L7)  
 引入版本：3.0.0
 
 ## CHANGE_DATA_KEY {#change_data_key}
 
 
-**说明:** 变化数据密钥事件.
+**说明:** 变化数据键事件.
 
 当数据存储中的项目被更改时, 数据管理器会发送此事件 。
 
@@ -44,7 +44,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | value | any | 否 | 在数据管理器中更新的项目。 它可以是任意的数据类型, 即字符串、 布尔、 数字、 对象或实例 。 |
 | previousValue | any | 否 | 数据管理器中更新的上一个项目。 它可以是任意的数据类型, 即字符串、 布尔、 数字、 对象或实例 。 |
 
-**Member of:** [Phaser.Data.Events](/api/namespace/data-events)
+**所属:** [Phaser.Data.Events](/api/namespace/data-events)
 > 源码：[src/data/events/CHANGE_DATA_KEY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/events/CHANGE_DATA_KEY_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -55,7 +55,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 数据管理器会从母公司那里听断事件,然后关闭自己.
 
-**Member of:** [Phaser.Data.Events](/api/namespace/data-events)
+**所属:** [Phaser.Data.Events](/api/namespace/data-events)
 > 源码：[src/data/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/events/DESTROY_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -72,10 +72,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | parent | any | 否 | 引用了拥有负责此事件的数据管理器实例的对象 。 |
-| key | string | 否 | 数据管理器内数据项的独有密钥 。 |
+| key | string | 否 | 数据管理器内数据项的独有键 。 |
 | data | any | 否 | 从数据管理器中删除的项目。 这可能是任意的数据类型, 即字符串、 布尔、 数字、 对象或实例 。 |
 
-**Member of:** [Phaser.Data.Events](/api/namespace/data-events)
+**所属:** [Phaser.Data.Events](/api/namespace/data-events)
 > 源码：[src/data/events/REMOVE_DATA_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/events/REMOVE_DATA_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -92,10 +92,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | parent | any | 否 | 引用了拥有负责此事件的数据管理器实例的对象 。 |
-| key | string | 否 | 数据管理器内数据项的独有密钥 。 |
+| key | string | 否 | 数据管理器内数据项的独有键 。 |
 | data | any | 否 | 添加到数据管理器中的项目。 它可以是任意的数据类型, 即字符串、 布尔、 数字、 对象或实例 。 |
 
-**Member of:** [Phaser.Data.Events](/api/namespace/data-events)
+**所属:** [Phaser.Data.Events](/api/namespace/data-events)
 > 源码：[src/data/events/SET_DATA_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/events/SET_DATA_EVENT.js#L7)  
 引入版本：3.0.0
 

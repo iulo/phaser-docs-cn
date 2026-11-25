@@ -38,7 +38,7 @@ static
 
 **说明:**
 
-拱廊物理对撞器类型.
+Arcade 物理对撞器类型.
 
 
 > 源码：[src/physics/arcade/typedefs/ArcadeColliderType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeColliderType.js#L1)  

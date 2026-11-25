@@ -18,7 +18,7 @@ static
 
 删除所有核心插件。
 
-这包括 Phaser 所需的所有内部系统插件, 如输入插件和装入器插件。 所以, 只有在您不想再次运行 Phaser 时, 请确定您只使用此插件 。
+这包括 Phaser 所需的所有内部系统插件, 如输入插件和资源加载器插件。 所以, 只有在您不想再次运行 Phaser 时, 请确定您只使用此插件 。
 
 
 > 源码：[src/plugins/PluginCache.js#L166](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/PluginCache.js#L166)  
@@ -52,12 +52,12 @@ static
 
 **说明:**
 
-根据给定的密钥,从缓存中返回核心插件对象。
+根据给定的键,从缓存中返回核心插件对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要获取的核心插件的密钥 。 |
+| key | string | 否 | 要获取的核心插件的键 。 |
 
 
 **返回值:** [Phaser.Types.Plugins.CorePluginContainer](/api/typedef/types-plugins#coreplugincontainer) - 核心插件对象 。
@@ -76,12 +76,12 @@ static
 
 **说明:**
 
-根据给定的密钥从缓存中返回自定义插件对象。
+根据给定的键从缓存中返回自定义插件对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要获取的自定义插件的密钥 。 |
+| key | string | 否 | 要获取的自定义插件的键 。 |
 
 
 **返回值:** [Phaser.Types.Plugins.CustomPluginContainer](/api/typedef/types-plugins#customplugincontainer) - 自定义插件对象 。
@@ -100,12 +100,12 @@ static
 
 **说明:**
 
-从基于给定密钥的自定义插件缓存返回插件构造器功能, 如果不存在该密钥的条目, 则返回 `null` 。
+从基于给定键的自定义插件缓存返回插件构造器功能, 如果不存在该键的条目, 则返回 `null` 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要获取的自定义插件的密钥 。 |
+| key | string | 否 | 要获取的自定义插件的键 。 |
 
 
 **返回值:** function - 自定义插件对象 。
@@ -124,7 +124,7 @@ static
 
 **说明:**
 
-检查是否在核心插件缓存中已经使用给定的密钥 。
+检查是否在核心插件缓存中已经使用给定的键 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -132,7 +132,7 @@ static
 | key | string | 否 | 钥匙要检查。 |
 
 
-**返回值:** boolean - 如果密钥已经在核心缓存中使用,则使用`true`,否则使用`false`.
+**返回值:** boolean - 如果键已经在核心缓存中使用,则使用`true`,否则使用`false`.
 
 
 > 源码：[src/plugins/PluginCache.js#L58](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/PluginCache.js#L58)  
@@ -148,7 +148,7 @@ static
 
 **说明:**
 
-检查自定义插件缓存中是否已经使用给定的密钥 。
+检查自定义插件缓存中是否已经使用给定的键 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -156,7 +156,7 @@ static
 | key | string | 否 | 钥匙要检查。 |
 
 
-**返回值:** boolean - 如果密钥已经在自定义缓存中使用,则使用`true`,否则使用`false`.
+**返回值:** boolean - 如果键已经在自定义缓存中使用,则使用`true`,否则使用`false`.
 
 
 > 源码：[src/plugins/PluginCache.js#L73](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/PluginCache.js#L73)  
@@ -175,11 +175,11 @@ static
 注册一个带有插件缓存的核心插件。 设置时, Phaser 的内部核心插件直接使用此插件。 该插件作为源构建器存储, 且在此阶段不被即时处理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 从插件缓存中获取此插件的参考 。 |
 | plugin | function | 否 |  | 要存储的插件。 应该是核心对象, 而不是即时对象 。 |
-| mapping | string | 否 |  | 如果要将此插件注入 Scene 系统, 这就是所用的属性密钥映射 。 |
+| mapping | string | 否 |  | 如果要将此插件注入 Scene 系统, 这就是所用的属性键映射 。 |
 | custom | boolean | 是 | false | 核心场景插件还是自定义场景插件 ? |
 
 
@@ -196,14 +196,14 @@ static
 
 **说明:**
 
-将自定义插件存储在全局插件缓存中。密钥必须是独一无二的,属于缓存范围。
+将自定义插件存储在全局插件缓存中。键必须是独一无二的,属于缓存范围。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | key | string | 否 | 从插件缓存中获取此插件的参考 。 |
 | plugin | function | 否 | 要存储的插件。 应该是核心对象, 而不是即时对象 。 |
-| mapping | string | 否 | 如果要将此插件注入 Scene 系统, 这就是所用的属性密钥映射 。 |
+| mapping | string | 否 | 如果要将此插件注入 Scene 系统, 这就是所用的属性键映射 。 |
 | data | any | 否 | 将传递到插件的 `init` 方法的值 。 |
 
 
@@ -220,12 +220,12 @@ static
 
 **说明:**
 
-删除基于给定密钥的核心插件。
+删除基于给定键的核心插件。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要删除的核心插件的密钥 。 |
+| key | string | 否 | 要删除的核心插件的键 。 |
 
 
 > 源码：[src/plugins/PluginCache.js#L134](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/PluginCache.js#L134)  
@@ -241,12 +241,12 @@ static
 
 **说明:**
 
-删除基于给定密钥的自定义插件。
+删除基于给定键的自定义插件。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要删除的自定义插件的密钥 。 |
+| key | string | 否 | 要删除的自定义插件的键 。 |
 
 
 > 源码：[src/plugins/PluginCache.js#L150](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/PluginCache.js#L150)  

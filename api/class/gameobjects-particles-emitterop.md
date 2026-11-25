@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/gameobjects-particles-emitterop)
 
-该类负责控制粒子类中的单一财产,并管理其排放和更新功能。
+该类负责控制粒子类中的单一属性,并管理其排放和更新功能。
 
 `x`,`y`,`scaleX`,`lifespan`等粒子属性都使用EmitterOp实例来管理它们,因为可以以多种形式给出:从简单的值到函数,到动态回调.
 
@@ -13,9 +13,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new EmitterOp(key, defaultValue, [emitOnly])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 财产名称. |
+| key | string | 否 |  | 属性名称. |
 | defaultValue | [Phaser.Types.GameObjects.Particles.EmitterOpOnEmitType](/api/typedef/types-gameobjects-particles#emitteroponemittype) \| [Phaser.Types.GameObjects.Particles.EmitterOpOnUpdateType](/api/typedef/types-gameobjects-particles#emitteroponupdatetype) | 否 |  | 属性的默认值 。 |
 | emitOnly | boolean | 是 | false | 是否只能在粒子被释放时修改属性 。 |
 
@@ -236,7 +236,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此财产名.
+此属性名.
 
 
 > 源码：[src/gameobjects/particles/EmitterOp.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/EmitterOp.js#L45)  
@@ -322,7 +322,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-返回的值设定了粒子生命中的财产,即发射时的财产。
+返回的值设定了粒子生命中的属性,即发射时的属性。
 
 
 **返回值:** number - 地产的新价值.
@@ -347,9 +347,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 | t | number | 否 | 目前粒子的正常寿命,在0(出生)至1(死亡)之间. |
-| value | number | 否 | 财产的当前价值 。 |
+| value | number | 否 | 属性的当前价值 。 |
 
 
 **返回值:** number - 地产的新价值.
@@ -394,7 +394,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 
 
 **返回值:** number - [Phaser.GameObjects.Particles.EmitterOp#start](/api/class/gameobjects-particles-emitterop#start),作为房产的新价值.
@@ -419,7 +419,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 | t | number | 否 | 目前粒子的正常寿命,在0(出生)至1(死亡)之间. |
 
 
@@ -464,10 +464,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | object | object | 否 | 要检查的对象 。 |
-| key | string | 否 | 对象中要查找的属性的密钥 。 |
+| key | string | 否 | 对象中要查找的属性的键 。 |
 
 
-**返回值:** boolean - `true` 如果该财产存在于对象中, `false` 否则。
+**返回值:** boolean - `true` 如果该属性存在于对象中, `false` 否则。
 
 
 > 源码：[src/gameobjects/particles/EmitterOp.js#L548](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/EmitterOp.js#L548)  
@@ -489,8 +489,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | object | object | 否 | 要检查的对象 。 |
-| key1 | string | 否 | 第一个属性的密钥来检查对象 。 |
-| key2 | string | 否 | 第二个属性的密钥来检查对象 。 |
+| key1 | string | 否 | 第一个属性的键来检查对象 。 |
+| key2 | string | 否 | 第二个属性的键来检查对象 。 |
 
 
 **返回值:** boolean - `true` 如果物体中存在两个属性, `false` 否则。
@@ -515,8 +515,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | object | object | 否 | 要检查的对象 。 |
-| key1 | string | 否 | 第一个属性的密钥来检查对象 。 |
-| key2 | string | 否 | 第二个属性的密钥来检查对象 。 |
+| key1 | string | 否 | 第一个属性的键来检查对象 。 |
+| key2 | string | 否 | 第二个属性的键来检查对象 。 |
 
 
 **返回值:** boolean - 如果对象中至少有一个属性存在,则`true`,如果两者均不存在,则`false`。
@@ -537,13 +537,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从粒子 Emitter 配置对象中装入属性 。
 
-可选接受新属性密钥使用,替换当前密钥.
+可选接受新属性键使用,替换当前键.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | config | [Phaser.Types.GameObjects.Particles.ParticleEmitterConfig](/api/typedef/types-gameobjects-particles#particleemitterconfig) | 是 | 拥有此属性的粒子 Emitter 设置 。 |
-| newKey | string | 是 | 用于此属性的新密钥, 如果有的话 。 |
+| newKey | string | 是 | 用于此属性的新键, 如果有的话 。 |
 
 
 > 源码：[src/gameobjects/particles/EmitterOp.js#L247](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/EmitterOp.js#L247)  
@@ -583,7 +583,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-返回的值设定了粒子生命中的财产,即发射时的财产。
+返回的值设定了粒子生命中的属性,即发射时的属性。
 
 只有在您提供了自定义的回调时,才会使用这种方法 。
 
@@ -591,8 +591,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
-| value | number | 是 | 财产的当前价值 。 |
+| key | string | 否 | 属性名称. |
+| value | number | 是 | 属性的当前价值 。 |
 
 
 **返回值:** number - 地产的新价值.
@@ -619,9 +619,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 | t | number | 否 | 目前粒子的正常寿命,在0(出生)至1(死亡)之间. |
-| value | number | 否 | 财产的当前价值 。 |
+| value | number | 否 | 属性的当前价值 。 |
 
 
 **返回值:** number - 地产的新价值.
@@ -731,7 +731,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 一个返回当前属性值的 `onEmit` 回调 。
 
 
-**返回值:** number - 财产的当前价值 。
+**返回值:** number - 属性的当前价值 。
 
 
 > 源码：[src/gameobjects/particles/EmitterOp.js#L676](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/EmitterOp.js#L676)  
@@ -750,7 +750,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 一个返回当前属性值的 `onUpdate` 回调 。
 
 
-**返回值:** number - 财产的当前价值 。
+**返回值:** number - 属性的当前价值 。
 
 
 > 源码：[src/gameobjects/particles/EmitterOp.js#L689](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/EmitterOp.js#L689)  
@@ -785,7 +785,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-建立该粒子喷雾器财产的JSON代表。
+建立该粒子喷雾器属性的JSON代表。
 
 
 **返回值:** object - JSON代表了这种颗粒喷射物。

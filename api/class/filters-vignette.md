@@ -4,13 +4,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 维涅特滤镜控制器 。
 
-这个控制器管理相机的阴极效应.
+这个控制器管理摄像机的阴极效应.
 
 阴极效应是一种视觉技术,屏幕边缘,或游戏对象,逐渐变暗或模糊,产生类似帧的外观,这种效果用来吸引玩家的焦点向中心动作或主题,增强浸润,为游戏视觉提供影视或艺术品质.
 
 这种滤波器支持彩色边框,以及有限的组合模式,以增强其结构力.
 
-通过过滤列表组件,将 Vignette 效果添加到相机中:
+通过过滤列表组件,将 Vignette 效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -24,9 +24,9 @@ camera.filters.external.addVignette();
 `new Vignette(camera, [x], [y], [radius], [strength], [color], [blendMode])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | x | number | 是 | 0.5 | 阴极效应的横向偏移。 此值将正常化为 0 到 1 。 |
 | y | number | 是 | 0.5 | 阴极效应的垂直偏移。 此值将正常化为 0 到 1 。 |
 | radius | number | 是 | 0.5 | 阴极效应的半径。 此值已正常化到 0 到 1 之间 。 |

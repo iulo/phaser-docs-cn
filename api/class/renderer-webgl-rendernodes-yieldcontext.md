@@ -76,7 +76,7 @@ Extern Game Object 用于为自定义渲染准备 WebGL 上下文。 它是 Rebi
 | displayContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 目前使用的上下文 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/YieldContext.js#L48](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/YieldContext.js#L48)  

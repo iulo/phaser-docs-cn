@@ -14,10 +14,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 被加入全球动画管理器的动画的密钥. |
+| key | string | 否 | 被加入全球动画管理器的动画的键. |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 刚创作的动画的一个实例. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ADD_ANIMATION_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ADD_ANIMATION_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -55,14 +55,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画更新的游戏对象. |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_COMPLETE_EVENT.js#L7)  
 引入版本：3.50.0
 
 ## ANIMATION_COMPLETE_KEY {#animation_complete_key}
 
 
-**说明:** 动画"完整的动态密钥事件".
+**说明:** 动画"完整的动态键事件".
 
 当一个动画在它上播放完成播放时,这个事件由Sprite发出.
 当动画到达其序列的尽头时, 就会发生这种情况, 将任何延迟都考虑在内
@@ -97,7 +97,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画更新的游戏对象. |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_COMPLETE_KEY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_COMPLETE_KEY_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -132,7 +132,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画重复的游戏对象. |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_REPEAT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_REPEAT_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -165,7 +165,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画重启的游戏对象 。 |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_RESTART_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_RESTART_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -199,7 +199,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画开始的游戏对象. |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_START_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -233,7 +233,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画停止的游戏对象 。 |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_STOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_STOP_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -271,7 +271,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) | 否 | 提及动画更新的游戏对象. |
 | frameKey | string | 否 | 动画片内动画框架的独特关键. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/ANIMATION_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/ANIMATION_UPDATE_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -285,7 +285,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 当发生这种情况时,所有目前的动画都会停止更新,尽管这并不一定意味着
 游戏也暂停了
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/PAUSE_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/PAUSE_ALL_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -298,10 +298,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从全球动画管理器中移除的动画的密钥. |
+| key | string | 否 | 从全球动画管理器中移除的动画的键. |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 被移除的动画的一个实例. |
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/REMOVE_ANIMATION_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/REMOVE_ANIMATION_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -314,7 +314,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 当这种情况发生时,所有目前的动画都会继续更新.
 
-**Member of:** [Phaser.Animations.Events](/api/namespace/animations-events)
+**所属:** [Phaser.Animations.Events](/api/namespace/animations-events)
 > 源码：[src/animations/events/RESUME_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/events/RESUME_ALL_EVENT.js#L7)  
 引入版本：3.0.0
 

@@ -75,7 +75,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文。 不适用此方法 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L55](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L55)  
@@ -100,7 +100,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文。 不适用此方法 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L73](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L73)  
@@ -125,7 +125,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文。 不适用此方法 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L101](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterGradientMap.js#L101)  

@@ -91,7 +91,7 @@ WebGL状态,如混合模式或纹理单元,由WebGLRender管理. 使用`WebGLRen
 
 **说明:**
 
-用于渲染单个相机的RenderNode.
+用于渲染单个摄像机的RenderNode.
 
 使用`boot`方法时,将使用该方法。
 
@@ -938,7 +938,7 @@ gl 函数映射用于统一和属性的查看.
 如果给出了`dstTexture`参数,则更新了WebGL纹理,而不是创建了新鲜的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcCanvas | HTMLCanvasElement | 否 |  | 创建 WebGL 纹理的帆布 |
 | dstTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 是 |  | 要设置的目的地 WebGLTextureWrapper 。 |
@@ -971,7 +971,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 这种方法将捕获当前WebGL框架,并发送给Spector.js工具进行检查.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | quickCapture | boolean | 是 | false | 如果`true`缩略图没有被捕获,以加速捕获. |
 | fullCapture | boolean | 是 | false | 如果`true`所有的细节都被捕获. |
@@ -1038,7 +1038,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 创建基于给定的 Canvas 元素的新 WebGL 纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcCanvas | HTMLCanvasElement | 否 |  | 制作WebGL纹理的帆布 |
 | noRepeat | boolean | 是 | false | 是否允许此画布设置 `REPEAT`( 如文本对象) ? |
@@ -1066,7 +1066,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 这将解开当前任何绑定的帧缓冲器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) \| Array.\<[Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper)> | null | 否 |  | 写着颜色像素的颜色纹理。 指定多个颜色附件的阵列, 但 WebGL1 默认只支持第一个颜色附件。 指定 `null` 来为底画布创建帧缓冲器 。 |
 | addStencilBuffer | boolean | 是 | false | 创建缓冲器吗 ? |
@@ -1144,7 +1144,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 创建 WebGLTexture Wrapper 的包装器。 如果没有像素数据被传递, 它将创建空质素 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | mipLevel | number | 否 |  | 纹理的米普级. |
 | minFilter | number | 否 |  | 过滤纹理。 |
@@ -1179,7 +1179,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 从图像源创建纹理。如果源不合法,则创建空纹理。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | source | object | 否 |  | 纹理之源. |
 | width | number | 否 |  | 纹理的宽度. |
@@ -1212,7 +1212,7 @@ Uint8Array被假定为RGBA值,每个颜色组件一个字节.
 纹理会用 `gl.NEAREST` 过滤, 不会被遮住 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | Uint8Array | 否 |  | 创建纹理的 Uint8 箭头 。 |
 | width | number | 否 |  | 纹理的宽度. |
@@ -1291,7 +1291,7 @@ Uint8Array被假定为RGBA值,每个颜色组件一个字节.
 创建基于 HTML 视频元素的新 WebGL 纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcVideo | HTMLVideoElement | 否 |  | 创建 WebGL 纹理的视频 |
 | noRepeat | boolean | 是 | false | 是否允许此画布设置 `REPEAT` ? |
@@ -1413,7 +1413,7 @@ Uint8Array被假定为RGBA值,每个颜色组件一个字节.
 销毁此 WebGLRenderer, 清理所有相关的资源, 如包装器, 本地纹理等 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/renderer/webgl/WebGLRenderer.js#L2617](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/WebGLRenderer.js#L2617)  
@@ -1771,7 +1771,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 后退台阶发生在所有镜头都完成后
 
 
-**Fires:** [Phaser.Renderer.Events#event:POST_RENDER](/api/event/renderer-events#post_render)
+**触发事件:** [Phaser.Renderer.Events#event:POST_RENDER](/api/event/renderer-events#post_render)
 
 
 > 源码：[src/renderer/webgl/WebGLRenderer.js#L2017](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/WebGLRenderer.js#L2017)  
@@ -1790,7 +1790,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 清除底部绘图康特文本并读取它以供使用。
 
 
-**Fires:** [Phaser.Renderer.Events#event:PRE_RENDER_CLEAR](/api/event/renderer-events#pre_render_clear), [Phaser.Renderer.Events#event:PRE_RENDER](/api/event/renderer-events#pre_render)
+**触发事件:** [Phaser.Renderer.Events#event:PRE_RENDER_CLEAR](/api/event/renderer-events#pre_render_clear), [Phaser.Renderer.Events#event:PRE_RENDER](/api/event/renderer-events#pre_render)
 
 
 > 源码：[src/renderer/webgl/WebGLRenderer.js#L1949](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/WebGLRenderer.js#L1949)  
@@ -1832,9 +1832,9 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 
 核心为场景镜头做制动步骤.
 
-透过给定的游戏对象阵列,用给定的相机来进行图化.
+透过给定的游戏对象阵列,用给定的摄像机来进行图化.
 
-这是用 `CameraManager.render` 方法调用。 相机管理器实例属于 Scene, 并且被 Scene Systems. render 方法引用 。
+这是用 `CameraManager.render` 方法调用。 摄像机管理器实例属于 Scene, 并且被 Scene Systems. render 方法引用 。
 
 如果`Camera.visible`是`false`,或者`Camera.alpha`是零,则不叫这个方法.
 
@@ -1842,11 +1842,11 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 场景要演化。 |
-| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一系列可以由给定的相机渲染的过滤游戏对象. |
+| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一系列可以由给定的摄像机渲染的过滤游戏对象. |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 场景摄像机要用它来制作 |
 
 
-**Fires:** [Phaser.Renderer.Events#event:RENDER](/api/event/renderer-events#render)
+**触发事件:** [Phaser.Renderer.Events#event:RENDER](/api/event/renderer-events#render)
 
 
 > 源码：[src/renderer/webgl/WebGLRenderer.js#L1986](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/WebGLRenderer.js#L1986)  
@@ -1895,7 +1895,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 **返回值:** [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) - 这个 WebGLRender 实例 。
 
 
-**Fires:** [Phaser.Renderer.Events#event:RESIZE](/api/event/renderer-events#resize)
+**触发事件:** [Phaser.Renderer.Events#event:RESIZE](/api/event/renderer-events#resize)
 
 
 > 源码：[src/renderer/webgl/WebGLRenderer.js#L1302](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/WebGLRenderer.js#L1302)  
@@ -1962,7 +1962,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 设置此渲染器的投影矩阵到给定的维度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 否 |  | 投影矩阵的新宽度. |
 | height | number | 否 |  | 投影矩阵的新高度. |
@@ -2070,7 +2070,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 
 **说明:**
 
-在当前框架解析后, 将整个游戏视图端口的快照排成一个 。
+在当前框架解析后, 将整个游戏视口的快照排成一个 。
 
 要捕捉特定区域,请参见`snapshotArea`方法。要捕捉特定像素,请参见`snapshotPixel`。
 
@@ -2079,7 +2079,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 快照工作时使用 WebGL `readPixels` 特性将框架缓冲器中的每个像素抓入一个 ArrayBufferView。它然后解析这个,将内容复制到临时的 Canvas 中,最后从中创建一个图像对象,即图像返回到提供的调回。 总之,这是一个计算成本和阻断过程,它得到的比画布大小更大的价格,所以请小心如何在游戏中使用它。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | [Phaser.Types.Renderer.Snapshot.SnapshotCallback](/api/typedef/types-renderer-snapshot#snapshotcallback) | 否 |  | 创建了快照图像后要引用的函数 。 |
 | 类型 | string | 是 | "'image/png'" | 图像创建的格式,通常为`image/png`或`image/jpeg`. |
@@ -2102,7 +2102,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 
 **说明:**
 
-在当前框架渲染后,将游戏视图端口的指定区域进行图示。
+在当前框架渲染后,将游戏视口的指定区域进行图示。
 
 要捕捉整个游戏的视港,请查看`snapshot`方法. 要捕捉到特定的像素,请参看`snapshotPixel`.
 
@@ -2111,7 +2111,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 快照工作时使用 WebGL `readPixels` 特性将框架缓冲器中的每个像素抓入一个 ArrayBufferView。它然后解析这个,将内容复制到临时的 Canvas 中,最后从中创建一个图像对象,即图像返回到提供的调回。 总之,这是一个计算成本和阻断过程,它得到的比画布大小更大的价格,所以请小心如何在游戏中使用它。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 用于抓取的x坐标。 是基于游戏的视图, 而不是世界 。 |
 | y | number | 否 |  | 游戏的坐标是用来抓的,这是基于游戏的视点,而不是世界。 |
@@ -2145,7 +2145,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 快照工作时使用 WebGL `readPixels` 特性将框架缓冲器中的每个像素抓入一个 ArrayBufferView。它然后解析这个,将内容复制到临时的 Canvas 中,最后从中创建一个图像对象,即图像返回到提供的调回。 总之,这是一个计算成本和阻断过程,它得到的比画布大小更大的价格,所以请小心如何在游戏中使用它。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | framebuffer | [Phaser.Renderer.WebGL.Wrappers.WebGLFramebufferWrapper](/api/class/renderer-webgl-wrappers-webglframebufferwrapper) | 否 |  | 挡板刹车从。 |
 | bufferWidth | number | 否 |  | 帧缓冲器的宽度 。 |
@@ -2176,7 +2176,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 
 **说明:**
 
-在当前框架渲染后,将游戏视图端口中给定的像素的快照排出日程。
+在当前框架渲染后,将游戏视口中给定的像素的快照排出日程。
 
 要捕捉整个游戏的视港,请查看`snapshot`方法。要捕捉特定区域,请参看`snapshotArea`。
 
@@ -2217,7 +2217,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 此方法将在 Phaser 帆布上启动抓取。 一旦它达到指定为参数的命令数, 或10秒后, 抓取就会停止。 如果快速抓取属实, 缩略图不会被抓取, 以便加快抓取速度 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | commandCount | number | 是 | 0 | 捕获的命令数。 如果为零, 将捕获10秒 。 |
 | quickCapture | boolean | 是 | false | 如果`true`缩略图没有被捕获,以加速捕获. |
@@ -2316,7 +2316,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 更新基于给定的 Canvas 元素的 WebGL 纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcCanvas | HTMLCanvasElement | 否 |  | 彩虹号用来更新WebGL纹理 |
 | dstTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 否 |  | 目的地WebGLTextureWrapper 更新. |
@@ -2343,7 +2343,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 基于给定的 HTML 视频元素更新 WebGL 纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcVideo | HTMLVideoElement | 否 |  | 更新WebGL纹理的视频. |
 | dstTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 否 |  | 目的地WebGLTextureWrapper 更新. |
@@ -2372,7 +2372,7 @@ Phaser v3.60 调试器内嵌了Spector.js的构件,是WebGL的检查员,可以�
 如果给出了`dstTexture`参数,则更新了WebGL纹理,而不是创建了新鲜的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcVideo | HTMLVideoElement | 否 |  | 创建 WebGL 纹理的视频 |
 | dstTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 是 |  | 要设置的目的地 WebGLTextureWrapper 。 |

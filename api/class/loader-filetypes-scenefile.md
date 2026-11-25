@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-scenefile)
 
-一个场景文件是外部的JavaScript文件,它定义了Phaser的场景类,由装入器加载,然后直接注册到场景管理器,以便启动,启动,或者像本地定义的任何场景一样使用。这样可以将游戏的场景分成多个JavaScript文件,并按要求加载,而不是将所有东西捆绑起来。
+一个场景文件是外部的JavaScript文件,它定义了Phaser的场景类,由资源加载器加载,然后直接注册到场景管理器,以便启动,启动,或者像本地定义的任何场景一样使用。这样可以将游戏的场景分成多个JavaScript文件,并按要求加载,而不是将所有东西捆绑起来。
 
-装入时使用的密钥必须匹配 JavaScript 文件定义的类名, 因为文件被评估, 类名被即时化。 一旦装入, 场景可以由场景管理器在 或 该 密钥 下使用, 或由 S`super()` 中传递到 。
+装入时使用的键必须匹配 JavaScript 文件定义的类名, 因为文件被评估, 类名被即时化。 一旦装入, 场景可以由场景管理器在 或 该 键 下使用, 或由 S`super()` 中传递到 。
 
 这些是使用Phaser.Loader.LoaderPlugin#sceneFile方法创建的,一般不直接创建.
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -70,10 +70,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-评估装入的 JavaScript 源, 将文件的密钥所识别的 Scene 类进行即时处理, 并将由此产生的 Scene 实例注册到 Scene 管理器, 以便可以使用 。
+评估装入的 JavaScript 源, 将文件的键所识别的 Scene 类进行即时处理, 并将由此产生的 Scene 实例注册到 Scene 管理器, 以便可以使用 。
 
 
-**Overrides:** Phaser.Loader.File#addToCache
+**重写:** Phaser.Loader.File#addToCache
 
 
 > 源码：[src/loader/filetypes/SceneFile.js#L88](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/SceneFile.js#L88)  
@@ -92,7 +92,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile 自动调用。 此方法控制了文件在加载数据中的额外工作 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/SceneFile.js#L72](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/SceneFile.js#L72)  

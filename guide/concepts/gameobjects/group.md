@@ -118,7 +118,7 @@ group.clear();
 
 ## 集体行动 {#group-actions}
 
-### 财产 {#property}
+### 属性 {#property}
 
 - 设置属性
 
@@ -130,7 +130,7 @@ group.clear();
   - `direction` :
     - `1` : 从开始到结束
     - 由尾到尾的`-1`:
-- 增加财产
+- 增加属性
 
     ```javascript
     group.propertyValueInc(key, value);
@@ -223,7 +223,7 @@ group.clear();
     group.toggleVisible();
     ```
 
-### 阿尔法 {#alpha}
+### 不透明度（Alpha） {#alpha}
 
 - 设置阿尔法
 
@@ -232,7 +232,7 @@ group.clear();
     // group.setAlpha(value, step);
     ```
 
-### 叮当 {#tint}
+### 着色（Tint） {#tint}
 
 - 设置线
 
@@ -262,7 +262,7 @@ group.clear();
     // group.scaleXY(scaleX, scaleY, stepX, stepY);
     ```
 
-### 来源 {#origin}
+### 原点 {#origin}
 
 - 设定来源
 

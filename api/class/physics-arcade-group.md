@@ -2,15 +2,15 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-group)
 
-弧形物理组对象.
+Arcade 物理组对象.
 
 物理组的主要用途是收集物理驱动的物体,这些物体在同一个集合中具有相同的内在结构。然后可以很容易地与其他群,或者Game Objects进行比较。
 
-本组创建或添加的所有游戏对象将自动获得**动力**弧形物理体(如果它们已经没有躯体),并且这些天体将获得Groups [default](/api/class/physics-arcade-group#defaults).
+本组创建或添加的所有游戏对象将自动获得**动力**Arcade 物理体(如果它们已经没有躯体),并且这些物理体将获得Groups [default](/api/class/physics-arcade-group#defaults).
 
-您不应该将对象传递到不应该接收到天体的组中。 例如, 不要将基本的几何或平面层添加到组中, 因为它们不会以您预期的方式行事。 组中最好都包含相同类型的对象 。
+您不应该将对象传递到不应该接收到物理体的组中。 例如, 不要将基本的几何或平面层添加到组中, 因为它们不会以您预期的方式行事。 组中最好都包含相同类型的对象 。
 
-如果您想创建一个充满静态天体的团体,请参见[Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup).
+如果您想创建一个充满静态物理体的团体,请参见[Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup).
 
 **构造函数**
 
@@ -80,7 +80,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 构造器参数必须匹配 `(scene, x, y, texture, frame)` 。
 
 
-**Overrides:** Phaser.GameObjects.Group#classType
+**重写:** Phaser.GameObjects.Group#classType
 
 
 > 源码：[src/physics/arcade/PhysicsGroup.js#L106](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/PhysicsGroup.js#L106)  
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理组碰撞类.
+Arcade 物理组碰撞类.
 
 它可以设置为任何有效的碰撞位域值 。
 
@@ -116,7 +116,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理集团碰撞面具.
+Arcade 物理集团碰撞遮罩.
 
 详见`setCollidesWith`方法.
 
@@ -171,7 +171,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此游戏对象的文字表达。 内部由 Phaser 使用, 但可供您自定义的类使用 。
 
 
-**Overrides:** Phaser.GameObjects.Group# 类型
+**重写:** Phaser.GameObjects.Group# 类型
 
 
 > 源码：[src/physics/arcade/PhysicsGroup.js#L199](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/PhysicsGroup.js#L199)  
@@ -306,7 +306,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-启用游戏对象的天体,并指定 `defaults`。在添加或创建组成员时调用。
+启用游戏对象的物理体,并指定 `defaults`。在添加或创建组成员时调用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -327,7 +327,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-禁用游戏对象的身体。 取消组成员时会呼叫 。
+禁用游戏对象的物理体。 取消组成员时会呼叫 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -351,7 +351,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设定每个组成员的速度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 水平速度,以像素每秒为单位. |
 | y | number | 否 |  | 垂直速度,以像素每秒为单位. |
@@ -377,7 +377,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设定每个组成员的横向速度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 速度值,以像素每秒为单位. |
 | step | number | 是 | 0 | 速度递增。设定时,第一个成员会收到速度(x),第二个成员(x+步骤)等. |
@@ -402,7 +402,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置每个组成员的垂直速度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 速度值,以像素每秒为单位. |
 | step | number | 是 | 0 | 速度递增。设定时,第一个成员得到速度(y),第二个成员(y+步骤)等。 |

@@ -4,13 +4,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 光滑滤镜控制器 。
 
-这个过滤器控制器管理着相机的发光效果.
+这个过滤器控制器管理着摄像机的发光效果.
 
 光线效应是一种视觉技术,它围绕游戏对象,人物,或UI元素,创建柔软,光线光环,这种效应用来强调重要性,增强视觉吸引力,或传递能量感,魔法感,或其他世界存在的感,效果也可以设定在边缘内部,光线的颜色和强度可以修改.
 
-此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大相机 。
+此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大摄像机 。
 
-通过过滤列表组件,将一个Glow效应添加到相机中:
+通过过滤列表组件,将一个Glow效应添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -32,9 +32,9 @@ Phaser 3的转换注释:
 `new Glow(camera, [color], [outerStrength], [innerStrength], [scale], [knockout], [quality], [distance])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | color | number | 是 | "0xffffff" | 光线效应的颜色作为数字值. |
 | outerStrength | number | 是 | 4 | 发光的强度从纹理边缘向外延伸. |
 | innerStrength | number | 是 | 0 | 发光的强度从纹理边缘向内倾. |
@@ -232,10 +232,10 @@ Phaser 3的转换注释:
 
 **说明:**
 
-返回此过滤器在渲染时所需的额外粘贴量。 粘贴值会说明超出相机输出的原始范围所产生的光线效应。 Name
+返回此过滤器在渲染时所需的额外粘贴量。 粘贴值会说明超出摄像机输出的原始范围所产生的光线效应。 Name
 
 
-**Overrides:** Phaser.Filters.Controller#getPadding
+**重写:** Phaser.Filters.Controller#getPadding
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 贴板矩形

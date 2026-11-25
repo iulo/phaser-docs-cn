@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Quaternion([x], [y], [z], [w])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | ×组件. |
 | y | number | 是 | 0 | y组件. |
@@ -328,7 +328,7 @@ The z component of this Quaternion.
 直线插这个Quaternion 向给定的Quaternion或矢量.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | v | [Phaser.Math.Quaternion](/api/class/math-quaternion) \| [Phaser.Math.Vector4](/api/class/math-vector4) | 否 |  | Quaternion或矢量向向内插. |
 | t | number | 是 | 0 | 插值的百分比。 |
@@ -517,7 +517,7 @@ The z component of this Quaternion.
 设定此 Quaternion 的组件, 并可选地调用 `onChangeCallback` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| object | 是 | 0 | x 组件,或含有x,y,z,和w 组件的物体. |
 | y | number | 是 | 0 | y组件. |
@@ -596,7 +596,7 @@ The z component of this Quaternion.
 设置此从给定的 Eular 对象的 Quaternion 。 转换时会尊重 Eular 的旋转顺序( 如 “ XYZ ” 、 “ YXZ ” 、  “ ZXY ” 、 “ ZZX ” ) , 生成等效的四角旋转 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | euler | [Phaser.Math.Euler](/api/class/math-euler) | 否 |  | 欧拉反对从中转换 。 |
 | update | boolean | 是 | true | 运行`onChangeCallback`? |

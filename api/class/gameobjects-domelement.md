@@ -12,7 +12,7 @@ dom {
 }
 ```
 
-您还必须有一个 Phaser 的母容器。这是游戏配置中的 `parent` 属性指定的 。
+您还必须有一个 Phaser 的父容器。这是游戏配置中的 `parent` 属性指定的 。
 
 当添加这两个东西时, Phaser 将自动创建一个位于游戏画布顶部的 DOM 容器 div 。 此画布大小与画布相匹配, 如果画布大小发生变化, 则由于在 Scale 管理器内设置, 圆顶容器会相应调整大小 。
 
@@ -30,15 +30,15 @@ this.add.dom(x, y, 'div', 'background-color: lime; width: 220px; height: 100px; 
 
 与其直接指定 CSS 和 HTML , 您可以使用 `load.html` 文件加载器将其加载到缓存中, 然后使用 `createFromCache` 方法。 您也可以使用 `createFromHTML` 和该类中可用的其他各种方法来帮助构建您的要素 。
 
-一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景相机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
+一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景摄像机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
 
-无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用相机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重相机滚动和 scrollFactor 设置, 但是如果您改变相机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
+无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用摄像机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重摄像机滚动和 scrollFactor 设置, 但是如果您改变摄像机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
 
 DOM 游戏对象可以添加到 Phaser 容器中, 但是您只应该将其嵌入** 深一层**。 任何更深的链条都会忽略所有根容器属性 。
 
 此外,所有DOM元素都插入到同一个DOM容器中,不管它们是在哪个场景中创建的.
 
-注意您只应该在带有 _ single_ 相机的场景中设置 DOM Elements。 如果您需要多个相机, 请使用平行的场景来达到此目的 。
+注意您只应该在带有 _ single_ 摄像机的场景中设置 DOM Elements。 如果您需要多个摄像机, 请使用平行的场景来达到此目的 。
 
 DOM Elements 是将本地 HTML 与您的 Phaser 游戏对象对齐的有力方法。 例如, 您可以在您的标题屏幕中直接插入多人游戏的登录表。 或者是高分表的文本输入框。 或者是来自 3rd 派对服务的横幅广告。 或者您想用它们来高分辨率文本显示和UI 。 选择权在你, 请记住您正在处理标的 HTML 和 CSS 浮在游戏顶部, 并应该相应处理它 。
 
@@ -47,7 +47,7 @@ DOM Elements 是将本地 HTML 与您的 Phaser 游戏对象对齐的有力方�
 `new DOMElement(scene, [x], [y], [element], [style], [innerText])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 是 | 0 | 这个DOM元素在世界的横向位置. |
@@ -631,7 +631,7 @@ x, y, 和 z 组件定义旋转轴的方向。 w 组件持有旋转角, 位于 `r
 
 **说明:**
 
-将一个或多个本地 DOM 事件听众添加到游戏对象的元素中。 然后通过此游戏对象标准事件发送器发送事件 。
+将一个或多个本地 DOM 事件监听器添加到游戏对象的元素中。 然后通过此游戏对象标准事件发送器发送事件 。
 
 例如:
 
@@ -649,7 +649,7 @@ div.on('click', handler);
 | events | string | 否 | DOM 事件/ 需要倾听。 您可以用空格分隔多个事件 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addListener
+**重写:** Phaser.GameObjects.GameObject#addListener
 
 
 **返回值:** [Phaser.GameObjects.DOMElement](/api/class/gameobjects-domelement) - 这个DOM元素实例 。
@@ -695,7 +695,7 @@ var style = {
 this.add.dom().createElement('div', style, 'Phaser');
 ```
 
-如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件听众都需要在此调用后重新创建 。
+如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件监听器都需要在此调用后重新创建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -730,7 +730,7 @@ this.add.dom().createElement('div', style, 'Phaser');
 <input type="button" name="playButton" value="Let's Play" style="font-size: 32px">
 ```
 
-使用缓存密钥“ login” 装入到您的游戏中 :
+使用缓存键“ login” 装入到您的游戏中 :
 
 ```javascript
 this.load.html('login', 'assets/loginform.html');
@@ -744,12 +744,12 @@ this.add.dom().createFromCache('login');
 
 可选的 `elementType` 参数控制创建的容器, 将装入的 html 插入其中。 默认是一个普通 `div` 对象, 但可以给出任何有效的 tagName 。
 
-如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件听众都需要在此调用后重新创建 。
+如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件监听器都需要在此调用后重新创建 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 用于此 DOM Element 的 html 缓存项的密钥 。 |
+| key | string | 否 |  | 用于此 DOM Element 的 html 缓存项的键 。 |
 | tagName | string | 是 | "'div'" | 插入全部已装入的 html 的元素的标记名称。 默认为普通 div 标记 。 |
 
 
@@ -786,10 +786,10 @@ this.add.dom().createFromHTML(form);
 
 选项 `elementType` 参数控制创建的容器类型, 将 html 插入其中。 默认是一个普通 `div` 对象, 但是任何有效的 tagName 都可以给出 。
 
-如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件听众都需要在此调用后重新创建 。
+如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件监听器都需要在此调用后重新创建 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | html | string | 否 |  | 将设置为创建元素的 `innerHTML` 属性的 html 字符串 。 |
 | tagName | string | 是 | "'div'" | 插入所有 html 的元素的标记名称。 默认为 plain div 标记 。 |
@@ -863,13 +863,13 @@ this.add.dom().createFromHTML(form);
 
 **说明:**
 
-从 DOM 元素节点中获取所有的孩子, 使用 `querySelectorAll('*')` 并穿插到它们, 寻找第一个具有匹配给定的密钥和值的属性的孩子。 如果找到的话, 它会返回这个孩子, 如果找不到的话, 也可以返回 `null` 。
+从 DOM 元素节点中获取所有的孩子, 使用 `querySelectorAll('*')` 并穿插到它们, 寻找第一个具有匹配给定的键和值的属性的孩子。 如果找到的话, 它会返回这个孩子, 如果找不到的话, 也可以返回 `null` 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| property | string | 否 | 寻找孩子的财产 |
-| value | string | 否 | 财产的价值必须严格平等。 |
+| property | string | 否 | 寻找孩子的属性 |
+| value | string | 否 | 属性的价值必须严格平等。 |
 
 
 **返回值:** Element - 第一个匹配的孩子 DOM Element, 或者 `null` 如果找不到的话.
@@ -907,7 +907,7 @@ this.add.dom().createFromHTML(form);
 
 **说明:**
 
-从游戏对象的内在元素中移除一个或多个本地 DOM 事件听众 。
+从游戏对象的内在元素中移除一个或多个本地 DOM 事件监听器 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -915,7 +915,7 @@ this.add.dom().createFromHTML(form);
 | events | string | 否 | DOM 事件/ 停止监听。 您可以用空格分隔多个事件 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removeListener
+**重写:** Phaser.GameObjects.GameObject#removeListener
 
 
 **返回值:** [Phaser.GameObjects.DOMElement](/api/class/gameobjects-domelement) - 这个DOM元素实例 。
@@ -958,7 +958,7 @@ this.add.dom().createFromHTML(form);
 
 **说明:**
 
-将一个新的 DOM 元素绑入此游戏对象。 如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件听众都需要在新元素上重新创建 。
+将一个新的 DOM 元素绑入此游戏对象。 如果此游戏对象已经有一个元素, 它将被从 DOM 中完全删除。 您先前创建的任何事件监听器都需要在新元素上重新创建 。
 
 你通过这个方法的`element`的论据可以是字符串tagName:
 
@@ -1078,7 +1078,7 @@ this.add.dom().setElement(h1, style, 'Phaser');
 更多信息见:[https://developer.mozilla.org/en-US/docs/Web/CSS/transform](https://developer.mozilla.org/en-US/docs/Web/CSS/transform)
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 角度,用弧度表示,通过这个角度,可以将DOM元素在水平轴上扭曲. |
 | y | number | 是 | "x" | 角度,用弧度表示,通过这个角度,可以将DOM元素在垂直轴上扭曲. |
@@ -1152,7 +1152,7 @@ this.add.dom().setElement(h1, style, 'Phaser');
 DOMElements 总是返回 `true`,因为它们需要在渲染传感时仍然设置值,即使不可见.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#willRender
+**重写:** Phaser.GameObjects.GameObject#willRender
 
 
 **返回值:** boolean - 如果游戏对象应该渲染,则使用`true`,否则使用`false`.

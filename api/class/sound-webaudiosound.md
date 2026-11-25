@@ -13,10 +13,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new WebAudioSound(manager, key, [config])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | manager | [Phaser.Sound.WebAudioSoundManager](/api/class/sound-webaudiosoundmanager) | 否 |  | 引用此声音实例的 WebAudio 声音管理器 。 |
-| key | string | 否 |  | 声音的密钥 。 |
+| key | string | 否 |  | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "{}" | 包含默认声音设置的可选配置对象。 |
 
 ---
@@ -65,7 +65,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-包含要播放的音频资产解码数据的音频缓冲器.
+包含要播放的音频资源解码数据的音频缓冲器.
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L47](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L47)  
@@ -81,10 +81,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 
-**Fires:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
+**触发事件:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L839](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L839)  
@@ -135,7 +135,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 显示声音或当前声音标记是否循环的旗帜 。
 
 
-**Fires:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
+**触发事件:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L1049](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L1049)  
@@ -188,7 +188,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 获取或设置此声音的哑音状态.
 
 
-**Fires:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
+**触发事件:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L886](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L886)  
@@ -225,7 +225,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 总是在iOS / Safari 上返回0,因为它不支持立体式泛纳节点.
 
 
-**Fires:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
+**触发事件:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L1101](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L1101)  
@@ -282,7 +282,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 播放此声音的速度 。 值为 1.0 的播放音频全速, 值为 0. 5 的播放音频半速, 值为 2.0 的播放速度的两倍 。
 
 
-**Fires:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
+**触发事件:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L789](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L789)  
@@ -321,7 +321,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 代表此声音的播放位置的属性, 以秒计。 设置到特定值后, 将当前播放的播放移动到该位置。 给出的值被夹在 0 到当前标记持续时间之间。 设置一个已停止的声音的搜索没有效果 。
 
 
-**Fires:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
+**触发事件:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L973](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L973)  
@@ -408,7 +408,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 获取或设置此声音的音量,值介于 0(静态)到 1(全音量)之间.
 
 
-**Fires:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
+**触发事件:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L930](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L930)  
@@ -524,7 +524,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将配置值应用到一些声音属性时内部使用的方法.
 
 
-**Overrides:** Phaser.Sound.BaseSound#applyConfig
+**重写:** Phaser.Sound.BaseSound#applyConfig
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L493](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L493)  
@@ -543,7 +543,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 内部用于计算声音总回放率的方法.
 
 
-**Overrides:** Phaser.Sound.BaseSound#calculateRate
+**重写:** Phaser.Sound.BaseSound#calculateRate
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L707](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L707)  
@@ -597,7 +597,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 呼叫 Phaser.Sound.BaseSound#destroy 方法并断开所有Web音频 API 节点,释放所有音频资源的引用.
 
 
-**Overrides:** Phaser.Sound.BaseSound#销毁
+**重写:** Phaser.Sound.BaseSound#销毁
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L667](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L667)  
@@ -648,13 +648,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 暂停声闻.
 
 
-**Overrides:** Phaser.Sound.BaseSound# 暂停
+**重写:** Phaser.Sound.BaseSound# 暂停
 
 
 **返回值:** boolean - 声音是否被成功暂停 。
 
 
-**Fires:** [Phaser.Sound.Events#event:PAUSE](/api/event/sound-events#pause)
+**触发事件:** [Phaser.Sound.Events#event:PAUSE](/api/event/sound-events#pause)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L283](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L283)  
@@ -677,19 +677,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果你想同时播放相同的声音,那么你需要创建另一个实例,并播放该声音.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | markerName | string \| [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "''" | 如果您想要播放标记, 请在此提供标记名称。 或者, 此参数可以是 SoundConfig 对象 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 |  | 如果未提供标记名称, 可选的音效配置对象将应用到此标记或整个音效上。 它会被记住, 用于当前音节的未来播放 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSound游戏
+**重写:** Phaser.Sound.BaseSound游戏
 
 
 **返回值:** boolean - 声音是否开始成功播放 。
 
 
-**Fires:** [Phaser.Sound.Events#event:PLAY](/api/event/sound-events#play)
+**触发事件:** [Phaser.Sound.Events#event:PLAY](/api/event/sound-events#play)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L249](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L249)  
@@ -708,13 +708,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 复说声闻.
 
 
-**Overrides:** Phaser.Sound.BaseSound继续
+**重写:** Phaser.Sound.BaseSound继续
 
 
 **返回值:** boolean - 声音是否成功恢复 。
 
 
-**Fires:** [Phaser.Sound.Events#event:RESUME](/api/event/sound-events#resume)
+**触发事件:** [Phaser.Sound.Events#event:RESUME](/api/event/sound-events#resume)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L313](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L313)  
@@ -730,7 +730,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+设置此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -741,7 +741,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
+**触发事件:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L867](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L867)  
@@ -768,7 +768,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
+**触发事件:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L1083](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L1083)  
@@ -795,7 +795,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
+**触发事件:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L912](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L912)  
@@ -824,7 +824,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
+**触发事件:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L1139](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L1139)  
@@ -853,7 +853,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
+**触发事件:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L818](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L818)  
@@ -880,7 +880,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
+**触发事件:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L1031](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L1031)  
@@ -907,7 +907,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
+**触发事件:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L955](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L955)  
@@ -926,13 +926,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 别再弹了
 
 
-**Overrides:** Phaser.Sound.BaseSound停下来
+**重写:** Phaser.Sound.BaseSound停下来
 
 
 **返回值:** boolean - 声音是否成功停止 。
 
 
-**Fires:** [Phaser.Sound.Events#event:STOP](/api/event/sound-events#stop)
+**触发事件:** [Phaser.Sound.Events#event:STOP](/api/event/sound-events#stop)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L342](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L342)  
@@ -983,10 +983,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 更新方法在每个游戏步骤上由声音管理器自动调用.
 
 
-**Overrides:** Phaser.Sound.BaseSound#更新日期
+**重写:** Phaser.Sound.BaseSound#更新日期
 
 
-**Fires:** [Phaser.Sound.Events#event:COMPLETE](/api/event/sound-events#complete), [Phaser.Sound.Events#event:LOOPED](/api/event/sound-events#looped)
+**触发事件:** [Phaser.Sound.Events#event:COMPLETE](/api/event/sound-events#complete), [Phaser.Sound.Events#event:LOOPED](/api/event/sound-events#looped)
 
 
 > 源码：[src/sound/webaudio/WebAudioSound.js#L615](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/webaudio/WebAudioSound.js#L615)  

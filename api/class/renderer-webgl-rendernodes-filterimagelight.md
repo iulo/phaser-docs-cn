@@ -66,7 +66,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将环境图和普通地图WebGL纹理绑定到各自的纹理槽中,环境图被分配到1号槽中,正常地图被分配到2号槽中,与[Phaser.Renderer.WebGL.RenderNodes.FilterImageLight#setupUniforms](/api/class/renderer-webgl-rendernodes-filterimagelight#setupUniforms)中设定的采样器制服相匹配.
+将环境图和普通地图WebGL纹理绑定到各自的纹理槽中,环境图被分配到1号槽中,法线贴图被分配到2号槽中,与[Phaser.Renderer.WebGL.RenderNodes.FilterImageLight#setupUniforms](/api/class/renderer-webgl-rendernodes-filterimagelight#setupUniforms)中设定的采样器制服相匹配.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文( 未使用) 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterImageLight.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterImageLight.js#L43)  
@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文( 未使用) 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterImageLight.js#L64](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterImageLight.js#L64)  

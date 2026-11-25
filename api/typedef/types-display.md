@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ColorBandConfig {#static-colorbandconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | colorStart | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0x000000" | 带首的颜色。指定颜色整数、六进制字符串、RGB或RGBA的阵列,范围为0-1,或颜色。 |
 | colorEnd | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 |  | 乐队尾部的颜色,默认为`colorStart`. |
@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Display
+**所属**: Phaser.Types.Display
 > 源码：[src/display/typedefs/ColorBandConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/typedefs/ColorBandConfig.js#L1)  
 引入版本：4.0.0
 
@@ -39,7 +39,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Display
+**所属**: Phaser.Types.Display
 > 源码：[src/display/typedefs/ColorObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/typedefs/ColorObject.js#L1)  
 引入版本：3.0.0
 
@@ -57,7 +57,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Display
+**所属**: Phaser.Types.Display
 > 源码：[src/display/typedefs/HSVColorObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/typedefs/HSVColorObject.js#L1)  
 引入版本：3.0.0
 
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Display
+**所属**: Phaser.Types.Display
 > 源码：[src/display/typedefs/InputColorObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/typedefs/InputColorObject.js#L1)  
 引入版本：3.0.0
 

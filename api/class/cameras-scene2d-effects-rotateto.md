@@ -2,17 +2,17 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/cameras-scene2d-effects-rotateto)
 
-相机旋转效果,在指定时间内将相机顺利旋转到目标角度。
+摄像机旋转效果,在指定时间内将摄像机顺利旋转到目标角度。
 
-这种效果将旋转相机,使其视门以给定角度以弧度完成,在持续时间和指定的方便度内完成.
+这种效果将旋转摄像机,使其视门以给定角度以弧度完成,在持续时间和指定的方便度内完成.
 
-相机旋转总是根据相机的视门进行。默认情况下,旋转发生在视门中心。您可以根据`originX`和`originY`的属性来调整此功能。
+摄像机旋转总是根据摄像机的视门进行。默认情况下,旋转发生在视门中心。您可以根据`originX`和`originY`的属性来调整此功能。
 
-旋转会影响此相机可见的_all_Game Objects的渲染。 然而, 它不会旋转相机的视门本身, 它始终是一个轴向矩形 。
+旋转会影响此摄像机可见的_all_Game Objects的渲染。 然而, 它不会旋转摄像机的视门本身, 它始终是一个轴向矩形 。
 
-只有相机被旋转。 它显示的物体没有受到影响, 即它们的位置不会改变 。
+只有摄像机被旋转。 它显示的物体没有受到影响, 即它们的位置不会改变 。
 
-效果会在相机本身上发出几个事件,您也可以指定一个`onUpdate`调回,如果需要,每个帧都会在效果的持续时间里引用.
+效果会在摄像机本身上发出几个事件,您也可以指定一个`onUpdate`调回,如果需要,每个帧都会在效果的持续时间里引用.
 
 **构造函数**
 
@@ -40,7 +40,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-相机这个效果属于。
+摄像机这个效果属于。
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L45)  
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-旋转时的当前相机角度,以弧度表示.
+旋转时的当前摄像机角度,以弧度表示.
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L86](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L86)  
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将相机旋转到的目的地角度,以弧度表示.
+将摄像机旋转到的目的地角度,以弧度表示.
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L95](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L95)  
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-开始角度从弧度旋转相机。
+开始角度从弧度旋转摄像机。
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L77](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L77)  
@@ -234,7 +234,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重置此相机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
+重置此摄像机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L321](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L321)  
@@ -250,24 +250,24 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-在整个期间和指定的方便范围内将相机旋转到给定角度。
+在整个期间和指定的方便范围内将摄像机旋转到给定角度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| angle | number | 否 |  | 以弧度表示的目的地角旋转相机视图到. |
+| angle | number | 否 |  | 以弧度表示的目的地角旋转摄像机视图到. |
 | shortestPath | boolean | 是 | false | 如果选中的话, 请将最短的距离拖到目的地。 这将调整目的地角度, 使其在起始角度的半转角之内 。 |
 | duration | number | 是 | 1000 | 效果持续时间以毫秒计. |
 | ease | string \| function | 是 | "'Linear'" | 易用。 可以是 Phaser 减速常数或自定义函数 。 |
 | force | boolean | 是 | false | 强制旋转效果立即启动, 即使已经运行 。 |
-| callback | [Phaser.Types.Cameras.Scene2D.CameraRotateCallback](/api/typedef/types-cameras-scene2d#camerarotatecallback) | 是 |  | 此调用符会在效果的持续时间里被引用到每个帧。 它被发送到三个参数: 引用相机, 0 到 1 之间的进度量, 表示效果的完成程度, 以及当前相机旋转 。 |
-| context | any | 是 |  | 引用回调时的上下文。 默认为相机所属的场景 。 |
+| callback | [Phaser.Types.Cameras.Scene2D.CameraRotateCallback](/api/typedef/types-cameras-scene2d#camerarotatecallback) | 是 |  | 此调用符会在效果的持续时间里被引用到每个帧。 它被发送到三个参数: 引用摄像机, 0 到 1 之间的进度量, 表示效果的完成程度, 以及当前摄像机旋转 。 |
+| context | any | 是 |  | 引用回调时的上下文。 默认为摄像机所属的场景 。 |
 
 
-**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的相机。
+**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的摄像机。
 
 
-**Fires:** [Phaser.Cameras.Scene2D.Events#event:ROTATE_START](/api/event/cameras-scene2d-events#rotate_start), [Phaser.Cameras.Scene2D.Events#event:ROTATE_COMPLETE](/api/event/cameras-scene2d-events#rotate_complete)
+**触发事件:** [Phaser.Cameras.Scene2D.Events#event:ROTATE_START](/api/event/cameras-scene2d-events#rotate_start), [Phaser.Cameras.Scene2D.Events#event:ROTATE_COMPLETE](/api/event/cameras-scene2d-events#rotate_complete)
 
 
 > 源码：[src/cameras/2d/effects/RotateTo.js#L172](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/RotateTo.js#L172)  
@@ -283,7 +283,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此效果的主要更新环路。 自动由相机调用 。
+此效果的主要更新循环。 自动由摄像机调用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

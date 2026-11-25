@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-strokepath)
 
-将中风路径作为一系列连接的线段, 将最后一个线段连接回第一个线段, 选择关闭路径。 它被 WebGL 渲染器用来绘制中风形状, 如图形游戏对象创建的形状。 每个线段都作为四( 两个三角形) 输出, 当中风宽度超过两个像素时, 相邻的线段会加入一个额外的连接四( 双三角形) 。 细化级机制允许屏幕空间中太近的中间点被跳过, 减少在稠密路径上的过度绘制 。
+将中风路径作为一系列连接的线段, 将最后一个线段连接回第一个线段, 选择关闭路径。 它被 WebGL 渲染器用来绘制中风形状, 如图形游戏对象创建的形状。 每个线段都作为四( 两个三角形) 输出, 当描边宽度超过两个像素时, 相邻的线段会加入一个额外的连接四( 双三角形) 。 细化级机制允许屏幕空间中太近的中间点被跳过, 减少在稠密路径上的过度绘制 。
 
 **构造函数**
 
@@ -103,7 +103,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | lighting | boolean | 否 | 是否将照明效果应用到中风上. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/StrokePath.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/StrokePath.js#L45)  

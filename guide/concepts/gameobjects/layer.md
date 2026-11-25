@@ -62,7 +62,7 @@ class MyLayer extends Phaser.GameObjects.Layer {
 var layer = new MyLayer(scene, children);
 ```
 
-## 添加子项目 {#add-child}
+## 添加子对象 {#add-child}
 
 - 添加子项目
 
@@ -84,7 +84,7 @@ var layer = new MyLayer(scene, children);
   layer.replace(oldGameObject, newGameObject);
   ```
 
-## 删除子 {#remove-child}
+## 移除子对象 {#remove-child}
 
 - 删除子
 
@@ -118,7 +118,7 @@ gameObject.addToDisplayList();
 
 将其添加到场景显示列表中。
 
-## 带孩子 {#get-child}
+## 获取子对象 {#get-child}
 
 - 带孩子去
 
@@ -132,7 +132,7 @@ gameObject.addToDisplayList();
   var gameObject = layer.getByName(name);
   ```
 
-- 以财产方式获得第一个孩子
+- 以属性方式获得第一个孩子
 
   ```javascript
   var gameObject = layer.getFirst(property, value);
@@ -279,9 +279,9 @@ gameObject.addToDisplayList();
   ```
 
 注意,按深度排序
-    儿童游戏对象也按深度排序.
+    子游戏对象也按深度排序.
 
-## 每名儿童 {#for-each-child}
+## 遍历子对象 {#for-each-child}
 
 ```javascript
 layer.each(function(gameObject) {
@@ -328,7 +328,7 @@ var mask = layer.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 

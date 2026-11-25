@@ -176,7 +176,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-Phaser缓存中对应已装入的图片数据的密钥.
+Phaser缓存中对应已装入的图片数据的键.
 
 
 > 源码：[src/tilemaps/mapdata/MapData.js#L32](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/mapdata/MapData.js#L32)  

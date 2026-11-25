@@ -18,17 +18,17 @@ static
 
 获得此游戏对象的下端- 中心坐标, 不管来源如何 。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -49,17 +49,17 @@ static
 
 获取此游戏对象的左下角坐标, 不论来源。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -80,17 +80,17 @@ static
 
 获取此游戏对象的右下角坐标, 不论来源。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -111,11 +111,11 @@ static
 
 获得此游戏对象的轴对齐矩形, 不论来源。
 
-边框矩是通过检索游戏对象的所有四个角位置(上左,上右,下左,下右),应用任何旋转和母容器变换,然后计算完全连接所有四个点的最小轴对齐矩来计算.
+边框矩是通过检索游戏对象的所有四个角位置(上左,上右,下左,下右),应用任何旋转和父容器变换,然后计算完全连接所有四个点的最小轴对齐矩来计算.
 
 数值被存储并返回到矩形,或像矩形的物体中。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -143,17 +143,17 @@ static
 
 获得此游戏对象的中心坐标, 不管来源如何 。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -174,17 +174,17 @@ static
 
 获得此游戏对象的左中点坐标, 不管来源如何 。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -205,17 +205,17 @@ static
 
 获得此游戏对象的右中心坐标, 不论来源如何 。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -236,17 +236,17 @@ static
 
 获得此游戏对象的顶端中心坐标, 不论来源如何 。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -267,17 +267,17 @@ static
 
 获得此游戏对象的左上角坐标, 不管来源为何。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。
@@ -298,17 +298,17 @@ static
 
 获得此游戏对象的右上角坐标, 不论来源。
 
-返回点在本地空间计算,而不在任何母容器中计算,除非`includeParent`参数设置为`true`.
+返回点在本地空间计算,而不在任何父容器中计算,除非`includeParent`参数设置为`true`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | output | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 是 |  | 存储值的对象。 如果不提供新的矢量2, 将会创建 。 |
-| includeParent | boolean | 是 | false | 如果此游戏对象有母容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
+| includeParent | boolean | 是 | false | 如果此游戏对象有父容器, 则将它( 和所有其他祖先) 包含在生成的矢量中 ? |
 
 
 **返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 输出对象中存储的值 。

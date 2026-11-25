@@ -114,10 +114,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-销毁此数据管理器 Plugin, 调用数据库 DataManager 销毁方法, 删除全部 Scene 事件听众, 并清除所有内部引用。 当自有 Scene 被销毁时, 将自动调用 。
+销毁此数据管理器 Plugin, 调用数据库 DataManager 销毁方法, 删除全部 Scene 事件监听器, 并清除所有内部引用。 当自有 Scene 被销毁时, 将自动调用 。
 
 
-**Overrides:** Phaser.Data.DataManager#销毁
+**重写:** Phaser.Data.DataManager#销毁
 
 
 > 源码：[src/data/DataManagerPlugin.js#L102](https://github.com/phaserjs/phaser/blob/v4.1.0/src/data/DataManagerPlugin.js#L102)  

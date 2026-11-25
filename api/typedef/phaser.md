@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser
+**所属**: Phaser
 > 源码：[src/device/index.js#L17](https://github.com/phaserjs/phaser/blob/v4.1.0/src/device/index.js#L17)  
 
 

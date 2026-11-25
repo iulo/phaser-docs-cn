@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 计算并存储用于单一瓦片元素的世界空间变换四元,准备提交批量渲染器.
 
-这种方法通过将相机视图矩阵(应用滚动因子),嵌入游戏对象的可选母矩阵,以及从瓷砖的像素位置,旋转,以及TilemapLayer的尺度中衍生出来的每片图案矩阵相结合,来构建最终的转换. 蒂勒塞特的瓦片抵消被计入世界位置,通过否定四维来应用水平或垂直的翻转. 如果在相机上启用顶点圆形,则产生的四位坐标被四舍入到最近的整数,以避免子像素渲染文物.
+这种方法通过将摄像机视图矩阵(应用滚动因子),嵌入游戏对象的可选母矩阵,以及从瓦片的像素位置,旋转,以及TilemapLayer的尺度中衍生出来的每片图案矩阵相结合,来构建最终的转换. 蒂勒塞特的瓦片抵消被计入世界位置,通过否定四维来应用水平或垂直的翻转. 如果在摄像机上启用顶点圆形,则产生的四位坐标被四舍入到最近的整数,以避免子像素渲染文物.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -68,10 +68,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象正在被渲染 。 |
 | texturerNode | [Phaser.Renderer.WebGL.RenderNodes.RenderNode](/api/class/renderer-webgl-rendernodes-rendernode) | 否 | 用于为 Game Object 纹理的文本器节点。 此节点包含关于对象尺寸的相关数据 。 |
 | parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 如果游戏对象是嵌入式,则定义了这个变换矩阵. |
-| element | object | 是 | 正在渲染的瓷砖的瓦片元素描述符。 包含瓷砖的像素位置、 旋转、 翻转旗子以及用于查找瓷砖的 GID 索引 。 |
+| element | object | 是 | 正在渲染的瓦片的瓦片元素描述符。 包含瓦片的像素位置、 旋转、 翻转旗子以及用于查找瓦片的 GID 索引 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.TransformerImage#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.TransformerImage#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/transformer/TransformerTile.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/transformer/TransformerTile.js#L45)  

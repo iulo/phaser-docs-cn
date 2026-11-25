@@ -19,10 +19,10 @@ static
 设置机体的横向和纵向加速。如果不提供纵向加速值,则垂直加速值设定为与横向加速值相同的数值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 水平加速度,以像素每秒平方英寸表示. |
-| y | number | 是 | "x" | 垂直加速,以每秒平方像素计. |
+| x | number | 否 |  | 水平加速度,以像素每二次方秒表示. |
+| y | number | 是 | "x" | 垂直加速,以像素每二次方秒计. |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Acceleration](/api/namespace/physics-arcade-components-acceleration) - 此游戏对象 。
@@ -41,12 +41,12 @@ static
 
 **说明:**
 
-设定身体水平加速.
+设定物理体水平加速.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 水平加速度,以像素每秒平方英寸表示. |
+| value | number | 否 | 水平加速度,以像素每二次方秒表示. |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Acceleration](/api/namespace/physics-arcade-components-acceleration) - 此游戏对象 。
@@ -65,12 +65,12 @@ static
 
 **说明:**
 
-设置身体的垂直加速.
+设置物理体的垂直加速.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 垂直加速,以每秒平方像素计. |
+| value | number | 否 | 垂直加速,以像素每二次方秒计. |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Acceleration](/api/namespace/physics-arcade-components-acceleration) - 此游戏对象 。

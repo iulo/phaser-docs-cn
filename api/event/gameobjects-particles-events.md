@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | emitter | [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) | 否 | 提到刚刚完成的粒子喷射器 |
 
-**Member of:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
+**所属:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
 > 源码：[src/gameobjects/particles/events/COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/events/COMPLETE_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -38,7 +38,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 被杀死的粒子 |
 | zone | [Phaser.GameObjects.Particles.Zones.DeathZone](/api/class/gameobjects-particles-zones-deathzone) | 否 | 杀死粒子的死亡区 |
 
-**Member of:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
+**所属:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
 > 源码：[src/gameobjects/particles/events/DEATH_ZONE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/events/DEATH_ZONE_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -56,7 +56,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | emitter | [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) | 否 | 提到刚刚完成的粒子喷射器 |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 最近排放的粒子。 |
 
-**Member of:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
+**所属:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
 > 源码：[src/gameobjects/particles/events/EXPLODE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/events/EXPLODE_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | emitter | [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) | 否 | 提到刚刚完成的粒子喷射器 |
 
-**Member of:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
+**所属:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
 > 源码：[src/gameobjects/particles/events/START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/events/START_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -98,7 +98,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | emitter | [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) | 否 | 提到刚刚完成的粒子喷射器 |
 
-**Member of:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
+**所属:** [Phaser.GameObjects.Particles.Events](/api/namespace/gameobjects-particles-events)
 > 源码：[src/gameobjects/particles/events/STOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/events/STOP_EVENT.js#L7)  
 引入版本：3.60.0
 

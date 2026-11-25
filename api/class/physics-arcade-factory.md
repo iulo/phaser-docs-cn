@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-factory)
 
-弧形物理工厂允许您轻松创建Arcade物理允许的游戏对象。这个工厂创建的物体会自动添加到物理世界中。
+Arcade 物理工厂允许您轻松创建Arcade物理允许的游戏对象。这个工厂创建的物体会自动添加到物理世界中。
 
 **构造函数**
 
@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 | 拱廊物理世界实例. |
+| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 | Arcade 物理世界实例. |
 
 ---
 
@@ -82,15 +82,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 创建一个具有指定位置和大小的新的物理正体。
 
-这个天体与任何游戏对象都没有关联,但在世界范围内仍然存在,可以测试碰撞,具有速度等.
+这个物理体与任何游戏对象都没有关联,但在世界范围内仍然存在,可以测试碰撞,具有速度等.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 物理学界这个身体的横向位置. |
-| y | number | 否 |  | 物理学界这个身体的垂直位置. |
-| width | number | 是 | 64 | 身体的宽度, 以像素表示。 无法为负数或为零 。 |
-| height | number | 是 | 64 | 身体的高度以像素表示。 无法为负数或为零 。 |
+| x | number | 否 |  | 物理学界这个物理体的横向位置. |
+| y | number | 否 |  | 物理学界这个物理体的垂直位置. |
+| width | number | 是 | 64 | 物理体的宽度, 以像素表示。 无法为负数或为零 。 |
+| height | number | 是 | 64 | 物理体的高度以像素表示。 无法为负数或为零 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) - 被创造的躯体。
@@ -109,7 +109,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建新的弧形物理对撞器对象。
+创建新的Arcade 物理对撞器对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | callbackContext | * | 是 | 呼叫回调的范围。 |
 
 
-**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的对撞机。
+**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的碰撞器。
 
 
 > 源码：[src/physics/arcade/Factory.js#L62](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Factory.js#L62)  
@@ -153,14 +153,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将弧形物理体添加到给定的游戏对象中。
+将Arcade 物理体添加到给定的游戏对象中。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 一个游戏对象。 |
 | isStatic | boolean | 是 | false | 创建静态体(真)或动态体(假). |
@@ -182,7 +182,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建物理组对象。该组创建的所有游戏对象将自动成为动态弧形物理对象。
+创建物理组对象。该组创建的所有游戏对象将自动成为动态Arcade 物理对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -207,14 +207,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建一个带有动态天体的新弧形图像对象。
+创建一个带有动态物理体的新弧形图像对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -246,7 +246,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | callbackContext | * | 是 | 呼叫回调的范围。 |
 
 
-**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的对撞机。
+**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的碰撞器。
 
 
 > 源码：[src/physics/arcade/Factory.js#L81](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Factory.js#L81)  
@@ -262,14 +262,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建一个带有动态天体的新Arcade Sprite对象。
+创建一个带有动态物理体的新Arcade Sprite对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| key | string | 否 | 此游戏对象将使用的质地密钥用于渲染, 如保存在质地管理器中 。 |
+| key | string | 否 | 此游戏对象将使用的质地键用于渲染, 如保存在质地管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -291,15 +291,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 创建一个具有指定位置和大小的新的静态物理体。
 
-此天体与任何游戏对象都没有关联,但在世界范围内仍然存在,可以测试碰撞等.
+此物理体与任何游戏对象都没有关联,但在世界范围内仍然存在,可以测试碰撞等.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 物理学界这个身体的横向位置. |
-| y | number | 否 |  | 物理学界这个身体的垂直位置. |
-| width | number | 是 | 64 | 身体的宽度, 以像素表示。 无法为负数或为零 。 |
-| height | number | 是 | 64 | 身体的高度以像素表示。 无法为负数或为零 。 |
+| x | number | 否 |  | 物理学界这个物理体的横向位置. |
+| y | number | 否 |  | 物理学界这个物理体的垂直位置. |
+| width | number | 是 | 64 | 物理体的宽度, 以像素表示。 无法为负数或为零 。 |
+| height | number | 是 | 64 | 物理体的高度以像素表示。 无法为负数或为零 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) - 所创建的静态体.
@@ -318,7 +318,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建静态物理组对象。该组创建的所有游戏对象将自动成为静态弧形物理对象。
+创建静态物理组对象。该组创建的所有游戏对象将自动成为静态Arcade 物理对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -343,14 +343,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建一个带有静态天体的新 Arcade 图像对象。
+创建一个带有静态物理体的新 Arcade 图像对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -370,14 +370,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-创建一个带有静态天体的新 Arcade Sprite 对象。
+创建一个带有静态物理体的新 Arcade Sprite 对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 

@@ -33,7 +33,7 @@ static
 在哪里,我们在哪里 `equation`, `funcSrc`,和 `funcDst` RGB 和 Alpha 的代码相同。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 创建 WebGLBlendParameters 的 WebGLRenderer 软件。 |
 | enabled | GLboolean | 是 | true | 是否启用混合 。 |
@@ -82,7 +82,7 @@ static
 与`createCombined`不同,RGB和α通道可以使用不同的方程和混合功能.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 创建 WebGLBlendParameters 的 WebGLRenderer 软件。 |
 | enabled | GLboolean | 是 | true | 是否启用混合 。 |

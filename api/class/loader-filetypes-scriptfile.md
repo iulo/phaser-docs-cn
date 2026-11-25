@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-scriptfile)
 
-适合装入器加载的单个脚本文件。 它通过 XHR 获取一个外部的 JavaScript 文件, 并在加载后, 将它注入文档中, 作为附加在 `document.head` 的 `<script>` 元素, 导致其代码立即执行。 经典脚本和 ES 模块都通过 `type` 参数支持 。
+适合资源加载器加载的单个脚本文件。 它通过 XHR 获取一个外部的 JavaScript 文件, 并在加载后, 将它注入文档中, 作为附加在 `document.head` 的 `<script>` 元素, 导致其代码立即执行。 经典脚本和 ES 模块都通过 `type` 参数支持 。
 
 这些是使用 Phaser.Loader.LoaderPlugin#script 方法创建的,一般不直接创建.
 
@@ -13,10 +13,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new ScriptFile(loader, key, [url], [type], [xhrSettings])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 |  | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig) | 否 |  | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig) | 否 |  | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 |  | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
 | 类型 | string | 是 | "'script'" | 脚本类型。 如果文件包含导出模块, 则应该为经典 JavaScript 的“ 标语 ” , 或“ 模块 ” 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile 自动通过文件完成通过 XHR 装入后调用。 创建 `<script>` 元素, 将其 `text` 内容设置在装入文件的原始响应文本中, 并附加到 `document.head` 中, 这使得脚本立即执行。 然后设定文件状态完成 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/ScriptFile.js#L74](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ScriptFile.js#L74)  

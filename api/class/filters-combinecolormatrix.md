@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 此过滤器将两个纹理的色通道组合在一起:一个基输入和一个二次传输纹理。每个源由自身独立转换 `ColorMatrix` (`colorMatrixSelf` 财务报告和已审计财务报表 `colorMatrixTransfer`),然后利用可配置的附加权重将结果进行每个通道的混合(`additions`)和乘法权重(`multiplications`),这使得它适合广泛的堆肥效果,尽管其主要用途是α通道操纵——例如,使用灰度转移纹理作为软面罩或者对底像应用亮度衍生的α. `setupAlphaTransfer` 来配置常见的α-转移模式的矩阵和加权,或设置 `colorMatrixSelf`, `colorMatrixTransfer`, `additions`,和 `multiplications` 属性直接用于自定义效果。
 
-将一个组合颜色Matrix过滤器通过过滤列表组件添加到相机中:
+将一个组合颜色Matrix过滤器通过过滤列表组件添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -19,10 +19,10 @@ camera.filters.external.addCombineColorMatrix();
 `new CombineColorMatrix(camera, [texture])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__WHITE'" | 用于传输纹理的纹理或纹理密钥. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__WHITE'" | 用于传输纹理的纹理或纹理键. |
 
 ---
 
@@ -172,7 +172,7 @@ camera.filters.external.addCombineColorMatrix();
 销毁此过滤器, 释放所有引用和资源 。
 
 
-**Overrides:** Phaser.Filters.Controller#销毁
+**重写:** Phaser.Filters.Controller#销毁
 
 
 > 源码：[src/filters/CombineColorMatrix.js#L178](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/CombineColorMatrix.js#L178)  
@@ -193,7 +193,7 @@ camera.filters.external.addCombineColorMatrix();
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 用于传输纹理的纹理或纹理密钥. |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 用于传输纹理的纹理或纹理键. |
 
 
 **返回值:** [Phaser.Filters.CombineColorMatrix](/api/class/filters-combinecolormatrix) - 此过滤实例 。

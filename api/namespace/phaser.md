@@ -183,7 +183,7 @@ Phaser 发布版本,显示在控制台.log头 URL中.
 
 **说明:**
 
-方向常数代表向右运动或方向。用于物理、瓷砖和其他与主方向配合的Phaser系统。
+方向常数代表向右运动或方向。用于物理、瓦片和其他与主方向配合的Phaser系统。
 
 
 > 源码：[src/const.js#L140](https://github.com/phaserjs/phaser/blob/v4.1.0/src/const.js#L140)  

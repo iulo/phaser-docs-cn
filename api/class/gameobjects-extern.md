@@ -280,7 +280,7 @@ Extern Game Object是一类特殊的游戏Object,它允许您将渲染传递给�
 将Exten 与 Scene 更新列表一起注册,这样 `preUpdate` 就可以称为每个帧 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/extern/Extern.js#L104](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/extern/Extern.js#L104)  
@@ -325,7 +325,7 @@ Extern Game Object是一类特殊的游戏Object,它允许您将渲染传递给�
 从 Scene 更新列表中删除extern, 这样 `preUpdate` 不再被调用 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/extern/Extern.js#L117](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/extern/Extern.js#L117)  

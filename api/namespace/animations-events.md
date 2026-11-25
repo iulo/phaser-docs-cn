@@ -25,7 +25,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 被加入全球动画管理器的动画的密钥. |
+| key | string | 否 | 被加入全球动画管理器的动画的键. |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 刚创作的动画的一个实例. |
 
 
@@ -88,7 +88,7 @@ static
 
 **说明:**
 
-动画"完整的动态密钥事件".
+动画"完整的动态键事件".
 
 当动画在它上播放完成播放时,这个事件由Sprite发出。 当动画到达其序列的末尾时, 将它可能要处理的任何延迟或重复计入其中。
 
@@ -385,7 +385,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从全球动画管理器中移除的动画的密钥. |
+| key | string | 否 | 从全球动画管理器中移除的动画的键. |
 | animation | [Phaser.Animations.Animation](/api/class/animations-animation) | 否 | 被移除的动画的一个实例. |
 
 

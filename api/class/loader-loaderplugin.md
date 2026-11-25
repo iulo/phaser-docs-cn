@@ -2,17 +2,17 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-loaderplugin)
 
-装入器处理所有外部内容, 如图像、 声音、 纹理图集和数据文件。 您通常会通过 S`this.load` 在您的场景中与之交互。 Scenes 拥有一个 `preload` 方法, 它总是在 Scenes `create` 方法之前被调用, 允许您预先装入该场景可能需要的资产 。
+资源加载器处理所有外部内容, 如图像、 声音、 纹理图集和数据文件。 您通常会通过 S`this.load` 在您的场景中与之交互。 Scenes 拥有一个 `preload` 方法, 它总是在 Scenes `create` 方法之前被调用, 允许您预先装入该场景可能需要的资源 。
 
-如果您从 `Scene.preload` 以外的任何 `this.load` 方法调用, 您需要通过调用 `Loader.start()` 来启动装入器。 它只在 Scene 预装时自动启动 。
+如果您从 `Scene.preload` 以外的任何 `this.load` 方法调用, 您需要通过调用 `Loader.start()` 来启动资源加载器。 它只在 Scene 预装时自动启动 。
 
 加载器使用标签加载(如音频元素)和XHR的组合,并提供进度和完成事件。文件默认同时加载。并行连接的数量可以在游戏配置中控制。
 
-一旦装入器开始加载, 您仍然可以添加文件。 这些文件可以被加载器事件、 装入的文件类型( 如包文件) 或其他外部事件所注入。 只要装入器没有完成仅仅添加新文件, 运行时, 就可以确保它被添加到当前队列中 。
+一旦资源加载器开始加载, 您仍然可以添加文件。 这些文件可以被加载器事件、 装入的文件类型( 如包文件) 或其他外部事件所注入。 只要资源加载器没有完成仅仅添加新文件, 运行时, 就可以确保它被添加到当前队列中 。
 
-每个场景都有自己加载器的实例,它们被绑定在创建它们的场景。 但是, 加载器加载的资产被放置到全局游戏级别缓存中。 例如, 加载一个 XML 文件会将该文件放置在`Game.cache.xml` 中, 该文件可以从游戏中的每一场景中访问, 不管谁负责加载它。 纹理也是一样。 一个场景加载的纹理会立即提供给游戏中的其他所有场景 。
+每个场景都有自己加载器的实例,它们被绑定在创建它们的场景。 但是, 加载器加载的资源被放置到全局游戏级别缓存中。 例如, 加载一个 XML 文件会将该文件放置在`Game.cache.xml` 中, 该文件可以从游戏中的每一场景中访问, 不管谁负责加载它。 纹理也是一样。 一个场景加载的纹理会立即提供给游戏中的其他所有场景 。
 
-装入器使用自定义文件类型工作。 这些存储在文件类型管理器中, 即时将它们注入装入器中。 您可以通过扩展文件或多文件类创建自定义文件类型。 请查看这些文件的更多细节 。
+资源加载器使用自定义文件类型工作。 这些存储在文件类型管理器中, 即时将它们注入资源加载器中。 您可以通过扩展文件或多文件类创建自定义文件类型。 请查看这些文件的更多细节 。
 
 **构造函数**
 
@@ -21,7 +21,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| scene | [Phaser.Scene](/api/class/scene) | 否 | 拥有这个装入器实例的场景 。 |
+| scene | [Phaser.Scene](/api/class/scene) | 否 | 拥有这个资源加载器实例的场景 。 |
 
 ---
 
@@ -71,9 +71,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 将文件或文件数组添加到负载队列中。
 
-文件必须是 `Phaser.Loader.File` 实例, 或扩展它的一个类。 装入器将检查文件所用的密钥不会与加载器、 飞行队列或目标缓存中的任何其他密钥发生冲突。 如果允许的话, 则将文件添加到待决列表中, 准备开始装入。 或者, 如果装入已经开始, 准备从列表中拖动到飞行队列的下一批文件 。
+文件必须是 `Phaser.Loader.File` 实例, 或扩展它的一个类。 资源加载器将检查文件所用的键不会与加载器、 飞行队列或目标缓存中的任何其他键发生冲突。 如果允许的话, 则将文件添加到待决列表中, 准备开始装入。 或者, 如果装入已经开始, 准备从列表中拖动到飞行队列的下一批文件 。
 
-您通常不应该直接调用这种方法, 而是使用一个装入器方法, 如 `image` 或 `atlas` 。 但是, 只要给它的文件已经形成, 您就可以调用它 。
+您通常不应该直接调用这种方法, 而是使用一个资源加载器方法, 如 `image` 或 `atlas` 。 但是, 只要给它的文件已经形成, 您就可以调用它 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -81,7 +81,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | file | [Phaser.Loader.File](/api/class/loader-file) \| Array.\<[Phaser.Loader.File](/api/class/loader-file)> | 否 | 要添加到负载队列中的文件, 或文件的数组 。 |
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/LoaderPlugin.js#L515](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L515)  
@@ -99,13 +99,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 使用一个很好、 完全解析的包文件对象并将其条目添加到负载队列中。 通常您不直接调用这种方法, 而是使用 `Loader.pack` 并提供一个拥有包数据的 JSON 文件的路径。 但是, 如果您已经准备好数据, 您可以把它传递到这种方法 。
 
-您也可以提供可选的密钥。 如果可以, 它只会从包的这一部分添加到负载队列中。 如果不指定, 它会添加它找到的所有条目。 有关包文件格式的更多细节请参见 `LoaderPlugin.pack` 方法 。
+您也可以提供可选的键。 如果可以, 它只会从包的这一部分添加到负载队列中。 如果不指定, 它会添加它找到的所有条目。 有关包文件格式的更多细节请参见 `LoaderPlugin.pack` 方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pack | any | 否 | 要解析的 Pack 文件数据, 并包含每个条目在负载队列中 。 |
-| packKey | string | 是 | 包文件数据中可选使用的密钥 。 |
+| packKey | string | 是 | 包文件数据中可选使用的键 。 |
 
 
 **返回值:** boolean - 如果队列中添加了任何文件,则使用`true`,否则使用`false`.
@@ -126,7 +126,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在当前负载队列中添加动画 JSON 数据文件,或动画 JSON 文件的数组.
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -135,11 +135,11 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 密钥在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 键在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -152,11 +152,11 @@ this.load.animation({
 
 详见`Phaser.Types.Loader.FileTypes.JSONFileConfig`的文件.
 
-一旦文件装入完成, 将自动传递到全局动画管理器的 `fromJSON` 方法。 这将分析所有 JSON 数据, 并从中创建动画数据。 这一过程发生在装入器的端部, 完成所有装入队列中的其他文件。 这样做的理由是允许您同时装入动画数据以及它在同一装入调用中依赖的图像 。
+一旦文件装入完成, 将自动传递到全局动画管理器的 `fromJSON` 方法。 这将分析所有 JSON 数据, 并从中创建动画数据。 这一过程发生在资源加载器的端部, 完成所有装入队列中的其他文件。 这样做的理由是允许您同时装入动画数据以及它在同一装入调用中依赖的图像 。
 
 动画数据一经解析,您就可以使用该数据播放动画。请参见动画管理器 `fromJSON`方法,了解格式和播放的更多细节 。
 
-您也可以使用其密钥访问其缓存中的原始动画数据 :
+您也可以使用其键访问其缓存中的原始动画数据 :
 
 ```javascript
 this.load.animation('baddieAnims', 'files/BaddieAnims.json');
@@ -164,11 +164,11 @@ this.load.animation('baddieAnims', 'files/BaddieAnims.json');
 var data = this.cache.json.get('baddieAnims');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件密钥 。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Waves` , 则最后的密钥是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件键 。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Waves` , 则最后的键是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 数据 ” 而未给出 URL, 那么装入器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 数据 ” 而未给出 URL, 那么资源加载器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
 
 您也可以选择提供 `dataKey` 使用。 这使得您只能提取 JSON 的一部分并将其存储在缓存中, 而不是整个文件。 例如, 如果您的 JSON 数据有这样的结构 :
 
@@ -192,16 +192,16 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.json`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. json" 。 |
 | dataKey | string | 是 | 当动画 JSON 文件加载时,只有此属性会存储在缓存中,并用于创建动画数据. |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AnimationJSONFile.js#L77](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AnimationJSONFile.js#L77)  
@@ -223,7 +223,7 @@ Aseprite是一个强大的动画图案编辑器和像素艺术工具.
 
 在当前负载队列中添加基于 JSON 的 Aseprite 动画,或动画阵列.
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -232,9 +232,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 要在 Aseprite 中导出兼容的 JSON 文件, 请做以下操作 :
 
@@ -278,7 +278,7 @@ function preload ()
 
 这将导出一个 png 和 json 文件, 您可以使用 Aseprite 载入器 来加载 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -314,28 +314,28 @@ this.anims.createFromAseprite('paladin', [ 'step', 'War Cry', 'Magnum Break' ]);
 
 这将只创建定义的 3 个动画。 请注意, 标记名称是区分大小写 。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 注意: 只有在将 Aseprite 文件类型构建为 Phaser 时, 才能装入这类文件。 默认构建中可使用, 但可排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
-| atlasURL | object \| string | 是 | 从中加载纹理地图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| atlasURL | object \| string | 是 | 从中加载纹理图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集 json 文件的 XHR 设置配置对象。 用于替换加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AsepriteFile.js#L114](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AsepriteFile.js#L114)  
@@ -353,7 +353,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加基于 JSON 的纹理图集,或图集阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -362,9 +362,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望在JSON文件中提供地图集数据,使用JSON Hash或JSON阵列格式.
 
@@ -386,7 +386,7 @@ Phaser期望在JSON文件中提供地图集数据,使用JSON Hash或JSON阵列�
 
 Phaser可以装入所有常见的图像类型: png,jpg,gif以及浏览器可以本土处理的任何其他格式.
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -412,11 +412,11 @@ this.add.image(x, y, 'mainmenu', 'background');
 
 要在地图集中找到所有可用框架的清单,请查阅您的文字图集软件。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -442,17 +442,17 @@ this.load.atlas({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.AtlasJSONFileConfig](/api/typedef/types-loader-filetypes#atlasjsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AtlasJSONFileConfig](/api/typedef/types-loader-filetypes#atlasjsonfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AtlasJSONFileConfig](/api/typedef/types-loader-filetypes#atlasjsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AtlasJSONFileConfig](/api/typedef/types-loader-filetypes#atlasjsonfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
-| atlasURL | object \| string | 是 | 从中加载纹理地图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| atlasURL | object \| string | 是 | 从中加载纹理图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集 json 文件的 XHR 设置配置对象。 用于替换加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AtlasJSONFile.js#L109](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AtlasJSONFile.js#L109)  
@@ -470,7 +470,7 @@ this.load.atlas({
 
 在当前负载队列中添加 Phaser 压缩纹理图集,或其中的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -479,15 +479,15 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望地图集数据以Phaser压缩纹理格式(PCT)提供。这是紧凑的面向行的文字格式,通常比等效的JSON地图集描述器小90-95%,但运行时仍可以略微解析。一个`.pct`文件可以描述一个或多个地图集页(纹理图像)。请参看Phaser压缩纹理图集格式规格,以完整描述格式。
 
-它的内部工作方式是您为 PCT 数据文件提供 URL。 Phaser 载入了此文件,解码了它,提取了它需要从页面记录中加载的哪些纹理文件,并排队了每个引用的图像。当所有图像都加载了时,地图集被组装为文本管理器中的单一多源纹理,解码的PCT数据被存储在Atlas缓存的同一密钥下.
+它的内部工作方式是您为 PCT 数据文件提供 URL。 Phaser 载入了此文件,解码了它,提取了它需要从页面记录中加载的哪些纹理文件,并排队了每个引用的图像。当所有图像都加载了时,地图集被组装为文本管理器中的单一多源纹理,解码的PCT数据被存储在Atlas缓存的同一键下.
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -514,28 +514,28 @@ this.add.image(x, y, 'level1', 'background');
 var data = this.cache.atlas.get('level1');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器会从中取下该密钥并创建文件名。 例如, 如果密钥是“ alien” 而未给出 URL, 那么装入器会设置 URL 为“ alien. pct ” 。 它会总是添加 `.pct` , 尽管如果使用对象而不是方法参数, 则会覆盖它 。 如果您不想使用此动作, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器会从中取下该键并创建文件名。 例如, 如果键是“ alien” 而未给出 URL, 那么资源加载器会设置 URL 为“ alien. pct ” 。 它会总是添加 `.pct` , 尽管如果使用对象而不是方法参数, 则会覆盖它 。 如果您不想使用此动作, 那么就提供 URL 。
 
 注意: 只有在将 PCT Atlas 文件类型建入 Phaser 时, 才能装入这类文件。 它在默认的构建中可用, 但可以从自定义构建中排除 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.PCTAtlasFileConfig](/api/typedef/types-loader-filetypes#pctatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PCTAtlasFileConfig](/api/typedef/types-loader-filetypes#pctatlasfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.PCTAtlasFileConfig](/api/typedef/types-loader-filetypes#pctatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PCTAtlasFileConfig](/api/typedef/types-loader-filetypes#pctatlasfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | atlasURL | string | 是 | 装入 PCT 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.pct`, 即如果 `key` 是"外国人", 那么 URL 将是 "alien. pct" 。 |
 | path | string | 是 | 装入PCT数据中定义的纹理时可选用的路径 。 |
 | baseURL | string | 是 | 装入PCT数据中定义的纹理时要使用的可选基址 。 |
-| atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | PCT 数据文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | PCT 数据文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/PCTAtlasFile.js#L251](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/PCTAtlasFile.js#L251)  
@@ -553,7 +553,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加基于 XML 的纹理图集,或数组地图集。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -562,15 +562,15 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望以 XML 文件格式提供地图集数据。 这些文件由诸如Shoebox 和 Adobe Flash / Animate 等软件创建 。
 
 Phaser可以装入所有常见的图像类型: png,jpg,gif以及浏览器可以本土处理的任何其他格式.
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -594,11 +594,11 @@ this.add.image(x, y, 'mainmenu', 'background');
 
 要在地图集中找到所有可用框架的清单,请查阅您的文字图集软件。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -624,17 +624,17 @@ this.load.atlasXML({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | atlasURL | string | 是 | 从中加载纹理图集 xml 数据文件的绝对或相对的 URL 。 如果未定义或 `null` , 则它将被设定为 `<key>.xml` , 即如果 `key` 是"外国人" , 那么 URL 将是 "alien. xml" 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于替换加载器默认 XHR 设置的 XHR 设置对象 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AtlasXMLFile.js#L111](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AtlasXMLFile.js#L111)  
@@ -652,7 +652,7 @@ this.load.atlasXML({
 
 在当前负载队列中添加音频或HTML5Audio文件,或音频文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -661,9 +661,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在装入成功时将文件添加到全局音频缓存。 密钥在装入文件和音频缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从音频缓存中删除 。
+键必须是独一无二的字符串。 它用于在装入成功时将文件添加到全局音频缓存。 键在装入文件和音频缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从音频缓存中删除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -678,7 +678,7 @@ this.load.audio({
 
 URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和`Loader.path`的值会被预设为它们.
 
-由于支持不同音频文件类型的浏览器不同,您通常应该以多种格式提供音频文件。 ogg、 mp3 和 m4a 是最常见的。 如果您提供了一系列 URL, 装入器将根据浏览器支持来确定要加载的_ 1_ 文件 。
+由于支持不同音频文件类型的浏览器不同,您通常应该以多种格式提供音频文件。 ogg、 mp3 和 m4a 是最常见的。 如果您提供了一系列 URL, 资源加载器将根据浏览器支持来确定要加载的_ 1_ 文件 。
 
 如果在游戏中音频已被禁用,或者通过游戏配置,或者设备缺乏支持,那么就不会加载音频.
 
@@ -687,16 +687,16 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | urls | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig)> | 是 | 绝对或相对的URL来从中加载音频文件. |
 | config | any | 是 | 包含 HTML5Audio 的 `instances` 属性的对象。默认为 1 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AudioFile.js#L221](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AudioFile.js#L221)  
@@ -714,7 +714,7 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 
 在当前负载队列中添加基于 JSON 的音频Sprite, 或音频sprite 的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -738,11 +738,11 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
-密钥必须是独一无二的字符串。 它用于在装入成功时将文件添加到全局音频缓存。 密钥在装入文件和音频缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从音频缓存中删除 。
+键必须是独一无二的字符串。 它用于在装入成功时将文件添加到全局音频缓存。 键在装入文件和音频缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从音频缓存中删除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -762,7 +762,7 @@ this.load.audioSprite({
 
 而不是通过一个用于音频 JSON 数据的 URL,你也可以通过一个 井中的 JSON 对象代替。
 
-一旦音频装入完成,您就可以使用它通过引用其密钥创建音频Sprite:
+一旦音频装入完成,您就可以使用它通过引用其键创建音频Sprite:
 
 ```javascript
 this.load.audioSprite('kyobi', 'kyobi.json');
@@ -771,11 +771,11 @@ var music = this.sound.addAudioSprite('kyobi');
 music.play('title');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件的密钥。 例如, 如果前缀是 `MENU.` 而密钥是 `Background`, 则最后的密钥将是 `MENU.Background`, 这就是您从音频缓存中获取音频图示 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件的键。 例如, 如果前缀是 `MENU.` 而键是 `Background`, 则最后的键将是 `MENU.Background`, 这就是您从音频缓存中获取音频图示 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-由于支持不同音频文件类型的浏览器不同,您通常应该以多种格式提供音频文件。 ogg、 mp3 和 m4a 是最常见的。 如果您提供了一系列 URL, 装入器将根据浏览器支持来确定要加载的_ 1_ 文件 。
+由于支持不同音频文件类型的浏览器不同,您通常应该以多种格式提供音频文件。 ogg、 mp3 和 m4a 是最常见的。 如果您提供了一系列 URL, 资源加载器将根据浏览器支持来确定要加载的_ 1_ 文件 。
 
 如果在游戏中音频已被禁用,或者通过游戏配置,或者设备缺乏支持,那么就不会加载音频.
 
@@ -784,18 +784,18 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或一系列对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioSpriteFileConfig](/api/typedef/types-loader-filetypes#audiospritefileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或一系列对象 。 |
 | jsonURL | string | 否 | 绝对或相对的 URL 来从 json 文件装入。 或者一个 良好形成的 JSON 对象来代替 。 |
 | audioURL | string \| Array.\<string> | 是 | 装入音频文件的绝对或相对 URL。 如果是空的, 则通过解析 JSON 文件来获取 。 |
 | audioConfig | any | 是 | 音频配置选项 。 |
-| audioXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 音频文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
-| jsonXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于 json 文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| audioXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 音频文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
+| jsonXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于 json 文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/AudioSpriteFile.js#L143](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AudioSpriteFile.js#L143)  
@@ -813,7 +813,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加二进制文件或二进制文件阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -822,9 +822,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 用于在成功加载时将文件添加到全局二进制缓存。 密钥在装入文件和二进制缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从二进制缓存中删除 。
+键必须是独一无二的字符串。 用于在成功加载时将文件添加到全局二进制缓存。 键在装入文件和二进制缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换一个已有文件, 请在装入新文件之前先从二进制缓存中删除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -846,27 +846,27 @@ this.load.binary('doom', 'files/Doom.wad');
 var data = this.cache.binary.get('doom');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件密钥 。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Data` , 则最后的密钥是 `LEVEL1.Data`, 您会用它从二进制缓存中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件键 。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Data` , 则最后的键是 `LEVEL1.Data`, 您会用它从二进制缓存中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 未指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ doom” 而未给出 URL, 装入器会设置 URL 为“ doom. bin ” 。 它会总是将 `.bin` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
+如果 URL 未指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ doom” 而未给出 URL, 资源加载器会设置 URL 为“ doom. bin ” 。 它会总是将 `.bin` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
 
 注意: 只有在二进制文件类型已建入 Phaser 时, 才有装入这类文件的能力。 它在默认构建中可用, 但可以排除自定义构建中。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.BinaryFileConfig](/api/typedef/types-loader-filetypes#binaryfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.BinaryFileConfig](/api/typedef/types-loader-filetypes#binaryfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.BinaryFileConfig](/api/typedef/types-loader-filetypes#binaryfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.BinaryFileConfig](/api/typedef/types-loader-filetypes#binaryfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.bin`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. bin" 。 |
 | dataType | any | 是 | 可选类型将二进制文件投放到一次装入。 例如, `Uint8Array` 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/BinaryFile.js#L96](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/BinaryFile.js#L96)  
@@ -884,7 +884,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加基于 XML 的位图字体,或字体数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -893,15 +893,15 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望以 XML 文件格式提供字体数据。这些文件由[Angelcode Bitmap Font Generator](http://www.angelcode.com/products/bmfont/),[Littera](http://kvazars.com/littera/)或[Glyph Designer](https://71squared.com/glyphdesigner)等软件创建.
 
 Phaser可以装入所有常见的图像类型: png,jpg,gif以及浏览器可以本土处理的任何其他格式.
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -923,11 +923,11 @@ this.load.bitmapFont('goldenFont', 'images/GoldFont.png', 'images/GoldFont.xml')
 this.add.bitmapText(x, y, 'goldenFont', 'Hello World');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件密钥 。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则 最终密钥是 `MENU.Background`, 这就是您创建位图文本对象时将使用的内容 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件键 。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则 最终键是 `MENU.Background`, 这就是您创建位图文本对象时将使用的内容 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -953,17 +953,17 @@ this.load.bitmapFont({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入字体图像文件的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | fontDataURL | string | 是 | 装入字体 xml 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.xml`, 即如果 `key` 是"外国人", 那么 URL 将是 "alien. xml" 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 字体图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
-| fontDataXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 字体数据 xml 文件的设置对象。 用于替换装入器默认的 XHR 设置 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 字体图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
+| fontDataXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 字体数据 xml 文件的设置对象。 用于替换资源加载器默认的 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/BitmapFontFile.js#L113](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/BitmapFontFile.js#L113)  
@@ -981,7 +981,7 @@ this.load.bitmapFont({
 
 在当前负载队列中添加 CSS 文件,或 CSS 文件的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -990,9 +990,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1007,24 +1007,24 @@ this.load.css({
 
 装入文件完成后, 将会通过 `document.createElement('style')` 自动转换成样式 DOM 元素。 它会将其 `defer` 属性设置为假, 然后生成的元素会附加到 `document.head` 中。 然后将 CSS 样式应用到当前文档中 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器会从中取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器会设置 URL 为“ alien. css ” 。 它会总是添加 `.css`z , 但是如果使用对象而不是方法参数, 则会覆盖它 。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器会从中取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器会设置 URL 为“ alien. css ” 。 它会总是添加 `.css`z , 但是如果使用对象而不是方法参数, 则会覆盖它 。 如果您不想这样做, 那么就提供 URL 。
 
 注意: 只有在将 CSS 文件类型构建为 Phaser 时, 才能具备装入这类文件的能力。 它在默认构建中可以使用, 但可以排除在自定义构建之外 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.CSSFileConfig](/api/typedef/types-loader-filetypes#cssfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.CSSFileConfig](/api/typedef/types-loader-filetypes#cssfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.CSSFileConfig](/api/typedef/types-loader-filetypes#cssfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.CSSFileConfig](/api/typedef/types-loader-filetypes#cssfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.css`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. css" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/CSSFile.js#L93](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/CSSFile.js#L93)  
@@ -1070,7 +1070,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 装入器完成后要排队删除的文件 。 |
+| file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 资源加载器完成后要排队删除的文件 。 |
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1162](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1162)  
@@ -1088,7 +1088,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加字体文件或字体文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1106,9 +1106,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1135,26 +1135,26 @@ this.add.text(x, y, 'Hello World', { fontFamily: 'Nokia', fontSize: 48 });
 
 详情请见[https://developer.mozilla.org/en-US/docs/Web/API/FontFace](https://developer.mozilla.org/en-US/docs/Web/API/FontFace)。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将取下该密钥并创建文件名。 例如, 如果密钥是“ alien ” 而未给出 URL, 那么装入器将设置 URL 成为“ alien. ttf ” 。 它会总是添加 `.ttf` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将取下该键并创建文件名。 例如, 如果键是“ alien ” 而未给出 URL, 那么资源加载器将设置 URL 成为“ alien. ttf ” 。 它会总是添加 `.ttf` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 注意: 只有在字体文件类型已建入 Phaser 时, 才有装入这类文件的能力。 它在默认的构建中可用, 但可以排除自定义构建 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig)> | 否 |  | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig)> | 否 |  | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 |  | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.ttf`, 即如果 `key` 是" 外国人", 那么 URL 将是" alien. ttf" 。 |
 | format | string | 是 | "'truetype'" | 字体类型。 应该是字符串, 如“ truetype ” 或“ opentype ” 。 |
 | descriptors | object | 是 |  | 含有字体面部字体描述符的可选对象。 详见 https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/FontFile.js#L135](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/FontFile.js#L135)  
@@ -1172,7 +1172,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加 GLSL 文件, 或 GLSL 文件的数组。 在 Phaser 3 GLSL 文件中, 仅仅是包含源代码的纯文本文件 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1181,9 +1181,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局阴影缓存。 密钥在装入的文件和在阴影缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从阴影缓存中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局阴影缓存。 键在装入的文件和在阴影缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从阴影缓存中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1204,26 +1204,26 @@ this.load.glsl('plasma', 'shaders/Plasma.glsl');
 var data = this.cache.shader.get('plasma');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件的密钥。 例如, 如果前缀为 `FX.` , 而密钥为 `Plasma` , 最后的密钥为 `FX.Plasma` , 您将使用此来从 Shader 缓存中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件的键。 例如, 如果前缀为 `FX.` , 而键为 `Plasma` , 最后的键为 `FX.Plasma` , 您将使用此来从 Shader 缓存中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 指定不在此指定, 装入器将取下该密钥并创建文件名。 例如, 如果密钥是“ plasma ” 而未给出 URL , 那么装入器将设置 URL 为“ plasma. glsl ” 。 它会总是添加 `.glsl`z 作为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 请提供 URL 。
+如果 URL 指定不在此指定, 资源加载器将取下该键并创建文件名。 例如, 如果键是“ plasma ” 而未给出 URL , 那么资源加载器将设置 URL 为“ plasma. glsl ” 。 它会总是添加 `.glsl`z 作为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 请提供 URL 。
 
 注意: 只有在将 GLSL 文件类型构建为 Phaser 时, 才具有装入这类文件的能力。 它在默认构建中可用, 但可以排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.glsl`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. glsl" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/GLSLFile.js#L105](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/GLSLFile.js#L105)  
@@ -1241,7 +1241,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加 HTML 文件,或 HTML 文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1250,9 +1250,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 HTML 缓存。 密钥在装入的文件和 HTML 缓缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 HTML 缓处理中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 HTML 缓存。 键在装入的文件和 HTML 缓缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 HTML 缓处理中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1273,26 +1273,26 @@ this.load.html('login', 'files/LoginForm.html');
 var data = this.cache.html.get('login');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将被预设为此文件密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Story` , 则最后的密钥将是 `LEVEL1.Story` , 这就是您从 HTML 缓存中获取 html 的用法 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将被预设为此文件键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Story` , 则最后的键将是 `LEVEL1.Story` , 这就是您从 HTML 缓存中获取 html 的用法 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并创建文件名。 例如, 如果密钥是“ 故事 ” 而未给出 URL, 那么装入器将设置 URL 为“ story. html ” 。 它将总是添加 `.html` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并创建文件名。 例如, 如果键是“ 故事 ” 而未给出 URL, 那么资源加载器将设置 URL 为“ story. html ” 。 它将总是添加 `.html` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
 
 注意: 只有在HTML 文件类型已建入 Phaser 时, 才能装入这类文件。 默认的构建中可以使用, 但可以排除自定义构建中的内容 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.HTMLFileConfig](/api/typedef/types-loader-filetypes#htmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.HTMLFileConfig](/api/typedef/types-loader-filetypes#htmlfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.HTMLFileConfig](/api/typedef/types-loader-filetypes#htmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.HTMLFileConfig](/api/typedef/types-loader-filetypes#htmlfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.html`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. html" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/HTMLFile.js#L89](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/HTMLFile.js#L89)  
@@ -1310,7 +1310,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加 HTML 文件,或 HTML 文件的数组。 文件装入后, 将被渲染成纹理, 并存储在纹理管理器中 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1319,9 +1319,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1336,7 +1336,7 @@ this.load.htmlTexture({
 
 详见`Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig`的文件.
 
-文件装入完成后,您可以通过引用游戏对象的密钥,将其作为游戏对象的纹理:
+文件装入完成后,您可以通过引用游戏对象的键,将其作为游戏对象的纹理:
 
 ```javascript
 this.load.htmlTexture('instructions', 'content/intro.html', 256, 512);
@@ -1344,30 +1344,30 @@ this.load.htmlTexture('instructions', 'content/intro.html', 256, 512);
 this.add.image(x, y, 'instructions');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 而未给出 URL, 那么装入器将设置 URL 为“ alien. html ” 。 它会总是将 `.html` 添加为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 而未给出 URL, 那么资源加载器将设置 URL 为“ alien. html ” 。 它会总是将 `.html` 添加为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
 
 宽度和高度是 HTML 将显示的纹理大小。 无法自动确定这些大小, 因此您需要作为参数或文件配置对象提供这些大小。 当 HTML 文件装入了一个新的 SVG 元素时, 将设置一个大小和视图框, 以给出的宽度和高度。 SVG 文件添加了一个机构标记, 其中包括 HTML 文件内容。 然后调用它 。 `window.Blob` 上,如果成功添加到纹理管理器中,则处理失败。所渲染的 HTML 的整体质量取决于您的浏览器,其中一些甚至可能不支持使用的 svg / blob 进程。请注意, HTML 可能包含在 SVG 内部的特性有局限性。 您可以在此找到更多细节 。 [Mozilla MDN entry](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API/Drawing_DOM_objects_into_a_canvas).
 
 注意: 只有在HTMLTextureFile文件类型已建入 Phaser 时, 才能装入这类文件。 默认的构建中可以使用, 但可以排除自定义构建中的内容 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig](/api/typedef/types-loader-filetypes#htmltexturefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig](/api/typedef/types-loader-filetypes#htmltexturefileconfig)> | 否 |  | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig](/api/typedef/types-loader-filetypes#htmltexturefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.HTMLTextureFileConfig](/api/typedef/types-loader-filetypes#htmltexturefileconfig)> | 否 |  | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 |  | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.html`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. html" 。 |
 | width | number | 是 | 512 | HTML 的纹理宽度将被渲染到 。 |
 | height | number | 是 | 512 | HTML 的纹理高度将被渲染到 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/HTMLTextureFile.js#L158](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/HTMLTextureFile.js#L158)  
@@ -1385,7 +1385,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加图像,或图像阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1394,11 +1394,11 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
 Phaser可以装入所有常见的图像类型: png, jpg, gif 和浏览器可以本地处理的任何其他格式。 如果您尝试装入动画的 gif , 将只提供第一个帧。 浏览器不会在本地支持将动画的 gifs 播放到 Canvas 元素 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1411,7 +1411,7 @@ this.load.image({
 
 详见`Phaser.Types.Loader.FileTypes.ImageFileConfig`的文件.
 
-文件装入完成后,您可以通过引用游戏对象的密钥,将其作为游戏对象的纹理:
+文件装入完成后,您可以通过引用游戏对象的键,将其作为游戏对象的纹理:
 
 ```javascript
 this.load.image('logo', 'images/AtariLogo.png');
@@ -1419,11 +1419,11 @@ this.load.image('logo', 'images/AtariLogo.png');
 this.add.image(x, y, 'logo');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -1443,22 +1443,22 @@ this.load.image({
 
 普通地图文件在路径,baseURL,CORS和XHR设置方面与图像文件条件相同. 普通地图只是WebGL的特性.
 
-Phaser 3.60 中新增了属性, 允许您控制图像的加载方式。 默认情况下, 图像会通过 XHR 作为 Blobs 装入。 然而, 您可以在游戏配置中设置 `loader.imageLoadType: "HTMLImageElement"`, 而装入器会通过图像标记装入所有图像 。
+Phaser 3.60 中新增了属性, 允许您控制图像的加载方式。 默认情况下, 图像会通过 XHR 作为 Blobs 装入。 然而, 您可以在游戏配置中设置 `loader.imageLoadType: "HTMLImageElement"`, 而资源加载器会通过图像标记装入所有图像 。
 
 注意: 只有在图像文件类型已建入 Phaser 时, 才能装入这类文件。 它在默认构建中可用, 但可以排除在自定义构建之外 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string \| Array.\<string> | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/ImageFile.js#L241](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ImageFile.js#L241)  
@@ -1474,10 +1474,10 @@ Phaser 3.60 中新增了属性, 允许您控制图像的加载方式。 默认�
 
 **说明:**
 
-装入器是正在装入, 还是正在处理装入的文件 ?
+资源加载器是正在装入, 还是正在处理装入的文件 ?
 
 
-**返回值:** boolean - `true` 如果装货机忙于装货或处理,否则 `false`.
+**返回值:** boolean - `true` 如果资源加载器忙于装货或处理,否则 `false`.
 
 
 > 源码：[src/loader/LoaderPlugin.js#L873](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L873)  
@@ -1493,10 +1493,10 @@ Phaser 3.60 中新增了属性, 允许您控制图像的加载方式。 默认�
 
 **说明:**
 
-装货机准备好开始新的载荷了吗?
+资源加载器准备好开始新的载荷了吗?
 
 
-**返回值:** boolean - 如果装货机准备好开始新的负载,则`true`,否则则`false`.
+**返回值:** boolean - 如果资源加载器准备好开始新的负载,则`true`,否则则`false`.
 
 
 > 源码：[src/loader/LoaderPlugin.js#L886](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L886)  
@@ -1514,7 +1514,7 @@ Phaser 3.60 中新增了属性, 允许您控制图像的加载方式。 默认�
 
 在当前负载队列中添加 JSON 文件,或 JSON 文件的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1523,9 +1523,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 密钥在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 键在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1546,11 +1546,11 @@ this.load.json('wavedata', 'files/AlienWaveData.json');
 var data = this.cache.json.get('wavedata');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件密钥 。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Waves` , 则最后的密钥是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件键 。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Waves` , 则最后的键是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 数据 ” 而未给出 URL, 那么装入器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 数据 ” 而未给出 URL, 那么资源加载器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
 
 您也可以选择提供 `dataKey` 使用。 这使得您只能提取 JSON 的一部分并将其存储在缓存中, 而不是整个文件。 例如, 如果您的 JSON 数据有这样的结构 :
 
@@ -1574,16 +1574,16 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.JSONFileConfig](/api/typedef/types-loader-filetypes#jsonfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | object \| string | 是 | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 它将设定为 `<key>.json`, 即如果 `key` 是“ 外国人 ” 那么 URL 将是“ 外国人 . json ” 。 或者, 可以是完全形成的 JSON 对象 。 |
 | dataKey | string | 是 | 当 JSON 文件加载时, 将只存储此属性到缓存 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/JSONFile.js#L135](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/JSONFile.js#L135)  
@@ -1599,12 +1599,12 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 **说明:**
 
-检查给定文件的密钥和类型, 以查看它是否会与缓存、 纹理管理器、 列表或飞行队列中的任何内容冲突 。
+检查给定文件的键和类型, 以查看它是否会与缓存、 纹理管理器、 列表或飞行队列中的任何内容冲突 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 检查密钥的文件 。 |
+| file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 检查键的文件 。 |
 
 
 **返回值:** boolean - `true`如果添加此文件将引起缓存或队列冲突,否则`false`.
@@ -1628,7 +1628,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 也清除 Sets, 将进度设置为 1 并清除删除队列 。
 
 
-**Fires:** [Phaser.Loader.Events#event:COMPLETE](/api/event/loader-events#complete), [Phaser.Loader.Events#event:POST_PROCESS](/api/event/loader-events#post_process)
+**触发事件:** [Phaser.Loader.Events#event:COMPLETE](/api/event/loader-events#complete), [Phaser.Loader.Events#event:POST_PROCESS](/api/event/loader-events#post_process)
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1126](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1126)  
@@ -1646,7 +1646,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加多纹理图集,或多图集的阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1655,15 +1655,15 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望在JSON文件中提供地图集数据,数据来自4.6.3或以上版本的Texture Packer应用程序,您已经保证使用Phaser 3导出选项。
 
 它的内部工作方式是您为 JSON 文件提供 URL。 Phaser 然后装入 JSON, 解析并提取它还需要装入的纹理文件来完成这一过程。 如果 JSON 也定义了普通的地图, Phaser 也会装入这些文件 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1688,19 +1688,19 @@ this.add.image(x, y, 'level1', 'background');
 
 要在地图集中找到所有可用框架的清单,请查阅您的文字图集软件。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器会设置 URL 为“ alien. json ” 。 它会总是将 `.json` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器会设置 URL 为“ alien. json ” 。 它会总是将 `.json` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想使用此动作, 那么就提供 URL 。
 
 注意: 只有在多图集文件类型已建入 Phaser 时, 才能装入这类文件。 它在默认的构建中可用, 但可以从自定义构建中排除 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.MultiAtlasFileConfig](/api/typedef/types-loader-filetypes#multiatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.MultiAtlasFileConfig](/api/typedef/types-loader-filetypes#multiatlasfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
-| atlasURL | string | 是 | 装入纹理地图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.json`, 即 `key` 是"外国人", 那么 URL 将是 " alien.json" 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.MultiAtlasFileConfig](/api/typedef/types-loader-filetypes#multiatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.MultiAtlasFileConfig](/api/typedef/types-loader-filetypes#multiatlasfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
+| atlasURL | string | 是 | 装入纹理图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.json`, 即 `key` 是"外国人", 那么 URL 将是 " alien.json" 。 |
 | path | string | 是 | 装入地图集数据中定义的纹理时可选使用路径 。 |
 | baseURL | string | 是 | 装入地图集数据中定义的纹理时使用的可选基址 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集 json 文件的 XHR 设置配置对象。 用于替换加载器默认 XHR 设置 。 |
@@ -1709,7 +1709,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/MultiAtlasFile.js#L220](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/MultiAtlasFile.js#L220)  
@@ -1736,7 +1736,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 | success | boolean | 否 | 如果文件成功装入,则使用`true`,否则使用`false`. |
 
 
-**Fires:** [Phaser.Loader.Events#event:FILE_LOAD](/api/event/loader-events#file_load), [Phaser.Loader.Events#event:FILE_LOAD_ERROR](/api/event/loader-events#file_load_error)
+**触发事件:** [Phaser.Loader.Events#event:FILE_LOAD](/api/event/loader-events#file_load), [Phaser.Loader.Events#event:FILE_LOAD_ERROR](/api/event/loader-events#file_load_error)
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1020](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1020)  
@@ -1754,7 +1754,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加 JSON 文件包,或数组包。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1795,11 +1795,11 @@ function preload ()
 
 包文件可以包含一个Phaser可以加载的任意类型的文件的条目。 对象结构完全匹配文件类型配置, 文件类型配置中所有可用的属性也可以在包文件中使用。 条目的`type`是将加载它的方法的名称, 例如“ 图像 ” 。
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 密钥在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 JSON 缓存中。 键在装入文件和JSON 缓存已显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 JSON 缓结中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1812,11 +1812,11 @@ this.load.pack({
 
 详见`Phaser.Types.Loader.FileTypes.PackFileConfig`的文件.
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件密钥 。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Waves` , 则最后的密钥是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将准备到此文件键 。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Waves` , 则最后的键是 `LEVEL1.Waves`, 这就是您从 JSON 缓存中获取文本时所使用的 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 数据 ” 而未给出 URL, 那么装入器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 数据 ” 而未给出 URL, 那么资源加载器将设置 URL 为“ data.json ” 。 它会总是添加 `.json` 作为扩展, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不希望此动作, 那么提供 URL 。
 
 您也可以选择提供 `dataKey` 使用。 这使得您只能提取 JSON 的一部分并将其存储在缓存中, 而不是整个文件。 例如, 如果您的 JSON 数据有这样的结构 :
 
@@ -1840,16 +1840,16 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.json`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. json" 。 |
 | dataKey | string | 是 | 当 JSON 文件加载时, 将只存储此属性到缓存 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/PackFile.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/PackFile.js#L85)  
@@ -1867,7 +1867,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加插件脚本文件,或插件文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -1876,9 +1876,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -1893,26 +1893,26 @@ this.load.plugin({
 
 装入文件完成后, 将自动通过 `document.createElement('script')` 转换为脚本元素。 它的语言将设置为 JavaScript , `defer` 将设定为假, 由此生成的元素将附加到 `document.head` 。 脚本中的任何代码都会执行。 然后传递到 Phaser 插件Cache. register 方法 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
 
 注意: 只有在插件文件类型已建入 Phaser 时, 才有装入这类文件的能力。 默认的构建中可以使用, 但可以排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string \| function | 是 | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是“ 外国人 ” , 那么 URL 将是“ 外国人 . js ” 。 或者, 插件功能 。 |
 | start | boolean | 是 | 装入后自动启动插件吗 ? |
-| mapping | string | 是 | 如果要将此插件注入到场景中, 这就是所用的属性密钥 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| mapping | string | 是 | 如果要将此插件注入到场景中, 这就是所用的属性键 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/PluginFile.js#L137](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/PluginFile.js#L137)  
@@ -1928,14 +1928,14 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 **说明:**
 
-删除资产包中列出的资源。
+删除资源包中列出的资源。
 
-这将动画从动画管理器中移除, 纹理管理器中移除, 而将其它所有资产从各自的缓存中移除。 如果 Pack 存在, 它不会从 JSON 缓存中移除它本身 。 如果 Pack 包含另一个 Pack, 其资源也将被移除 。
+这将动画从动画管理器中移除, 纹理管理器中移除, 而将其它所有资源从各自的缓存中移除。 如果 Pack 存在, 它不会从 JSON 缓存中移除它本身 。 如果 Pack 包含另一个 Pack, 其资源也将被移除 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| packKey | string \| object | 否 | JSON 缓存中的资产包的密钥, 或 Pack 文件数据 。 |
+| packKey | string \| object | 否 | JSON 缓存中的资源包的键, 或 Pack 文件数据 。 |
 | dataKey | string | 是 | Pack 数据中的一个键, 如果您想要处理其中的一节 。 |
 
 
@@ -1952,11 +1952,11 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 **说明:**
 
-重装装货机 。
+重装资源加载器 。
 
 这将清除所有列表并重置基础 URL,路径和前缀 。
 
-警告:如果装入器正在下载文件,或者其队列中有文件,它们将被中止.
+警告:如果资源加载器正在下载文件,或者其队列中有文件,它们将被中止.
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1227](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1227)  
@@ -1977,14 +1977,14 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 创建 DOM 级主锚链接, 指定它为 `download` 锚, 设定 href 为一个基于给定数据的 ObjectURL, 然后引用点击事件 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | * | 否 |  | 数据将被保存。 将会通过 URL. createObjectURL 传递 。 |
 | filename | string | 是 | "file.json" | 要保存文件为的文件名 。 |
 | filetype | string | 是 | "application/json" | 保存文件时要使用的文件类型。 默认为 JSON 。 |
 
 
-**返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 此装入器插件 。
+**返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 此资源加载器插件 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1193](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1193)  
@@ -2005,13 +2005,13 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 数据必须是可以通过`JSON.stringify`序列化的普通的JavaScript对象。不要通过预先串联的JSON字符串。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | * | 否 |  | JSON的数据, 已解析完毕. |
 | filename | string | 是 | "file.json" | 保存 JSON 文件的名称为 。 |
 
 
-**返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 此装入器插件 。
+**返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 此资源加载器插件 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L1175](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L1175)  
@@ -2029,7 +2029,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加外部 Scene 文件,或 Scene 文件的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2038,11 +2038,11 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局场景管理器中 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局场景管理器中 。
 
-对于场景文件来说,关键是密钥要与JavaScript文件中的类名相匹配.
+对于场景文件来说,关键是键要与JavaScript文件中的类名相匹配.
 
 例如这里是源文件 :
 
@@ -2057,7 +2057,7 @@ class ExternalScene extends Phaser.Scene {
 }
 ```
 
-因为类叫做`ExternalScene`, 和你装入时必须用的完全一样的密钥:
+因为类叫做`ExternalScene`, 和你装入时必须用的完全一样的键:
 
 ```javascript
 function preload ()
@@ -2066,9 +2066,9 @@ function preload ()
 }
 ```
 
-在场景管理器内使用的密钥可以设置为同一键,也可以在场景构造器中进行重置,如我们在上面的例子中所做的那样,场景密钥被修改为`myScene`.
+在场景管理器内使用的键可以设置为同一键,也可以在场景构造器中进行重置,如我们在上面的例子中所做的那样,场景键被修改为`myScene`.
 
-键在正在装入的文件和在 Scene 管理器中已经存在的 Scases 中都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换一个已有的文件, 请在装入新文件之前先从 Scene 管理程式中删除 。
+键在正在装入的文件和在 Scene 管理器中已经存在的 Scases 中都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换一个已有的文件, 请在装入新文件之前先从 Scene 管理程式中删除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2089,26 +2089,26 @@ this.load.sceneFile('Level1', 'src/Level1.js');
 this.scene.start('Level1');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件密钥。 例如, 如果前缀是 `WORLD1.` , 而密钥是 `Story`, 最后的密钥是 `WORLD1.Story`, 您会用它从 Scene 管理器中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件键。 例如, 如果前缀是 `WORLD1.` , 而键是 `Story`, 最后的键是 `WORLD1.Story`, 您会用它从 Scene 管理器中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 故事 ” 而未给出 URL, 那么装入器会设置 URL 为“ story.js ” 。 它会总是添加 `.js` 作为扩展, 但是如果使用对象而不是方法参数, 则会覆盖它 。 如果您不希望此动作, 则会提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 故事 ” 而未给出 URL, 那么资源加载器会设置 URL 为“ story.js ” 。 它会总是添加 `.js` 作为扩展, 但是如果使用对象而不是方法参数, 则会覆盖它 。 如果您不希望此动作, 则会提供 URL 。
 
 注意: 只有当 Scene 文件类型已建入 Phaser 时, 才能装入这类文件。 默认的构建中可以使用, 但可以排除自定义构建中的内容 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SceneFileConfig](/api/typedef/types-loader-filetypes#scenefileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/SceneFile.js#L109](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/SceneFile.js#L109)  
@@ -2126,7 +2126,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加一个场景插件脚本文件,或插件文件的阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2135,9 +2135,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2150,28 +2150,28 @@ this.load.scenePlugin({
 
 详见`Phaser.Types.Loader.FileTypes.ScenePluginFileConfig`的文件.
 
-一旦文件装入完成, 将自动通过 `document.createElement('script')` 转换成脚本元素。 它的语言将设置为 JavaScript, `defer` , 将设定为假, 由此生成的元素将附加到 `document.head` 。 脚本中的任何代码都会执行。 然后使用文件密钥从全局的 `window` 对象中检索, 并通过使用 `installScenePlugin` 的插件管理器安装到场景 。
+一旦文件装入完成, 将自动通过 `document.createElement('script')` 转换成脚本元素。 它的语言将设置为 JavaScript, `defer` , 将设定为假, 由此生成的元素将附加到 `document.head` 。 脚本中的任何代码都会执行。 然后使用文件键从全局的 `window` 对象中检索, 并通过使用 `installScenePlugin` 的插件管理器安装到场景 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
 
 注意: 只有在将脚本文件类型构建为 Phaser 时, 才有装入这类文件的能力。 它在默认构建中可用, 但可以排除在自定义构建中 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string \| function | 是 | 装入此文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是“ 外国人 ” , 那么 URL 将是“ 外国人 . js ” 。 或者, 设置为插件功能 。 |
-| systemKey | string | 是 | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性密钥 。 |
-| sceneKey | string | 是 | 如果要将此插件添加到场景中, 这是它属性的密钥 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| systemKey | string | 是 | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性键 。 |
+| sceneKey | string | 是 | 如果要将此插件添加到场景中, 这是它属性的键 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/ScenePluginFile.js#L129](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ScenePluginFile.js#L129)  
@@ -2189,7 +2189,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加脚本文件,或脚本文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2207,9 +2207,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2225,25 +2225,25 @@ this.load.script({
 
 一旦文件装入完成, 它将通过 `document.createElement('script')` 自动转换成脚本元素。 它的语言将被设定为 JavaScript , `defer` 会被设定为虚假, 然后产生的元素将被附加到 `document.head` 中。 脚本中的任何代码都会被执行 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器将设置 URL 以“ alien. js ” 。 它会总是添加 `.js` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不希望此动作, 那么就提供 URL 。
 
 注意: 只有在将脚本文件类型构建为 Phaser 时, 才有装入这类文件的能力。 它在默认构建中可用, 但可以排除在自定义构建中 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig)> | 否 |  | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.ScriptFileConfig](/api/typedef/types-loader-filetypes#scriptfileconfig)> | 否 |  | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 |  | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
 | 类型 | string | 是 | "'script'" | 脚本类型。 如果文件包含导出模块, 则应该为经典 JavaScript 的“ 标语 ” , 或“ 模块 ” 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/ScriptFile.js#L100](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ScriptFile.js#L100)  
@@ -2263,7 +2263,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 与 `ScriptFile` 文件类型的区别在于您给此方法提供了一系列脚本, 然后按此顺序处理脚本 _ 准确_ 这样您就可以装入一组可能互相依赖的脚本, 而不用担心传统脚本加载的同位素性质 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2281,9 +2281,9 @@ function preload ()
 
 在以上代码中,脚本文件都将平行加载,但只按数组给出的确切顺序处理(即引用).
 
-文件是 ** not ** 立即装入。 装入器启动时, 或者已经运行时, 当下一个免费装入槽可用时, 将添加到准备装入的队列中。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。由于文件被排队,这意味着您无法在调用此方法后立即使用文件,但必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 资源加载器启动时, 或者已经运行时, 当下一个免费装入槽可用时, 将添加到准备装入的队列中。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。由于文件被排队,这意味着您无法在调用此方法后立即使用文件,但必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串, 并且还没有被装入器中的另一个文件使用 。
+键必须是独一无二的字符串, 并且还没有被资源加载器中的另一个文件使用 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2310,9 +2310,9 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 注意: 只有在多脚本文件类型已建入 Phaser 时, 才能装入这类文件。 默认的构建中可以使用, 但可以排除自定义构建 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.MultiScriptFileConfig](/api/typedef/types-loader-filetypes#multiscriptfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.MultiScriptFileConfig](/api/typedef/types-loader-filetypes#multiscriptfileconfig)> | 否 |  | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.MultiScriptFileConfig](/api/typedef/types-loader-filetypes#multiscriptfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.MultiScriptFileConfig](/api/typedef/types-loader-filetypes#multiscriptfileconfig)> | 否 |  | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | Array.\<string> | 是 |  | 一组绝对或相对的 URL 来从中加载脚本文件。它们按数组中给出的顺序处理 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为这些文件设置额外的 XHR 设置 。 |
@@ -2321,7 +2321,7 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/MultiScriptFile.js#L113](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/MultiScriptFile.js#L113)  
@@ -2337,11 +2337,11 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 
 **说明:**
 
-如果您想要在此设置任何资产路径之前附加一个 URL 。
+如果您想要在此设置任何资源路径之前附加一个 URL 。
 
-如果允许在游戏代码外配置资产库 URL, 则有用 。
+如果允许在游戏代码外配置资源库 URL, 则有用 。
 
-一旦设置了一个基础 URL, 它会影响装入器从该点开始加载的每个文件。 它会_ not_ 更改任何文件_ 已经加载 。 要重设它, 请使用这个没有参数的调用方法 。
+一旦设置了一个基础 URL, 它会影响资源加载器从该点开始加载的每个文件。 它会_ not_ 更改任何文件_ 已经加载 。 要重设它, 请使用这个没有参数的调用方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2369,7 +2369,7 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 
 文件可以通过在文件配置中指定一个替代的`crossOrigin`值,在每份文件的基础上覆盖这个值.
 
-一旦设定了 COR , 它将会影响装入器从此加载的每个文件, 只要它们没有自己的 COR 设置。 要重设它, 请使用这个没有参数的调用 。
+一旦设定了 COR , 它将会影响资源加载器从此加载的每个文件, 只要它们没有自己的 COR 设置。 要重设它, 请使用这个没有参数的调用 。
 
 有关COR的更多详情,请参见[https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS](https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS)
 
@@ -2432,7 +2432,7 @@ this.load.image("boom", "[http://server.com/explode.png](http://server.com/explo
 
 **说明:**
 
-一个可选的前缀,它自动准备到每个文件密钥的开始.
+一个可选的前缀,它自动准备到每个文件键的开始.
 
 如果前缀是`MENU.`,你用键“背景”加载一个图像,那么产生的键将是`MENU.Background`。
 
@@ -2460,11 +2460,11 @@ this.load.image("boom", "[http://server.com/explode.png](http://server.com/explo
 
 **说明:**
 
-在当前负载队列中添加一个 Sprite 工作表图像,或 Sprite 工作表图像的阵列。
+在当前负载队列中添加一个 精灵表图像,或 精灵表图像的阵列。
 
 Phaser中的“ Sprite Sheet” 一词是指固定大小的工作表。工作表中的每个框架都与数字完全相同,而您使用数字而不是框架名称来引用这些框架。这与文字图集不同,因为其包装方式占用的空间最小,而不是数字。有些文章和软件使用“ Sprite Sheard”一词来表示文字图集,所以请了解您正在实际装入的文件类型。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2473,11 +2473,11 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
 Phaser可以装入所有常见的图像类型: png, jpg, gif 和浏览器可以本地处理的任何其他格式。 如果您尝试装入动画的 gif , 将只提供第一个帧。 浏览器不会在本地支持将动画的 gifs 播放到 Canvas 元素 。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2496,7 +2496,7 @@ this.load.spritesheet({
 
 详见`Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig`的文件.
 
-文件装入完成后,您可以通过引用游戏对象的密钥,将其作为游戏对象的纹理:
+文件装入完成后,您可以通过引用游戏对象的键,将其作为游戏对象的纹理:
 
 ```javascript
 this.load.spritesheet('bot', 'images/robot.png', { frameWidth: 32, frameHeight: 38 });
@@ -2504,11 +2504,11 @@ this.load.spritesheet('bot', 'images/robot.png', { frameWidth: 32, frameHeight: 
 this.add.image(x, y, 'bot', 0);
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `PLAYER.` , 而密钥是 `Running` , 则最后的密钥是 `PLAYER.Running`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `PLAYER.` , 而键是 `Running` , 则最后的键是 `PLAYER.Running`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -2532,21 +2532,21 @@ this.load.spritesheet({
 
 普通地图文件在路径,baseURL,CORS和XHR设置方面与图像文件条件相同. 普通地图只是WebGL的特性.
 
-注意: 只有在Sprite工作表文件类型已建入 Phaser 时, 才能装入这类文件。 它在默认的构建中可用, 但可以从自定义构建中排除 。
+注意: 只有在精灵表文件类型已建入 Phaser 时, 才能装入这类文件。 它在默认的构建中可用, 但可以从自定义构建中排除 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig](/api/typedef/types-loader-filetypes#spritesheetfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig](/api/typedef/types-loader-filetypes#spritesheetfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig](/api/typedef/types-loader-filetypes#spritesheetfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SpriteSheetFileConfig](/api/typedef/types-loader-filetypes#spritesheetfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 | 帧配置对象,至少应该有`frameWidth`属性. |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/SpriteSheetFile.js#L87](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/SpriteSheetFile.js#L87)  
@@ -2562,16 +2562,16 @@ this.load.spritesheet({
 
 **说明:**
 
-启动装入器运行。 这将重置进度和总和, 然后释放一个 `start` 事件。 如果队列中没有任何内容, 装入器将立即完成, 否则它会开始装入第一批文件 。
+启动资源加载器运行。 这将重置进度和总和, 然后释放一个 `start` 事件。 如果队列中没有任何内容, 资源加载器将立即完成, 否则它会开始装入第一批文件 。
 
-如果队列被您所使用 `preload` 方法所覆盖, 装入器将自动启动 。
+如果队列被您所使用 `preload` 方法所覆盖, 资源加载器将自动启动 。
 
 然而,除此之外,你需要叫这个方法来开始它.
 
-如果装入器已经在运行此方法, 将简单地返回 。
+如果资源加载器已经在运行此方法, 将简单地返回 。
 
 
-**Fires:** [Phaser.Loader.Events#event:START](/api/event/loader-events#start)
+**触发事件:** [Phaser.Loader.Events#event:START](/api/event/loader-events#start)
 
 
 > 源码：[src/loader/LoaderPlugin.js#L899](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L899)  
@@ -2589,7 +2589,7 @@ this.load.spritesheet({
 
 在当前负载队列中添加 SVG 文件, 或 SVG 文件的数组。 当文件被装入时, 将将其渲染成位图纹理并存储在纹理管理器中 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2598,9 +2598,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2613,7 +2613,7 @@ this.load.svg({
 
 详见`Phaser.Types.Loader.FileTypes.SVGFileConfig`的文件.
 
-文件装入完成后,您可以通过引用游戏对象的密钥,将其作为游戏对象的纹理:
+文件装入完成后,您可以通过引用游戏对象的键,将其作为游戏对象的纹理:
 
 ```javascript
 this.load.svg('morty', 'images/Morty.svg');
@@ -2621,11 +2621,11 @@ this.load.svg('morty', 'images/Morty.svg');
 this.add.image(x, y, 'morty');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 指定不在此指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ alien” 且没有给出 URL, 那么装入器将设置 URL 为“ alien. svg ” 。 它会总是添加 `.svg` , 但它会使用对象而不是方法参数来覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 指定不在此指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ alien” 且没有给出 URL, 那么资源加载器将设置 URL 为“ alien. svg ” 。 它会总是添加 `.svg` , 但它会使用对象而不是方法参数来覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 您可以在装入 SVG 文件时选择通过 SVG 调整配置对象。 默认情况下, SVG 将变成 SVG 文件属性中定义的相同大小的纹理。 但是, 这并不总是可取的。 您可能希望将 SVG ( 下或上) 的大小调整, 以提高纹理清晰度, 或降低纹理内存消耗 。 您可以指定一个精确的宽度和高度, 将 SVG 的大小调整为:
 
@@ -2677,16 +2677,16 @@ this.load.svg({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.SVGFileConfig](/api/typedef/types-loader-filetypes#svgfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SVGFileConfig](/api/typedef/types-loader-filetypes#svgfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.SVGFileConfig](/api/typedef/types-loader-filetypes#svgfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.SVGFileConfig](/api/typedef/types-loader-filetypes#svgfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL 。 如果未定义或 `null` , 则会设置为 `<key>.svg`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. svg" 。 |
 | svgConfig | [Phaser.Types.Loader.FileTypes.SVGSizeConfig](/api/typedef/types-loader-filetypes#svgsizeconfig) | 是 | svg 大小配置对象 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/SVGFile.js#L202](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/SVGFile.js#L202)  
@@ -2704,7 +2704,7 @@ this.load.svg({
 
 在当前负载队列中添加文本文件或文本文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2713,9 +2713,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局文本缓存。 密钥在装入的文件和文本缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从文本缓存中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局文本缓存。 键在装入的文件和文本缓存中已经显示的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从文本缓存中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2736,26 +2736,26 @@ this.load.text('story', 'files/IntroStory.txt');
 var data = this.cache.text.get('story');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件密钥。 例如, 如果前缀为 `LEVEL1.` 而密钥为 `Story`, 最后的密钥为 `LEVEL1.Story`, 您会用此来从文本缓存中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件键。 例如, 如果前缀为 `LEVEL1.` 而键为 `Story`, 最后的键为 `LEVEL1.Story`, 您会用此来从文本缓存中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 指定不 , 装入器 将取下 URL 并创建文件名。 例如, 如果密钥是 “ 故事 ” 而未给出 URL , 那么装入器 将 URL 设置为 “ story. txt ” 。 它会总是添加 `.txt`Z 以作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不想使用此操作, 那么就提供 URL 。
+如果 URL 指定不 , 资源加载器 将取下 URL 并创建文件名。 例如, 如果键是 “ 故事 ” 而未给出 URL , 那么资源加载器 将 URL 设置为 “ story. txt ” 。 它会总是添加 `.txt`Z 以作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不想使用此操作, 那么就提供 URL 。
 
 注意: 只有在文本文件类型已建入 Phaser 时, 才有装入这类文件的能力。 它在默认的构建中可用, 但可以排除在自定义构建之外 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.txt`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. txt" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/TextFile.js#L95](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TextFile.js#L95)  
@@ -2773,11 +2773,11 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加压缩纹理文件。 此特性仅为 WebGL 。
 
-这种方法需要一个密钥和一个配置对象,它列出了与之相关的不同格式和文件.
+这种方法需要一个键和一个配置对象,它列出了与之相关的不同格式和文件.
 
 纹理格式对象应当以GPU优先级顺序排序,以IMG为最后一个条目.
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 preload ()
@@ -2872,13 +2872,13 @@ ETC ETC1 ATC ATC ABTC PVTC PVRTC S3TC S3TCSRGB 中超联赛 中超联赛 中超�
 
 如果怀疑,两个决议的力量总是安全下注。
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件的密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Data` , 最后的密钥是 `LEVEL1.Data` , 您会用它从 纹理 管理器 中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件的键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Data` , 最后的键是 `LEVEL1.Data` , 您会用它从 纹理 管理器 中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
 与Phaser中的其他文件加载器不同,URL必须包含文件扩展名.
 
@@ -2887,15 +2887,15 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig](/api/typedef/types-loader-filetypes#compressedtexturefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig](/api/typedef/types-loader-filetypes#compressedtexturefileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig](/api/typedef/types-loader-filetypes#compressedtexturefileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig](/api/typedef/types-loader-filetypes#compressedtexturefileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | [Phaser.Types.Loader.FileTypes.CompressedTextureFileConfig](/api/typedef/types-loader-filetypes#compressedtexturefileconfig) | 是 | 压缩纹理配置对象。 如果通过一个配置对象作为 `key` 参数, 则不需要 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/CompressedTextureFile.js#L357](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/CompressedTextureFile.js#L357)  
@@ -2913,7 +2913,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加 CSV Tilemap 文件,或 CSV 文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2924,9 +2924,9 @@ function preload ()
 
 Tilemap CSV数据可以在文本编辑器中创建,也可以在第三方的app中以CSV的形式输出.
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 密钥在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 键在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -2947,26 +2947,26 @@ this.load.tilemapCSV('level1', 'maps/Level1.csv');
 var map = this.make.tilemap({ key: 'level1' });
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Story` , 最后的密钥将是 `LEVEL1.Story`, 这就是您从 Tilemap 缓存中获取文本时所使用的 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Story` , 最后的键将是 `LEVEL1.Story`, 这就是您从 Tilemap 缓存中获取文本时所使用的 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器会从中取下此键并创建文件名。 例如, 如果密钥是“ 级别 ” 而未给出 URL, 那么装入器会设置 URL 为“ 级别 . csv ” 。 它会总是将 `.csv` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不想要此动作, 则提供 URL 。
+如果 URL 尚未指定, 资源加载器会从中取下此键并创建文件名。 例如, 如果键是“ 级别 ” 而未给出 URL, 那么资源加载器会设置 URL 为“ 级别 . csv ” 。 它会总是将 `.csv` 添加为扩展名, 尽管如果使用对象而不是方法参数, 则可以覆盖它 。 如果您不想要此动作, 则提供 URL 。
 
 注意: 只有在将 Tilemap CSV 文件类型构建为 Phaser 时, 才有装入这类文件的能力。 默认的构建中可以使用, 但可以排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.csv`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. csv" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/TilemapCSVFile.js#L104](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapCSVFile.js#L104)  
@@ -2984,7 +2984,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加一个 impact.js Tilemap 文件,或地图文件的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -2995,9 +2995,9 @@ function preload ()
 
 影响Tilemap数据由名为Weltmeister的Information.js地图编辑器创建.
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 密钥在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 键在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -3018,26 +3018,26 @@ this.load.tilemapImpact('level1', 'maps/Level1.json');
 var map = this.make.tilemap({ key: 'level1' });
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Story` , 最后的密钥将是 `LEVEL1.Story`, 这就是您从 Tilemap 缓存中获取文本时所使用的 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将准备到此文件键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Story` , 最后的键将是 `LEVEL1.Story`, 这就是您从 Tilemap 缓存中获取文本时所使用的 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 级别” , 而未给出 URL, 那么装入器将设置 URL 为“ 级别 。 json ” 。 它会总是将 `.json` 添加为扩展名, 但是如果使用对象而不是方法参数, 则会覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 级别” , 而未给出 URL, 那么资源加载器将设置 URL 为“ 级别 。 json ” 。 它会总是将 `.json` 添加为扩展名, 但是如果使用对象而不是方法参数, 则会覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 注意: 只有在将 Tilemap 撞击文件类型构建为 Phaser 时, 才能具备装入这类文件的能力。 默认构建中可使用, 但可排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.TilemapImpactFileConfig](/api/typedef/types-loader-filetypes#tilemapimpactfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapImpactFileConfig](/api/typedef/types-loader-filetypes#tilemapimpactfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TilemapImpactFileConfig](/api/typedef/types-loader-filetypes#tilemapimpactfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapImpactFileConfig](/api/typedef/types-loader-filetypes#tilemapimpactfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.json`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. json" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/TilemapImpactFile.js#L61](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapImpactFile.js#L61)  
@@ -3055,7 +3055,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加一个 Tiled JSON Tilemap 文件,或地图文件的数组。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -3066,9 +3066,9 @@ function preload ()
 
 Tilemap数据是使用Tiled映射编辑器创建的,并选择JSON作为导出格式.
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 密钥在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 Tilemap 缓存。 键在装入文件和已经存在于 Tilemap 补存的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 Tilemap  快取中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -3089,26 +3089,26 @@ this.load.tilemapTiledJSON('level1', 'maps/Level1.json');
 var map = this.make.tilemap({ key: 'level1' });
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Story`, 最后的密钥是 `LEVEL1.Story`, 您将会用此从 Tilemap 缓存中获取地图 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将预设为此文件键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Story`, 最后的键是 `LEVEL1.Story`, 您将会用此从 Tilemap 缓存中获取地图 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 没有指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ 级别” , 而未给出 URL, 那么装入器将设置 URL 为“ 级别 。 json ” 。 它会总是将 `.json` 添加为扩展名, 但是如果使用对象而不是方法参数, 则会覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 没有指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ 级别” , 而未给出 URL, 那么资源加载器将设置 URL 为“ 级别 。 json ” 。 它会总是将 `.json` 添加为扩展名, 但是如果使用对象而不是方法参数, 则会覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 注意: 只有将 Tilemap JSON 文件类型建入 Phaser 时, 才能具备装入这类文件的能力。 默认的构建中可以使用, 但可以排除自定义构建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | object \| string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是“ 外国人 ” 那么 URL 将是“ 外国人. json ” 。 或者, 一个 已形成好的 JSON 对象 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/TilemapJSONFile.js#L61](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapJSONFile.js#L61)  
@@ -3126,7 +3126,7 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 在当前负载队列中添加基于Unity YAML 的纹理图集,或图集阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -3135,15 +3135,15 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-如果您在 `preload` 之外调用此选项, 您负责在之后启动装货机, 并监视其事件, 以了解何时安全使用该资产。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
+如果您在 `preload` 之外调用此选项, 您负责在之后启动资源加载器, 并监视其事件, 以了解何时安全使用该资源。 请查看 Phaser.Loader.LoaderPlugin 的分类 。
 
 Phaser期望地图集数据以YAML格式化文本文件提供,以Unity导出.
 
 Phaser可以装入所有常见的图像类型: png,jpg,gif以及浏览器可以本土处理的任何其他格式.
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 密钥在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的密钥装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局纹理管理器。 键在装入文件和纹理管理器中已经显示的文件方面都应该是独一无二的。 使用已经取入的键装入文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件之前先从纹理管理器中移除它 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -3167,11 +3167,11 @@ this.add.image(x, y, 'mainmenu', 'background');
 
 要在地图集中找到所有可用框架的清单,请查阅您的文字图集软件。
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件密钥。 例如, 如果前缀是 `MENU.` , 而密钥是 `Background` , 则最后的密钥是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix` , 此值将预设到此文件键。 例如, 如果前缀是 `MENU.` , 而键是 `Background` , 则最后的键是 `MENU.Background`, 您会用它从纹理管理器中获取图像 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 尚未指定, 装入器将带走密钥并从中创建文件名。 例如, 如果密钥是“ alien” 且没有给定 URL, 那么装入器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
+如果 URL 尚未指定, 资源加载器将带走键并从中创建文件名。 例如, 如果键是“ alien” 且没有给定 URL, 那么资源加载器会设置 URL 为“ alien. png ” 。 它会总是添加 `.png` 作为扩展名, 但是如果使用对象而不是方法参数, 则可以覆盖它。 如果您不想这样做, 那么就提供 URL 。
 
 Phaser还支持自动加载相关的普通地图。如果您有一张普通地图可以随此图像一起运行,那么您可以通过提供一个阵列来指定它,作为`url`,其中第二个元素是普通地图:
 
@@ -3197,17 +3197,17 @@ this.load.unityAtlas({
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.UnityAtlasFileConfig](/api/typedef/types-loader-filetypes#unityatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.UnityAtlasFileConfig](/api/typedef/types-loader-filetypes#unityatlasfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.UnityAtlasFileConfig](/api/typedef/types-loader-filetypes#unityatlasfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.UnityAtlasFileConfig](/api/typedef/types-loader-filetypes#unityatlasfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | atlasURL | string | 是 | 装入纹理图集数据文件的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.txt`, 即如果 `key` 是“ 外国人” , 那么 URL 将是“ 外国人. txt ” 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
-| atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集数据文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
+| atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集数据文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/UnityAtlasFile.js#L107](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/UnityAtlasFile.js#L107)  
@@ -3223,7 +3223,7 @@ this.load.unityAtlas({
 
 **说明:**
 
-在装入器处于LOADING状态时,每个游戏步骤自动调用一次。检查飞行队列中是否有容量,如果有的话,请调用`checkLoadQueue`,将更多文件从待决列表中移动到活动加载中。
+在资源加载器处于LOADING状态时,每个游戏步骤自动调用一次。检查飞行队列中是否有容量,如果有的话,请调用`checkLoadQueue`,将更多文件从待决列表中移动到活动加载中。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L964](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L964)  
@@ -3242,7 +3242,7 @@ this.load.unityAtlas({
 在加载过程中自动调用。 它更新了 `progress` 值, 然后释放出一个进度事件, 您可以在游戏中显示加载栏 。
 
 
-**Fires:** [Phaser.Loader.Events#event:PROGRESS](/api/event/loader-events#progress)
+**触发事件:** [Phaser.Loader.Events#event:PROGRESS](/api/event/loader-events#progress)
 
 
 > 源码：[src/loader/LoaderPlugin.js#L948](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L948)  
@@ -3260,7 +3260,7 @@ this.load.unityAtlas({
 
 在当前负载队列中添加视频文件或视频文件阵列。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -3269,9 +3269,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局视频缓存。 密钥在装入的文件和已出现在视频缓存的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从视频缓存中删除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局视频缓存。 键在装入的文件和已出现在视频缓存的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从视频缓存中删除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -3287,16 +3287,16 @@ this.load.video({
 
 URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和`Loader.path`的值会被预设为它们.
 
-由于支持不同视频文件类型的浏览器不同,您通常应该以多种格式提供您的视频文件. mp4, mov和webm是最常见的。 如果您提供了一系列URL, 装入器将根据浏览器支持来确定要加载的_ 1_ 文件, 从数组中的第一个开始, 并推进到尾端 。
+由于支持不同视频文件类型的浏览器不同,您通常应该以多种格式提供您的视频文件. mp4, mov和webm是最常见的。 如果您提供了一系列URL, 资源加载器将根据浏览器支持来确定要加载的_ 1_ 文件, 从数组中的第一个开始, 并推进到尾端 。
 
-与大多数资产类型不同,视频不需要_需要_ 预装。 您可以创建一个视频游戏对象, 然后调用其 `loadURL` 方法, 以便在运行时而不是提前装入视频 。
+与大多数资源类型不同,视频不需要_需要_ 预装。 您可以创建一个视频游戏对象, 然后调用其 `loadURL` 方法, 以便在运行时而不是提前装入视频 。
 
 注意: 只有当视频文件类型已建为 Phaser 时, 才能装入这类文件。 它在默认的构建中可用, 但可以排除自定义构建中。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig)> | 否 |  | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig)> | 否 |  | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | urls | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig)> | 是 |  | 绝对或相对的URL从中加载视频文件. |
 | noAudio | boolean | 是 | false | 视频是否有音频音轨? 如果您不能, 您可以启用自动播放 。 |
 
@@ -3304,7 +3304,7 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/VideoFile.js#L117](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/VideoFile.js#L117)  
@@ -3322,7 +3322,7 @@ URL可以是相对的或绝对的。如果URL是相对的,则`Loader.baseURL`和
 
 在当前负载队列中添加 XML 文件,或 XML 文件的数组 。
 
-您可以在您所在的 S`preload` 中调用这种方法, 以及您想要加载的任何其他文件 :
+可以在场景的 `preload` 方法中调用此方法，并在同一阶段加载其他文件。
 
 ```javascript
 function preload ()
@@ -3331,9 +3331,9 @@ function preload ()
 }
 ```
 
-文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是装入器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资产 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资产都已经准备好使用并装入。
+文件是 ** not ** 立即装入。 它会添加到准备装入的队列中, 要么是资源加载器启动时, 要么是已经运行, 要么是下一个空载槽可用时。 如果您从场景内调用此选项, 则会自动发生 。 `preload` 方法,或相关的调回。因为文件排队,这意味着您不能在调用此方法后立即使用文件,而是必须等待文件完成。 Phaser 场景是您在场景中装入资源 `preload` 方法,然后当场景 `create` 方法被称作你保证所有这些资源都已经准备好使用并装入。
 
-密钥必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 XML 缓存中。 密钥在装入的文件和已经出现在 XML 缓缓存中的文件方面都应该是独一无二的。 使用已经取入的密钥加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 XML 缓处理中移除 。
+键必须是独一无二的字符串。 它用于在成功加载时将文件添加到全局 XML 缓存中。 键在装入的文件和已经出现在 XML 缓缓存中的文件方面都应该是独一无二的。 使用已经取入的键加载文件将会导致警告。 如果您想要替换已有文件, 请在装入新文件前先从 XML 缓处理中移除 。
 
 您可以不通过参数而通过配置对象, 例如:
 
@@ -3354,26 +3354,26 @@ this.load.xml('wavedata', 'files/AlienWaveData.xml');
 var data = this.cache.xml.get('wavedata');
 ```
 
-如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件密钥。 例如, 如果前缀是 `LEVEL1.` , 而密钥是 `Waves`, 则 最终密钥是 `LEVEL1.Waves`, 您将使用此来从 XML 缓存中获取文本 。
+如果您在加载器中指定了前缀, 通过 `Loader.setPrefix`, 此值将被预设为此文件键。 例如, 如果前缀是 `LEVEL1.` , 而键是 `Waves`, 则 最终键是 `LEVEL1.Waves`, 您将使用此来从 XML 缓存中获取文本 。
 
-URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 和 `Loader.path` 的值将会被预设到它 。
+URL 可以是相对地址或绝对地址。使用相对地址时，加载器会在前面拼接 `Loader.baseURL` 和 `Loader.path`。
 
-如果 URL 未指定, 装入器将取下密钥并创建文件名。 例如, 如果密钥是“ 数据 ” 而未给出 URL, 那么装入器将设置 URL 为“ data. xml ”。 它会总是添加 `.xml` , 但它会使用对象而不是方法参数来覆盖它。 如果您不希望此动作, 则提供 URL 。
+如果 URL 未指定, 资源加载器将取下键并创建文件名。 例如, 如果键是“ 数据 ” 而未给出 URL, 那么资源加载器将设置 URL 为“ data. xml ”。 它会总是添加 `.xml` , 但它会使用对象而不是方法参数来覆盖它。 如果您不希望此动作, 则提供 URL 。
 
 注意: 只有在 XML 文件类型已建入 Phaser 时, 才能装入这类文件。 默认构建中已有, 但可排除自定义构建中的内容 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig)> | 否 | 此文件使用的密钥, 或文件配置对象, 或其中的数组 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig) | Array.\<[Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig)> | 否 | 此文件使用的键, 或文件配置对象, 或其中的数组 。 |
 | url | string | 是 | 装入此文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.xml`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. xml" 。 |
-| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 
 
 **返回值:** [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) - 装弹机的例子。
 
 
-**Fires:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
+**触发事件:** [Phaser.Loader.Events#event:ADD](/api/event/loader-events#add)
 
 
 > 源码：[src/loader/filetypes/XMLFile.js#L96](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/XMLFile.js#L96)  
@@ -3391,9 +3391,9 @@ URL可以是相对的或绝对的。 如果URL是相对的, 则`Loader.baseURL` 
 
 **说明:**
 
-如果您想要在此设置任何资产路径之前附加一个 URL 。
+如果您想要在此设置任何资源路径之前附加一个 URL 。
 
-如果允许在游戏代码外配置资产库 URL, 则有用 。
+如果允许在游戏代码外配置资源库 URL, 则有用 。
 
 如果您直接设置此属性, 请用“ /” 结尾 。 或者, 拨打 `setBaseURL()` 并为你做 。
 
@@ -3479,7 +3479,7 @@ crossOrigin 值适用于装入的图像。 通常需要设置为“ 无名” �
 
 **说明:**
 
-文件通过`addFile`加入装入器时,会放在此集中.
+文件通过`addFile`加入资源加载器时,会放在此集中.
 
 开始装入时,它们被移到`inflight` Set,并假设成功装入,然后移到`queue` Set,以便进一步处理.
 
@@ -3499,7 +3499,7 @@ crossOrigin 值适用于装入的图像。 通常需要设置为“ 无名” �
 
 **说明:**
 
-装入器认为属于“ 本地” 的所有方案组 。
+资源加载器认为属于“ 本地” 的所有方案组 。
 
 这包含 `Phaser.Core.Config#loaderLocalScheme` 游戏配置设置和默认为 `[ 'file://', 'capacitor://' ]` 。 可以根据需要在此阵列中添加额外的本地方案 。
 
@@ -3521,7 +3521,7 @@ crossOrigin 值适用于装入的图像。 通常需要设置为“ 无名” �
 
 旧浏览器每个域限制6个请求;现代浏览器,尤其是那些拥有HTTP/2的浏览器完全不限制.
 
-默认值为 32, 但您可以在您的 Game Config 中更改此选项, 或者在装入器启动前更改此属性 。
+默认值为 32, 但您可以在您的 Game Config 中更改此选项, 或者在资源加载器启动前更改此属性 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L173)  
@@ -3539,9 +3539,9 @@ crossOrigin 值适用于装入的图像。 通常需要设置为“ 无名” �
 
 在文件失败前重试一个文件的次数 。
 
-此属性由 `File` 对象在创建时读取, 并设定为同名的内部属性, 由装入器本身不使用 。
+此属性由 `File` 对象在创建时读取, 并设定为同名的内部属性, 由资源加载器本身不使用 。
 
-您可以通过 Game Config 设置此值, 或者您可以在装入器启动后的任何时间调整此属性。 但是, 它不会适用于已经添加到装入器的文件, 仅适用于该值被更改后添加的文件 。
+您可以通过 Game Config 设置此值, 或者您可以在资源加载器启动后的任何时间调整此属性。 但是, 它不会适用于已经添加到资源加载器的文件, 仅适用于该值被更改后添加的文件 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L349](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L349)  
@@ -3586,7 +3586,7 @@ this.load.image("boom", "[http://server.com/explode.png](http://server.com/explo
 
 **说明:**
 
-一个可选的前缀, 自动准备到每个文件密钥的开始。 如果前缀是 `MENU.`, 而您加载了密钥“ 背景” 的图像, 则生成的密钥是 `MENU.Background`。 您可以直接设置此选项, 或者调用 `Loader.setPrefix()`。 然后它会影响从此添加到加载器的每个文件 。 它会执行 _ 不_ 更改任何已经载入载重队列的文件 。
+一个可选的前缀, 自动准备到每个文件键的开始。 如果前缀是 `MENU.`, 而您加载了键“ 背景” 的图像, 则生成的键是 `MENU.Background`。 您可以直接设置此选项, 或者调用 `Loader.setPrefix()`。 然后它会影响从此添加到加载器的每个文件 。 它会执行 _ 不_ 更改任何已经载入载重队列的文件 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L115](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L115)  
@@ -3638,7 +3638,7 @@ this.load.image("boom", "[http://server.com/explode.png](http://server.com/explo
 
 **说明:**
 
-拥有这个装入器实例的场景 。
+拥有这个资源加载器实例的场景 。
 
 
 > 源码：[src/loader/LoaderPlugin.js#L66](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L66)  
@@ -3657,7 +3657,7 @@ this.load.image("boom", "[http://server.com/explode.png](http://server.com/explo
 参考全球场景管理器.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/loader/LoaderPlugin.js#L102](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/LoaderPlugin.js#L102)  

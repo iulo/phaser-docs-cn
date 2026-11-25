@@ -2,13 +2,13 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/cameras-scene2d-effects-fade)
 
-相机失效效应.
+摄像机失效效应.
 
-这一效果将在指定时间内将相机的视窗淡化到给定的颜色.
+这一效果将在指定时间内将摄像机的视窗淡化到给定的颜色.
 
-只有相机的视图被淡出。 它显示的物体没有受到影响, 即它们的颜色不会改变 。
+只有摄像机的视图被淡出。 它显示的物体没有受到影响, 即它们的颜色不会改变 。
 
-效果会在相机本身上发出几个事件,您也可以指定一个`onUpdate`调回,在效果持续期间,如果需要,每个帧都会引用.
+效果会在摄像机本身上发出几个事件,您也可以指定一个`onUpdate`调回,在效果持续期间,如果需要,每个帧都会引用.
 
 **构造函数**
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-相机这个效果属于。
+摄像机这个效果属于。
 
 
 > 源码：[src/cameras/2d/effects/Fade.js#L36](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Fade.js#L36)  
@@ -155,7 +155,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 效果完成后内部调用.
 
 
-**Fires:** [Phaser.Cameras.Scene2D.Events#event:FADE_IN_COMPLETE](/api/event/cameras-scene2d-events#fade_in_complete), [Phaser.Cameras.Scene2D.Events#event:FADE_OUT_COMPLETE](/api/event/cameras-scene2d-events#fade_out_complete)
+**触发事件:** [Phaser.Cameras.Scene2D.Events#event:FADE_IN_COMPLETE](/api/event/cameras-scene2d-events#fade_in_complete), [Phaser.Cameras.Scene2D.Events#event:FADE_OUT_COMPLETE](/api/event/cameras-scene2d-events#fade_out_complete)
 
 
 > 源码：[src/cameras/2d/effects/Fade.js#L311](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Fade.js#L311)  
@@ -214,7 +214,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重置此相机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
+重置此摄像机效果。 如果它之前运行过, 它会立即停止, 而不调用它的 onComplete 回调或释放事件 。
 
 
 > 源码：[src/cameras/2d/effects/Fade.js#L332](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Fade.js#L332)  
@@ -230,10 +230,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-相机在指定期间从给定颜色向或向外显示。
+摄像机在指定期间从给定颜色向或向外显示。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | direction | boolean | 是 | true | 淡出方向. `true` = 淡出(透明为颜色), `false` = 淡出(颜色为透明) |
 | duration | number | 是 | 1000 | 效果持续时间以毫秒计. |
@@ -241,14 +241,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | green | number | 是 | 0 | 向绿色通道淡去的金额,数值在0到255之间。 |
 | blue | number | 是 | 0 | 向蓝色通道淡去的金额, 值在 0 到 255 之间 。 |
 | force | boolean | 是 | false | 强制效果立即启动, 即使已经运行 。 |
-| callback | [Phaser.Types.Cameras.Scene2D.CameraFadeCallback](/api/typedef/types-cameras-scene2d#camerafadecallback) | 是 |  | 将在此效果持续期间引用每个帧。 它会被发送两个参数: 引用相机和0到1之间的进度量, 说明效果有多完整 。 |
-| context | any | 是 |  | 引用回调时的上下文。 默认为相机所属的场景 。 |
+| callback | [Phaser.Types.Cameras.Scene2D.CameraFadeCallback](/api/typedef/types-cameras-scene2d#camerafadecallback) | 是 |  | 将在此效果持续期间引用每个帧。 它会被发送两个参数: 引用摄像机和0到1之间的进度量, 说明效果有多完整 。 |
+| context | any | 是 |  | 引用回调时的上下文。 默认为摄像机所属的场景 。 |
 
 
-**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的相机。
+**返回值:** [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) - 开始效果的摄像机。
 
 
-**Fires:** [Phaser.Cameras.Scene2D.Events#event:FADE_IN_START](/api/event/cameras-scene2d-events#fade_in_start), [Phaser.Cameras.Scene2D.Events#event:FADE_OUT_START](/api/event/cameras-scene2d-events#fade_out_start)
+**触发事件:** [Phaser.Cameras.Scene2D.Events#event:FADE_IN_START](/api/event/cameras-scene2d-events#fade_in_start), [Phaser.Cameras.Scene2D.Events#event:FADE_OUT_START](/api/event/cameras-scene2d-events#fade_out_start)
 
 
 > 源码：[src/cameras/2d/effects/Fade.js#L178](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/effects/Fade.js#L178)  
@@ -264,7 +264,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此效果的主要更新环路。 自动由相机调用 。
+此效果的主要更新循环。 自动由摄像机调用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

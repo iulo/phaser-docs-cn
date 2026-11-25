@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Ellipse([x], [y], [width], [height])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 椭圆中心位置的x位置. |
 | y | number | 是 | 0 | 椭圆中心y位置. |
@@ -87,7 +87,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矢量2,其中包含一个点的坐标,这个点根据给定角度在椭圆上。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -242,7 +242,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复制本 `x`, `y`, `width` 财务报告和已审计财务报表 `height` 从“属性”中 `source` 椭圆进入给定 `dest` 椭圆,然后返回 `dest` 椭圆形.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -296,7 +296,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回椭圆对象的界限。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -363,7 +363,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矢量2物体,其中含有一个点的坐标,该点以给定角度为基数,使其正常化至0至1. I. 即0.5的值将在椭圆周围180度给出点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -392,7 +392,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矢量2物体,其中含有一个点的坐标,该点在椭圆周长上,基于给定角度的正态化到0到1之间,即0.5的值会在椭圆周围180度给出点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -422,7 +422,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回含有椭圆周轴周围点坐标的矢量2对象阵列,以给定的数量或stepRate值为基础。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -452,7 +452,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回含有椭圆周轴周围点坐标的矢量2对象阵列,以给定的数量或stepRate值为基础。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -483,7 +483,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从给定椭圆内的任何位置返回一个统一分布的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -530,7 +530,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 以给出的数值来抵消椭圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -560,7 +560,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 以矢量2对象的`x`和`y`属性中给出的值来抵消椭圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -589,7 +589,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从给定椭圆内的任何位置返回一个统一分布的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -663,7 +663,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置此椭圆的大小。 不改变其位置。 如果省略 `height` 参数, 则设置为 `width`, 生成圆 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 否 |  | 椭圆的宽度. |
 | height | number | 是 | "width" | 椭圆形的高度. |

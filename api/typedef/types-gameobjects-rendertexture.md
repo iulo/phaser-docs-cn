@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> RenderTextureConfig {#static-rendertextureconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 风化仪位置的x坐标. |
 | y | number | 是 | 0 | 温德图斯位置的y坐标. |
@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.RenderTexture
+**所属**: Phaser.Types.GameObjects.RenderTexture
 > 源码：[src/gameobjects/rendertexture/typedefs/RenderTextureConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/rendertexture/typedefs/RenderTextureConfig.js#L1)  
 引入版本：3.2.0
 

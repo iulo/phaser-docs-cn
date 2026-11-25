@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-tilemapcsvfile)
 
-一个适合装入器装入的单台图列马普 CSV 文件.
+一个适合资源加载器装入的单台图列马普 CSV 文件.
 
 CSV 平面文件包含一个逗号分隔整数值的网格,每个值代表一个平面图中的瓦片索引。这是Phaser支持的最简单的平面格式之一,对基于网格的基本地图有用。加载后,CSV数据可以使用`this.make.tilemap`来创建您场景中的`Tilemap`对象.
 
@@ -18,7 +18,7 @@ CSV 平面文件包含一个逗号分隔整数值的网格,每个值代表一个
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TilemapCSVFileConfig](/api/typedef/types-loader-filetypes#tilemapcsvfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.csv`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. csv" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -73,7 +73,7 @@ CSV 平面文件包含一个逗号分隔整数值的网格,每个值代表一个
 成功加载和处理后将此文件添加到目标缓存中。
 
 
-**Overrides:** Phaser.Loader.File#addToCache
+**重写:** Phaser.Loader.File#addToCache
 
 
 > 源码：[src/loader/filetypes/TilemapCSVFile.js#L89](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapCSVFile.js#L89)  
@@ -92,7 +92,7 @@ CSV 平面文件包含一个逗号分隔整数值的网格,每个值代表一个
 由 Loader. nextFile 自动调用。 此方法控制了文件在加载数据中的额外工作 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/TilemapCSVFile.js#L73](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapCSVFile.js#L73)  

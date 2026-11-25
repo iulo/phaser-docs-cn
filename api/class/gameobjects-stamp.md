@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个邮票游戏对象.
 
-A Stamp是一个轻量级的游戏对象,它忽略了相机滚动和变形,所以无论相机在哪个位置都总是在屏幕上的固定位置上渲染,这使得HUD,计分计数器,叠加,以及其他不应该随游戏世界移动的屏幕空间元素都变得理想.
+A Stamp是一个轻量级的游戏对象,它忽略了摄像机滚动和变形,所以无论摄像机在哪个位置都总是在屏幕上的固定位置上渲染,这使得HUD,计分计数器,叠加,以及其他不应该随游戏世界移动的屏幕空间元素都变得理想.
 
 它的主要作用是作为动态图渲染的内部帮助者,它用来绘制(印)纹理到动态图表面,而无需整个场景的游戏对象生命周期的顶端,否则它与图像游戏对象在功能上相似.
 
@@ -18,7 +18,7 @@ A Stamp是一个轻量级的游戏对象,它忽略了相机滚动和变形,所�
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 ---

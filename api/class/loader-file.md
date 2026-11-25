@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-file)
 
-装入器可以支持的所有文件类型所使用的基本文件类。 它管理一个文件从队列到下载到处理到完成的生命周期, 处理 XHR 配置、 URL 分辨率、 进度跟踪和错误状态。 您不应该直接创建文件实例, 而是应该用自己的类扩展它, 设置自定义类型并覆盖 `onProcess` 处理已装入的数据的方法。见 `Phaser.Loader.FileTypes` 用于内建文件类型示例。
+资源加载器可以支持的所有文件类型所使用的基本文件类。 它管理一个文件从队列到下载到处理到完成的生命周期, 处理 XHR 配置、 URL 分辨率、 进度跟踪和错误状态。 您不应该直接创建文件实例, 而是应该用自己的类扩展它, 设置自定义类型并覆盖 `onProcess` 处理已装入的数据的方法。见 `Phaser.Loader.FileTypes` 用于内建文件类型示例。
 
 **构造函数**
 
@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入此文件的装入器 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入此文件的资源加载器 。 |
 | fileConfig | [Phaser.Types.Loader.FileConfig](/api/typedef/types-loader#fileconfig) | 否 | 文件配置对象,由文件类型创建. |
 
 ---
@@ -143,7 +143,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-独有缓存密钥( 其文件类型中独一无二)
+独有缓存键( 其文件类型中独一无二)
 
 
 > 源码：[src/loader/File.js#L71](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L71)  
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-引用要装入此文件的装入器 。
+引用要装入此文件的资源加载器 。
 
 
 > 源码：[src/loader/File.js#L39](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L39)  
@@ -191,7 +191,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果这是多部分文件, 即地图集及其 json 一起使用, 那么这个文件就是对母多文件的引用。 设定并被装入器或特定文件类型内部使用 。
+如果这是多部分文件, 即地图集及其 json 一起使用, 那么这个文件就是对母多文件的引用。 设定并被资源加载器或特定文件类型内部使用 。
 
 
 > 源码：[src/loader/File.js#L219](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L219)  
@@ -227,7 +227,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 您可以在文件连接对象中设置此属性值。 如果不存在, 此属性将在创建此文件实例时从 `LoaderPlugin.maxRetries` 属性中读取 。
 
-您可以通过 Game Config 设置此值, 或者可以在装入器启动后的任何时间调整 `LoaderPlugin` 属性。 但是, 它不会适用于已经添加到装入器的文件, 仅适用于该值被更改后添加的文件 。
+您可以通过 Game Config 设置此值, 或者可以在资源加载器启动后的任何时间调整 `LoaderPlugin` 属性。 但是, 它不会适用于已经添加到资源加载器的文件, 仅适用于该值被更改后添加的文件 。
 
 
 > 源码：[src/loader/File.js#L249](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L249)  
@@ -275,7 +275,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-用于在装入器内排序的文件类型字符串(图像,json等).
+用于在资源加载器内排序的文件类型字符串(图像,json等).
 
 
 > 源码：[src/loader/File.js#L57](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L57)  
@@ -400,7 +400,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-检查匹配此文件使用的密钥是否存在于目标缓存中。 由 Loader Plugin 自动调用, 以决定文件是否安全上载或会发生冲突 。
+检查匹配此文件使用的键是否存在于目标缓存中。 由 Loader Plugin 自动调用, 以决定文件是否安全上载或会发生冲突 。
 
 
 **返回值:** boolean - `true` 如果添加此文件将引发冲突, 否则 `false`.
@@ -419,7 +419,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-由装入器调用, 开始实际文件下载。 在装入过程中, 使用 onLoad、 onError 和 onProgress 的方法, 其依据是 XHR 事件。 您通常不应该直接调用这种方法, 而是要由装入器引用 。
+由资源加载器调用, 开始实际文件下载。 在装入过程中, 使用 onLoad、 onError 和 onProgress 的方法, 其依据是 XHR 事件。 您通常不应该直接调用这种方法, 而是要由资源加载器引用 。
 
 
 > 源码：[src/loader/File.js#L301](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L301)  
@@ -456,7 +456,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果装入时文件错误, 则会调用。 重新设置 XHR 状态, 然后将重载的 `retryAttempts` 重新进行调试, 或者在没有尝试重试的情况下, 通过 `nextFile` 向装入器发出失败信号 。
+如果装入时文件错误, 则会调用。 重新设置 XHR 状态, 然后将重载的 `retryAttempts` 重新进行调试, 或者在没有尝试重试的情况下, 通过 `nextFile` 向资源加载器发出失败信号 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -556,7 +556,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | event | ProgressEvent | 否 | DOM进步晚会. |
 
 
-**Fires:** [Phaser.Loader.Events#event:FILE_PROGRESS](/api/event/loader-events#file_progress)
+**触发事件:** [Phaser.Loader.Events#event:FILE_PROGRESS](/api/event/loader-events#file_progress)
 
 
 > 源码：[src/loader/File.js#L417](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L417)  
@@ -572,10 +572,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-一旦文件被添加到缓存中, 即已调用, 并准备从装入器中删除。 它将从装入器 Plugin 中释放一个 `filecomplete` 事件 。
+一旦文件被添加到缓存中, 即已调用, 并准备从资源加载器中删除。 它将从资源加载器 Plugin 中释放一个 `filecomplete` 事件 。
 
 
-**Fires:** [Phaser.Loader.Events#event:FILE_COMPLETE](/api/event/loader-events#file_complete), [Phaser.Loader.Events#event:FILE_KEY_COMPLETE](/api/event/loader-events#file_key_complete)
+**触发事件:** [Phaser.Loader.Events#event:FILE_COMPLETE](/api/event/loader-events#file_complete), [Phaser.Loader.Events#event:FILE_KEY_COMPLETE](/api/event/loader-events#file_key_complete)
 
 
 > 源码：[src/loader/File.js#L524](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/File.js#L524)  

@@ -111,7 +111,7 @@ Bob的垂直翻转状态。 垂直翻转的Bob会使垂直轴( 即倒转) 反转
 Bob用来制作的帧,为了改变帧,采用了`Bob.setFrame`方法.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/blitter/Bob.js#L70](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/blitter/Bob.js#L70)  
@@ -375,7 +375,7 @@ Bob用来制作的帧,为了改变帧,采用了`Bob.setFrame`方法.
 
 **说明:**
 
-更改此 Bob 使用的纹理框架。 框架必须是父 Blitter 使用的纹理的一部分。 如果没有给出值, 则会使用 Blitter 父的默认框架 。
+更改此 Bob 使用的纹理帧。 框架必须是父 Blitter 使用的纹理的一部分。 如果没有给出值, 则会使用 Blitter 父的默认框架 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

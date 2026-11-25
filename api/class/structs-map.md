@@ -19,7 +19,7 @@ var map = new Map([
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| elements | Array.\<*> | 否 | 用于填充此地图的可选密钥值对数组 。 |
+| elements | Array.\<*> | 否 | 用于填充此地图的可选键值对数组 。 |
 
 ---
 
@@ -40,7 +40,7 @@ var map = new Map([
 
 本地图中的条目 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
@@ -78,7 +78,7 @@ var map = new Map([
 
 从此地图中删除所有条目 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
@@ -101,7 +101,7 @@ var map = new Map([
 
 如果此地图中存在值, 返回 `true`。 否则, 返回 `false` 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
@@ -129,7 +129,7 @@ var map = new Map([
 
 从此地图中删除指定的元素 。
 
-**Tags:**
+**标签:**
 
  - genericUse
  - genericUse
@@ -137,7 +137,7 @@ var map = new Map([
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从此地图中删除元素的密钥 。 |
+| key | string | 否 | 从此地图中删除元素的键 。 |
 
 
 **返回值:** [Phaser.Structs.Map](/api/class/structs-map) - 此地图对象 。
@@ -176,7 +176,7 @@ var map = new Map([
 
 如果回调返回 `false`,重复会断裂.
 
-**Tags:**
+**标签:**
 
  - genericUse
  - genericUse
@@ -184,7 +184,7 @@ var map = new Map([
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| callback | EachMapCallback | 否 | 接收此地图中控有的密钥和条目的回调 。 |
+| callback | EachMapCallback | 否 | 接收此地图中控有的键和条目的回调 。 |
 
 
 **返回值:** [Phaser.Structs.Map](/api/class/structs-map) - 此地图对象 。
@@ -205,7 +205,7 @@ var map = new Map([
 
 返回与 `key` 或 `undefined` 相关的数值,如果没有的话。
 
-**Tags:**
+**标签:**
 
  - genericUse
  - genericUse
@@ -213,10 +213,10 @@ var map = new Map([
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从 `Map` 对象返回的元素的密钥 。 |
+| key | string | 否 | 从 `Map` 对象返回的元素的键 。 |
 
 
-**返回值:** * - 如果无法在此地图对象中找到指定的密钥或 `undefined` , 则与该密钥相关的元素 。
+**返回值:** * - 如果无法在此地图对象中找到指定的键或 `undefined` , 则与该键相关的元素 。
 
 
 > 源码：[src/structs/Map.js#L135](https://github.com/phaserjs/phaser/blob/v4.1.0/src/structs/Map.js#L135)  
@@ -234,7 +234,7 @@ var map = new Map([
 
 返回此地图中存储的所有值的 `Array` 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
@@ -255,9 +255,9 @@ var map = new Map([
 
 **说明:**
 
-返回布尔表示一个带有指定密钥的元素是否存在。
+返回布尔表示一个带有指定键的元素是否存在。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
@@ -267,7 +267,7 @@ var map = new Map([
 | key | string | 否 | 测试此地图中存在的元素键 。 |
 
 
-**返回值:** boolean - 如果本地图中存在指定的密钥元素, 返回 `true`, 否则返回 `false` 。
+**返回值:** boolean - 如果本地图中存在指定的键元素, 返回 `true`, 否则返回 `false` 。
 
 
 > 源码：[src/structs/Map.js#L179](https://github.com/phaserjs/phaser/blob/v4.1.0/src/structs/Map.js#L179)  
@@ -283,14 +283,14 @@ var map = new Map([
 
 **说明:**
 
-返回此地图中所有条目密钥的数组。
+返回此地图中所有条目键的数组。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
 
-**返回值:** Array.\<string> - 包含条目密钥的矩阵 。
+**返回值:** Array.\<string> - 包含条目键的矩阵 。
 
 
 > 源码：[src/structs/Map.js#L243](https://github.com/phaserjs/phaser/blob/v4.1.0/src/structs/Map.js#L243)  
@@ -306,14 +306,14 @@ var map = new Map([
 
 **说明:**
 
-将给定的地图中的所有新密钥合并到此地图中。 如果遇到已经存在的密钥, 除非设置为 `true` , 否则将跳过 。
+将给定的地图中的所有新键合并到此地图中。 如果遇到已经存在的键, 除非设置为 `true` , 否则将跳过 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | map | [Phaser.Structs.Map](/api/class/structs-map) | 否 |  | 要合并到此地图的地图 。 |
 | override | boolean | 是 | false | 设定为 `true` , 以源地图中的值替换此地图中的值, 或者 `false` 来跳过它们 。 |
@@ -341,7 +341,7 @@ var map = new Map([
 
 如果您希望在一次呼叫中添加多个元素,则使用`setAll`方法代替.
 
-**Tags:**
+**标签:**
 
  - genericUse
  - genericUse
@@ -372,9 +372,9 @@ var map = new Map([
 
 将给定数组中的所有元素添加到此地图中。
 
-如果密钥已经存在, 则该值将被替换 。
+如果键已经存在, 则该值将被替换 。
 
-**Tags:**
+**标签:**
 
  - generic
  - generic
@@ -383,7 +383,7 @@ var map = new Map([
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| elements | Array.\<*> | 否 | 要填充此地图, 需要一系列的密钥值对 。 |
+| elements | Array.\<*> | 否 | 要填充此地图, 需要一系列的键值对 。 |
 
 
 **返回值:** [Phaser.Structs.Map](/api/class/structs-map) - 此地图对象 。
@@ -404,7 +404,7 @@ var map = new Map([
 
 返回此地图中存储的所有值的 `Array` 。
 
-**Tags:**
+**标签:**
 
  - genericUse
 

@@ -20,7 +20,7 @@ static
 
 如果四个角形锡值中的任何一个与 0xffffff 不同,或者如果 `tintMode` 属性设定为 `MULTIPLY` 以外的任何值,则返回 `true` 。当所有四个角形锡值均为 0xffffff, 锡模式为 `MULTIPLY` 时,返回 `false` , 即默认的未连接状态 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -40,7 +40,7 @@ static
 
 将数值应用到整个游戏对象。返回值为 `tintTopLeft` 当读时。写时,对所有四个角锡克属性都应用相同的颜色值(`tintTopLeft`, `tintTopRight`, `tintBottomLeft`,和 `tintBottomRight`)同时.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -160,7 +160,7 @@ static
 
 立即将颜色值设定为0xffffff,锡模式设定为`MULTIPLY`,这导致纹理没有明显变化.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -193,12 +193,12 @@ static
 
 注意,在 Phaser 3, 如果设定填充, 也会换成锡模式。  in Phaser 4, 锡模式是分开的: 使用 `setTintMode`.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | topLeft | number | 是 | "0xffffff" | 正在应用到游戏对象左上角的锡。 如果没有其他值被给出, 则将整个游戏对象都用锡。 Name |
 | topRight | number | 是 |  | 正在应用到游戏对象右上角的锡. |
@@ -224,7 +224,7 @@ static
 
 折价方法,无用。 Phaser 3, 这将设置锡色, 并设置要填充的锡色模式。 单位 Phaser 4, 使用( 4) `gameObject.setTint(color).setTintMode(Phaser.TintModes.FILL)` 换成是的
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -246,7 +246,7 @@ static
 
 请注意,Phaser 3 中,锡模式和颜色是同时设置的。在Phaser 4 中,它们是单独的设置。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 

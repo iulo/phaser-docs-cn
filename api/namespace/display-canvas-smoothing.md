@@ -72,7 +72,7 @@ static
 | context | CanvasRenderingContext2D \| WebGLRenderingContext | 否 | 画布上下文要检查 。 |
 
 
-**返回值:** string - 控制图像平滑的上下文(`imageSmoothingEnabled`或供应商前缀版本)上的财产名称,或者不支持的`null`。
+**返回值:** string - 控制图像平滑的上下文(`imageSmoothingEnabled`或供应商前缀版本)上的属性名称,或者不支持的`null`。
 
 
 > 源码：[src/display/canvas/Smoothing.js#L24](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/canvas/Smoothing.js#L24)  

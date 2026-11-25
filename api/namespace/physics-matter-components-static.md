@@ -19,7 +19,7 @@ static
 如果机体是静态的,返回`true`,否则返回`false`为动态机体.
 
 
-**返回值:** boolean - 如果身体是静态的,则`true`,否则则`false`.
+**返回值:** boolean - 如果物理体是静态的,则`true`,否则则`false`.
 
 
 > 源码：[src/physics/matter-js/components/Static.js#L34](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/components/Static.js#L34)  
@@ -40,7 +40,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | boolean | 否 | 将身体设置为静态的`true`,或`false`使其动态. |
+| value | boolean | 否 | 将物理体设置为静态的`true`,或`false`使其动态. |
 
 
 **返回值:** [Phaser.Physics.Matter.Components.Static](/api/namespace/physics-matter-components-static) - 此游戏对象实例 。

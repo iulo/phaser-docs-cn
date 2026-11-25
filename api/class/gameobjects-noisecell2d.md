@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个噪声Cell2D游戏对象.
 
-此游戏对象是一个四重奏, 显示细胞噪声。 您可以像其它任何一重奏一样操作此对象, 使其具有交互性, 并用在过滤器和面具中, 以产生视觉惊人的效果 。
+此游戏对象是一个四重奏, 显示细胞噪声。 您可以像其它任何一重奏一样操作此对象, 使其具有交互性, 并用在过滤器和遮罩中, 以产生视觉惊人的效果 。
 
 幕后,一个噪声Cell2D是使用特定遮蔽程序的一个[Phaser.GameObjects.Shader](/api/class/gameobjects-shader).
 
@@ -21,7 +21,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new NoiseCell2D(scene, [config], [x], [y], [width], [height])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | config | [Phaser.Types.GameObjects.NoiseCell2D.NoiseCell2DQuadConfig](/api/typedef/types-gameobjects-noisecell2d#noisecell2dquadconfig) | 是 |  | 此游戏对象的配置 。 |
@@ -438,7 +438,7 @@ Chromium浏览器似乎在WebGL渲染模式之间切换,这改变了噪声遮蔽
 
 数值较低会导致输出重复.
 
-更高的值会打破可见的包。 单元格模式仍然重复离相机。 尽量保持这个值的低, 因为它有助于避免浮点精度错误 。
+更高的值会打破可见的包。 单元格模式仍然重复离摄像机。 尽量保持这个值的低, 因为它有助于避免浮点精度错误 。
 
 这一定是两个数字的数组。
 
@@ -693,7 +693,7 @@ Chromium浏览器似乎在WebGL渲染模式之间切换,这改变了噪声遮蔽
 - 可用一个颜色对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0x000000" | 细胞中间的颜色. |
 | end | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0xffffff" | 细胞边缘的颜色. |

@@ -32,8 +32,8 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| clampFrame | boolean | 是 | 是否夹住纹理框架。 这可以防止线性过滤导致出血, 这对于瓦片大多有用 。 |
-| wrapFrame | boolean | 是 | 是否包扎纹理框架。 这是 TileSprites 所必需 。 |
+| clampFrame | boolean | 是 | 是否夹住纹理帧。 这可以防止线性过滤导致出血, 这对于瓦片大多有用 。 |
+| wrapFrame | boolean | 是 | 是否包扎纹理帧。 这是 TileSprites 所必需 。 |
 
 
 > 源码：[src/renderer/webgl/renderNodes/typedefs/BatchHandlerQuadRenderOptions.js#L29](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/typedefs/BatchHandlerQuadRenderOptions.js#L29)  

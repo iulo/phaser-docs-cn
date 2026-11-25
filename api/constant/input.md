@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L22](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L22)  
@@ -23,7 +23,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L32](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L32)  
@@ -37,7 +37,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/con
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L42](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L42)  
@@ -51,7 +51,7 @@ D - 左边
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L52](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L52)  
@@ -177,7 +177,7 @@ X 按钮( Top)
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L21](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L21)  
@@ -191,7 +191,7 @@ X 按钮( Top)
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L31](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L31)  
@@ -205,7 +205,7 @@ X 按钮( Top)
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L41](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L41)  
@@ -219,7 +219,7 @@ D - 左边
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L51](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L51)  
@@ -485,7 +485,7 @@ D - 左边
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L21](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L21)  
@@ -499,7 +499,7 @@ D - 左边
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L31](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L31)  
@@ -513,7 +513,7 @@ D - 左边
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L41](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L41)  
@@ -527,7 +527,7 @@ D - 左边
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L51](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L51)  

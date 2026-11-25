@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 移位过滤会使用移位图纹理来抵消源图像的像素. 移位图的红色通道控制水平偏移,绿色通道控制垂直偏移。 移位的大小会由控制器的`x`和`y`的量值来缩放, 允许您在运行时创建波, 热潮, 以及类似的扭曲效果 。
 
-这个节点由 [Phaser.Filters.Displacement](/api/class/filters-displacement) 内部使用, 通常不会直接被即时化。 在游戏对象或相机上使用移位过滤器来应用此效果 。
+这个节点由 [Phaser.Filters.Displacement](/api/class/filters-displacement) 内部使用, 通常不会直接被即时化。 在游戏对象或摄像机上使用移位过滤器来应用此效果 。
 
 **构造函数**
 
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | textures | Array.\<WebGLTexture> | 否 | 此渲染的纹理阵列已过。 移位纹理被写入索引 1 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterDisplacement.js#L42](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterDisplacement.js#L42)  
@@ -104,7 +104,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterDisplacement.js#L59](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterDisplacement.js#L59)  

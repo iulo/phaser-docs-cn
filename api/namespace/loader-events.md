@@ -16,7 +16,7 @@ static
 
 **说明:**
 
-装入器插件添加文件事件 。
+资源加载器插件添加文件事件 。
 
 当新文件成功添加到加载器并被放置到加载队列时,此事件会被发送 。
 
@@ -27,9 +27,9 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 添加到装入器中的文件的独有密钥 。 |
+| key | string | 否 | 添加到资源加载器中的文件的独有键 。 |
 | 类型 | string | 否 | [文件类型]QQLink Phaser.Loader.File#类型] 添加到加载器中的文件的字符串,即`image`. |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的装入器插件 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的资源加载器插件 。 |
 | file | [Phaser.Loader.File](/api/class/loader-file) | 否 | 引用加载器中添加的文件 。 |
 
 
@@ -46,16 +46,16 @@ static
 
 **说明:**
 
-装入器插件完成事件 。
+资源加载器插件完成事件 。
 
-当装入器已完全处理装入队列中的所有文件时, 此事件将发出。 到此点, 每个装入的文件都将处于其相关的缓存中, 并准备使用 。
+当资源加载器已完全处理装入队列中的所有文件时, 此事件将发出。 到此点, 每个装入的文件都将处于其相关的缓存中, 并准备使用 。
 
 听听场景用`this.load.on('complete', listener)`
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的装入器插件 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的资源加载器插件 。 |
 | totalComplete | number | 否 | 成功装入的文件总数 。 |
 | totalFailed | number | 否 | 无法装入的文件总数 。 |
 
@@ -75,7 +75,7 @@ static
 
 文件装入完成事件 。
 
-当队列中的 _ 任何_ 文件完成装入时, 由装入器插件发送此事件 。
+当队列中的 _ 任何_ 文件完成装入时, 由资源加载器插件发送此事件 。
 
 听听场景用`this.load.on('filecomplete', listener)`
 
@@ -86,7 +86,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 刚刚装入并完成处理的文件的密钥 。 |
+| key | string | 否 | 刚刚装入并完成处理的文件的键 。 |
 | 类型 | string | 否 | 刚刚装入的文件的[文件类型] QQlink Phaser.Loader.File#类型],即`image`. |
 | data | any | 是 | 文件包含的原始数据。 如果文件是一个多文件, 如地图集或位图字体, 此参数将不被定义 。 |
 
@@ -106,9 +106,9 @@ static
 
 文件装入完成事件 。
 
-当队列中的任何文件完成装入时,此事件由装入器插件发送 。
+当队列中的任何文件完成装入时,此事件由资源加载器插件发送 。
 
-它使用从文件的密钥和类型构建的特殊动态事件名称.
+它使用从文件的键和类型构建的特殊动态事件名称.
 
 例如,如果装上了`image`的键,可以使用以下方法监听: 使用`monster`的键.
 
@@ -134,14 +134,14 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 });
 ```
 
-完成后请务必移除听众,否则如果场景重新装弹,他们将继续开火.
+完成后请务必移除监听器,否则如果场景重新装弹,他们将继续开火.
 
 您也可以收听文件的通用补全。 请参看 [``FILE_COMPLETE``](/api/event/loader-events#file_complete) 事件 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 刚刚装入并完成处理的文件的密钥 。 |
+| key | string | 否 | 刚刚装入并完成处理的文件的键 。 |
 | 类型 | string | 否 | 刚刚装入的文件的[文件类型] QQlink Phaser.Loader.File#类型],即`image`. |
 | data | any | 是 | 文件包含的原始数据。 如果文件是一个多文件, 如地图集或位图字体, 此参数将不被定义 。 |
 
@@ -161,7 +161,7 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 文件装入事件 。
 
-此事件由装入器插件在文件装入完成时发送, 但_ 在_ 之前处理并添加到内部的 Phaser 缓存中 。
+此事件由资源加载器插件在文件装入完成时发送, 但_ 在_ 之前处理并添加到内部的 Phaser 缓存中 。
 
 听听场景用`this.load.on('load', listener)`
 
@@ -186,7 +186,7 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 文件装入错误事件 。
 
-当文件无法装入时, 由装入器插件发送此事件 。
+当文件无法装入时, 由资源加载器插件发送此事件 。
 
 听听场景用`this.load.on('loaderror', listener)`
 
@@ -211,7 +211,7 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 文件加载进度事件 。
 
-如果浏览器收到 DOM 进步Event , 而 `lengthComputable` 事件属性为真实, 则此事件由装入器插件在文件加载时发送。 取决于使用中的文件大小和浏览器大小, 这可能发生, 也可能不会发生 。
+如果浏览器收到 DOM 进步Event , 而 `lengthComputable` 事件属性为真实, 则此事件由资源加载器插件在文件加载时发送。 取决于使用中的文件大小和浏览器大小, 这可能发生, 也可能不会发生 。
 
 听听场景用`this.load.on('fileprogress', listener)`
 
@@ -235,18 +235,18 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 **说明:**
 
-装入器插件后处理事件 。
+资源加载器插件后处理事件 。
 
-当装入器装入了装入队列中的所有内容时, 此事件由装入器插件发送。 它在清除内部列表并销毁每个文件之前发送 。
+当资源加载器装入了装入队列中的所有内容时, 此事件由资源加载器插件发送。 它在清除内部列表并销毁每个文件之前发送 。
 
-使用此钩来进行任何仅能在装入器完成后,但在排放`complete`事件之前进行的文件的最后一分钟处理.
+使用此钩来进行任何仅能在资源加载器完成后,但在排放`complete`事件之前进行的文件的最后一分钟处理.
 
 听听场景用`this.load.on('postprocess', listener)`
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的装入器插件 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的资源加载器插件 。 |
 
 
 > 源码：[src/loader/events/POST_PROCESS_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/events/POST_PROCESS_EVENT.js#L7)  
@@ -262,9 +262,9 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 **说明:**
 
-装入器插件进度事件 。
+资源加载器插件进度事件 。
 
-当装入器更新其载荷进度时,通常由于文件已完成装入,此事件会被发送.
+当资源加载器更新其载荷进度时,通常由于文件已完成装入,此事件会被发送.
 
 听听场景用`this.load.on('progress', listener)`
 
@@ -287,9 +287,9 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 
 **说明:**
 
-装入器插件启动事件 。
+资源加载器插件启动事件 。
 
-当装入器开始运行时, 此事件会被发送。 此时负载进度为 0 。
+当资源加载器开始运行时, 此事件会被发送。 此时负载进度为 0 。
 
 即使负载队列中没有任何文件,此事件也会被发送.
 
@@ -298,7 +298,7 @@ this.load.on('filecomplete-spritesheet-GAMEOVERExplosion', function (key, type, 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的装入器插件 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用发送此事件的资源加载器插件 。 |
 
 
 > 源码：[src/loader/events/START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/events/START_EVENT.js#L7)  

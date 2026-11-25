@@ -2,19 +2,17 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/textures)
 
-纹理管理器的主要作用是创建和存储 Phaser纹理类的例。 纹理类包含 Phaser 内部使用纹理所需的全部数据。 例如, Sprite 包含一个既引用它使用的纹理又引用框架的参考物。 基础纹理存在于全局纹理管理器中。 这意味着多个游戏对象都非常常用相同的纹理实例 。
+纹理管理器负责创建和存储 Phaser 的纹理（Texture）。纹理包含引擎使用它所需的数据。精灵等游戏对象持有对纹理及其所用帧的引用，因此多个对象可以共享同一张纹理。
 
-纹理是由一个或多个框架构成的。 您可以将一个框架视为纹理内部的长方形区域。 通过使用框架, 您可以将一个单一的纹理分割成多个不同的区域。 当告诉一个Sprite使用哪个纹理时, 您也可以告诉它从那个纹理中选择哪个框架使用。 如果您有包含着框架的纹理, 您可以告诉Sprite只使用其中的框 5 。
+一张纹理由一帧或多帧组成。每帧都对应纹理中的一块矩形区域。为精灵指定纹理时，可以进一步选择其中某一帧，例如第 5 帧。
 
-您可能以前听说过Sprite 工作表或纹理图集。 在 Phaser 中, 基础的图案表或图集将是一个单一的纹理实例, 它包含尽可能多的框架实例, 以表示工作表中的框架。 纹理管理器大多数的解析器的任务是拍摄图像和数据文件, 然后根据这些信息创建它所需要的所有框架 。
+在 Phaser 中，一张精灵表（Sprite Sheet）或一个纹理图集（Texture Atlas）对应一个纹理实例，其中包含多个帧。纹理管理器的解析器根据图像与数据文件创建这些帧。
 
-Frames的概念也是Phaser如何处理动画,通过按您定义的顺序,以给定的帧率"播放"这些帧.
-
-纹理有更先进的类型,例如动态纹理和Canvas纹理,我们稍后会覆盖这些纹理。但从根本上来说,Phaser游戏对象大多使用纹理和框架来进行屏幕的渲染。
+动画通过按指定的顺序和帧率显示各帧来实现。后文还会介绍动态纹理和画布纹理的用法。
 
 ## 纹理 {#textures}
 
-**纹理** 拥有密钥, 第一个帧名称, 帧图, 一个或多个源图像( 扫描、 图像、 视频) , 以及 0 或多个数据源图像( 正常地图 ) 。 有三个纹理类, [CanvasTexture](/api/class/textures-canvastexture)、 [DynamicTexture](/api/class/textures-dynamictexture)和 [Texture](/api/class/textures-texture) 。
+**纹理** 拥有键, 第一个帧名称, 帧映射, 一个或多个源图像( 扫描、 图像、 视频) , 以及 0 或多个数据源图像( 法线贴图 ) 。 有三个纹理类, [CanvasTexture](/api/class/textures-canvastexture)、 [DynamicTexture](/api/class/textures-dynamictexture)和 [Texture](/api/class/textures-texture) 。
 
 最大纹理尺寸取决于设备;您可以检查`renderer.getMaxTextureSize()`. 移动的2048px和桌面的4096px应该安全.
 
@@ -24,15 +22,15 @@ Frames的概念也是Phaser如何处理动画,通过按您定义的顺序,以给
 - 失踪: `'__MISSING'`
 - 4x4 白色: `'__WHITE'`
 
-### 在管理器中获取纹理密钥 {#get-texture-keys-in-the-manager}
+### 获取纹理管理器中的纹理键 {#get-texture-keys-in-the-manager}
 
 ```js
 const keys = this.textures.getTextureKeys(); // → ['mummy', 'bat', 'torch', …]
 ```
 
-### 从管理器那里取出纹理 {#get-a-texture-from-the-manager}
+### 从纹理管理器获取纹理 {#get-a-texture-from-the-manager}
 
-`textures.get()` ** 总是** 返回一个纹理; 如果没有这样的密钥, 它将是 `__MISSING` 纹理。 所以您应该先使用 `textures.exists()` 。
+`textures.get()` ** 总是** 返回一个纹理; 如果没有这样的键, 它将是 `__MISSING` 纹理。 所以您应该先使用 `textures.exists()` 。
 
 ```js
 const texture = this.textures.exists("mummy")
@@ -67,7 +65,7 @@ var texture = this.textures.generate(key, config);
 var hasKey = this.textures.exists(key);
 ```
 
-### 获取基座64 {#get-base64}
+### 获取 Base64 数据 {#get-base64}
 
 ```js
 var s = this.textures.getBase64(key); // type= 'image/png', encoderOptions= 0.92
@@ -105,7 +103,7 @@ alpha : 0 ~ 255
 this.textures.remove(key);
 ```
 
-### 装入图像用于纹理 {#loading-images-for-textures}
+### 加载纹理所用的图像 {#loading-images-for-textures}
 
 通常您不会直接创建纹理。 Phaser 会在您装入图像时为您创建纹理 。
 
@@ -120,7 +118,7 @@ Phaser可以使用浏览器可以显示的[any image format](https://developer.m
 
 - [How to create sprite sheets for Phaser 3 with TexturePacker](https://www.codeandweb.com/texturepacker/tutorials/how-to-create-sprite-sheets-for-phaser3)
 
-#### 使用量 {#usage}
+#### 用法 {#usage}
 
 - 装入图像纹理
 
@@ -149,7 +147,7 @@ Phaser可以使用浏览器可以显示的[any image format](https://developer.m
   var texture = this.textures.get(frameObject);
   ```
 
-### 完整图像的纹理 {#textures-from-complete-images}
+### 使用完整图像作为纹理 {#textures-from-complete-images}
 
 如果您已经有一个完整的 [image](https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement "HTMLImageElement") 或 [canvas](https://developer.mozilla.org/en-US/docs/Web/API/HTMLCanvasElement) , 您可以直接使用 `addImage()` 、 `addSpriteSheet()` 、 `addAtlas()` 等方法将其添加到纹理管理器中。 这些方法与相应的负载方法非常相似, 但是它们会采用 `sourceImage` 参数( 图像或画布) 而不是 URL 。
 
@@ -164,7 +162,7 @@ this.textures.addImage(
 
 ### 画布纹理 {#canvas-texture}
 
-罐装纹理有以[2d rendering context](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)为源的[canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)。您可以使用其中的任何一种[Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)。您可以绘制其上的纹理框架,但不能绘制游戏对象(参见动态纹理) 。
+罐装纹理有以[2d rendering context](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D)为源的[canvas](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/canvas)。您可以使用其中的任何一种[Canvas API](https://developer.mozilla.org/en-US/docs/Web/API/Canvas_API)。您可以绘制其上的纹理帧,但不能绘制游戏对象(参见动态纹理) 。
 
 您可以用 `createCanvas()` 创建空白画布纹理 :
 
@@ -174,7 +172,7 @@ this.textures.addImage(
 
 `const texture = this.textures.addCanvas('key', canvas);`
 
-使用 `drawFrame()` 在 Canvas 纹理上绘制另一个纹理框架 :
+使用 `drawFrame()` 在 Canvas 纹理上绘制另一个纹理帧 :
 
 `texture.drawFrame('mummy', 1, x, y);`
 
@@ -201,7 +199,7 @@ texture.refresh();
 
 若在绘制后需要使用`getPixel()`或`getPixels()`,请拨打`update()`而不是`refresh()`.
 
-#### 使用量 {#usage-1}
+#### 用法 {#usage-1}
 
 - 创建画布纹理
 
@@ -311,7 +309,7 @@ texture.refresh();
 
 动态纹理(Dynamic Texture)是一种特殊的纹理,它允许您直接绘制纹理,帧和最类游戏对象.
 
-#### 使用量 {#usage-2}
+#### 用法 {#usage-2}
 
 - 创建动态纹理
 
@@ -365,15 +363,15 @@ texture.refresh();
     - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
     - 平面图层.
     - A组,内容将依次加以修改和绘制。
-    - 集装箱,内装物将按顺序完全悬挂和抽取。
+    - 容器,内装物将按顺序完全悬挂和抽取。
     - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
     - 另一种动态纹理,或称Render纹理.
-    - 纹理框架实例 。
+    - 纹理帧实例 。
     - 字符串。 用于从纹理管理器中查找纹理 。
   - `x`, `y`: 绘制框架的 x/y 位置,或对对象应用的偏移.
-    - 如果物体是团体、集装箱或显示清单,则坐标为_在儿童位置上加_。
+    - 如果物体是团体、容器或显示清单,则坐标为_在儿童位置上加_。
     - 对于所有其他类型的天体,坐标是准确的.
-  - `alpha`,`tint`:只有纹理框架使用.
+  - `alpha`,`tint`:只有纹理帧使用.
     - 游戏对象在绘制时使用自己的α和锡值.
 
 - Erase
@@ -387,13 +385,13 @@ texture.refresh();
     - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
     - 平面图层.
     - A组,内容将依次加以修改和绘制。
-    - 集装箱,内装物将按顺序完全悬挂和抽取。
+    - 容器,内装物将按顺序完全悬挂和抽取。
     - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
     - 另一种动态纹理,或称Render纹理.
-    - 纹理框架实例 。
+    - 纹理帧实例 。
     - 字符串。 用于从纹理管理器中查找纹理 。
   - `x`, `y`: 绘制框架的 x/y 位置,或对对象应用的偏移.
-    - 如果物体是团体、集装箱或显示清单,则坐标为_在儿童位置上加_。
+    - 如果物体是团体、容器或显示清单,则坐标为_在儿童位置上加_。
     - 对于所有其他类型的天体,坐标是准确的.
 
 - 绘制框架
@@ -472,10 +470,10 @@ texture.refresh();
          - 任意可渲染的游戏对象,例如Sprite,Text,Graphics或TileSprite.
          - 平面图层.
          - A组,内容将依次加以修改和绘制。
-         - 集装箱,内装物将按顺序完全悬挂和抽取。
+         - 容器,内装物将按顺序完全悬挂和抽取。
          - 一个场景显示列表,通过`Scene.children`来绘制整个列表.
          - 另一种动态纹理,或称Render纹理.
-         - 纹理框架实例 。
+         - 纹理帧实例 。
          - 字符串。 用于从纹理管理器中查找纹理 。
 
      - 绘制框架
@@ -505,9 +503,9 @@ texture.refresh();
      texture.endDraw();
      ```
 
-- 内部相机
+- 内部摄像机
 
-  内部相机 `texture.camera`
+  内部摄像机 `texture.camera`
 
   - 滚动( 抵销)
 
@@ -571,7 +569,7 @@ texture.refresh();
 
     - `colorObject` : 或 被抓取一个像素的颜色对象, 或 包含画布内容的快照的新图像 。
 
-#### 纹理 {#render-texture}
+#### 渲染纹理 {#render-texture}
 
 成形纹理本质上是握有动态纹理的[Image](/api/class/gameobjects-image).
 
@@ -613,7 +611,7 @@ texture.refresh();
   this.textures.on("removetexture-" + key, function () {});
   ```
 
-## 框架 {#frames}
+## 帧 {#frames}
 
 **框架** 框架有一个名称、位置、几个维度( `realWidth`和 `realHeight` 最重要) , 以及一个可选的自定义枢轴。 文件称框架名称为“ 名称”(用于地图集纹理) 和“ 索引”(用于图示表纹理) , 但它们都是相同的。 所有纹理都有一个特殊的框架, 名为“ `__BASE`”, 代表整个纹理 。
 
@@ -621,7 +619,7 @@ texture.refresh();
 
 内置纹理有三种: 内置纹理: 内置纹理: `__DEFAULT` (32×32透明), `__MISSING` (32×32绿色斜箱),和 `__WHITE` (4×4白). 杭州市志·人物志·人物志·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物·人物
 
-### 获取纹理框架名称 {#get-frame-names-for-a-texture}
+### 获取纹理的帧名称 {#get-frame-names-for-a-texture}
 
 ```js
 const frameNames = this.textures.get("mummy").getFrameNames(); // → [0, 1, 2, …]
@@ -629,7 +627,7 @@ const frameNames = this.textures.get("mummy").getFrameNames(); // → [0, 1, 2, 
 
 - [Example: Get frame names from atlas texture](https://labs.phaser.io/edit.html?src=src/loader\texture%20atlas%20json\load%20texture%20atlas.js)
 
-### 获取全部纹理密钥和框架名称 {#get-all-texture-keys-and-frame-names}
+### 获取所有纹理键与帧名称 {#get-all-texture-keys-and-frame-names}
 
 ```js
 for (const textureKey of this.textures.getTextureKeys()) {
@@ -637,9 +635,9 @@ for (const textureKey of this.textures.getTextureKeys()) {
 }
 ```
 
-### 从纹理中获取一个框架 {#get-a-frame-from-a-texture}
+### 从纹理中获取一帧 {#get-a-frame-from-a-texture}
 
-#### 使用量 {#usage-3}
+#### 用法 {#usage-3}
 
 - 从纹理中获取框架
 
@@ -679,7 +677,7 @@ this.textures.get("mummy").setFilterMode(Phaser.Textures.FilterMode.NEAREST);
 this.textures.get("mummy").setFilterMode(Phaser.Textures.FilterMode.LINEAR);
 ```
 
-##### 从游戏对象工作 {#working-from-a-game-object}
+##### 从游戏对象访问纹理 {#working-from-a-game-object}
 
 游戏对象的`texture`和`frame` 持有其当前纹理和帧,所以你可以在那里访问它们而不是从纹理管理器进入它们。只需记住你正在和共享对象合作.
 
@@ -692,7 +690,7 @@ console.log(mummy.frame.name); // → 1
 const mummyFrame1 = mummy.texture.get(1);
 ```
 
-### 设置自定义枢轴点( 来源) {#setting-custom-pivot-points-origin}
+### 设置自定义枢轴点（原点） {#setting-custom-pivot-points-origin}
 
 ```js
 for (const frame of Object.values(this.textures.get("sprites").frames)) {
@@ -708,7 +706,7 @@ for (const frame of Object.values(this.textures.get("sprites").frames)) {
 }
 ```
 
-### 添加框架 {#add-frames}
+### 添加帧 {#add-frames}
 
 `texture.add(frameName, sourceIndex, x, y, width, height);`
 
@@ -748,7 +746,7 @@ this.load.once("filecomplete-image-example", () => {
 
 在实践中,您通常会添加帧来创建多帧的Canvas纹理或动态纹理(见下文).
 
-### 添加地图集 {#add-atlas}
+### 添加纹理图集 {#add-atlas}
 
 ```js
 this.textures.addAtlas(key, HTMLImageElement, data);
@@ -793,7 +791,7 @@ this.textures.addAtlas(key, HTMLImageElement, data);
   }
   ```
 
-- `dataSource`:一个可选的数据图像元素(正常地图).
+- `dataSource`:一个可选的数据图像元素(法线贴图).
 
 or
 
@@ -804,7 +802,7 @@ this.textures.addAtlas(undefined, texture, data);
 
 - `texture` : Phaser 纹理.
 
-### 添加图示工作表 {#add-sprite-sheet}
+### 添加精灵表 {#add-sprite-sheet}
 
 ```js
 this.textures.addSpriteSheet(key, HTMLImageElement, config);
@@ -813,7 +811,7 @@ this.textures.addSpriteSheet(key, HTMLImageElement, config);
 
 - `key`:纹理中独特的基于字符串的键.
 - `HTMLImageElement`: HTML 图像元素/s.
-- `config`: 此Sprite工作表的配置对象 。
+- `config`: 此精灵表的配置对象 。
 
   ```js
   {
@@ -826,7 +824,7 @@ this.textures.addSpriteSheet(key, HTMLImageElement, config);
   }
   ```
 
-- `dataSource`:一个可选的数据图像元素(正常地图).
+- `dataSource`:一个可选的数据图像元素(法线贴图).
 
 or
 

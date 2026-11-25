@@ -81,7 +81,7 @@ Phaser中所有游戏对象扩展的基类.
 
 **说明:**
 
-如果启用此游戏对象用于Arcade或物质物理, 那么此属性将包含一个物理实体的引用 。
+如果启用此游戏对象用于Arcade或Matter 物理, 那么此属性将包含一个物理实体的引用 。
 
 
 > 源码：[src/gameobjects/GameObject.js#L235](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L235)  
@@ -97,7 +97,7 @@ Phaser中所有游戏对象扩展的基类.
 
 **说明:**
 
-如果此游戏对象是否由相机绘制, 控制此位码。 通常不直接设定, 而是直接调用 `Camera.ignore`, 但是您可以直接使用相机设置此属性 。 id 属性 :
+如果此游戏对象是否由摄像机绘制, 控制此位码。 通常不直接设定, 而是直接调用 `Camera.ignore`, 但是您可以直接使用摄像机设置此属性 。 id 属性 :
 
 
 > 源码：[src/gameobjects/GameObject.js#L180](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L180)  
@@ -113,7 +113,7 @@ Phaser中所有游戏对象扩展的基类.
 
 **说明:**
 
-数据管理器。 它允许您存储、 查询和获取此游戏对象特有的密钥/ 值配对信息。 `null` 默认情况下, 如果您使用 `getData` 或 `setData` 或 `setDataEnabled` , 将自动创建 。
+数据管理器。 它允许您存储、 查询和获取此游戏对象特有的键/ 值配对信息。 `null` 默认情况下, 如果您使用 `getData` 或 `setData` 或 `setDataEnabled` , 将自动创建 。
 
 
 > 源码：[src/gameobjects/GameObject.js#L156](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L156)  
@@ -215,7 +215,7 @@ Phaser中所有游戏对象扩展的基类.
 
 **说明:**
 
-如果有, 此游戏对象的母容器 。
+如果有, 此游戏对象的父容器 。
 
 
 > 源码：[src/gameobjects/GameObject.js#L113](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L113)  
@@ -325,11 +325,11 @@ Phaser本身永远不会修改这个值,尽管插件可能这样做.
 
 - `safe` - 如果对象是"安全",则采用圆形.
 
-- `safeAuto` - 如果对象是"安全",且相机已启用`roundPixels`,则采用圆形.
+- `safeAuto` - 如果对象是"安全",且摄像机已启用`roundPixels`,则采用圆形.
 
 - `full` - 圆圈式总是应用.
 
-- `fullAuto` - 如果相机启用了`roundPixels`,则总是采用圆形.
+- `fullAuto` - 如果摄像机启用了`roundPixels`,则总是采用圆形.
 
 A'safe' 对象是渲染时不会被任何变换矩阵旋转或缩放的对象。 有效的变换是一个简单的翻译。 在这种情况下, 舍入会同样影响所有顶点 。
 
@@ -446,7 +446,7 @@ A'safe' 对象是渲染时不会被任何变换矩阵旋转或缩放的对象。
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:ADDED_TO_SCENE](/api/event/scenes-events#added_to_scene), [Phaser.GameObjects.Events#event:ADDED_TO_SCENE](/api/event/gameobjects-events#added_to_scene)
+**触发事件:** [Phaser.Scenes.Events#event:ADDED_TO_SCENE](/api/event/scenes-events#added_to_scene), [Phaser.GameObjects.Events#event:ADDED_TO_SCENE](/api/event/gameobjects-events#added_to_scene)
 
 
 > 源码：[src/gameobjects/GameObject.js#L816](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L816)  
@@ -494,15 +494,15 @@ A'safe' 对象是渲染时不会被任何变换矩阵旋转或缩放的对象。
 如果您只是想要暂时禁用一个对象, 那么请看看使用游戏对象池而不是销毁它, 因为已销毁的对象无法复活 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | fromScene | boolean | 是 | false | `True` 如果游戏对象被场景所破坏, `false` 如果不是的话。 |
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
-**Fires:** [Phaser.GameObjects.Events#event:DESTROY](/api/event/gameobjects-events#destroy)
+**触发事件:** [Phaser.GameObjects.Events#event:DESTROY](/api/event/gameobjects-events#destroy)
 
 
 > 源码：[src/gameobjects/GameObject.js#L987](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L987)  
@@ -525,7 +525,7 @@ A'safe' 对象是渲染时不会被任何变换矩阵旋转或缩放的对象。
 如果想要完全删除此游戏对象的交互,则使用`removeInteractive`来代替.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | resetCursor | boolean | 是 | false | 当前活动的输入光标( 如果有的话) 是否应该重置到默认光标上 ? |
 
@@ -546,9 +546,9 @@ A'safe' 对象是渲染时不会被任何变换矩阵旋转或缩放的对象。
 
 **说明:**
 
-获取此游戏对象数据管理器中给定的密钥的值, 或者如果不存在, 则未定义 。
+获取此游戏对象数据管理器中给定的键的值, 或者如果不存在, 则未定义 。
 
-您也可以通过 `values` 对象访问值。 例如, 如果您有名为 `gold` 的密钥, 您也可以这样做 :
+您也可以通过 `values` 对象访问值。 例如, 如果您有名为 `gold` 的键, 您也可以这样做 :
 
 ```javascript
 sprite.getData('gold');
@@ -560,7 +560,7 @@ sprite.getData('gold');
 sprite.data.values.gold;
 ```
 
-您也可以在一系列密钥中通过,在这种情况下,返回一系列的值:
+您也可以在一系列键中通过,在这种情况下,返回一系列的值:
 
 ```javascript
 sprite.getData([ 'gold', 'armor', 'health' ]);
@@ -571,7 +571,7 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| Array.\<string> | 否 | 要检索的值的密钥, 或一系列密钥 。 |
+| key | string \| Array.\<string> | 否 | 要检索的值的键, 或一系列键 。 |
 
 
 **返回值:** * - 属于给定键的值,或一系列值,其顺序将匹配输入数组.
@@ -590,7 +590,7 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 
 **说明:**
 
-返回包含此游戏对象的显示列表_array_的参考,如果有,该列表将要么是Scene的显示列表,要么是属于其母容器的内部列表。
+返回包含此游戏对象的显示列表_array_的参考,如果有,该列表将要么是Scene的显示列表,要么是属于其父容器的内部列表。
 
 如果此游戏对象不在显示列表或容器中,则会返回 `null`.
 
@@ -613,7 +613,7 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 
 **说明:**
 
-返回包含此游戏对象的显示列表索引的数组, 或者如果它有一个, 其母容器。 然后它会通过所有母容器进行移动, 直到它击中显示列表的根( 返回的数组中为索引 0) 。
+返回包含此游戏对象的显示列表索引的数组, 或者如果它有一个, 其父容器。 然后它会通过所有父容器进行移动, 直到它击中显示列表的根( 返回的数组中为索引 0) 。
 
 输入程序内部使用, 但如果您想要找到此游戏对象及其所有祖先的显示深度, 也会有用 。
 
@@ -634,19 +634,19 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 
 **说明:**
 
-增加此游戏对象数据管理器中给定的密钥的值。 如果密钥在数据管理器中不存在, 则在增加前以 0 的值创建 。
+增加此游戏对象数据管理器中给定的键的值。 如果键在数据管理器中不存在, 则在增加前以 0 的值创建 。
 
 如果游戏对象尚未启用数据( 通过 `setDataEnabled`), 那么在设定值前将启用 。
 
-如果密钥在数据管理器中不存在,则它被创建.
+如果键在数据管理器中不存在,则它被创建.
 
 当值首次设定时, 将会从此游戏对象中释放 `setdata` 事件 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 更改值的密钥 。 |
-| amount | number | 是 | 1 | 将给定的密钥增加的金额。 传递负值来减少密钥 。 |
+| key | string | 否 |  | 更改值的键 。 |
+| amount | number | 是 | 1 | 将给定的键增加的金额。 传递负值来减少键 。 |
 
 
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 这个游戏对象 。
@@ -697,7 +697,7 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:REMOVED_FROM_SCENE](/api/event/scenes-events#removed_from_scene), [Phaser.GameObjects.Events#event:REMOVED_FROM_SCENE](/api/event/gameobjects-events#removed_from_scene)
+**触发事件:** [Phaser.Scenes.Events#event:REMOVED_FROM_SCENE](/api/event/scenes-events#removed_from_scene), [Phaser.GameObjects.Events#event:REMOVED_FROM_SCENE](/api/event/gameobjects-events#removed_from_scene)
 
 
 > 源码：[src/gameobjects/GameObject.js#L892](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObject.js#L892)  
@@ -747,7 +747,7 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 如果您想要调整一个命中区域的大小, 请不要删除, 然后设定为交互。 相反, 直接访问命中区域对象并更改正在使用的形状大小 。 例如: `sprite.input.hitArea.setSize(width, height)`( 假设形状是矩形, 默认是矩形 。)
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | resetCursor | boolean | 是 | false | 当前活动的输入光标( 如果有的话) 是否应该重置到默认光标上 ? |
 
@@ -792,17 +792,17 @@ sprite.getData([ 'gold', 'armor', 'health' ]);
 
 **说明:**
 
-允许您在此游戏对象数据管理器中存储密钥值对 。
+允许您在此游戏对象数据管理器中存储键值对 。
 
 如果游戏对象尚未启用数据( 通过 `setDataEnabled`), 那么在设定值前将启用 。
 
-如果密钥在数据管理器中不存在,则它被创建.
+如果键在数据管理器中不存在,则它被创建.
 
 ```javascript
 sprite.setData('name', 'Red Gem Stone');
 ```
 
-您也可以在密钥值对的对象中通过,作为第一个参数:
+您也可以在键值对的对象中通过,作为第一个参数:
 
 ```javascript
 sprite.setData({ name: 'Red Gem Stone', level: 2, owner: 'Link', gold: 50 });
@@ -822,11 +822,11 @@ sprite.data.values.gold += 50;
 
 当值首次设定时, 将会从此游戏对象中释放 `setdata` 事件 。
 
-如果密钥已经存在, 则会沿着以密钥命名的事件释放 `changedata`事件。 例如, 如果您更新了一个名为 `PlayerLives` 的现有密钥, 它会释放该事件 `changedata-PlayerLives`。 这些事件将会释放, 无论您使用这种方法设置值, 或直接的 `values` 设置器 。
+如果键已经存在, 则会沿着以键命名的事件释放 `changedata`事件。 例如, 如果您更新了一个名为 `PlayerLives` 的现有键, 它会释放该事件 `changedata-PlayerLives`。 这些事件将会释放, 无论您使用这种方法设置值, 或直接的 `values` 设置器 。
 
-请注意, 数据密钥是区分大小写, 必须有效 JavaScript 对象属性字符串。 这意味着, 数据管理器内将密钥 `gold` 和 `Gold` 视为两个独特的值 。
+请注意, 数据键是区分大小写, 必须有效 JavaScript 对象属性字符串。 这意味着, 数据管理器内将键 `gold` 和 `Gold` 视为两个独特的值 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -834,8 +834,8 @@ sprite.data.values.gold += 50;
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| object | 否 | 设置值的密钥。 或者按键值对的对象。 如果对象忽略 `data` 参数 。 |
-| value | * | 是 | 给定密钥设置的值。 如果一个对象作为密钥提供, 此参数将被忽略 。 |
+| key | string \| object | 否 | 设置值的键。 或者按键值对的对象。 如果对象忽略 `data` 参数 。 |
+| value | * | 是 | 给定键设置的值。 如果一个对象作为键提供, 此参数将被忽略 。 |
 
 
 **返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 这个游戏对象 。
@@ -877,14 +877,14 @@ sprite.data.values.gold += 50;
 
 输入通过使用命中区域来工作,这些几乎总是几何形状,如矩形或圆形,它们充当游戏对象的命中区域。但是,如果你想处理一些更先进的输入检测,你可以提供自己的命中区域形状和回调。
 
-如果没有提供参数,它将尝试根据游戏对象使用的纹理框架创建矩形命中区域。如果这不是一个纹理约束对象,如图形或比特玛普Text对象,则会失败,需要提供它使用的具体形状。
+如果没有提供参数,它将尝试根据游戏对象使用的纹理帧创建矩形命中区域。如果这不是一个纹理约束对象,如图形或比特玛普Text对象,则会失败,需要提供它使用的具体形状。
 
 您也可以提供输入配置对象作为这种方法的唯一参数。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| hitArea | [Phaser.Types.Input.InputConfiguration](/api/typedef/types-input#inputconfiguration) \| any | 是 |  | 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给定, 则会尝试根据纹理框架创建矩形 。 |
+| hitArea | [Phaser.Types.Input.InputConfiguration](/api/typedef/types-input#inputconfiguration) \| any | 是 |  | 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给定, 则会尝试根据纹理帧创建矩形 。 |
 | callback | [Phaser.Types.Input.HitAreaCallback](/api/typedef/types-input#hitareacallback) | 是 |  | 用于确定指针是否在 Hit 区域形状之内的调用。 如果您提供了形状, 您也必须提供调用 。 |
 | dropZone | boolean | 是 | false | 这个游戏对象是否应该被当作一个投放区目标? |
 
@@ -981,11 +981,11 @@ Phaser本身永远不会修改游戏对象的状态,尽管插件可能这样做.
 
 **说明:**
 
-切换此游戏对象数据管理器中给定的密钥的布尔值。 如果密钥在数据管理器中不存在, 则在切换到 `true` 之前, 将创建该密钥的值为 `false` 。
+切换此游戏对象数据管理器中给定的键的布尔值。 如果键在数据管理器中不存在, 则在切换到 `true` 之前, 将创建该键的值为 `false` 。
 
 如果游戏对象尚未启用数据( 通过 `setDataEnabled`), 那么在设定值前将启用 。
 
-如果密钥在数据管理器中不存在,则它被创建.
+如果键在数据管理器中不存在,则它被创建.
 
 当值首次设定时, 将会从此游戏对象中释放 `setdata` 事件 。
 
@@ -1053,12 +1053,12 @@ Phaser本身永远不会修改游戏对象的状态,尽管插件可能这样做.
 
 **说明:**
 
-将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的相机排除列表检查游戏对象 。
+将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的摄像机排除列表检查游戏对象 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的摄像机 。 |
 
 
 **返回值:** boolean - 如果游戏对象应该被渲染, 否则会弄虚作假 。
@@ -1077,14 +1077,14 @@ Phaser本身永远不会修改游戏对象的状态,尽管插件可能这样做.
 
 **说明:**
 
-检查此游戏对象是否应该根据给定的相机和此游戏对象的`vertexRoundMode`来绕圆顶。 WebGL 渲染器使用此方法来决定如何绕圆顶位置 。
+检查此游戏对象是否应该根据给定的摄像机和此游戏对象的`vertexRoundMode`来绕圆顶。 WebGL 渲染器使用此方法来决定如何绕圆顶位置 。
 
 您可以在自定义的游戏对象类中覆盖这种方法,为顶点四舍五入提供自定义逻辑.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的摄像机 。 |
 | onlyTranslated | boolean | 否 | 如果为真,则对象只翻译,不缩放或旋转. |
 
 

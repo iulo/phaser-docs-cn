@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new EdgeZone(source, quantity, [stepRate], [yoyo], [seamless], [total])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | source | [Phaser.Types.GameObjects.Particles.EdgeZoneSource](/api/typedef/types-gameobjects-particles#edgezonesource) | 否 |  | 具有 `getPoints(quantity, stepRate)` 方法的天体实例返回数组点 。 |
 | quantity | number | 否 |  | 将粒子数放置在源边上。 设定为 0 , 改为使用 `stepRate` 。 |

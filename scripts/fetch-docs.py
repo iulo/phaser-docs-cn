@@ -1,9 +1,10 @@
-"""Download the Phaser 4 Guide and v4.1.0 API Markdown snapshot."""
+"""Download the Phaser 4 Guide, API v4.1.0 and Editor v5 Markdown snapshot."""
 
 import argparse
 from concurrent.futures import ThreadPoolExecutor
 import json
 from pathlib import Path
+import re
 from subprocess import check_output
 from urllib.parse import urlsplit
 from xml.etree import ElementTree
@@ -12,6 +13,7 @@ from xml.etree import ElementTree
 ORIGIN = 'https://phaser.io'
 GUIDE = '/oss/docs/phaser/'
 API = '/oss/docs/api-documentation/'
+EDITOR = '/oss/docs/phaser-editor/'
 
 
 def fetch(url):
@@ -32,6 +34,11 @@ def sources():
                 elif relative.endswith('/'):
                     relative += 'index'
                 yield 'api/' + relative, path
+        elif path.startswith(EDITOR):
+            relative = path.removeprefix(EDITOR)
+            if not re.match(r'v\d+(?:/|$)', relative):
+                route = relative.rstrip('/') + '/index' if relative.endswith('/') else relative or 'index'
+                yield 'editor/' + route, path.rstrip('/')
 
 
 def download(snapshot, route, path):
@@ -42,6 +49,8 @@ def download(snapshot, route, path):
         raise ValueError(f'{path} did not return documentation Markdown')
     if route.startswith('api/') and b'docs: "Phaser v4.1.0"' not in frontmatter:
         raise ValueError(f'{path} is no longer the pinned v4.1.0 API')
+    if route.startswith('editor/') and b'docs: "Phaser Editor v5"' not in frontmatter:
+        raise ValueError(f'{path} is no longer the pinned Editor v5 manual')
     destination.parent.mkdir(parents=True, exist_ok=True)
     destination.write_bytes(content)
 
@@ -53,7 +62,7 @@ def main():
     snapshot.mkdir(parents=True, exist_ok=True)
     routes = dict(sources())
     with ThreadPoolExecutor(max_workers=8) as pool:
-        for work in pool.map(lambda item: download(snapshot, *item), routes.items()):
+        for _ in pool.map(lambda item: download(snapshot, *item), routes.items()):
             pass
     (snapshot / 'sources.json').write_text(json.dumps(routes, indent=2) + '\n')
     print(f'已保存 {len(routes)} 个源页面。')

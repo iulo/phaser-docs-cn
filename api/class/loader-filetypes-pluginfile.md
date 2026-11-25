@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-pluginfile)
 
-适合 Phaser 加载器加载的单个插件脚本文件。 插件文件代表一个外部的 JavaScript文件, 装入后, 注册一个 Phaser 插件, 并提供给插件管理器。 脚本执行方式是将其作为 `<script>` 元素附加到文档头部。 该插件可以在给定属性密钥下自动启动并注入当前场景 。
+适合 Phaser 加载器加载的单个插件脚本文件。 插件文件代表一个外部的 JavaScript文件, 装入后, 注册一个 Phaser 插件, 并提供给插件管理器。 脚本执行方式是将其作为 `<script>` 元素附加到文档头部。 该插件可以在给定属性键下自动启动并注入当前场景 。
 
 这些是使用 Phaser.Loader.LoaderPlugin#插件方法创建的,一般不直接创建.
 
@@ -13,13 +13,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new PluginFile(loader, key, [url], [start], [mapping], [xhrSettings])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 |  | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig) | 否 |  | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.PluginFileConfig](/api/typedef/types-loader-filetypes#pluginfileconfig) | 否 |  | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 |  | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
 | start | boolean | 是 | false | 装入后自动启动插件吗 ? |
-| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性密钥 。 |
+| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性键 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 ---
@@ -74,7 +74,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile自动调用。 处理已装入的插件文件, 并将其安装到 Scene 的插件管理器中。 如果插件是作为类或函数直接提供的, 则立即安装。 否则, 将创建新的 `<script>` 元素, 包含已装入的 JavaScript 源, 并附在文档头上执行, 然后用文件键从全局范围安装插件。 如果设置了 Scene 映射键或自动启动旗, 插件也会被注入到当前 Scene 和 Scene Systems 中 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/PluginFile.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/PluginFile.js#L85)  

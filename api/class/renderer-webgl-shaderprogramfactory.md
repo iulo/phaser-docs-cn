@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-shaderprogramfactory)
 
-ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Renderer.WebGL.Wrappers.WebGLProgramWrapper](/api/class/renderer-webgl-wrappers-webglprogramwrapper)对象的实用类,它从基部遮蔽器中组装编译的遮蔽程序,结合可选的添加和特征标记,然后将结果存储在独有的密钥下,这样就永远不能不止一次编译同一组合。当您需要获得一个在运行时间可能因渲染器能力或管道配置而变化的遮蔽程序时,使用该类.
+ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Renderer.WebGL.Wrappers.WebGLProgramWrapper](/api/class/renderer-webgl-wrappers-webglprogramwrapper)对象的实用类,它从基部遮蔽器中组装编译的遮蔽程序,结合可选的添加和特征标记,然后将结果存储在独有的键下,这样就永远不能不止一次编译同一组合。当您需要获得一个在运行时间可能因渲染器能力或管道配置而变化的遮蔽程序时,使用该类.
 
 **构造函数**
 
@@ -30,7 +30,7 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 **说明:**
 
-由独特的密钥识别的阴影程序地图.
+由独特的键识别的着色器程序地图.
 
 每个遮阳程序的关键由以下组件组成: 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光线 光光光 光光 光光光光 光光光 光光 光 光光光 光 光 光光 光光 光光光 光 光 光光 光 光 光光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光 光
 
@@ -38,7 +38,7 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 - 每个着色器加的键,另外顺序.
 
-- 每个启用的阴影特性的密钥, 按字母顺序排序 。
+- 每个启用的阴影特性的键, 按字母顺序排序 。
 
 
 > 源码：[src/renderer/webgl/ShaderProgramFactory.js#L44](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/ShaderProgramFactory.js#L44)  
@@ -72,15 +72,15 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 **说明:**
 
-基于给定的配置设置创建阴影程序。
+基于给定的配置设置创建着色器程序。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| 名称 | string | 否 | 遮荫程序的独特密钥. |
+| 名称 | string | 否 | 遮荫程序的独特键. |
 | base | BaseShaderConfig | 否 | 底荫面配置. |
 | additions | Array.\<[Phaser.Types.Renderer.WebGL.ShaderAdditionConfig](/api/typedef/types-renderer-webgl#shaderadditionconfig)> | 是 | 一组着色器添加配置 。 |
-| features | Array.\<string> | 是 | 一组启用的阴影特性密钥 。 |
+| features | Array.\<string> | 是 | 一组启用的阴影特性键 。 |
 
 
 **返回值:** [Phaser.Renderer.WebGL.Wrappers.WebGLProgramWrapper](/api/class/renderer-webgl-wrappers-webglprogramwrapper) - 新编译和缓存的遮阳程序包.
@@ -99,7 +99,7 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 **说明:**
 
-返回基于给定配置设置的阴影程序独有的密钥 。
+返回基于给定配置设置的着色器程序独有的键 。
 
 关键由以下部分组成: 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键词 关键 关键词 关键 关键词 关键词 关键词 关键词 关键 关键词 关键 关键 关键 关键词 关键 关键 关键 关键 关键词 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键 关键
 
@@ -107,17 +107,17 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 - 每个着色器加的键,另外顺序.
 
-- 每个启用的阴影特性的密钥, 按字母顺序排序 。
+- 每个启用的阴影特性的键, 按字母顺序排序 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | base | BaseShaderConfig | 否 | 底荫面配置. |
 | additions | Array.\<[Phaser.Types.Renderer.WebGL.ShaderAdditionConfig](/api/typedef/types-renderer-webgl#shaderadditionconfig)> | 是 | 一组着色器添加配置 。 |
-| features | Array.\<string> | 是 | 一组启用的阴影特性密钥 。 |
+| features | Array.\<string> | 是 | 一组启用的阴影特性键 。 |
 
 
-**返回值:** string - 此阴影配置的独有缓存密钥 。
+**返回值:** string - 此阴影配置的独有缓存键 。
 
 
 > 源码：[src/renderer/webgl/ShaderProgramFactory.js#L101](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/ShaderProgramFactory.js#L101)  
@@ -133,14 +133,14 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 **说明:**
 
-返回已编译的用于指定配置的阴影程序。 如果匹配所衍生密钥的程序已经存在于缓存中, 则立即返回; 否则将编译一个新的程序, 存储在缓存中, 并返回 。
+返回已编译的用于指定配置的着色器程序。 如果匹配所衍生键的程序已经存在于缓存中, 则立即返回; 否则将编译一个新的程序, 存储在缓存中, 并返回 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | base | BaseShaderConfig | 否 | 底荫面配置. |
 | additions | Array.\<[Phaser.Types.Renderer.WebGL.ShaderAdditionConfig](/api/typedef/types-renderer-webgl#shaderadditionconfig)> | 是 | 一组着色器添加配置 。 |
-| features | Array.\<string> | 是 | 一组启用的阴影特性密钥 。 |
+| features | Array.\<string> | 是 | 一组启用的阴影特性键 。 |
 
 
 **返回值:** [Phaser.Renderer.WebGL.Wrappers.WebGLProgramWrapper](/api/class/renderer-webgl-wrappers-webglprogramwrapper) - 编译的遮阳程序包装器 。
@@ -159,15 +159,15 @@ ShaderProgramFactory是一个用于为 WebGL渲染器创建和缓存 [Phaser.Ren
 
 **说明:**
 
-检查内部缓存中是否已经存在带有给定密钥的编译阴影程序 。
+检查内部缓存中是否已经存在带有给定键的编译着色器程序 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 遮荫程序的独特密钥. |
+| key | string | 否 | 遮荫程序的独特键. |
 
 
-**返回值:** boolean - 如果缓存中存在带有此密钥的遮蔽程序,则`true`,否则则`false`.
+**返回值:** boolean - 如果缓存中存在带有此键的遮蔽程序,则`true`,否则则`false`.
 
 
 > 源码：[src/renderer/webgl/ShaderProgramFactory.js#L60](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/ShaderProgramFactory.js#L60)  

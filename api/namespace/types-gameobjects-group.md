@@ -35,7 +35,7 @@ static
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 

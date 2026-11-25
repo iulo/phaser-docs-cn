@@ -1,0 +1,598 @@
+[
+  {
+    "text": "Phaser Editor v5 手册",
+    "link": "/editor/"
+  },
+  {
+    "text": "发行版本",
+    "link": "/editor/intro/distributions"
+  },
+  {
+    "text": "协作开发",
+    "link": "/editor/intro/collaboration"
+  },
+  {
+    "text": "更新日志",
+    "link": "/editor/intro/changelog"
+  },
+  {
+    "text": "下载与安装",
+    "link": "/editor/first-steps/download-and-install"
+  },
+  {
+    "text": "创建第一个项目",
+    "link": "/editor/first-steps/create-first-project"
+  },
+  {
+    "text": "向场景添加图像",
+    "link": "/editor/first-steps/add-image-to-scene"
+  },
+  {
+    "text": "简介",
+    "link": "/editor/workbench/intro"
+  },
+  {
+    "text": "视图",
+    "link": "/editor/workbench/views"
+  },
+  {
+    "text": "编辑器",
+    "link": "/editor/workbench/editors"
+  },
+  {
+    "text": "文件视图",
+    "link": "/editor/workbench/files-view"
+  },
+  {
+    "text": "检查器视图",
+    "link": "/editor/workbench/inspector-view"
+  },
+  {
+    "text": "大纲视图",
+    "link": "/editor/workbench/outline-view"
+  },
+  {
+    "text": "资源块视图",
+    "link": "/editor/workbench/blocks-view"
+  },
+  {
+    "text": "主工具栏",
+    "link": "/editor/workbench/main-toolbar"
+  },
+  {
+    "text": "主菜单",
+    "link": "/editor/workbench/main-menu"
+  },
+  {
+    "text": "窗口布局",
+    "link": "/editor/workbench/layouts"
+  },
+  {
+    "text": "运行项目",
+    "link": "/editor/workbench/playing-project"
+  },
+  {
+    "text": "项目",
+    "link": "/editor/workbench/projects"
+  },
+  {
+    "text": "新建文件对话框",
+    "link": "/editor/workbench/new-file-dialog"
+  },
+  {
+    "text": "上传文件",
+    "link": "/editor/workbench/upload-dialog"
+  },
+  {
+    "text": "配色主题",
+    "link": "/editor/workbench/color-themes"
+  },
+  {
+    "text": "命令面板",
+    "link": "/editor/workbench/command-palette"
+  },
+  {
+    "text": "设置",
+    "link": "/editor/workbench/settings"
+  },
+  {
+    "text": "简介",
+    "link": "/editor/asset-pack-editor/intro"
+  },
+  {
+    "text": "创建资源包文件",
+    "link": "/editor/asset-pack-editor/create-asset-pack-file"
+  },
+  {
+    "text": "资源包文件",
+    "link": "/editor/asset-pack-editor/asset-pack-file"
+  },
+  {
+    "text": "编辑器内容布局",
+    "link": "/editor/asset-pack-editor/editor-content-layout"
+  },
+  {
+    "text": "导入文件",
+    "link": "/editor/asset-pack-editor/add-file"
+  },
+  {
+    "text": "组织资源包文件",
+    "link": "/editor/asset-pack-editor/organizing-the-assets"
+  },
+  {
+    "text": "在大纲视图中查看资源包",
+    "link": "/editor/asset-pack-editor/outline-view"
+  },
+  {
+    "text": "在检查器视图中编辑资源包",
+    "link": "/editor/asset-pack-editor/inspector-view"
+  },
+  {
+    "text": "简介",
+    "link": "/editor/scene-editor/intro"
+  },
+  {
+    "text": "创建新场景文件",
+    "link": "/editor/scene-editor/create-new-scene-file"
+  },
+  {
+    "text": "将对象添加到场景",
+    "link": "/editor/scene-editor/add-object"
+  },
+  {
+    "text": "检查器视图",
+    "link": "/editor/scene-editor/inspector-view"
+  },
+  {
+    "text": "游戏对象类型",
+    "link": "/editor/scene-editor/game-objects"
+  },
+  {
+    "text": "游戏对象通用属性",
+    "link": "/editor/scene-editor/game-objects/common-object-properties"
+  },
+  {
+    "text": "图像",
+    "link": "/editor/scene-editor/game-objects/image-object"
+  },
+  {
+    "text": "精灵",
+    "link": "/editor/scene-editor/game-objects/sprite-object"
+  },
+  {
+    "text": "平铺精灵（TileSprite）",
+    "link": "/editor/scene-editor/game-objects/tile-sprite-object"
+  },
+  {
+    "text": "九宫格（NineSlice）",
+    "link": "/editor/scene-editor/game-objects/nine-slice-object"
+  },
+  {
+    "text": "文本",
+    "link": "/editor/scene-editor/game-objects/text-object"
+  },
+  {
+    "text": "位图文本（BitmapText）",
+    "link": "/editor/scene-editor/game-objects/bitmap-text-object"
+  },
+  {
+    "text": "瓦片地图",
+    "link": "/editor/scene-editor/game-objects/tilemap-object"
+  },
+  {
+    "text": "瓦片地图图层（TilemapLayer）",
+    "link": "/editor/scene-editor/game-objects/tilemap-layer-object"
+  },
+  {
+    "text": "可编辑的瓦片地图",
+    "link": "/editor/scene-editor/game-objects/editable-tilemap-object"
+  },
+  {
+    "text": "可编辑的瓦片地图图层",
+    "link": "/editor/scene-editor/game-objects/editable-tilemap-layer-object"
+  },
+  {
+    "text": "形状",
+    "link": "/editor/scene-editor/game-objects/shape-object"
+  },
+  {
+    "text": "矩形",
+    "link": "/editor/scene-editor/game-objects/shape-rectangle-object"
+  },
+  {
+    "text": "椭圆",
+    "link": "/editor/scene-editor/game-objects/shape-ellipse-object"
+  },
+  {
+    "text": "三角形",
+    "link": "/editor/scene-editor/game-objects/shape-triangle-object"
+  },
+  {
+    "text": "多边形",
+    "link": "/editor/scene-editor/game-objects/shape-polygon-object"
+  },
+  {
+    "text": "粒子发射器（ParticleEmitter）",
+    "link": "/editor/scene-editor/game-objects/particle-emitter-object"
+  },
+  {
+    "text": "粒子发射器属性",
+    "link": "/editor/scene-editor/game-objects/particle-emitter-object-properties"
+  },
+  {
+    "text": "容器",
+    "link": "/editor/scene-editor/game-objects/container-object"
+  },
+  {
+    "text": "层",
+    "link": "/editor/scene-editor/game-objects/layer-object"
+  },
+  {
+    "text": "视频",
+    "link": "/editor/scene-editor/game-objects/video-object"
+  },
+  {
+    "text": "Spine 游戏对象",
+    "link": "/editor/scene-editor/game-objects/spine-game-object"
+  },
+  {
+    "text": "替换对象的类型",
+    "link": "/editor/scene-editor/game-objects/replace-object-type"
+  },
+  {
+    "text": "场景属性",
+    "link": "/editor/scene-editor/scene-properties"
+  },
+  {
+    "text": "Arcade 物理",
+    "link": "/editor/scene-editor/arcade-physics"
+  },
+  {
+    "text": "创建带 Arcade 物理的图像和精灵",
+    "link": "/editor/scene-editor/arcade-physics/arcade-physics-add-object"
+  },
+  {
+    "text": "为游戏对象启用 Arcade 物理",
+    "link": "/editor/scene-editor/arcade-physics/arcade-physics-add-body"
+  },
+  {
+    "text": "Arcade 物理体属性",
+    "link": "/editor/scene-editor/arcade-physics/arcade-physics-properties"
+  },
+  {
+    "text": "Arcade 物理碰撞器",
+    "link": "/editor/scene-editor/arcade-physics/arcade-physics-collider"
+  },
+  {
+    "text": "Box2D 物理",
+    "link": "/editor/scene-editor/box2d-physics"
+  },
+  {
+    "text": "为 Box2D 物理准备场景",
+    "link": "/editor/scene-editor/box2d-physics/box2d-physics-prepare-scene"
+  },
+  {
+    "text": "添加 Box2D 物理体",
+    "link": "/editor/scene-editor/box2d-physics/box2d-physics-add-body"
+  },
+  {
+    "text": "Box2D 碰撞形状",
+    "link": "/editor/scene-editor/box2d-physics/box2d-physics-shapes"
+  },
+  {
+    "text": "精灵动画",
+    "link": "/editor/scene-editor/sprite-animations"
+  },
+  {
+    "text": "Spine 动画",
+    "link": "/editor/scene-editor/spine-animations"
+  },
+  {
+    "text": "在游戏中安装 Spine 插件",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-install"
+  },
+  {
+    "text": "加载 Spine 资源",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-loading"
+  },
+  {
+    "text": "预览 Spine 资源",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-assets-preview"
+  },
+  {
+    "text": "创建 Spine 游戏对象",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-game-object"
+  },
+  {
+    "text": "Spine 游戏对象属性",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-game-object-properties"
+  },
+  {
+    "text": "Spine 游戏对象的用户属性",
+    "link": "/editor/scene-editor/spine-animations/spine-animations-game-object-user-properties"
+  },
+  {
+    "text": "滤镜",
+    "link": "/editor/scene-editor/filters"
+  },
+  {
+    "text": "使用精灵表",
+    "link": "/editor/scene-editor/working-with-spritesheets"
+  },
+  {
+    "text": "使用父对象",
+    "link": "/editor/scene-editor/working-with-parent-objects"
+  },
+  {
+    "text": "对象列表",
+    "link": "/editor/scene-editor/object-list"
+  },
+  {
+    "text": "输入",
+    "link": "/editor/scene-editor/input"
+  },
+  {
+    "text": "预制体",
+    "link": "/editor/scene-editor/prefabs"
+  },
+  {
+    "text": "创建预制体文件",
+    "link": "/editor/scene-editor/prefabs/prefab-new-file"
+  },
+  {
+    "text": "预制体对象",
+    "link": "/editor/scene-editor/prefabs/prefab-object"
+  },
+  {
+    "text": "预制体的用户属性",
+    "link": "/editor/scene-editor/prefabs/prefab-user-properties"
+  },
+  {
+    "text": "创建预制体实例",
+    "link": "/editor/scene-editor/prefabs/prefab-create-instance"
+  },
+  {
+    "text": "预制体实例的显示属性",
+    "link": "/editor/scene-editor/prefabs/prefab-display-properties"
+  },
+  {
+    "text": "预制体代码生成",
+    "link": "/editor/scene-editor/prefabs/prefab-code"
+  },
+  {
+    "text": "修改预制体实例的属性",
+    "link": "/editor/scene-editor/prefabs/prefab-set-properties"
+  },
+  {
+    "text": "预制体变体",
+    "link": "/editor/scene-editor/prefabs/prefab-variant"
+  },
+  {
+    "text": "嵌套预制体",
+    "link": "/editor/scene-editor/prefabs/prefab-nested"
+  },
+  {
+    "text": "为预制体实例添加子对象",
+    "link": "/editor/scene-editor/prefabs/prefab-instance-children"
+  },
+  {
+    "text": "预制体标签",
+    "link": "/editor/scene-editor/prefabs/prefab-tags"
+  },
+  {
+    "text": "解除预制体实例关联",
+    "link": "/editor/scene-editor/prefabs/prefab-unbox"
+  },
+  {
+    "text": "将预制体作为黑盒使用",
+    "link": "/editor/scene-editor/prefabs/prefab-black-box"
+  },
+  {
+    "text": "脚本节点",
+    "link": "/editor/scene-editor/script-node"
+  },
+  {
+    "text": "脚本节点与用户组件的区别",
+    "link": "/editor/scene-editor/script-node/script-node-vs-user-component"
+  },
+  {
+    "text": "脚本节点库",
+    "link": "/editor/scene-editor/script-node/script-node-libraries"
+  },
+  {
+    "text": "创建脚本节点",
+    "link": "/editor/scene-editor/script-node/script-node-create"
+  },
+  {
+    "text": "脚本节点类",
+    "link": "/editor/scene-editor/script-node/script-node-class"
+  },
+  {
+    "text": "核心脚本项目",
+    "link": "/editor/scene-editor/script-node/script-node-basic-scripts-project"
+  },
+  {
+    "text": "创建脚本节点预制体",
+    "link": "/editor/scene-editor/script-node/script-node-prefab"
+  },
+  {
+    "text": "脚本节点的属性",
+    "link": "/editor/scene-editor/script-node/script-node-properties"
+  },
+  {
+    "text": "为脚本节点添加约束",
+    "link": "/editor/scene-editor/script-node/script-node-constraints"
+  },
+  {
+    "text": "用户组件",
+    "link": "/editor/scene-editor/user-components"
+  },
+  {
+    "text": "创建新的用户组件文件",
+    "link": "/editor/scene-editor/user-components/user-components-create-file"
+  },
+  {
+    "text": "用户组件编辑器",
+    "link": "/editor/scene-editor/user-components/user-components-editor"
+  },
+  {
+    "text": "用户组件编译器",
+    "link": "/editor/scene-editor/user-components/user-components-compiler"
+  },
+  {
+    "text": "用 Phaser 事件实现行为",
+    "link": "/editor/scene-editor/user-components/user-components-start-update-methods"
+  },
+  {
+    "text": "用户组件的基类",
+    "link": "/editor/scene-editor/user-components/user-components-super-class"
+  },
+  {
+    "text": "awake 事件",
+    "link": "/editor/scene-editor/user-components/user-components-awake-event"
+  },
+  {
+    "text": "将用户组件添加到游戏对象",
+    "link": "/editor/scene-editor/user-components/user-components-instancing"
+  },
+  {
+    "text": "为预制体添加用户组件",
+    "link": "/editor/scene-editor/user-components/user-components-in-prefab-object"
+  },
+  {
+    "text": "用户组件约束",
+    "link": "/editor/scene-editor/user-components/user-components-constraints"
+  },
+  {
+    "text": "操作工具",
+    "link": "/editor/scene-editor/manipulation-tools"
+  },
+  {
+    "text": "布局工具",
+    "link": "/editor/scene-editor/layout-tools"
+  },
+  {
+    "text": "对齐工具",
+    "link": "/editor/scene-editor/layout-tools/layout-tools-align"
+  },
+  {
+    "text": "边缘对齐工具",
+    "link": "/editor/scene-editor/layout-tools/layout-tools-align-to-border"
+  },
+  {
+    "text": "原点设置工具",
+    "link": "/editor/scene-editor/layout-tools/layout-tools-origin"
+  },
+  {
+    "text": "网格布局工具",
+    "link": "/editor/scene-editor/layout-tools/layout-tools-grid"
+  },
+  {
+    "text": "排序布局工具",
+    "link": "/editor/scene-editor/layout-tools/layout-tools-sorting"
+  },
+  {
+    "text": "场景编译器",
+    "link": "/editor/scene-editor/scene-compiler"
+  },
+  {
+    "text": "其他",
+    "link": "/editor/scene-editor/misc"
+  },
+  {
+    "text": "故障排查",
+    "link": "/editor/scene-editor/troubleshooting"
+  },
+  {
+    "text": "简介",
+    "link": "/editor/animations-editor/intro"
+  },
+  {
+    "text": "创建新的动画文件",
+    "link": "/editor/animations-editor/new-file-wizard"
+  },
+  {
+    "text": "向文件添加动画",
+    "link": "/editor/animations-editor/add-animation"
+  },
+  {
+    "text": "自动创建动画",
+    "link": "/editor/animations-editor/auto-build-animations"
+  },
+  {
+    "text": "编辑动画的属性",
+    "link": "/editor/animations-editor/edit-animations-properties"
+  },
+  {
+    "text": "添加和删除帧",
+    "link": "/editor/animations-editor/adding-deleting-frames"
+  },
+  {
+    "text": "编译动画键常量",
+    "link": "/editor/animations-editor/compiler"
+  },
+  {
+    "text": "在 Phaser Editor 中编写代码",
+    "link": "/editor/code-editor/intro"
+  },
+  {
+    "text": "Phaser编辑器的 MCP 服务器 v5",
+    "link": "/editor/ai/mcp-server"
+  },
+  {
+    "text": "AI 聊天",
+    "link": "/editor/ai/chat"
+  },
+  {
+    "text": "项目配置",
+    "link": "/editor/misc/project-config"
+  },
+  {
+    "text": "服务器选项",
+    "link": "/editor/misc/server-options"
+  },
+  {
+    "text": "资源缓存",
+    "link": "/editor/misc/resources-caching"
+  },
+  {
+    "text": "资源过滤",
+    "link": "/editor/misc/resources-filtering"
+  },
+  {
+    "text": "代理配置",
+    "link": "/editor/misc/proxy"
+  },
+  {
+    "text": "本地偏好设置",
+    "link": "/editor/misc/local-preferences"
+  },
+  {
+    "text": "内容查看器",
+    "link": "/editor/misc/content-viewers"
+  },
+  {
+    "text": "日志视图",
+    "link": "/editor/misc/log-view"
+  },
+  {
+    "text": "更新编辑器",
+    "link": "/editor/misc/update"
+  },
+  {
+    "text": "插件",
+    "link": "/editor/misc/plugins"
+  },
+  {
+    "text": "故障排查",
+    "link": "/editor/misc/troubleshooting"
+  },
+  {
+    "text": "其他",
+    "link": "/editor/misc/"
+  },
+  {
+    "text": "显示属性",
+    "link": "/editor/scene-editor/display-properties"
+  }
+]

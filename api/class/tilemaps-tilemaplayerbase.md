@@ -9,7 +9,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 `new TilemapLayerBase(scene, tilemap, layerIndex, [x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | tilemap | [Phaser.Tilemaps.Tilemap](/api/class/tilemaps-tilemap) | 否 |  | 蒂拉玛普这个层是其中的一部分. |
@@ -275,7 +275,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此 Tilemap 层的横向显示源 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#displayOriginX
+**重写:** Phaser.GameObjects.Components.Origin#displayOriginX
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L188](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L188)  
@@ -294,7 +294,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此 Tilemap 层的垂直显示源 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#displayOriginY
+**重写:** Phaser.GameObjects.Components.Origin#displayOriginY
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L198](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L198)  
@@ -377,7 +377,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此 Tilemap 层的横向来源 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#originX
+**重写:** Phaser.GameObjects.Components.Origin#originX
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L168](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L168)  
@@ -396,7 +396,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此 Tilemap 层的垂直源 。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#originY
+**重写:** Phaser.GameObjects.Components.Origin#originY
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L178](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L178)  
@@ -700,7 +700,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此方法在游戏对象添加时被 Scene 自动称为 。 它会用 Scene 的更新列表来注册该层, 这样 `preUpdate`Z 就可以称为每个游戏步骤 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L214](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L214)  
@@ -716,7 +716,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-在指定的层的瓷砖坐标处计算有趣的面。 有趣的面用于优化与瓷砖的碰撞。 这种方法大多用于在仅更改一个瓷砖时优化再计算面。
+在指定的层的瓦片坐标处计算有趣的面。 有趣的面用于优化与瓦片的碰撞。 这种方法大多用于在仅更改一个瓦片时优化再计算面。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -749,7 +749,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -771,7 +771,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 复制源长方形区域中的瓦片到层内的新目的地( 全部在瓦片坐标中指定) 。 复制所有瓦片属性并重新计算目的地区域的碰撞信息 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcTileX | number | 否 |  | 要复制的区域的x坐标,以瓦片表示,而不是像素. |
 | srcTileY | number | 否 |  | 要复制的区域的y坐标, 以瓦片而不是像素表示 。 |
@@ -798,7 +798,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-为每个匹配层中给定的瓷砖索引的对象创建 Sprite。 您可以选择指定每个瓷砖是否在 Sprite 创建后被替换为新瓷砖。 如果您想要在转换成 Sprite 的级别下置特殊瓷砖, 但想要在转换后将瓷砖本身替换为地板瓷砖或类似的瓷砖, 则此操作是有用的 。
+为每个匹配层中给定的瓦片索引的对象创建 Sprite。 您可以选择指定每个瓦片是否在 Sprite 创建后被替换为新瓦片。 如果您想要在转换成 Sprite 的级别下置特殊瓦片, 但想要在转换后将瓦片本身替换为地板瓦片或类似的瓦片, 则此操作是有用的 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -807,7 +807,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | replacements | number \| array | 否 | 将转换的瓦片转换为 . 设置为 `null` 使瓦片保持不变。 如果给出了数组, 则假定它是与索引数组的一对一映射 。 |
 | spriteConfig | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 是 | 配置对象可以传递到Sprite创建者(即场景. make.sprite)中. |
 | scene | [Phaser.Scene](/api/class/scene) | 是 | 创造内在的斯普丽特的场景. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于确定 XY 世界的相机 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于确定 XY 世界的摄像机 |
 
 
 **返回值:** Array.\<[Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite)> - 创建的 Sprite 阵列 。
@@ -829,12 +829,12 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 摧毁此 TilemapLayer 并删除其与关联的LayerData 的链接。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | removeFromTilemap | boolean | 是 | true | 从父图解中移除此层 ? |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#销毁
+**重写:** Phaser.GameObjects.GameObject#销毁
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L1173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L1173)  
@@ -850,16 +850,16 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-设置图层的矩形区域( 以瓷砖坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
+设置图层的矩形区域( 以瓦片坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 填充区域用的瓦片索引 。 |
 | tileX | number | 是 |  | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 |  | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 |  | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 |  | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 |  | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | recalculateFaces | boolean | 是 | true | 如果面额数据应重新计算,则使用`true`。 |
 
 
@@ -889,8 +889,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦索引(在瓦座坐标中)用作过滤区域的来源. |
 | tileY | number | 是 | 用于过滤区域源头的最顶部的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> - 一系列的平板物体。
@@ -912,10 +912,10 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 搜索第一个匹配给定索引的图板的整层地图,然后返回该图板对象。如果找不到匹配,则返回无效。搜索从左上方的图板开始,并水平地持续到其到达行的末尾,然后下降至下一行。如果反向布尔值是真实的,则从右下角扫描,从上到左上。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 要搜索的瓦片索引值 。 |
-| skip | number | 是 | 0 | 返回前跳过匹配的瓷砖的次数 。 |
+| skip | number | 是 | 0 | 返回前跳过匹配的瓦片的次数 。 |
 | reverse | boolean | 是 | false | 如果真有, 它会逆向扫描层, 从右下方开始。 否则它会从左上方扫描 。 |
 
 
@@ -945,8 +945,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 第一个在指定地点发现的图案.
@@ -975,8 +975,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -998,13 +998,13 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 从给定的同位素层获得给定世界坐标的瓦片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| worldX | number | 否 |  | 从(以像素形式给出)获取瓷砖的 X 位置 |
+| worldX | number | 否 |  | 从(以像素形式给出)获取瓦片的 X 位置 |
 | worldY | number | 否 |  | Y 位置从 (以像素形式给出) 获取牌 |
 | originTop | boolean | 是 | true | 何为等位牌的正面 ? 顶部( 默认, 真实) 还是底部 ? (假) |
 | nonNull | boolean | 是 | false | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 指定坐标的瓦片,如果找不到瓦片或坐标无效,则无效。
@@ -1026,10 +1026,10 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 从给定的地层获得给定的地砖坐标的瓦片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| tileX | number | 否 |  | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓷砖 。 |
-| tileY | number | 否 |  | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓷砖 。 |
+| tileX | number | 否 |  | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓦片 。 |
+| tileY | number | 否 |  | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓦片 。 |
 | nonNull | boolean | 是 | false | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
 
 
@@ -1052,12 +1052,12 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 从给定的地层获得给定的世界坐标的瓦片。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| worldX | number | 否 |  | 从(以像素形式给出)获取瓷砖的 X 位置 |
+| worldX | number | 否 |  | 从(以像素形式给出)获取瓦片的 X 位置 |
 | worldY | number | 否 |  | Y 位置从 (以像素形式给出) 获取牌 |
 | nonNull | boolean | 是 | false | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 指定坐标的瓦片,如果找不到瓦片或坐标无效,则无效。
@@ -1076,11 +1076,11 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-返回一个矢量2的数组,每个条目对应所请求的瓷砖的角。
+返回一个矢量2的数组,每个条目对应所请求的瓦片的角。
 
 `tileX`和`tileY`参数在瓦片坐标,而不是世界坐标.
 
-角坐标位于世界空间,如果给出,则在TilemapLayer比例、位置和相机中计及。
+角坐标位于世界空间,如果给出,则在TilemapLayer比例、位置和摄像机中计及。
 
 阵列的大小会因地图的方向而异。 例如, 直径图将返回4个向量的阵列, 作为六边形图, 自然会返回6个角向量的阵列。
 
@@ -1089,7 +1089,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> - 返回矢量2的数组,如果给出的图层无效,则返回为无效。
@@ -1116,8 +1116,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> - 在区域内发现的一组平板物体。
@@ -1142,8 +1142,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | shape | [Phaser.Geom.Circle](/api/class/geom-circle) \| [Phaser.Geom.Line](/api/class/geom-line) | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 | 世界的形状( 像素) 坐标 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 
 
 **返回值:** Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> - 在形状中发现的一组平板物体。
@@ -1171,8 +1171,8 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | worldY | number | 否 | 地球和坐标是该地区左上角 |
 | width | number | 否 | 面积宽度. |
 | height | number | 否 | 地区高度. |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 
 
 **返回值:** Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> - 在区域内发现的一组平板物体。
@@ -1223,7 +1223,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | x坐标,以像素表示. |
 | worldY | number | 否 | y坐标,以像素表示. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 
 
 **返回值:** boolean - 如果在指定地点找到一块瓦子,则使用`true`,否则使用`false`.
@@ -1242,7 +1242,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-此 Tilemap 层的内部更新步骤。 由 Scene 的更新列表自动调用 。 推进层的过期定时器, 用于基于时间的瓷砖动画 。
+此 Tilemap 层的内部更新步骤。 由 Scene 的更新列表自动调用 。 推进层的过期定时器, 用于基于时间的瓦片动画 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1267,7 +1267,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 在指定的地层中设置一个砖块坐标。您可以在索引或图块对象中传递。如果在图块中传递,所有属性都将复制到指定位置。如果在索引中通过,则只更改指定位置的索引。碰撞信息将在指定位置重新计算。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tile | number \| [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 |  | 此牌的索引可以设置或设置一个牌面对象。 |
 | tileX | number | 否 |  | x坐标,以瓦片表示,而非像素. |
@@ -1300,7 +1300,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | worldX | number | 否 | x坐标,以像素表示. |
 | worldY | number | 否 | y坐标,以像素表示. |
 | recalculateFaces | boolean | 是 | 如果面额数据应重新计算,则使用`true`。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 插入到给定坐标的平板物体。
@@ -1322,7 +1322,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 在指定的图片坐标上放置一个瓦片数组或一个2D的瓦片数组。该数组可以是瓦片索引或瓦片对象。如果在图片中通过,所有属性都将复制到指定位置。如果在索引中通过,则只更改指定位置的索引。碰撞信息将在区域牌块内重新计算。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tile | Array.\<number> \| Array.\<Array.\<number>> | Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> | Array.\<Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)>> | 否 |  | 铺设一个列( 阵列) 或格(2D 阵列) 的平面或瓦片索引。 |
 | tileX | number | 否 |  | x坐标,以瓦片表示,而非像素. |
@@ -1354,7 +1354,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | indexes | Array.\<number> | 是 | 随机化过程中随机抽取的一系列索引. |
 
 
@@ -1377,7 +1377,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 此方法在游戏对象从中移除时被Scene自动称为,它从Scene的更新列表中解录了层.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/tilemaps/TilemapLayerBase.js#L226](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayerBase.js#L226)  
@@ -1396,7 +1396,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 删除指定层中砖块坐标的瓦片,并更新层碰撞信息。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tileX | number | 否 |  | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 |  | y坐标,以瓦片表示,而不是像素. |
@@ -1423,13 +1423,13 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 删除指定世界坐标的瓦片,更新层碰撞信息。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | worldX | number | 否 |  | x坐标,以像素表示. |
 | worldY | number | 否 |  | y坐标,以像素表示. |
 | replaceWithNull | boolean | 是 | true | 如果为真, 这将用无效的砖来取代指定位置的瓦, 而不是以 - 1 的索引为单位的砖。 |
 | recalculateFaces | boolean | 是 | true | 如果面额数据应重新计算,则使用`true`。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 从给定位置移走的拼贴对象 。
@@ -1473,17 +1473,17 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓷砖,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
+扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓦片,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| findIndex | number | 否 | 查找的瓷砖索引 。 |
+| findIndex | number | 否 | 查找的瓦片索引 。 |
 | newIndex | number | 否 | 以瓦片代替的索引 。 |
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1505,11 +1505,11 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 将一个图片或牌片的碰撞按指数排列。 您可以通过一个单一的数字索引或一系列索引: [2、 3、 15、 20]。 `collides` 参数控制如果碰撞将被启用( 真实) 或禁用( 假) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | indexes | number \| array | 否 |  | 或单瓦索引,或单瓦索引的数组。 |
 | collides | boolean | 是 | true | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓦片面孔 。 |
 | updateLayer | boolean | 是 | true | 如果选中的话, 请更新层上的当前牌。 如果没有设置牌, 则设置为不实 。 |
 
 
@@ -1532,12 +1532,12 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 设定一个图片的碰撞范围, 其指数介于指定的 `start`和 `stop`( 包括) 之间。 使用起始值为 10, 止值为 14 的图片, 将设置为 10、 11、 12、 13 和 14 的碰撞范围, 如果启用碰撞( 真实) 或 禁用( 假) , `collides` 参数控制会设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 否 |  | 设定碰撞的瓦片的第一个索引. |
-| stop | number | 否 |  | 设定碰撞的瓷砖的最后一个索引 。 |
+| stop | number | 否 |  | 设定碰撞的瓦片的最后一个索引 。 |
 | collides | boolean | 是 | true | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓦片面孔 。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1559,11 +1559,11 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 设定在给定的层中所有瓦片上的碰撞, 除了在给定数组中指定索引的瓦片。 如果启用碰撞( 真实) 或禁用( 假) , `collides` 参数控制。 目前未在层中使用的拖动索引不受影响 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | indexes | Array.\<number> | 否 |  | 一块砖索引的数组,不计算碰撞。 |
 | collides | boolean | 是 | true | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓦片面孔 。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1585,11 +1585,11 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 通过检查瓦片属性来设定一层内瓦片的碰撞。 如果瓦片具有与给定的属性对象匹配的属性, 则会设置其碰撞标志。 如果启用碰撞( 真实) 或禁用( 假) , 则 `collides` 参数控制。 在 `{ collides: true }` 中通过, 将会将任何砖片上的碰撞标志更新为具有真实值的“ collides ” 属性。 任何没有设置“ collide” 的瓦片都会被忽略。 您也可以使用一系列值, 如 `{ types: ["stone", "lava", "sand" ] }`。 如果一个瓦片具有与任何这些值匹配的“ 类型” 属性, 其碰撞标志将会被更新 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | properties | object | 否 |  | 具有瓦片属性和相应值的对象,应当检查。 |
 | collides | boolean | 是 | true | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓦片面孔 。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1611,10 +1611,10 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 通过检查每块瓦片碰撞组数据(通常在平板碰撞编辑器内在平板内定义),将瓦片碰撞设为一层内。如果在瓦片碰撞组内发现任何物体,则会设置瓦片碰撞信息。如果碰撞启用(真)或禁用(假),则`collides`参数控制。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | collides | boolean | 是 | true | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | true | 更新后是否重新计算瓦片面孔 。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1659,7 +1659,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-设置层内给定的矩形区域( 平面坐标) 的碰撞调用。 如果已经为平面索引设置了调用调用调用调取, 则将替换。 设置调用调用调用的调用调用调出调用调用调减调取调用调用调值 。
+设置层内给定的矩形区域( 平面坐标) 的碰撞调用。 如果已经为平面索引设置了调用调用调用调取, 则将替换。 设置调用调用调用的调用调用调出调用调用调减调取调用调用补间 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1667,7 +1667,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | callback | function | 是 | 当瓦片被碰撞时将引用的回调 。 |
 | callbackContext | object | 是 | 援引回调时的上下文,或范围. |
 
@@ -1688,7 +1688,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 
 **说明:**
 
-在指定的层内, 将牌片划入长方形区域( 以瓷砖坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓷砖索引, 并且不会改变碰撞信息 。
+在指定的层内, 将牌片划入长方形区域( 以瓦片坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓦片索引, 并且不会改变碰撞信息 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1696,7 +1696,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1720,12 +1720,12 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileA | number | 否 | 首张瓷砖索引. |
+| tileA | number | 否 | 首张瓦片索引. |
 | tileB | number | 否 | 第二瓦指数. |
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1750,7 +1750,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** number - 梯子 X 坐标转换成像素.
@@ -1777,7 +1777,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 包含提尔河世界坐标的矢量2。
@@ -1802,7 +1802,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** number - 梯Y坐标转换成像素.
@@ -1834,7 +1834,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayerBase](/api/class/tilemaps-tilemaplayerbase) - 此 Tilemap 层对象 。
@@ -1862,7 +1862,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | 要转换的x坐标,以像素表示,而不是用瓦片表示. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** number - 瓦片X坐标基于世界值.
@@ -1890,7 +1890,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 含有世界值的瓦片坐标的矢量2。
@@ -1918,7 +1918,7 @@ TIlemapLayer 是一个游戏对象,它使 LyerData 在使用时与一个或多�
 | ---- | ---- | -------- | ----------- |
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 
 
 **返回值:** number - 瓦片Y坐标基于世界值.

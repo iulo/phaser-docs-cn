@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 Blocky在游戏上最擅长无反异名,因此它可以从原始图像中读取未过滤的像素颜色,它保存了原始艺术的颜色,而不是像像像素素滤镜那样混合.
 
-通过过滤列表组件将一个块状效果添加到相机中:
+通过过滤列表组件将一个块状效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;

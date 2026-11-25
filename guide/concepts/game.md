@@ -24,7 +24,7 @@ new Phaser.Game({
 
 但是,如果您有外部样式表或图像影响页面布局,并且您正在使用缩放管理器,您可能需要使用[window.onload](https://developer.mozilla.org/en-US/docs/Web/API/Window/load_event).
 
-游戏作为`this.game`在所有场景中都可以使用,并作为参数传递给相关的回调和事件听众,因此通常不需要保存游戏的引用,除非需要从外部Phaser联系到游戏.
+游戏作为`this.game`在所有场景中都可以使用,并作为参数传递给相关的回调和事件监听器,因此通常不需要保存游戏的引用,除非需要从外部Phaser联系到游戏.
 
 ## 游戏配置 {#game-configuration}
 

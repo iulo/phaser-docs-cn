@@ -79,7 +79,7 @@ sprite.on('pointerdown', callback, context);
 
 **说明:**
 
-用于参考场景相机管理器。 此属性设定在 `boot` 方法中 。
+用于参考场景摄像机管理器。 此属性设定在 `boot` 方法中 。
 
 
 > 源码：[src/input/InputPlugin.js#L149](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L149)  
@@ -511,7 +511,7 @@ sprite.on('pointerdown', callback, context);
 
 **说明:**
 
-基于相机列表中第一个相机的 ActivePointer 坐标的 x 坐标。 只有在您的游戏只有 1 个非变形相机且不使用多触控时, 才安全使用 。
+基于摄像机列表中第一个摄像机的 ActivePointer 坐标的 x 坐标。 只有在您的游戏只有 1 个非变形摄像机且不使用多触控时, 才安全使用 。
 
 
 > 源码：[src/input/InputPlugin.js#L3190](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L3190)  
@@ -527,7 +527,7 @@ sprite.on('pointerdown', callback, context);
 
 **说明:**
 
-基于相机列表中第一个相机的 ActivePointer y 坐标。 只有在您的游戏只有 1 个非变形相机且不使用多触控时, 才安全使用 。
+基于摄像机列表中第一个摄像机的 ActivePointer y 坐标。 只有在您的游戏只有 1 个非变形摄像机且不使用多触控时, 才安全使用 。
 
 
 > 源码：[src/input/InputPlugin.js#L3208](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L3208)  
@@ -576,7 +576,7 @@ sprite.on('pointerdown', callback, context);
 前10个指针通过`InputPlugin.pointerX`属性提供,一旦通过这种方法添加出来.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | quantity | number | 是 | 1 | 新建指针的数量。 最多允许总共创建10个指针 。 |
 
@@ -600,7 +600,7 @@ sprite.on('pointerdown', callback, context);
 清除一个游戏对象, 使其不再有与之相关的交互式对象。 游戏对象将在下一次更新时排队, 从输入插件中删除 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将删除其互动对象的游戏对象 。 |
 | skipQueue | boolean | 是 | false | 跳过将此游戏对象添加到删除队列中吗 ? |
@@ -627,7 +627,7 @@ sprite.on('pointerdown', callback, context);
 一个输入禁用游戏对象仍然保留其互动对象组件,并且可以随时通过传递到`InputPlugin.enable`而重新启用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 游戏对象使其输入系统被禁用 。 |
 | resetCursor | boolean | 是 | false | 将光标重置为默认值 ? |
@@ -657,12 +657,12 @@ sprite.on('pointerdown', callback, context);
 
 输入通过使用命中区域来工作,这些几乎总是几何形状,如矩形或圆形,它们充当游戏对象的命中区域。但是,如果你想处理一些更先进的输入检测,你可以提供自己的命中区域形状和回调。
 
-如果没有提供参数,它将尝试根据游戏对象使用的纹理框架创建矩形命中区域。如果这不是一个纹理约束对象,如图形或比特玛普Text对象,则会失败,需要提供它使用的具体形状。
+如果没有提供参数,它将尝试根据游戏对象使用的纹理帧创建矩形命中区域。如果这不是一个纹理约束对象,如图形或比特玛普Text对象,则会失败,需要提供它使用的具体形状。
 
 您也可以提供输入配置对象作为这种方法的唯一参数。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 要启用的游戏对象输入 。 |
 | hitArea | [Phaser.Types.Input.InputConfiguration](/api/typedef/types-input#inputconfiguration) \| any | 是 |  | 输入配置对象,或者定义游戏对象的命中区域的几何形状。如果不指定矩形,则会使用。 |
@@ -703,7 +703,7 @@ sprite.on('pointerdown', callback, context);
 注意调试形状只显示输入区域的大纲。 如果输入测试使用像素完美检查, 则此选项不显示。 如果您使用自定义形状, 则不会扩展一个基数 Phaser 几何对象, 作为您的命中区域, 这种方法将无法工作 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 创建输入调试形状的游戏对象 。 |
 | color | number | 是 | "0x00ff00" | 调试形状的轮廓颜色 。 |
@@ -738,7 +738,7 @@ sprite.on('pointerdown', callback, context);
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 设定状态的游戏对象 。 |
 
 
-**Fires:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_DOWN](/api/event/input-events#gameobject_pointer_down), [Phaser.Input.Events#event:GAMEOBJECT_DOWN](/api/event/input-events#gameobject_down)
+**触发事件:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_DOWN](/api/event/input-events#gameobject_pointer_down), [Phaser.Input.Events#event:GAMEOBJECT_DOWN](/api/event/input-events#gameobject_down)
 
 
 > 源码：[src/input/InputPlugin.js#L2080](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L2080)  
@@ -767,7 +767,7 @@ sprite.on('pointerdown', callback, context);
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 设定状态的游戏对象 。 |
 
 
-**Fires:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_OUT](/api/event/input-events#gameobject_pointer_out), [Phaser.Input.Events#event:GAMEOBJECT_OUT](/api/event/input-events#gameobject_out)
+**触发事件:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_OUT](/api/event/input-events#gameobject_pointer_out), [Phaser.Input.Events#event:GAMEOBJECT_OUT](/api/event/input-events#gameobject_out)
 
 
 > 源码：[src/input/InputPlugin.js#L2149](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L2149)  
@@ -796,7 +796,7 @@ sprite.on('pointerdown', callback, context);
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 设定状态的游戏对象 。 |
 
 
-**Fires:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_OVER](/api/event/input-events#gameobject_pointer_over), [Phaser.Input.Events#event:GAMEOBJECT_OVER](/api/event/input-events#gameobject_over)
+**触发事件:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_OVER](/api/event/input-events#gameobject_pointer_over), [Phaser.Input.Events#event:GAMEOBJECT_OVER](/api/event/input-events#gameobject_over)
 
 
 > 源码：[src/input/InputPlugin.js#L2126](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L2126)  
@@ -815,7 +815,7 @@ sprite.on('pointerdown', callback, context);
 这种方法将迫使给定的游戏对象进入给定的输入状态.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 |  | 设置状态时使用的指针 。 |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 设定状态的游戏对象 。 |
@@ -850,7 +850,7 @@ sprite.on('pointerdown', callback, context);
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 设定状态的游戏对象 。 |
 
 
-**Fires:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_UP](/api/event/input-events#gameobject_pointer_up), [Phaser.Input.Events#event:GAMEOBJECT_UP](/api/event/input-events#gameobject_up)
+**触发事件:** [Phaser.Input.Events#event:GAMEOBJECT_POINTER_UP](/api/event/input-events#gameobject_pointer_up), [Phaser.Input.Events#event:GAMEOBJECT_UP](/api/event/input-events#gameobject_up)
 
 
 > 源码：[src/input/InputPlugin.js#L2103](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPlugin.js#L2103)  
@@ -960,7 +960,7 @@ this.add.sprite(x, y, key).setInteractive(this.input.makePixelPerfect(150));
 您无法使基于非文字的游戏对象像素完美化。 因此, 图形、 位图图文集、 文本、 提列玛普斯、 容器或粒子等将无法工作 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | alphaTolerance | number | 是 | 1 | 将像素上方的α级作为成功交互包含. |
 
@@ -1113,7 +1113,7 @@ this.input.setDefaultCursor('url(assets/cursors/sword.cur), pointer');
 游戏对象不会点火拖动事件, 除非它已被指定用于拖动 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObjects | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 用于改变可拖动状态的游戏对象阵列 。 |
 | value | boolean | 是 | true | 设定为 `true` 如果游戏对象被拖动, `false` 假设它们应该被解开 |
@@ -1276,12 +1276,12 @@ this.input.setDefaultCursor('url(assets/cursors/sword.cur), pointer');
 
 **说明:**
 
-设定游戏对象阵列的命中区域为`Phaser.Geom.Rectangle`形状,使用游戏对象纹理框架来定义命中区域的位置和大小.
+设定游戏对象阵列的命中区域为`Phaser.Geom.Rectangle`形状,使用游戏对象纹理帧来定义命中区域的位置和大小.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| gameObjects | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一组游戏对象,根据它们的纹理框架设定为有矩形命中区域. |
+| gameObjects | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一组游戏对象,根据它们的纹理帧设定为有矩形命中区域. |
 | callback | [Phaser.Types.Input.HitAreaCallback](/api/typedef/types-input#hitareacallback) | 是 | 命中区调回。 如果未定义, 则使用矩形. contains 。 |
 
 

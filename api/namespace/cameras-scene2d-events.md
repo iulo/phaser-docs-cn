@@ -18,15 +18,15 @@ static
 
 毁灭摄像机事件。
 
-由相机管理员破坏时, 由相机实例发出。
+由摄像机管理员破坏时, 由摄像机实例发出。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('cameradestroy', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
@@ -53,7 +53,7 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
 
 完全事件时的镜头消失
 
-当效果淡出时, 由相机实例发出此事件 。
+当效果淡出时, 由摄像机实例发出此事件 。
 
 用`Camera.on('camerafadeincomplete', listener)`从镜头中听它
 
@@ -79,7 +79,7 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
 
 镜头在开始事件中消失。
 
-事件由相机实例在“消失效应”开始时发出 。
+事件由摄像机实例在“消失效应”开始时发出 。
 
 用`Camera.on('camerafadeinstart', listener)`从镜头中听它
 
@@ -109,7 +109,7 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
 
 摄像机完全消失事件。
 
-当淡出效应完成时, 由相机实例发出此事件 。
+当淡出效应完成时, 由摄像机实例发出此事件 。
 
 用`Camera.on('camerafadeoutcomplete', listener)`从镜头中听它
 
@@ -133,9 +133,9 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
 
 **说明:**
 
-相机消失的启动事件。
+摄像机消失的启动事件。
 
-当淡出效应开始时, 由相机实例发出此事件 。
+当淡出效应开始时, 由摄像机实例发出此事件 。
 
 用`Camera.on('camerafadeoutstart', listener)`从镜头中听它
 
@@ -165,15 +165,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.DESTROY, () => {});
 
 摄像机闪光事件
 
-当闪光效应完成时, 由相机实例发出此事件 。
+当闪光效应完成时, 由摄像机实例发出此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('cameraflashcomplete', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_COMPLETE, () => {});
@@ -199,17 +199,17 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_COMPLETE, () => {});
 
 **说明:**
 
-相机闪光启动事件.
+摄像机闪光启动事件.
 
-当闪光效应开始时, 由相机实例发出此事件 。
+当闪光效应开始时, 由摄像机实例发出此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('cameraflashstart', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_START, () => {});
@@ -239,9 +239,9 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_START, () => {});
 
 **说明:**
 
-相机跟踪者更新事件.
+摄像机跟踪者更新事件.
 
-本次事件是由相机实例发出的,当时它正在跟踪一个游戏对象,相机位置也因随后的镜头位置而更新.
+本次事件是由摄像机实例发出的,当时它正在跟踪一个游戏对象,摄像机位置也因随后的镜头位置而更新.
 
 从一个镜头中听它使用: `camera.on('followupdate', listener)`。
 
@@ -249,7 +249,7 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_START, () => {});
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.BaseCamera](/api/class/cameras-scene2d-basecamera) | 否 | 发射事件的摄像机。 |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 相机所跟踪的游戏对象 。 |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 摄像机所跟踪的游戏对象 。 |
 
 
 > 源码：[src/cameras/2d/events/FOLLOW_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/events/FOLLOW_UPDATE_EVENT.js#L7)  
@@ -267,15 +267,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.FLASH_START, () => {});
 
 摄像机Pan完整事件。
 
-泛效应完成后, 由相机实例发送此事件 。
+泛效应完成后, 由摄像机实例发送此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerapancomplete', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_COMPLETE, () => {});
@@ -303,15 +303,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_COMPLETE, () => {});
 
 摄像机潘启动事件.
 
-当泛效应开始时,此事件由相机实例发出 。
+当泛效应开始时,此事件由摄像机实例发出 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerapanstart', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_START, () => {});
@@ -342,7 +342,7 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_START, () => {});
 
 摄像机后渲染事件.
 
-此事件由相机实例发送, 完成渲染后, 无论是摄像机渲染成纹理还是主画布, 都会发送到此事件 。
+此事件由摄像机实例发送, 完成渲染后, 无论是摄像机渲染成纹理还是主画布, 都会发送到此事件 。
 
 从一个镜头中听它使用: `camera.on('postrender', listener)`。
 
@@ -365,16 +365,16 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_START, () => {});
 
 **说明:**
 
-相机预渲染事件.
+摄像机预渲染事件.
 
-事件在即将渲染时由相机实例发出。 只有在相机向纹理渲染时才发出 。
+事件在即将渲染时由摄像机实例发出。 只有在摄像机向纹理渲染时才发出 。
 
 从一个镜头中听它使用: `camera.on('prerender', listener)`。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.BaseCamera](/api/class/cameras-scene2d-basecamera) | 否 | 即将渲染成纹理的相机. |
+| camera | [Phaser.Cameras.Scene2D.BaseCamera](/api/class/cameras-scene2d-basecamera) | 否 | 即将渲染成纹理的摄像机. |
 
 
 > 源码：[src/cameras/2d/events/PRE_RENDER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cameras/2d/events/PRE_RENDER_EVENT.js#L7)  
@@ -392,15 +392,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.PAN_START, () => {});
 
 摄像机旋转完成事件。
 
-当旋转效果完成时, 由相机实例发送此事件 。
+当旋转效果完成时, 由摄像机实例发送此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerarotatecomplete', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ROTATE_COMPLETE, () => {});
@@ -426,17 +426,17 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ROTATE_COMPLETE, () => {});
 
 **说明:**
 
-相机旋转启动事件。
+摄像机旋转启动事件。
 
-当旋转效果开始时, 由相机实例发出此事件 。
+当旋转效果开始时, 由摄像机实例发出此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerarotatestart', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ROTATE_START, () => {});
@@ -466,15 +466,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ROTATE_START, () => {});
 
 摄像机震动事件
 
-本次事件由相机实例在摇摆效应完成后发出.
+本次事件由摄像机实例在摇摆效应完成后发出.
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerashakecomplete', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.SHAKE_COMPLETE, () => {});
@@ -500,17 +500,17 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.SHAKE_COMPLETE, () => {});
 
 **说明:**
 
-相机摇动启动事件.
+摄像机摇动启动事件.
 
-摇晃效应开始时, 由相机实例发出此事件 。
+摇晃效应开始时, 由摄像机实例发出此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerashakestart', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.SHAKE_START, () => {});
@@ -540,15 +540,15 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.SHAKE_START, () => {});
 
 摄像机的放大完成事件。
 
-缩放效果完成后, 由相机实例发送此事件 。
+缩放效果完成后, 由摄像机实例发送此事件 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerazoomcomplete', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ZOOM_COMPLETE, () => {});
@@ -574,17 +574,17 @@ this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ZOOM_COMPLETE, () => {});
 
 **说明:**
 
-相机放大启动事件.
+摄像机放大启动事件.
 
-缩放效果开始时, 此事件由相机实例发送 。
+缩放效果开始时, 此事件由摄像机实例发送 。
 
-通过以下任一方式倾听:
+可以用以下任一方式监听此事件。
 
 ```js
 this.cameras.main.on('camerazoomstart', () => {});
 ```
 
-或使用常数,以避免需要记住正确的事件字符串:
+也可以使用事件常量，省去记忆事件字符串的步骤。
 
 ```js
 this.cameras.main.on(Phaser.Cameras.Scene2D.Events.ZOOM_START, () => {});

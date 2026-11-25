@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Euler([x], [y], [z], [order])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 围绕X轴旋转,以弧度表示. |
 | y | number | 是 | 0 | 绕Y轴旋转,以弧度表示. |
@@ -165,7 +165,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 ennion首先在内部转换为旋转矩阵,然后`setFromRotationMatrix`被调用以得出Euler角度,这样通过矩阵表达法可以避免 gimbal 锁问题.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | quaternion | [Phaser.Math.Quaternion](/api/class/math-quaternion) | 否 |  | 以四角为单位从欧拉角度得到的 |
 | order | string | 是 |  | 要使用的旋转顺序。 如果未指定, 默认为当前顺序 。 |
@@ -193,7 +193,7 @@ ennion首先在内部转换为旋转矩阵,然后`setFromRotationMatrix`被调�
 矩阵被假定为纯旋转矩阵( 未缩放)。 每个支持旋转顺序都有自己的解析公式。 如果 `update` 参数是 `true`, 则在设定值后引用 `onChangeCallback` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | [Phaser.Math.Matrix4](/api/class/math-matrix4) | 否 |  | 旋转矩阵可以从 Euler 角度得出。 必须是纯( 未标定的) 旋转矩阵 。 |
 | order | string | 是 |  | 要使用的旋转顺序。 如果未指定, 默认为当前顺序 。 |

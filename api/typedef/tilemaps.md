@@ -13,7 +13,7 @@ Phaser 提列玛普常数用于定向.
 
 **类型**: [Phaser.Tilemaps.Orientation](/api/namespace/tilemaps-orientation)
 
-**Member of**: Phaser.Tilemaps
+**所属**: Phaser.Tilemaps
 > 源码：[src/tilemaps/const/ORIENTATION_CONST.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/const/ORIENTATION_CONST.js#L15)  
 引入版本：3.50.0
 

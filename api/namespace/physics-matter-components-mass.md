@@ -16,12 +16,12 @@ static
 
 **说明:**
 
-设置身体密度。
+设置物理体密度。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 身体的新密度. |
+| value | number | 否 | 物理体的新密度. |
 
 
 **返回值:** [Phaser.Physics.Matter.Components.Mass](/api/namespace/physics-matter-components-mass) - 此游戏对象实例 。
@@ -45,7 +45,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 身体新质. |
+| value | number | 否 | 物理体新质. |
 
 
 **返回值:** [Phaser.Physics.Matter.Components.Mass](/api/namespace/physics-matter-components-mass) - 此游戏对象实例 。
@@ -66,7 +66,7 @@ static
 
 **说明:**
 
-身体的弥撒中心.
+物理体的弥撒中心.
 
 调用此功能,每次都会产生一个新的`Vector2`,以避免突变.
 

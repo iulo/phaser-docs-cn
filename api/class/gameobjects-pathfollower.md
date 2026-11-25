@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | path | [Phaser.Curves.Path](/api/class/curves-path) | 否 | 此路径跟踪器遵循的路径。 它只能一次遵循一个路径 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 ---
@@ -656,7 +656,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由场景步骤自动调用,一般不应直接调用.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -665,7 +665,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | delta | number | 否 | 三角洲时间,以ms计, 过去了,自上一个框架。 |
 
 
-**Overrides:** Phaser.GameObjects.Sprite#preUpdate
+**重写:** Phaser.GameObjects.Sprite#preUpdate
 
 
 > 源码：[src/gameobjects/pathfollower/PathFollower.js#L58](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/pathfollower/PathFollower.js#L58)  

@@ -69,7 +69,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | padding | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 将应用在第一个通行证上的渲染区域周围。如果省略,则从控制器中提取。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
 
 
 **返回值:** [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) - 包含模糊结果的绘图上下文 。

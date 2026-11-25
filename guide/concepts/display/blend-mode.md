@@ -6,7 +6,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/dis
 
 混合模式在 Canvas 和 WebGL 下,以及浏览器到浏览器之间, 取决于支持, 混合模式在遇到新的混合模式时也会产生 WebGL 批量冲洗。 由于这些原因, 请注意您所构建的场景和使用混合模式的频率 。
 
-## WebGL 和彩色画 {#webgl-and-canvas}
+## WebGL 与 Canvas {#webgl-and-canvas}
 
 - `'NORMAL'`,或 ,或 , `Phaser.BlendModes.NORMAL`,或 ,或 , `0`
   - 默认设置和绘制新形状, 覆盖现有画布内容 。
@@ -19,7 +19,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/dis
 - `'ERASE'`,或 ,或 , `Phaser.BlendModes.ERASE`,或 ,或 , `17`
   - Alpha 擦除混合模式。 只有在向帧缓冲器渲染时才有效, 如 * 渲染纹理 *
 
-## 仅限画板 {#canvas-only}
+## 仅限 Canvas {#canvas-only}
 
 - `'OVERLAY'`,或 ,或 , `Phaser.BlendModes.OVERLAY`,或 ,或 , `4`
   - 复数和屏幕的结合,底层上的暗部分变暗,光部分变轻.

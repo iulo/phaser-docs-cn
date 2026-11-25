@@ -25,7 +25,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 添加到纹理管理器中的纹理密钥. |
+| key | string | 否 | 添加到纹理管理器中的纹理键. |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 提及纹理管理器中添加的纹理. |
 
 
@@ -42,9 +42,9 @@ static
 
 **说明:**
 
-纹理添加密钥事件 。
+纹理添加键事件 。
 
-当添加了给定密钥的纹理时,此事件由纹理管理器发出.
+当添加了给定键的纹理时,此事件由纹理管理器发出.
 
 使用:`this.textures.on('addtexture-key', listener)`,从场内听这个事件.
 
@@ -76,7 +76,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 无法加载到纹理管理器的纹理密钥 。 |
+| key | string | 否 | 无法加载到纹理管理器的纹理键 。 |
 
 
 > 源码：[src/textures/events/ERROR_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/ERROR_EVENT.js#L7)  
@@ -94,7 +94,7 @@ static
 
 纹理载荷事件.
 
-此事件由纹理管理器在完成装入时发出。 仅发生于基数64编码纹理。 所有其他纹理类型都通过装入器插件加载 。
+此事件由纹理管理器在完成装入时发出。 仅发生于基数64编码纹理。 所有其他纹理类型都通过资源加载器插件加载 。
 
 使用:`this.textures.on('onload', listener)`,从场内听这个事件.
 
@@ -103,7 +103,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理管理器装入的纹理密钥 。 |
+| key | string | 否 | 纹理管理器装入的纹理键 。 |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 纹理管理器装入的纹理参考文献 。 |
 
 
@@ -149,7 +149,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从纹理管理器中移除的纹理密钥. |
+| key | string | 否 | 从纹理管理器中移除的纹理键. |
 
 
 > 源码：[src/textures/events/REMOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/events/REMOVE_EVENT.js#L7)  
@@ -165,9 +165,9 @@ static
 
 **说明:**
 
-纹理删除密钥事件 。
+纹理删除键事件 。
 
-当带给定密钥的纹理被移除时,此事件由纹理管理器发出.
+当带给定键的纹理被移除时,此事件由纹理管理器发出.
 
 使用:`this.textures.on('removetexture-key', listener)`,从场内听这个事件.
 

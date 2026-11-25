@@ -32,7 +32,7 @@ static
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L31](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L31)  
@@ -96,7 +96,7 @@ static
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L41](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L41)  
@@ -224,7 +224,7 @@ D - 左边
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L51](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L51)  
@@ -336,7 +336,7 @@ D - 左边
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L21](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/Sony_PlayStation_DualShock_4.js#L21)  

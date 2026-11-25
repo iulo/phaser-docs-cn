@@ -96,10 +96,10 @@ HTML5 音频管理器
 获取或设置此声音管理器的变音状态。 设定为 `true` 变音, 而设定为 `false` 则恢复音量。 更改时将 `GLOBAL_MUTE` 事件点燃 。
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager穆特( 穆特)
+**重写:** Phaser.Sound.BaseSoundManager穆特( 穆特)
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L389](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L389)  
@@ -134,10 +134,10 @@ HTML5 音频管理器
 获取或设置此声音管理器的全局音量。 所有活动声音的音量将按此值进行缩放。 必须在 0( 静音) 到 1( 完整音量) 之间。 更改时将启动 `GLOBAL_VOLUME`事件 。
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager数量
+**重写:** Phaser.Sound.BaseSoundManager数量
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L438](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L438)  
@@ -209,11 +209,11 @@ HTML5 音频管理器
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager添加( 添加 )
+**重写:** Phaser.Sound.BaseSoundManager添加( 添加 )
 
 
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 新声闻例.
@@ -235,7 +235,7 @@ HTML5 音频管理器
 呼叫 Phaser.Sound.BaseSoundManager#destroy 方法并清理所有 HTML5 音频相关资源.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#销毁
+**重写:** Phaser.Sound.BaseSoundManager#销毁
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L325](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L325)  
@@ -254,13 +254,13 @@ HTML5 音频管理器
 Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用于检查声音管理器是否被锁定,然后要么立即执行动作,要么在声音管理器解锁后排队执行.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 执行队列动作的音效对象 。 |
-| prop | string | 否 | 拟调用的方法名称或拟给定值的财产名称. |
+| prop | string | 否 | 拟调用的方法名称或拟给定值的属性名称. |
 | value | * | 是 | 一个可选参数,它要么持有一系列要传递到方法调用,要么设定到属性的值. |
 
 
@@ -283,10 +283,10 @@ Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用
 如果 Phaser.Sound.HTML5AudioSoundManager# pauseOnBlur 设定为真实, 则内部用于挖掘声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onBlur
+**重写:** Phaser.Sound.BaseSoundManager#onBlur
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L287](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L287)  
@@ -305,10 +305,10 @@ Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用
 如果 Phaser.Sound.HTML5AudioSoundManager# pauseOnBlur 设定为真实,则内部用于恢复声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onFocus
+**重写:** Phaser.Sound.BaseSoundManager#onFocus
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L307](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L307)  
@@ -335,7 +335,7 @@ Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用
 **返回值:** [Phaser.Sound.HTML5AudioSoundManager](/api/class/sound-html5audiosoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_MUTE](/api/event/sound-events#global_mute)
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L371](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L371)  
@@ -362,7 +362,7 @@ Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用
 **返回值:** [Phaser.Sound.HTML5AudioSoundManager](/api/class/sound-html5audiosoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_VOLUME](/api/event/sound-events#global_volume)
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L420](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L420)  
@@ -381,7 +381,7 @@ Phaser.Sound.HTML5AudioSound类方法与属性设置器内部使用的方法,用
 在初始的显式用户交互上解锁HTML5音频加载和重播移动设备.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#解锁
+**重写:** Phaser.Sound.BaseSoundManager#解锁
 
 
 > 源码：[src/sound/html5/HTML5AudioSoundManager.js#L162](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSoundManager.js#L162)  

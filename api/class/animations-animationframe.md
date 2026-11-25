@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 动画序列中的单帧.
 
-动画Frame 持有一个用于渲染的纹理框架的引用,与序列中上一个和下一个帧的链接,其位置索引,以及回放进度数据。它也可以携带一个可选的每个帧持续时间,它可以覆盖母动画的默认帧速率,并且可以被标记为标记序列中重要时刻的密钥框架.
+动画Frame 持有一个用于渲染的纹理帧的引用,与序列中上一个和下一个帧的链接,其位置索引,以及回放进度数据。它也可以携带一个可选的每个帧持续时间,它可以覆盖母动画的默认帧速率,并且可以被标记为标记序列中重要时刻的键框架.
 
 动画Frames 由动画类自动创建和管理, 当动画通过动画管理器构建时。 您通常不会直接即时化动画Frame 。
 
@@ -13,12 +13,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new AnimationFrame(textureKey, textureFrame, index, frame, [isKeyFrame])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| textureKey | string | 否 |  | 纹理的密钥 此动画Frame 使用. |
-| textureFrame | string \| number | 否 |  | 本动画Frame使用的纹理内框架的密钥 。 |
+| textureKey | string | 否 |  | 纹理的键 此动画Frame 使用. |
+| textureFrame | string \| number | 否 |  | 本动画Frame使用的纹理内框架的键 。 |
 | index | number | 否 |  | 本动画Frame在动画序列中的索引. |
-| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 参照此动画Frame用于渲染的纹理框架 。 |
+| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 参照此动画Frame用于渲染的纹理帧 。 |
 | isKeyFrame | boolean | 是 | false | 这个框架是动画中的关键框架吗? |
 
 ---
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-参照此动画Frame用于渲染的纹理框架 。
+参照此动画Frame用于渲染的纹理帧 。
 
 
 > 源码：[src/animations/AnimationFrame.js#L67](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationFrame.js#L67)  
@@ -182,7 +182,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-本动画Frame使用的纹理内框架的密钥 。
+本动画Frame使用的纹理内框架的键 。
 
 
 > 源码：[src/animations/AnimationFrame.js#L49](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationFrame.js#L49)  
@@ -198,7 +198,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-纹理的密钥 此动画Frame 使用.
+纹理的键 此动画Frame 使用.
 
 
 > 源码：[src/animations/AnimationFrame.js#L40](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/AnimationFrame.js#L40)  

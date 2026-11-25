@@ -72,7 +72,7 @@ create () {
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| key | string | 是 | 游戏对象将播放的视频的可选密钥, 如存储在视频缓存中 。 |
+| key | string | 是 | 游戏对象将播放的视频的可选键, 如存储在视频缓存中 。 |
 
 ---
 
@@ -314,7 +314,7 @@ create () {
 
 **说明:**
 
-存储在视频缓存中的当前视频的密钥 。
+存储在视频缓存中的当前视频的键 。
 
 如果视频不是来自缓存, 这将是一个空字符串 。
 
@@ -870,7 +870,7 @@ create () {
 将此视频添加到 Scene 更新列表中, 以确保它收到 `preUpdate` 调用游戏的每个步骤。 当此游戏对象被添加到游戏中时, 视频会自动被 Scene 调用 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/video/Video.js#L569](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L569)  
@@ -957,7 +957,7 @@ create () {
 原因您可能希望这样做是因为需要交互解锁的视频,即使您改变了视频的来源,仍然处于解锁状态。通过将源换成新的视频,您可以避免再次通过解锁进程。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 此游戏对象将转换为播放的视频键, 存储在视频缓存中 。 |
 | autoplay | boolean | 是 | true | 视频应该马上播放, 交换完成后? |
@@ -987,7 +987,7 @@ create () {
 如果视频来自一个直播流,而持续时间是`Infinity`,则这永远不会发生.
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_COMPLETE](/api/event/gameobjects-events#video_complete)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_COMPLETE](/api/event/gameobjects-events#video_complete)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1643](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1643)  
@@ -1010,7 +1010,7 @@ create () {
 详情见[https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play#browser_compatibility](https://developer.mozilla.org/en-US/docs/Web/API/HTMLMediaElement/play#browser_compatibility)。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | catchError | boolean | 是 | true | 是否应该抓住错误, 并标出未播放的视频 ? |
 
@@ -1156,12 +1156,12 @@ create () {
 
 **说明:**
 
-返回当前播放的视频的密钥, 如存储在 Video Cache 中 。
+返回当前播放的视频的键, 如存储在 Video Cache 中 。
 
 如果视频不是来自缓存, 则返回空字符串 。
 
 
-**返回值:** string - 视频缓存中播放的视频的密钥,如果有的话.
+**返回值:** string - 视频缓存中播放的视频的键,如果有的话.
 
 
 > 源码：[src/gameobjects/video/Video.js#L666](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L666)  
@@ -1280,7 +1280,7 @@ create () {
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 游戏对象将播放的视频的密钥, 如存储在视频缓存中 。 |
+| key | string | 否 | 游戏对象将播放的视频的键, 如存储在视频缓存中 。 |
 
 
 **返回值:** [Phaser.GameObjects.Video](/api/class/gameobjects-video) - 这个用于方法链的视频游戏对象 。
@@ -1307,7 +1307,7 @@ create () {
 | event | Event | 否 | 错误事件 。 |
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_ERROR](/api/event/gameobjects-events#video_error)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_ERROR](/api/event/gameobjects-events#video_error)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1551](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1551)  
@@ -1357,7 +1357,7 @@ create () {
 从给定的MediaStream对象装入一个视频,准备使用`Video.play`方法重播.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | stream | MediaStream | 否 |  | MediaStream 对象。 |
 | noAudio | boolean | 是 | false | 视频是否有音频音轨? 如果您不能, 您可以启用自动播放 。 |
@@ -1387,7 +1387,7 @@ create () {
 原因您可能希望这样做是因为需要交互解锁的视频,即使您改变了视频的来源,仍然处于解锁状态。通过将源换成新的视频,您可以避免再次通过解锁进程。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | urls | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig)> | 是 |  | 绝对或相对的URL从中加载视频文件. |
 | noAudio | boolean | 是 | false | 视频是否有音频音轨? 如果您不能, 您可以启用自动播放 。 |
@@ -1418,7 +1418,7 @@ create () {
 | event | Event | 否 | 装满的元数据事件。 |
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_METADATA](/api/event/gameobjects-events#video_metadata)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_METADATA](/api/event/gameobjects-events#video_metadata)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1567](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1567)  
@@ -1476,7 +1476,7 @@ preload () {
 如果你在视频中需要音频,那么你就必须考虑这样一个事实:视频在用户与浏览器互动之前,不能开始播放,进入游戏流.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loop | boolean | 是 | false | 视频循环是否在到达尾声时自动循环? 请注意并非所有浏览器都支持所有编码格式的_无缝_视频循环 。 |
 | markerIn | number | 是 |  | 可以在标记时间,秒内选择,用于播放视频的序列. |
@@ -1507,7 +1507,7 @@ preload () {
 | error | DOMException | 否 | 承诺 DOM 例外错误 。 |
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_ERROR](/api/event/gameobjects-events#video_error), [Phaser.GameObjects.Events#event:VIDEO_UNSUPPORTED](/api/event/gameobjects-events#video_unsupported), [Phaser.GameObjects.Events#event:VIDEO_LOCKED](/api/event/gameobjects-events#video_locked)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_ERROR](/api/event/gameobjects-events#video_error), [Phaser.GameObjects.Events#event:VIDEO_UNSUPPORTED](/api/event/gameobjects-events#video_unsupported), [Phaser.GameObjects.Events#event:VIDEO_LOCKED](/api/event/gameobjects-events#video_locked)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1480](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1480)  
@@ -1526,7 +1526,7 @@ preload () {
 视频发出`playing`事件时打电话.
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_PLAYING](/api/event/gameobjects-events#video_playing)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_PLAYING](/api/event/gameobjects-events#video_playing)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1537](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1537)  
@@ -1551,7 +1551,7 @@ preload () {
 关于这个问题的详情,请参看[https://github.com/w3c/media-and-entertainment/issues/4](https://github.com/w3c/media-and-entertainment/issues/4)。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 游戏标记序列的名称 。 |
 | loop | boolean | 是 | false | 视频循环是否在到达尾声时自动循环? 请注意并非所有浏览器都支持所有编码格式的_无缝_视频循环 。 |
@@ -1576,7 +1576,7 @@ preload () {
 如果播放承诺成功解决,这种内部方法会自动被称作.
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_UNLOCKED](/api/event/gameobjects-events#video_unlocked)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_UNLOCKED](/api/event/gameobjects-events#video_unlocked)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1439](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1439)  
@@ -1595,7 +1595,7 @@ preload () {
 从 Scene 更新列表中删除此视频, 阻止它接收 `preUpdate` 呼叫。 当此游戏对象从中移除时, 此视频会自动被 Scene 调用 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/video/Video.js#L582](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L582)  
@@ -1706,7 +1706,7 @@ preload () {
 | metadata | VideoFrameCallbackMetadata | 否 | 关于最近为组成而提出的视频框架的有用元数据。见 https://wicg.github.io/video-rvfc/#video-frame-metadata-callback |
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_CREATED](/api/event/gameobjects-events#video_created), [Phaser.GameObjects.Events#event:VIDEO_LOOP](/api/event/gameobjects-events#video_loop), [Phaser.GameObjects.Events#event:VIDEO_COMPLETE](/api/event/gameobjects-events#video_complete), [Phaser.GameObjects.Events#event:VIDEO_PLAY](/api/event/gameobjects-events#video_play), [Phaser.GameObjects.Events#event:VIDEO_TEXTURE](/api/event/gameobjects-events#video_texture)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_CREATED](/api/event/gameobjects-events#video_created), [Phaser.GameObjects.Events#event:VIDEO_LOOP](/api/event/gameobjects-events#video_loop), [Phaser.GameObjects.Events#event:VIDEO_COMPLETE](/api/event/gameobjects-events#video_complete), [Phaser.GameObjects.Events#event:VIDEO_PLAY](/api/event/gameobjects-events#video_play), [Phaser.GameObjects.Events#event:VIDEO_TEXTURE](/api/event/gameobjects-events#video_texture)
 
 
 > 源码：[src/gameobjects/video/Video.js#L850](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L850)  
@@ -1745,7 +1745,7 @@ preload () {
 
 **说明:**
 
-使用给定的密钥在纹理管理器中存储此 Videos `snapshotTexture` 的副本 。
+使用给定的键在纹理管理器中存储此 Videos `snapshotTexture` 的副本 。
 
 这种纹理是在`snapshot`或`snapshotArea`方法被称作时创建的.
 
@@ -1768,7 +1768,7 @@ this.add.image(400, 300, 'doodle');
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 将纹理存储在全球纹理管理器内部的独有密钥 。 |
+| key | string | 否 | 将纹理存储在全球纹理管理器内部的独有键 。 |
 
 
 **返回值:** [Phaser.Textures.CanvasTexture](/api/class/textures-canvastexture) - 保存下来的纹理。
@@ -1787,7 +1787,7 @@ this.add.image(400, 300, 'doodle');
 
 **说明:**
 
-将此视频存储在纹理管理器中, 使用给定的密钥作为动态纹理, 任何基于纹理的游戏对象, 如Sprite, 都可以使用它作为源 :
+将此视频存储在纹理管理器中, 使用给定的键作为动态纹理, 任何基于纹理的游戏对象, 如Sprite, 都可以使用它作为源 :
 
 ```javascript
 const vid = this.add.video(0, 0, 'intro');
@@ -1824,9 +1824,9 @@ vid.saveTexture('doodle');
 如果您打算保存纹理, 以便您可以把它作为阴影的输入, 如果您发现视频在阴影中颠倒, 您可能需要切换 `flipY` 参数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 将纹理存储在全球纹理管理器内部的独有密钥 。 |
+| key | string | 否 |  | 将纹理存储在全球纹理管理器内部的独有键 。 |
 | flipY | boolean | 是 | true | 上传时 WebGL纹理应该设置 `UNPACK_MULTIPLY_FLIP_Y`吗? |
 
 
@@ -1919,7 +1919,7 @@ vid.saveTexture('doodle');
 请注意,并非所有浏览器都支持所有编码格式的_seamle_视频环路.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 显示媒体元素何时结束的布尔 。 |
 
@@ -1943,7 +1943,7 @@ vid.saveTexture('doodle');
 设定当前播放视频的变种状态, 如果已装入的话 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 哑值。 `true` 如果视频应该哑音, 否则`false`。 |
 
@@ -1975,7 +1975,7 @@ vid.saveTexture('doodle');
 如果视频结束,这种方法将无济于事.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 暂停值。 `true` 如果视频被暂停, `false` 恢复它 。 |
 
@@ -2055,7 +2055,7 @@ vid.saveTexture('doodle');
 给出的值是表示音频音量的双倍,从0.0(沉寂)到1.0(最粗糙).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 1 | 双向表示音频音量,从0.0(沉寂)到1.0(最隆重). |
 
@@ -2108,7 +2108,7 @@ vid.saveTexture('doodle');
 此方法返回 `Video.snapshotTexture` 对象的引用。 多次调用此方法将覆盖上次的快照和最近的快照 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 区域左上方的横向位置 |
 | y | number | 是 | 0 | 区域左上方要抓取的垂直位置 。 |
@@ -2142,7 +2142,7 @@ vid.saveTexture('doodle');
 | event | Event | 否 | 摊子事件。 |
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_STALLED](/api/event/gameobjects-events#video_stalled)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_STALLED](/api/event/gameobjects-events#video_stalled)
 
 
 > 源码：[src/gameobjects/video/Video.js#L1627](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L1627)  
@@ -2158,14 +2158,14 @@ vid.saveTexture('doodle');
 
 **说明:**
 
-停止播放视频,清除所有内部事件听众.
+停止播放视频,清除所有内部事件监听器.
 
 如果您只想暂停播放视频, 并稍后恢复播放, 请使用 `Video.pause` 方法 。
 
 如果视频没有完成下载, 调用此方法不会中止下载。 要做到这一点, 您需要拨打 `destroy` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | emitStopEvent | boolean | 是 | true | 是否应该释放 `VIDEO_STOP`事件? |
 
@@ -2173,7 +2173,7 @@ vid.saveTexture('doodle');
 **返回值:** [Phaser.GameObjects.Video](/api/class/gameobjects-video) - 这个用于方法链的视频游戏对象 。
 
 
-**Fires:** [Phaser.GameObjects.Events#event:VIDEO_STOP](/api/event/gameobjects-events#video_stop)
+**触发事件:** [Phaser.GameObjects.Events#event:VIDEO_STOP](/api/event/gameobjects-events#video_stop)
 
 
 > 源码：[src/gameobjects/video/Video.js#L2266](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/video/Video.js#L2266)  

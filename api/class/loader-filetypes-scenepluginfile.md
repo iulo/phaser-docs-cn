@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-scenepluginfile)
 
-适合装入器装入的单个场景插件脚本文件 。
+适合资源加载器装入的单个场景插件脚本文件 。
 
 这些是使用Phaser.Loader.LoaderPlugin#scenePlugin方法创建的,一般不直接创建.
 
@@ -16,10 +16,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ScenePluginFileConfig](/api/typedef/types-loader-filetypes#scenepluginfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.js`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. js" 。 |
-| systemKey | string | 是 | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性密钥 。 |
-| sceneKey | string | 是 | 如果要将此插件添加到场景中, 这是它属性的密钥 。 |
+| systemKey | string | 是 | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性键 。 |
+| sceneKey | string | 是 | 如果要将此插件添加到场景中, 这是它属性的键 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
 ---
@@ -73,10 +73,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 由 Loader. nextFile 自动调用。 此方法控制了文件在加载数据中的额外工作 。
 
-如果插件作为类参考( 即 `url` 参数是一个函数,它通过插件管理器直接安装到场景中。否则,所装的脚本文本会通过附加新的文字注入到文档中 `<script>` 元素到 `document.head`,然后从 `window` 在通过 Scene 安装到 Scene 之前使用文件密钥 `pluginManager.installScenePlugin`.
+如果插件作为类参考( 即 `url` 参数是一个函数,它通过插件管理器直接安装到场景中。否则,所装的脚本文本会通过附加新的文字注入到文档中 `<script>` 元素到 `document.head`,然后从 `window` 在通过 Scene 安装到 Scene 之前使用文件键 `pluginManager.installScenePlugin`.
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/ScenePluginFile.js#L82](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ScenePluginFile.js#L82)  

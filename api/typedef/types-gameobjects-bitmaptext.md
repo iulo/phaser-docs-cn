@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapFontCharacterData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapFontCharacterData.js#L1)  
 引入版本：3.0.0
 
@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapFontData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapFontData.js#L1)  
 引入版本：3.0.0
 
@@ -93,7 +93,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapTextCharacter.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapTextCharacter.js#L1)  
 引入版本：3.50.0
 
@@ -103,15 +103,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> BitmapTextConfig {#static-bitmaptextconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| font | string | 是 | "''" | BitmapFont 缓存中要使用的字体的密钥 。 |
+| font | string | 是 | "''" | BitmapFont 缓存中要使用的字体的键 。 |
 | text | string | 是 | "''" | 字符串,或字符串的数组,将设置为此位图文本的内容 。 |
 | size | number \| false | 是 | false | 要设置的字体大小 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapTextConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapTextConfig.js#L1)  
 引入版本：3.0.0
 
@@ -133,7 +133,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapTextLines.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapTextLines.js#L1)  
 引入版本：3.50.0
 
@@ -157,7 +157,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapTextSize.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapTextSize.js#L1)  
 引入版本：3.0.0
 
@@ -181,7 +181,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/BitmapTextWord.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/BitmapTextWord.js#L1)  
 引入版本：3.50.0
 
@@ -206,7 +206,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/DisplayCallbackConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/DisplayCallbackConfig.js#L1)  
 引入版本：3.0.0
 
@@ -218,7 +218,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/DisplayCallbackConfig.js#L17](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/DisplayCallbackConfig.js#L17)  
 
 
@@ -240,7 +240,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/GlobalBitmapTextSize.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/GlobalBitmapTextSize.js#L1)  
 引入版本：3.0.0
 
@@ -261,7 +261,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/JSONBitmapText.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/JSONBitmapText.js#L1)  
 引入版本：3.0.0
 
@@ -283,7 +283,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/LocalBitmapTextSize.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/LocalBitmapTextSize.js#L1)  
 引入版本：3.0.0
 
@@ -308,7 +308,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/RetroFontConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/RetroFontConfig.js#L1)  
 引入版本：3.6.0
 
@@ -327,7 +327,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.BitmapText
+**所属**: Phaser.Types.GameObjects.BitmapText
 > 源码：[src/gameobjects/bitmaptext/typedefs/TintConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/typedefs/TintConfig.js#L1)  
 引入版本：3.0.0
 

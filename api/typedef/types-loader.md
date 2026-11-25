@@ -6,11 +6,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> FileConfig {#static-fileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 类型 | string | 否 |  | 装入此文件的加载器方法的名称, 例如“ 图像 ” 、 “ json ” 、 “ 拼写表 ” 。 |
 | cache | [Phaser.Cache.BaseCache](/api/class/cache-basecache) \| false | 否 |  | 引用此文件类型的缓存实例。 如果您不需要从游戏中获取文件, 则引用错误; 例如: 浏览器跟踪的字体文件 。 |
-| key | string | 否 |  | 独有缓存密钥( 其文件类型中独一无二) |
+| key | string | 否 |  | 独有缓存键( 其文件类型中独一无二) |
 | url | object \| string | 是 |  | 文件的URL,不包括baseURL. |
 | path | string | 是 |  | 文件的路径,不包括baseURL. |
 | extension | string | 是 |  | 此文件使用的默认扩展名 。 |
@@ -47,22 +47,22 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | shaderType | string | 是 | "'fragment'" | 着色器的类型。 要么是碎片着色器的 `fragment`, 要么是顶点着色器的 `vertex`。 如果您装入着色器捆绑, 则忽略了此选项 。 |
 | width | number | 是 | 512 | HTML 的纹理宽度将被渲染到 。 |
 | height | number | 是 | 512 | HTML 的纹理高度将被渲染到 。 |
-| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 |  | 框架配置对象。 只提供和用于Sprite工作表 。 |
-| dataKey | string | 是 |  | 如果指定了而不是正在解析并添加到缓存中的全部 JSON 文件, 则只添加与此属性密钥相对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段分割它 。 |
+| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 |  | 框架配置对象。 只提供和用于精灵表 。 |
+| dataKey | string | 是 |  | 如果指定了而不是正在解析并添加到缓存中的全部 JSON 文件, 则只添加与此属性键相对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段分割它 。 |
 | baseURL | string | 是 |  | 装入地图集数据中定义的纹理时使用的可选基址 。 |
 | flipUV | boolean | 是 |  | 翻转模型数据中存储的紫外线坐标? |
 | matURL | string | 是 |  | 对象材料文件的可选绝对或相对的 URL。 如果未定义或 `null` , 则不会装入材料文件 。 |
 | matExtension | string | 是 | "'mat'" | 如果没有提供url,则使用默认的材料文件扩展名 。 |
 | start | boolean | 是 | false | 装入后自动启动插件吗 ? |
-| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性密钥 。 |
-| systemKey | string | 是 |  | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性密钥 。 |
-| sceneKey | string | 是 |  | 如果要将此插件添加到场景中, 这是它属性的密钥 。 |
+| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性键 。 |
+| systemKey | string | 是 |  | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性键 。 |
+| sceneKey | string | 是 |  | 如果要将此插件添加到场景中, 这是它属性的键 。 |
 | svgConfig | [Phaser.Types.Loader.FileTypes.SVGSizeConfig](/api/typedef/types-loader-filetypes#svgsizeconfig) | 是 |  | svg 大小配置对象 。 |
 | maxRetries | number | 是 | 2 | 如果文件负载失败, 重试的次数 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader
+**所属**: Phaser.Types.Loader
 > 源码：[src/loader/typedefs/FileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/typedefs/FileConfig.js#L1)  
 引入版本：3.0.0
 
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> XHRSettingsObject {#static-xhrsettingsobject}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | responseType | XMLHttpRequestResponseType | 否 |  | XHR请求的响应类型,即`blob`,`text`等. |
 | async | boolean | 是 | true | XHR请求是否使用同步? |
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader
+**所属**: Phaser.Types.Loader
 > 源码：[src/loader/typedefs/XHRSettingsObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/typedefs/XHRSettingsObject.js#L1)  
 引入版本：3.0.0
 

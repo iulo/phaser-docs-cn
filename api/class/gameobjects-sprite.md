@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 ---
@@ -551,7 +551,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将这个Sprite与Scene的更新列表一起注册,这样其`preUpdate`方法就被称为每个游戏步骤,允许动画推进每个帧.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L130](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L130)  
@@ -579,7 +579,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 调用此方法, 无需参数来重置所有目前串联的动画 。
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -609,7 +609,7 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于这个S
 
 全球动画的好处是,多部Sprite可以全部播放相同的动画,而无需重复数据。你可以一次一次地在任意的Sprite上播放。
 
-以下代码显示如何创建全球重复动画。 动画将从装入密钥“ muybridge” 的图示工作表中的所有框架创建 :
+以下代码显示如何创建全球重复动画。 动画将从装入键“ muybridge” 的精灵表中的所有框架创建 :
 
 ```javascript
 var config = {
@@ -637,16 +637,16 @@ this.add.sprite(x, y).play('run');
 this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 ```
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
-如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的密钥.
+如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的键.
 
 关于此方面的更多细节,请参看`PlayAnimationConfig`配置对象的文档.
 
 另外,关于动画创作的进一步详情,请参见动画管理器中的文档.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | ignoreIfPlaying | boolean | 是 | false | 如果动画已经播放了,那么就忽略这个电话. |
@@ -655,7 +655,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L173)  
@@ -679,7 +679,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 
 如果目前没有运行动画,则在延迟后开始给定动画.
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
 在Phaser 3.50之前,这种方法被称为"delayedPlay".
 
@@ -693,7 +693,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L303](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L303)  
@@ -715,10 +715,10 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 
 如果目前没有动画运行,则给定的动画会立即开始.
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | repeatCount | number | 是 | 1 | 动画在下一部开始前要重复多少次?. |
@@ -727,7 +727,7 @@ this.add.sprite(x, y).play({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L333](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L333)  
@@ -749,7 +749,7 @@ Phaser中的动画可以属于全球动画管理器,也可以具体属于这个S
 
 全球动画的好处是,多部Sprite可以全部播放相同的动画,而无需重复数据。你可以一次一次地在任意的Sprite上播放。
 
-以下代码显示如何创建全球重复动画。 动画将从装入密钥“ muybridge” 的图示工作表中的所有框架创建 :
+以下代码显示如何创建全球重复动画。 动画将从装入键“ muybridge” 的精灵表中的所有框架创建 :
 
 ```javascript
 var config = {
@@ -777,16 +777,16 @@ this.add.sprite(x, y).playReverse('run');
 this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 ```
 
-当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的密钥。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
+当在 Sprite 上播放动画时, 它会首先检查它能否在 Sprite 内找到匹配的键。 如果可以, 它会播放本地动画。 如果不行, 它会搜索全球动画管理器, 并在那里查找 。
 
-如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的密钥.
+如果您需要Sprite来同时播放本地和全局动画,请确保它们没有相互冲突的键.
 
 关于此方面的更多细节,请参看`PlayAnimationConfig`配置对象的文档.
 
 另外,关于动画创作的进一步详情,请参见动画管理器中的文档.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
 | ignoreIfPlaying | boolean | 是 | false | 如果动画已经播放了,那么就忽略这个电话. |
@@ -795,7 +795,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_START](/api/event/animations-events#animation_start)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L238](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L238)  
@@ -814,7 +814,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 更新此 Sprite 的动画 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -841,7 +841,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 解除对Scene更新列表中的这个Sprite的注册,使其`preUpdate`方法不再称为每个游戏步骤.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L144](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L144)  
@@ -867,7 +867,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L392](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L392)  
@@ -900,7 +900,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L410](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L410)  
@@ -925,7 +925,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 如果队列中还有另一部动画(通过`chain`方法设定),那么当当前动画停止时,它就会开始播放.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | repeatCount | number | 是 | 1 | 动画在停播前要重复多少次?. |
 
@@ -933,7 +933,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L433](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L433)  
@@ -966,7 +966,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 **返回值:** [Phaser.GameObjects.Sprite](/api/class/gameobjects-sprite) - 此游戏对象 。
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_STOP](/api/event/animations-events#animation_stop)
 
 
 > 源码：[src/gameobjects/sprite/Sprite.js#L456](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/sprite/Sprite.js#L456)  
@@ -985,7 +985,7 @@ this.add.sprite(x, y).playReverse({ key: 'run', frameRate: 24 });
 构建此 Sprite 的 JSON 代表 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#toJSON
+**重写:** Phaser.GameObjects.GameObject#toJSON
 
 
 **返回值:** [Phaser.Types.GameObjects.JSONGameObject](/api/typedef/types-gameobjects#jsongameobject) - 游戏对象的JSON代表.

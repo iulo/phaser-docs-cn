@@ -150,7 +150,7 @@ sprite.setLighting(true);
 清净一切参引.
 
 
-**Overrides:** Phaser.GameObjects.LightsManager#销毁
+**重写:** Phaser.GameObjects.LightsManager#销毁
 
 
 > 源码：[src/gameobjects/lights/LightsPlugin.js#L92](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/lights/LightsPlugin.js#L92)  

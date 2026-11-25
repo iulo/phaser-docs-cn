@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 变形Matrix是一个3x3的affine变形矩阵,用于编码一个游戏对象用于渲染的位置,旋转,尺度和skew.
 
-它由Phaser在渲染管道中内部使用,用于积累亲子变换链和进行相机变换。您通常在写自定义变换器或与相机或显示列表变换管道工作时与它交互。
+它由Phaser在渲染管道中内部使用,用于积累亲子变换链和进行摄像机变换。您通常在写自定义变换器或与摄像机或显示列表变换管道工作时与它交互。
 
 其代表情况如下:
 
@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new TransformMatrix([a], [b], [c], [d], [tx], [ty])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | a | number | 是 | 1 | 缩放 X 值 。 |
 | b | number | 是 | 0 | 摇摆Y值. |
@@ -441,7 +441,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设定此矩阵的值以复制给定矩阵的值, 并结合相机滚动因子 。
+设定此矩阵的值以复制给定矩阵的值, 并结合摄像机滚动因子 。
 
 这在许多渲染函数中被使用.
 
@@ -559,7 +559,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 这和`x * a + y * c + e`一样,可选通过`Math.round`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 值x的值,请检查url=值 (帮助). |
 | y | number | 否 |  | y值("Y值"). |
@@ -612,7 +612,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 这和`x * b + y * d + f`一样,可选通过`Math.round`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 值x的值,请检查url=值 (帮助). |
 | y | number | 否 |  | y值("Y值"). |

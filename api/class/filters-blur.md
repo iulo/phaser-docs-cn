@@ -8,9 +8,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 高斯模糊是高斯函数模糊图像的结果,是广泛使用的效果,一般是为了减少图像噪音和细节,这种模糊技术的视觉效果是光滑模糊的类似通过半透明屏幕观看图像,与偏焦镜头产生的波克效应或通常照明下物体的阴影明显不同.
 
-此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大相机 。
+此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大摄像机 。
 
-通过过滤列表组件将模糊效果添加到相机中:
+通过过滤列表组件将模糊效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -24,7 +24,7 @@ camera.filters.external.addBlur();
 `new Blur(camera, [quality], [x], [y], [strength], [color], [steps])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机。 |
 | quality | number | 是 | 0 | 模糊效果的质量。 可以是低质量的 0, 中质量的 1, 也可以是高质量的 2。 |
@@ -224,7 +224,7 @@ camera.filters.external.addBlur();
 返回此过滤器在渲染时所需的额外粘贴量, 以像素计。 这说明模糊的半径会延伸到过滤过的游戏对象的原边界之外 。
 
 
-**Overrides:** Phaser.Filters.Controller#getPadding
+**重写:** Phaser.Filters.Controller#getPadding
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 贴板矩形

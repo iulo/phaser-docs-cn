@@ -380,7 +380,7 @@ const timeline = this.add.timeline({
 当场景关闭时,这种方法会自动称为"时空",但如果需要提前破坏时,也可以直接使用.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/time/Timeline.js#L779](https://github.com/phaserjs/phaser/blob/v4.1.0/src/time/Timeline.js#L779)  
@@ -476,7 +476,7 @@ const timeline = this.add.timeline({
 如果您想要恢复暂停的时线,请使用`Timeline.resume`方法。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | fromStart | boolean | 是 | true | 播放前将这个时间线重置为开始 。 |
 
@@ -528,7 +528,7 @@ const timeline = this.add.timeline({
 如果这个时间线有任何事件设定为`once`,但已经删除,那么它们将**不**重复每个循环。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | amount | number \| boolean | 是 | -1 | 如果`true`或负数,重复的次数将无限。 |
 
@@ -560,7 +560,7 @@ const timeline = this.add.timeline({
 目前因本时光线而运行的任何Tweens都会被停止.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loop | boolean | 是 | false | 设定为 `true` 以保存循环迭代计数器。 时间线自动重复时内部使用。 离开为 `false` 执行全重置 。 |
 
@@ -650,7 +650,7 @@ const timeline = this.add.timeline({
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
 
-**Fires:** [Phaser.Time.Events#event:COMPLETE](/api/event/time-events#complete)
+**触发事件:** [Phaser.Time.Events#event:COMPLETE](/api/event/time-events#complete)
 
 
 > 源码：[src/time/Timeline.js#L264](https://github.com/phaserjs/phaser/blob/v4.1.0/src/time/Timeline.js#L264)  

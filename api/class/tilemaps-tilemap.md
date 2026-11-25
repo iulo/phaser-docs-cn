@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 蒂勒马普是蒂勒马普数据的容器。 这不是一个显示对象, 而是它保存关于地图的数据, 并允许您在地图中添加瓦片和图片层。 地图可以有一个或多个图片层, 它们是显示对象, 真正使图片产生。
 
-Tilemap 数据可以从 Tiled JSON 文件、 CSV 文件或 2D 阵列中解析。 Tiled 是专门用于创建瓷砖地图的自由软件包, 可从: [http://www.mapeditor.org](http://www.mapeditor.org)
+Tilemap 数据可以从 Tiled JSON 文件、 CSV 文件或 2D 阵列中解析。 Tiled 是专门用于创建瓦片地图的自由软件包, 可从: [http://www.mapeditor.org](http://www.mapeditor.org)
 
 Tilemap API 支持以下类型的地图:
 
@@ -89,7 +89,7 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 
 **说明:**
 
-地图的高度(以瓷砖计).
+地图的高度(以瓦片计).
 
 
 > 源码：[src/tilemaps/Tilemap.js#L143](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tilemap.js#L143)  
@@ -401,10 +401,10 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 将图像添加到地图中, 用作平板块。 单一的地图可能使用多个平板块。 请注意, 平板块名称可以在从平板块导出的 JSON 文件或平板块编辑器中找到 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tilesetName | string | 否 |  | 地图数据中指定的平板名称。 |
-| key | string | 是 |  | 用于此平面图的 Phaser.Cache 图像的密钥。 如果 `undefined` 或 `null` , 则会寻找一个匹配 tilesetName 参数的密钥的图像 。 |
+| key | string | 是 |  | 用于此平面图的 Phaser.Cache 图像的键。 如果 `undefined` 或 `null` , 则会寻找一个匹配 tilesetName 参数的键的图像 。 |
 | tileWidth | number | 是 |  | 蒂莱塞特图像中的瓦片( 像素) 宽度。 如果不给出它, 将默认为地图的 tileWidth 值, 或者默认 Tiled JSON 文件指定的 tileWidth 值 。 |
 | tileHeight | number | 是 |  | 蒂莱塞特图像中的瓦片高度( 像素) 。 如果不给出, 将默认为地图的 tileHeight 值, 或是 Tiled JSON 文件指定的 tileHeight 。 |
 | tileMargin | number | 是 |  | 工作表中的瓦片周围的边距( 像素) 。 如果不指定, 它会默认为 0 或 平面 JSON 文件指定的值 。 |
@@ -429,9 +429,9 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 
 **说明:**
 
-在指定的层的瓷砖坐标处计算有趣的面。 有趣的面用于优化与瓷砖的碰撞。 这种方法大多用于在仅更改一个瓷砖时优化再计算面。
+在指定的层的瓦片坐标处计算有趣的面。 有趣的面用于优化与瓦片的碰撞。 这种方法大多用于在仅更改一个瓦片时优化再计算面。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -459,7 +459,7 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 
 计算层的矩形区域( 平面坐标) 内有趣的面孔。 有趣的面孔用于优化与瓦片的碰撞。 这种方法大多在内部使用 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -467,7 +467,7 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -492,7 +492,7 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 如果没有指定图层,则使用地图的当前图层.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | srcTileX | number | 否 |  | 要复制的区域的x坐标,以瓦片表示,而不是像素. |
 | srcTileY | number | 否 |  | 要复制的区域的y坐标, 以瓦片而不是像素表示 。 |
@@ -525,7 +525,7 @@ Phaser 倾斜解析器** not** 支持“ 收集图像” 特性的倾斜。 您�
 在v3.50.0之前,这种方法被称为`createBlankDynamicLayer`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 此图层的名称。 必须是地图中唯一的 。 |
 | tileset | string \| Array.\<string> | [Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset) | Array.\<[Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset)> | 否 |  | 用于制导此图层的瓦片组或一系列瓦片。可以是字符串或蒂列塞特对象 。 |
@@ -624,7 +624,7 @@ createFromObjects(layerName, {
 
 例如,一个自定义属性`{ alpha: 0.5, gold: 1 }`的倾斜对象将会被创建为游戏对象,其`alpha`值为0.5,`data.values.gold`值为1.
 
-`useTileset`是 `true`(默认)时, 砖块对象会继承纹理和任何砖块属性, 本地的砖块ID会被用作纹理框架。 要进行框架选择, 您需要将砖块纹理加载为图案表, 使其框架名称与本地的砖块ID匹配 。
+`useTileset`是 `true`(默认)时, 砖块对象会继承纹理和任何砖块属性, 本地的砖块ID会被用作纹理帧。 要进行框架选择, 您需要将砖块纹理加载为精灵表, 使其框架名称与本地的砖块ID匹配 。
 
 例如,一个平板砖
 
@@ -676,7 +676,7 @@ createFromObjects(layerName, [
 在 v3. 60.0 中, 此方法的签名发生了显著变化 。 在此之前, 它没有取到配置对象 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | objectLayerName | string | 否 |  | 用于创建游戏对象的平面对象层名称 。 |
 | config | [Phaser.Types.Tilemaps.CreateFromObjectLayerConfig](/api/typedef/types-tilemaps#createfromobjectlayerconfig) \| Array.\<[Phaser.Types.Tilemaps.CreateFromObjectLayerConfig](/api/typedef/types-tilemaps#createfromobjectlayerconfig)> | 否 |  | 从对象配置对象创建, 或其中的数组 。 |
@@ -699,7 +699,7 @@ createFromObjects(layerName, [
 
 **说明:**
 
-为图层中匹配所给的瓷砖索引的每个瓷砖创建一个 Sprite。 您可以选择指定每个瓷砖是否在 sprite 创建后被替换为新瓷砖。 如果您想要在转换后删除瓷砖, 请将这个值设定为 - 1 。
+为图层中匹配所给的瓦片索引的每个瓦片创建一个 Sprite。 您可以选择指定每个瓦片是否在 sprite 创建后被替换为新瓦片。 如果您想要在转换后删除瓦片, 请将这个值设定为 - 1 。
 
 如果您想要在转换成Sprites的级别下铺设特殊瓦片,但想要在转换后用地板或类似瓦片来替换瓦片本身,此操作是有用的.
 
@@ -711,7 +711,7 @@ Phaser v3.80中增加了以下特性: :          ;    ; :    ; ;    .
 
 旋转,flipX,flipY,Alpha,"可见"和"提示"。
 
-spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`true`,您已经将瓷砖装入成图示工作表(不是图像),那么它会设置Sprite 键和框架,以匹配图示纹理和瓷砖索引。
+spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`true`,您已经将瓦片装入成精灵表(不是图像),那么它会设置Sprite 键和框架,以匹配图示纹理和瓦片索引。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -720,7 +720,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | replacements | number \| array | 否 | 将转换的瓦片转换为 . 设置为 `null` 使瓦片保持不变。 如果给出了数组, 则假定它是与索引数组的一对一映射 。 |
 | spriteConfig | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 是 | 配置对象可以传递到Sprite创建者(即场景. make.sprite)中. |
 | scene | [Phaser.Scene](/api/class/scene) | 是 | 创造内在的斯普丽特的场景. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -747,7 +747,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 在v3.50.0之前,这种方法被称为`createDynamicLayer`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | layerID | number \| string | 否 |  | 层数组索引值,或者如果给出字符串,则从倾斜图中得出层名. |
 | tileset | string \| Array.\<string> | [Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset) | Array.\<[Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset)> | 否 |  | 用于渲染此层的瓦片组或数组瓦片。 可以是字符串或蒂列塞特对象。 当它是数组时, 如果 `gpu`是 `true`, 则只使用数组中的第一个元素作为瓦片组 。 |
@@ -790,7 +790,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 摧毁给定的 TilemapLayer , 并把它从 Tilemap 中移除 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -814,18 +814,18 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-设置图层的矩形区域( 以瓷砖坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
+设置图层的矩形区域( 以瓦片坐标) 中的瓦片与指定的索引相配合。 如果指定的索引是碰撞索引, 则图层将被设定为碰撞。 区域中的碰撞信息将被重新计算 。
 
 如果没有指定图层,则使用地图的当前图层.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 填充区域用的瓦片索引 。 |
 | tileX | number | 是 |  | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 |  | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 |  | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 |  | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 |  | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | recalculateFaces | boolean | 是 | true | 如果面额数据应重新计算,则使用`true`。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 |  | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
@@ -882,8 +882,8 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左最瓦索引(在瓦座坐标中)用作过滤区域的来源. |
 | tileY | number | 是 | 用于过滤区域源头的最顶部的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -906,10 +906,10 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 搜索第一个匹配给定索引的图层,然后返回该图件。如果找不到匹配,则返回无效。从左上方的图板开始,并水平地继续搜索,直到它到达行的末尾,然后它会下降至下一列。如果反向布尔值是真实的,它会从右下角扫描,从上到左上。如果没有指定图层,则使用地图目前的图层。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 要搜索的瓦片索引值 。 |
-| skip | number | 是 | 0 | 返回前跳过匹配的瓷砖的次数 。 |
+| skip | number | 是 | 0 | 返回前跳过匹配的瓦片的次数 。 |
 | reverse | boolean | 是 | false | 如果真有, 它会逆向扫描层, 从右下方开始。 否则它会从左上方扫描 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 |  | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
@@ -966,8 +966,8 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 运行搜索的图层。 如果不提供, 将使用当前图层 。 |
 
 
@@ -999,8 +999,8 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 运行搜索的图层。 如果不提供, 将使用当前图层 。 |
 
 
@@ -1205,13 +1205,13 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从给定的地层获得给定的地砖坐标的瓦片。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| tileX | number | 否 |  | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓷砖 。 |
-| tileY | number | 否 |  | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓷砖 。 |
+| tileX | number | 否 |  | X 位置从( 以瓦片单位表示, 不以像素表示) 获取瓦片 。 |
+| tileY | number | 否 |  | Y 位置从( 以瓦片单位表示, 而非像素) 得到瓦片 。 |
 | nonNull | boolean | 是 | false | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 |  | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
@@ -1234,15 +1234,15 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从给定的地层获得给定的世界坐标的瓦片。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| worldX | number | 否 |  | 从(以像素形式给出)获取瓷砖的 X 位置 |
+| worldX | number | 否 |  | 从(以像素形式给出)获取瓦片的 X 位置 |
 | worldY | number | 否 |  | Y 位置从 (以像素形式给出) 获取牌 |
 | nonNull | boolean | 是 | false | 对于空的牌,返回索引为 -1 的牌标对象,而不是空的牌标。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 |  | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 |  | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1262,22 +1262,22 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-返回一个矢量2的数组,每个条目对应所请求的瓷砖的角。
+返回一个矢量2的数组,每个条目对应所请求的瓦片的角。
 
 `tileX`和`tileY`参数在瓦片坐标,而不是世界坐标.
 
-角坐标位于世界空间,如果给出,则在TilemapLayer比例、位置和相机中计及。
+角坐标位于世界空间,如果给出,则在TilemapLayer比例、位置和摄像机中计及。
 
 阵列的大小会因地图的方向而异。 例如, 直径图将返回4个向量的阵列, 作为六边形图, 自然会返回6个角向量的阵列。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1366,7 +1366,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 获取图层的指定矩形区域(在图砖坐标内)的瓦片。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1374,8 +1374,8 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1397,14 +1397,14 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 获取与指定图层中的形状重叠的牌。形状必须是圆形、线形、矩形或三角形。形状应在世界坐标中。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | shape | [Phaser.Geom.Circle](/api/class/geom-circle) \| [Phaser.Geom.Line](/api/class/geom-line) | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 | 世界的形状( 像素) 坐标 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1426,7 +1426,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 获取该层指定矩形区域(世界坐标)的瓦片.
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1435,8 +1435,8 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | worldY | number | 否 | 地球和坐标是该地区左上角 |
 | width | number | 否 | 面积宽度. |
 | height | number | 否 | 地区高度. |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓷砖时可选择的过滤器。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 | 获得瓦片时可选择的过滤器。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1458,7 +1458,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 检查在给定的层中(在砖座坐标)的指定位置是否有一个瓦片。如果没有瓦片,或者该位置的瓦片有−1的索引,返回时会弄虚作假。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1486,14 +1486,14 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 检查指定位置( 世界坐标) 是否有瓦片。 如果没有瓦片, 或者该位置的瓦片有 - 1 的索引, 返回时会弄虚作假 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | x坐标,以像素表示. |
 | worldY | number | 否 | y坐标,以像素表示. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓷砖的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算返回的瓦片的摄像机。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1515,7 +1515,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 在指定的地层中设置一个砖块坐标。您可以在索引或图块对象中传递。如果在图块中传递,所有属性都将复制到指定位置。如果在索引中通过,则只更改指定位置的索引。碰撞信息将在指定位置重新计算。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1545,7 +1545,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 在指定的层中设置一个瓦片,您可以在索引或图文对象中传递。如果在图文中通过,所有属性都将复制到指定位置。如果在索引中通过,则只更改指定位置的索引。碰撞信息将在指定位置重新计算。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1554,7 +1554,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | worldX | number | 否 | x坐标,以像素表示. |
 | worldY | number | 否 | y坐标,以像素表示. |
 | recalculateFaces | boolean | 是 | 如果面额数据应重新计算,则使用`true`。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1576,7 +1576,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 在指定的图片坐标上放置一个瓦片数组或一个2D的瓦片数组。该数组可以是瓦片索引或瓦片对象。如果在图片中通过,所有属性都将复制到指定位置。如果在索引中通过,则只更改指定位置的索引。碰撞信息将在区域牌块内重新计算。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1606,7 +1606,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 随机化指定层内一个长方形的瓦片区域(在瓦片坐标内)的索引。每个瓦片将获得一个新的索引。如果一个索引数组被传递进来,那么这些索引将被用于随机分配新的瓦片索引。如果不提供数组,则区域内发现的索引(不包括 -1)将被用于随机分配新的瓷片索引。这种方法只修改了瓦片索引,不会改变碰撞信息。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1614,7 +1614,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | indexes | Array.\<number> | 是 | 随机化过程中随机抽取的一系列索引. |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
@@ -1656,7 +1656,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从 TilemapLayer 中删除给定的 TilemapLayer ,而不销毁它 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1683,7 +1683,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 从所属于的层中去除给定的图案,或一系列图案,并可选地重新计算碰撞信息。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tiles | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) \| Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> | 否 |  | 要删除的图案, 或是一组图案。 |
 | replaceIndex | number | 是 | -1 | 删除 tyle 后, 用给定索引插入一个全新的 tyle 位置。 离开 as - 1 即可删除 tyle 。 |
@@ -1708,7 +1708,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 删除指定层中砖块坐标的瓦片,并更新层碰撞信息。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1738,7 +1738,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 删除指定世界坐标的瓦片,更新层碰撞信息。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1747,7 +1747,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | worldY | number | 否 | y坐标,以像素表示. |
 | replaceWithNull | boolean | 是 | 如果 `true`(默认),这将用无效的砖块代替指定位置的砖块,而不是指数为 -1 的砖块。 |
 | recalculateFaces | boolean | 是 | 如果 `true`(默认),面额数据会被重新计算. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1769,9 +1769,9 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 绘制图层对给定图形对象的调试表示。 如果您想要快速了解您的哪些牌正在碰撞, 哪些牌有有趣的面孔, 这样做很有帮助。 这些牌从图形中绘制( 0 ) 开始, 允许您将调试表示放在屏幕上 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
-**Note:** 目前这种方法只与正交形的平面层配合.
+**注意:** 目前这种方法只与正交形的平面层配合.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1824,19 +1824,19 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓷砖,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
+扫描给定的矩形区域(在平面坐标中给出),以匹配`findIndex`的索引来扫描瓦片,并更新其索引以匹配`newIndex`。这只修改索引,不会改变碰撞信息。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| findIndex | number | 否 | 查找的瓷砖索引 。 |
+| findIndex | number | 否 | 查找的瓦片索引 。 |
 | newIndex | number | 否 | 以瓦片代替的索引 。 |
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1883,14 +1883,14 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 将一个图片或牌片的碰撞按指数排列。 您可以通过一个单一的数字索引或一系列索引: [2、 3、 15、 20]。 `collides` 参数控制如果碰撞将被启用( 真实) 或禁用( 假) 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | indexes | number \| array | 否 |  | 或单瓦索引,或单瓦索引的数组。 |
 | collides | boolean | 是 |  | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 |  | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 |  | 更新后是否重新计算瓦片面孔 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 |  | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 | updateLayer | boolean | 是 | true | 如果选中的话, 请更新层上的当前牌。 如果没有设置牌, 则设置为不实 。 |
 
@@ -1913,15 +1913,15 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 设定一个图片的碰撞范围, 其指数介于指定的 `start`和 `stop`( 包括) 之间。 使用起始值为 10, 止值为 14 的图片, 将设置为 10、 11、 12、 13 和 14 的碰撞范围, 如果启用碰撞( 真实) 或 禁用( 假) , `collides` 参数控制会设置 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | start | number | 否 | 设定碰撞的瓦片的第一个索引. |
-| stop | number | 否 | 设定碰撞的瓷砖的最后一个索引 。 |
+| stop | number | 否 | 设定碰撞的瓦片的最后一个索引 。 |
 | collides | boolean | 是 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | 更新后是否重新计算瓦片面孔 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1943,14 +1943,14 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 设定在给定的层中所有瓦片上的碰撞, 除了在给定数组中指定索引的瓦片。 如果启用碰撞( 真实) 或禁用( 假) , `collides` 参数控制。 目前未在层中使用的拖动索引不受影响 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | indexes | Array.\<number> | 否 | 一块砖索引的数组,不计算碰撞。 |
 | collides | boolean | 是 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | 更新后是否重新计算瓦片面孔 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -1972,14 +1972,14 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 通过检查瓦片属性来设定一层内瓦片的碰撞。 如果瓦片具有与给定的属性对象匹配的属性, 则会设置其碰撞标志。 如果启用碰撞( 真实) 或禁用( 假) , 则 `collides` 参数控制。 在 `{ collides: true }` 中通过, 将会将任何砖片上的碰撞标志更新为具有真实值的“ collides ” 属性。 任何没有设置“ collide” 的瓦片都会被忽略。 您也可以使用一系列值, 如 `{ types: ["stone", "lava", "sand" ] }`。 如果一个瓦片具有与任何这些值匹配的“ 类型” 属性, 其碰撞标志将会被更新 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | properties | object | 否 | 具有瓦片属性和相应值的对象,应当检查。 |
 | collides | boolean | 是 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | 更新后是否重新计算瓦片面孔 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2001,13 +2001,13 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 将平板板上碰撞设定为一层内, 检查每块平板板板碰撞组数据( 一般在平板碰撞编辑器内在平板板板内定义) 。 如果在平板板板碰撞群内发现任何物体, 则会设置平板碰撞信息 。 如果启用碰撞( 真实) 或禁用( 假) , 则 `collides` 参数控制 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | collides | boolean | 是 | 如果真有它,会让碰撞发生 如果假的,会让碰撞发生 |
-| recalculateFaces | boolean | 是 | 更新后是否重新计算瓷砖面孔 。 |
+| recalculateFaces | boolean | 是 | 更新后是否重新计算瓦片面孔 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2077,7 +2077,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-设置此地图中瓷砖的渲染( draw) 顺序 。
+设置此地图中瓦片的渲染( draw) 顺序 。
 
 默认为“ 右下方 ” , 意思是它会命令从左上方开始的牌, 向右画, 然后移动到下一行 。
 
@@ -2085,7 +2085,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 0=右下 1=左下 2=右上 3=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=右下 2=右上 3=左下 1=左下 1=左下 3=左下 1=左下 3=左下 1=左下 3=左下 3=左下 3 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右
 
-设定渲染顺序不会改变瓷砖或如何将瓷砖储存在地层中,它会完全影响其渲染顺序.
+设定渲染顺序不会改变瓦片或如何将瓦片储存在地层中,它会完全影响其渲染顺序.
 
 既可以提供整数(0至3),也可以提供顺序的字符串版本.
 
@@ -2115,7 +2115,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 设置层内给定的瓦片索引的全局碰撞调用。 这将影响此层上所有具有相同索引的瓦片。 如果为瓦片索引设置了调用调用调用调取调用调用调用的调用调用调试调用调用调制调用调用调出调用调用调出的调用调用调色调用调用调用了调用调用调减减调用调用调的调用调用调就可以看到 `setTileLocationCallback` 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2142,9 +2142,9 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-设置层内给定的矩形区域( 平面坐标) 的碰撞调用。 如果已经为平面索引设置了调用调用调用调取, 则将替换。 设置调用调用调用的调用调用调出调用调用调减调取调用调用调值 。
+设置层内给定的矩形区域( 平面坐标) 的碰撞调用。 如果已经为平面索引设置了调用调用调用调取, 则将替换。 设置调用调用调用的调用调用调出调用调用调减调取调用调用补间 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2152,7 +2152,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 否 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 否 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 否 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 否 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 否 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | callback | function | 否 | 当瓦片被碰撞时将引用的回调 。 |
 | callbackContext | object | 是 | 调用时的上下文 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
@@ -2174,9 +2174,9 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 **说明:**
 
-在指定的层内, 将牌片划入长方形区域( 以瓷砖坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓷砖索引, 并且不会改变碰撞信息 。
+在指定的层内, 将牌片划入长方形区域( 以瓦片坐标表示) 。 它只会随机排列该区域的牌片, 所以如果它们都一样, 似乎不会改变 ! 这种方法只会修改瓦片索引, 并且不会改变碰撞信息 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2184,7 +2184,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2206,17 +2206,17 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 扫描给定的矩形区域(在平面坐标中显示),以匹配`indexA`的索引来扫描瓦片,然后与`indexB`交换。这只修改索引,不会改变碰撞信息。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileA | number | 否 | 首张瓷砖索引. |
+| tileA | number | 否 | 首张瓦片索引. |
 | tileB | number | 否 | 第二瓦指数. |
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2238,13 +2238,13 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从平面X坐标(平面单位)转换为世界X坐标(像素),在层位,尺度和卷轴中进行计数.
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2266,7 +2266,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从平面的 XY 坐标( 平面单位) 转换为世界 XY 坐标( 像素), 以层位、 缩放和滚动为因数。 这将返回一个新的矢量2 对象或更新给定的 `point` 对象 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2274,7 +2274,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 否 | x坐标,以瓦片表示,而非像素. |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
 | vec2 | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2296,13 +2296,13 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从瓦片 Y 坐标( 平面单位) 转换为世界 Y 坐标( 像素), 以层位、 缩放和滚动为因数 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tileY | number | 否 | y坐标,以瓦片表示,而不是像素. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2328,7 +2328,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 选择任何索引的概率是(指数权重) /(所有权重的总和) 。 这种方法只修改了瓦片索引, 并且不会改变碰撞信息 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2337,7 +2337,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | tileX | number | 是 | 左最瓦指数(在瓦座坐标中)作为该地区的起源. |
 | tileY | number | 是 | 以砖块坐标为最顶部的瓦片索引作为区域来源. |
 | width | number | 是 | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
+| height | number | 是 | 有多少块高的瓦片从 `tileY` 索引区域将。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2359,7 +2359,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从世界 X 坐标(像素)转换为瓦片 X坐标(瓦单位),在层位,尺度和卷轴中进行计分.
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 使用这种方法不能叫做Isometric或六边形瓦片,因为它们要求`worldX`和`worldY`值都能够确定正确的瓦片,相反,你应该使用`worldToTileXY`方法。
 
@@ -2368,7 +2368,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | ---- | ---- | -------- | ----------- |
 | worldX | number | 否 | 要转换的x坐标,以像素表示,而不是用瓦片表示. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2390,7 +2390,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从世界 XY 坐标( 像素) 转换为平面 XY 坐标( 平面单位), 以图层位置、 缩放和滚动为因数。 这将返回一个新的矢量2 对象或更新给定的 `point` 对象 。
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -2399,7 +2399,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
 | vec2 | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储坐标的矢量2。 如果未给定新的矢量2, 则创建 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 
@@ -2421,7 +2421,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 
 从世界Y坐标(像素)转换为瓦片Y坐标(瓦片单位),在层位,尺度和卷轴中进行计分.
 
-如果没有指定图层,则使用图流图层。
+省略图层时，使用瓦片地图的当前图层。
 
 使用这种方法不能叫做Isometric或六边形瓦片,因为它们要求`worldX`和`worldY`值都能够确定正确的瓦片,相反,你应该使用`worldToTileXY`方法。
 
@@ -2430,7 +2430,7 @@ spriteConfig还有一个特殊的属性叫做`useSpriteSheet`。如果设置为`
 | ---- | ---- | -------- | ----------- |
 | worldY | number | 否 | 转换的y坐标,以像素表示,而不是瓦片. |
 | snapToFloor | boolean | 是 | 是否将平板坐标向下折叠到最近的整数 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 从世界值计算瓦片索引时使用的摄像机 。 |
 | layer | string \| number | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 是 | 要使用的瓦片层。 如果不给定当前层, 则使用 。 |
 
 

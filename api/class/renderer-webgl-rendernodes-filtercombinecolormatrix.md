@@ -78,7 +78,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | _drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文( 此方法未使用) 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupTextures
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterCombineColorMatrix.js#L42](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterCombineColorMatrix.js#L42)  
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 上传组合颜色矩阵效应所需的所有遮阳制服。
 
-设置在活动阴影程序上的下列制服:
+设置在活动着色器程序上的下列制服:
 
 - `uTransferSampler` — 传输纹理的纹理单元索引.
 
@@ -119,7 +119,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterCombineColorMatrix.js#L60](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterCombineColorMatrix.js#L60)  

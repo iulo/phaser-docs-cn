@@ -409,7 +409,7 @@ Phaser中的动画由`AnimationFrame`对象的序列组成,这些对象由本类
 
 **说明:**
 
-销毁此动画实例。 它会删除所有事件听众, 从全球动画管理器中删除此动画及其密钥, 然后依次销毁所有动画框架 。
+销毁此动画实例。 它会删除所有事件监听器, 从全球动画管理器中删除此动画及其键, 然后依次销毁所有动画框架 。
 
 
 > 源码：[src/animations/Animation.js#L917](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/Animation.js#L917)  
@@ -428,7 +428,7 @@ Phaser中的动画由`AnimationFrame`对象的序列组成,这些对象由本类
 当此动画首次开始播放时, 内部调用。 设置累积器和 nextTick 属性 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -504,7 +504,7 @@ Phaser中的动画由`AnimationFrame`对象的序列组成,这些对象由本类
 | ---- | ---- | -------- | ----------- |
 | textureManager | [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) | 否 | 参考全球纹理管理器. |
 | frames | string \| Array.\<[Phaser.Types.Animations.AnimationFrame](/api/typedef/types-animations#animationframe)> | 否 | 要么是字符串,在这种情况下它将使用与匹配键的纹理中的所有框架,要么是动画框架配置对象的数组. |
-| defaultTextureKey | string | 是 | 如果框架配置对象中没有设置密钥,则使用密钥。 |
+| defaultTextureKey | string | 是 | 如果框架配置对象中没有设置键,则使用键。 |
 
 
 **返回值:** Array.\<[Phaser.Animations.AnimationFrame](/api/class/animations-animationframe)> - 一组新创建的动画Frame实例 。
@@ -699,7 +699,7 @@ Phaser中的动画由`AnimationFrame`对象的序列组成,这些对象由本类
 | state | [Phaser.Animations.AnimationState](/api/class/animations-animationstate) | 否 | 游戏对象所属动画国引用此调用. |
 
 
-**Fires:** [Phaser.Animations.Events#event:ANIMATION_REPEAT](/api/event/animations-events#animation_repeat), Phaser.Animations.Events事件: 和平_新闻_新闻, Phaser.Animations.Events事件: 和平_动漫_KEY_REPEAT
+**触发事件:** [Phaser.Animations.Events#event:ANIMATION_REPEAT](/api/event/animations-events#animation_repeat), Phaser.Animations.Events事件: 和平_新闻_新闻, Phaser.Animations.Events事件: 和平_动漫_KEY_REPEAT
 
 
 > 源码：[src/animations/Animation.js#L741](https://github.com/phaserjs/phaser/blob/v4.1.0/src/animations/Animation.js#L741)  

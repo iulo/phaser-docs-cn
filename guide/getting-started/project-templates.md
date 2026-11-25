@@ -30,7 +30,7 @@ Phaser支持所有主要的前端框架和捆绑器。模板都使用“ templat
 * [SolidJS + Vite Template](https://github.com/phaserjs/template-solid)
 * [Remix Template](https://github.com/phaserjs/template-remix)
 
-## Bundler 模板 {#bundler-templates}
+## 打包工具模板 {#bundler-templates}
 
 我们也有纯的捆绑模板,不需要使用任何框架。从中选择:
 

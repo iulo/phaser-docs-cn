@@ -10,7 +10,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 关于Tile Sprites和NPOT纹理的重要说明: 在内部, TileSprite纹理会使用GL_REPEAT来提供纹理的无缝重复。 这与WebGL处理纹理的方式相结合, 意味着它们需要POT( 两块) 大小才能包起来。 如果您向 TileSprite 提供了 NPOT (非两块) 纹理, 它会生成一个 POT 大小的画布, 并绘制到它, 缩放到 POT 大小。 然后在渲染到原始尺寸时再次缩放。 虽然这工作, 允许您使用任何大小的纹理来使用 Tile Sprite , 但它确实意味着 NPOT 纹理会在被重塑成 POT 纹理时出现反异。 在 Pixel 艺术图形中特别可见, 但它会成为问题, 但唯一避免给 POT 纹理提供纹理的方法就是 。
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -24,7 +24,7 @@ this.load.image(key, url);
 var image = this.add.tileSprite(x, y, width, height, textureKey);
 ```
 
-从 JSON 添加瓷砖图案
+从 JSON 添加瓦片图案
 
 ```javascript
 var image = this.make.tileSprite({
@@ -114,7 +114,7 @@ var mask = image.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 

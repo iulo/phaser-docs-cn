@@ -35,7 +35,7 @@ static
 
 **说明:**
 
-动态身体。
+动态物理体。
 
 
 > 源码：[src/physics/arcade/const.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/const.js#L15)  
@@ -131,7 +131,7 @@ static
 
 **说明:**
 
-弧形物理组,包含动态天体.
+Arcade 物理组,包含动态物理体.
 
 
 > 源码：[src/physics/arcade/const.js#L41](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/const.js#L41)  
@@ -147,7 +147,7 @@ static
 
 **说明:**
 
-静态身体.
+静态物理体.
 
 
 > 源码：[src/physics/arcade/const.js#L28](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/const.js#L28)  
@@ -181,7 +181,7 @@ static
 
 **说明:**
 
-组合一个或多个类位元字段使用位元OR,并返回由此而来的碰撞掩码。这个掩码可以被分配到Arcade物理机构,以定义它应该与哪几类天体碰撞。
+组合一个或多个类位元字段使用位元OR,并返回由此而来的碰撞掩码。这个掩码可以被分配到Arcade物理体,以定义它应该与哪几类物理体碰撞。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -205,7 +205,7 @@ static
 
 **说明:**
 
-计算并返回两个街机物理体之间的横向重叠,并相应设置其属性,包括:`touching.left`,`touching.right`,`touching.none`和`overlapX`.
+计算并返回两个Arcade 物理体之间的横向重叠,并相应设置其属性,包括:`touching.left`,`touching.right`,`touching.none`和`overlapX`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -232,7 +232,7 @@ static
 
 **说明:**
 
-计算并返回两个街机物理体之间的垂直重叠,并相应设定其属性,包括: `touching.up`, `touching.down`, `touching.none`, `blocked.up`, `blocked.down` 财务报告和已审计财务报表 `overlapY`.
+计算并返回两个Arcade 物理体之间的垂直重叠,并相应设定其属性,包括: `touching.up`, `touching.down`, `touching.none`, `blocked.up`, `blocked.down` 财务报告和已审计财务报表 `overlapY`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -270,12 +270,12 @@ static
 | ---- | ---- | -------- | ----------- |
 | body1 | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 初身分别. |
 | body2 | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 第二身分别. |
-| overlapOnly | boolean | 否 | 如果`true`,则两具尸体只能有重叠的数据集,不会进行分离. |
+| overlapOnly | boolean | 否 | 如果`true`,则两具物理体只能有重叠的数据集,不会进行分离. |
 | bias | number | 否 | 重复检查时添加三角洲值的值。 用于防止图示隧道的挖掘 。 |
 | overlap | number | 是 | 如果给出了, 此值将被用作重叠, 并且不会运行检查 。 |
 
 
-**返回值:** boolean - 如果两具尸体横向重叠,则使用`true`,否则使用`false`.
+**返回值:** boolean - 如果两具物理体横向重叠,则使用`true`,否则使用`false`.
 
 
 > 源码：[src/physics/arcade/SeparateX.js#L10](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/SeparateX.js#L10)  
@@ -302,7 +302,7 @@ static
 | ---- | ---- | -------- | ----------- |
 | body1 | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 初身分别. |
 | body2 | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 第二身分别. |
-| overlapOnly | boolean | 否 | 如果`true`,则两具尸体只能有重叠的数据集,不会进行分离. |
+| overlapOnly | boolean | 否 | 如果`true`,则两具物理体只能有重叠的数据集,不会进行分离. |
 | bias | number | 否 | 重复检查时添加三角洲值的值。 用于防止图示隧道的挖掘 。 |
 | overlap | number | 是 | 如果给出了, 此值将被用作重叠, 并且不会运行检查 。 |
 

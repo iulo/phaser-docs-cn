@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/tweens-tweendata)
 
-TweenData是一个包含单一目标和财产的类别,正在被曲解.
+TweenData是一个包含单一目标和属性的类别,正在被曲解.
 
 Tweens创建时创建了TweenData实例,每个目标有一个TweenData的实例,每个属性。一个Tween可以拥有多个TweenData例,但一个TweenData只属于一个Tween。
 
@@ -19,9 +19,9 @@ Tweens创建时创建了TweenData实例,每个目标有一个TweenData的实例,
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 这个TweenData实例属于这个. |
 | targetIndex | number | 否 | Tween目标阵列内的目标指数. |
-| key | string | 否 | 目标财产到  . |
-| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 | 特温的末端会有什么财产 |
-| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 | 特温号的裁武条约会有什么财产? |
+| key | string | 否 | 目标属性到  . |
+| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 | 特温的末端会有什么属性 |
+| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 | 特温号的裁武条约会有什么属性? |
 | getActive | [Phaser.Types.Tweens.GetActiveCallback](/api/typedef/types-tweens#getactivecallback) | 否 | 如果不是无效,则在TweenData运行后立即引用_imteme_,并设定在目标属性上. |
 | ease | function | 否 | 此 tween 使用的易操作 。 |
 | delay | function | 否 | 函数返回 tween 开始前以毫秒计的时间 。 |
@@ -156,7 +156,7 @@ Tween 用于计算目标值的易性函数 。
 
 函数返回将目标属性设置在 tween 结尾的函数 。
 
-此处是调值在调值开始播放时,在任何初始启动延迟后,或者调值重置,或者设定重播时使用.
+此处是补间在补间开始播放时,在任何初始启动延迟后,或者补间重置,或者设定重播时使用.
 
 
 > 源码：[src/tweens/tween/TweenData.js#L82](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L82)  
@@ -174,7 +174,7 @@ Tween 用于计算目标值的易性函数 。
 
 一个函数,返回在 tween 开始时设定目标属性的功能 。
 
-此处是调值在调值开始播放时,在任何初始启动延迟后,或者调值重置,或者设定重播时使用.
+此处是补间在补间开始播放时,在任何初始启动延迟后,或者补间重置,或者设定重播时使用.
 
 
 > 源码：[src/tweens/tween/TweenData.js#L95](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L95)  
@@ -222,7 +222,7 @@ Tween 用于计算目标值的易性函数 。
 
 **说明:**
 
-目标的财产要被扭曲。
+目标的属性要被扭曲。
 
 
 > 源码：[src/tweens/tween/TweenData.js#L60](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L60)  
@@ -308,7 +308,7 @@ Tween 用于计算目标值的易性函数 。
 立即摧毁这个TweenData, 取消它的所有引用。
 
 
-**Overrides:** Phaser.Tweens.BaseTweenData#销毁
+**重写:** Phaser.Tweens.BaseTweenData#销毁
 
 
 > 源码：[src/tweens/tween/TweenData.js#L399](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L399)  
@@ -351,12 +351,12 @@ Tween 用于计算目标值的易性函数 。
 由父 Tween 自动调用。 不应直接调用 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | isSeeking | boolean | 是 | false | 是否将 Tween 数据作为 Tween 请求的一部分重置 ? |
 
 
-**Overrides:** Phaser.Tweens.BaseTweenData# 重置( 重置)
+**重写:** Phaser.Tweens.BaseTweenData# 重置( 重置)
 
 
 > 源码：[src/tweens/tween/TweenData.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L173)  
@@ -383,7 +383,7 @@ Tween 用于计算目标值的易性函数 。
 **返回值:** boolean - 如果这个TweenData还在播放,则`true`;如果它已经完全完成,则`false`。
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_UPDATE](/api/event/tweens-events#tween_update), [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_UPDATE](/api/event/tweens-events#tween_update), [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
 
 
 > 源码：[src/tweens/tween/TweenData.js#L206](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenData.js#L206)  

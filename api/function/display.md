@@ -11,12 +11,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其下边缘与`alignIn`游戏对象的下边缘相匹配,其水平中心与`alignIn`的横向中心对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -40,12 +40,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校对, 使其位于另一个对象的左下角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -69,12 +69,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校对, 使其定位在下方右角 `alignIn` 游戏对象。 右边缘 `gameObject` 匹配到右边 `alignIn`,然后将下边缘 `gameObject` 匹配到 `alignIn`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -98,12 +98,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其定位在另一个对象的中心。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -127,12 +127,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 选择一个特定的游戏对象并与之对齐,使其左边缘与 `alignIn`游戏对象的左边缘相冲,其垂直中心与 `alignIn` 的垂直中心相匹配。这可将游戏对象置于参考对象的左中心内部位置。可选择的偏移可以应用来调整任意一轴的最后一个位置。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -156,12 +156,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校正它, 使其相对于另一个游戏对象的位置。 所使用的对齐基于 `position` 参数, 是一个 `ALIGN_CONST` 值, 如 `LEFT_CENTER` 或 `TOP_RIGHT` 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -186,12 +186,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其右边缘与`alignIn`游戏对象的右边缘相冲,其垂直中心与`alignIn`游戏对象的垂直中心对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -215,12 +215,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其顶端边缘与`alignIn`游戏对象的顶端边缘相冲,横向居中.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -244,12 +244,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取下给定的游戏对象并校对,使其位于`alignIn`游戏对象的左上角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -273,12 +273,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校对,使其定位在`alignIn`游戏对象的右上角。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignIn | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -304,12 +304,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其顶端边缘与`alignTo`游戏对象的底部相冲,并横向以它为中心.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -333,12 +333,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其直接置于`alignTo`游戏对象下方,其左边缘与`alignTo`左边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -362,12 +362,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取出一个给定的游戏对象并与之对齐,使其直接置于下方,并冲到其他游戏对象的右边缘。右边缘 `gameObject` 与右边对齐 `alignTo`,然后将顶端 `gameObject` 放在最下端边沿 `alignTo`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -391,12 +391,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其下边缘与`alignTo`的下边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -420,12 +420,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其垂直中心匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -449,12 +449,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其右边缘触碰`alignTo`游戏对象的左边缘,其顶边缘与`alignTo`顶端对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -476,14 +476,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-在一个游戏对象上, 在指定位置, 将其对齐。 所使用的对齐基于 `position` 参数,这是 `Phaser.Display.Align` 财产,例如 `LEFT_CENTER` 或 或 时 间 `TOP_RIGHT`.
+在一个游戏对象上, 在指定位置, 将其对齐。 所使用的对齐基于 `position` 参数,这是 `Phaser.Display.Align` 属性,例如 `LEFT_CENTER` 或 或 时 间 `TOP_RIGHT`.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -508,12 +508,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校对,使其立即放置在`alignTo`游戏对象的右侧,并与其底边对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -537,12 +537,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 使用一个给定的游戏对象并校对它,使其左边缘与`alignTo`游戏对象的右边缘冲出,并与其垂直中心匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -566,12 +566,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其左边缘与`alignTo`游戏对象的右边缘相冲,其顶边缘与`alignTo`的顶边缘相匹配.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -595,12 +595,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校正它,使其直接放在上方 `alignTo` 游戏对象, 水平中心。 下边缘 `gameObject` 以顶端边缘定位的冲 `alignTo`,则它们的中心X坐标匹配。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -624,12 +624,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并与之对齐,使其下边缘与`alignTo`游戏对象的上边缘相冲,左边缘对齐。结果 `gameObject`出现在`alignTo`的正上方,锚在它的左侧。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -653,12 +653,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 取一个给定的游戏对象并校对,使其直接位于`alignTo`游戏对象上方,其右边缘对齐.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将定位的游戏对象 。 |
 | alignTo | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将校正位置置于此上的游戏对象 。 |
@@ -684,7 +684,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其以给定坐标为中心。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -911,7 +911,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其界限底部与给定坐标一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -938,7 +938,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其边界的横向中心与给定坐标保持一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -965,7 +965,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其边界的垂直中心与给定坐标一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -992,7 +992,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其边界的左侧与给定坐标一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1019,7 +1019,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其边界的右侧与给定坐标一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1046,7 +1046,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 定位游戏对象,使其边界的顶端与给定坐标保持一致。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1122,7 +1122,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 创建新的 Canvas DOM 元素,如果空闲,则从池中拉出。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | parent | * | 否 |  | 坎瓦斯天体的母体. |
 | width | number | 是 | 1 | 坎瓦斯号的宽度. |
@@ -1150,7 +1150,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 这是`create`周围的方便包装器,它将`canvasType`强制到`Phaser.CANVAS`,确保返回的画布总是用于2D渲染上下文.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | parent | * | 否 |  | 坎瓦斯天体的母体. |
 | width | number | 是 | 1 | 坎瓦斯号的宽度. |
@@ -1176,7 +1176,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 这是`create`周围的方便包装,将`canvasType`强制到`Phaser.WEBGL`. WebGL画布从不添加到游泳池,因为一旦设置了WebGL上下文的选项,它们就不能被更改,使得集合不适合它们.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | parent | * | 否 |  | 坎瓦斯天体的母体. |
 | width | number | 是 | 1 | 坎瓦斯号的宽度. |
@@ -1200,7 +1200,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 从泳池里拿到第一个免费帆布容器.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | canvasType | number | 是 | "Phaser.CANVAS" | 风扇的型号,要么是`Phaser.CANVAS`,要么是`Phaser.WEBGL`. |
 
@@ -1310,7 +1310,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | context | CanvasRenderingContext2D \| WebGLRenderingContext | 否 | 画布上下文要检查 。 |
 
 
-**返回值:** string - 控制图像平滑的上下文(`imageSmoothingEnabled`或供应商前缀版本)上的财产名称,或者不支持的`null`。
+**返回值:** string - 控制图像平滑的上下文(`imageSmoothingEnabled`或供应商前缀版本)上的属性名称,或者不支持的`null`。
 
 
 > 源码：[src/display/canvas/Smoothing.js#L24](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/canvas/Smoothing.js#L24)  
@@ -1395,7 +1395,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 设置画布样式上的触摸动作属性。 可用于禁用默认浏览器触摸动作 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | canvas | HTMLCanvasElement | 否 |  | 应用样式的画布元素 。 |
 | value | string | 是 | "'none'" | 画布上设定的触摸动作值。 设定为 `none` 以禁用触摸动作 。 |
@@ -1418,7 +1418,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 设置画布样式上的用户选择属性。可用于禁用默认浏览器选择动作。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | canvas | HTMLCanvasElement | 否 |  | 应用样式的画布元素 。 |
 | value | string | 是 | "'none'" | 用户选择要在画布上设定的值。 设定为 `none` 以禁用默认浏览器文本选择和触摸点名 。 |
@@ -1449,7 +1449,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 但是,如果需要,您可以通过指定 `limit` 参数来将它减少到较小的数量。当给出一个小于 1024 的限值时,颜色在全谱中均匀地取样,这样无论阵列大小,色调分布都保持统一。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | limit | number | 是 | 1024 | 返回的颜色是多少? 最多为 1024 个, 但需要时可以设定较小的颜色 。 |
 
@@ -1617,10 +1617,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-生成一个 HSV 颜色轮,作为360 色彩对象条目的数组,每度调值从 0 到 359 。
+生成一个 HSV 颜色轮,作为360 色彩对象条目的数组,每度补间从 0 到 359 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | s | number | 是 | 1 | 饱和度,在0 - 1 之间. |
 | v | number | 是 | 1 | 值,在0 - 1 之间. |
@@ -1766,7 +1766,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 创建一个新的颜色对象,其中 r、g和b 值被设定为基于给定的 min 最大值的随机值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | min | number | 是 | 0 | 设定随机范围最小值从( 0 到 255 之间) |
 | max | number | 是 | 255 | 设置随机范围的最大值( 0 到 255 之间) |
@@ -1843,7 +1843,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 使用`0x`前缀时,结果为`0xaarrggbb`格式的8字符串ARGB六元字符串,其中包含α元件作为最显著的字节.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | r | number | 否 |  | 红色值,数字在0到255之间 |
 | g | number | 否 |  | 绿色的颜色值,数字在0到255之间. |
@@ -1894,7 +1894,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将两者间给定的 RGB 颜色值在所提供长度上进行国际化 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | r1 | number | 否 |  | 红色价值。 |
 | g1 | number | 否 |  | 绿色价值。 |
@@ -1923,7 +1923,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将两种给定的 HSV 颜色在所提供的长度内进行Interprotection 。 `sign` 参数控制了 hue 插值的方向: 0 找到最近的路径, 正值总是增加 hue, 负值总是减少 hue 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | h1 | number | 否 |  | 第一色的色调( 0 到 1 ) 。 |
 | s1 | number | 否 |  | 初色饱和度( 0 到 1 ). |
@@ -1953,7 +1953,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 在所提供长度上将两个给定的颜色对象间插入。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color1 | [Phaser.Display.Color](/api/namespace/display-color) | 否 |  | 第一个颜色对象。 |
 | color2 | [Phaser.Display.Color](/api/namespace/display-color) | 否 |  | 第二色物标. |
@@ -1980,7 +1980,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将颜色对象和颜色值之间插入到所提供长度上。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color | [Phaser.Display.Color](/api/namespace/display-color) | 否 |  | 颜色对象 。 |
 | r | number | 否 |  | 红色价值。 |

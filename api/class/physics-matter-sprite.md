@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-matter-sprite)
 
-物质物理Sprite游戏对象.
+Matter 物理Sprite游戏对象.
 
 这是一个已启用的Sprite, 与 Matter.js 物理引擎一起使用。 它将标准 Phaser Sprite 的全部渲染和动画能力与 Matter. js 物理机体相结合, 使其能够参与复杂的物理模拟, 包括多边形碰撞、 关节、 弹簧和制约 。
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | world | [Phaser.Physics.Matter.World](/api/class/physics-matter-world) | 否 | 提到这个实体,这个机构所属的世界实例。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 

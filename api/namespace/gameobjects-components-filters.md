@@ -16,11 +16,11 @@ static
 
 **说明:**
 
-用于过滤器的相机。 您可以用它来改变过滤器的视角。 不需要使用此相机进行普通渲染 。
+用于过滤器的摄像机。 您可以用它来改变过滤器的视角。 不需要使用此摄像机进行普通渲染 。
 
 只有在使用 `enableFilters` 方法时,此选项才可用 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -42,7 +42,7 @@ static
 
 只有在使用 `enableFilters` 方法时,此选项才可用 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -60,9 +60,9 @@ static
 
 **说明:**
 
-`filterCamera`是否更新每个帧以聚焦游戏对象。 如果您想要手动控制相机, 请禁用此选项 。
+`filterCamera`是否更新每个帧以聚焦游戏对象。 如果您想要手动控制摄像机, 请禁用此选项 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -88,7 +88,7 @@ static
 
 “ 文本” 是游戏对象被渲染的帧缓冲器。 这通常是主帧缓冲器, 但可能是另一个帧缓冲器。 如果游戏对象被多次渲染, 则甚至可以是多个不同的帧缓冲器 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -108,7 +108,7 @@ static
 
 过滤器组件是否应该总是绘制到帧缓冲器上, 即使没有活动过滤器 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -128,7 +128,7 @@ static
 
 底部滤波器纹理的最大尺寸。 滤波器在底部纹理渲染后可能使用更大的纹理。 根据硬件, WebGL 的最大纹理尺寸至少为4096 。 您可以设置这个下限来保存内存或防止重定大小 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -150,7 +150,7 @@ static
 
 使用 `willRenderFilters()` 来查看是否有活动过滤器 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -176,7 +176,7 @@ static
 
 这是 WebGL 唯一的功能。 如果无法使用, 它将提前返回 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -197,11 +197,11 @@ static
 
 **说明:**
 
-聚焦滤镜相机。 此设定滤镜相机的大小和位置, 以匹配 Game Object。 如果启用 `filtersAutoFocus`, 则自动调用渲染 。
+聚焦滤镜摄像机。 此设定滤镜摄像机的大小和位置, 以匹配 Game Object。 如果启用 `filtersAutoFocus`, 则自动调用渲染 。
 
-这将聚焦于 Game Object 的原始维度( 如果可用)。 如果 Game Objects 没有维度, 这将聚焦于上下文: 属于用于渲染 Game Objekt 的绘图康特的相机。 上下文焦点发生在渲染过程中, 因为上下文在此之前还不知道 。
+这将聚焦于 Game Object 的原始维度( 如果可用)。 如果 Game Objects 没有维度, 这将聚焦于上下文: 属于用于渲染 Game Objekt 的绘图康特的摄像机。 上下文焦点发生在渲染过程中, 因为上下文在此之前还不知道 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -222,9 +222,9 @@ static
 
 **说明:**
 
-将滤波摄像机聚焦在特定的相机上。 `filtersFocusContext` 启用时, 内部使用此相机 。
+将滤波摄像机聚焦在特定的摄像机上。 `filtersFocusContext` 启用时, 内部使用此摄像机 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -250,11 +250,11 @@ static
 
 **说明:**
 
-手动覆盖过滤相机的焦点。 这样您就可以手动设定过滤相机的大小和位置。 它会在调用时解除 `filtersAutoFocus` 。
+手动覆盖过滤摄像机的焦点。 这样您就可以手动设定过滤摄像机的大小和位置。 它会在调用时解除 `filtersAutoFocus` 。
 
-相机会设置滚动,将游戏对象放置在指定宽度和高度的矩形内,例如,调用`focusFiltersOverride(400, 200, 800, 600)`会将相机聚焦于将对象中心100像素置于相机中心(即400x300)之上.
+摄像机会设置滚动,将游戏对象放置在指定宽度和高度的矩形内,例如,调用`focusFiltersOverride(400, 200, 800, 600)`会将摄像机聚焦于将对象中心100像素置于摄像机中心(即400x300)之上.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -287,12 +287,12 @@ static
 
 这个函数的范围没有保证,所以它不是指`this`.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 需要制作的WebGL 渲染器实例。 |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 正在渲染游戏对象 。 |
@@ -317,9 +317,9 @@ static
 
 **说明:**
 
-设定过滤相机是否应该自动重聚焦于游戏对象的每个帧。设置 `filtersAutoFocus` 属性 。
+设定过滤摄像机是否应该自动重聚焦于游戏对象的每个帧。设置 `filtersAutoFocus` 属性 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -347,7 +347,7 @@ static
 
 设定过滤器是否应该聚焦上下文。 设置 `filtersFocusContext` 属性 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -375,7 +375,7 @@ static
 
 设定过滤器是否总是绘制到帧缓冲器。 设置 `filtersForceComposite` 属性 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -401,13 +401,13 @@ static
 
 **说明:**
 
-设置过滤相机的基数大小。 这是内部过滤器将绘制的纹理大小。 外部过滤器将绘制到上下文大小( 通常是游戏画布) 。
+设置过滤摄像机的基数大小。 这是内部过滤器将绘制的纹理大小。 外部过滤器将绘制到上下文大小( 通常是游戏画布) 。
 
 这通常是游戏对象的大小。 当游戏对象被渲染并启用 `filtersAutoFocus` 时, 自动设定。 关闭自动焦点可以手动设定 。
 
 技术上,较大的帧器可能用于提供编程。这是用于“内部”渲染的末端帧器的大小 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -436,7 +436,7 @@ static
 
 设定是否要渲染过滤器 。 设置 `renderFilters` 属性 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -464,7 +464,7 @@ static
 
 此游戏对象是否将渲染过滤器。 如果它有活动过滤器, 以及 `renderFilters` 属性是否也是真实的, 则此特性是真实的 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 

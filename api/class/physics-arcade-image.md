@@ -2,13 +2,13 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-image)
 
-弧形物理影像(An Arcade Physics Image)是一个标准图像游戏对象,其天体和相关物理组件混合在其中,它是Arcade物理中可用的最轻量级的物理辅助游戏对象,使其对于静态景物,收集器,平台,子弹,或任何需要参与物理碰撞和重叠检查的非动态物体来说,都非常理想.
+Arcade 物理影像(An Arcade Physics Image)是一个标准图像游戏对象,其物理体和相关物理组件混合在其中,它是Arcade物理中可用的最轻量级的物理辅助游戏对象,使其对于静态景物,收集器,平台,子弹,或任何需要参与物理碰撞和重叠检查的非动态物体来说,都非常理想.
 
-物理体可以是动态的(受速度,加速度和重力的影响),也可以是静态的(不可移动,用于平台和边界). 物理行为通过混合的弧形物理组件,如极速,加速,弹跳,重力等来控制.
+物理体可以是动态的(受速度,加速度和重力的影响),也可以是静态的(不可移动,用于平台和边界). 物理行为通过混合的Arcade 物理组件,如极速,加速,弹跳,重力等来控制.
 
 弧形图像和弧形闪光片之间的关键区别在于,弧形图像不能播放基于纹理的动画。如果需要帧动画,请使用`Phaser.Physics.Arcade.Sprite`。如果只需要一个静态或程序化的物体,而不需要动画,则弧形图像是效率更高的选择。
 
-通常你不应该直接创建ArcadeImage。 相反,使用厂家方法`this.physics.add.image()`从场景内部创建图像,并将其身体自动添加到Arcade物理世界中。
+通常你不应该直接创建ArcadeImage。 相反,使用厂家方法`this.physics.add.image()`从场景内部创建图像,并将其物理体自动添加到Arcade物理世界中。
 
 **构造函数**
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 ---
@@ -288,7 +288,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此游戏对象的物理体 。
 
 
-**Overrides:** Phaser.GameObjects.Image身体的伤痛
+**重写:** Phaser.GameObjects.Image身体的伤痛
 
 
 > 源码：[src/physics/arcade/ArcadeImage.js#L98](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/ArcadeImage.js#L98)  

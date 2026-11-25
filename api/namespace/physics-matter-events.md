@@ -139,9 +139,9 @@ static
 
 **说明:**
 
-添加事件后的物质物理.
+添加事件后的Matter 物理.
 
-本次活动是由物质物理世界的一个例子在过程结束时,当世界刚刚增加了一个新的体或约束时,才发出.
+本次活动是由Matter 物理世界的一个例子在过程结束时,当世界刚刚增加了一个新的体或约束时,才发出.
 
 听听场景用`this.matter.world.on('afteradd', listener)`
 
@@ -164,9 +164,9 @@ static
 
 **说明:**
 
-删除事件后的物质物理 。
+删除事件后的Matter 物理 。
 
-本次活动是由物质物理世界的一个实例在从世界中移除一个身体或约束的过程结束时发出的。
+本次活动是由Matter 物理世界的一个实例在从世界中移除一个物理体或约束的过程结束时发出的。
 
 听听场景用`this.matter.world.on('afterremove', listener)`
 
@@ -189,9 +189,9 @@ static
 
 **说明:**
 
-更新事件后的物质物理 。
+更新事件后的Matter 物理 。
 
-本次事件是由一个物质物理世界实例在引擎更新后,所有碰撞事件都得到解决后发出的.
+本次事件是由一个Matter 物理世界实例在引擎更新后,所有碰撞事件都得到解决后发出的.
 
 听听场景用`this.matter.world.on('afterupdate', listener)`
 
@@ -214,9 +214,9 @@ static
 
 **说明:**
 
-添加事件前的物质物理 。
+添加事件前的Matter 物理 。
 
-这项活动是由物质物理世界的一个实例在进程开始时,即世界正在增加一个新的体或约束。
+这项活动是由Matter 物理世界的一个实例在进程开始时,即世界正在增加一个新的体或约束。
 
 听听场景用`this.matter.world.on('beforeadd', listener)`
 
@@ -239,9 +239,9 @@ static
 
 **说明:**
 
-事件删除前的物质物理 。
+事件删除前的Matter 物理 。
 
-本次活动是由物质物理世界实例在从世界中移除一个身体或约束物的过程开始时发出的。
+本次活动是由Matter 物理世界实例在从世界中移除一个物理体或约束物的过程开始时发出的。
 
 听听场景用`this.matter.world.on('beforeremove', listener)`
 
@@ -264,9 +264,9 @@ static
 
 **说明:**
 
-更新事件前的物质物理 。
+更新事件前的Matter 物理 。
 
-本次事件是由物质物理世界案例 在所有碰撞处理发生之前发出来的
+本次事件是由Matter 物理世界案例 在所有碰撞处理发生之前发出来的
 
 听听场景用`this.matter.world.on('beforeupdate', listener)`
 
@@ -289,9 +289,9 @@ static
 
 **说明:**
 
-物质物理碰撞活动。
+Matter 物理碰撞活动。
 
-此事件由引擎更新后的物质物理世界实例发送。 它提供了当前勾选中所有对对对的列表( 如果有的话) 。
+此事件由引擎更新后的Matter 物理世界实例发送。 它提供了当前勾选中所有对对对的列表( 如果有的话) 。
 
 听听场景用`this.matter.world.on('collisionactive', listener)`
 
@@ -316,9 +316,9 @@ static
 
 **说明:**
 
-物质物理碰撞事件结束。
+Matter 物理碰撞事件结束。
 
-此事件由引擎更新后的物质物理世界实例发送。 它提供了当前勾选中已完成碰撞的所有对子( 如果有) 列表 。
+此事件由引擎更新后的Matter 物理世界实例发送。 它提供了当前勾选中已完成碰撞的所有对子( 如果有) 列表 。
 
 听听场景用`this.matter.world.on('collisionend', listener)`
 
@@ -343,9 +343,9 @@ static
 
 **说明:**
 
-物质物理碰撞启动事件.
+Matter 物理碰撞启动事件.
 
-此事件由引擎更新后的物质物理世界实例发送。 它提供了当前勾选中所有开始碰撞的对子( 如果有) 列表 。
+此事件由引擎更新后的Matter 物理世界实例发送。 它提供了当前勾选中所有开始碰撞的对子( 如果有) 列表 。
 
 听听场景用`this.matter.world.on('collisionstart', listener)`
 
@@ -370,17 +370,17 @@ static
 
 **说明:**
 
-物质物理拖动事件 。
+Matter 物理拖动事件 。
 
-当一个指针约束器正在积极拖曳一个天体时, 事件由物质物理世界实例发出。 每次指针移动时都会释放它 。
+当一个指针约束器正在积极拖曳一个物理体时, 事件由Matter 物理世界实例发出。 每次指针移动时都会释放它 。
 
 听听场景用`this.matter.world.on('drag', listener)`
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | MatterJS.BodyType | 否 | 正在拖动的天体。 这是一个物质天体,而不是 Phaser 游戏对象 。 |
-| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着尸体的指针控制器 |
+| body | MatterJS.BodyType | 否 | 正在拖动的物理体。 这是一个物质物理体,而不是 Phaser 游戏对象 。 |
+| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着物理体的指针控制器 |
 
 
 > 源码：[src/physics/matter-js/events/DRAG_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/DRAG_EVENT.js#L7)  
@@ -396,17 +396,17 @@ static
 
 **说明:**
 
-物质物理拖动结束事件 。
+Matter 物理拖动结束事件 。
 
-当一个指针约束停止拖曳一个身体时, 事件是由物质物理世界实例发出的。
+当一个指针约束停止拖曳一个物理体时, 事件是由Matter 物理世界实例发出的。
 
 听听场景用`this.matter.world.on('dragend', listener)`
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | MatterJS.BodyType | 否 | 停止拖曳的身体。 这是一个物质的身体, 而不是 Phaser 游戏对象 。 |
-| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着尸体的指针控制器 |
+| body | MatterJS.BodyType | 否 | 停止拖曳的物理体。 这是一个物质的物理体, 而不是 Phaser 游戏对象 。 |
+| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着物理体的指针控制器 |
 
 
 > 源码：[src/physics/matter-js/events/DRAG_END_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/DRAG_END_EVENT.js#L7)  
@@ -422,18 +422,18 @@ static
 
 **说明:**
 
-物质物理拖动启动事件 。
+Matter 物理拖动启动事件 。
 
-当一个指针约束器开始拖曳一个身体时, 事件是由物质物理世界实例发出的。
+当一个指针约束器开始拖曳一个物理体时, 事件是由Matter 物理世界实例发出的。
 
 听听场景用`this.matter.world.on('dragstart', listener)`
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | MatterJS.BodyType | 否 | 开始拖曳的天体。 这是一个物质天体, 而不是 Phaser 游戏对象 。 |
+| body | MatterJS.BodyType | 否 | 开始拖曳的物理体。 这是一个物质物理体, 而不是 Phaser 游戏对象 。 |
 | part | MatterJS.BodyType | 否 | 被点击的人体部分. |
-| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着尸体的指针控制器 |
+| constraint | [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint) | 否 | 拖着物理体的指针控制器 |
 
 
 > 源码：[src/physics/matter-js/events/DRAG_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/DRAG_START_EVENT.js#L7)  
@@ -449,9 +449,9 @@ static
 
 **说明:**
 
-物质物理世界暂停事件.
+Matter 物理世界暂停事件.
 
-本次事件是由物质物理世界实例发出,当它被暂停时。
+本次事件是由Matter 物理世界实例发出,当它被暂停时。
 
 听听场景用`this.matter.world.on('pause', listener)`
 
@@ -469,9 +469,9 @@ static
 
 **说明:**
 
-物质物理世界再现事件.
+Matter 物理世界再现事件.
 
-本次事件由物质物理世界实例发出, 当它从暂停状态恢复时。
+本次事件由Matter 物理世界实例发出, 当它从暂停状态恢复时。
 
 听听场景用`this.matter.world.on('resume', listener)`
 
@@ -489,9 +489,9 @@ static
 
 **说明:**
 
-物质物理睡眠结束事件.
+Matter 物理睡眠结束事件.
 
-本次事件是由物质物理世界的一个例子 即一个身体停止睡觉时发出的
+本次事件是由Matter 物理世界的一个例子 即一个物理体停止睡觉时发出的
 
 听听场景用`this.matter.world.on('sleepend', listener)`
 
@@ -499,7 +499,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | event | [Phaser.Physics.Matter.Events.SleepEndEvent](/api/typedef/physics-matter-events#sleependevent) | 否 | 睡眠事件对象 。 |
-| body | MatterJS.BodyType | 否 | 尸体已经停止睡觉。 |
+| body | MatterJS.BodyType | 否 | 物理体已经停止睡觉。 |
 
 
 > 源码：[src/physics/matter-js/events/SLEEP_END_EVENT.js#L14](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/SLEEP_END_EVENT.js#L14)  
@@ -515,9 +515,9 @@ static
 
 **说明:**
 
-物质物理睡眠启动事件.
+Matter 物理睡眠启动事件.
 
-本次事件是由物质物理世界的一个例子,当一个身体睡觉时。
+本次事件是由Matter 物理世界的一个例子,当一个物理体睡觉时。
 
 听听场景用`this.matter.world.on('sleepstart', listener)`
 

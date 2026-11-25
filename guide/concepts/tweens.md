@@ -2,17 +2,15 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/tweens)
 
-Tweens是大多数游戏中的一个重要部分,尽管你完全有可能从未遇到过这个术语. Phaser有一个内置的Tween管理器,允许您创建平滑的,基于时间的修改对象属性,例如,您可以在一定的时间内将Sprite的位置从一个坐标调到另一个坐标,或者您可以将一个游戏对象的alpha值从1到0调出,使其看起来淡出. Tween管理器是一个基于场景的系统,每个场景都有自己的实例.
+补间动画（Tween）可以让对象属性在指定时间内平滑地变化。比如让精灵从一个位置移动到另一个位置，或者把游戏对象的 `alpha` 从 1 变到 0，使它逐渐淡出。每个场景都有自己的补间动画管理器，可通过 `this.tweens` 访问。
 
-尽管在游戏对象上最常用,但 tweens可以实际调整任何对象。例如,你可以调音的音量,或者相机的位置。你甚至可以调音JavaScript对象的属性,比如包含玩家得分的物体,或者健康点.
+目标可以是游戏对象、声音、摄像机，也可以是普通 JavaScript 对象。例如，你可以逐渐降低音量，移动摄像机，或者让界面上的分数从旧值过渡到新值。
 
-特温斯有一套完整的特性,可以设定重复,Yoyo,一次调试多个对象,一次设置多个属性,每个属性都有各自的自定义值,具有延迟,插图,各种不同的平滑效果,并且更多,甚至可以连锁在一起,这样一个功能一旦完成就立即开始,因此,它们是一个非常强大的系统,在游戏中你会发现自己使用很多功能.
+一次补间可以控制多个对象和属性，也可以设置延迟、缓动、插值、重复和往返播放（`yoyo`）。多个补间还可以串成一条链，前一个完成后自动开始下一个。
 
-我们将在后面的一章中更深入地叙述,但这里的取走是,一个‘tween'是当一个物体的值在一段时间内发生改变时.
+## 基本用法 {#basic-usage}
 
-## 基本使用 {#basic-usage}
-
-### 创建调值 {#creating-a-tween}
+### 创建补间动画 {#creating-a-tween}
 
 ```js
 var tween = scene.tweens.add({
@@ -43,9 +41,9 @@ var tween = scene.tweens.add({
 ```
 
 - `key: value2` : 调图为 `value2`.
-- `key: '+=deltaValue'`: 调值为当前值+deltaValue
+- `key: '+=deltaValue'`: 补间为当前值+deltaValue
     - 支持这些表达式 : `key: '+=deltaValue'`, `key: '-=deltaValue'`, `key: '*=deltaValue'`, `key: '/=deltaValue'`
-- `key: 'random(10, 100)'` : 调值到随机浮点值.
+- `key: 'random(10, 100)'` : 补间到随机浮点值.
 - `key: 'int(10, 100)'` : 调和到随机的内值.
 - `key: [100, 300, 200, 600]` : 使用( U) `interpolation` 用于确定数值。
 - `key: { from: value1, to: value2 }`:当延迟后开始时,将属性设定为`value11`,然后将属性设定为`value2`.
@@ -56,7 +54,7 @@ var tween = scene.tweens.add({
     - `value0`,`value1`,`value2`:一个数字,字符串,或回调(`function(target, key, value, targetIndex, totalTargets, tween)  { return newValue; }`).  
 - `key: function(target, key, value, targetIndex, totalTargets, tween)  { return newValue; }`
     - `target` :  靶.
-    - `key` :目标财产.
+    - `key` :目标属性.
     - `value`:目标属性的当前值.
     - `targetIndex` :图文内目标指数.
     - `totalTargets` :这个图文中的目标总数.
@@ -262,7 +260,7 @@ var tween = scene.tweens.add({
 !!! note
     Tween 任务不会操纵任何以 ** underscore ** 开头的属性 。
 
-## 减速方程 {#easing-equations}
+## 缓动方程 {#easing-equations}
 
 - `Power0` 线性
 - `Power1` : 四方报. 出.
@@ -311,7 +309,7 @@ var tween = scene.tweens.add({
 
 [Demo](https://labs.phaser.io/view.html?src=src/tweens/eases/ease%20mixer.js)
 
-### 暂停/ 恢复任务 {#pause-resume-task}
+### 暂停或恢复补间动画 {#pause-resume-task}
 
 ```js
 tween.pause();
@@ -321,7 +319,7 @@ tween.pause();
 tween.resume();
 ```
 
-#### 停止任务 {#stop-task}
+#### 停止补间动画 {#stop-task}
 
 ```js
 tween.complete();
@@ -334,19 +332,19 @@ tween.stop();
 
 将不引用 `onComplete` 回调( `'complete'`事件)
 
-#### 播放任务 {#play-task}
+#### 播放补间动画 {#play-task}
 
 ```js
 tween.play();
 ```
 
-#### 重新开始任务 {#restart-task}
+#### 重新播放补间动画 {#restart-task}
 
 ```js
 tween.restart();
 ```
 
-#### 查找 {#seek}
+#### 跳转到指定进度 {#seek}
 
 ```js
 tween.seek(amount);
@@ -357,7 +355,7 @@ tween.seek(amount);
 - `delta` : 透过 Tween 搜索时每个步骤的大小。 默认值为 `16.6` (1000/60) 。
 - `emit` : 在寻找时, Tween 是否应该释放出任何事件或回调 ? 默认是 `false`.
 
-#### 删除任务 {#remove-task}
+#### 移除补间动画 {#remove-task}
 
 从 Tween 管理器中删除此 Tween
 
@@ -365,7 +363,7 @@ tween.seek(amount);
 tween.remove();
 ```
 
-#### 销毁任务 {#destroy-task}
+#### 销毁补间动画 {#destroy-task}
 
 从内存中解脱任务
 
@@ -376,7 +374,7 @@ tween.destroy();
 !!! note
     被摧毁的特温再也不能被玩弄或使用.
 
-#### 获取图文 {#get-tweens}
+#### 获取补间动画 {#get-tweens}
 
 - 目标图文
     ```js
@@ -390,7 +388,7 @@ tween.destroy();
     var tweens = scene.tweens.getTweens();
     ```
 
-#### 摧毁目标的任务 {#destroy-task-of-a-target}
+#### 销毁目标的补间动画 {#destroy-task-of-a-target}
 
 ```js
 scene.tweens.killTweensOf(target);
@@ -398,7 +396,7 @@ scene.tweens.killTweensOf(target);
 
 - `target`: 杀死  的目标。 提供数组来使用多个目标 。
 
-#### 时间尺度 {#time-scale}
+#### 时间缩放倍率 {#time-scale}
 
 ```js
 tween.setTimeScale(v);
@@ -410,7 +408,7 @@ var timeScale = tween.getTimeScale();
 // var timeScale = tween.timeScale;
 ```
 
-##### 全球时间尺度 {#global-time-scale}
+##### 全局时间缩放倍率 {#global-time-scale}
 
 ```js
 var timeScale = scene.tweens.timeScale;
@@ -440,7 +438,7 @@ scene.tweens.timeScale = timescale;
 
     }, scope);
     ```
-- 重复的周期性财产,在任何重复的延迟到期后。
+- 重复的周期性属性,在任何重复的延迟到期后。
     ```js
     tween.on('repeat', function(tween, key, target){
 
@@ -452,7 +450,7 @@ scene.tweens.timeScale = timescale;
 
     }, scope);
     ```
-- 微软财产更新.
+- 微软属性更新.
     ```js
     tween.on('update', function(tween, key, target, current, previous){
 
@@ -463,7 +461,7 @@ scene.tweens.timeScale = timescale;
     - `target`: 更新的目标对象。 通常是一个游戏对象, 但可以是任意类型 。
     - `current`: 被调整的属性的当前值 。
     - `previous`:本次更新之前,被调整的属性的上一个值.
-- 微软财产暂停 。
+- 微软属性暂停 。
     ```js
     tween.on('pause', function(tween, key, target){
 
@@ -535,7 +533,7 @@ tween.setCallback(type, callback, param);
     var hasStarted = tween.hasStarted;
     ```
 
-#### 自定义易用功能 {#custom-ease-function}
+#### 自定义缓动函数 {#custom-ease-function}
 
 ```js
 var tween = scene.tweens.add({
@@ -548,13 +546,13 @@ var tween = scene.tweens.add({
 });
 ```
 
-#### 有目标 {#has-target}
+#### 检查是否包含目标 {#has-target}
 
 ```js
 var hasTarget = tween.hasTarget(gameObject);
 ```
 
-#### 调值 {#tween-value}
+#### 对数值执行补间 {#tween-value}
 
 - 创建 tween 任务
     ```js
@@ -577,9 +575,9 @@ var hasTarget = tween.hasTarget(gameObject);
     var value = tween.getValue();
     ```
 
-## 链 {#chain}
+## 补间动画链 {#chain}
 
-### 创建链条 {#create-chain}
+### 创建补间动画链 {#create-chain}
 
 ```js
 var chain = scene.tweens.chain({
@@ -610,7 +608,7 @@ var chain = scene.tweens.chain({
 - `tweens`: 一组[tween config](#creating-a-tween)
 
 
-### 暂停/ 恢复链 {#pause-resume-chain}
+### 暂停或恢复补间动画链 {#pause-resume-chain}
 
 ```js
 chain.pause();
@@ -620,13 +618,13 @@ chain.pause();
 chain.resume();
 ```
 
-### 重新启动链 {#restart-chain}
+### 重新播放补间动画链 {#restart-chain}
 
 ```js
 chain.restart();
 ```
 
-### 添加 tween 任务 {#add-tween-task}
+### 添加补间动画任务 {#add-tween-task}
 
 ```js
 chain.add({
@@ -645,13 +643,13 @@ or
 chain.add([tweenConfig0, tweenConfig1, ...]);
 ```
     
-### 删除 tween 任务 {#remove-tween-task}
+### 移除补间动画任务 {#remove-tween-task}
 
 ```js
 chain.remove(tweenTask);
 ```
 
-### 有目标 {#has-target-1}
+### 检查是否包含目标 {#has-target-1}
 
 ```js
 var hasTarget = chain.hasTarget(gameObject);
@@ -687,10 +685,10 @@ CompleteDelay(("completeDelay")) --> CallbackOnComplete>"Callback: onComplete"]
 CallbackOnComplete --> End((End))
 ```
 
-## 调试数据 {#tween-data}
+## 补间动画数据 {#tween-data}
 
 - `tween.data`:一个TweenData对象阵列,每个对象包含一个独特的属性,目标被曲解.
-    - `tween.data[i].key` :目标财产至  .
+    - `tween.data[i].key` :目标属性至  .
     - `tween.data[i].start`,`tween.data[i].end`,`tween.data[i].current`:易值数据.
 
 ## 作者署名 {#author-credits}

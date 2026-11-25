@@ -117,7 +117,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 提到拥有这个缓存管理员的 Phaser.Game 实例 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/cache/CacheManager.js#L36](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cache/CacheManager.js#L36)  
@@ -263,15 +263,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-添加自定义缓存以存储自己的文件。 缓存将在 `Cache.custom.key` 下可用。 缓存只有在密钥尚未使用时才会被创建 。
+添加自定义缓存以存储自己的文件。 缓存将在 `Cache.custom.key` 下可用。 缓存只有在键尚未使用时才会被创建 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 您自定义缓存中唯一的密钥 。 |
+| key | string | 否 | 您自定义缓存中唯一的键 。 |
 
 
-**返回值:** [Phaser.Cache.BaseCache](/api/class/cache-basecache) - 引用创建的 BaseCache 。 如果密钥已经使用, 则返回对现有缓存的引用 。
+**返回值:** [Phaser.Cache.BaseCache](/api/class/cache-basecache) - 引用创建的 BaseCache 。 如果键已经使用, 则返回对现有缓存的引用 。
 
 
 > 源码：[src/cache/CacheManager.js#L169](https://github.com/phaserjs/phaser/blob/v4.1.0/src/cache/CacheManager.js#L169)  

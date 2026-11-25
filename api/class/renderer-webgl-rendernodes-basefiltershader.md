@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这是所有使用遮蔽器的过滤器的基类。 大多数过滤器会扩展此类 。
 
-它负责设置阴影程序和顶点缓冲布局。 它还提供了处理过滤器渲染的 `run` 方法。 在渲染时, 它生成一个新的绘图康特来渲染并释放输入绘图康特。
+它负责设置着色器程序和顶点缓冲布局。 它还提供了处理过滤器渲染的 `run` 方法。 在渲染时, 它生成一个新的绘图康特来渲染并释放输入绘图康特。
 
 注意: 在阴影码中使用 `gl_FragCoord` 时要小心。 这个内置变量会给您一个处理中的像素的“ 窗口相对” 坐标。 但这实际上与帧缓冲器大小是相对的, Phaser 将除主帆布以外的所有帧缓冲器都视为垂直翻转。 这意味着 阴影罩中的 `gl_FragCoord.y = 0` 将是帧缓冲器的底部, 但画布的顶部。 这意味着 `gl_FragCoord` 给与主帆布相比在帧缓冲器( 如 Render 纹理或过滤器) 内时会给出不同的结果 。 在写入阴影罩时要注意这个限制 。
 
@@ -17,9 +17,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | 名称 | string | 否 | 滤镜的名称 。 |
 | manager | [Phaser.Renderer.WebGL.RenderNodes.RenderNodeManager](/api/class/renderer-webgl-rendernodes-rendernodemanager) | 否 | 拥有这个过滤器的经理. |
-| fragmentShaderKey | string | 是 | 阴影缓存中碎片遮蔽源的密钥。 只有在未设置 `fragmentShaderSource` 时才会使用 。 |
+| fragmentShaderKey | string | 是 | 阴影缓存中碎片遮蔽源的键。 只有在未设置 `fragmentShaderSource` 时才会使用 。 |
 | fragmentShaderSource | string | 是 | 碎片遮蔽源. |
-| shaderAdditions | Array.\<[Phaser.Types.Renderer.WebGL.ShaderAdditionConfig](/api/typedef/types-renderer-webgl#shaderadditionconfig)> | 是 | 用于阴影程序的阴影添加数组。 |
+| shaderAdditions | Array.\<[Phaser.Types.Renderer.WebGL.ShaderAdditionConfig](/api/typedef/types-renderer-webgl#shaderadditionconfig)> | 是 | 用于着色器程序的阴影添加数组。 |
 
 ---
 
@@ -137,7 +137,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | padding | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 可选的粘贴矩形。 如果不提供, 则使用控制器的粘贴符 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
 
 
 **返回值:** [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) - 包含过滤结果的输出绘图上下文 。

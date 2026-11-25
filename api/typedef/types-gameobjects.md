@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/DecomposeMatrixResults.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/DecomposeMatrixResults.js#L1)  
 引入版本：3.60.0
 
@@ -33,7 +33,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/FiltersInternalExternal.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/FiltersInternalExternal.js#L1)  
 引入版本：4.0.0
 
@@ -43,7 +43,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GameObjectConfig {#static-gameobjectconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| object | 是 | 0 | 游戏对象的x位置. |
 | y | number \| object | 是 | 0 | 游戏对象的y位置 。 |
@@ -63,7 +63,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/GameObjectConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/GameObjectConfig.js#L1)  
 引入版本：3.0.0
 
@@ -75,14 +75,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| cameraExternal | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算出的相机外部矩阵(相机在屏幕上的地方). |
-| camera | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算出的相机视图矩阵,包括经滚动因子修改的卷轴. |
+| cameraExternal | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算出的摄像机外部矩阵(摄像机在屏幕上的地方). |
+| camera | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算出的摄像机视图矩阵,包括经滚动因子修改的卷轴. |
 | sprite | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算出的Sprite( Game 对象) 矩阵( 世界位置) 。 |
 | calc | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 计算结果矩阵,将所有其他结果都计入在内。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/GetCalcMatrixResults.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/GetCalcMatrixResults.js#L1)  
 引入版本：3.50.0
 
@@ -111,13 +111,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | visible | boolean | 否 | 游戏对象的可见状态 。 |
 | scaleMode | number | 否 | 此游戏对象正在使用的缩放模式 。 |
 | blendMode | number \| string | 否 | 设置此游戏对象正在使用的混合模式。 |
-| textureKey | string | 否 | 此游戏对象的纹理密钥 。 |
+| textureKey | string | 否 | 此游戏对象的纹理键 。 |
 | frameKey | string | 否 | 此游戏对象的帧键 。 |
 | data | object | 否 | 此游戏对象的数据 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/JSONGameObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/JSONGameObject.js#L1)  
 引入版本：3.0.0
 
@@ -138,7 +138,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.GameObjects
+**所属**: Phaser.Types.GameObjects
 > 源码：[src/gameobjects/typedefs/RenderWebGLStep.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/typedefs/RenderWebGLStep.js#L1)  
 引入版本：4.0.0
 

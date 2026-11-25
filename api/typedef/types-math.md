@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> HashCellConfig {#static-hashcellconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | algorithm | number | 是 | 0 | 使用的算法. 0是TRIG. 1是PCG. 2是PCG_FLOAT. |
 | noiseCells | Array.\<number> | 是 | "[ 32, 32, 32, 32 ]" | 每个轴(XYZW)上的0-1范围单元格数。未使用的轴无需定义 。 |
@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/HashCellConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/HashCellConfig.js#L1)  
 引入版本：4.0.0
 
@@ -29,7 +29,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> HashSimplexConfig {#static-hashsimplexconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | noiseCells | Array.\<number> | 是 | "[ 32, 32, 32 ]" | 每个维度的单元格数。 |
 | noisePeriod | Array.\<number> | 是 |  | 模式重现前每个维度中有多少个单元格。默认情况下,这与`noiseCells`相同。 |
@@ -47,7 +47,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/HashSimplexConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/HashSimplexConfig.js#L1)  
 引入版本：4.0.0
 
@@ -66,7 +66,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/RectangleLike.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/RectangleLike.js#L1)  
 引入版本：3.80.0
 
@@ -84,7 +84,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/SinCosTable.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/SinCosTable.js#L1)  
 引入版本：3.0.0
 
@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/Vector2Like.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/Vector2Like.js#L1)  
 引入版本：3.0.0
 
@@ -119,7 +119,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/Vector3Like.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/Vector3Like.js#L1)  
 引入版本：3.50.0
 
@@ -138,7 +138,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Math
+**所属**: Phaser.Types.Math
 > 源码：[src/math/typedefs/Vector4Like.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/math/typedefs/Vector4Like.js#L1)  
 引入版本：3.50.0
 

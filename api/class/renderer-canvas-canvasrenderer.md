@@ -281,8 +281,8 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 | ---- | ---- | -------- | ----------- |
 | sprite | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 要绘制的纹理游戏对象 。 |
 | frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 绘制的框,不一定是游戏对象拥有的框. |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来进行渲染变换的相机. |
-| parentTransformMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 母容器的变换矩阵, 如果设置 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来进行渲染变换的摄像机. |
+| parentTransformMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 父容器的变换矩阵, 如果设置 。 |
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L702](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L702)  
@@ -298,10 +298,10 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 
 **说明:**
 
-删除所有事件听众, 并取消 Canvas 渲染器中的所有对象引用, 允许将其收集为垃圾 。
+删除所有事件监听器, 并取消 Canvas 渲染器中的所有对象引用, 允许将其收集为垃圾 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L887](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L887)  
@@ -360,7 +360,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 后退台阶发生在所有镜头都完成后
 
 
-**Fires:** [Phaser.Renderer.Events#event:POST_RENDER](/api/event/renderer-events#post_render)
+**触发事件:** [Phaser.Renderer.Events#event:POST_RENDER](/api/event/renderer-events#post_render)
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L540](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L540)  
@@ -379,7 +379,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 在每次渲染循环开始时调用。 重新设置游戏背景的全局alpha, 复合操作, 并转换为默认操作。 如果渲染器在每次渲染前配置清空画布, 则清除视图, 如果背景不透明, 则填充已配置的背景颜色。 在发布 PRE_ RENDER_ CLEAR 和 PRE_ RENDER 事件之前, 请保存上下文状态并重排绘图数 。
 
 
-**Fires:** [Phaser.Renderer.Events#event:PRE_RENDER_CLEAR](/api/event/renderer-events#pre_render_clear), [Phaser.Renderer.Events#event:PRE_RENDER](/api/event/renderer-events#pre_render)
+**触发事件:** [Phaser.Renderer.Events#event:PRE_RENDER_CLEAR](/api/event/renderer-events#pre_render_clear), [Phaser.Renderer.Events#event:PRE_RENDER](/api/event/renderer-events#pre_render)
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L377](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L377)  
@@ -397,9 +397,9 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 
 核心为场景镜头做制动步骤.
 
-透过给定的游戏对象阵列,用给定的相机来进行图化.
+透过给定的游戏对象阵列,用给定的摄像机来进行图化.
 
-这是用 `CameraManager.render` 方法调用。 相机管理器实例属于 Scene, 并且被 Scene Systems. render 方法引用 。
+这是用 `CameraManager.render` 方法调用。 摄像机管理器实例属于 Scene, 并且被 Scene Systems. render 方法引用 。
 
 如果`Camera.visible`是`false`,或者`Camera.alpha`是零,则不叫这个方法.
 
@@ -407,11 +407,11 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 场景要演化。 |
-| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一系列可以由给定的相机渲染的过滤游戏对象. |
+| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 一系列可以由给定的摄像机渲染的过滤游戏对象. |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 场景摄像机要用它来制作 |
 
 
-**Fires:** [Phaser.Renderer.Events#event:RENDER](/api/event/renderer-events#render)
+**触发事件:** [Phaser.Renderer.Events#event:RENDER](/api/event/renderer-events#render)
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L422](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L422)  
@@ -452,7 +452,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 | height | number | 是 | 造物器的新高度. |
 
 
-**Fires:** [Phaser.Renderer.Events#event:RESIZE](/api/event/renderer-events#resize)
+**触发事件:** [Phaser.Renderer.Events#event:RESIZE](/api/event/renderer-events#resize)
 
 
 > 源码：[src/renderer/canvas/CanvasRenderer.js#L295](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/canvas/CanvasRenderer.js#L295)  
@@ -540,7 +540,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 
 **说明:**
 
-在当前框架解析后, 将整个游戏视图端口的快照排成一个 。
+在当前框架解析后, 将整个游戏视口的快照排成一个 。
 
 要捕捉特定区域,请参见`snapshotArea`方法。要捕捉特定像素,请参见`snapshotPixel`。
 
@@ -549,7 +549,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 抓图通过从画布数据中创建一个图像对象来工作,这是一个阻塞过程,它得到的画布大小越大,成本就越高,所以请小心你是如何在游戏中使用这个的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | [Phaser.Types.Renderer.Snapshot.SnapshotCallback](/api/typedef/types-renderer-snapshot#snapshotcallback) | 否 |  | 创建了快照图像后要引用的函数 。 |
 | 类型 | string | 是 | "'image/png'" | 图像创建的格式,通常为`image/png`或`image/jpeg`. |
@@ -572,7 +572,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 
 **说明:**
 
-在当前框架渲染后,将游戏视图端口的指定区域进行图示。
+在当前框架渲染后,将游戏视口的指定区域进行图示。
 
 要捕捉整个游戏的视港,请查看`snapshot`方法. 要捕捉到特定的像素,请参看`snapshotPixel`.
 
@@ -581,7 +581,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 抓图通过从画布数据中创建一个图像对象来工作,这是一个阻塞过程,它得到的画布大小越大,成本就越高,所以请小心你是如何在游戏中使用这个的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 坐标是用来抓的 |
 | y | number | 否 |  | 调和器用来抓 |
@@ -615,7 +615,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 抓图通过从画布数据中创建一个图像对象来工作,这是一个阻塞过程,它得到的画布大小越大,成本就越高,所以请小心你是如何在游戏中使用这个的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | canvas | HTMLCanvasElement | 否 |  | 画布从。 |
 | callback | [Phaser.Types.Renderer.Snapshot.SnapshotCallback](/api/typedef/types-renderer-snapshot#snapshotcallback) | 否 |  | 创建了快照图像后要引用的函数 。 |
@@ -644,7 +644,7 @@ CanvasRenderer 目前在所有渲染操作中使用的画布上下文 。
 
 **说明:**
 
-在当前框架渲染后,将游戏视图端口中给定的像素的快照排出日程。
+在当前框架渲染后,将游戏视口中给定的像素的快照排出日程。
 
 要捕捉整个游戏的视港,请查看`snapshot`方法。要捕捉特定区域,请参看`snapshotArea`。
 

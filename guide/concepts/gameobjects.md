@@ -176,7 +176,7 @@ sprite.setName('player');
 
 这些属性都不是Phaser直接使用的,它们纯粹是供您用来帮助构建游戏的。
 
-## 更新列表和活动 {#update-list-and-active}
+## 更新列表与激活状态 {#update-list-and-active}
 
 每个场景都有更新列表。 这是特殊类型的列表, 负责在列表中的所有游戏对象上调用 `preUpdate` 方法, 一次是每游戏步骤。 有些游戏对象需要这个, 其他则不需要。 例如, Sprite 需要更新其动画组件, 所以它会加入更新列表。 然而, 文本对象没有需要更新的组件, 所以它不会添加到更新列表中。 如果您创建自定义类, 您可以选择是否应该添加到更新列表中, 或者不添加。 您可以调用其 `addToUpdateList` 方法来完成此任务 :
 
@@ -227,9 +227,9 @@ sprite.setActive(false);
 
 如前所述,并非所有游戏对象都添加到更新列表中。例如,在基本图像游戏对象上显示此属性不会真正改变任何东西,因为图像不会通过更新列表更新。然而,如果您有更新列表中自定义的游戏对象,那么您会如何切换它,或者不切换,而不需要从列表中添加或删除它。
 
-## 母容器 {#parent-containers}
+## 父容器 {#parent-containers}
 
-游戏对象只能有一个母容器。 `parentContainer` 属性中可以引用它所属的容器:
+游戏对象只能有一个父容器。 `parentContainer` 属性中可以引用它所属的容器:
 
 ```js
 const container = sprite.parentContainer;
@@ -237,7 +237,7 @@ const container = sprite.parentContainer;
 
 您应该将此属性视为只读。 当您将游戏对象添加到容器时, 它会自动设定, 当它被移除或销毁时, 它会失效 。
 
-与此相关的是 `getIndexList` 方法。 这将返回游戏对象祖先的所有索引, 从位置到显示列表的根端, 通过任何母容器:
+与此相关的是 `getIndexList` 方法。 这将返回游戏对象祖先的所有索引, 从位置到显示列表的根端, 通过任何父容器:
 
 ```js
 const indexes = sprite.getIndexList();
@@ -264,7 +264,7 @@ const indexes = sprite.getIndexList();
 
 ## 纹理 {#textures}
 
-某些游戏对象持有纹理和纹理框架.
+某些游戏对象持有纹理和纹理帧.
 
 - 创建带有纹理和框架的游戏对象 :
 
@@ -272,7 +272,7 @@ const indexes = sprite.getIndexList();
     const gameObject = this.add.sprite(0, 0, key, frame);
     ```
 
-    - `key`:要使用的纹理的密钥,存储在纹理管理器中,或一个纹理实例.
+    - `key`:要使用的纹理的键,存储在纹理管理器中,或一个纹理实例.
     - `frame`:纹理内框的名称或索引.
 
 - 获取纹理 :
@@ -282,7 +282,7 @@ const indexes = sprite.getIndexList();
     var frame = gameObject.frame;
     ```
 
-- 获取纹理密钥, 框名 :
+- 获取纹理键, 框名 :
 
     ```javascript
     var textureKey = gameObject.texture.key;
@@ -305,7 +305,7 @@ console.log(sprite.texture.key); // → '__DEFAULT'
 console.log(sprite.displayWidth, sprite.displayHeight); // → 32, 32
 ```
 
-更改纹理框架 :
+更改纹理帧 :
 
 - 设定框架
 
@@ -336,7 +336,7 @@ sprite.setFrame('walkLeft');
 
 改变纹理 :
 
-- 通过密钥字符串设置纹理
+- 通过键字符串设置纹理
 
     ```javascript
     gameObject.setTexture(key);
@@ -362,9 +362,9 @@ sprite.play('snakeAttack');
 console.log(sprite.texture.key); // → 'snake'
 ```
 
-## 位置、来源和规模 {#position-origin-and-size}
+## 位置、原点与尺寸 {#position-origin-and-size}
 
-`x` 财务报告和已审计财务报表 `y` 是指游戏对象的本地位置(如果在集装箱内)或本地和世界位置(如果不在集装箱内)。 `z` 财务报告和已审计财务报表 `w` 被没有使用 Phaser让你自己用 `z` 不是,是"我们"的 `depth`.
+`x` 财务报告和已审计财务报表 `y` 是指游戏对象的本地位置(如果在容器内)或本地和世界位置(如果不在容器内)。 `z` 财务报告和已审计财务报表 `w` 被没有使用 Phaser让你自己用 `z` 不是,是"我们"的 `depth`.
 
 - 获取游戏对象的位置 :
 
@@ -390,7 +390,7 @@ console.log(sprite.texture.key); // → 'snake'
     // gameObject.setRandomPosition(); // x=0, y=0, width=game.width, height=game.height
         ```
 
-`width`和`height`是游戏对象的内在大小或未标定大小。对于基于帧的对象(图像、Sprite),这些是当前纹理框架的大小,你不应该设置它们。对于其他对象(容器、TileSprite),你可以这样设定内在大小。
+`width`和`height`是游戏对象的内在大小或未标定大小。对于基于帧的对象(图像、Sprite),这些是当前纹理帧的大小,你不应该设置它们。对于其他对象(容器、TileSprite),你可以这样设定内在大小。
 
 - 获取游戏对象的大小 :
 
@@ -411,7 +411,7 @@ console.log(sprite.texture.key); // → 'snake'
     gameObject.height = height;
     ```
 
-`originX`和`originY`是游戏对象的视觉起源,在正版坐标中为(0,0)是左上角,1,1是右下角. 旋转和缩放发生于原源;翻转发生在中心之间. 大部分游戏对象默认起源为(0.5,0.5),中心. Render Texture, Text,和Bitmap Text游戏对象默认起源为 (0,0),左上角. 集装箱游戏对象的特性为(0.5, 0.5),Blitter和Graphics游戏对象名义起源为(0,0,),因为其无维度.
+`originX`和`originY`是游戏对象的视觉起源,在正版坐标中为(0,0)是左上角,1,1是右下角. 旋转和缩放发生于原源;翻转发生在中心之间. 大部分游戏对象默认起源为(0.5,0.5),中心. Render Texture, Text,和Bitmap Text游戏对象默认起源为 (0,0),左上角. 容器游戏对象的特性为(0.5, 0.5),Blitter和Graphics游戏对象名义起源为(0,0,),因为其无维度.
 
 - 获取游戏对象的起源 :
 
@@ -566,7 +566,7 @@ console.log(sprite.texture.key); // → 'snake'
 
 基于帧的游戏对象(Image,Sprite)在切换帧或纹理时可能会改变大小.
 
-当一个纹理框架有自定义的枢轴集(通常在纹理图集中)时,在修改帧时,游戏对象源头会自动更新.
+当一个纹理帧有自定义的枢轴集(通常在纹理图集中)时,在修改帧时,游戏对象源头会自动更新.
 
 `angle`(度, -180–180)和`rotation`(弧度, -  –  –  )是相同的属性,在不同的单位中,一个游戏对象在初始位置上具有角度和旋转0.
 
@@ -586,9 +586,9 @@ console.log(sprite.texture.key); // → 'snake'
     gameObject.setRotation(radians);
     ```
 
-## 当地职位和界限 {#local-position-and-bounds}
+## 局部位置与边界 {#local-position-and-bounds}
 
-对于不在集装箱内的游戏对象,本地坐标也是世界坐标.
+对于不在容器内的游戏对象,本地坐标也是世界坐标.
 
 当地中心为`gameObject.x`,原产地为`gameObject.y`(0.5,0.5),或任何原产地为`gameObject.getCenter()`.
 
@@ -633,7 +633,7 @@ or
 var out = gameObject.getLocalPoint(x, y, out, camera);
 ```
 
-## 世界立场和界限 {#world-position-and-bounds}
+## 世界坐标中的位置与边界 {#world-position-and-bounds}
 
 这些是用于容器中的游戏对象。 (对于不是容器中的游戏对象,世界坐标也是本地坐标。 )
 
@@ -681,9 +681,9 @@ const { x, y } = gameObject.getCenter(undefined, true);
 
 可将大多数游戏对象转换成Geom点,圆,或矩等进行一些计算,如交叉检查.
 
-## 裁剪( C) {#crop}
+## 裁剪 {#crop}
 
-裁剪剪游戏对象纹理框架的可见区域。
+裁剪剪游戏对象纹理帧的可见区域。
 
 - 将裁剪应用到纹理
 
@@ -708,7 +708,7 @@ const { x, y } = gameObject.getCenter(undefined, true);
 
 裁剪不会改变游戏对象的实际界限或其输入命中区.
 
-## 投入 {#input}
+## 输入 {#input}
 
 使用 `setInteractive()` 来让游戏对象接收输入事件。 任何游戏对象都可以被交互, 但只有部分对象有自动命中区域。 对于其他对象, 您需要提供命中区域并命中测试功能 。
 
@@ -720,7 +720,7 @@ gameObject.setInteractive().on('pointerdown', function(pointer, localX, localY, 
 });
 ```
 
-对于纹理框架(`frame`)或非零`width`和`height`的游戏对象,没有参数的`setInteractive()`会创建一个大小相同的矩形命中区域: .
+对于纹理帧(`frame`)或非零`width`和`height`的游戏对象,没有参数的`setInteractive()`会创建一个大小相同的矩形命中区域: .
 
 ```js
 const sprite = this.add.sprite(0, 0, 'mummy').setInteractive();
@@ -766,7 +766,7 @@ sprite.setInteractive({
 });
 ```
 
-## 阿尔法 {#alpha}
+## 不透明度（Alpha） {#alpha}
 
 带有`alpha === 0`的游戏对象是隐形的.
 
@@ -801,7 +801,7 @@ sprite.setInteractive({
     gameObject.clearAlpha();
     ```
 
-## 叮当 {#tint}
+## 着色（Tint） {#tint}
 
 **叮当** 是对游戏对象的纹理的一种染色效果。它只是WebGL。
 
@@ -836,7 +836,7 @@ sprite.tintTopLeft = 0xff4136; // etc.
 !!! note 
     `gameObject.tint`是只写属性
 
-## 深度和调制令 {#depth-and-render-order}
+## 深度与渲染顺序 {#depth-and-render-order}
 
 游戏对象由他们在显示列表中的位置来渲染, 开始结束( 或回到前面) 。 默认这是您在现场添加的命令 。
 
@@ -884,7 +884,7 @@ gameObject.setDepth(value);
 
 层层的游戏对象也可以这样进行深度排序,但容器中的游戏对象不能.
 
-> 集装箱本身可以像其他任何东西一样进行深度排序,因此,当集装箱被用于容纳多个不同的实体时,即一个集装箱持有者会说所有敌人都有一个级别,而你突然想要一个级别高于其他级别时,它本身就可能成为一个问题。 在这种情况下,它需要从集装箱中移除,在另一个集装箱中(将提交清单的高度提升),然后在效果结束之前再放回去。
+> 容器本身可以像其他任何东西一样进行深度排序,因此,当容器被用于容纳多个不同的实体时,即一个容器持有者会说所有敌人都有一个级别,而你突然想要一个级别高于其他级别时,它本身就可能成为一个问题。 在这种情况下,它需要从容器中移除,在另一个容器中(将提交清单的高度提升),然后在效果结束之前再放回去。
 
 ## 混合模式 {#blend-mode}
 
@@ -905,7 +905,7 @@ gameObject.setDepth(value);
     gameObject.setBlendMode(blendMode);
     ```
 
-### WebGL 和彩色画 {#webgl-and-canvas}
+### WebGL 与 Canvas {#webgl-and-canvas}
 
 - `'NORMAL'`,或 ,或 , `Phaser.BlendModes.NORMAL`,或 ,或 , `0` 
     - 默认设置和绘制新形状, 覆盖现有画布内容 。
@@ -918,7 +918,7 @@ gameObject.setDepth(value);
 - `'ERASE'`,或 ,或 , `Phaser.BlendModes.ERASE`,或 ,或 , `17`
     - Alpha 擦除混合模式。 只有在向帧缓冲器渲染时才有效, 如 * 渲染纹理 *
 
-### 仅限画板 {#canvas-only}
+### 仅限 Canvas {#canvas-only}
 
 - `'OVERLAY'`,或 ,或 , `Phaser.BlendModes.OVERLAY`,或 ,或 , `4`
     - 复数和屏幕的结合,底层上的暗部分变暗,光部分变轻.
@@ -986,13 +986,13 @@ gameObject.setDepth(value);
 - Vignette
 - 擦拭/ 曝光
 
-> FX前身只针对纹理游戏对象(Sprite,TileSprite,Video等),但Post FX适用于包括相机在内的任何事物,区别在于Pre FX可以改变游戏对象的实际图画,这类似于有自定义的管道,但压力要小得多.
+> FX前身只针对纹理游戏对象(Sprite,TileSprite,Video等),但Post FX适用于包括摄像机在内的任何事物,区别在于Pre FX可以改变游戏对象的实际图画,这类似于有自定义的管道,但压力要小得多.
 > 
 > 如果将“FX”应用到一个容器,那么它将使所有的孩子都进入这个FX,然后运行着色器,然后将结果放入游戏中 — — 因此如果你有一个“光”着色器,它就会将所有东西都作为单一物体发光。 另一方面,FX前导会依次发光每个物体。如此昂贵,但可能更多取决于游戏结果。
 
 ## 滚动因子 {#scroll-factor}
 
-滚动因子控制了相机滚动时游戏对象移动多少(相对于游戏画布).
+滚动因子控制了摄像机滚动时游戏对象移动多少(相对于游戏画布).
 
 - 获取游戏对象的滚动因子 :
     
@@ -1012,7 +1012,7 @@ gameObject.setDepth(value);
 
 - 0=固定在摄像机上
 - 0.25=摄像机速度的四分之一
-- 0.5 = 相机速度的一半
+- 0.5 = 摄像机速度的一半
 
 默认值为(1,1). 滚动因子(0,0)可用于固定背景或UI元素. 0到1之间的因子可用于 Parlax 滚动效应.
 
@@ -1119,7 +1119,7 @@ gameObject.setDataEnabled();
     mummy.on('changedata-health', (gameObject, dataKey, dataValue) => {/*…*/});
     ```
 
-您可以存储其他对象, 如游戏对象, 计时器事件, 或是 tweens。 当母游戏对象被销毁时, 数据存储被清除, 所以清理没有问题 。
+您可以存储其他对象, 如游戏对象, 计时器事件, 或是 tweens。 当父游戏对象被销毁时, 数据存储被清除, 所以清理没有问题 。
 
 ```js
 const cat = this.add.sprite(/*…*/);

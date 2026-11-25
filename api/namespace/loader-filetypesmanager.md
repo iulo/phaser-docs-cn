@@ -39,7 +39,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入器 Plugin 以安装类型 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 资源加载器 Plugin 以安装类型 。 |
 
 
 > 源码：[src/loader/FileTypesManager.js#L22](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/FileTypesManager.js#L22)  
@@ -57,12 +57,12 @@ static
 
 由文件类型直接调用的稳定方法.
 
-键是用来通过装入器加载文件的函数的参考,即`image`.
+键是用来通过资源加载器加载文件的函数的参考,即`image`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 将用作加载器Plugin中方法名的密钥 。 |
+| key | string | 否 | 将用作加载器Plugin中方法名的键 。 |
 | factoryFunction | function | 否 | 当LaugerPlugin.key被引用时,将调用函数 。 |
 
 

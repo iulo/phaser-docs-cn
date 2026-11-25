@@ -51,12 +51,12 @@ static
 
 当`_renderSteps`拥有多个条目时,例如当为这个对象启用滤镜时,它允许这些过程推迟`renderWebGL`,并用其他方式管理渲染的流量.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 需要制作的WebGL 渲染器实例。 |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 正在渲染游戏对象 。 |

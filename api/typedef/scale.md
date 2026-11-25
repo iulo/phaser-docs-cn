@@ -13,7 +13,7 @@ Phaser 缩放管理器常数,用于游戏画布的中枢.
 
 **类型**: [Phaser.Scale.Center](/api/namespace/scale-center)
 
-**Member of**: Phaser.Scale
+**所属**: Phaser.Scale
 > 源码：[src/scale/const/CENTER_CONST.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/const/CENTER_CONST.js#L15)  
 引入版本：3.16.0
 
@@ -30,7 +30,7 @@ Phaser 方向的缩放管理器常数.
 
 **类型**: [Phaser.Scale.Orientation](/api/namespace/scale-orientation)
 
-**Member of**: Phaser.Scale
+**所属**: Phaser.Scale
 > 源码：[src/scale/const/ORIENTATION_CONST.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/const/ORIENTATION_CONST.js#L15)  
 引入版本：3.16.0
 
@@ -47,7 +47,7 @@ Phaser 方向的缩放管理器常数.
 
 **类型**: [Phaser.Scale.ScaleModes](/api/namespace/scale-scalemodes)
 
-**Member of**: Phaser.Scale
+**所属**: Phaser.Scale
 > 源码：[src/scale/const/SCALE_MODE_CONST.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/const/SCALE_MODE_CONST.js#L15)  
 引入版本：3.16.0
 
@@ -64,7 +64,7 @@ Phaser 方向的缩放管理器常数.
 
 **类型**: [Phaser.Scale.Zoom](/api/namespace/scale-zoom)
 
-**Member of**: Phaser.Scale
+**所属**: Phaser.Scale
 > 源码：[src/scale/const/ZOOM_CONST.js#L15](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/const/ZOOM_CONST.js#L15)  
 引入版本：3.16.0
 

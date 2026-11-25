@@ -2,12 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/events-eventemitter)
 
-EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`库,提供全Phaser全程全功能事件发射器,用于游戏对象,场景和系统之间的事件驱动通信.
+`EventEmitter` 封装了 `eventemitter3` 库，可作为场景系统中的插件。Phaser 用它在游戏对象、场景和各个系统之间传递事件。
 
-每个场景都有通过`scene.events`提供这一类的实例,许多Phaser对象扩展或嵌入它来发送和接收事件,它支持通过`on` / `addListener`持续听众,通过`once`射击后一次性自动移动的听众,通过`off`/ `removeListener`清除听众.
+每个场景都提供 `scene.events`。许多 Phaser 对象也会继承或内置事件发射器。用 `on` 或 `addListener` 注册持续监听器，用 `once` 注册触发后自动移除的一次性监听器，用 `off` 或 `removeListener` 移除监听器。
 
-需要独立事件总线时,您也可以直接即时处理。
-
+需要独立的事件总线时，也可以直接创建 `EventEmitter` 实例。
 
 **作用域**: static
 
@@ -23,14 +22,14 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-为指定事件添加一个听众 。
+为指定事件添加一个监听器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
 **返回值:** [Phaser.Events.EventEmitter](/api/class/events-eventemitter) - `this`.
@@ -49,7 +48,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-从 EventEmitter 中删除所有收听器, 并将其准备用于垃圾收集。 当母对象被销毁时, 此方法会自动调用, 除非您正在手动拆卸该发送器, 否则不应直接调用 。
+从 EventEmitter 中删除所有监听器, 并将其准备用于垃圾收集。 当母对象被销毁时, 此方法会自动调用, 除非您正在手动拆卸该发送器, 否则不应直接调用 。
 
 
 > 源码：[src/events/EventEmitter.js#L53](https://github.com/phaserjs/phaser/blob/v4.1.0/src/events/EventEmitter.js#L53)  
@@ -65,7 +64,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-给每个注册参加特定活动的听众打电话。
+给每个注册参加特定活动的监听器打电话。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -74,7 +73,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 | args | * | 是 | 将传递给事件处理者的附加参数 。 |
 
 
-**返回值:** boolean - 如果有听众的话,就用`true`,否则用`false`.
+**返回值:** boolean - 如果有监听器的话,就用`true`,否则用`false`.
 
 
 > 源码：[src/events/EventEmitter.js#L99](https://github.com/phaserjs/phaser/blob/v4.1.0/src/events/EventEmitter.js#L99)  
@@ -109,7 +108,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-返回收听特定事件的听众数量 。
+返回收听特定事件的监听器数量 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -133,7 +132,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-返回已注册的听众 。
+返回已注册的监听器 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -141,7 +140,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 | event | string \| symbol | 否 | 事件名称. |
 
 
-**返回值:** Array.\<function()> - 注册听众。
+**返回值:** Array.\<function()> - 注册监听器。
 
 
 > 源码：[src/events/EventEmitter.js#L77](https://github.com/phaserjs/phaser/blob/v4.1.0/src/events/EventEmitter.js#L77)  
@@ -157,15 +156,15 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-删除特定事件的听众。
+删除特定事件的监听器。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | event | string \| symbol | 否 | 事件名称. |
-| fn | function | 是 | 只删除匹配此函数的听众 。 |
-| context | * | 是 | 只删除有此上下文的听众. |
-| once | boolean | 是 | 只删除一次性的听众. |
+| fn | function | 是 | 只删除匹配此函数的监听器 。 |
+| context | * | 是 | 只删除有此上下文的监听器. |
+| once | boolean | 是 | 只删除一次性的监听器. |
 
 
 **返回值:** [Phaser.Events.EventEmitter](/api/class/events-eventemitter) - `this`.
@@ -184,14 +183,14 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-为指定事件添加一个听众 。
+为指定事件添加一个监听器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
 **返回值:** [Phaser.Events.EventEmitter](/api/class/events-eventemitter) - `this`.
@@ -210,14 +209,14 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-为指定事件添加一次性的听器。 第一次发布事件时, 听众会自动删除, 因此它永远不会被调用一次以上 。
+为指定事件添加一次性的听器。 第一次发布事件时, 监听器会自动删除, 因此它永远不会被调用一次以上 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
 **返回值:** [Phaser.Events.EventEmitter](/api/class/events-eventemitter) - `this`.
@@ -236,7 +235,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-删除全部听众, 或指定事件的听众 。
+删除全部监听器, 或指定事件的监听器 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -260,15 +259,15 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-删除特定事件的听众。
+删除特定事件的监听器。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | event | string \| symbol | 否 | 事件名称. |
-| fn | function | 是 | 只删除匹配此函数的听众 。 |
-| context | * | 是 | 只删除有此上下文的听众. |
-| once | boolean | 是 | 只删除一次性的听众. |
+| fn | function | 是 | 只删除匹配此函数的监听器 。 |
+| context | * | 是 | 只删除有此上下文的监听器. |
+| once | boolean | 是 | 只删除一次性的监听器. |
 
 
 **返回值:** [Phaser.Events.EventEmitter](/api/class/events-eventemitter) - `this`.
@@ -287,7 +286,7 @@ EventEmitter是一个Scene Systems插件兼容的包装器,围绕`eventemitter3`
 
 **说明:**
 
-从 EventEmitter 中删除所有听众。 当父 Scene 关闭时, 此方法会被 Scene 系统自动调用, 以确保清除所有事件绑定, 并且不再保留 stale 引用 。
+从 EventEmitter 中删除所有监听器。 当父 Scene 关闭时, 此方法会被 Scene 系统自动调用, 以确保清除所有事件绑定, 并且不再保留 stale 引用 。
 
 
 > 源码：[src/events/EventEmitter.js#L40](https://github.com/phaserjs/phaser/blob/v4.1.0/src/events/EventEmitter.js#L40)  

@@ -11,14 +11,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 这种方法将搜索给定的圆形区域,并返回所有与之重叠的物理体的阵列。它可以返回动态、静态体或两者的混合体。
 
-尸体只需与要考虑的搜索区域相交,不需要完全控制在其中.
+物理体与搜索区域相交即可计入结果，无需完全位于其中。
 
 如果设定使用RTree(默认为RTree),那么搜索速度相当快,否则搜索是O(N)的动态天体.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 |  | 拱廊物理世界. |
+| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 |  | Arcade 物理世界. |
 | x | number | 否 |  | 区域中心的x坐标以像素为单位进行内部搜索. |
 | y | number | 否 |  | 区域中心的y坐标以像素为单位进行内部搜索。 |
 | radius | number | 否 |  | 搜索区域半径在内部,以像素表示. |
@@ -42,14 +42,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 这种方法将搜索给定的矩形区域,并返回所有与它重叠的物理体的阵列。它可以返回动态、静态体或两者的混合体。
 
-尸体只需与要考虑的搜索区域相交,不需要完全控制在其中.
+物理体与搜索区域相交即可计入结果，无需完全位于其中。
 
 如果设定使用RTree(默认为RTree),那么搜索速度极快,否则搜索是O(N)的动态天体.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 |  | 拱廊物理世界. |
+| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 |  | Arcade 物理世界. |
 | x | number | 否 |  | 左上方的x坐标 搜索区域内部。 |
 | y | number | 否 |  | 左上方的坐标 搜索区域内部。 |
 | width | number | 否 |  | 搜索区域宽度 。 |
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-计算并返回两个街机物理体之间的横向重叠,并相应设置其属性,包括:`touching.left`,`touching.right`,`touching.none`和`overlapX`.
+计算并返回两个Arcade 物理体之间的横向重叠,并相应设置其属性,包括:`touching.left`,`touching.right`,`touching.none`和`overlapX`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-计算并返回两个街机物理体之间的垂直重叠,并相应设定其属性,包括: `touching.up`, `touching.down`, `touching.none`, `blocked.up`, `blocked.down` 财务报告和已审计财务报表 `overlapY`.
+计算并返回两个Arcade 物理体之间的垂直重叠,并相应设定其属性,包括: `touching.up`, `touching.down`, `touching.none`, `blocked.up`, `blocked.down` 财务报告和已审计财务报表 `overlapY`.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -526,7 +526,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-内部功能处理物理体与瓷砖的垂直分离.
+内部功能处理物理体与瓦片的垂直分离.
 
 更新身体的屏蔽旗,根据分离方向,按照分离量调整身体的垂直位置,然后或者将垂直速度零化,或者应用身体的弹跳因子来逆向.
 
@@ -559,7 +559,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | tileWorldRect | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 | 矩形物体定义瓦片的尺寸。 |
 | tilemapLayer | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 否 | The tilemapLayer to collide against. |
 | tileBias | number | 否 | 瓦片偏移值,由`World.TILE_BIAS`常数定义,用于防止快速移动的机体通过薄的瓦片进行隧道通路. |
-| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓷砖? |
+| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓦片? |
 
 
 **返回值:** boolean - 如果尸体分开的话,就用`true`,否则用`false`.
@@ -586,7 +586,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | tileLeft | number | 否 | 在世界坐标的瓦片的左边缘,以像素表示. |
 | tileRight | number | 否 | 世界坐标的瓦片的右边缘,以像素表示. |
 | tileBias | number | 否 | 瓦片偏移值。 重叠大于此阈值会被忽略以防止隧道通透。 通常设置为 `World.TILE_BIAS` 。 |
-| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓷砖? |
+| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓦片? |
 
 
 **返回值:** number - 发生的分离量。
@@ -613,7 +613,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | tileTop | number | 否 | 瓦片在世界空间的顶部位置,以像素表示. |
 | tileBottom | number | 否 | 瓦片在世界空间的底部位置,以像素表示. |
 | tileBias | number | 否 | 瓦片偏移值,由`World.TILE_BIAS`常数定义. |
-| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓷砖? |
+| isLayer | boolean | 否 | 这是来自TilemapLayer的支票还是一系列的瓦片? |
 
 
 **返回值:** number - 发生的垂直分离量,以像素计.
@@ -630,12 +630,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-检查给定的瓷砖矩形物体与弧形物理体之间的交叉点.
+检查给定的瓦片矩形物体与Arcade 物理体之间的交叉点.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tileWorldRect | Object | 否 | 定义世界瓷砖放置的矩形对象. |
+| tileWorldRect | Object | 否 | 定义世界瓦片放置的矩形对象. |
 | body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 检查与交叉点的车体 |
 
 
@@ -662,7 +662,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 如果 `options`是现有的物质体实例(即它的 `type`属性等于 `'body'`),则通过 `setExistingBody` 来附加该天体,否则, `options` 被作为 `MatterBodyConfig` 处理,并通过 `setBody` 创建新天体,如果不提供 `shape`属性,则默认为矩形.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | world | [Phaser.Physics.Matter.World](/api/class/physics-matter-world) | 否 |  | 物质世界来增加身体。 |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将应用物质对象的游戏对象 。 |
@@ -670,7 +670,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | addToWorld | boolean | 是 | true | 刚刚创建的机构应该立即加入世界吗? |
 
 
-**返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 游戏对象被传递,现在用物质物理组件增强.
+**返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 游戏对象被传递,现在用Matter 物理组件增强.
 
 
 > 源码：[src/physics/matter-js/MatterGameObject.js#L26](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterGameObject.js#L26)  

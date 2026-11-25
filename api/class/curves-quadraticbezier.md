@@ -135,20 +135,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在给定的图形对象上绘制此曲线。
 
-曲线是使用 `Graphics.strokePoints` 绘制的, 所以无论当前图形的中风颜色是什么, 都会绘制。 图形对象在绘图前没有清除, 因此曲线会出现在其他已显示对象的上方 。
+曲线是使用 `Graphics.strokePoints` 绘制的, 所以无论当前图形的描边颜色是什么, 都会绘制。 图形对象在绘图前没有清除, 因此曲线会出现在其他已显示对象的上方 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 要绘制的 `Graphics` 对象 。 |
 | pointsTotal | number | 是 | 32 | 绘制曲线时要使用的点数。 数字越多, 曲线越平滑, 需要更多的处理 。 |
 
 
-**Overrides:** Phaser.Curves.Curve画画
+**重写:** Phaser.Curves.Curve画画
 
 
 **返回值:** [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) - 被引向的 `Graphics` 对象 。
@@ -193,7 +193,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 根据长度在曲线中相对位置获得点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -246,7 +246,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得曲线的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -256,7 +256,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getStartPoint
+**重写:** Phaser.Curves.Curve#getStartPoint
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。

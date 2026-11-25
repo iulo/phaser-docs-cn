@@ -257,7 +257,7 @@ Phaser.Actions.PlaceOnRectangle(myObjects, rect);
 
 如果您在调用此动作后修改了其中的矩形对象, 它不会对定位在它上的游戏对象产生影响, 直到您再次调用此动作。 如果您想要激活此进程, 您可以在修改矩形以创建一些有趣的实时效果的同时, 将此动作调用 `update`、 扭矩或定时循环 。
 
-### 三角形位置( T) {#place-on-triangle}
+### 沿三角形边缘放置 {#place-on-triangle}
 
 "三角行动"(Place on Trangle Action)拍摄了一系列游戏对象,并把它们定位在指定三角形周边的均匀的空间点上.
 
@@ -289,7 +289,7 @@ Phaser.Actions.PlayAnimation(myObjects, key);
 
 动作有可选的 `ignoreIfPlaying` 参数。 如果设定为 `true`, 如果游戏对象已经在播放指定的动画, 则不会开始动画。 默认值为 `false` 。
 
-### 财产价值公司 {#property-value-inc}
+### 递增属性值 {#property-value-inc}
 
 取一系列游戏对象, 或任何在 `key` 中定义的公共属性对象, 然后添加到给定值 _adds_。 可选的 `step` 属性被递增应用, 乘以数组中的每个项目 。
 
@@ -299,7 +299,7 @@ Phaser.Actions.PropertyValueInc(items, key, value, [step], [index], [direction])
 
 - `items`:此动作要更新的项目组。
 - `key` : 需要更新的属性.
-- `value` : 财产中应加的金额.
+- `value` : 属性中应加的金额.
 - `step`:这是加在数值上的乘以重置计数器。
 - `index`: 从项目阵列中开始搜索的可选偏移 。
 - `direction`:通过阵列的斜拉方向。 1 是从头到尾, - 1 从头到尾。
@@ -314,7 +314,7 @@ Phaser.Actions.PropertyValueSet(items, key, value, [step], [index], [direction])
 
 - `items`:此动作要更新的项目组。
 - `key` : 需要更新的属性.
-- `value` : 财产中应加的金额.
+- `value` : 属性中应加的金额.
 - `step`:这是加在数值上的乘以重置计数器。
 - `index`: 从项目阵列中开始搜索的可选偏移 。
 - `direction`:通过阵列的斜拉方向。 1 是从头到尾, - 1 从头到尾。
@@ -513,7 +513,7 @@ Phaser.Actions.SetHitArea(items, [hitArea], [callback]);
 ```
 
 - `items`: 游戏对象阵列。 此阵列的内容由此动作更新 。
-- `hitArea` : 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给它, 它将尝试根据纹理框架创建矩形 。
+- `hitArea` : 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给它, 它将尝试根据纹理帧创建矩形 。
 - `callback`: 用于确定指针是否在命中区域形状之内的调用。 如果您提供了形状, 您也必须提供调用 。
 
 ### 设置来源 {#set-origin}
@@ -682,7 +682,7 @@ Phaser.Actions.Shuffle(myObjects);
 
 阵列的内容被洗涤到位。 没有创建新的阵列 。
 
-### 平滑步调和滑动步调 {#smooth-step-and-smoother-step}
+### Smooth Step 与 Smoother Step 插值 {#smooth-step-and-smoother-step}
 
 这样做便于建立使用`smoothstep`的转换序列,将每个段插入,作为使用更精密或昂贵的插入技术的替代.
 

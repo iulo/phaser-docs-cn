@@ -61,7 +61,7 @@ this.sound.decodeAudio(key, audioData);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 解码后添加到音频缓存中的音频文件的密钥. |
+| key | string | 否 | 解码后添加到音频缓存中的音频文件的键. |
 
 
 > 源码：[src/sound/events/DECODED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DECODED_EVENT.js#L7)  
@@ -152,7 +152,7 @@ music.setDetune(200);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
-| detune | number | 否 | 声音的新调值 。 |
+| detune | number | 否 | 声音的新补间 。 |
 
 
 > 源码：[src/sound/events/DETUNE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DETUNE_EVENT.js#L7)  
@@ -178,7 +178,7 @@ music.setDetune(200);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
-| detune | number | 否 | 更新的调值 。 |
+| detune | number | 否 | 更新的补间 。 |
 
 
 > 源码：[src/sound/events/GLOBAL_DETUNE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/GLOBAL_DETUNE_EVENT.js#L7)  

@@ -54,7 +54,7 @@ this.matter.add.rectangle(x, y, width, height);
 
 **说明:**
 
-引用 Scene.Systems 这个物质物理实例属于。
+引用 Scene.Systems 这个Matter 物理实例属于。
 
 
 > 源码：[src/physics/matter-js/Factory.js#L67](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/Factory.js#L67)  
@@ -100,7 +100,7 @@ this.matter.add.rectangle(x, y, width, height);
 | wheelSize | number | 否 | 车轮的半径. |
 
 
-**返回值:** MatterJS.CompositeType - 新的复合车体.
+**返回值:** MatterJS.CompositeType - 新的复合物理体.
 
 
 > 源码：[src/physics/matter-js/Factory.js#L534](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/Factory.js#L534)  
@@ -122,10 +122,10 @@ this.matter.add.rectangle(x, y, width, height);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | composite | MatterJS.CompositeType | 否 | 将所有机构依次连在一起的复合体。 |
-| xOffsetA | number | 否 | 身体A限制的横向抵消,这是根据体积而不是世界位置得出的百分比。 |
-| yOffsetA | number | 否 | 身体A限制的垂直抵消。这是根据体积而不是世界位置计算的百分比。 |
-| xOffsetB | number | 否 | 身体B限制的横向抵消。这是根据体积而不是世界位置计算的百分比。 |
-| yOffsetB | number | 否 | 身体B限制的垂直抵消。这是根据体积而不是世界位置计算的百分比。 |
+| xOffsetA | number | 否 | 物理体A限制的横向抵消,这是根据体积而不是世界位置得出的百分比。 |
+| yOffsetA | number | 否 | 物理体A限制的垂直抵消。这是根据体积而不是世界位置计算的百分比。 |
+| xOffsetB | number | 否 | 物理体B限制的横向抵消。这是根据体积而不是世界位置计算的百分比。 |
+| yOffsetB | number | 否 | 物理体B限制的垂直抵消。这是根据体积而不是世界位置计算的百分比。 |
 | options | [Phaser.Types.Physics.Matter.MatterConstraintConfig](/api/typedef/types-physics-matter#matterconstraintconfig) | 是 | 用于设定创建时初始约束属性的可选约束配置对象。 |
 
 
@@ -150,8 +150,8 @@ this.matter.add.rectangle(x, y, width, height);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 身体中心X坐标. |
-| y | number | 否 | 身体中心Y坐标. |
+| x | number | 否 | 物理体中心X坐标. |
+| y | number | 否 | 物理体中心Y坐标. |
 | radius | number | 否 | 圆之半径. |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 | maxSides | number | 是 | 用于多边形的最大边数, 以接近此圆 。 |
@@ -184,7 +184,7 @@ this.matter.add.rectangle(x, y, width, height);
 对于复合体,必须限制母体而不是其一部分。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bodyA | MatterJS.BodyType | 否 |  | 首个可能附加这种限制的`Body`. |
 | bodyB | MatterJS.BodyType | 否 |  | 附加这一限制的第二个可能的`Body`. |
@@ -225,7 +225,7 @@ this.matter.add.rectangle(x, y, width, height);
 
 **说明:**
 
-使用 JSON 文件提供的物理数据创建一个天体。
+使用 JSON 文件提供的物理数据创建一个物理体。
 
 数据文件应该装入为 JSON :
 
@@ -263,10 +263,10 @@ JSON文件的结构如下:
 在撰写本报告时,只有Phaser物理追踪器App以这种格式输出。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 身体的X坐标. |
-| y | number | 否 |  | 身体的Y坐标. |
+| x | number | 否 |  | 物理体的X坐标. |
+| y | number | 否 |  | 物理体的Y坐标. |
 | config | any | 否 |  | JSON物理数据. |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 |  | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 | addToWorld | boolean | 是 | true | 刚刚创建的机构应该立即加入世界吗? |
@@ -288,7 +288,7 @@ JSON文件的结构如下:
 
 **说明:**
 
-使用应用程序物理编辑器( https://www.codeandweb.com/physicseditor)) 输出的数据创建正文
+使用应用程序物理编辑器( https://www.codeandweb.com/physicseditor)) 输出的数据创建物理体
 
 物理编辑器文件应该装入为 JSON :
 
@@ -310,10 +310,10 @@ create ()
 如果您在 `options` 对象中通过, 里面的任何设置都会覆盖物理编辑器配置对象中的设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 身体的横向世界位置. |
-| y | number | 否 |  | 身体的垂直世界位置. |
+| x | number | 否 |  | 物理体的横向世界位置. |
+| y | number | 否 |  | 物理体的垂直世界位置. |
 | config | any | 否 |  | JSON数据从物理编辑器导出. |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 |  | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 | addToWorld | boolean | 是 | true | 刚刚创建的机构应该立即加入世界吗? |
@@ -335,7 +335,7 @@ create ()
 
 **说明:**
 
-使用 SVG 文件的路径数据创建正文。
+使用 SVG 文件的路径数据创建物理体。
 
 SVG 解析需要从 [https://github.com/progers/pathseg](https://github.com/progers/pathseg) 中选择路径加多填充
 
@@ -354,10 +354,10 @@ create ()
 ```
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 身体的X坐标. |
-| y | number | 否 |  | 身体的Y坐标. |
+| x | number | 否 |  | 物理体的X坐标. |
+| y | number | 否 |  | 物理体的Y坐标. |
 | xml | object | 否 |  | SVG路径数据. |
 | scale | number | 是 | 1 | 创建后, 顶点按此量缩放 。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 |  | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
@@ -380,13 +380,13 @@ create ()
 
 **说明:**
 
-使用所提供的顶点(或包含多个顶点的阵列)创建一个身体,并添加到世界中。如果顶点是凸起的,它们会按所提供的情况通过。否则,如果顶点是凸出,它们会分解。请注意,这个过程不能保证支持复杂的顶点,例如有孔的顶点。
+使用所提供的顶点(或包含多个顶点的阵列)创建一个物理体,并添加到世界中。如果顶点是凸起的,它们会按所提供的情况通过。否则,如果顶点是凸出,它们会分解。请注意,这个过程不能保证支持复杂的顶点,例如有孔的顶点。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 身体中心X坐标. |
-| y | number | 否 |  | 身体中心Y坐标. |
+| x | number | 否 |  | 物理体中心X坐标. |
+| y | number | 否 |  | 物理体中心Y坐标. |
 | vertexSets | string \| array | 否 |  | 顶点数据。 要么是路径字符串, 要么是一系列顶点。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 |  | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 | flagInternal | boolean | 是 | false | 旗内边缘( 事故部分边缘) |
@@ -417,7 +417,7 @@ create ()
 您也可以通过 Matter Body 配置对象, 或者 Matter Body 实例来链接到此游戏对象 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 将物质组件注入到的游戏对象 。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) \| MatterJS.Body | 是 |  | 物质体的配置对象, 或物质体的示例 。 |
@@ -440,7 +440,7 @@ create ()
 
 **说明:**
 
-创建物质物理图像游戏对象。
+创建Matter 物理图像游戏对象。
 
 图像是用于在游戏中显示静态图像的轻量级游戏对象,例如标识,背景,景色或其他非动画元素. 图像可以有输入事件和物理体,或者被调色,有色或滚动. 图像和Sprite的主要区别在于,由于没有动画组件,无法给图像动画.
 
@@ -449,7 +449,7 @@ create ()
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| key | string | 否 | 此游戏对象将使用的质地密钥用于渲染, 如保存在质地管理器中 。 |
+| key | string | 否 | 此游戏对象将使用的质地键用于渲染, 如保存在质地管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在渲染的纹理可选框架。 设定为 `null` 以跳过此值 。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 
@@ -473,9 +473,9 @@ create ()
 创建包含在网格安排中创建的 Matter Image 对象的新复合材料。此函数使用机构界限来防止重叠。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 此游戏对象将使用的质地密钥用于渲染, 如保存在质地管理器中 。 |
+| key | string | 否 |  | 此游戏对象将使用的质地键用于渲染, 如保存在质地管理器中 。 |
 | frame | string \| number | 否 |  | 游戏对象正在渲染的纹理可选框架。 设定为 `null` 以跳过此值 。 |
 | x | number | 否 |  | 这种复合材料在世界的横向位置. |
 | y | number | 否 |  | 这种复合材料在世界的垂直位置. |
@@ -515,7 +515,7 @@ create ()
 对于复合体,必须限制母体而不是其一部分。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bodyA | MatterJS.BodyType | 否 |  | 首个可能附加这种限制的`Body`. |
 | bodyB | MatterJS.BodyType | 否 |  | 附加这一限制的第二个可能的`Body`. |
@@ -540,7 +540,7 @@ create ()
 
 **说明:**
 
-将复合体中的身体与网格模式中的制约连接起来,并带有可选的交叉括号.
+将复合体中的物理体与网格模式中的制约连接起来,并带有可选的交叉括号.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -570,7 +570,7 @@ create ()
 
 此方法为`Factory.pointerConstraint`的别名.
 
-指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动身体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动身体的任何部分。 如果它确实击中, 并且身体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
+指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动物理体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动物理体的任何部分。 如果它确实击中, 并且物理体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
 
 您可以通过创建上的`options`对象来调整约束的硬度,长度和其他属性.
 
@@ -624,7 +624,7 @@ create ()
 
 **说明:**
 
-指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动身体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动身体的任何部分。 如果它确实击中, 并且身体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
+指针约束是一种特殊类型的约束, 允许您在 Mater World 中单击并拖动物理体。 它监视在场景中的主动指针, 当按下它时, 它会检查是否击中世界上任何活动物理体的任何部分。 如果它确实击中, 并且物理体已启用输入, 它会开始拖动它, 直到释放, 或者通过 `stopDrag` 方法停止它 。
 
 您可以通过创建上的`options`对象来调整约束的硬度,长度和其他属性.
 
@@ -655,8 +655,8 @@ create ()
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 身体中心X坐标. |
-| y | number | 否 | 身体中心Y坐标. |
+| x | number | 否 | 物理体中心X坐标. |
+| y | number | 否 | 物理体中心Y坐标. |
 | sides | number | 否 | 多边形的边数 。 |
 | radius | number | 否 | 多边形的"辐射",即从它的中心到任何顶点的距离,这也是它的环绕半径. |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
@@ -678,7 +678,7 @@ create ()
 
 **说明:**
 
-创建包含在金字塔安排中调用回调中创建的天体的新复合体。此函数使用天体边框来防止重叠。
+创建包含在金字塔安排中调用回调中创建的物理体的新复合体。此函数使用物理体边框来防止重叠。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -713,8 +713,8 @@ create ()
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 身体中心X坐标. |
-| y | number | 否 | 身体中心Y坐标. |
+| x | number | 否 | 物理体中心X坐标. |
+| y | number | 否 | 物理体中心Y坐标. |
 | width | number | 否 | 体宽. |
 | height | number | 否 | 身高之高处. |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
@@ -736,7 +736,7 @@ create ()
 
 **说明:**
 
-创建像对象一样的简单柔软的身体。
+创建像对象一样的简单柔软的物理体。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -747,7 +747,7 @@ create ()
 | rows | number | 否 | 复合体中的行数. |
 | columnGap | number | 否 | 每列之间的距离. |
 | rowGap | number | 否 | 每行之间的距离. |
-| crossBrace | boolean | 否 | `true`在身体之间创建交叉支架,或者`false`仅仅创建直支架. |
+| crossBrace | boolean | 否 | `true`在物理体之间创建交叉支架,或者`false`仅仅创建直支架. |
 | particleRadius | number | 否 | 复合材料中每个圆粒体的半径. |
 | particleOptions | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 | constraintOptions | [Phaser.Types.Physics.Matter.MatterConstraintConfig](/api/typedef/types-physics-matter#matterconstraintconfig) | 是 | 用于设定创建时初始约束属性的可选约束配置对象。 |
@@ -782,7 +782,7 @@ create ()
 对于复合体,必须限制母体而不是其一部分。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bodyA | MatterJS.BodyType | 否 |  | 首个可能附加这种限制的`Body`. |
 | bodyB | MatterJS.BodyType | 否 |  | 附加这一限制的第二个可能的`Body`. |
@@ -807,7 +807,7 @@ create ()
 
 **说明:**
 
-创建物质物理Sprite游戏对象。
+创建Matter 物理Sprite游戏对象。
 
 斯普林特游戏对象用于在游戏中显示静态和动画图像。斯普林特可以有输入事件和物理体,也可以被调色,有色,有卷轴和动画.
 
@@ -818,7 +818,7 @@ create ()
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| key | string | 否 | 此游戏对象将使用的质地密钥用于渲染, 如保存在质地管理器中 。 |
+| key | string | 否 | 此游戏对象将使用的质地键用于渲染, 如保存在质地管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在渲染的纹理可选框架。 设定为 `null` 以跳过此值 。 |
 | options | [Phaser.Types.Physics.Matter.MatterBodyConfig](/api/typedef/types-physics-matter#matterbodyconfig) | 是 | 一个可选的 body 配置对象,用于设定创建时的初始 body 属性 。 |
 
@@ -839,9 +839,9 @@ create ()
 
 **说明:**
 
-创建包含在网格安排中回调中创建的天体的新复合体.
+创建包含在网格安排中回调中创建的物理体的新复合体.
 
-此函数使用正文边界来防止重叠.
+此函数使用物理体边界来防止重叠.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -881,7 +881,7 @@ create ()
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 | 目标瓦,应该有一个物质体。 |
-| options | [Phaser.Types.Physics.Matter.MatterTileOptions](/api/typedef/types-physics-matter#mattertileoptions) | 是 | 创建 Matter 天体时要使用的选项 。 |
+| options | [Phaser.Types.Physics.Matter.MatterTileOptions](/api/typedef/types-physics-matter#mattertileoptions) | 是 | 创建 Matter 物理体时要使用的选项 。 |
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 物质图纸游戏对象.
@@ -905,8 +905,8 @@ create ()
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 身体中心X坐标. |
-| y | number | 否 | 身体中心Y坐标. |
+| x | number | 否 | 物理体中心X坐标. |
+| y | number | 否 | 物理体中心Y坐标. |
 | width | number | 否 | 宽度的Trepezoid体。 |
 | height | number | 否 | 夹层体的高度。 |
 | slope | number | 否 | 夹角的斜率. 0 创建矩形, 1 创建三角形。 正面值使上方缩短, 而负值则使下方缩短 。 |
@@ -942,7 +942,7 @@ create ()
 对于复合体,必须限制母体而不是其一部分。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | body | MatterJS.BodyType | 否 |  | 附加这一约束的物质`Body`。 |
 | length | number | 是 |  | 指定约束的剩余目标长度的编号。如果未给出,则自动计算为 `Constraint.create` 原职 `constraint.bodyA` 财务报告和已审计财务报表 `constraint.bodyB`. |

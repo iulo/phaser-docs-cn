@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-当前活动阴影程序的关键 。
+当前活动着色器程序的关键 。
 
 
 > 源码：[src/renderer/webgl/ProgramManager.js#L58](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/ProgramManager.js#L58)  
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-以独特的密钥识别的荫色程序和相关数据套件的映射.
+以独特的键识别的荫色程序和相关数据套件的映射.
 
 每个键对应于一个形状如下的对象:
 
@@ -136,7 +136,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-以阴影统一名称识别的统一值地图。 这使得制服可以保存在阴影程序之间 。
+以阴影统一名称识别的统一值地图。 这使得制服可以保存在着色器程序之间 。
 
 
 > 源码：[src/renderer/webgl/ProgramManager.js#L99](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/ProgramManager.js#L99)  
@@ -197,7 +197,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将所有存储的统一值应用到给定的阴影程序。 用于在阴影程序之间切换时恢复统一状态, 确保新程序接收到与上一个相同的统一值 。
+将所有存储的统一值应用到给定的着色器程序。 用于在着色器程序之间切换时恢复统一状态, 确保新程序接收到与上一个相同的统一值 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -475,7 +475,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置一个统一值, 可供此管理器中所有阴影程序使用 。
+设置一个统一值, 可供此管理器中所有着色器程序使用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

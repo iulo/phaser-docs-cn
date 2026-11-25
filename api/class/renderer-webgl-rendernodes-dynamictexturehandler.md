@@ -86,7 +86,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-处理给定的动态图案的指令缓冲器, 并针对其 WebGL 帧缓冲器执行每次记录的绘图操作。 其中包括印出纹理、 纹理图案、 填充矩形图案、 清除区域、 绘制任意游戏对象、 擦除模式、 引用自定义调用回调和捕获游戏对象到分区。 绘图背景会被克隆并发布, 并会改变所有命令的混合模式。 除非遇到 PRESERVE 命令, 命令缓冲器将被清除, POST_ RENDER 相机事件将被释放 。
+处理给定的动态图案的指令缓冲器, 并针对其 WebGL 帧缓冲器执行每次记录的绘图操作。 其中包括印出纹理、 纹理图案、 填充矩形图案、 清除区域、 绘制任意游戏对象、 擦除模式、 引用自定义调用回调和捕获游戏对象到分区。 绘图背景会被克隆并发布, 并会改变所有命令的混合模式。 除非遇到 PRESERVE 命令, 命令缓冲器将被清除, POST_ RENDER 摄像机事件将被释放 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -94,7 +94,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | dynamicTexture | [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) | 否 | 动态图案要渲染。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/DynamicTextureHandler.js#L53](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/DynamicTextureHandler.js#L53)  

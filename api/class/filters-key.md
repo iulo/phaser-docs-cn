@@ -2,15 +2,15 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/filters-key)
 
-密钥过滤控制器 。
+键过滤控制器 。
 
 键效应可以去除或隔离图像中的特定颜色,可用于去除图像中的背景颜色,或者隔离特定颜色,以便进一步处理.
 
-默认情况下, Key 将会删除匹配密钥颜色的像素。 您可以设置 `isolate` 来保存匹配的像素 。
+默认情况下, Key 将会删除匹配键颜色的像素。 您可以设置 `isolate` 来保存匹配的像素 。
 
-阈值和羽毛设置控制了密钥颜色匹配的几近程度. 匹配通过"颜色矢量之间的距离"来测量;即像素的RGB值与密钥颜色的RGB值的距离有多近.
+阈值和羽毛设置控制了键颜色匹配的几近程度. 匹配通过"颜色矢量之间的距离"来测量;即像素的RGB值与键颜色的RGB值的距离有多近.
 
-通过过滤列表组件向相机添加一个密钥过滤器:
+通过过滤列表组件向摄像机添加一个键过滤器:
 
 ```js
 const camera = this.cameras.main;
@@ -23,9 +23,9 @@ camera.filters.external.addKey({ color: 0x00ff00 });
 `new Key(camera, [config])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | config | [Phaser.Types.Filters.KeyConfig](/api/typedef/types-filters#keyconfig) | 是 | "{}" | 过滤器的配置 。 |
 
 ---
@@ -71,7 +71,7 @@ camera.filters.external.addKey({ color: 0x00ff00 });
 
 **说明:**
 
-密钥使用的颜色。 它是在 0 和 1 之间 的 4 个数字的阵列, 代表 RGBA 值 。
+键使用的颜色。 它是在 0 和 1 之间 的 4 个数字的阵列, 代表 RGBA 值 。
 
 
 > 源码：[src/filters/Key.js#L50](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Key.js#L50)  
@@ -103,7 +103,7 @@ camera.filters.external.addKey({ color: 0x00ff00 });
 
 **说明:**
 
-是否保持区域匹配密钥颜色。 如果选中, 匹配密钥颜色的区域将被保留, 其余区域将被删除。 如果错误, 匹配密钥色的区域将被删除, 其他区域将被保留 。
+是否保持区域匹配键颜色。 如果选中, 匹配键颜色的区域将被保留, 其余区域将被删除。 如果错误, 匹配键色的区域将被删除, 其他区域将被保留 。
 
 
 > 源码：[src/filters/Key.js#L63](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Key.js#L63)  
@@ -154,12 +154,12 @@ camera.filters.external.addKey({ color: 0x00ff00 });
 
 **说明:**
 
-设置用于密钥的α值。 Alpha 控制了按键颜色匹配的像素的不透明度, 范围在 0 到 1 之间。 这一点保存在颜色阵列的第四个元素中。 RGB 颜色值被保存 。
+设置用于键的α值。 Alpha 控制了按键颜色匹配的像素的不透明度, 范围在 0 到 1 之间。 这一点保存在颜色阵列的第四个元素中。 RGB 颜色值被保存 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| alpha | number | 否 | 设置在密钥纹理上的α值,介于 0(完全透明)至 1(完全不透明)之间. |
+| alpha | number | 否 | 设置在键纹理上的α值,介于 0(完全透明)至 1(完全不透明)之间. |
 
 
 **返回值:** [Phaser.Filters.Key](/api/class/filters-key) - 此过滤控制器 。
@@ -178,7 +178,7 @@ camera.filters.external.addKey({ color: 0x00ff00 });
 
 **说明:**
 
-设置要用于密钥的颜色。此颜色存储在颜色阵列的前三个元素中。 阿尔法值被保存。
+设置要用于键的颜色。此颜色存储在颜色阵列的前三个元素中。 阿尔法值被保存。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

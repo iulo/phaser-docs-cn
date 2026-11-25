@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 this.input.keyboard.on('keydown', callback, context);
 ```
 
-或者,听一个特定的密钥:
+或者,听一个特定的键:
 
 ```javascript
 this.input.keyboard.on('keydown-A', callback, context);
@@ -28,7 +28,7 @@ var spaceBar = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE);
 
 如果您有多个平行的 Scase, 每一个尝试获得键盘输入, 请确保禁用它们上抓取它们, 以阻止它们从列表中的另一个 Scase 中窃取输入 。 您可以在 Scase 中使用 `this.input.keyboard.enabled = false` 来阻止所有输入, 或者 `this.input.keyboard.preventDefault = false` 来阻止 Scase 停止在另一个 Scase 上的输入 。
 
-_Note_:由于被称为鬼怪的硬件限制,许多键盘无法处理某些组合的密钥,详见[http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/](http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/),并使用网站[https://w3c.github.io/uievents/tools/key-event-viewer.html](https://w3c.github.io/uievents/tools/key-event-viewer.html)在浏览器中测试您的n键支持.
+_Note_:由于被称为鬼怪的硬件限制,许多键盘无法处理某些组合的键,详见[http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/](http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/),并使用网站[https://w3c.github.io/uievents/tools/key-event-viewer.html](https://w3c.github.io/uievents/tools/key-event-viewer.html)在浏览器中测试您的n键支持.
 
 请注意某些浏览器扩展可以禁用或覆盖 Phaser键盘处理。 例如, Chrome 扩展 vimium 已被知道可以禁用 Phaser 使用 D 键, 而 EverNote 则禁用反键。 还有其它的。 因此, 请在打开 Phaser 键问题前检查您的扩展名, 否则无法工作 。
 
@@ -81,7 +81,7 @@ _Note_:由于被称为鬼怪的硬件限制,许多键盘无法处理某些组合
 
 **说明:**
 
-如果启用此键盘插件, 则会显示布林值。 可以切换到苍蝇上 。
+如果启用此键盘插件, 则会显示布林值。 可以在运行时切换 。
 
 
 > 源码：[src/input/keyboard/KeyboardPlugin.js#L122](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/KeyboardPlugin.js#L122)  
@@ -113,7 +113,7 @@ _Note_:由于被称为鬼怪的硬件限制,许多键盘无法处理某些组合
 
 **说明:**
 
-处理的密钥对象阵列 。
+处理的键对象阵列 。
 
 
 > 源码：[src/input/keyboard/KeyboardPlugin.js#L133](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/KeyboardPlugin.js#L133)  
@@ -223,13 +223,13 @@ _Note_:由于被称为鬼怪的硬件限制,许多键盘无法处理某些组合
 
 请注意键盘抓取是全局的。 这意味着, 如果您从场景内调用这种方法, 也就是说防止空间 BAR 触发页卷轴, 那么它将会防止您游戏中的任何场景, 而不仅仅是调用它 。
 
-您可以通过一个单一的密钥代码值 :
+您可以通过一个单一的键代码值 :
 
 ```javascript
 this.input.keyboard.addCapture(62);
 ```
 
-一系列密钥代码 :
+一系列键代码 :
 
 ```javascript
 this.input.keyboard.addCapture([ 62, 63, 64 ]);
@@ -243,12 +243,12 @@ this.input.keyboard.addCapture('W,S,A,D');
 
 要使用非α数字键,请使用一个字符串,如“ UP”、“SPACE” 或“ LEFT”。
 
-也可以提供混合字符串和密钥代码整数的数组.
+也可以提供混合字符串和键代码整数的数组.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| keycode | string \| number | Array.\<number> | Array.\<any> | 否 | 启用事件抓取的密钥代码 。 |
+| keycode | string \| number | Array.\<number> | Array.\<any> | 否 | 启用事件抓取的键代码 。 |
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -267,21 +267,21 @@ this.input.keyboard.addCapture('W,S,A,D');
 
 **说明:**
 
-将密钥对象添加到此键盘插件中。
+将键对象添加到此键盘插件中。
 
-给定的参数可以是现有的密钥对象,字符串,如`A`或`SPACE`,也可以是密钥代码值.
+给定的参数可以是现有的键对象,字符串,如`A`或`SPACE`,也可以是键代码值.
 
-如果给定了密钥对象,且一个对象已经存在匹配同一密钥代码,则现有的对象会被替换为新的对象.
+如果给定了键对象,且一个对象已经存在匹配同一键代码,则现有的对象会被替换为新的对象.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) \| string | number | 否 |  | 或键对象,字符串,如`A`或`SPACE`,或键码值. |
-| enableCapture | boolean | 是 | true | 在本地 DOM 浏览器事件上自动调用 `preventDefault` , 用于添加密钥代码 。 |
+| enableCapture | boolean | 是 | true | 在本地 DOM 浏览器事件上自动调用 `preventDefault` , 用于添加键代码 。 |
 | emitOnRepeat | boolean | 是 | false | 控件 : 键在被扣下时会连续发出一个“ 下” 事件( 真实) , 或只发出一次事件( 假的, 默认的) 。 |
 
 
-**返回值:** [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) - 新建的密钥对象, 或者如果在密钥数组中已经存在的话, 引用它 。
+**返回值:** [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) - 新建的键对象, 或者如果在键数组中已经存在的话, 引用它 。
 
 
 > 源码：[src/input/keyboard/KeyboardPlugin.js#L475](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/KeyboardPlugin.js#L475)  
@@ -313,19 +313,19 @@ this.input.keyboard.addKeys({ 'up': Phaser.Input.Keyboard.KeyCodes.W, 'down': Ph
 this.input.keyboard.addKeys('W,S,A,D');
 ```
 
-将带有W、S、A和D属性的天体映射到相关的密钥对象。
+将带有W、S、A和D属性的天体映射到相关的键对象。
 
 要使用非α数字键,请使用一个字符串,如“ UP”、“SPACE” 或“ LEFT”。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| keys | object \| string | 否 |  | 包含密钥代码或逗号分隔字符串的对象。 |
-| enableCapture | boolean | 是 | true | 在本地 DOM 浏览器事件上自动调用 `preventDefault` , 用于添加密钥代码 。 |
+| keys | object \| string | 否 |  | 包含键代码或逗号分隔字符串的对象。 |
+| enableCapture | boolean | 是 | true | 在本地 DOM 浏览器事件上自动调用 `preventDefault` , 用于添加键代码 。 |
 | emitOnRepeat | boolean | 是 | false | 控件 : 键在被扣下时会连续发出一个“ 下” 事件( 真实) , 或只发出一次事件( 假的, 默认的) 。 |
 
 
-**返回值:** object - 包含密钥对象的天体,映射到输入属性。
+**返回值:** object - 包含键对象的天体,映射到输入属性。
 
 
 > 源码：[src/input/keyboard/KeyboardPlugin.js#L413](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/KeyboardPlugin.js#L413)  
@@ -341,16 +341,16 @@ this.input.keyboard.addKeys('W,S,A,D');
 
 **说明:**
 
-检查当前是否按住给定的密钥对象 。
+检查当前是否按住给定的键对象 。
 
 这种方法与直接检查`Key.isDown`属性的区别在于, 您可以为这种方法提供持续时间。 例如, 如果您想要按键来发射子弹, 但你只想它能够每100ms发射一次, 那么您可以使用每100ms的`duration`来调用这种方法, 它只会每100ms返回`true` 。
 
 如果键盘插件已被禁用,此方法将总是返回 `false`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 一个密钥对象 。 |
+| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 一个键对象 。 |
 | duration | number | 是 | 0 | 必须在多长时间后才能将关键值视为已下调。 |
 
 
@@ -395,11 +395,11 @@ this.input.keyboard.addKeys('W,S,A,D');
 
 一个键盘Combo会从键盘中听到一个特定的键串,当它收到键盘时,它会从这个键盘插件中发出一个`keycombomatch`事件.
 
-需要听的密钥可以定义为:
+需要听的键可以定义为:
 
 字符串(即“ ATARI”) 组合整数( 键码) 或字符串, 或两个组合的组合 。 组合对象( 如“ 键对象”) 具有公共“ keyCode” 属性
 
-例如,要听 Konami 代码( 上, 上, 下, 下, 左, 右, 左, 右, b, a, 输入) , 您可以通过以下数组密钥代码 :
+例如,要听 Konami 代码( 上, 上, 下, 下, 左, 右, 左, 右, b, a, 输入) , 您可以通过以下数组键代码 :
 
 ```javascript
 this.input.keyboard.createCombo([ 38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13 ], { resetOnMatch: true });
@@ -418,8 +418,8 @@ this.input.keyboard.createCombo('PHASER');
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| keys | string \| Array.\<number> | Array.\<object> | 否 | 构成这个组合的密钥 。 |
-| config | [Phaser.Types.Input.Keyboard.KeyComboConfig](/api/typedef/types-input-keyboard#keycomboconfig) | 是 | 一个密钥组合对象 。 |
+| keys | string \| Array.\<number> | Array.\<object> | 否 | 构成这个组合的键 。 |
+| config | [Phaser.Types.Input.Keyboard.KeyComboConfig](/api/typedef/types-input-keyboard#keycomboconfig) | 是 | 一个键组合对象 。 |
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyCombo](/api/class/input-keyboard-keycombo) - 新的 KeyCombo 对象 。
@@ -457,7 +457,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-禁用 Phaser 来阻止您定义的任何密钥捕获, 而不会实际删除它们。 您可以使用此功能来暂时禁用事件捕获, 例如, 如果您将此功能交换到 DOM 元素 。
+禁用 Phaser 来阻止您定义的任何键捕获, 而不会实际删除它们。 您可以使用此功能来暂时禁用事件捕获, 例如, 如果您将此功能交换到 DOM 元素 。
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -476,7 +476,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-允许 Phaser 防止您在浏览器上浮起时定义的任何密钥捕获。 如果您通过 `disableGlobalCapture` 暂停了它, 您可以使用此功能来重新启用事件捕获 。
+允许 Phaser 防止您在浏览器上浮起时定义的任何键捕获。 如果您通过 `disableGlobalCapture` 暂停了它, 您可以使用此功能来重新启用事件捕获 。
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -498,7 +498,7 @@ this.input.keyboard.createCombo('PHASER');
 返回包含当前启用的所有键盘抓取的数组 。
 
 
-**返回值:** Array.\<number> - 包含当前所有抓取密钥代码的数组 。
+**返回值:** Array.\<number> - 包含当前所有抓取键代码的数组 。
 
 
 > 源码：[src/input/keyboard/KeyboardPlugin.js#L331](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/KeyboardPlugin.js#L331)  
@@ -536,10 +536,10 @@ this.input.keyboard.createCombo('PHASER');
 删除由_This_键盘插件创建的所有关键对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| destroy | boolean | 是 | false | 给每个删除的密钥对象打电话 `Key.destroy` ? |
-| removeCapture | boolean | 是 | false | 删除此插件拥有的密钥对象的全部密钥抓取 ? |
+| destroy | boolean | 是 | false | 给每个删除的键对象打电话 `Key.destroy` ? |
+| removeCapture | boolean | 是 | false | 删除此插件拥有的键对象的全部键抓取 ? |
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -558,17 +558,17 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-删除已有的密钥抓取。
+删除已有的键抓取。
 
 请注意键盘抓取是全局的。 这意味着, 如果您从场景内调用这种方法, 以删除抓取的键, 那么它将会从游戏中切除, 而不仅仅是调用它 。
 
-您可以通过一个单一的密钥代码值 :
+您可以通过一个单一的键代码值 :
 
 ```javascript
 this.input.keyboard.removeCapture(62);
 ```
 
-一系列密钥代码 :
+一系列键代码 :
 
 ```javascript
 this.input.keyboard.removeCapture([ 62, 63, 64 ]);
@@ -582,12 +582,12 @@ this.input.keyboard.removeCapture('W,S,A,D');
 
 要使用非α数字键,请使用一个字符串,如“ UP”、“SPACE” 或“ LEFT”。
 
-也可以提供混合字符串和密钥代码整数的数组.
+也可以提供混合字符串和键代码整数的数组.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| keycode | string \| number | Array.\<number> | Array.\<any> | 否 | 禁用事件抓取的密钥代码 。 |
+| keycode | string \| number | Array.\<number> | Array.\<any> | 否 | 禁用事件抓取的键代码 。 |
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -606,16 +606,16 @@ this.input.keyboard.removeCapture('W,S,A,D');
 
 **说明:**
 
-从此键盘插件中删除密钥对象。
+从此键盘插件中删除键对象。
 
 给定的参数可以是键对象,字符串,如`A`或`SPACE`,也可以是键码值.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) \| string | number | 否 |  | 或键对象,字符串,如`A`或`SPACE`,或键码值. |
-| destroy | boolean | 是 | false | 在已删除的密钥对象上拨打 `Key.destroy` ? |
-| removeCapture | boolean | 是 | false | 从被捕获中移除此密钥 ? 只有在设定用于创建时才适用 。 |
+| destroy | boolean | 是 | false | 在已删除的键对象上拨打 `Key.destroy` ? |
+| removeCapture | boolean | 是 | false | 从被捕获中移除此键 ? 只有在设定用于创建时才适用 。 |
 
 
 **返回值:** [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) - 此键盘缓冲对象 。
@@ -634,7 +634,7 @@ this.input.keyboard.removeCapture('W,S,A,D');
 
 **说明:**
 
-将_this_键盘插件创建的所有密钥对象重置到默认的未压态。 这只能重置通过 `addKey`、 `addKeys` 或 `createCursorKeys` 方法创建的密钥。 如果您直接创建了密钥对象, 您需要自己重置它 。
+将_this_键盘插件创建的所有键对象重置到默认的未压态。 这只能重置通过 `addKey`、 `addKeys` 或 `createCursorKeys` 方法创建的键。 如果您直接创建了键对象, 您需要自己重置它 。
 
 当键盘插件关闭时,这种方法会自动被称作,但可以在任何需要的时候直接被引用.
 

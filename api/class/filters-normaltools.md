@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 普通工具过滤控制器 。
 
-此过滤控制器管理相机的正常工具效果 。
+此过滤控制器管理摄像机的正常工具效果 。
 
 普通工具是用于操纵普通地图的正常功能的过滤器。它具有以下几种功能:
 
@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 - 改变正常人面对镜头的强烈程度.
 
-- 输出灰色的纹理,显示正常人面对相机的强度,或者其他的向量.
+- 输出灰色的纹理,显示正常人面对摄像机的强度,或者其他的向量.
 
 输出可用于各种目的,例如:
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 - 通过操纵面力来改变普通地图的明显视觉深度.
 
-- 创建其它效果的基点,例如用于梯度或其他效果的面具.
+- 创建其它效果的基点,例如用于梯度或其他效果的遮罩.
 
 您甚至可以使用输出作为常规照明的普通地图。 通常, 普通地图会和主纹理一起加载, 但您可以覆盖此功能 。
 
@@ -31,7 +31,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 spiderTex.setDataSource(dyn.getWebGLTexture());
 ```
 
-通过过滤列表组件,将正常工具效应添加到相机中:
+通过过滤列表组件,将正常工具效应添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -52,7 +52,7 @@ camera.filters.external.addNormalTools({});
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的摄像机. |
 | config | [Phaser.Types.Filters.NormalToolsConfig](/api/typedef/types-filters#normaltoolsconfig) | 是 | 普通工具效果的配置对象。 |
 
 ---
@@ -98,7 +98,7 @@ camera.filters.external.addNormalTools({});
 
 **说明:**
 
-面部效果的功率。 值较高会向相机弯曲; 值较低会将其弯曲。 这对建议 2D 场景的深度很有用 。
+面部效果的功率。 值较高会向摄像机弯曲; 值较低会将其弯曲。 这对建议 2D 场景的深度很有用 。
 
 
 > 源码：[src/filters/NormalTools.js#L113](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/NormalTools.js#L113)  
@@ -114,7 +114,7 @@ camera.filters.external.addNormalTools({});
 
 **说明:**
 
-是否输出普通地图的比例。 如果输出是真实的, 输出将是灰色的纹理, 白色区域是正常人面对相机的区域, 向正交时会变黑。 您可以用 `ratioVector` 和 `ratioRadius` 来操纵这个比例。 这可以作为其他效果的基点 。
+是否输出普通地图的比例。 如果输出是真实的, 输出将是灰色的纹理, 白色区域是正常人面对摄像机的区域, 向正交时会变黑。 您可以用 `ratioVector` 和 `ratioRadius` 来操纵这个比例。 这可以作为其他效果的基点 。
 
 
 > 源码：[src/filters/NormalTools.js#L125](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/NormalTools.js#L125)  
@@ -148,7 +148,7 @@ camera.filters.external.addNormalTools({});
 
 **说明:**
 
-比例输出使用的矢量。 这是计算比例的方向。 默认是相机的前进方向。 操纵此方向可以突出显示地图中正面临特定方向的部分 。
+比例输出使用的矢量。 这是计算比例的方向。 默认是摄像机的前进方向。 操纵此方向可以突出显示地图中正面临特定方向的部分 。
 
 只有在 outputRatio 属实时才使用此功能.
 

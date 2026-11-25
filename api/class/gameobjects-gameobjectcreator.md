@@ -94,7 +94,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 
 捕获Frame 是一个特殊的游戏对象,它捕捉显示列表中显示的 WebGL 帧缓冲器的当前状态。 捕获到前的物体会被捕获到一个命名的纹理; 捕获后的对象不会被捕获。 这对全景后处理效果有用, 如一层水或扭曲的覆叠。 所捕获的纹理会被键引用, 并用于其他游戏对象或过滤器上 。
 
-这是仅使用WebGL的特性,在Canvas模式中没有效果. 相机必须启用`forceComposite`,或者捕获Frame必须在帧缓冲上下文中使用(如滤镜,动态透视,或者在0到1之间带有α的相机).
+这是仅使用WebGL的特性,在Canvas模式中没有效果. 摄像机必须启用`forceComposite`,或者捕获Frame必须在帧缓冲上下文中使用(如滤镜,动态透视,或者在0到1之间带有α的摄像机).
 
 注意:只有在将 CaptureFrame 游戏对象建为 Phaser 时,此方法才会可用.
 
@@ -291,7 +291,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| config | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 否 | 此游戏对象将用来创建自己的配置对象。 `children` 密钥可以设置到一系列游戏对象上, 以添加到图层中 。 |
+| config | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 否 | 此游戏对象将用来创建自己的配置对象。 `children` 键可以设置到一系列游戏对象上, 以添加到图层中 。 |
 | addToScene | boolean | 是 | 创建此游戏对象后添加到场景中 ? 如果设置此参数将覆盖配置对象中的 `add` 属性 。 |
 
 
@@ -589,7 +589,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| factoryType | string | 否 | 您想要从游戏对象创建器中移除的工厂密钥 。 |
+| factoryType | string | 否 | 您想要从游戏对象创建器中移除的工厂键 。 |
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L173)  
@@ -701,7 +701,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 注意:只有在Sprite游戏对象已经建入Phaser时,此方法才会可用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | [Phaser.Types.GameObjects.Sprite.SpriteConfig](/api/typedef/types-gameobjects-sprite#spriteconfig) | 否 |  | 此游戏对象将用来创建自己的配置对象 。 |
 | addToScene | boolean | 是 | true | 创建此游戏对象后添加到场景中 ? 如果设置此参数将覆盖配置对象中的 `add` 属性 。 |
@@ -808,7 +808,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 
 **说明:**
 
-从给定的密钥或数据创建一个 Tilemap, 或如果没有提供密钥/数据而创建空白的 Tilemap。从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
+从给定的键或数据创建一个 Tilemap, 或如果没有提供键/数据而创建空白的 Tilemap。从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -969,7 +969,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 用于引用场景显示列表的参考 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L63](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L63)  
@@ -988,7 +988,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 参考景点事件 Emitter.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L53](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L53)  
@@ -1007,7 +1007,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 此游戏对象创建者所属景区 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L33](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L33)  
@@ -1026,7 +1026,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 参考神话. 连载.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L43)  
@@ -1045,7 +1045,7 @@ BitmapText 对象通过取一个预发字体纹理并用该纹理戳出文本的
 参考景区更新列表.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectCreator.js#L73](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectCreator.js#L73)  

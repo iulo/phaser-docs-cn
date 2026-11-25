@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/AFTER_ADD_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/AFTER_ADD_EVENT.js#L7)  
 
 
@@ -32,7 +32,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/AFTER_REMOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/AFTER_REMOVE_EVENT.js#L7)  
 
 
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/AFTER_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/AFTER_UPDATE_EVENT.js#L7)  
 
 
@@ -68,7 +68,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/BEFORE_ADD_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/BEFORE_ADD_EVENT.js#L7)  
 
 
@@ -86,7 +86,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/BEFORE_REMOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/BEFORE_REMOVE_EVENT.js#L7)  
 
 
@@ -104,7 +104,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/BEFORE_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/BEFORE_UPDATE_EVENT.js#L7)  
 
 
@@ -123,7 +123,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/COLLISION_ACTIVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/COLLISION_ACTIVE_EVENT.js#L7)  
 
 
@@ -142,7 +142,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/COLLISION_END_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/COLLISION_END_EVENT.js#L7)  
 
 
@@ -161,7 +161,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/COLLISION_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/COLLISION_START_EVENT.js#L7)  
 
 
@@ -178,7 +178,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/SLEEP_END_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/SLEEP_END_EVENT.js#L7)  
 
 
@@ -195,7 +195,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Physics.Matter.Events
+**所属**: Phaser.Physics.Matter.Events
 > 源码：[src/physics/matter-js/events/SLEEP_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/events/SLEEP_START_EVENT.js#L7)  
 
 

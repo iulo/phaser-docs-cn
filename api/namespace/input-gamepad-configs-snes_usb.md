@@ -48,7 +48,7 @@ B 按钮( Bottom)
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L32](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L32)  
@@ -64,7 +64,7 @@ B 按钮( Bottom)
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L42](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L42)  
@@ -96,7 +96,7 @@ D - 左边
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L52](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L52)  
@@ -160,7 +160,7 @@ D - 左边
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/SNES_USB_Controller.js#L22](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/SNES_USB_Controller.js#L22)  

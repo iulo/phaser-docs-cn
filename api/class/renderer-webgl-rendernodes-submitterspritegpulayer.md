@@ -215,7 +215,7 @@ SpriteGPULayer 游戏对象 此 RenderNode 正在渲染 。
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterSpriteGPULayer.js#L528](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterSpriteGPULayer.js#L528)  
@@ -231,7 +231,7 @@ SpriteGPULayer 游戏对象 此 RenderNode 正在渲染 。
 
 **说明:**
 
-上传当前渲染通道所需的所有遮阳器制服。 其中包括相机投影和视图矩阵、 渲染分辨率、 像素圆形、 滚动抵消、 过期时间、 散射和帧数据纹理分辨率、 重力、 纹理采样器绑定, 如果层上启用照明, 以及照明制服 。
+上传当前渲染通道所需的所有遮阳器制服。 其中包括摄像机投影和视图矩阵、 渲染分辨率、 像素圆形、 滚动抵消、 过期时间、 散射和帧数据纹理分辨率、 重力、 纹理采样器绑定, 如果层上启用照明, 以及照明制服 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -252,7 +252,7 @@ SpriteGPULayer 游戏对象 此 RenderNode 正在渲染 。
 
 **说明:**
 
-根据SpriteGPULayer游戏对象的当前状态更新阴影程序选项。启用或禁用照明阴影添加,设置活动光线计数定义,配置平滑像素艺术渲染,并应用游戏对象报告的任何阴影特性,包括自我阴影支持.
+根据SpriteGPULayer游戏对象的当前状态更新着色器程序选项。启用或禁用照明阴影添加,设置活动光线计数定义,配置平滑像素艺术渲染,并应用游戏对象报告的任何阴影特性,包括自我阴影支持.
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterSpriteGPULayer.js#L471](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterSpriteGPULayer.js#L471)  

@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个噪声Simplex2D对象.
 
-此游戏对象是一个四重奏, 显示简单x噪声。 您可以像其它任何声音一样操纵此对象, 使其具有交互性, 并用在过滤器和面具中, 以创建视觉惊人的效果 。
+此游戏对象是一个四重奏, 显示简单x噪声。 您可以像其它任何声音一样操纵此对象, 使其具有交互性, 并用在过滤器和遮罩中, 以创建视觉惊人的效果 。
 
 幕后,一个噪声Simple2D是一个使用特定遮荫程序(英语:See Phaser.GameObjects.Shader)的XQSee ZZZX}.
 
@@ -25,7 +25,7 @@ Simplex噪声是柔软自然现象的一种光滑模式理想,对云,火焰,水,
 `new NoiseSimplex2D(scene, [config], [x], [y], [width], [height])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | config | [Phaser.Types.GameObjects.NoiseSimplex2D.NoiseSimplex2DQuadConfig](/api/typedef/types-gameobjects-noisesimplex2d#noisesimplex2dquadconfig) | 是 |  | 此游戏对象的配置 。 |
@@ -823,7 +823,7 @@ Simplex噪声是柔软自然现象的一种光滑模式理想,对云,火焰,水,
 - 可用一个颜色对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0x000000" | 噪声值为0时的颜色,对应`noiseColorStart`. |
 | end | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0xffffff" | 噪声值为1时的颜色,对应`noiseColorEnd`. |

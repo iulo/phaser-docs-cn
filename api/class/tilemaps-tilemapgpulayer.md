@@ -2,11 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/tilemaps-tilemapgpulayer)
 
-TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAYER中产生。与更加灵活的TILEMAPLALYER不同,这个对象使用单一的TILEMPLAYER,并且比灵活性更优化速度和质量。它用于高性能渲染不更新内容的tilemaps。它仍然支持瓷砖动画和翻转。
+TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAYER中产生。与更加灵活的TILEMAPLALYER不同,这个对象使用单一的TILEMPLAYER,并且比灵活性更优化速度和质量。它用于高性能渲染不更新内容的tilemaps。它仍然支持瓦片动画和翻转。
 
 此层的设计仅与WebGL渲染器使用.
 
-此图层的性能是极好的。 如果您不需要操纵图层中的瓷砖, 而该图层是支持的类型, 这是渲染图层的最佳选项。 它几乎完全由 GPU 绑定, 因此它会释放CPU 资源用于其它游戏代码( CPU 在游戏中通常比 GPU 做得多的工作 ) 。 它在屏幕上每个像素都有固定的成本, 无论该瓷砖中有什么, 一般来说, 当许多图片可见时, 它不会受到性能损失 。
+此图层的性能是极好的。 如果您不需要操纵图层中的瓦片, 而该图层是支持的类型, 这是渲染图层的最佳选项。 它几乎完全由 GPU 绑定, 因此它会释放CPU 资源用于其它游戏代码( CPU 在游戏中通常比 GPU 做得多的工作 ) 。 它在屏幕上每个像素都有固定的成本, 无论该瓦片中有什么, 一般来说, 当许多图片可见时, 它不会受到性能损失 。
 
 通过在 `Tilemap.createLayer()` 的呼叫中添加 `gpu` 旗, 创建 TilemapGPULayer 。 这将返回 TilemapGPULayer 实例 。
 
@@ -26,9 +26,9 @@ TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAY
 
 - 仅限整形砖.
 
-层通过特殊的遮蔽器来制成。 它使用包含层砖数据的纹理, 以及包含任何瓦片动画的第二个纹理。 遮蔽器将瓦片变成一个单一的四重奏。 因为不需要在 CPU 上计算单个的瓷砖, 这比 TilemapLayer 更快。 但是, 由于它把瓦片当作单一的正交格, 它不适合使用异构或六角瓦片, 或者需要不同渲染方法的其他类型的瓦片 。
+层通过特殊的遮蔽器来制成。 它使用包含层砖数据的纹理, 以及包含任何瓦片动画的第二个纹理。 遮蔽器将瓦片变成一个单一的四重奏。 因为不需要在 CPU 上计算单个的瓦片, 这比 TilemapLayer 更快。 但是, 由于它把瓦片当作单一的正交格, 它不适合使用异构或六角瓦片, 或者需要不同渲染方法的其他类型的瓦片 。
 
-如果平板图像使用 NEAREST 密丝, 遮蔽器会使尖端像素变形。 否则它会假设 LINEAR 过滤。 遮蔽器会自动使 LINEAR 模式中的平板间边界变得平滑, 没有缝隙或流血, 以取得完美的结果。 普通的 TilemapLayer 无法使平板边界变成这样, 在瓷砖之间产生尖锐的缝隙 。
+如果平板图像使用 NEAREST 密丝, 遮蔽器会使尖端像素变形。 否则它会假设 LINEAR 过滤。 遮蔽器会自动使 LINEAR 模式中的平板间边界变得平滑, 没有缝隙或流血, 以取得完美的结果。 普通的 TilemapLayer 无法使平板边界变成这样, 在瓦片之间产生尖锐的缝隙 。
 
 层可以编辑,但不会自动更新. 重生成层砖数据纹理,使用`generateLayerDataTexture`调用.
 
@@ -42,7 +42,7 @@ TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAY
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 这台提列玛普GPULayer所属的场景. |
 | tilemap | [Phaser.Tilemaps.Tilemap](/api/class/tilemaps-tilemap) | 否 | 蒂拉玛普这个层是其中的一部分. |
 | layerIndex | number | 否 | 与此层相关的图层数据索引 。 |
-| tileset | string \| [Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset) | 否 | 用于在此层中制成瓷砖的瓦片。 可以是字符串或蒂莱塞特对象 。 |
+| tileset | string \| [Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset) | 否 | 用于在此层中制成瓦片的瓦片。 可以是字符串或蒂莱塞特对象 。 |
 | x | number | 是 | 将这个层的左上方放置的世界x位置. |
 | y | number | 是 | 将这个层的左上方放置在 y 位置的世界 。 |
 
@@ -275,7 +275,7 @@ TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAY
 
 - 1位:未使用.
 
-- 28位:瓷砖指数.
+- 28位:瓦片指数.
 
 
 > 源码：[src/tilemaps/TilemapGPULayer.js#L99](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapGPULayer.js#L99)  
@@ -636,7 +636,7 @@ TILEMAPGPULAYER是一种特殊类型的游戏对象,它使LayerData从TILEMAPLAY
 
 层数据纹理是 WebGL 纹理,每个texel 编码了层中单瓦的瓦片索引,翻转旗和动画旗。它被 GPU 遮蔽器消耗,将整个瓦片变成一个单一的四边形。
 
-此方法由 `setTileset` 自动调用。 您应该在图层中编辑瓷砖数据后手动调用, 因为 GPU 纹理不会在瓷砖变化时自动更新 。
+此方法由 `setTileset` 自动调用。 您应该在图层中编辑瓦片数据后手动调用, 因为 GPU 纹理不会在瓦片变化时自动更新 。
 
 
 > 源码：[src/tilemaps/TilemapGPULayer.js#L161](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapGPULayer.js#L161)  

@@ -34,7 +34,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果鼠标管理器启用与否, 则控制布尔值。 可以在苍蝇上切换 。
+如果鼠标管理器启用与否, 则控制布尔值。 可以在运行时切换 。
 
 
 > 源码：[src/input/mouse/MouseManager.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/mouse/MouseManager.js#L85)  
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-活动听众是被`window.top`或`window`迷上了吗?
+活动监听器是被`window.top`或`window`迷上了吗?
 
 此设定在 `boot` 序列中。 如果浏览器无法访问 `window.top`, 如在跨源iframe 环境中, 此属性会被设定为 `false` , 而事件被连接到 `window` 中 。
 
@@ -405,7 +405,7 @@ Firefox的注释: 某些Firefox释放物中有一个错误, 导致本地的 DOM 
 
 **说明:**
 
-启动鼠标事件正在运行的听众。 自动调用, 不需要手动引用 。
+启动鼠标事件正在运行的监听器。 自动调用, 不需要手动引用 。
 
 
 > 源码：[src/input/mouse/MouseManager.js#L346](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/mouse/MouseManager.js#L346)  
@@ -421,7 +421,7 @@ Firefox的注释: 某些Firefox释放物中有一个错误, 导致本地的 DOM 
 
 **说明:**
 
-停止鼠标事件听众。 自动调用, 不需要手动引用 。
+停止鼠标事件监听器。 自动调用, 不需要手动引用 。
 
 
 > 源码：[src/input/mouse/MouseManager.js#L520](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/mouse/MouseManager.js#L520)  

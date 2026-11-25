@@ -175,7 +175,7 @@ const emitter = this.add.particles(100, 300, 'flares', {
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 是 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | config | [Phaser.Types.GameObjects.Particles.ParticleEmitterConfig](/api/typedef/types-gameobjects-particles#particleemitterconfig) | 是 | 此发射器的设置 。 |
 
 ---
@@ -821,7 +821,7 @@ accelerationX和accelerationY是否为非零。在配置过程中自动设定 �
 
 **说明:**
 
-连续粒子数,得到一个单一的纹理框架(每个帧周期).
+连续粒子数,得到一个单一的纹理帧(每个帧周期).
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L756](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L756)  
@@ -837,7 +837,7 @@ accelerationX和accelerationY是否为非零。在配置过程中自动设定 �
 
 **说明:**
 
-分配给粒子的纹理框架.
+分配给粒子的纹理帧.
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L736](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L736)  
@@ -1623,11 +1623,11 @@ X坐标粒子是从中发射出来的.
 
 一个可选的矩形对象,用于渲染粒子时从显示中分解。例如,如果粒子仅限于从源头移到300x300大小的区域,那么您可以将矩形设置为这些维度。
 
-渲染器将检查`viewBounds`矩形是否在渲染步骤中与相机的边框相交,如果不这样做,它是否会跳过完全渲染Emitter.
+渲染器将检查`viewBounds`矩形是否在渲染步骤中与摄像机的边框相交,如果不这样做,它是否会跳过完全渲染Emitter.
 
 这样可以让您在场景中创建许多发射器,而无需在内容不可见的情况下进行渲染的成本.
 
-注意 Emitter 将不会进行任何检查, 以查看粒子本身是否在这些界限之外。 它会简单地检查这些界限与相机的对比。 使用 `getBounds` 方法与 `advance` 参数帮助定义视图界限的位置和位置 。
+注意 Emitter 将不会进行任何检查, 以查看粒子本身是否在这些界限之外。 它会简单地检查这些界限与摄像机的对比。 使用 `getBounds` 方法与 `advance` 参数帮助定义视图界限的位置和位置 。
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L677](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L677)  
@@ -1927,7 +1927,7 @@ X坐标粒子是从中发射出来的.
 当此游戏对象添加到场景时调用。 将此发射器与场景的更新列表一起注册, 这样它就能收到 `preUpdate` 调用每个帧 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L948](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L948)  
@@ -1988,7 +1988,7 @@ X坐标粒子是从中发射出来的.
 要禁用界限,您可以将其`active`属性设置为`false`,或者如果你不再需要,请拨打`ParticleEmitter.removeParticleProcessor`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number \| [Phaser.Types.GameObjects.Particles.ParticleEmitterBounds](/api/typedef/types-gameobjects-particles#particleemitterbounds) | [Phaser.Types.GameObjects.Particles.ParticleEmitterBoundsAlt](/api/typedef/types-gameobjects-particles#particleemitterboundsalt) | 否 |  | 边界左边缘的x坐标,或代表矩形的物体. |
 | y | number | 是 |  | 边界顶端的y坐标. |
@@ -2020,7 +2020,7 @@ X坐标粒子是从中发射出来的.
 
 只要它的`active`属性设定,它就会从下一次更新开始处理粒子.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2190,7 +2190,7 @@ X坐标粒子是从中发射出来的.
 在特定位置(或发射电流位置)发射粒子。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | count | number | 是 | "this.quantity" | 弹出粒子的数量。 |
 | x | number | 是 | "this.x" | X坐标从中释放粒子。 |
@@ -2216,7 +2216,7 @@ X坐标粒子是从中发射出来的.
 向指定位置发射粒子。 如果没有给出位置, 它将从此 Emiters 当前位置中发射 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | "this.x" | X坐标从中释放粒子。 |
 | y | number | 是 | "this.y" | 发射粒子的Y坐标 |
@@ -2242,7 +2242,7 @@ X坐标粒子是从中发射出来的.
 将发射器置于爆炸模式(频率= -1),停止任何流粒子流,并同时发射数颗粒子。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | count | number | 是 | "this.quantity" | 弹出粒子的数量。 |
 | x | number | 是 | "this.x" | X坐标从中释放粒子。 |
@@ -2252,7 +2252,7 @@ X坐标粒子是从中发射出来的.
 **返回值:** [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle), undefined - 最近排放的粒子,或如果发射器处于极限,则使用`undefined`。
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:EXPLODE](/api/event/gameobjects-particles-events#explode)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:EXPLODE](/api/event/gameobjects-particles-events#explode)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L2640](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L2640)  
@@ -2304,7 +2304,7 @@ X坐标粒子是从中发射出来的.
 要恢复流流的频率和数量,请使用[Phaser.GameObjects.Particles.ParticleEmitter#start](/api/class/gameobjects-particles-particleemitter#start)代替.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | frequency | number | 否 |  | 每个流周期的时间间隔(QQ 0),以ms为单位. |
 | count | [Phaser.Types.GameObjects.Particles.EmitterOpOnEmitType](/api/typedef/types-gameobjects-particles#emitteroponemittype) | 是 | 1 | 在每个流周期中发射的粒子数量. |
@@ -2314,7 +2314,7 @@ X坐标粒子是从中发射出来的.
 **返回值:** [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) - 这个粒子埃米特。
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:START](/api/event/gameobjects-particles-events#start)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:START](/api/event/gameobjects-particles-events#start)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L2608](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L2608)  
@@ -2479,7 +2479,7 @@ X坐标粒子是从中发射出来的.
 **返回值:** boolean - 如果粒子应该被杀死的话,`true`,否则就是`false`.
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:DEATH_ZONE](/api/event/gameobjects-particles-events#death_zone)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:DEATH_ZONE](/api/event/gameobjects-particles-events#death_zone)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L1998](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L1998)  
@@ -2518,10 +2518,10 @@ X坐标粒子是从中发射出来的.
 
 **说明:**
 
-从 [Phaser.GameObjects.Particles.ParticleEmitter#frames](/api/class/gameobjects-particles-particleemitter#frames) 中选择一个纹理框架 。
+从 [Phaser.GameObjects.Particles.ParticleEmitter#frames](/api/class/gameobjects-particles-particleemitter#frames) 中选择一个纹理帧 。
 
 
-**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理框架.
+**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理帧.
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L1257](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L1257)  
@@ -2646,14 +2646,14 @@ X坐标粒子是从中发射出来的.
 
 **说明:**
 
-使用矩形几何天体或弧形物理体进行测试,以查看它是否与这个Emitter中目前存在的任何粒子相交。
+使用矩形几何天体或Arcade 物理体进行测试,以查看它是否与这个Emitter中目前存在的任何粒子相交。
 
 重叠粒子在数组中返回, 您可以在此进行进一步处理。 如果无重叠, 数组将是空的 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| target | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) \| [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 一个矩形或弧形物理体 来检查与所有活粒子的交叉点 |
+| target | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) \| [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 一个矩形或Arcade 物理体 来检查与所有活粒子的交叉点 |
 
 
 **返回值:** Array.\<[Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle)> - 与给定目标重叠的粒子数组 。
@@ -2716,7 +2716,7 @@ X坐标粒子是从中发射出来的.
 | delta | number | 否 | 三角洲时间,以ms计, 过去了,自上一个框架。 |
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:COMPLETE](/api/event/gameobjects-particles-events#complete)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:COMPLETE](/api/event/gameobjects-particles-events#complete)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L2806](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L2806)  
@@ -2759,7 +2759,7 @@ X坐标粒子是从中发射出来的.
 当游戏对象从场景中移除时被调用。 取消对场景更新列表中此发送器的注册, 使其不再收到 `preUpdate` 的呼叫 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L960](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L960)  
@@ -2805,7 +2805,7 @@ X坐标粒子是从中发射出来的.
 
 它在移除时未被销毁, 允许您将其移动到另一个 Emitter 管理器, 因此, 如果您不再需要它, 您应该直接调用它的 `destroy` 方法 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2907,7 +2907,7 @@ X坐标粒子是从中发射出来的.
 在创建任何粒子之前至少调用一次这种方法,或在创建 Emitter 时将 `anim` 设置在 Patiter 的配置中.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | anims | string \| Array.\<string> | [Phaser.Types.GameObjects.Particles.ParticleEmitterAnimConfig](/api/typedef/types-gameobjects-particles#particleemitteranimconfig) | 否 |  | 一个或多个动画,或配置对象. |
 | pickRandom | boolean | 是 | true | 动画是否应该从 `anims` 随机指定。 如果给出了配置对象, 此参数会被忽略 。 |
@@ -2980,14 +2980,14 @@ X坐标粒子是从中发射出来的.
 
 **说明:**
 
-设置分配向排放的粒子的纹理框架的模式。 `frames` 配置可以是 :
+设置分配向排放的粒子的纹理帧的模式。 `frames` 配置可以是 :
 
 帧: 0 帧:"红色" 帧: [0, 1, 2, 3] 帧: ["红色", "绿色", "蓝色", "平克", "白色" ] 帧: {帧: ["红色', "绿色","蓝色", "平卡", "白色"], [循环: 布尔], [数量: int] ]
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| frames | array \| string | number | [Phaser.Types.GameObjects.Particles.ParticleEmitterFrameConfig](/api/typedef/types-gameobjects-particles#particleemitterframeconfig) | 否 |  | 一个或多个纹理框架,或配置对象. |
+| frames | array \| string | number | [Phaser.Types.GameObjects.Particles.ParticleEmitterFrameConfig](/api/typedef/types-gameobjects-particles#particleemitterframeconfig) | 否 |  | 一个或多个纹理帧,或配置对象. |
 | pickRandom | boolean | 是 | true | 是否从 `frames` 随机指定帧 。 |
 | quantity | number | 是 | 1 | 接收每个框架的连续粒子数 。 |
 
@@ -3141,7 +3141,7 @@ X坐标粒子是从中发射出来的.
 也可以通过`setScale`设定整个发射器的尺度.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 1 | 发射粒子的横向尺度。 |
 | y | number | 是 | "x" | 发射粒子的垂直比例。 如果不设定, 则会使用 `x` 值 。 |
@@ -3168,7 +3168,7 @@ X坐标粒子是从中发射出来的.
 将发射器改为射线模式。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 发射粒子的横向速度 。 |
 | y | number | 是 | "x" | 发射粒子的垂直速度。 如果不设定, 则会使用 `x` 值 。 |
@@ -3194,7 +3194,7 @@ X坐标粒子是从中发射出来的.
 
 这是WebGL的唯一功能。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -3247,7 +3247,7 @@ X坐标粒子是从中发射出来的.
 打开或关闭[Phaser.GameObjects.Particles.ParticleEmitter#radial](/api/class/gameobjects-particles-particleemitter#radial)粒子运动.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 辐射模式(真)或点模式(假). |
 
@@ -3306,16 +3306,16 @@ X坐标粒子是从中发射出来的.
 
 它允许你控制粒子的渲染顺序.
 
-这可以是任何有效的财产 `Particle` 类,例如 `y`, `alpha` 或 或 时 间 `lifeT`.
+这可以是任何有效的属性 `Particle` 类,例如 `y`, `alpha` 或 或 时 间 `lifeT`.
 
 将“ 活性” 粒子阵列排序到每个游戏框。 设置排序属性将覆盖 `particleBringToTop` 设置 。
 
 如果您想使用自己的排序功能,请参见 `setSortCallback` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| property | string | 是 |  | 需要整理的`Particle`类财产 |
+| property | string | 是 |  | 需要整理的`Particle`类属性 |
 | ascending | boolean | 是 | true | 粒子应依上升或下降顺序排序吗? |
 
 
@@ -3344,7 +3344,7 @@ X坐标粒子是从中发射出来的.
 使用这种方法将释放 `START`事件。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | advance | number | 是 | 0 | 通过发射器及时推进这个数 ms 。 |
 | duration | number | 是 | 0 | 将此发射器限制为只为给定的 ms 数发射粒子。 设置此参数将覆盖 Emitter 配置对象中已经设定的任何持续时间 。 |
@@ -3353,7 +3353,7 @@ X坐标粒子是从中发射出来的.
 **返回值:** [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) - 这个粒子埃米特。
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:START](/api/event/gameobjects-particles-events#start)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:START](/api/event/gameobjects-particles-events#start)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L2387](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L2387)  
@@ -3372,7 +3372,7 @@ X坐标粒子是从中发射出来的.
 不断移动粒子源以跟随游戏对象的位置.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 |  | 接下来的目标 。 |
 | offsetX | number | 是 | 0 | 水平偏移来自 Game Object 的粒子源 。 |
@@ -3401,7 +3401,7 @@ X坐标粒子是从中发射出来的.
 调用此方法将释放 `STOP` 事件。 当最后粒子过期时, `COMPLETE` 事件将释放 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | kill | boolean | 是 | false | 立即杀死一切粒子,或使粒子在寿命到期后死亡。 |
 
@@ -3409,7 +3409,7 @@ X坐标粒子是从中发射出来的.
 **返回值:** [Phaser.GameObjects.Particles.ParticleEmitter](/api/class/gameobjects-particles-particleemitter) - 这个粒子埃米特。
 
 
-**Fires:** [Phaser.GameObjects.Particles.Events#event:STOP](/api/event/gameobjects-particles-events#stop)
+**触发事件:** [Phaser.GameObjects.Particles.Events#event:STOP](/api/event/gameobjects-particles-events#stop)
 
 
 > 源码：[src/gameobjects/particles/ParticleEmitter.js#L2432](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleEmitter.js#L2432)  
@@ -3447,7 +3447,7 @@ X坐标粒子是从中发射出来的.
 创建适合 JSON 序列化的此发射器描述 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#toJSON
+**重写:** Phaser.GameObjects.GameObject#toJSON
 
 
 **返回值:** [Phaser.Types.GameObjects.JSONGameObject](/api/typedef/types-gameobjects#jsongameobject) - 游戏对象的JSON代表.

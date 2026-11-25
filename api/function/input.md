@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 创建新的交互式对象。
 
-交互式对象是一个普通数据对象,它存储了游戏对象的所有输入状态。这包括命中区域几何、拖动状态、局部指针坐标、相机和任何投放区目标的引用。它不是一个类实例,而是该函数返回的普通对象字面。
+交互式对象是一个普通数据对象,它存储了游戏对象的所有输入状态。这包括命中区域几何、拖动状态、局部指针坐标、摄像机和任何投放区目标的引用。它不是一个类实例,而是该函数返回的普通对象字面。
 
 当您启用游戏对象进行输入时, 输入管理器会自动调用此功能 。
 
@@ -68,16 +68,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-由核心内部插件直接调用静态方法。 密钥是用于从输入插件缓存中获取插件的参考。 插件是创建插件的即时对象。 映射是插件注入输入插件( 如 `input`) 时所使用的属性密钥 。
+由核心内部插件直接调用静态方法。 键是用于从输入插件缓存中获取插件的参考。 插件是创建插件的即时对象。 映射是插件注入输入插件( 如 `input`) 时所使用的属性键 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | key | string | 否 | 从插件缓存中获取此插件的参考 。 |
 | plugin | function | 否 | 要存储的插件。 应该是核心对象, 而不是即时对象 。 |
-| mapping | string | 否 | 如果要将这个插件注入输入插件, 这就是所用的属性密钥 。 |
-| settingsKey | string | 否 | 用于检查此插件是否安装的场景设置中的密钥 。 |
-| configKey | string | 否 | 游戏配置中要检查此插件是否安装的密钥 。 |
+| mapping | string | 否 | 如果要将这个插件注入输入插件, 这就是所用的属性键 。 |
+| settingsKey | string | 否 | 用于检查此插件是否安装的场景设置中的键 。 |
+| configKey | string | 否 | 游戏配置中要检查此插件是否安装的键 。 |
 
 
 > 源码：[src/input/InputPluginCache.js#L19](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPluginCache.js#L19)  
@@ -91,12 +91,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-根据给定的密钥,从缓存中返回输入插件对象。
+根据给定的键,从缓存中返回输入插件对象。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要获取的输入插件的密钥 。 |
+| key | string | 否 | 要获取的输入插件的键 。 |
 
 
 **返回值:** [Phaser.Types.Input.InputPluginContainer](/api/typedef/types-input#inputplugincontainer) - 输入插件对象 。
@@ -132,12 +132,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-删除基于给定密钥的输入插件。
+删除基于给定键的输入插件。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要删除的输入插件的密钥 。 |
+| key | string | 否 | 要删除的输入插件的键 。 |
 
 
 > 源码：[src/input/InputPluginCache.js#L85](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputPluginCache.js#L85)  
@@ -156,7 +156,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 KeyCombo 类内部使用。 如果达到组合的尾声, 请返回 `true` 。 如果没有, 返回 `false` 。
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -182,7 +182,7 @@ KeyCombo 类内部使用。 如果达到组合的尾声, 请返回 `true` 。 �
 由KeyCombo课内部使用.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -208,7 +208,7 @@ KeyCombo 类内部使用。 如果达到组合的尾声, 请返回 `true` 。 �
 由KeyCombo课内部使用.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -233,9 +233,9 @@ KeyCombo 类内部使用。 如果达到组合的尾声, 请返回 `true` 。 �
 返回值 `true` 如果按键在 `duration` 值,基于当前游戏时钟时间。或 `false` 如果不是没下来,或者比规定的时间更早被压下来。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 要测试的密钥对象 。 |
+| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 要测试的键对象 。 |
 | duration | number | 是 | 50 | 时间长度,以毫秒计,其中键必须按下。 |
 
 
@@ -253,7 +253,7 @@ KeyCombo 类内部使用。 如果达到组合的尾声, 请返回 `true` 。 �
 
 **说明:**
 
-justDown值允许您测试是否刚刚按下此密钥 。
+justDown值允许您测试是否刚刚按下此键 。
 
 当你检查这个值时,如果键下,它会返回`true`,否则返回`false`.
 
@@ -279,7 +279,7 @@ justDown值允许您测试是否刚刚按下此密钥 。
 
 **说明:**
 
-justUp值允许您测试此密钥是否刚刚被发布 。
+justUp值允许您测试此键是否刚刚被发布 。
 
 检查此值时, 将返回 `true` 如果钥匙是上,否则 `false`.
 
@@ -305,13 +305,13 @@ justUp值允许您测试此密钥是否刚刚被发布 。
 
 **说明:**
 
-如果密钥在给定的 `duration` 值范围内释放, 则返回 `true`。 如果密钥尚未打开, 或者比给定的时钟时间早释放, 返回 `false` 。
+如果键在给定的 `duration` 值范围内释放, 则返回 `true`。 如果键尚未打开, 或者比给定的时钟时间早释放, 返回 `false` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 要测试的密钥对象 。 |
-| duration | number | 是 | 50 | 时间,以毫秒计,其中密钥必须已经放出. |
+| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 |  | 要测试的键对象 。 |
+| duration | number | 是 | 50 | 时间,以毫秒计,其中键必须已经放出. |
 
 
 **返回值:** boolean - 如果钥匙在`duration` mss 之前就释放了,那么就用`true`,否则用`false`.

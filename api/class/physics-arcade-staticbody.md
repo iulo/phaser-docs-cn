@@ -2,13 +2,13 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-staticbody)
 
-静态拱廊物理体.
+静态Arcade 物理体.
 
-静态体从不移动, 也并不自动与其母游戏对象同步。 这意味着, 如果您创建或添加了 静态体后对 静态体的起源、 位置或比例表 有任何更改, 您需要手动更新 。
+静态体从不移动, 也并不自动与其父游戏对象同步。 这意味着, 如果您创建或添加了 静态体后对 静态体的起源、 位置或比例表 有任何更改, 您需要手动更新 。
 
 静态体可以与其他体相撞,但从不因碰撞而动.
 
-静态天体对平台、墙壁、地板和其他不可移动的环境元素来说是理想的。 与动态天体不同,它们没有速度、加速或重力,也不被碰撞所移动。
+静态物理体对平台、墙壁、地板和其他不可移动的环境元素来说是理想的。 与动态物理体不同,它们没有速度、加速或重力,也不被碰撞所移动。
 
 它的动态对应器是[Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body).
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 | 弧场物理模拟 这个静态体属于。 |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 是 | 游戏对象属于此天体。 至 Phaser 3. 60 此对象现在可选 。 |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 是 | 游戏对象属于此物理体。 至 Phaser 3. 60 此对象现在可选 。 |
 
 ---
 
@@ -62,7 +62,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此属性保存为与动态天体兼容。 请避免使用 。
+此属性保存为与动态物理体兼容。 请避免使用 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L443](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L443)  
@@ -110,7 +110,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-静态天体边界的中心,这是它的中点 `position` (左上角) 及其右下角.
+静态物理体边界的中心,这是它的中点 `position` (左上角) 及其右下角.
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L217](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L217)  
@@ -142,7 +142,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否此静态Body与世界边界相互作用。 总是对静态天体不实( 静态天体从未与世界边界相撞 ) 。
+是否此静态Body与世界边界相互作用。 总是对静态物理体不实( 静态物理体从未与世界边界相撞 ) 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L401](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L401)  
@@ -158,7 +158,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理体碰撞类.
+Arcade 物理体碰撞类.
 
 它可以设置为任何有效的碰撞位域值 。
 
@@ -178,7 +178,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-拱廊物理碰撞罩.
+Arcade 物理碰撞罩.
 
 详见`setCollidesWith`方法.
 
@@ -196,7 +196,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-旗子会破坏碰撞身体的默认水平分离。 将自己的 `collideHandler` 传递给对撞机 。
+旗子会破坏碰撞物理体的默认水平分离。 将自己的 `collideHandler` 传递给碰撞器 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L341](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L341)  
@@ -212,7 +212,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-旗子会解除碰撞体的默认垂直分离。 将自己的 `collideHandler` 传递给对撞机 。
+旗子会解除碰撞体的默认垂直分离。 将自己的 `collideHandler` 传递给碰撞器 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L351](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L351)  
@@ -244,7 +244,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-静态天体的边界是否被引向调试显示 。
+静态物理体的边界是否被引向调试显示 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L107](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L107)  
@@ -292,7 +292,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此静态天体所属的游戏对象 。
+此静态物理体所属的游戏对象 。
 
 至Phaser 3.60,此为现在可选,可以不定义.
 
@@ -310,7 +310,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-特意应用到此天体的引力。 值以像素每秒平方位值。 对于静态天体, 总是为零 。
+特意应用到此物理体的引力。 值以像素每秒平方位值。 对于静态物理体, 总是为零 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L248](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L248)  
@@ -374,7 +374,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否可以通过与另一天体碰撞来移动此天体.
+是否可以通过与另一物理体碰撞来移动此物理体.
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L312](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L312)  
@@ -390,7 +390,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-快速测试的旗帜表示这个是身体, 用于世界碰撞处理器。
+快速测试的旗帜表示这个是物理体, 用于世界碰撞处理器。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L97](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L97)  
@@ -504,7 +504,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-模拟是否在静态Body与世界边界碰撞时发出 `worldbounds`事件。 总是对静态天体不实 。 (静态天体从未与世界边界碰撞, 也从未触发 `worldbounds`事件 。 )
+模拟是否在静态Body与世界边界碰撞时发出 `worldbounds`事件。 总是对静态物理体不实 。 (静态物理体从未与世界边界碰撞, 也从未触发 `worldbounds`事件 。 )
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L270](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L270)  
@@ -536,7 +536,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果此天体与另一天体相撞,则水平重叠(在分离前)的幅度。
+如果此物理体与另一物理体相撞,则水平重叠(在分离前)的幅度。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L361](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L361)  
@@ -552,7 +552,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果此天体正与另一个天体相撞,则垂直重叠(在分离之前)的数量。
+如果此物理体正与另一个物理体相撞,则垂直重叠(在分离之前)的数量。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L371](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L371)  
@@ -600,11 +600,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果此天体能被另一个天体推动, 则设定 。
+如果此物理体能被另一个物理体推动, 则设定 。
 
 无法推动的躯体会反射出它被赋予碰撞体的全部速度。 如果这个躯体也不可推动,那么它们之间的分离就会平分。
 
-如果你想让身体永远不动或分开,请看`setImmovable`方法.
+如果你想让物理体永远不动或分开,请看`setImmovable`方法.
 
 默认,静态体是不可推的。
 
@@ -670,7 +670,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此属性保存为与动态天体兼容。 请避免使用 。
+此属性保存为与动态物理体兼容。 请避免使用 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L422](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L422)  
@@ -702,7 +702,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此属性用于与动态天体兼容。 避免使用。 对于静态天体来说, 值总是不正确的 。
+此属性用于与动态物理体兼容。 避免使用。 对于静态物理体来说, 值总是不正确的 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L432](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L432)  
@@ -805,7 +805,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此 StaticBody 的水平位置从上一步的绝对( 非负数) 变化 。 总是零 。
 
 
-**返回值:** number - 静态身体总是零。
+**返回值:** number - 静态物理体总是零。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L849](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L849)  
@@ -824,7 +824,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 这个 StaticBody 的垂直位置从上一步的绝对( 非负数) 变化 。 总是零 。
 
 
-**返回值:** number - 静态身体总是零。
+**返回值:** number - 静态物理体总是零。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L862](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L862)  
@@ -843,7 +843,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 与前一步相比, 这个 StaticBody 的水平位置的变化 。 总是零 。
 
 
-**返回值:** number - 自最后一步以来水平位置的变化, 以像素表示。 对于静态天体来说, 总是零 。
+**返回值:** number - 自最后一步以来水平位置的变化, 以像素表示。 对于静态物理体来说, 总是零 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L875](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L875)  
@@ -862,7 +862,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 与上一步相比, 这个 StaticBody 的垂直位置的变化 。 总是零 。
 
 
-**返回值:** number - 上一步以来垂直位置的变化, 以像素表示。 对于静态天体, 总是零 。
+**返回值:** number - 上一步以来垂直位置的变化, 以像素表示。 对于静态物理体, 总是零 。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L888](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L888)  
@@ -897,7 +897,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-禁用此天体,并在下一步中标记为销毁。
+禁用此物理体,并在下一步中标记为销毁。
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L914](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L914)  
@@ -958,13 +958,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-检查是否给定的 x,y 坐标与这个静态天体相撞 。
+检查是否给定的 x,y 坐标与这个静态物理体相撞 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 坐标是用来检查这个身体的 |
-| y | number | 否 | 与这个身体相对应的Y坐标 |
+| x | number | 否 | 坐标是用来检查这个物理体的 |
+| y | number | 否 | 与这个物理体相对应的Y坐标 |
 
 
 **返回值:** boolean - 如果给定的坐标位于这个机构,则`true`,否则则`false`.
@@ -999,15 +999,15 @@ NOOP
 
 **说明:**
 
-将这个静态体重置到其母游戏对象的位置.
+将这个静态体重置到其父游戏对象的位置.
 
-如果给出了`x`和`y`,则母游戏对象被放置在那里,而这个静态对象被集中到它上。否则这个静态对象被以游戏对象当前的位置为中心.
+如果给出了`x`和`y`,则父游戏对象被放置在那里,而这个静态对象被集中到它上。否则这个静态对象被以游戏对象当前的位置为中心.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 是 | x 坐标重置正文为。 如果不给定, 则使用父游戏对象的坐标 。 |
-| y | number | 是 | 将主体重置为的y坐标。 如果不给出, 则使用母游戏对象的坐标 。 |
+| x | number | 是 | x 坐标重置物理体为。 如果不给定, 则使用父游戏对象的坐标 。 |
+| y | number | 是 | 将主体重置为的y坐标。 如果不给出, 则使用父游戏对象的坐标 。 |
 
 
 > 源码：[src/physics/arcade/StaticBody.js#L757](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/StaticBody.js#L757)  
@@ -1049,18 +1049,18 @@ NOOP
 
 **说明:**
 
-更改此天体必须使用的游戏对象 。
+更改此物理体必须使用的游戏对象 。
 
 首先它从旧游戏对象中删除其引用,然后设定新的对象.
 
-如果此天体有纹理框架, 则将调整其大小, 以匹配给定的游戏对象的框架尺寸。 您可以选择更新此天体的位置和尺寸, 以反映新游戏对象的位置和尺寸 。
+如果此物理体有纹理帧, 则将调整其大小, 以匹配给定的游戏对象的框架尺寸。 您可以选择更新此物理体的位置和尺寸, 以反映新游戏对象的位置和尺寸 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 指定此天体的游戏对象 。 |
-| update | boolean | 是 | true | 重新定位和调整此天体大小以匹配新的游戏对象吗 ? |
-| enable | boolean | 是 | true | 自动启用此天体用于物理 。 |
+| gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 指定此物理体的游戏对象 。 |
+| update | boolean | 是 | true | 重新定位和调整此物理体大小以匹配新的游戏对象吗 ? |
+| enable | boolean | 是 | true | 自动启用此物理体用于物理 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) - 这个静态物体。
@@ -1131,11 +1131,11 @@ NOOP
 设置静态体的大小。 `center` 是真的时, 也会重新定位它。 如果没有提供宽度和高度, 并且找到一个框架, 则重新设置宽度和高度以匹配当前框架 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| width | number | 是 |  | 静态天体的宽度以像素表示。 无法为零。 如果不给出, 而母游戏对象有框架, 它会使用框架宽度 。 |
-| height | number | 是 |  | 静态天体的高度以像素表示。 无法为零。 如果不给出, 而母游戏对象有框架, 它会使用框架高度 。 |
-| center | boolean | 是 | true | 将静态天体的中心置于其游戏对象的中心。 只有游戏对象具有 `getCenter` 方法时才有效 。 |
+| width | number | 是 |  | 静态物理体的宽度以像素表示。 无法为零。 如果不给出, 而父游戏对象有框架, 它会使用框架宽度 。 |
+| height | number | 是 |  | 静态物理体的高度以像素表示。 无法为零。 如果不给出, 而父游戏对象有框架, 它会使用框架高度 。 |
+| center | boolean | 是 | true | 将静态物理体的中心置于其游戏对象的中心。 只有游戏对象具有 `getCenter` 方法时才有效 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) - 这个静态物体。
@@ -1189,7 +1189,7 @@ NOOP 函数。 静态体无法停止 。
 
 **说明:**
 
-与母游戏对象同步静态体的位置和大小.
+与父游戏对象同步静态体的位置和大小.
 
 
 **返回值:** [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) - 这个静态物体。

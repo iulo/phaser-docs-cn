@@ -112,7 +112,7 @@ B键。
 
 **说明:**
 
-Firefox针对左括号([]]密钥的替代密钥代码. Firefox历史上曾报告过该密钥的密钥代码175,而其他浏览器则使用219(参见`OPEN_BRACKET`).
+Firefox针对左括号([]]键的替代键代码. Firefox历史上曾报告过该键的键代码175,而其他浏览器则使用219(参见`OPEN_BRACKET`).
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L898](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L898)  
@@ -128,7 +128,7 @@ Firefox针对左括号([]]密钥的替代密钥代码. Firefox历史上曾报告
 
 **说明:**
 
-Firefox针对右括号(]键的替代密钥代码. Firefox历史上曾报告过该密钥的密钥代码174,而其他浏览器则使用221(见`CLOSED_BRACKET`).
+Firefox针对右括号(]键的替代键代码. Firefox历史上曾报告过该键的键代码174,而其他浏览器则使用221(见`CLOSED_BRACKET`).
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L888](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L888)  
@@ -160,7 +160,7 @@ C键
 
 **说明:**
 
-CAPS_LOCK 密钥 。
+CAPS_LOCK 键 。
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L86](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L86)  
@@ -240,7 +240,7 @@ Firefox 特异性键码用于比符号( >)键.
 
 **说明:**
 
-用于小于符号( &lt;)密钥的 Windows 特定替代密钥代码上的 Firefox 。
+用于小于符号( &lt;)键的 Windows 特定替代键代码上的 Firefox 。
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L870](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L870)  
@@ -256,7 +256,7 @@ Firefox 特异性键码用于比符号( >)键.
 
 **说明:**
 
-CTRL 密钥 。
+CTRL 键 。
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L59](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L59)  
@@ -992,7 +992,7 @@ N键.
 
 **说明:**
 
-南普达减法(-)密钥.
+南普达减法(-)键.
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L401](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L401)  
@@ -1120,7 +1120,7 @@ P键。
 
 **说明:**
 
-PAGE_DOWN 密钥 。
+PAGE_DOWN 键 。
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L122](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L122)  
@@ -1200,7 +1200,7 @@ PAGE_UP 键。
 
 **说明:**
 
-密钥 。
+键 。
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L185](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L185)  
@@ -1312,7 +1312,7 @@ S键
 
 **说明:**
 
-Firefox针对SEMICOLON(;)密钥的替代密钥代码. Firefox历史上曾报告过该密钥的密钥代码59,而其他浏览器则使用186(见`SEMICOLON`).
+Firefox针对SEMICOLON(;)键的替代键代码. Firefox历史上曾报告过该键的键代码59,而其他浏览器则使用186(见`SEMICOLON`).
 
 
 > 源码：[src/input/keyboard/keys/KeyCodes.js#L851](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/KeyCodes.js#L851)  

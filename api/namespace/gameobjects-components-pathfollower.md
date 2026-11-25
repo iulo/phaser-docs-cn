@@ -175,7 +175,7 @@ static
 设定路径跟踪器是否应该自动旋转以指向路径的方向 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 否 |  | 路径跟踪器是否应该自动旋转, 以指向路径的方向 。 |
 | offset | number | 是 | 0 | 旋转乘以度数. |
@@ -200,7 +200,7 @@ static
 沿着给定路径启动此路径跟踪器。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | number \| [Phaser.Types.GameObjects.PathFollower.PathConfig](/api/typedef/types-gameobjects-pathfollower#pathconfig) | [Phaser.Types.Tweens.NumberTweenBuilderConfig](/api/typedef/types-tweens#numbertweenbuilderconfig) | 是 | "{}" | 以下的长度,或路径跟踪配置对象。 |
 | startAt | number | 是 | 0 | 后续的可选起始位置,在0到1之间. |

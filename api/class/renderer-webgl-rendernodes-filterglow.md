@@ -75,7 +75,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图上下文,用于读取渲染目标维度. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterGlow.js#L86](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterGlow.js#L86)  
@@ -91,7 +91,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-更新阴影程序预处理器,根据当前控制器值定义了光线距离和质量。因为这些参数在编译时被烤入着色器,因此修改它们取代了相关的着色器添加,并触发程序重编。
+更新着色器程序预处理器,根据当前控制器值定义了光线距离和质量。因为这些参数在编译时被烤入着色器,因此修改它们取代了相关的着色器添加,并触发程序重编。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -100,7 +100,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterGlow.js#L60](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterGlow.js#L60)  

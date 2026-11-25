@@ -38,12 +38,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 Arc 形状是游戏对象,可以添加到景物、 组合或容器中。 您可以把它当作游戏中的其他对象, 如对它进行曲折、 缩放或允许输入或物理。 它为您提供了快速和容易的方法, 可以在游戏中不使用纹理来渲染此形状, 同时仍然利用在 WebGL 中被完全批量处理 。
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 当它显示弧形时, 您可以控制弧形的起始和结束角度, 或者这些角度是顺时针或逆时针旋转的。 默认设置会形成一个完整的圆形。 通过改变角度, 您可以创建其他的弧形, 如半圆形 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -90,11 +90,11 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 注意:只有在将位图文字游戏对象建为Phaser时,此方法才会可用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 游戏对象的x位置. |
 | y | number | 否 |  | 游戏对象的y位置 。 |
-| font | string | 否 |  | BitmapFont 缓存中要使用的字体的密钥 。 |
+| font | string | 否 |  | BitmapFont 缓存中要使用的字体的键 。 |
 | text | string \| Array.\<string> | 是 |  | 字符串,或字符串的数组,将设置为此位图文本的内容 。 |
 | size | number | 是 |  | 要设置的字体大小 。 |
 | align | number | 是 | 0 | 多行比图Text对象中的文本对齐。 |
@@ -127,7 +127,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 游戏对象的x位置. |
 | y | number | 否 | 游戏对象的y位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 闪光器默认框架子将使用 。 |
 
 
@@ -151,14 +151,14 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 ACaptionFrame 捕捉到显示列表中显示的 WebGL帧缓冲器的当前状态, 将结果存储为给定键所识别的纹理。 其他游戏对象可以引用此键来显示或处理捕获的图像。 这对全景后处理效果如水反射或屏幕- 空间扭曲很有用 。
 
-这是 WebGL 唯一的特性, 无法在 Canvas 模式下工作。 相机必须启用 `forceComposite` , 或者捕获Frame 必须在帧缓冲上下文中( 如过滤器、 动态显示器或具有非默认的α值的相机) 。
+这是 WebGL 唯一的特性, 无法在 Canvas 模式下工作。 摄像机必须启用 `forceComposite` , 或者捕获Frame 必须在帧缓冲上下文中( 如过滤器、 动态显示器或具有非默认的α值的摄像机) 。
 
 注意:只有在将 CaptureFrame 游戏对象建为 Phaser 时,此方法才会可用.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 用于存储被捕获的纹理的密钥。 其他游戏对象可以使用此密钥来引用被捕获的框架 。 |
+| key | string | 否 | 用于存储被捕获的纹理的键。 其他游戏对象可以使用此键来引用被捕获的框架 。 |
 
 
 **返回值:** [Phaser.GameObjects.CaptureFrame](/api/class/gameobjects-captureframe) - 创建的游戏对象 。
@@ -184,7 +184,7 @@ A Circle 是一个弧形,固定的起始角为 0,端角为 360 度,所以它总�
 注意:只有在Arc Game Object被建入Phaser时,此方法才会被使用.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -216,7 +216,7 @@ A Circle 是一个弧形,固定的起始角为 0,端角为 360 度,所以它总�
 注:只有在容器游戏对象已建为Phaser时,才能使用这种方法.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -245,14 +245,14 @@ A Circle 是一个弧形,固定的起始角为 0,端角为 360 度,所以它总�
 
 曲线形状是一个游戏对象,可以添加到景物,组或容器中。您可以把它像游戏中其它任何游戏对象一样对待,比如对它进行曲折,缩放,或者允许它输入或物理。它为您提供了快速和容易的方法,可以在游戏中不使用纹理来渲染此形状,同时仍然利用WebGL进行完整的批量处理.
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 要制作出曲线形状, 您必须先创建 `Phaser.Curves.Curve` 对象, 然后传递到构造器中的曲线形状 。
 
 曲线形状还具有`smoothness`属性和相应的`setSmoothness`方法。这允许您通过控制构造过程中发生的迭代数量来控制形状在WebGL中是如何平滑的。 增减更平滑或更划线的形状的默认值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -301,9 +301,9 @@ this.add.dom(x, y, 'div', 'background-color: lime; width: 220px; height: 100px; 
 
 与其直接指定 CSS 和 HTML , 您可以使用 `load.html` 文件加载器将其加载到缓存中, 然后使用 `createFromCache` 方法。 您也可以使用 `createFromHTML` 和该类中可用的其他各种方法来帮助构建您的要素 。
 
-一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景相机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
+一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景摄像机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
 
-无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用相机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重相机滚动和 scrollFactor 设置, 但是如果您改变相机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
+无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用摄像机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重摄像机滚动和 scrollFactor 设置, 但是如果您改变摄像机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
 
 此外,所有DOM元素都插入到同一个DOM容器中,不管它们是在哪个场景中创建的.
 
@@ -362,7 +362,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 游戏对象的x位置. |
 | y | number | 否 | 游戏对象的y位置 。 |
-| font | string | 否 | BitmapFont 缓存中要使用的字体的密钥 。 |
+| font | string | 否 | BitmapFont 缓存中要使用的字体的键 。 |
 | text | string \| Array.\<string> | 是 | 字符串,或字符串的数组,将设置为此位图文本的内容 。 |
 | size | number | 是 | 要设置的字体大小 。 |
 
@@ -389,14 +389,14 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 椭圆形状是一个游戏对象,可以添加到景物,组或容器中。您可以把它像游戏中其它游戏对象一样对待,比如对它进行扭动,缩放,或者允许它输入或物理。它为您提供了快速和容易的方法,可以在游戏中不使用纹理来渲染此形状,同时仍然利用WebGL进行完整的批量.
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 当它显示椭圆形状时, 您可以控制椭圆的宽度和高度。 如果宽度和高度匹配, 则它会变成圆形。 如果宽度小于高度, 它看起来会更像一个卵形 。
 
 椭圆形状还具有`smoothness`属性和相应的`setSmoothness`方法。这允许您通过控制构造过程中发生的迭代数量来控制形状在WebGL中是如何平滑的。 增减更平滑或更划线的形状的默认值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -426,7 +426,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 如果游戏对象生成, 将添加到显示列表中。 如果它有 `preUpdate` 方法, 它将添加到更新列表中 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -487,7 +487,7 @@ extern 是游戏对象的一种特殊类型,它允许您直接将自定义渲染
 | path | [Phaser.Curves.Path](/api/class/curves-path) | 否 | 此路径跟踪器连接到的路径 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -511,12 +511,12 @@ extern 是游戏对象的一种特殊类型,它允许您直接将自定义渲染
 
 注意:只有在渐变游戏对象和WebGL支持已经建入Phaser时,才能使用这种方法.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.Gradient.GradientQuadConfig](/api/typedef/types-gameobjects-gradient#gradientquadconfig) | 是 |  | 此渐变将使用的配置对象。 这定义了渐变纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -578,7 +578,7 @@ extern 是游戏对象的一种特殊类型,它允许您直接将自定义渲染
 网格形状允许您在游戏中显示网格, 您可以在此控制网格大小以及网格单元格的宽度和高度。 您可以为每个网格单元格设置填充色以及替代填充色。 当设定了替代填充色后, 网格单元格会随其生成时而替换填充色, 从而创建棋盘效果。 您也可以选择使用大纲填充色。 如果设定的话, 则在网格单元格之间绘制线条, 指定带有零的α的轮廓颜色, 则会绘制被分隔的单元格, 但不显示它们之间的线条 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -646,7 +646,7 @@ A Group 是将游戏对象组合在一起的一种方法, 以便它们能够作�
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -679,7 +679,7 @@ IsoBox 是“ 同位素” 矩形。 每个面部的填充颜色不同。 您可
 您不能从下方查看 IsoBox, 但是您可以通过设置 `projection` 属性来更改“ 角 ” 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -719,7 +719,7 @@ IsoTriangle 是“ 同位素” 三角形。 把它当金字塔一样看待。 �
 您不能从下面查看 IsoTriangle , 但是您可以通过设置 `projection` 属性来更改“ 角 ” 。 如果 IsoTriangel 是否被倒置, 则 `reversed` 属性控制 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -779,14 +779,14 @@ IsoTriangle 是“ 同位素” 三角形。 把它当金字塔一样看待。 �
 
 Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。 您可以把它当作游戏中的其他任何游戏对象, 如进行曲折、 缩放或允许输入或物理。 它为您提供了快速和容易的方法, 可以在游戏中不使用纹理来渲染此形状, 同时仍然利用在 WebGL 中被完全批量处理 。
 
-此形状只支持中风颜色,不能填充 。
+此形状只支持描边颜色,不能填充 。
 
-线形允许您在游戏中绘制两点之间的线条。 您可以控制线条的中风颜色和厚度。 在 WebGL 中, 您只能指定线条的起始和结尾的厚度, 允许您渲染线条的自启动 。
+线形允许您在游戏中绘制两点之间的线条。 您可以控制线条的描边颜色和厚度。 在 WebGL 中, 您只能指定线条的起始和结尾的厚度, 允许您渲染线条的自启动 。
 
 如果您需要绘制序列中的多行, 您可能希望使用多边形形状代替 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -872,16 +872,16 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 至Phaser 3.60 此游戏对象仅为WebGL.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 这个游戏对象的中心在世界的横向位置. |
 | y | number | 否 |  | 这个游戏对象的中心在世界的垂直位置. |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 |  | 游戏对象正在用此渲染的纹理的可选框架 。 |
 | width | number | 是 | 256 | 九切游戏对象的宽度。 您可以调整创建后的宽度 。 |
 | height | number | 是 | 256 | 九切游戏对象的高度。 如果这是 3 切片对象, 高度将固定到纹理高度, 无法更改 。 |
@@ -913,12 +913,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注意:只有在噪声游戏对象和WebGL支持已经建入Phaser时,这种方法才会可用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.Noise.NoiseQuadConfig](/api/typedef/types-gameobjects-noise#noisequadconfig) | 是 |  | 此噪声将使用的配置对象。 这定义了噪声纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -947,12 +947,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注意:只有在噪声Cell2D游戏对象和WebGL支持已经建入Phaser时,此方法才会可用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseCell2D.NoiseCell2DQuadConfig](/api/typedef/types-gameobjects-noisecell2d#noisecell2dquadconfig) | 是 |  | 此噪声Cell2D 将使用的配置对象。 这定义了噪声Cell2D 纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -981,12 +981,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注意:只有在将噪声Cell3D游戏对象和WebGL支持构建到Phaser中时,此方法才会被使用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseCell3D.NoiseCell3DQuadConfig](/api/typedef/types-gameobjects-noisecell3d#noisecell3dquadconfig) | 是 |  | 此噪声Cell3D 将使用的配置对象。 这定义了噪声Cell3D 纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -1015,12 +1015,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注:只有在噪声Cell4D游戏对象和WebGL支持已经建入Phaser时,才能使用这种方法.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseCell4D.NoiseCell4DQuadConfig](/api/typedef/types-gameobjects-noisecell4d#noisecell4dquadconfig) | 是 |  | 此噪声Cell4D 将使用的配置对象。 这定义了噪声Cell4D 纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -1049,12 +1049,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注:只有在噪声Simplex2D游戏对象和WebGL支持已经建入Phaser时,这种方法才会可用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseSimplex2D.NoiseSimplex2DQuadConfig](/api/typedef/types-gameobjects-noisesimplex2d#noisesimplex2dquadconfig) | 是 |  | 此噪声Simplex2D 将使用的配置对象。 这定义了噪声Simplex2D 纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -1083,12 +1083,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注:只有在噪声Simplex3D游戏对象和WebGL支持已经建入Phaser时,此方法才会可用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseSimplex3D.NoiseSimplex3DQuadConfig](/api/typedef/types-gameobjects-noisesimplex3d#noisesimplex3dquadconfig) | 是 |  | 此噪声Simplex3D 将使用的配置对象。 这定义了噪声Simplex3D 纹理的形状和外观 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -1126,7 +1126,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 | ---- | ---- | -------- | ----------- |
 | x | number | 是 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | config | [Phaser.Types.GameObjects.Particles.ParticleEmitterConfig](/api/typedef/types-gameobjects-particles#particleemitterconfig) | 是 | 粒子 Emitter 的配置设置 。 |
 
 
@@ -1181,14 +1181,14 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 为了达到最大性能, 您应该将点光游戏对象进行批量。 这意味着它们可以确保显示列表中彼此连续跟踪。 理想的做法是使用一个图层游戏对象, 然后在其中添加点光, 这样它就可以将显示的灯光进行批量。 您没有_ 这样做, 如果您的游戏中只有少数点光, 那么将它们作为正常的显示列表中混合是完全安全的。 但是, 如果您使用了大量的, 请考虑它们是如何被混合到显示列表中的 。
 
-渲染器会自动凸出点光。 半径与相机不相交的会跳过渲染列表。 自动发生这种情况, 并且刷新每个相机的凹陷状态 。
+渲染器会自动凸出点光。 半径与摄像机不相交的会跳过渲染列表。 自动发生这种情况, 并且刷新每个摄像机的凹陷状态 。
 
 点光的起源总是0.5,不能改变.
 
 点灯是WebGL唯一的特性,没有Canvas对应功能.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 世界上这个点光的横向位置. |
 | y | number | 否 |  | 世界上这个点光的垂直位置. |
@@ -1220,7 +1220,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 多边形形状是游戏对象, 可以添加到游戏、 组合或容器中。 您可以把它当作游戏中的其他对象, 如进行曲折、 缩放或允许输入或物理。 它为您提供了快速和简单的方式, 可以在游戏中不使用纹理来渲染此形状, 同时仍然利用在 WebGL 中被完整批量 。
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 多边形形状是通过提供点列表创建的,然后用来创建内部的多边形几何对象。这些点可以从多种格式设置:
 
@@ -1235,7 +1235,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 默认情况下,此形状的`x`和`y`坐标是指其中心,但视所提供的点的坐标而定,最终形状可能会被其来源抵消.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -1266,12 +1266,12 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 矩形形状是游戏对象,可以添加到景物、组或容器中。您可以把它当作游戏中的其他任何游戏对象,比如对它进行曲折、缩放或允许输入或物理。它为您提供了快速和容易的方法,在游戏中不使用纹理来制作此形状,同时仍然利用WebGL的完整批量。
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 通过改变`width`和`height`的属性,可以改变矩形的大小.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -1324,7 +1324,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| factoryType | string | 否 | 您想要从游戏对象数据库中移除的工厂密钥 。 |
+| factoryType | string | 否 | 您想要从游戏对象数据库中移除的工厂键 。 |
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L205](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L205)  
@@ -1353,7 +1353,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 这是一种强大的方法,在运行时生成动态纹理,这种纹理是WebGL友好的,并且不会在每个变化上引用昂贵的GPU上传.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 这个游戏对象在世界的横向位置. |
 | y | number | 否 |  | 此游戏对象在世界的垂直位置 。 |
@@ -1381,16 +1381,16 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注意:只有在将绳形游戏对象和WebGL支持构建为Phaser时,此方法才会被使用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 这个游戏对象在世界的横向位置. |
 | y | number | 否 |  | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 |  | 游戏对象正在用此渲染的纹理的可选框架 。 |
 | points | Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 |  | 包含此绳索的顶点数据的阵列。 如果没有提供, 则创建一个简单的四边形。 请参见 `setPoints` 设置此创建后 。 |
 | horizontal | boolean | 是 | true | 这个绳子的顶点应水平对齐(`true`),还是垂直对齐(`false`)? |
@@ -1420,14 +1420,14 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 
 注意:只有在将Shader游戏对象和WebGL支持构建为Phaser时,此方法才会可用.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| config | string \| [Phaser.Types.GameObjects.Shader.ShaderQuadConfig](/api/typedef/types-gameobjects-shader#shaderquadconfig) | 否 |  | 用于此 Shader 的配置对象。 它也可以是阴影缓存中对应的着色器的密钥, 它将在新配置对象中用作 `fragmentKey` 。 |
+| config | string \| [Phaser.Types.GameObjects.Shader.ShaderQuadConfig](/api/typedef/types-gameobjects-shader#shaderquadconfig) | 否 |  | 用于此 Shader 的配置对象。 它也可以是阴影缓存中对应的着色器的键, 它将在新配置对象中用作 `fragmentKey` 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -1460,7 +1460,7 @@ Line 形状是游戏对象, 可以添加到游戏场景、 组合或容器中。
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -1489,7 +1489,7 @@ SpriteGPULayer 是高性能的批量渲染器,它绘制了共享同一纹理的�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | size | number | 是 | SpriteGPULayer 的最大成像数量可以单批制成。 默认 1 。 |
 
 
@@ -1518,7 +1518,7 @@ SpriteGPULayer 是高性能的批量渲染器,它绘制了共享同一纹理的�
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的密钥或实例, 如保存在纹理管理器中 。 |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理的键或实例, 如保存在纹理管理器中 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
 
@@ -1544,14 +1544,14 @@ SpriteGPULayer 是高性能的批量渲染器,它绘制了共享同一纹理的�
 
 星形是游戏对象, 可以添加到场景、 组合或容器中。 您可以把它当作游戏中的其他游戏对象, 如进行曲折、 缩放或允许输入或物理。 它为您提供了快速和容易的方法, 可以在游戏中不使用纹理来渲染此形状, 同时仍然利用在 WebGL 中被完全批量处理 。
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 正如名称所暗示的,星形会在游戏中显示一颗恒星。 您可以控制其中的几个方面, 包括构成恒星的点数。 默认值是 5, 如果您将其改为 4, 它会变成 钻石 。 如果您增加它们, 您将得到一个更闪烁的恒星形状 。
 
 您也可以控制内侧和外侧半径, 恒星的每个点是怎样的“ 长 ” 。 修改这些值以创建更有趣的形状 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
@@ -1619,12 +1619,12 @@ SpriteGPULayer 是高性能的批量渲染器,它绘制了共享同一纹理的�
 
 **说明:**
 
-从给定的密钥或数据创建一个 Tilemap, 或如果没有提供密钥/数据而创建空白的 Tilemap。从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
+从给定的键或数据创建一个 Tilemap, 或如果没有提供键/数据而创建空白的 Tilemap。从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的密钥. |
+| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的键. |
 | tileWidth | number | 是 | 32 | 以像素表示的瓦片宽度。 以 `null` 表示默认值。 |
 | tileHeight | number | 是 | 32 | 像素中的瓦片高度。 通过 `null` 以默认方式离开 。 |
 | width | number | 是 | 10 | 以平面图表示的地图宽度。 以 `null` 表示默认值。 |
@@ -1658,8 +1658,8 @@ SpriteGPULayer 是高性能的批量渲染器,它绘制了共享同一纹理的�
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| width | number | 否 | 游戏对象的宽度。 如果为零, 则会使用纹理框架的大小 。 |
-| height | number | 否 | 游戏对象的高度。 如果为零, 则会使用纹理框架的大小 。 |
+| width | number | 否 | 游戏对象的宽度。 如果为零, 则会使用纹理帧的大小 。 |
+| height | number | 否 | 游戏对象的高度。 如果为零, 则会使用纹理帧的大小 。 |
 | texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 此游戏对象将使用用于渲染的纹理键或实例, 如保存在纹理管理器中。 无法成为动态纹理 。 |
 | frame | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
@@ -1924,7 +1924,7 @@ create () {
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| key | string | 是 | 游戏对象将播放的视频的可选密钥, 如存储在视频缓存中 。 |
+| key | string | 是 | 游戏对象将播放的视频的可选键, 如存储在视频缓存中 。 |
 
 
 **返回值:** [Phaser.GameObjects.Video](/api/class/gameobjects-video) - 创建的游戏对象 。
@@ -1977,7 +1977,7 @@ create () {
 用于引用场景显示列表的参考 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L63](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L63)  
@@ -1996,7 +1996,7 @@ create () {
 参考景点事件 Emitter.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L53](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L53)  
@@ -2015,7 +2015,7 @@ create () {
 此游戏对象工厂所属景区 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L33](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L33)  
@@ -2034,7 +2034,7 @@ create () {
 参考神话. 连载.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L43)  
@@ -2053,7 +2053,7 @@ create () {
 参考景区更新列表.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/GameObjectFactory.js#L73](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/GameObjectFactory.js#L73)  

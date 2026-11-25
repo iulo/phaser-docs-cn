@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 渐变游戏对象 。
 
-此游戏对象是一个四重奏, 显示渐变。 您可以像其它任何角色一样操纵此对象, 使其具有交互性, 并用在过滤器和面具中, 以创建视觉惊人的效果 。
+此游戏对象是一个四重奏, 显示渐变。 您可以像其它任何角色一样操纵此对象, 使其具有交互性, 并用在过滤器和遮罩中, 以创建视觉惊人的效果 。
 
 幕后,一个渐变器(A Gradient)是使用特定遮荫程序的一种[Phaser.GameObjects.Shader](/api/class/gameobjects-shader).
 
@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Gradient(scene, [config], [x], [y], [width], [height])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | config | [Phaser.Types.GameObjects.Gradient.GradientQuadConfig](/api/typedef/types-gameobjects-gradient#gradientquadconfig) | 是 |  | 此游戏对象的配置 。 |
@@ -568,13 +568,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Overrides:** Phaser.GameObjects.Shader#preDestroy
+**重写:** Phaser.GameObjects.Shader#preDestroy
 
 
 > 源码：[src/gameobjects/gradient/Gradient.js#L306](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/gradient/Gradient.js#L306)  

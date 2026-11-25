@@ -6,9 +6,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AsepriteFileConfig {#static-asepritefileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | textureURL | string | 是 |  | 绝对或相对的URL可以从中加载纹理图像文件. |
 | textureExtension | string | 是 | "'png'" | 如果没有提供 URL , 用于图像纹理的默认文件扩展名 。 |
 | textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 特为纹理图像文件设置额外的 XHR 设置 。 |
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AsepriteFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AsepriteFileConfig.js#L1)  
 
 
@@ -28,9 +28,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AtlasJSONFileConfig {#static-atlasjsonfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | textureURL | string | 是 |  | 绝对或相对的URL可以从中加载纹理图像文件. |
 | textureExtension | string | 是 | "'png'" | 如果没有提供 URL , 用于图像纹理的默认文件扩展名 。 |
 | textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 特为纹理图像文件设置额外的 XHR 设置 。 |
@@ -41,7 +41,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AtlasJSONFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AtlasJSONFileConfig.js#L1)  
 
 
@@ -51,9 +51,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AtlasXMLFileConfig {#static-atlasxmlfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | textureURL | string | 是 |  | 绝对或相对的URL可以从中加载纹理图像文件. |
 | textureExtension | string | 是 | "'png'" | 如果没有提供 URL , 用于图像纹理的默认文件扩展名 。 |
 | textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 特为纹理图像文件设置额外的 XHR 设置 。 |
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AtlasXMLFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AtlasXMLFileConfig.js#L1)  
 
 
@@ -76,14 +76,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 文件的密钥。 必须在装入器和音频缓存中独有 。 |
+| key | string | 否 | 文件的键。 必须在资源加载器和音频缓存中独有 。 |
 | url | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig)> | 是 | 绝对或相对的URL来从中加载音频文件. |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 | context | AudioContext | 是 | 此文件将用来自行处理的可选音频 Context 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AudioFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AudioFileConfig.js#L1)  
 
 
@@ -100,7 +100,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AudioFileURLConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AudioFileURLConfig.js#L1)  
 
 
@@ -112,7 +112,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 文件的密钥。 必须在装入器和音频缓存中独有 。 |
+| key | string | 否 | 文件的键。 必须在资源加载器和音频缓存中独有 。 |
 | jsonURL | string | 否 | 绝对或相对的 URL 来从 json 文件装入。 或者一个 良好形成的 JSON 对象来代替 。 |
 | jsonXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 特别为 json 文件设置额外的 XHR 设置 。 |
 | audioURL | Object | 是 | 绝对或相对的URL来从音频文件加载. |
@@ -121,7 +121,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/AudioSpriteFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/AudioSpriteFileConfig.js#L1)  
 
 
@@ -131,9 +131,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> BinaryFileConfig {#static-binaryfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在加载器和二进制缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在加载器和二进制缓存中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'bin'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
@@ -141,7 +141,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/BinaryFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/BinaryFileConfig.js#L1)  
 
 
@@ -151,9 +151,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> BitmapFontFileConfig {#static-bitmapfontfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | textureURL | string | 是 |  | 绝对或相对的URL可以从中加载纹理图像文件. |
 | textureExtension | string | 是 | "'png'" | 如果没有提供 URL , 用于图像纹理的默认文件扩展名 。 |
 | textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 特为纹理图像文件设置额外的 XHR 设置 。 |
@@ -164,7 +164,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/BitmapFontFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/BitmapFontFileConfig.js#L1)  
 
 
@@ -186,7 +186,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/CompressedTextureFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/CompressedTextureFileConfig.js#L1)  
 
 
@@ -211,7 +211,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/CompressedTextureFileConfig.js#L13](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/CompressedTextureFileConfig.js#L13)  
 
 
@@ -221,16 +221,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> CSSFileConfig {#static-cssfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'css'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/CSSFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/CSSFileConfig.js#L1)  
 
 
@@ -240,9 +240,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> FontFileConfig {#static-fontfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'ttf'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | format | string | 是 | "'truetype'" | 字体类型。 应该是字符串, 如“ truetype ” 或“ opentype ” 。 |
@@ -251,7 +251,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/FontFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/FontFileConfig.js#L1)  
 
 
@@ -261,16 +261,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GLSLFileConfig {#static-glslfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和文本缓存中都具有独有性 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和文本缓存中都具有独有性 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'glsl'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/GLSLFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/GLSLFileConfig.js#L1)  
 
 
@@ -280,16 +280,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> HTMLFileConfig {#static-htmlfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和文本缓存中都具有独有性 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和文本缓存中都具有独有性 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'html'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/HTMLFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/HTMLFileConfig.js#L1)  
 
 
@@ -299,9 +299,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> HTMLTextureFileConfig {#static-htmltexturefileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'html'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
@@ -310,7 +310,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/HTMLTextureFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/HTMLTextureFileConfig.js#L1)  
 
 
@@ -320,18 +320,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ImageFileConfig {#static-imagefileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'png'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | normalMap | string | 是 |  | 关联的普通地图的文件名。 它使用相同的路径和url来装入图像 。 |
-| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 |  | 框架配置对象。 只提供和用于Sprite工作表 。 |
+| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 |  | 框架配置对象。 只提供和用于精灵表 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/ImageFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/ImageFileConfig.js#L1)  
 
 
@@ -341,7 +341,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ImageFrameConfig {#static-imageframeconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | frameWidth | number | 否 |  | 框架的宽度, 以像素为单位 。 |
 | frameHeight | number | 是 |  | 框架的高度以像素表示。 如果不提供 `frameWidth` 值, 请使用 。 |
@@ -352,7 +352,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/ImageFrameConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/ImageFrameConfig.js#L1)  
 
 
@@ -362,17 +362,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> JSONFileConfig {#static-jsonfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 JSON 缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 JSON 缓存中独有 。 |
 | url | string \| any | 是 |  | 从文件装入的绝对或相对 URL。 或者可以是已准备好的 JSON 对象, 这样它会直接添加到缓存中 。 |
 | extension | string | 是 | "'json'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
-| dataKey | string | 是 |  | 如果指定了而不是正在解析并添加到缓存中的全部 JSON 文件, 则只添加与此属性密钥相对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段分割它 。 |
+| dataKey | string | 是 |  | 如果指定了而不是正在解析并添加到缓存中的全部 JSON 文件, 则只添加与此属性键相对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段分割它 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/JSONFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/JSONFileConfig.js#L1)  
 
 
@@ -382,9 +382,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> MultiAtlasFileConfig {#static-multiatlasfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | atlasURL | string | 是 |  | 绝对或相对的 URL 来从多图集 json 文件加载。 或者, 一个 已经形成好的 JSON 对象 。 |
 | url | string | 是 |  | 用于“ atlasURL” 的别名。 如果给定, 它将覆盖“ atlasURL” 中设置的任意内容 。 |
 | atlasExtension | string | 是 | "'json'" | 如果没有提供url, 则默认文件扩展名将用于地图集 json 。 |
@@ -395,7 +395,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/MultiAtlasFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/MultiAtlasFileConfig.js#L1)  
 
 
@@ -405,16 +405,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> MultiScriptFileConfig {#static-multiscriptfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | Array.\<string> | 是 |  | 一组绝对或相对的 URL 来从中加载脚本文件。它们按数组中给出的顺序处理 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为这些文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/MultiScriptFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/MultiScriptFileConfig.js#L1)  
 
 
@@ -424,9 +424,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> OBJFileConfig {#static-objfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 OBJ 快取器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 OBJ 快取器中独有 。 |
 | url | string | 是 |  | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.obj`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. obj" 。 |
 | extension | string | 是 | "'obj'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | flipUV | boolean | 是 |  | 翻转模型数据中存储的紫外线坐标? |
@@ -436,7 +436,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/OBJFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/OBJFileConfig.js#L1)  
 
 
@@ -446,17 +446,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> PackFileConfig {#static-packfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 JSON 缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 JSON 缓存中独有 。 |
 | url | string \| any | 是 |  | 装入文件的绝对或相对 URL。 或者可以是已准备好的 JSON 对象, 届时将直接处理 。 |
 | extension | string | 是 | "'json'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
-| dataKey | string | 是 |  | 如果指定了而不是正在解析的整个 JSON 文件, 则只添加与此属性密钥对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段来分割它 。 |
+| dataKey | string | 是 |  | 如果指定了而不是正在解析的整个 JSON 文件, 则只添加与此属性键对应的段落。 如果您想要提取的属性是嵌入的, 请使用时段来分割它 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/PackFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/PackFileConfig.js#L1)  
 
 
@@ -472,11 +472,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | baseURL | string | 是 | 用于解析 `files` 路径的 URL。 例如 : “ http://labs.phaser.io/assets/'. ” |
 | defaultType | string | 是 | 默认的QQLINK Phaser.Types.Loader.FileConfig}`type`. |
 | path | string | 是 | 用于解析 `files` 中相对路径的 URL 路径。 例如 : “ 图像/ 粘贴 / ” 。 |
-| prefix | string | 是 | 自动为每个文件密钥准备的可选前缀 。 |
+| prefix | string | 是 | 自动为每个文件键准备的可选前缀 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/PackFileSection.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/PackFileSection.js#L1)  
 
 
@@ -486,9 +486,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> PCTAtlasFileConfig {#static-pctatlasfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | atlasURL | string | 是 |  | 从 PCT 地图集数据文件装入的绝对或相对 URL 。 |
 | url | string | 是 |  | 用于“ atlasURL” 的别名。 如果给定, 它将覆盖“ atlasURL” 中设置的任意内容 。 |
 | atlasExtension | string | 是 | "'pct'" | 如果没有提供 URL 数据, 则默认文件扩展名 。 |
@@ -499,7 +499,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/PCTAtlasFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/PCTAtlasFileConfig.js#L1)  
 
 
@@ -509,18 +509,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> PluginFileConfig {#static-pluginfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | start | boolean | 是 | false | 装入后自动启动插件吗 ? |
-| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性密钥 。 |
+| mapping | string | 是 |  | 如果要将此插件注入到场景中, 这就是所用的属性键 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/PluginFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/PluginFileConfig.js#L1)  
 
 
@@ -530,16 +530,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SceneFileConfig {#static-scenefileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和文本缓存中都具有独有性 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和文本缓存中都具有独有性 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/SceneFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/SceneFileConfig.js#L1)  
 
 
@@ -549,18 +549,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ScenePluginFileConfig {#static-scenepluginfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | string \| function | 是 |  | 绝对或相对的 URL 来从文件加载。 或者, 场景插件 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
-| systemKey | string | 是 |  | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性密钥 。 |
-| sceneKey | string | 是 |  | 如果要将此插件添加到场景中, 这是它属性的密钥 。 |
+| systemKey | string | 是 |  | 如果要将此插件添加到 Scene.Systems 中, 此插件的属性键 。 |
+| sceneKey | string | 是 |  | 如果要将此插件添加到场景中, 这是它属性的键 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/ScenePluginFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/ScenePluginFileConfig.js#L1)  
 
 
@@ -570,9 +570,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ScriptFileConfig {#static-scriptfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器内独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器内独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'js'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | 类型 | string | 是 | "'script'" | 脚本类型。 如果文件包含导出模块, 则应该为经典 JavaScript 的“ 标语 ” , 或“ 模块 ” 。 |
@@ -580,7 +580,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/ScriptFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/ScriptFileConfig.js#L1)  
 
 
@@ -590,9 +590,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SpriteSheetFileConfig {#static-spritesheetfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'png'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | normalMap | string | 是 |  | 关联的普通地图的文件名。 它使用相同的路径和url来装入图像 。 |
@@ -601,7 +601,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/SpriteSheetFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/SpriteSheetFileConfig.js#L1)  
 
 
@@ -611,9 +611,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SVGFileConfig {#static-svgfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'svg'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
@@ -621,7 +621,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/SVGFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/SVGFileConfig.js#L1)  
 
 
@@ -639,7 +639,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/SVGSizeConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/SVGSizeConfig.js#L1)  
 
 
@@ -649,16 +649,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TextFileConfig {#static-textfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和文本缓存中都具有独有性 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和文本缓存中都具有独有性 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'txt'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/TextFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/TextFileConfig.js#L1)  
 
 
@@ -668,16 +668,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TilemapCSVFileConfig {#static-tilemapcsvfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 Tilemap 缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 Tilemap 缓存中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'csv'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/TilemapCSVFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/TilemapCSVFileConfig.js#L1)  
 
 
@@ -687,16 +687,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TilemapImpactFileConfig {#static-tilemapimpactfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 Tilemap 缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 Tilemap 缓存中独有 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'json'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/TilemapImpactFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/TilemapImpactFileConfig.js#L1)  
 
 
@@ -706,16 +706,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TilemapJSONFileConfig {#static-tilemapjsonfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和 Tilemap 缓存中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和 Tilemap 缓存中独有 。 |
 | url | object \| string | 是 |  | 绝对或相对的 URL 来从文件加载。 或者, 一个 已经形成好的 JSON 对象 。 |
 | extension | string | 是 | "'json'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/TilemapJSONFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/TilemapJSONFileConfig.js#L1)  
 
 
@@ -725,9 +725,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> UnityAtlasFileConfig {#static-unityatlasfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和纹理管理器中独有 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和纹理管理器中独有 。 |
 | textureURL | string | 是 |  | 绝对或相对的URL可以从中加载纹理图像文件. |
 | textureExtension | string | 是 | "'png'" | 如果没有提供 URL , 用于图像纹理的默认文件扩展名 。 |
 | textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 特为纹理图像文件设置额外的 XHR 设置 。 |
@@ -738,7 +738,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/UnityAtlasFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/UnityAtlasFileConfig.js#L1)  
 
 
@@ -750,13 +750,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.VideoFileConfig](/api/typedef/types-loader-filetypes#videofileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.VideoFileURLConfig](/api/typedef/types-loader-filetypes#videofileurlconfig)> | 是 | 绝对或相对的URL从中加载视频文件. |
 | noAudio | boolean | 是 | 视频是否有音频音轨? 如果您不能, 您可以启用自动播放 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/VideoFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/VideoFileConfig.js#L1)  
 
 
@@ -773,7 +773,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/VideoFileURLConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/VideoFileURLConfig.js#L1)  
 
 
@@ -783,16 +783,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> XMLFileConfig {#static-xmlfileconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 文件的密钥。 必须在装入器和文本缓存中都具有独有性 。 |
+| key | string | 否 |  | 文件的键。 必须在资源加载器和文本缓存中都具有独有性 。 |
 | url | string | 是 |  | 要从文件中装入文件的绝对或相对的 URL 。 |
 | extension | string | 是 | "'xml'" | 如果没有提供 URL , 则使用默认文件扩展名 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 |  | 专门为此文件设置额外的 XHR 设置 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Loader.FileTypes
+**所属**: Phaser.Types.Loader.FileTypes
 > 源码：[src/loader/filetypes/typedefs/XMLFileConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/typedefs/XMLFileConfig.js#L1)  
 
 

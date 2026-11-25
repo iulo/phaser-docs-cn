@@ -185,7 +185,7 @@ Phaser的WebGL管道中的主要批次渲染节点,它绘制了大批次的纹�
 | args | * | 是 | 子类的附加论据. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L623](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L623)  
@@ -275,7 +275,7 @@ Phaser的WebGL管道中的主要批次渲染节点,它绘制了大批次的纹�
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L550](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L550)  
@@ -374,9 +374,9 @@ Phaser的WebGL管道中的主要批次渲染节点,它绘制了大批次的纹�
 
 **说明:**
 
-更新每批的最大纹理数量。 这将用新的纹理计数重建阴影程序。 纹理的最低数量是 1, 最大数量是渲染器中定义的纹理单位的数量。 重建阴影可能很昂贵, 所以请节制使用 。
+更新每批的最大纹理数量。 这将用新的纹理计数重建着色器程序。 纹理的最低数量是 1, 最大数量是渲染器中定义的纹理单位的数量。 重建阴影可能很昂贵, 所以请节制使用 。
 
-如果这在批次中运行,且新计数低于当前批次条目中的纹理数量,则批次会在阴影程序重建之前被冲洗,因此没有纹理被跳过.
+如果这在批次中运行,且新计数低于当前批次条目中的纹理数量,则批次会在着色器程序重建之前被冲洗,因此没有纹理被跳过.
 
 这通常由收听者自动调用`Phaser.Renderer.Events.SET_PARALLEL_TEXTURE_UNITS`事件,由RenderNodeManager触发.
 
@@ -386,7 +386,7 @@ Phaser的WebGL管道中的主要批次渲染节点,它绘制了大批次的纹�
 | count | number | 是 | 每批新建的纹理最大数量。如果未定义,则使用纹理单位的最大数量。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#updateTextureCount
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#updateTextureCount
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L195](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerQuad.js#L195)  

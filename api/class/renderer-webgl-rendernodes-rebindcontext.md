@@ -76,7 +76,7 @@ RebindContext是一个RenderNode,它将WebGL上下文设置为默认状态,重�
 | displayContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/RebindContext.js#L57](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/RebindContext.js#L57)  

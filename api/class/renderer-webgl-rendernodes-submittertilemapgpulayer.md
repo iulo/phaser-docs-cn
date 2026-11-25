@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 提交器TilemapGPULayer RenderNode处理WebGL渲染器中TilemapGPULayER天体的GPU加速渲染.
 
-与基于批量的提交者不同, 这是 Stand Onely Render, 意思是每个层都是在自己的绘图调用中绘制的。 它通过程序管理程序来管理自己的阴影程序, 它支持多个可选的阴影特性, 包括平滑像素艺术的提升, 正常的映射照明, 动画瓦, 自阴影, 以及双线边框过滤。 适当的阴影变体是根据层的配置选择的 。
+与基于批量的提交者不同, 这是 Stand Onely Render, 意思是每个层都是在自己的绘图调用中绘制的。 它通过程序管理程序来管理自己的着色器程序, 它支持多个可选的阴影特性, 包括平滑像素艺术的提升, 正常的映射照明, 动画瓦, 自阴影, 以及双线边框过滤。 适当的阴影变体是根据层的配置选择的 。
 
 **构造函数**
 
@@ -174,7 +174,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将层四转换为相机视图矩阵, 并进行任何父变换, 将四个角位置和纹理坐标写入顶点缓冲器, 组装纹理阵列( 平面图像、 层数据、 可选动画数据、 以及照明的可选普通地图) , 选择正确的遮蔽变体 。 `updateRenderOptions`,将所有制服都通过 `setupUniforms`,并发出一个图层的单调。
+将层四转换为摄像机视图矩阵, 并进行任何父变换, 将四个角位置和纹理坐标写入顶点缓冲器, 组装纹理阵列( 平面图像、 层数据、 可选动画数据、 以及照明的可选普通地图) , 选择正确的遮蔽变体 。 `updateRenderOptions`,将所有制服都通过 `setupUniforms`,并发出一个图层的单调。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 描述游戏对象上下文的母矩阵. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterTilemapGPULayer.js#L445](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterTilemapGPULayer.js#L445)  
@@ -224,7 +224,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-评估 TilemapGPULayer 的当前状态, 并相应更新阴影程序配置。 每次渲染前都会调用, 并可能导致选择不同的阴影变量 。
+评估 TilemapGPULayer 的当前状态, 并相应更新着色器程序配置。 每次渲染前都会调用, 并可能导致选择不同的阴影变量 。
 
 具体来说,它配置:动画长度的加法(基于砖块的最大动画帧数),照明加法(基于层的照明设置,启用或禁用,在活动时,光线计数定义更新),自影特征旗,平滑像素艺术加法,边框滤镜特征旗(基于砖块纹理是否使用线性放大滤镜).
 

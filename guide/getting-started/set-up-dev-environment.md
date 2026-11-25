@@ -8,7 +8,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/getting-star
 
 如果你想知道为什么,请阅读...
 
-### 网络服务器? {#a-web-server-but-i-want-to-make-games}
+### 为什么开发游戏需要 Web 服务器？ {#a-web-server-but-i-want-to-make-games}
 
 <blockquote><q>Why do I need a local web server? Can't I just drag the html files onto my browser?</q><cite>A. Sane, Developer</cite></blockquote>
 
@@ -22,9 +22,9 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/getting-star
 
 您的游戏需要加载资源: 图像、 音频文件、 JSON 数据, 可能还有其他的 JavaScript 文件。 为了做到这一点, 它需要不受浏览器安全枷锁的干扰地运行。 它需要 `http://` 访问游戏文件。 为此我们需要一个网络服务器 。
 
-## 安装网络服务器 {#installing-a-web-server}
+## 安装 Web 服务器 {#installing-a-web-server}
 
-### 窗口 {#windows}
+### Windows {#windows}
 
 在Windows上,有许多“捆绑安装器”可用,这些设备可以一起包装,并从一个单exe中设置Apache、PHP和MySQL等流行的网络技术。
 
@@ -40,15 +40,15 @@ Cesanta 提供 [Mongoose web server](https://cesanta.com/binary.html)。 这是�
 
 当然,还有手动设置本地网络服务器的指南, 如 [this guide written for Mountain Lion](https://discussions.apple.com/docs/DOC-3083)。 选择您最满意的任意一个方法 。
 
-### 带有 Python 的简单 HTTP 服务器 {#simple-http-server-with-python}
+### 使用 Python 启动 HTTP 服务器 {#simple-http-server-with-python}
 
 如果您需要快速运行的网络服务器, 并且您不想乱设置 Apache 或下载一个应用程序, Python 就可以帮助。 Python 带有一个简单的内置的 HTTP 服务器, 它可以服务任何本地文件夹中的文件。 自然, 您需要安装的只是 Python 。 [Read the full guide here](http://www.linuxjournal.com/content/tech-tip-really-simple-http-server-python)
 
-### 节点的 http-server.js 服务器 {#http-server-for-nodejs}
+### 使用 Node.js 的 http-server {#http-server-for-nodejs}
 
 *http-server * 是简单零配置命令行 http 服务器 [node.js](http://nodejs.org)。它足够强大,可用于生产,但简单且可以黑客化,足以用于测试、本地开发和学习。或者,正如网站所说的,“服务像被绑在火箭上的龟一样的静态文件”。 npm 和指示 [http-server web site](https://npmjs.org/package/http-server)
 
-### php 内置网络服务器 {#php-built-in-web-server}
+### 使用 PHP 内置 Web 服务器 {#php-built-in-web-server}
 
 截至 PHP 5. 4.0, CLI SAPI 提供了内置的网络服务器, 它只真正适合开发目的, 并按顺序服务所有文件, 但可以轻松地测试 HTML5 游戏。 它从一个命令行呼叫中被引用, 您可以在这里找到如何做到这一点的细节 [in the PHP Manual](http://php.net/manual/en/features.commandline.webserver.php) 。
 
@@ -60,7 +60,7 @@ Cesanta 提供 [Mongoose web server](https://cesanta.com/binary.html)。 这是�
 
 您需要编辑器来准备您的 JavaScript 代码。 有许多* 可用, 每一个都有自己的优点和缺点。 如果您是有经验的开发者, 您可能已经拥有自己的首选编辑器, 在这种情况下, 继续使用本指南的第四部分。 否则您可以选择:
 
-### 视觉工作室代码 {#visual-studio-code}
+### Visual Studio Code {#visual-studio-code}
 
 这是用于构建框架和所有工程的 Phaser 团队的编辑器。 甚至这个指南的编辑器也被写入其中 。 
 
@@ -68,7 +68,7 @@ Visual Studio Code 是一款轻量级但强大的源代码编辑器,运行在您
 
 访问[VS Code](https://code.visualstudio.com/)网站.
 
-### 下标文本 {#sublime-text}
+### Sublime Text {#sublime-text}
 
 低音应该被认为是一个极其强大的文本编辑器,而不是一个IDE.
 
@@ -80,7 +80,7 @@ Visual Studio Code 是一款轻量级但强大的源代码编辑器,运行在您
 
 访问[Sublime Text](http://www.sublimetext.com)网站.
 
-### 网络结构 {#webstorm}
+### WebStorm {#webstorm}
 
 JetBraiens WebStorm是一个极其先进的全开发环境,它远远超出了简单的代码编辑,提供了您期望从一个合适的IDE中可以实现的所有高级功能. 包括代码透视,npm内置,代码风格和语法报告,源控和丰富的其他功能. 有很多功能是为网页开发者设计的,而不是游戏开发者,但依然可以随意地拥有.
 
@@ -92,13 +92,13 @@ JetBraiens WebStorm是一个极其先进的全开发环境,它远远超出了简
 
 --------------------------------
 
-## 正在下载 Phaser {#downloading-phaser}
+## 下载 Phaser {#downloading-phaser}
 
 Phaser 现作为《京都议定书》 JavaScript 。可以下载、链接到内容传送网络,也可以通过任何标准安装 JavaScript 软件包管理器,例如 npm. Phaser 不是一个桌面应用程序。您没有“ 安装” , 没有“ ”Phaser IDE',这是个 JavaScript 对话框,您将它包含在自己的网页中,或者捆绑。然后将游戏代码写入 JavaScript 并用浏览器一起运行。
 
 Phaser是一个开放源代码项目,可以免费下载。使用Phaser时,无论您是用于商业还是免费项目,都无需付费。我们使用GitHub管理项目,您有各种选择,可以下载。这些在[download page](https://phaser.io/download/stable)上都有解释。
 
-### 我能拿个拉链文件吗? {#can-i-just-get-a-ziptar-file}
+### 如何下载 ZIP 或 TAR 压缩包？ {#can-i-just-get-a-ziptar-file}
 
 > 通过克隆寄存器、抓Js文件或下载所有文件作为拉链来获取 Phaser
 
@@ -108,7 +108,7 @@ Phaser是一个开放源代码项目,可以免费下载。使用Phaser时,无论
 
 --------------------------------
 
-## 环球你好! {#hello-world}
+## Hello World 示例 {#hello-world}
 
 有了你的编辑器设置, 网络服务器安装和Phaser下载 是时候创建一些东西 检查所有的东西都起作用了。
 
@@ -176,7 +176,7 @@ Phaser是一个开放源代码项目,可以免费下载。使用Phaser时,无论
 </html>
 ```
 
-### 测试,测试... {#testing-testing}
+### 测试项目 {#testing-testing}
 
 打开您的网页浏览器, 将 `index.html` 页面加载。 这可能和在 `localhost/` 或 `127.0.0.1/` 中输入您的浏览器一样简单。 或者您还需要指定一个端口号码, 这完全取决于您使用的服务器设置方法 。
 
@@ -198,7 +198,7 @@ Phaser是一个开放源代码项目,可以免费下载。使用Phaser时,无论
 
 您可以浏览此网站的所有 [Phaser Examples](https://phaser.io/examples) 。 您也会找到一个活代码编辑器, 这样您就可以修改源代码并实时重运行, 以立即看到修改 。
 
-### 在 Phaser 教程中进行游戏 {#making-a-game-in-phaser-tutorial}
+### 使用 Phaser 制作游戏的教程 {#making-a-game-in-phaser-tutorial}
 
 现在你们都准备好了 我们强烈推荐你们通过[Making a Game in Phaser 3](https://phaser.io/tutorials/making-your-first-phaser-3-game)的指南工作。从这个指南中,你们将学会如何构建一个游戏, 让你能够控制一个可以跳出平台和收集项目的人物。
 

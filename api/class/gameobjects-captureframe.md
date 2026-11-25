@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这是仅限WebGL的特性,不可用Canvas模式.
 
-您必须激活相机的 `forceComposite` 属性, 或者在帧缓冲器内使用此对象来使用此特性。 帧缓冲器的情况包括滤镜、 动态触控, 以及一个在 0 到 1 之间的α 相机 。
+您必须激活摄像机的 `forceComposite` 属性, 或者在帧缓冲器内使用此对象来使用此特性。 帧缓冲器的情况包括滤镜、 动态触控, 以及一个在 0 到 1 之间的α 摄像机 。
 
 此对象不会产生任何效果。 它只是从当前帧缓冲器中捕获一个在“ 递归” 时的纹理。 如果您在此对象中添加过滤器, 它会捕获用于过滤器的清晰、 临时的帧缓冲器, 而不是主帧缓冲器。 如果您在包含此对象的容器中添加过滤器, 它将只捕获该容器内的对象。 如果您将 `visible` 设置为 `false`, 它只会停止捕获 。
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 捕捉法拉姆属于的场景 |
-| key | string | 否 | 从这个 CaptureFrame 创建的纹理密钥 。 |
+| key | string | 否 | 从这个 CaptureFrame 创建的纹理键 。 |
 
 ---
 
@@ -131,7 +131,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 包含抓取框架的纹理。 当游戏对象完成时, 将更新此纹理 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -151,7 +151,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 此抓取Frame 的绘图上下文。 此上下文包含 WebGL 帧缓冲器和纹理数据 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -300,7 +300,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设定此 CaptureFrame 的α值。 此值没有效果, 仅用于与其他游戏对象的兼容 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -328,7 +328,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设置此 CaptureFrame 的滚动因子。 此因子没有效果, 仅用于与其他游戏对象的兼容性 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 

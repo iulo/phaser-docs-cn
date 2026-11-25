@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new ParticleProcessor([x], [y], [active])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 粒子处理器的x坐标,在世界空间中. |
 | y | number | 是 | 0 | 粒子处理器的y坐标,在世界空间。 |

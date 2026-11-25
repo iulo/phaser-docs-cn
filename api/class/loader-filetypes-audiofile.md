@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-audiofile)
 
-适合装入器通过Web Audio API加载的单个音频文件.
+适合资源加载器通过Web Audio API加载的单个音频文件.
 
 此文件类型将音频数据作为ArrayBuffer 载入 XHR 之上, 然后使用 Web Audio API 的 `decodeAudioData` 方法将其解码为 AudioBuff 。 由此生成的 AudioBuf 存储在 Phaser 音频缓存中, 可供 Sound 管理器使用 。
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | urlConfig | [Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig) | 是 | 从配置对象中装入此文件的绝对或相对 URL 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 | audioContext | AudioContext | 是 | 此文件将用来处理自己 。 |
@@ -82,7 +82,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AudioFileConfig](/api/typedef/types-loader-filetypes#audiofileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | urls | string \| Array.\<string> | [Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig) | Array.\<[Phaser.Types.Loader.FileTypes.AudioFileURLConfig](/api/typedef/types-loader-filetypes#audiofileurlconfig)> | 是 | 装入音频的绝对或相对的 URL 。 |
 | config | any | 是 | 包含 HTML5Audio 的 `instances` 属性的对象。默认为 1 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
@@ -131,10 +131,10 @@ Blob 和数据 URI 总是被接受并立即返回, 不论格式如何。 对于�
 
 **说明:**
 
-由装入器自动调用.nextFile。这种方法将使用Web Audio API的编码,通过 XHR 装入的原始音频矩阵缓冲器解码 `decodeAudioData` 方法。成功时,产生的音频缓冲器将存储在 `this.data` 财务报告和已审计财务报表 `onProcessComplete` 用于推进负载队列。失败时,一个错误会被记录到控制台上, `onProcessError` 。在解码开始后,将发布音频链接引用,以避免不必要的保留。
+由资源加载器自动调用.nextFile。这种方法将使用Web Audio API的编码,通过 XHR 装入的原始音频矩阵缓冲器解码 `decodeAudioData` 方法。成功时,产生的音频缓冲器将存储在 `this.data` 财务报告和已审计财务报表 `onProcessComplete` 用于推进负载队列。失败时,一个错误会被记录到控制台上, `onProcessError` 。在解码开始后,将发布音频链接引用,以避免不必要的保留。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/AudioFile.js#L76](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/AudioFile.js#L76)  

@@ -15,7 +15,10 @@ from markdown_it import MarkdownIt
 from opencc import OpenCC
 
 
+GLOSSARY = json.loads(Path(__file__).with_name('translation-glossary.json').read_text())
+
 LABELS = {
+    **GLOSSARY['api_labels'],
     "Author Credits": "作者署名",
     "Content on this page includes work by:": "本页包含以下作者贡献的内容。",
     "Constructor": "构造函数", "Parameters": "参数", "Returns": "返回值",
@@ -32,7 +35,8 @@ LABELS = {
     "Functions": "函数", "Constants": "常量", "Typedefs": "类型定义",
     "Game Objects": "游戏对象", "Physics": "物理", "Properties": "属性",
     "name": "名称", "type": "类型", "optional": "可选", "description": "说明",
-    "Yes": "是", "No": "否", "What is Phaser?": "什么是 Phaser？",
+    "Yes": "是", "No": "否", "protected": "受保护", "private": "私有",
+    "What is Phaser?": "什么是 Phaser？",
     "Installing": "安装 Phaser", "Working with Phaser": "配置开发环境",
     "Project Templates": "项目模板", "Making your first Phaser game": "制作第一个 Phaser 游戏",
     "Create Phaser Game App": "创建 Phaser 游戏项目",
@@ -71,6 +75,7 @@ INLINE = re.compile(
     r"\b(?:npm|pnpm|WebGL|JavaScript|TypeScript)\b|"
     r"\b[a-z_$]+[A-Z][A-Za-z0-9_$]*\b",
 )
+API_METADATA = re.compile(r'^\*\*([a-zA-Z][a-zA-Z ]*?)(:?)\*\*')
 LINK = re.compile(r"(!?\[[^\[\]\n]*\]\()([^\s)]+)")
 HEADING = re.compile(r"^(#{1,6}) +(.+?)\s*$")
 LIST = re.compile(r"^([ \t]*(?:(?:>|[-*+]|\d+[.)]) +)*(?:\[[ xX]\] +)?)(.*)$")
@@ -87,6 +92,15 @@ SKIP_PROMO = re.compile(r"^> This page is about the open-source Phaser framework
 OUTPUT_ROOT = Path(__file__).resolve().parents[1]
 MARKDOWN = MarkdownIt('commonmark').enable('table')
 SIMPLIFIED = OpenCC('t2s')
+
+PROSE_TERMS = GLOSSARY['terms']
+PHYSICS_TERMS = GLOSSARY['physics_terms']
+EDITOR_TERMS = GLOSSARY['editor_terms']
+PROSE_TERM_PATTERN = re.compile('|'.join(map(re.escape, sorted(PROSE_TERMS, key=len, reverse=True))))
+PHYSICS_TERM_PATTERN = re.compile('|'.join(map(re.escape, sorted(PHYSICS_TERMS, key=len, reverse=True))))
+EDITOR_TERM_PATTERN = re.compile('|'.join(map(re.escape, sorted(EDITOR_TERMS, key=len, reverse=True))))
+PHYSICS_ROUTE = re.compile(r'^(?:guide/concepts/physics(?:/|$)|api/\w+/(?:physics-(?:arcade|matter)|types-physics-)|editor/scene-editor/(?:arcade-physics|box2d))')
+DOC_LABELS = {'guide': 'Phaser 4 指南', 'api': 'Phaser v4.1.0', 'editor': 'Phaser Editor v5'}
 
 
 def source_body(text):
@@ -125,6 +139,44 @@ def terminology(translation):
     ):
         translation = translation.replace(old, new)
     return translation
+
+
+def polish_prose(line, route):
+    if line.strip().startswith('<'):
+        return line
+    if match := API_METADATA.match(line):
+        name, colon = match.groups()
+        label = GLOSSARY['api_labels'].get(name)
+        if label:
+            line = f'**{label}{colon}**' + line[match.end():]
+    if line == '**访问权限:** 保护':
+        return '**访问权限:** 受保护'
+    if line == '**访问权限:** 私营':
+        return '**访问权限:** 私有'
+    if (replacement := GLOSSARY['phrases'].get(line.strip())) is not None:
+        return line.replace(line.strip(), replacement, 1)
+    if route.startswith('api/') and line.startswith('|'):
+        cells = re.split(r'(?<!\\)\|', line)
+        if len(cells) > 2 and cells[-2].strip() == '说明':
+            return '|'.join(cell.replace('default', '默认值') if cell.strip() == 'default' else cell for cell in cells)
+        cell = cells[-2] if len(cells) > 2 else ''
+        return line if not cell else '|'.join([*cells[:-2], polish_prose(cell, route), cells[-1]])
+
+    def replace_terms(text):
+        text = PROSE_TERM_PATTERN.sub(lambda match: PROSE_TERMS[match[0]], text)
+        if PHYSICS_ROUTE.match(route):
+            text = PHYSICS_TERM_PATTERN.sub(lambda match: PHYSICS_TERMS[match[0]], text)
+        if route.startswith('editor/'):
+            text = EDITOR_TERM_PATTERN.sub(lambda match: EDITOR_TERMS[match[0]], text)
+        return text
+
+    parts, start = [], 0
+    for token in INLINE.finditer(line):
+        parts.append(replace_terms(line[start:token.start()]))
+        parts.append(token[0])
+        start = token.end()
+    parts.append(replace_terms(line[start:]))
+    return ''.join(parts)
 
 
 class Translation:
@@ -342,7 +394,8 @@ def inspect_anchors(body, api):
 
 
 def render(route, body, translate, routes, all_routes, anchors):
-    api = route.startswith("api/")
+    section = route.split('/', 1)[0]
+    api = section == 'api'
     source = "https://phaser.io" + routes[route]
     lines, ids = [], set(anchors[route])
     used = set()
@@ -361,7 +414,9 @@ def render(route, body, translate, routes, all_routes, anchors):
                 rendered = api_heading(current, depth, route, translate)
             else:
                 standard_title = GUIDE_TITLES.get(route.rsplit('/', 1)[-1]) if depth == 1 else None
-                rendered = standard_title or translate(current)
+                rendered = standard_title or GLOSSARY['headings'].get(original)
+                if not rendered:
+                    rendered = polish_prose(translate(current), route)
             base = heading_anchor(depth, original, api) or "section"
             anchor = base
             index = 1
@@ -372,36 +427,45 @@ def render(route, body, translate, routes, all_routes, anchors):
             lines.append(f"{hashes} {rendered} {{#{anchor}}}")
             if depth == 1 and title is None:
                 title = rendered
-                lines.extend(["", f"{'Phaser v4.1.0' if api else 'Phaser 4 指南'} · [英文原文]({source})"])
+                lines.extend(["", f"{DOC_LABELS[section]} · [英文原文]({source})"])
         else:
-            lines.append(render_line(updated, translate, api))
+            lines.append(polish_prose(render_line(updated, translate, api), route))
     if not title:
         raise ValueError(f"Missing title in {route}")
     return title, "\n".join(lines).strip() + "\n"
 
 
-def write_all(routes, bodies, anchors, translate):
-    sidebar = []
+def write_all(routes, bodies, anchors, translate, section):
+    sidebars = {'guide': [], 'editor': []}
     all_routes = {source.rstrip('/'): route for route, source in routes.items()}
     for route, body in bodies.items():
+        group = route.split('/', 1)[0]
+        if section and group != section:
+            continue
         title, page = render(route, body, translate, routes, all_routes, anchors)
         if translate.count:
             continue
         file = OUTPUT_ROOT / (route + ".md")
         file.parent.mkdir(parents=True, exist_ok=True)
         file.write_text(page)
-        if route.startswith("guide/"):
-            sidebar.append({"text": title, "link": "/" + route})
+        if group in sidebars:
+            link = '/' + route
+            if route.endswith('/index'):
+                link = link.removesuffix('index')
+            sidebars[group].append({'text': title, 'link': link})
     if not translate.count:
-        (OUTPUT_ROOT / ".vitepress" / "guide-sidebar.json").write_text(
-            json.dumps(sidebar, ensure_ascii=False, indent=2) + "\n"
-        )
+        for group, sidebar in sidebars.items():
+            if sidebar:
+                (OUTPUT_ROOT / '.vitepress' / f'{group}-sidebar.json').write_text(
+                    json.dumps(sidebar, ensure_ascii=False, indent=2) + '\n'
+                )
 
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("snapshot", type=Path, help="directory with sources.json and original/ Markdown files")
     parser.add_argument("--model", type=Path, help="local CTranslate2 model directory")
+    parser.add_argument('--section', choices=('guide', 'api', 'editor'), help='generate only this section')
     parser.add_argument("--count", action="store_true", help="inspect the number of distinct phrases without writing pages")
     options = parser.parse_args()
     if options.model is None and not options.count:
@@ -419,14 +483,14 @@ def main():
     translate = Translation(root / "translations.sqlite", options.model, options.count)
     original_count = translate.count
     translate.count = True
-    write_all(routes, bodies, anchors, translate)
+    write_all(routes, bodies, anchors, translate, options.section)
     translate.count = original_count
     print(f"{len(bodies)} 篇文档，{len(translate.pending)} 个待翻译片段", flush=True)
     if not options.count:
         while True:
             if translate.pending:
                 translate.translate_batch()
-            write_all(routes, bodies, anchors, translate)
+            write_all(routes, bodies, anchors, translate, options.section)
             if not translate.pending:
                 break
 

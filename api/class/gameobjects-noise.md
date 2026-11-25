@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个噪音游戏对象 。
 
-此游戏对象是一个四重奏, 显示随机噪声。 您可以像其它任何一对一样操纵此对象, 使其具有交互性, 并用在过滤器和面具中, 以产生视觉惊人的效果 。
+此游戏对象是一个四重奏, 显示随机噪声。 您可以像其它任何一对一样操纵此对象, 使其具有交互性, 并用在过滤器和遮罩中, 以产生视觉惊人的效果 。
 
 幕后,一个噪声是使用特定遮蔽程序的一种[Phaser.GameObjects.Shader](/api/class/gameobjects-shader).
 
@@ -21,7 +21,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Noise(scene, [config], [x], [y], [width], [height])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | config | [Phaser.Types.GameObjects.Noise.NoiseQuadConfig](/api/typedef/types-gameobjects-noise#noisequadconfig) | 是 |  | 此游戏对象的配置 。 |
@@ -280,7 +280,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否使每个像素的任意正常值成像。 正常值位于相机正面的半球 。
+是否使每个像素的任意正常值成像。 正常值位于摄像机正面的半球 。
 
 此值将覆盖 `noiseRandomChannels` 。
 
@@ -516,7 +516,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 - 可用一个颜色对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0x000000" | 映射到低噪值的颜色(接近0). |
 | end | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0xffffff" | 映射到高噪值的颜色(接近1). |

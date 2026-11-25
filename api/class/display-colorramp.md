@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new ColorRamp(scene, bands, [gpuEncode])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 现场景. |
 | bands | [Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) \| [Phaser.Display.ColorBand](/api/class/display-colorband) | Array.\<([Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) | [Phaser.Display.ColorBand](/api/class/display-colorband))> | 否 |  | 构成这个坡道的带。 这可以是一个条目或一个阵列, 也可以是配置或已有实例。 超过 1048576 的带数可能是不安全的 。 |
@@ -68,7 +68,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-Phaser 纹理将 GPU 数据纹理包在这个斜坡上。 它在 Scene 的纹理管理器中注册在 独有的密钥下, 因此可以在其它地方引用 。 它不是要显示的 。
+Phaser 纹理将 GPU 数据纹理包在这个斜坡上。 它在 Scene 的纹理管理器中注册在 独有的键下, 因此可以在其它地方引用 。 它不是要显示的 。
 
 
 > 源码：[src/display/ColorRamp.js#L76](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/ColorRamp.js#L76)  
@@ -298,7 +298,7 @@ Phaser 纹理将 GPU 数据纹理包在这个斜坡上。 它在 Scene 的纹理
 如果 `gpuEncode` 设定为 `encode` 而非 `false` , 这将重新编码数据纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bands | [Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) \| [Phaser.Display.ColorBand](/api/class/display-colorband) | Array.\<([Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) | [Phaser.Display.ColorBand](/api/class/display-colorband))> | 否 |  | 构成这个斜坡的带。 这可以是一个条目或一个阵列, 也可以是配置或已有实例 。 |
 | encode | boolean | 是 | true | 是否将新坡道数据编码为数据纹理, 以用于阴影 。 |
@@ -325,7 +325,7 @@ Phaser 纹理将 GPU 数据纹理包在这个斜坡上。 它在 Scene 的纹理
 你可以选择是否"量化"乐队,其中每个乐队都有平淡的颜色.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | band | number \| [Phaser.Display.ColorBand](/api/class/display-colorband) | 否 |  | 乐队要分裂, 要么在这个坡道上 , 要么就是这个带子实例。 乐队必须在这个坡道上 。 |
 | steps | number | 否 |  | 要创建的乐队数量 。 |

@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 灯光管理器与灯光过滤器(仅限WebGL)配合工作。 游戏对象通过此过滤器对活动灯光和环境颜色进行样本, 并使用分配给其纹理的任何普通地图来产生动态照明效果。 灯光在 Canvas 渲染中没有任何效果 。
 
-每个场景都支持固定的最大数量同时点燃的灯光,通过游戏配置中的`maxLights`属性设定. 当存在比最大灯光更多的灯光时,管理者会把每个帧距离相机最远的灯光堵住. 使用[Phaser.GameObjects.LightsManager#addLight](/api/class/gameobjects-lightsmanager#addLight)来创建灯光和[Phaser.GameObjects.LightsManager#setAmbientColor](/api/class/gameobjects-lightsmanager#setAmbientColor)来控制底光.
+每个场景都支持固定的最大数量同时点燃的灯光,通过游戏配置中的`maxLights`属性设定. 当存在比最大灯光更多的灯光时,管理者会把每个帧距离摄像机最远的灯光堵住. 使用[Phaser.GameObjects.LightsManager#addLight](/api/class/gameobjects-lightsmanager#addLight)来创建灯光和[Phaser.GameObjects.LightsManager#setAmbientColor](/api/class/gameobjects-lightsmanager#setAmbientColor)来控制底光.
 
 
 **作用域**: static
@@ -73,7 +73,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-单个相机和灯光遮蔽器所能处理的最大灯光数量。 可以通过游戏配置中的 `maxLights` 属性更改此功能, 因为它无法在运行时更改 。
+单个摄像机和灯光遮蔽器所能处理的最大灯光数量。 可以通过游戏配置中的 `maxLights` 属性更改此功能, 因为它无法在运行时更改 。
 
 
 > 源码：[src/gameobjects/lights/LightsManager.js#L81](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/lights/LightsManager.js#L81)  
@@ -110,7 +110,7 @@ _前_帧处理的灯光数量.
 创建新的 [Phaser.GameObjects.Light](/api/class/gameobjects-light) 对象, 添加到此 Lights 管理器中, 并返回它。 光会使用位于其半径内的 Light Filter 来影响所有游戏对象, 使用纹理的普通映射数据来计算阴影 。 您可以配置它的位置、 半径、 颜色、 强度和 z 高度( 影响阴影效果的角度) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 光线的横向位置. |
 | y | number | 是 | 0 | 光明的垂直位置 。 |
@@ -146,14 +146,14 @@ _前_帧处理的灯光数量.
 
 为了达到最大性能, 您应该将点光游戏对象进行批量。 这意味着它们可以确保显示列表中彼此连续跟踪。 理想的做法是使用一个图层游戏对象, 然后在其中添加点光, 这样它就可以将显示的灯光进行批量。 您没有_ 这样做, 如果您的游戏中只有少数点光, 那么将它们作为正常的显示列表中混合是完全安全的。 但是, 如果您使用了大量的, 请考虑它们是如何被混合到显示列表中的 。
 
-渲染器会自动凸出点光。 半径与相机不相交的会跳过渲染列表。 自动发生这种情况, 并且刷新每个相机的凹陷状态 。
+渲染器会自动凸出点光。 半径与摄像机不相交的会跳过渲染列表。 自动发生这种情况, 并且刷新每个摄像机的凹陷状态 。
 
 点光的起源总是0.5,不能改变.
 
 点灯是WebGL唯一的特性,没有Canvas对应功能.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 世界上这个点光的横向位置. |
 | y | number | 否 |  | 世界上这个点光的垂直位置. |
@@ -258,7 +258,7 @@ _前_帧处理的灯光数量.
 
 它会自动地在镜头的世界视野之外 点燃灯光
 
-如果返回的灯光比渲染器支持的灯光多,那么灯光就会根据距离相机中心的位置而被挤压,只有最接近的灯光才会被渲染.
+如果返回的灯光比渲染器支持的灯光多,那么灯光就会根据距离摄像机中心的位置而被挤压,只有最接近的灯光才会被渲染.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -365,13 +365,13 @@ _前_帧处理的灯光数量.
 
 **说明:**
 
-排序函数以按相机的距离排序灯光。 排序顺序为反向, 以便最远的光先被剪切 。
+排序函数以按摄像机的距离排序灯光。 排序顺序为反向, 以便最远的光先被剪切 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| a | number | 否 | 一个光线输入物体,带有`distance`属性,代表它与相机中心之间的距离. |
-| b | number | 否 | 一个光线输入物体,带有`distance`属性,代表它与相机中心之间的距离. |
+| a | number | 否 | 一个光线输入物体,带有`distance`属性,代表它与摄像机中心之间的距离. |
+| b | number | 否 | 一个光线输入物体,带有`distance`属性,代表它与摄像机中心之间的距离. |
 
 
 **返回值:** boolean - 如果`a`比`b`还远,否则会弄虚作假.

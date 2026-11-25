@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 此游戏对象允许您在显示列表中轻松添加带有自身阴影的四进制, 并像您一样操纵其它游戏对象, 包括缩放、 旋转、 定位和添加到容器中。 阴影可以被交互并用于输入事件。 也可以在过滤器中用于创建视觉惊人的效果 。
 
-它通过创建自定义的 RenderNode 来工作, 它运行自定义的阴影程序来绘制一个四边形。 阴影程序可以从阴影缓存中加载, 或者作为字符串提供线内程序 。
+它通过创建自定义的 RenderNode 来工作, 它运行自定义的着色器程序来绘制一个四边形。 着色器程序可以从阴影缓存中加载, 或者作为字符串提供线内程序 。
 
 请参看Phaser实例 GitHub Repo , 以动态方式加载和创建着色器的几个实例 。
 
@@ -23,10 +23,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Shader(scene, config, [x], [y], [width], [height], [textures])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
-| config | string \| [Phaser.Types.GameObjects.Shader.ShaderQuadConfig](/api/typedef/types-gameobjects-shader#shaderquadconfig) | 否 |  | 用于此 Shader 的配置对象。 它也可以是阴影缓存中对应的着色器的密钥, 它将在新配置对象中用作 `fragmentKey` 。 |
+| config | string \| [Phaser.Types.GameObjects.Shader.ShaderQuadConfig](/api/typedef/types-gameobjects-shader#shaderquadconfig) | 否 |  | 用于此 Shader 的配置对象。 它也可以是阴影缓存中对应的着色器的键, 它将在新配置对象中用作 `fragmentKey` 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -257,7 +257,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 参考了此 Shader 的纹理管理器中存储的 Phaser.Textures.Texture 。
 
-只有在您用密钥调用 `Shader.setRenderToTexture` 时, 才设置此属性, 否则它就是 `null` 。
+只有在您用键调用 `Shader.setRenderToTexture` 时, 才设置此属性, 否则它就是 `null` 。
 
 
 > 源码：[src/gameobjects/shader/Shader.js#L200](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/shader/Shader.js#L200)  
@@ -569,10 +569,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/shader/Shader.js#L582](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/shader/Shader.js#L582)  
@@ -615,7 +615,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 - `Shader.glTexture`
 
-此外,您还可以提供这种方法的密钥。 这样做可以从此阴影创建 Phaser 纹理, 将其存储在 `Shader.texture` 中, 保存到纹理管理器中, 允许您使用它来获取任何纹理游戏对象, 如 Sprite 或 图像 :
+此外,您还可以提供这种方法的键。 这样做可以从此阴影创建 Phaser 纹理, 将其存储在 `Shader.texture` 中, 保存到纹理管理器中, 允许您使用它来获取任何纹理游戏对象, 如 Sprite 或 图像 :
 
 ```javascript
 var shader = this.add.shader('myShader', x, y, width, height);
@@ -643,7 +643,7 @@ dynamic.clear().draw(shader).render();
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 是 | 将纹理存储在全球纹理管理器内部的独有密钥 。 |
+| key | string | 是 | 将纹理存储在全球纹理管理器内部的独有键 。 |
 
 
 **返回值:** [Phaser.GameObjects.Shader](/api/class/gameobjects-shader) - 此沙德例(云云).
@@ -671,7 +671,7 @@ dynamic.clear().draw(shader).render();
 使用此方法无需参数来调用着色器以使用整个纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | topLeftX | number | 是 | 0 | 纹理的左上角x坐标. |
 | topLeftY | number | 是 | 1 | 纹理的左上方的Y坐标 。 |
@@ -777,7 +777,7 @@ dynamic.clear().draw(shader).render();
 
 您可以在对象创建后直接设置此函数, 但建议使用 `config` 对象来保持您的逻辑封装 。
 
-函数用两个参数引用: `setUniform`和 `drawingContext`. `setUniform` 是一个需要两个参数的函数:字符串(制服的名称)和值。确保值匹配阴影中的预期类型。您不需要太精确, 因为系统会按需要转换例如阵列和浮图32Array类型。 要在阴影中设置阵列, 请将 `[0]`附加到统一名称中。 `drawingContext`是当前绘图上下文的参考, 如果您需要查询相机或类似的, 可能有用 。
+函数用两个参数引用: `setUniform`和 `drawingContext`. `setUniform` 是一个需要两个参数的函数:字符串(制服的名称)和值。确保值匹配阴影中的预期类型。您不需要太精确, 因为系统会按需要转换例如阵列和浮图32Array类型。 要在阴影中设置阵列, 请将 `[0]`附加到统一名称中。 `drawingContext`是当前绘图上下文的参考, 如果您需要查询摄像机或类似的, 可能有用 。
 
 注意`uProjectionMatrix`是自动为你设定的.
 

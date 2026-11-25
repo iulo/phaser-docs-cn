@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 引用已安装此插件的 Scene 。 |
 | pluginManager | [Phaser.Plugins.PluginManager](/api/class/plugins-pluginmanager) | 否 | 插件管理器的引用 。 |
-| pluginKey | string | 否 | 此插件安装到 Scene 系统的密钥 。 |
+| pluginKey | string | 否 | 此插件安装到 Scene 系统的键 。 |
 
 ---
 
@@ -57,7 +57,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此插件安装到 Scene 系统的密钥 。
+此插件安装到 Scene 系统的键 。
 
 此属性仅在插件被即时化并添加到场景时设定, 而不是在之前。 您可以在 `boot` 方法中使用 。
 
@@ -78,7 +78,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 用于安装此插件的 Scene 的引用。 只有设置为 Scene 插件, 否则为 `null` 。 此属性只有在插件被即时添加到 Scene 时才设定, 而不是在之前。 您可以在 `boot` 方法中使用 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/plugins/ScenePlugin.js#L44](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/ScenePlugin.js#L44)  
@@ -97,7 +97,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 引用安装了此插件的 Scene 系统。 只有设置为 Scene 插件, 否则为 `null`。 此属性只有在插件被即时添加到 Scene 时才设置, 而不是在之前。 您可以在 `boot` 方法中使用 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/plugins/ScenePlugin.js#L57](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/ScenePlugin.js#L57)  
@@ -194,7 +194,7 @@ eventEmitter.once('destroy', this.sceneDestroy, this);
 如果您要扩展此类, 您应该覆盖此方法, 清理您插件创建的任何资源, 然后通过 `super.destroy()` 或原型链调用 `BasePlugin.destroy` 。
 
 
-**Overrides:** Phaser.Plugins.BasePlugin#销毁
+**重写:** Phaser.Plugins.BasePlugin#销毁
 
 
 > 源码：[src/plugins/ScenePlugin.js#L125](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/ScenePlugin.js#L125)  

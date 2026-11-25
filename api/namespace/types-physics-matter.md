@@ -82,11 +82,11 @@ static
 
 **说明:**
 
-指定此天体碰撞过滤特性的 `Object` 。
+指定此物理体碰撞过滤特性的 `Object` 。
 
 两个机构之间的碰撞将遵守以下规则:
 
-- 如果两具尸体的无零值是`collisionFilter.group`的,
+- 如果两具物理体的无零值是`collisionFilter.group`的,
 
   如果数值是正值,它们总是会碰撞,它们永远不会碰撞
 
@@ -96,11 +96,11 @@ static
 
   (或两者)机构值为0,然后适用类别/任务规则如下:
 
-每个天体属于一个碰撞类别, 由 `collisionFilter.category` 给出。 这个值被作为位域使用, 并且该类别只应该有一个位集, 这意味着这个属性的值是 [1, 2^31] 范围内的 2 个功率 。 因此, 有32 个不同的碰撞类别可用 。
+每个物理体属于一个碰撞类别, 由 `collisionFilter.category` 给出。 这个值被作为位域使用, 并且该类别只应该有一个位集, 这意味着这个属性的值是 [1, 2^31] 范围内的 2 个功率 。 因此, 有32 个不同的碰撞类别可用 。
 
 每个机体还定义了`collisionFilter.mask`给出的碰撞位图,该位图规定了它与之碰撞的类别(值是所有这些类别的位元和值)。
 
-使用类别/任务规则,两个机构 `A` 财务报告和已审计财务报表 `B` 如果两者在面具中包括对方的类别,即相互碰撞。 `(categoryA & maskB) !== 0` 财务报告和已审计财务报表 `(categoryB & maskA) !== 0` 都是真的 都一样
+使用类别/任务规则,两个机构 `A` 财务报告和已审计财务报表 `B` 如果两者在遮罩中包括对方的类别,即相互碰撞。 `(categoryA & maskB) !== 0` 财务报告和已审计财务报表 `(categoryB & maskA) !== 0` 都是真的 都一样
 
 
 > 源码：[src/physics/matter-js/typedefs/MatterCollisionFilter.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/typedefs/MatterCollisionFilter.js#L1)  
@@ -160,7 +160,7 @@ static
 
 **说明:**
 
-物质物理运行器配置 。
+Matter 物理运行器配置 。
 
 只设置一个`fps`和`delta`.
 

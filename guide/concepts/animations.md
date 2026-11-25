@@ -47,7 +47,7 @@ var animationConfig = {
 this.anims.create(animationConfig);
 ```
 
-- `key`:此动画数据独有的密钥
+- `key`:此动画数据独有的键
 - `frames`: 一组`{key, frame}`
 
   - 属性
@@ -109,7 +109,7 @@ this.anims.create(animationConfig);
 - `delay`: 开始重播前的延迟。 数值以毫秒表示 。
 - `duration`: 动画在毫秒内播放的时间。 如果不是从`frameRate`得到的话。
 - `frameRate`: 帧每秒播放的帧速率。默认值为`24` 。
-- `timeScale`: 用于重播此动画的时间尺度。 默认值为 `1` 。
+- `timeScale`: 用于重播此动画的时间缩放倍率。 默认值为 `1` 。
 - `repeat`:重复动画的次数。默认值为`0`。
   - `-1` : Infinity
 - `repeatDelay`: 动画重现前的延迟。 数值以毫秒表示 。
@@ -118,7 +118,7 @@ this.anims.create(animationConfig);
 - `showOnStart`: 当动画开始播放时, `sprite.visible = true`是否应该? 如果设定, 会发生 _after_ any laild, 如果设置的话。 默认值为 `false` 。
 - `hideOnComplete`: 当动画完成时, should smart. visible = 假的? 默认值为 `false`.
 
-#### 使用纹理中的每个框架 {#use-every-frame-in-a-texture}
+#### 使用纹理中的所有帧 {#use-every-frame-in-a-texture}
 
 ```js
 // Create animation 'mummyWalk' from every frame in texture 'mummy':
@@ -128,9 +128,9 @@ this.anims.create({
 });
 ```
 
-#### 选择纹理框架 {#choosing-texture-frames}
+#### 选择纹理帧 {#choosing-texture-frames}
 
-您通常需要知道纹理框架名称。 要获取框架名称:
+您通常需要知道纹理帧名称。 要获取框架名称:
 
 ```js
 console.assert(this.texture.exists("mummy"));
@@ -173,7 +173,7 @@ for (const textureKey of textureKeys) {
 }
 ```
 
-#### 框架时间 {#frame-timing}
+#### 帧时序 {#frame-timing}
 
 您可以为整部动画给出 `frameRate`( 默认为 24 英尺) 或 `duration`。 帧持续时间为 `1000 / frameRate` 或 `duration / frames.length` 。
 
@@ -198,7 +198,7 @@ this.anims.create({
 
 #### generateFrameNumbers(a) 与 generateFrameNames() {#generateframenumbers-and-generateframenames}
 
-帮助器方法 [generateFrameNumbers()](/api/class/animations-animationmanager#generateFrameNumbers)和 [generateFrameNames()](/api/class/animations-animationmanager#generateFrameNames) 都按照图案选择**帧名称,然后根据图案选择** 基因** 一组[AnimationFrame](/api/typedef/types-animations#animationframe)对象,可以随`frames`属性而传递. `generateFrameNumbers()`选择图案表式框架名称(index),`generateFrameNames()`选择地图册式框架名称,它们从不选择在纹理中不存在的帧名称.
+帮助器方法 [generateFrameNumbers()](/api/class/animations-animationmanager#generateFrameNumbers)和 [generateFrameNames()](/api/class/animations-animationmanager#generateFrameNames) 都按照图案选择**帧名称,然后根据图案选择** 基因** 一组[AnimationFrame](/api/typedef/types-animations#animationframe)对象,可以随`frames`属性而传递. `generateFrameNumbers()`选择精灵表式框架名称(index),`generateFrameNames()`选择地图册式框架名称,它们从不选择在纹理中不存在的帧名称.
 
 例如,
 
@@ -227,7 +227,7 @@ this.anims.createFromAseprite(key);
 // this.anims.createFromAseprite(key, tags, target);
 ```
 
-- `key` : 已装入的 Aseprite 地图集的密钥.
+- `key` : 已装入的 Aseprite 地图集的键.
 - `tags` :
   - `undefined` : 装入所有标记 。
   - 字符串标记组:装入这些标记.
@@ -392,7 +392,7 @@ this.anims.resumeAll();
 
 ### 全球时间范围 {#global-time-scale}
 
-动画管理器的全球时间尺度。 将时间三角形缩放在两个帧之间, 从而影响动画管理器的时间速度 。
+动画管理器的全球时间缩放倍率。 将时间三角形缩放在两个帧之间, 从而影响动画管理器的时间速度 。
 
 - Get
 
@@ -495,7 +495,7 @@ const mummyWalkAnim = this.anims.get("mummyWalk");
 
   - `frame` : `this.anims.generateFrameNames(key, config)`
 
-### 删除框架 {#remove-frame}
+### 移除帧 {#remove-frame}
 
 - 删除框架时
 

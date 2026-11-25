@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 包含各种声音设置的配置对象。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | disableWebAudio | boolean | 是 | false | 使用 HTML5 音频代替 Web Audio 。 |
 | context | AudioContext | 是 |  | 已有的Web音频上下文 。 |
@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/AudioConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/AudioConfig.js#L1)  
 引入版本：3.0.0
 
@@ -27,7 +27,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> BannerConfig {#static-bannerconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | hidePhaser | boolean | 是 | false | 欧米特Phaser的名字和版本来自旗下. |
 | text | string | 是 | "'#ffffff'" | 旗语文字的颜色. |
@@ -35,7 +35,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/BannerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/BannerConfig.js#L1)  
 引入版本：3.0.0
 
@@ -47,7 +47,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/BootCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/BootCallback.js#L1)  
 引入版本：3.0.0
 
@@ -57,14 +57,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> CallbacksConfig {#static-callbacksconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | preBoot | [Phaser.Types.Core.BootCallback](/api/typedef/types-core#bootcallback) | 是 | "Phaser.Types.Core.NOOP" | 启动序列开始时运行的函数 。 |
 | postBoot | [Phaser.Types.Core.BootCallback](/api/typedef/types-core#bootcallback) | 是 | "Phaser.Types.Core.NOOP" | 启动序列结束时运行的函数。 此时, 所有游戏系统都已经启动, 插件已经装入 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/CallbacksConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/CallbacksConfig.js#L1)  
 引入版本：3.0.0
 
@@ -74,7 +74,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> DOMContainerConfig {#static-domcontainerconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | createContainer | boolean | 是 | false | 游戏是否要创建 div 元素来作为 DOM 容器 ? 只有在您使用 DOM 元素对象时才能启用。 如果您使用此特性, 您必须提供父对象 。 |
 | behindCanvas | boolean | 是 | false | 创建的 DOM 容器( 如果 `dom.createContainer` 是真的) 是放在游戏画布的后面( 真实的) 还是放在上面( 假的, 默认的) ? |
@@ -82,7 +82,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/DOMContainerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/DOMContainerConfig.js#L1)  
 引入版本：3.12.0
 
@@ -92,7 +92,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> FPSConfig {#static-fpsconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | min | number | 是 | 5 | 最小可接受渲染率, 以每秒帧计 。 |
 | target | number | 是 | 60 | 最佳渲染率, 以帧每秒为单位。 这不会强制执行 fps 率, 它只是告诉 Phaser 哪些率被认为是此游戏的最佳 。 |
@@ -104,7 +104,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/FPSConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/FPSConfig.js#L1)  
 引入版本：3.0.0
 
@@ -114,7 +114,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GameConfig {#static-gameconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number \| string | 是 | 1024 | 游戏的宽度,在游戏像素中. |
 | height | number \| string | 是 | 768 | 游戏的高度,在游戏像素中. |
@@ -162,7 +162,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | failIfMajorPerformanceCaveat | boolean | 是 | false | 如果浏览器判断性能,则让它中止创建 WebGL 上下文,这是不可接受的。 |
 | powerPreference | string | 是 | "'default'" | "高性能","低功率"或"默认",向浏览器提示游戏可能使用多少设备功率. |
 | batchSize | number | 是 | 16384 | 默认 WebGL 批量大小。 表示可添加到单个批量中的 _quads_ 数目 。 |
-| maxLights | number | 是 | 10 | 光机座单相机范围内允许可见的灯光最大数量. |
+| maxLights | number | 是 | 10 | 光机座单摄像机范围内允许可见的灯光最大数量. |
 | maxTextures | number | 是 | -1 | WebGL模式下,此模式设置了GPU纹理的最大使用数量。默认的 -1将使用所有可用的单位。 WebGL1 spec表示所有浏览器应提供最小的8个. |
 | mipmapFilter | string | 是 | "'LINEAR'" | 用于创建 WebGL纹理的 mipmap magFilter 。 |
 | mipmapRegeneration | boolean | 是 | false | 是否为帧布重新生成缩写 。 |
@@ -178,7 +178,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/GameConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/GameConfig.js#L1)  
 引入版本：3.0.0
 
@@ -188,13 +188,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GamepadInputConfig {#static-gamepadinputconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | * | 是 | "window" | Gamepad 管理器在其中监听游戏板输入事件. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/GamepadInputConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/GamepadInputConfig.js#L1)  
 引入版本：3.0.0
 
@@ -212,7 +212,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/ImagesConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/ImagesConfig.js#L1)  
 引入版本：3.0.0
 
@@ -222,7 +222,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> InputConfig {#static-inputconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | keyboard | boolean \| [Phaser.Types.Core.KeyboardInputConfig](/api/typedef/types-core#keyboardinputconfig) | 是 | true | 键盘输入配置. `true`使用默认配置,`false`则禁用键盘输入. |
 | mouse | boolean \| [Phaser.Types.Core.MouseInputConfig](/api/typedef/types-core#mouseinputconfig) | 是 | true | 鼠标输入配置. `true`使用默认配置, `false`则禁用鼠标输入. |
@@ -234,7 +234,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/InputConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/InputConfig.js#L1)  
 引入版本：3.0.0
 
@@ -244,14 +244,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> KeyboardInputConfig {#static-keyboardinputconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | * | 是 | "window" | 键盘管理器在其中监听键盘输入事件. |
-| capture | Array.\<number> | 是 |  | `preventDefault` 将调用此数组中每个未修改的密钥, 默认为空 。 |
+| capture | Array.\<number> | 是 |  | `preventDefault` 将调用此数组中每个未修改的键, 默认为空 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/KeyboardInputConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/KeyboardInputConfig.js#L1)  
 引入版本：3.0.0
 
@@ -261,7 +261,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> LoaderConfig {#static-loaderconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | baseURL | string | 是 |  | 用于解析加载器路径的 URL。 例如 : “ http://labs.phaser.io/assets/'. ” |
 | path | string | 是 |  | 用于解析给加载器的相对路径的 URL 路径。 例如 : “ 图像/ 粘贴 / ” 。 |
@@ -272,14 +272,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | user | string | 是 |  | XHR 的所有请求的可选用户名 。 |
 | password | string | 是 |  | XHR 的所有请求都可以选择密码 。 |
 | timeout | number | 是 | 0 | 可选 XHR 超时值, 以毫秒计. |
-| localScheme | Array.\<string> | 是 |  | 装入器认为属于“ 本地” 文件的可选方案。 如果未指定, 默认为: `[ 'file://', 'capacitor://' ]` 。 |
+| localScheme | Array.\<string> | 是 |  | 资源加载器认为属于“ 本地” 文件的可选方案。 如果未指定, 默认为: `[ 'file://', 'capacitor://' ]` 。 |
 | withCredentials | boolean | 是 | false | 备选XHR withCredentials值. |
 | imageLoadType | string | 是 | "'XHR'" | 图像的可选负载类型, `XHR`是默认的,或者 `HTMLImageElement`是轻量级方式的. |
 | maxRetries | number | 是 | 2 | 如果文件负载失败, 重试的次数 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/LoaderConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/LoaderConfig.js#L1)  
 引入版本：3.0.0
 
@@ -289,7 +289,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> MouseInputConfig {#static-mouseinputconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | * | 是 | null | 鼠标管理器在其中监听鼠标输入事件。 默认是游戏布 。 |
 | preventDefaultDown | boolean | 是 | true | 如果`true`,DOM `mousedown`事件将设置`preventDefault`. |
@@ -299,7 +299,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/MouseInputConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/MouseInputConfig.js#L1)  
 引入版本：3.0.0
 
@@ -314,7 +314,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/NOOP.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/NOOP.js#L1)  
 引入版本：3.0.0
 
@@ -328,11 +328,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | ---- | ---- | -------- | ----------- |
 | default | string | 是 | 默认物理系统。 它会为每个场景启动。 Phaser 提供“ arcade ”、“ 影响 ” 和“ matter ” 。 |
 | arcade | [Phaser.Types.Physics.Arcade.ArcadeWorldConfig](/api/typedef/types-physics-arcade#arcadeworldconfig) | 是 | 拱门物理配置. |
-| matter | [Phaser.Types.Physics.Matter.MatterWorldConfig](/api/typedef/types-physics-matter#matterworldconfig) | 是 | 物质物理配置. |
+| matter | [Phaser.Types.Physics.Matter.MatterWorldConfig](/api/typedef/types-physics-matter#matterworldconfig) | 是 | Matter 物理配置. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/PhysicsConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/PhysicsConfig.js#L1)  
 引入版本：3.0.0
 
@@ -351,7 +351,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/PluginObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/PluginObject.js#L1)  
 引入版本：3.8.0
 
@@ -363,17 +363,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 是 | 在插件管理器中识别插件的密钥 。 |
+| key | string | 是 | 在插件管理器中识别插件的键 。 |
 | plugin | * | 是 | 插件本身。 通常为类/ 构造器 。 |
 | start | boolean | 是 | 是否自动启动插件 。 |
 | systemKey | string | 是 | 对于场景插件,请在此键下添加该插件到场景的系统对象(`this.sys.KEY`,从场景). |
-| sceneKey | string | 是 | 对于场景插件,请在此密钥下添加该插件到场景对象(`this.KEY`,从场景). |
-| mapping | string | 是 | 如果要将此插件注入 Scene 系统, 这就是所用的属性密钥映射 。 |
+| sceneKey | string | 是 | 对于场景插件,请在此键下添加该插件到场景对象(`this.KEY`,从场景). |
+| mapping | string | 是 | 如果要将此插件注入 Scene 系统, 这就是所用的属性键映射 。 |
 | data | * | 是 | 任意数据传递到插件的 init() 方法 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/PluginObjectItem.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/PluginObjectItem.js#L1)  
 引入版本：3.8.0
 
@@ -383,7 +383,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> RenderConfig {#static-renderconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | antialias | boolean | 是 | true | `true`设定为ZZ时,WebGL使用线性插图绘制缩放或旋转纹理,使外观平滑. `false`设定为ZG2Z时,WebGL使用近邻插图,使外观更加简洁. `false`还禁止游戏画布本身的反异化,如果浏览器支持,则在游戏画布缩放时. |
 | antialiasGL | boolean | 是 | true | 设置 `antialias` 属性, 当创建 WebGL 上下文时。 设置此值不会影响随后创建的纹理或画布样式属性 。 |
@@ -401,16 +401,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | failIfMajorPerformanceCaveat | boolean | 是 | false | 如果浏览器判断性能,则让它中止创建 WebGL 上下文,这是不可接受的。 |
 | powerPreference | string | 是 | "'default'" | "高性能","低功率"或"默认",向浏览器提示游戏可能使用多少设备功率. |
 | batchSize | number | 是 | 16384 | 默认 WebGL 批量大小。 表示可添加到单个批量中的 _quads_ 数目 。 |
-| maxLights | number | 是 | 10 | 光机座单相机范围内允许可见的灯光最大数量. |
+| maxLights | number | 是 | 10 | 光机座单摄像机范围内允许可见的灯光最大数量. |
 | maxTextures | number | 是 | -1 | WebGL模式下,此模式设置了GPU纹理的最大使用数量。默认的 -1将使用所有可用的单位。 WebGL1 spec表示所有浏览器应提供最小的8个. |
 | mipmapFilter | string | 是 | "''" | 创建 WebGL 纹理时使用的 MIPmap magFilter 。 除非您想要创建 MIPmaps 。 请不要设置 。 设置为以下之一 : “ NEAREST ” 、 “ LINEST_ MIPMAP_ NEAREST” 、 “ LinEAR_ MIPMAp_ NEARET ” 、 “ NEARET_ MIPMAF_ NEAREP” 、 “ NEAREST_ MIPMEP_ LINEAR ” 或 “ LINEAR_ MIAPPMAP_ LINEER ” 。 |
 | mipmapRegeneration | boolean | 是 | false | 是否为帧布设重生 mipmaps 。 如果这是假的, 帧布设者不会使用 mipmaps 。 如果是真假, 帧布设人员会使用 `mipmapFilter`Z 设置, 如果重画, 则重生 mipmas 。 这会影响过滤器和动态图案。 Mipmap 生成成本昂贵( 每条纹理10微秒或更多秒), 所以请小心此设置 。 |
 | autoMobileTextures | boolean | 是 | true | 如果检测到iOS或Android, 请自动限制WebGL每批使用1个纹理。 这可以帮助某些设备的性能 。 |
-| renderNodes | Object.\<[Phaser.Types.Core.RenderNodesConfig](/api/typedef/types-core#rendernodesconfig)> | 是 |  | 将自定义 Render 节点地图添加到 WebGL 渲染器中。 数值将被添加到 Render Node Manager 中, 以密钥作为名称 。 |
+| renderNodes | Object.\<[Phaser.Types.Core.RenderNodesConfig](/api/typedef/types-core#rendernodesconfig)> | 是 |  | 将自定义 Render 节点地图添加到 WebGL 渲染器中。 数值将被添加到 Render Node Manager 中, 以键作为名称 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/RenderConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/RenderConfig.js#L1)  
 引入版本：3.0.0
 
@@ -422,12 +422,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 是 | 用作RenderNode名称的密钥 。 |
+| key | string | 是 | 用作RenderNode名称的键 。 |
 | function | * | 是 | 朗德节点本身可以运行. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/RenderNodesConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/RenderNodesConfig.js#L1)  
 引入版本：4.0.0
 
@@ -437,7 +437,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ScaleConfig {#static-scaleconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number \| string | 是 | 1024 | 游戏的基宽度。 可以是整数或字符串 : “ 100% ” 。 如果字符串已经设置了大小的父元素, 则它只能工作 。 |
 | height | number \| string | 是 | 768 | 游戏的基部高度。 可以是一个整数或字符串 : “ 100% ” 。 如果一个字符串, 只有在您设置了有大小的父元素时才会有效 。 |
@@ -455,7 +455,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/ScaleConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/ScaleConfig.js#L1)  
 引入版本：3.16.0
 
@@ -467,7 +467,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/TimeStepCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/TimeStepCallback.js#L1)  
 引入版本：3.0.0
 
@@ -477,14 +477,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TouchInputConfig {#static-touchinputconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | * | 是 | null | 触摸管理器在听触摸输入事件的地方,默认是游戏画布. |
 | capture | boolean | 是 | true | 触摸输入事件是否使用 preventDefault () 调用它们 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/TouchInputConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/TouchInputConfig.js#L1)  
 引入版本：3.0.0
 
@@ -494,14 +494,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> WidthHeight {#static-widthheight}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 宽度。 |
 | height | number | 是 | 0 | 高处. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Core
+**所属**: Phaser.Types.Core
 > 源码：[src/core/typedefs/WidthHeight.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/typedefs/WidthHeight.js#L1)  
 引入版本：3.16.0
 

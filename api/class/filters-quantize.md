@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 量化过滤控制器 。
 
-这个控制器管理着相机上的量化效应.
+这个控制器管理着摄像机上的量化效应.
 
 量化可以减少图像中独特的颜色数量, 其依据是每个颜色通道的一定有限的步骤。 这有利于创建反演或分层化效果 。
 
@@ -21,7 +21,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的摄像机. |
 | config | [Phaser.Types.Filters.QuantizeConfig](/api/typedef/types-filters#quantizeconfig) | 是 | 用于量化效果的配置对象 。 |
 
 ---

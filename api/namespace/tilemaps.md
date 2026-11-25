@@ -55,17 +55,17 @@ Phaser 提列玛普常数用于定向.
 
 **说明:**
 
-从给定的密钥或数据创建 Tilemap。 如果给定的密钥或数据都没有, 请将 Tilemap 改为空白。 从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
+从给定的键或数据创建 Tilemap。 如果给定的键或数据都没有, 请将 Tilemap 改为空白。 从 CSV 或 2D 阵列加载时, 您应该指定 tileWidth & tileHeight。从图中解析时, tileWidth, tileHeight,宽度和高度将从地图数据中拉出。对于空地图,您应当指定 tileWidth, tileHeight,宽度和高度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 蒂莱玛普属于的场景. |
-| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的密钥. |
+| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的键. |
 | tileWidth | number | 是 | 32 | 以像素表示的瓦片宽度 。 |
 | tileHeight | number | 是 | 32 | 瓦片在像素中的高度. |
 | width | number | 是 | 10 | 以瓦片计的地图宽度 。 |
-| height | number | 是 | 10 | 地图的高度,以瓷砖计. |
+| height | number | 是 | 10 | 地图的高度,以瓦片计. |
 | data | Array.\<Array.\<number>> | 是 |  | 与其从缓存中加载,还可以直接从2D的片片索引中加载. |
 | insertNull | boolean | 是 | false | 控制如何处理地图数据中的空牌, 索引为 - 1 的牌。 如果 `true`, 空位置将获得 `null` 的值。 如果 `false` , 空位置将得到索引为 - 1 的一个牌对象, 如果您有大片的地图, 而牌块数据不需要更改, 那么设置这个值为 `true` 将会帮助内存消耗。 然而, 如果您的地图很小, 或者您需要动态更新牌, 那么就留下默认值设定 。 |
 

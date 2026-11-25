@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AddEffectBloomConfig {#static-addeffectbloomconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | threshold | number | 是 | 0.5 | 下亮度阈值,用于渠道对开花的贡献,范围为0-1. |
 | blurRadius | number | 是 | 2 | 开花时光线半径模糊. |
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/AddEffectBloomConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/AddEffectBloomConfig.js#L1)  
 引入版本：4.0.0
 
@@ -30,14 +30,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| item | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 花朵的物体或相机。 |
+| item | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 花朵的物体或摄像机。 |
 | parallelFilters | [Phaser.Filters.ParallelFilters](/api/class/filters-parallelfilters) | 否 | 将模糊的光线与原始图像混合起来的平行过滤器。 |
 | threshold | [Phaser.Filters.Threshold](/api/class/filters-threshold) | 否 | 断绝图像较暗光的临界滤镜 |
 | blur | [Phaser.Filters.Blur](/api/class/filters-blur) | 否 | 模糊的过滤器,从图像中散发出亮光 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/AddEffectBloomReturn.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/AddEffectBloomReturn.js#L1)  
 引入版本：4.0.0
 
@@ -47,7 +47,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AddEffectShineConfig {#static-addeffectshineconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | radius | number | 是 | 0.5 | 光线的宽度,按目标大小的比例计算. |
 | direction | number | 是 | 0.5 | 0 的光线向右方向移动, 顺时针增加。 方向改变光线从目标哪个角落移动, 这是梯度形状向量的方向 。 |
@@ -67,7 +67,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/AddEffectShineConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/AddEffectShineConfig.js#L1)  
 引入版本：4.0.0
 
@@ -79,8 +79,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| item | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 闪光所应用的物体或相机. |
-| gradient | [Phaser.GameObjects.Gradient](/api/class/gameobjects-gradient) | 否 | 控制闪光区域的梯度。 此处没有添加到场景中, 因此一旦所有引用和调值被销毁, 就会被收集到垃圾 。 |
+| item | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 闪光所应用的物体或摄像机. |
+| gradient | [Phaser.GameObjects.Gradient](/api/class/gameobjects-gradient) | 否 | 控制闪光区域的梯度。 此处没有添加到场景中, 因此一旦所有引用和补间被销毁, 就会被收集到垃圾 。 |
 | dynamicTexture | [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) | 否 | 显示梯度的纹理, 使用任何过滤器后。 目标被摧毁时, 将销毁它。 您可以更早销毁它, 但被 tween 访问, 所以请确保 tween 停止 。 |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 控制梯度运动的扭矩。 当更新时, dynamicTexture 会被重画。 目标被摧毁时, 这会被销毁。 您可以提前销毁, 以阻止梯度更新 。 |
 | parallelFilters | [Phaser.Filters.ParallelFilters](/api/class/filters-parallelfilters) | 否 | 将闪光添加到图像的并行过滤器。 如果闪光器处于 `reveal` 模式, 则此功能将不会定义。 属于目标, 当目标被摧毁时将被移除。 您可以自己移除它, 以去除闪光效果, 如果不是 `reveal` 模式的话 。 |
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/AddEffectShineReturn.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/AddEffectShineReturn.js#L1)  
 引入版本：4.0.0
 
@@ -98,7 +98,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> AddMaskShapeConfig {#static-addmaskshapeconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | shape | string | 是 | "'circle'" | 要创建的形状类型。 这可以是“ 圆形 ” 、 “ 椭圆形 ” 、 “ 方形 ” 或 “ 矩形 ” 。 |
 | aspectRatio | number | 是 | 1 | 椭圆和矩形的宽度与高度之比。 |
@@ -113,7 +113,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/AddMaskShapeConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/AddMaskShapeConfig.js#L1)  
 引入版本：4.0.0
 
@@ -125,7 +125,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/CallCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/CallCallback.js#L1)  
 引入版本：3.0.0
 
@@ -135,7 +135,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> FitToRegionItemCoverage {#static-fittoregionitemcoverage}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 1 | 覆盖项目的有效宽度。 |
 | height | number | 是 | 1 | 覆盖项目的有效高度。 |
@@ -144,7 +144,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/FitToRegionItemCoverage.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/FitToRegionItemCoverage.js#L1)  
 引入版本：4.0.0
 
@@ -154,7 +154,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GridAlignConfig {#static-gridalignconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | -1 | 项中的网格宽度( 不像素 ) - 1 表示所有项的水平设置, 不论数量大小。 如果将这个值和高度都设定为 - 1, 此值将覆盖它, 且忽略 `height` 值 。 |
 | height | number | 是 | -1 | 项中的网格高度( 不像素 ) 。 - 1 表示所有项的垂直排列, 不管数量大小。 如果将这个值和 `width` 都设置为 - 1, 那么 `width` 将覆盖它, 这个值会被忽略 。 |
@@ -166,7 +166,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Actions
+**所属**: Phaser.Types.Actions
 > 源码：[src/actions/typedefs/GridAlignConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/actions/typedefs/GridAlignConfig.js#L1)  
 引入版本：3.0.0
 

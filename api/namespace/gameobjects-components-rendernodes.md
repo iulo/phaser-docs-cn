@@ -18,7 +18,7 @@ static
 
 自定义的 WebGL 渲染此游戏对象的节点。 RenderNodes 负责管理此游戏对象的渲染过程。 默认的一组 RenderNodes 在引擎中编码, 但渲染器会先检查此对象, 以查看是否设置了自定义节点 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -38,7 +38,7 @@ static
 
 此游戏对象的默认 RenderNodes。 RenderNodes 负责管理此游戏对象的渲染过程。 如果没有设置自定义的, 则使用这些节点 。
 
-伦德节点由他们作用的独特密钥识别.
+伦德节点由他们作用的独特键识别.
 
 共同的角色键包括:
 
@@ -48,7 +48,7 @@ static
 
 - “ 文本器” : 负责处理元素的纹理。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -70,7 +70,7 @@ static
 
 伦德节点以自己的名字而不是角色存储数据.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -94,7 +94,7 @@ static
 
 当游戏对象被添加到场景时, 这种方法被称为“ 游戏对象”。 它负责设置此游戏对象将使用的默认渲染节点 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -121,9 +121,9 @@ static
 
 如果 `key` 未设置,则创建。如果设置了,则更新。
 
-如果`value`是未定义的,且`key`存在,则将密钥移除.
+如果`value`是未定义的,且`key`存在,则将键移除.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -131,7 +131,7 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | renderNode | string \| [Phaser.Renderer.WebGL.RenderNodes.RenderNode](/api/class/renderer-webgl-rendernodes-rendernode) | 否 | 用于设定数据的渲染节点。 如果字符串, 应该是渲染节点的名称 。 |
-| key | string | 否 | 要设置的属性的密钥 。 |
+| key | string | 否 | 要设置的属性的键 。 |
 | value | * | 否 | 设置属性的值 。 |
 
 
@@ -157,12 +157,12 @@ static
 
 如果节点不能设置,则不做修改.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 设置渲染节点的角色的关键 。 |
 | renderNode | string \| [Phaser.Renderer.WebGL.RenderNodes.RenderNode](/api/class/renderer-webgl-rendernodes-rendernode) | null | 否 |  | 在此游戏对象上设置的渲染节点。 要么是一个字符串, 要么是一个RenderNode实例。 如果 `null` , 渲染节点及其数据将被移除 。 |

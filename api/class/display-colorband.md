@@ -241,7 +241,7 @@ ColorBand可以通过设置中间点,混合的色彩空间,以及插图风格来
 - 可用一个颜色对象。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "0x000000" | 乐队开始时的颜色. |
 | end | number \| string | Array.\<number> | [Phaser.Display.Color](/api/namespace/display-color) | 是 |  | 带尾的颜色。 如果未指定, 则等于 `start` 。 |

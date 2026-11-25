@@ -64,7 +64,7 @@ B 按钮 (右)
 
 **说明:**
 
-放下枪
+方向键下
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L31](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L31)  
@@ -96,7 +96,7 @@ B 按钮 (右)
 
 **说明:**
 
-D - 左边
+方向键左
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L41](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L41)  
@@ -208,7 +208,7 @@ XBox 菜单按钮
 
 **说明:**
 
-右侧D- 板
+方向键右
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L51](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L51)  
@@ -304,7 +304,7 @@ XBox 菜单按钮
 
 **说明:**
 
-装好
+方向键上
 
 
 > 源码：[src/input/gamepad/configs/XBox360_Controller.js#L21](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/configs/XBox360_Controller.js#L21)  

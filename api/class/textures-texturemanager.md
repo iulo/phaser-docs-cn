@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 它是处理游戏中所有纹理的全局管理器。 您可以通过 `this.textures` 属性从场景内部访问它 。
 
-它的作用是管理您游戏使用的所有纹理。 它可以在全球创建、 更新和删除纹理, 以及从外部文件中解析纹理数据, 如图示工作表和纹理图集 。
+它的作用是管理您游戏使用的所有纹理。 它可以在全球创建、 更新和删除纹理, 以及从外部文件中解析纹理数据, 如精灵表和纹理图集 。
 
 螺旋和其他基于纹理的游戏对象直接从这一类获得其纹理数据.
 
@@ -219,13 +219,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement \| Array.\<HTMLImageElement> | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素/s,或 Phaser 纹理. |
 | data | object \| Array.\<object> | 否 | 纹理图集数据/s. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
 > 源码：[src/textures/TextureManager.js#L763](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L763)  
@@ -254,16 +254,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement \| Array.\<HTMLImageElement> | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素/s,或 Phaser 纹理. |
 | data | object \| Array.\<object> | 否 | 纹理图集数据/s. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L810](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L810)  
@@ -292,16 +292,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement \| Array.\<HTMLImageElement> | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素/s,或 Phaser 纹理. |
 | data | object \| Array.\<object> | 否 | 纹理图集数据/s. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L879](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L879)  
@@ -326,16 +326,16 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement \| Array.\<HTMLImageElement> | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素——每PCT页一个,或现有的Phaser纹理. |
 | data | object | 否 | 解码的PCT数据对象. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选数据图像元素(正常的地图源). |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L942](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L942)  
@@ -362,16 +362,16 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素,或Phaser纹理. |
 | data | object | 否 | 纹理图集 XML 数据. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L996](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L996)  
@@ -394,14 +394,14 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | data | * | 否 | Base64编码了数据. |
 
 
 **返回值:** [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) - 这个纹理管理器实例 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add), [Phaser.Textures.Events#event:ERROR](/api/event/textures-events#error), [Phaser.Textures.Events#event:LOAD](/api/event/textures-events#load)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add), [Phaser.Textures.Events#event:ERROR](/api/event/textures-events#error), [Phaser.Textures.Events#event:LOAD](/api/event/textures-events#load)
 
 
 > 源码：[src/textures/TextureManager.js#L352](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L352)  
@@ -420,17 +420,17 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 从已有的 Canvas 元素创建新的 Canvas 纹理对象, 并添加到此纹理管理器中, 除非 `skipCache` 是真的 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 |  | 纹理中独特的基于字符串的键. |
 | source | HTMLCanvasElement | 否 |  | 构成新纹理基础的坎瓦斯元素. |
 | skipCache | boolean | 是 | false | 跳过将此纹理添加到缓存中吗 ? |
 
 
-**返回值:** [Phaser.Textures.CanvasTexture](/api/class/textures-canvastexture) - 创建的 Canvas 纹理, 或 `null` 如果密钥已经使用 。
+**返回值:** [Phaser.Textures.CanvasTexture](/api/class/textures-canvastexture) - 创建的 Canvas 纹理, 或 `null` 如果键已经使用 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L667](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L667)  
@@ -455,15 +455,15 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | textureData | [Phaser.Types.Textures.CompressedTextureData](/api/typedef/types-textures#compressedtexturedata) | 否 | 压缩纹理数据对象. |
 | atlasData | object | 是 | 可选纹理图集数据. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L545](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L545)  
@@ -492,18 +492,18 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 可选的,您也可以通过此方法的动态纹理实例,使其添加到纹理管理器中.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string \| [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) | 否 |  | 此纹理的字符串键。 必须是纹理管理器中唯一的。 或是一个动态图例 。 |
-| width | number | 是 | 256 | 此动态纹理在像素中的宽度。 默认为 256 x 256。 如果一个实例被传递为密钥, 则忽略 。 |
-| height | number | 是 | 256 | 此动态纹理在像素中的高度。 默认为 256 x 256。 如果一个实例被传递为密钥, 则忽略了 。 |
-| forceEven | boolean | 是 | true | 如果宽度和高度是奇数, 是否应该强制它们均匀 ? 如果一个实例被传递为密钥, 则忽略 。 |
+| width | number | 是 | 256 | 此动态纹理在像素中的宽度。 默认为 256 x 256。 如果一个实例被传递为键, 则忽略 。 |
+| height | number | 是 | 256 | 此动态纹理在像素中的高度。 默认为 256 x 256。 如果一个实例被传递为键, 则忽略了 。 |
+| forceEven | boolean | 是 | true | 如果宽度和高度是奇数, 是否应该强制它们均匀 ? 如果一个实例被传递为键, 则忽略 。 |
 
 
-**返回值:** [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) - 已创建的动态纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.DynamicTexture](/api/class/textures-dynamictexture) - 已创建的动态纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L704](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L704)  
@@ -525,24 +525,24 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 这只可用WebGL模式.
 
-**Tags:**
+**标签:**
 
  - webglonly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 |  | 纹理中独特的基于字符串的键. |
 | width | number | 否 |  | 纹理的宽度. |
 | height | number | 否 |  | 纹理的高度. |
 | color | number | 是 | "0x000000" | 纹理之色. |
 | alpha | number | 是 | 0 | 纹理的α. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理,或 `null` 如果密钥已经使用,或者宽度或高度不为正数。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理,或 `null` 如果键已经使用,或者宽度或高度不为正数。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L1250](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1250)  
@@ -558,7 +558,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-使用一个WebGLTextureWrapper,并从中创建一个Phaser纹理,它使用给定的密钥添加到纹理管理器中.
+使用一个WebGLTextureWrapper,并从中创建一个Phaser纹理,它使用给定的键添加到纹理管理器中.
 
 这样您就可以使用纹理作为像Sprites这样的基于纹理的游戏对象的普通纹理.
 
@@ -569,14 +569,14 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | glTexture | [Phaser.Renderer.WebGL.Wrappers.WebGLTextureWrapper](/api/class/renderer-webgl-wrappers-webgltexturewrapper) | 否 | 源流雷达纹理. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L505](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L505)  
@@ -597,15 +597,15 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement | 否 | 源图像元素. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L470](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L470)  
@@ -621,19 +621,19 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-使用给定的密钥在纹理管理器中添加一个纹理。这允许您使用纹理作为像Sprites这样的纹理游戏对象的普通纹理。
+使用给定的键在纹理管理器中添加一个纹理。这允许您使用纹理作为像Sprites这样的纹理游戏对象的普通纹理。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | renderTexture | [Phaser.GameObjects.RenderTexture](/api/class/gameobjects-rendertexture) | 否 | 源流雷达纹理. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L607](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L607)  
@@ -649,25 +649,25 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-将 Sprite 工作表添加到此纹理管理器中 。
+将 精灵表添加到此纹理管理器中 。
 
-在 Phaser 术语中, Sprite 工作表是一个包含不同帧的纹理, 但每个帧的尺寸完全相同, 无法修剪或旋转。 这与Texture Packer 等工具创建的纹理图集不同, 与 Aseprite 或 旧街机 等应用获得的固定帧导出更相似 。
+在 Phaser 术语中, 精灵表是一个包含不同帧的纹理, 但每个帧的尺寸完全相同, 无法修剪或旋转。 这与Texture Packer 等工具创建的纹理图集不同, 与 Aseprite 或 旧街机 等应用获得的固定帧导出更相似 。
 
 至Phaser 3.60,您可以使用这种方法在现有的Phaser纹理中添加一个图示表.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中唯一基于字符串的密钥。 如果您提供了 Phaser 纹理作为第 2 个参数, 请给出一个空字符串 。 |
+| key | string | 否 | 纹理中唯一基于字符串的键。 如果您提供了 Phaser 纹理作为第 2 个参数, 请给出一个空字符串 。 |
 | source | HTMLImageElement \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 源图像元素,或Phaser纹理. |
-| config | [Phaser.Types.Textures.SpriteSheetConfig](/api/typedef/types-textures#spritesheetconfig) | 否 | 此 Sprite 工作表的配置对象 。 |
+| config | [Phaser.Types.Textures.SpriteSheetConfig](/api/typedef/types-textures#spritesheetconfig) | 否 | 此 精灵表的配置对象 。 |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建或更新的纹理, 或者如果密钥已经使用的话, `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建或更新的纹理, 或者如果键已经使用的话, `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L1098](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1098)  
@@ -683,21 +683,21 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-将 Sprite 工作表添加到此纹理管理器中, 即该工作表作为框架存在于纹理图集中 。
+将 精灵表添加到此纹理管理器中, 即该工作表作为框架存在于纹理图集中 。
 
 在Phaser术语中,Sprite Sheet是一个包含不同框架的纹理,但每个框架的大小完全相同,不能修剪或旋转.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
-| config | [Phaser.Types.Textures.SpriteSheetFromAtlasConfig](/api/typedef/types-textures#spritesheetfromatlasconfig) | 否 | 此 Sprite 工作表的配置对象 。 |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
+| config | [Phaser.Types.Textures.SpriteSheetFromAtlasConfig](/api/typedef/types-textures#spritesheetfromatlasconfig) | 否 | 此 精灵表的配置对象 。 |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L1152](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1152)  
@@ -722,16 +722,16 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | data | Uint8Array | 否 | 纹理的颜色数据 。 |
 | width | number | 否 | 纹理的宽度. |
 | height | number | 否 | 纹理的高度. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L1211](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1211)  
@@ -758,16 +758,16 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | HTMLImageElement | 否 | 源图像元素. |
 | data | object | 否 | 纹理图集数据. |
 | dataSource | HTMLImageElement \| HTMLCanvasElement | Array.\<HTMLImageElement> | Array.\<HTMLCanvasElement> | 是 | 一种可选的数据图像元素. |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
-**Fires:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
+**触发事件:** [Phaser.Textures.Events#event:ADD](/api/event/textures-events#add)
 
 
 > 源码：[src/textures/TextureManager.js#L1047](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1047)  
@@ -783,7 +783,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-检查给定的纹理密钥, 如果密钥已经使用, 则记录一个控制台. error, 然后返回假 。
+检查给定的纹理键, 如果键已经使用, 则记录一个控制台. error, 然后返回假 。
 
 如果你想避开控制台. warn, 那就用`TextureManager.exists`代替.
 
@@ -809,12 +809,12 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-使用纹理密钥和框架名称,如果找到,则返回该框架的克隆。
+使用纹理键和框架名称,如果找到,则返回该框架的克隆。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 否 | 要克隆的框架的字符串或索引 。 |
 
 
@@ -839,13 +839,13 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | source | [Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource) \| Array.\<[Phaser.Types.Textures.TextureSource](/api/typedef/types-textures#texturesource)> | 否 | 用于创建纹理的源或数组源,通常为图像,但也可以是Canvas或其他类型. |
 | width | number | 是 | 纹理的宽度。 这是可选的, 并且自动从源图像中导出 。 |
 | height | number | 是 | 纹理的高度。 这是可选的, 并且自动从源图像中衍生出来 。 |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果密钥已经使用的话, 则使用 `null` 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 创建的纹理, 或如果键已经使用的话, 则使用 `null` 。
 
 
 > 源码：[src/textures/TextureManager.js#L1303](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1303)  
@@ -866,14 +866,14 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 罐头元素自动集合,称这种方法将从罐头波尔提取一个免费的画布,或者在没有可用的情况下创建一个.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 |  | 纹理中独特的基于字符串的键. |
 | width | number | 是 | 256 | 坎瓦斯元素的宽度 。 |
 | height | number | 是 | 256 | 坎瓦斯元素的高度. |
 
 
-**返回值:** [Phaser.Textures.CanvasTexture](/api/class/textures-canvastexture) - 创建的 Canvas 纹理, 或 `null` 如果密钥已经使用 。
+**返回值:** [Phaser.Textures.CanvasTexture](/api/class/textures-canvastexture) - 创建的 Canvas 纹理, 或 `null` 如果键已经使用 。
 
 
 > 源码：[src/textures/TextureManager.js#L637](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L637)  
@@ -892,7 +892,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 销毁纹理管理器和存储在其中的所有纹理管理器。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/textures/TextureManager.js#L1744](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1744)  
@@ -931,15 +931,15 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-检查给定的密钥, 以查看此纹理管理器中是否有使用它纹理的纹理 。
+检查给定的键, 以查看此纹理管理器中是否有使用它纹理的纹理 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 
 
-**返回值:** boolean - 如果此纹理管理器中存在匹配给定密钥的纹理, 则返回 `true` 。
+**返回值:** boolean - 如果此纹理管理器中存在匹配给定键的纹理, 则返回 `true` 。
 
 
 > 源码：[src/textures/TextureManager.js#L1330](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1330)  
@@ -955,23 +955,23 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-从纹理管理器返回匹配给定密钥的纹理。
+从纹理管理器返回匹配给定键的纹理。
 
 如果钥匙是`undefined`,它会还原`__DEFAULT`纹理.
 
-如果密钥是纹理的实例,它会返回实例.
+如果键是纹理的实例,它会返回实例.
 
-如果密钥是框架实例, 它将会返回框架父纹理实例 。
+如果键是框架实例, 它将会返回框架父纹理实例 。
 
-最后,如果给定了密钥,但没有找到,也没有纹理或框架实例,它会返回`__MISSING`纹理.
+最后,如果给定了键,但没有找到,也没有纹理或框架实例,它会返回`__MISSING`纹理.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 纹理,或纹理,或框架实例中唯一基于字符串的密钥 。 |
+| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 纹理,或纹理,或框架实例中唯一基于字符串的键 。 |
 
 
-**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 匹配给定密钥的纹理 。
+**返回值:** [Phaser.Textures.Texture](/api/class/textures-texture) - 匹配给定键的纹理 。
 
 
 > 源码：[src/textures/TextureManager.js#L1345](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1345)  
@@ -987,22 +987,22 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-获得一个已有的纹理框架并将其转换为基质64编码的图像,并返回基质64数据.
+获得一个已有的纹理帧并将其转换为基质64编码的图像,并返回基质64数据.
 
 也可以提供图像类型和编码器选项.
 
-这将只与位图纹理框架(例如从纹理图集创建的纹理框架)配合。 它不会与 GL 纹理对象(例如Shaders) 或 Render 纹理对象配合。 对于这些对象,请参见 WebGL Snapshot 函数 。
+这将只与位图纹理帧(例如从纹理图集创建的纹理帧)配合。 它不会与 GL 纹理对象(例如Shaders) 或 Render 纹理对象配合。 对于这些对象,请参见 WebGL Snapshot 函数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 |  | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 |  | 框架的字符串名称,或整数索引,从纹理中获取。 |
 | 类型 | string | 是 | "'image/png'" | 表示图像格式的 DOMSTring。默认格式类型是图像/png 。 |
 | encoderOptions | number | 是 | 0.92 | 0到 1 之间的数字表示图像格式所使用的图像质量, 使用图像/ jpeg 和图像/ webp 等失落压缩。 如果此参数是其它任何参数, 则使用图像质量的默认值。 默认值为 0. 92. 其他参数被忽略 。 |
 
 
-**返回值:** string - 碱基64编码数据,或者无法找到纹理框架的空字符串.
+**返回值:** string - 碱基64编码数据,或者无法找到纹理帧的空字符串.
 
 
 > 源码：[src/textures/TextureManager.js#L405](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L405)  
@@ -1018,16 +1018,16 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-使用纹理密钥和框架名称,如果找到,则返回引用该框架的选项。
+使用纹理键和框架名称,如果找到,则返回引用该框架的选项。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 | 框架的字符串名称,或整数索引,从纹理中获取。 |
 
 
-**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理框架对象 。
+**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 纹理帧对象 。
 
 
 > 源码：[src/textures/TextureManager.js#L1404](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1404)  
@@ -1050,7 +1050,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 纹理内部像素的x坐标. |
 | y | number | 否 | 纹理内像素的y坐标. |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 | 框架的字符串或索引 。 |
 
 
@@ -1077,7 +1077,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 纹理内部像素的x坐标. |
 | y | number | 否 | 纹理内像素的y坐标. |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 | 框架的字符串或索引 。 |
 
 
@@ -1097,10 +1097,10 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-返回一个带有此纹理管理器中所有纹理密钥的阵列。 输出阵列将排除 `__DEFAULT` 、 `__MISSING` 、 `__WHITE` 和 `__NORMAL` 密钥 。
+返回一个带有此纹理管理器中所有纹理键的阵列。 输出阵列将排除 `__DEFAULT` 、 `__MISSING` 、 `__WHITE` 和 `__NORMAL` 键 。
 
 
-**返回值:** Array.\<string> - 包含存储在此纹理管理器中的所有纹理密钥的阵列 。
+**返回值:** Array.\<string> - 包含存储在此纹理管理器中的所有纹理键的阵列 。
 
 
 > 源码：[src/textures/TextureManager.js#L1469](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1469)  
@@ -1116,7 +1116,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-解析“ key” 参数并返回一个纹理框架实例 。
+解析“ key” 参数并返回一个纹理帧实例 。
 
 它可以接受以下格式:
 
@@ -1128,7 +1128,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 | key | string \| array | object | [Phaser.Textures.Texture](/api/class/textures-texture) | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 | 解开的钥匙 |
 
 
-**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 如果找到纹理框架对象, 或如果没有定义, 则未定义 。
+**返回值:** [Phaser.Textures.Frame](/api/class/textures-frame) - 如果找到纹理帧对象, 或如果没有定义, 则未定义 。
 
 
 > 源码：[src/textures/TextureManager.js#L1423](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L1423)  
@@ -1151,13 +1151,13 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 纹理要删除的密钥,或指代它. |
+| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 | 纹理要删除的键,或指代它. |
 
 
 **返回值:** [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) - 纹理经理.
 
 
-**Fires:** [Phaser.Textures.Events#event:REMOVE](/api/event/textures-events#remove)
+**触发事件:** [Phaser.Textures.Events#event:REMOVE](/api/event/textures-events#remove)
 
 
 > 源码：[src/textures/TextureManager.js#L282](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/TextureManager.js#L282)  
@@ -1173,12 +1173,12 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-从纹理管理器中删除密钥, 但不会破坏正在使用密钥的纹理 。
+从纹理管理器中删除键, 但不会破坏正在使用键的纹理 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 从纹理列表中删除的密钥 。 |
+| key | string | 否 | 从纹理列表中删除的键 。 |
 
 
 **返回值:** [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) - 纹理经理.
@@ -1197,7 +1197,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 
 **说明:**
 
-将纹理使用的密钥更改为新提供的密钥 。
+将纹理使用的键更改为新提供的键 。
 
 旧键被移除,允许重新使用.
 
@@ -1206,8 +1206,8 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| currentKey | string | 否 | 您想要重命名的纹理当前基于字符串的密钥 。 |
-| newKey | string | 否 | 用于纹理的新的基于字符串的密钥 。 |
+| currentKey | string | 否 | 您想要重命名的纹理当前基于字符串的键 。 |
+| newKey | string | 否 | 用于纹理的新的基于字符串的键 。 |
 
 
 **返回值:** boolean - 如果纹理键成功改名为`true`,否则`false`.
@@ -1229,7 +1229,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 重置内部的 Samp 对象, 准备绘制并返回 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | alpha | number | 是 | 1 | 用来使用的α. |
 | tint | number | 是 | "0xffffff" | 仅限WebGL,使用的色调 |
@@ -1254,7 +1254,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 重置内部的 Tile 闪光对象, 准备绘制, 并返回 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | alpha | number | 是 | 1 | 用来使用的α. |
 | tint | number | 是 | "0xffffff" | 仅限WebGL,使用的色调 |
@@ -1282,7 +1282,7 @@ PCT 是一个紧凑的面向行的地图集格式。一个单一的PCT文件可�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 将设置纹理的游戏对象 。 |
-| key | string | 否 | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 | 框架的字符串或索引 。 |
 
 

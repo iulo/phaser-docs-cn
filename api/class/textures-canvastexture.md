@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | manager | [Phaser.Textures.TextureManager](/api/class/textures-texturemanager) | 否 | 引用此纹理属于的纹理管理器 。 |
-| key | string | 否 | 此纹理中独特的基于字符串的密钥 。 |
+| key | string | 否 | 此纹理中独特的基于字符串的键 。 |
 | source | HTMLCanvasElement | 否 | 用作此纹理底部的画布元素 。 |
 | width | number | 否 | 画布的宽度。 |
 | height | number | 否 | 画布的高度 |
@@ -230,7 +230,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 清除指定区域中的 Canvas 纹理, 将其重置为透明。 如果没有给出区域, 则清除整个 Canvas 纹理 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 区域左上角的x坐标以清除. |
 | y | number | 是 | 0 | 区域左上角的y坐标来清除. |
@@ -258,7 +258,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 破坏这种纹理并发布其来源和框架的引用。
 
 
-**Overrides:** Phaser.Textures.Texture#销毁
+**重写:** Phaser.Textures.Texture#销毁
 
 
 > 源码：[src/textures/CanvasTexture.js#L626](https://github.com/phaserjs/phaser/blob/v4.1.0/src/textures/CanvasTexture.js#L626)  
@@ -277,7 +277,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 绘制给定的图像或 Canvas 元素到此 CanvasTexture, 然后更新内部的图像数据缓冲器和阵列 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 坐标x以绘制源 。 |
 | y | number | 否 |  | 绘制源的Y坐标 。 |
@@ -301,12 +301,12 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 
 **说明:**
 
-绘制给定的纹理框架到这个 CanvasTexture, 然后更新内部的图像数据缓冲器和阵列 。
+绘制给定的纹理帧到这个 CanvasTexture, 然后更新内部的图像数据缓冲器和阵列 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 否 |  | 纹理中独特的基于字符串的密钥. |
+| key | string | 否 |  | 纹理中独特的基于字符串的键. |
 | frame | string \| number | 是 |  | 框架的字符串名称,或整数索引,从纹理中获取。 |
 | x | number | 是 | 0 | 坐标x以绘制源 。 |
 | y | number | 是 | 0 | 绘制源的Y坐标 。 |
@@ -458,7 +458,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 如果您自创建以来已经绘制到 CanvasTexture 中, 您必须拨打 `CanvasTexture.update` 来刷新阵列缓冲器, 否则它可能返回过时的颜色值, 或者更糟糕的是 - 在试图访问一个不存在的阵列元素时, 丢出一个运行时错误 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 区域左上角的x坐标。 必须是这个 CanvasTexture 的尺寸, 并且是一个整数 。 |
 | y | number | 是 | 0 | 区域左上角的y坐标。 必须是这个 CanvasTexture 的尺寸, 并且是一个整数 。 |
@@ -485,7 +485,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 将图像数据置于指定坐标处的 CanvasTexture 上下文中。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | imageData | ImageData | 否 |  | 图像数据将放置在指定位置 。 |
 | x | number | 否 |  | 将 imageData 放置在 X 坐标上。 必须在 CanvasTexture 的尺寸范围内, 并是一个整数 。 |
@@ -536,7 +536,7 @@ Canvas 的宽度。 如果您想要更改, 此属性只读, 请使用 `setSize` 
 这是一项昂贵的操作, 大量运行, 所以少用。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 要设置的像素的x坐标。 必须是这个 CanvasTexture 的尺寸, 并且是一个整数 。 |
 | y | number | 否 |  | 要设置的像素的y坐标。 必须是这个 CanvasTexture 的尺寸, 并且是一个整数 。 |

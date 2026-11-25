@@ -8,7 +8,7 @@ Blitter Game Object 是一类特殊容器, 用于创建、 更新和管理 Bob �
 
 如果您需要将大量框架在屏幕周围爆破, 那么闪光物体就值得调查。 它们对使用自己的特效系统特别有用 。
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -24,7 +24,7 @@ this.load.image(key, url);
 var blitter = this.add.blitter(x, y, key);
 ```
 
-- `key` : 此游戏对象用于渲染的纹理密钥。 纹理在纹理管理器中已经存在 。
+- `key` : 此游戏对象用于渲染的纹理键。 纹理在纹理管理器中已经存在 。
 
 从 JSON 添加缓冲容器
 
@@ -135,7 +135,7 @@ blitter.clear();
   // bob.reset(x, y, frame);
   ```
 
-### 框架 {#frame}
+### 帧 {#frame}
 
 - Get
 
@@ -190,7 +190,7 @@ blitter.clear();
   // bob.visible = v;
   ```
 
-### 阿尔法 {#alpha}
+### 不透明度（Alpha） {#alpha}
 
 - Get
   
@@ -205,7 +205,7 @@ blitter.clear();
   // bob.aplha = v;
   ```
 
-### 叮当 {#tint}
+### 着色（Tint） {#tint}
 
 - Get
 
@@ -246,7 +246,7 @@ var mask = bob.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 

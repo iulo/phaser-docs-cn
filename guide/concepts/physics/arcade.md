@@ -2,21 +2,19 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/physics/arcade)
 
-弧形物理(Arcade Physics),其名称的意思是,它指的更是"arcade"或"retro"风格的游戏,虽然它并不限于那些游戏,它是一个轻量级的物理系统,只能处理两种不同类型的物理形状:矩形和圆形,它不是用于复杂的物理模拟,而是用于平台,自上而下游戏,或谜题游戏等简单事物,它使用速度非常快,容易,具有许多帮助者功能,但由于其性质,它确实有其局限性.
+Arcade 物理是一个轻量级物理系统，碰撞形状包括矩形和圆形，适合平台跳跃、俯视角游戏和解谜等场景。它提供常用的辅助函数，复杂的物理模拟则需要更完整的物理系统。
 
-弧形物理必须启用后才能使用。 可以通过游戏配置或每场进行。 一旦启用, 您可以在游戏中添加物理功能的游戏对象。 这将允许您使用内置物理功能控制螺旋, 如速度、 加速、 重力等 。
+可以在游戏配置中全局启用 Arcade 物理，也可以按场景启用。启用后，为需要参与模拟的游戏对象添加物理体，就能设置其速度、加速度和重力等属性。背景图和游戏标志等对象通常无需启用物理。
 
-默认情况下, 无法为物理启用游戏对象。 这是因为并非所有游戏对象都需要。 例如, 背景图像或游戏标志可能不需要受到物理影响, 而玩家字符需要。 因此, 您必须启用您特别希望受其影响的游戏对象上的物理。 我们将在后面章节中详细论述这个问题 。
+Arcade 和 Matter 是两套独立的物理系统。它们可以同时在同一个场景工作，每个对象应选择其中一套，使用不同系统的对象彼此不会发生碰撞。
 
-弧形物理和物质物理是两个独立的系统。例如,弧形物理图案不能与物质物理图案相撞。不能在两个系统上添加相同的Sprite,你需要选择一个或另一个。尽管这样做是不寻常的,但这两个系统实际上可以在同一场景中平行运行。这意味着可以有一个使用Arcade物理的Sprite和一个使用物质物理的Sprite,它们将同时工作,尽管它们不会一起互动。
+## Arcade 物理世界 {#arcade-world}
 
-## 街机世界协会 {#arcade-world}
-
-弧形物理世界是所有物理相互作用在弧形物理系统内部发生的环境,它管理物体运动,碰撞和各种力量反应的模拟. 弧形物理世界跟踪它内部的所有物体(称为"天体"),处理它们的物理相互作用,并随时间推移更新它们的位置和速度.
+Arcade 物理世界是所有物理相互作用在Arcade 物理系统内部发生的环境,它管理物体运动,碰撞和各种力量反应的模拟. Arcade 物理世界跟踪它内部的所有物体(称为"物理体"),处理它们的物理相互作用,并随时间推移更新它们的位置和速度.
 
 ### 配置 {#configuration}
 
-弧形物理`config`对象定义了全球的弧形物理系统的行为.
+Arcade 物理`config`对象定义了全球的Arcade 物理系统的行为.
 
 - 基本配置对象
 
@@ -97,7 +95,7 @@ const game = new Phaser.Game(config);
      - 启用 : `this.physics.enableUpdate()`
      - 禁用: `this.physics.disableUpdate()`
 
-#### 步骤 {#step}
+#### 单步模拟 {#step}
 
 - 一步一步推进模拟.
 
@@ -111,7 +109,7 @@ const game = new Phaser.Game(config);
   this.physics.world.step(delta);
   ```
 
-### 控制器 {#control}
+### 控制 {#control}
 
 #### 暂停 {#pause}
 
@@ -125,9 +123,9 @@ this.physics.pause();
 this.physics.resume();
 ```
 
-#### 每个框架的持续时间 {#duration-per-frame}
+#### 每帧时长 {#duration-per-frame}
 
-- 时间尺度
+- 时间缩放倍率
 
   ```js
   this.physics.world.timeScale = timeScale;
@@ -143,7 +141,7 @@ this.physics.resume();
   this.physics.world.setFPS(framerate);
   ```
 
-#### 拖动过滤选项 {#tile-filter-options}
+#### 瓦片筛选选项 {#tile-filter-options}
 
 ```js
 var option = this.physics.world.tileFilterOptions;
@@ -159,7 +157,7 @@ var option = this.physics.world.tileFilterOptions;
   }
   ```
 
-### 体质 {#body}
+### 物理体 {#body}
 
 #### 启用 {#enable}
 
@@ -189,15 +187,15 @@ this.physics.world.disable(gameObject);
 
 - `gameObject`:一个游戏对象,或游戏对象的阵列,或游戏对象在`Group`中.
 
-#### 添加/移动正文 {#addremove-body}
+#### 添加或移除物理体 {#addremove-body}
 
-- 加入身体到本地的搜索树上。
+- 加入物理体到本地的搜索树上。
 
   ```js
   this.physics.world.add(body);
   ```
 
-- 从本地搜索树上移除尸体 。
+- 从本地搜索树上移除物理体 。
 
   ```js
   this.physics.world.disableBody(body);
@@ -205,13 +203,13 @@ this.physics.world.disable(gameObject);
 
 ### 碰撞 {#collision}
 
-#### 设定约束 {#set-bound}
+#### 设置边界 {#set-bound}
 
 以[body object](#body-collision-bounds)或[game object](#game-object-collision-bounds)表示绑定.
 
-#### 对抗器回调( C) {#collider-callback}
+#### 碰撞器与回调 {#collider-callback}
 
-- 添加对撞机
+- 添加碰撞器
 
   - 推出来
 
@@ -264,13 +262,13 @@ this.physics.world.disable(gameObject);
       };
       ```
 
-- 删除对撞机
+- 删除碰撞器
 
   ```js
   this.physics.world.removeCollider(collider);
   ```
 
-- 解除对撞机
+- 解除碰撞器
 
   ```js
   collider.active = false; // Set true to activate again
@@ -282,7 +280,7 @@ this.physics.world.disable(gameObject);
   collider.name = name;
   ```
 
-#### 测试不发生碰撞 {#testing-without-colliders}
+#### 不使用碰撞器进行碰撞检测 {#testing-without-colliders}
 
 - 测试重叠
 
@@ -334,7 +332,7 @@ this.physics.world.disable(gameObject);
   });
   ```
 
-### 街机世界界限 {#arcade-world-bounds}
+### Arcade 物理世界的边界 {#arcade-world-bounds}
 
 #### 启用 {#enable-1}
 
@@ -388,7 +386,7 @@ this.physics.world.disable(gameObject);
     var right = this.physics.world.bounds.right;
     ```
 
-### 区域内的尸体 {#bodies-inside-an-area}
+### 查询区域内的物理体 {#bodies-inside-an-area}
 
 - 重叠矩形区域
 
@@ -403,8 +401,8 @@ this.physics.world.disable(gameObject);
   );
   ```
 
-  - `includeDynamic`: 设置`true`以搜索动态天体
-  - `includeStatic` 设置 `true` 搜索静态天体
+  - `includeDynamic`: 设置`true`以搜索动态物理体
+  - `includeStatic` 设置 `true` 搜索静态物理体
 
 - 重叠一个圆形区域
 
@@ -418,8 +416,8 @@ this.physics.world.disable(gameObject);
   );
   ```
 
-  - `includeDynamic`: 设置`true`以搜索动态天体
-  - `includeStatic` 设置 `true` 搜索静态天体
+  - `includeDynamic`: 设置`true`以搜索动态物理体
+  - `includeStatic` 设置 `true` 搜索静态物理体
 
 ### 环绕 {#wrap}
 
@@ -440,7 +438,7 @@ this.physics.world.wrap(gameObject, padding);
   this.physics.moveTo(gameObject, x, y, speed, maxTime);
   ```
 
-- 移动到有稳定速度的天体
+- 移动到有稳定速度的物理体
 
   ```js
   this.physics.moveToObject(gameObject, destination, speed, maxTime);
@@ -491,9 +489,9 @@ this.physics.world.wrap(gameObject, padding);
 
 引力总值=世界. 引力+体. 引力
 
-### 机构 {#bodies}
+### 物理体 {#bodies}
 
-#### 关闭/装修 {#closestfurthest}
+#### 最近与最远的物理体 {#closestfurthest}
 
 - Closest
 
@@ -502,7 +500,7 @@ this.physics.world.wrap(gameObject, padding);
   // var body = this.physics.closest(point, targets);
   ```
 
-  - `targets`: Arcade物理游戏对象,身体或静态体的阵列.
+  - `targets`: Arcade物理游戏对象,物理体或静态体的阵列.
 
 - Furthest
 
@@ -511,15 +509,15 @@ this.physics.world.wrap(gameObject, padding);
   // var body = this.physics.furthest(point, targets);
   ```
 
-  - `targets`: Arcade物理游戏对象,身体或静态体的阵列.
+  - `targets`: Arcade物理游戏对象,物理体或静态体的阵列.
 
 ### 调试 {#debug}
 
-#### 绘制正文速度( F) {#draw-body-velocity}
+#### 绘制物理体与速度方向 {#draw-body-velocity}
 
 - 动态体的界限
 
-  - 启用绘图正文
+  - 启用绘图物理体
 
     ```js
     this.physics.world.defaults.debugShowBody = true;
@@ -533,7 +531,7 @@ this.physics.world.wrap(gameObject, padding);
 
 - 静态体的边界
 
-  - 启用绘图正文
+  - 启用绘图物理体
 
     ```js
     this.physics.world.defaults.debugShowStaticBody = true;
@@ -547,7 +545,7 @@ this.physics.world.wrap(gameObject, padding);
 
 - 速度的方向和规模
 
-  - 启用绘图正文
+  - 启用绘图物理体
 
     ```js
     this.physics.world.defaults.debugShowVelocity = true;
@@ -607,7 +605,7 @@ var graphics = this.physics.world.debugGraphic;
   });
   ```
 
-- 两具尸体重叠,其中至少有一具有他们的`onOverlap`财产被设定为`true`.
+- 两具物理体重叠,其中至少有一具有他们的`onOverlap`属性被设定为`true`.
 
   ```js
   this.physics.world.on(
@@ -618,7 +616,7 @@ var graphics = this.physics.world.debugGraphic;
   );
   ```
 
-- 两具尸体重叠,其中至少有一具有他们的`onCollide`财产被设定为`true`.
+- 两具物理体重叠,其中至少有一具有他们的`onCollide`属性被设定为`true`.
 
   ```js
   this.physics.world.on(
@@ -656,11 +654,11 @@ var graphics = this.physics.world.debugGraphic;
   );
   ```
 
-### 更新环路 {#update-loop}
+### 更新循环 {#update-loop}
 
 1. 场景. sys.events:更新
-   1. 更新每个天体的位置角度( R)
-   1. 每个对撞机处理
+   1. 更新每个物理体的位置角度( R)
+   1. 每个碰撞器处理
    1. 更新每个机构的最后立场
    1. 释放 `worldstep` 事件
 1. 现场.sys.events: 后期
@@ -679,11 +677,11 @@ SceneUpdate --> SceneEventPostUpdate
 SceneEventPostUpdate --> Render
 ```
 
-## 拱门正体 {#arcade-body}
+## Arcade 物理体 {#arcade-body}
 
-弧形物理体与游戏对象相关联,并管理其物理属性和行为.
+Arcade 物理体与游戏对象相关联,并管理其物理属性和行为.
 
-### 使用量 {#usage}
+### 用法 {#usage}
 
 #### 获得物理体 {#get-physics-body}
 
@@ -716,7 +714,7 @@ SceneEventPostUpdate --> Render
 
 #### 启用和禁用 {#enable-and-disable}
 
-此天体是否通过物理模拟更新 。
+此物理体是否通过物理模拟更新 。
 
 - 启用( 默认)
 
@@ -773,7 +771,7 @@ SceneEventPostUpdate --> Render
 
 #### 不可移动 {#immovable}
 
-是否可以通过与另一个天体的碰撞来移动此天体 。
+是否可以通过与另一个物理体的碰撞来移动此物理体 。
 
 - Enable
 
@@ -795,9 +793,9 @@ SceneEventPostUpdate --> Render
   var immovable = body.immovable;
   ```
 
-#### 可推车 {#pushable}
+#### 可推动 {#pushable}
 
-如果此天体能被另一个天体推动, 则设定 。
+如果此物理体能被另一个物理体推动, 则设定 。
 
 - 启用( 动态正体的默认值)
 
@@ -881,7 +879,7 @@ SceneEventPostUpdate --> Render
   var speed = body.maxSpeed;
   ```
 
-##### 最大速度( T) {#max-velocity}
+##### 各轴的最大速度 {#max-velocity}
 
 - Set
 
@@ -1002,9 +1000,9 @@ SceneEventPostUpdate --> Render
   // body.useDamping = true;
   ```
 
-##### 幻灯片因数 {#slide-factor}
+##### 滑动系数 {#slide-factor}
 
-幻灯片因子控制当此天体被另一个天体推动时,其速度被保存多少 。
+幻灯片因子控制当此物理体被另一个物理体推动时,其速度被保存多少 。
 
 ```js
 body.slideFactor.set(x, y);
@@ -1031,7 +1029,7 @@ body.reset(x, y);
 body.stop();
 ```
 
-###### 闪光灯 {#friction}
+###### 摩擦力 {#friction}
 
 如果这个机身是`immovable`,并且正在运动,这就是这个机身在每根轴上被骑机体得到的动作比例.
 
@@ -1068,7 +1066,7 @@ body.stop();
 
 ##### 允许旋转 {#allow-rotation}
 
-是否受它的角加速和速度影响此天体的旋转.
+是否受它的角加速和速度影响此物理体的旋转.
 
 - 启用( 默认)
 
@@ -1102,7 +1100,7 @@ body.stop();
   var av = body.angularVelocity;
   ```
 
-##### 角加速 {#angular-acceleration}
+##### 角加速度 {#angular-acceleration}
 
 - Set
 
@@ -1116,7 +1114,7 @@ body.stop();
   var aa = body.angularAcceleration;
   ```
 
-##### 角拖动 {#angular-drag}
+##### 角阻力 {#angular-drag}
 
 降低角速度每秒。
 
@@ -1136,7 +1134,7 @@ body.stop();
 
 ##### 碰撞类别 {#collision-category}
 
-默认情况下, 所有天体都与其他天体碰撞。 碰撞类定义了不同物理天体在碰撞过程中的相互作用, 它指定了哪些天体应当碰撞,哪些天体不应当碰撞。 碰撞类通常使用一个位图设定, 每个类别由两个的独特力量来代表。 天体可以与多个碰撞类别相碰撞 。
+默认情况下, 所有物理体都与其他物理体碰撞。 碰撞类定义了不同物理物理体在碰撞过程中的相互作用, 它指定了哪些物理体应当碰撞,哪些物理体不应当碰撞。 碰撞类通常使用一个位图设定, 每个类别由两个的独特力量来代表。 物理体可以与多个碰撞类别相碰撞 。
 
 - 碰撞类别
   - Get
@@ -1157,7 +1155,7 @@ body.stop();
       - `(1 << 2)`
       - ...
       - `(1 << 31)`
-  - 重置碰撞类别, 到默认行为( 所有天体与所有其他天体碰撞)
+  - 重置碰撞类别, 到默认行为( 所有物理体与所有其他物理体碰撞)
 
     ```js
     body.resetCollisionCategory();
@@ -1194,7 +1192,7 @@ body.stop();
 
     - `category`:一个单一类别值.
 
-##### 车体碰撞界限 {#body-collision-bounds}
+##### 物理体的碰撞边界 {#body-collision-bounds}
 
 碰撞界限定义了用于碰撞探测的区域.
 
@@ -1214,13 +1212,13 @@ body.stop();
 
 ##### 碰撞偏移 {#collision-offset}
 
-调整物理天体碰撞相对于图示的位置。当图示视觉与碰撞区域不相匹配时使用。
+调整物理物理体碰撞相对于图示的位置。当图示视觉与碰撞区域不相匹配时使用。
 
 ```js
 body.setOffset(x, y);
 ```
 
-##### 推出来 {#push-out}
+##### 挤出重叠的物理体 {#push-out}
 
 进行两个物理允许对象之间的碰撞检查和分离。
 
@@ -1234,7 +1232,7 @@ this.physics.add.collider(objectsA, objectsB);
   - 物理组( 添加或删除游戏对象)
   - 分组( 添加或删除游戏对象)
 
-##### 回拨 {#callbacks}
+##### 回调 {#callbacks}
 
 回调是每个步骤在两个对象之间发生碰撞或重叠时调用的函数.
 
@@ -1242,13 +1240,13 @@ this.physics.add.collider(objectsA, objectsB);
 var collider = this.physics.add.collider(objectsA, objectsB, collideCallback, processCallback, callbackContext);
 ```
 
-- `collideCallback` : 当两个对象碰撞时, 需要引用的调值 。
+- `collideCallback` : 当两个对象碰撞时, 需要引用的补间 。
 - `processCallback`: 当两个对象碰撞时, 调用。 必须返回布尔 。
 - `callbackContext` : 调用回调的范围.
 
-##### 指向内侧 {#point-inside}
+##### 检测点是否在内部 {#point-inside}
 
-`hitTest`功能检查游戏世界中是否有特定的点与任何物理天体相撞,如果发生碰撞则返回`true`,否则返回`false`.
+`hitTest`功能检查游戏世界中是否有特定的点与任何物理物理体相撞,如果发生碰撞则返回`true`,否则返回`false`.
 
 ```js
 var hit = body.hitTest(x, y);
@@ -1294,7 +1292,7 @@ var hit = body.hitTest(x, y);
 
 ##### 弹跳 {#bounce}
 
-定义身体在与另一个物体碰撞后如何反弹。弹跳值通常在0到1. 0之间,使身体停止弹跳,并在碰撞时停止。1 使身体以碰撞前的同样速度反弹。大于1 值会提高碰撞后的体速。
+定义物理体在与另一个物体碰撞后如何反弹。弹跳值通常在0到1. 0之间,使物理体停止弹跳,并在碰撞时停止。1 使物理体以碰撞前的同样速度反弹。大于1 值会提高碰撞后的体速。
 
 - Set
 
@@ -1316,7 +1314,7 @@ var hit = body.hitTest(x, y);
   var by = body.bounce.y;
   ```
 
-##### 身体世界界限 {#body-world-bounds}
+##### 物理体与世界边界 {#body-world-bounds}
 
 - [Default world bounds](#arcade-world-bounds)
 - 自定义世界界限 :
@@ -1347,9 +1345,9 @@ var hit = body.hitTest(x, y);
   var right = body.world.bounds.right;
   ```
 
-##### 已封禁 {#blocked}
+##### 受阻状态 {#blocked}
 
-检查此天体是否与瓦片相撞, 或是世界边界 。
+检查此物理体是否与瓦片相撞, 或是世界边界 。
 
 - 下移时被屏蔽
 
@@ -1407,13 +1405,13 @@ var hit = body.hitTest(x, y);
   var m = body.mass;
   ```
 
-#### 静态体 {#static-body}
+#### 静态物理体 {#static-body}
 
-一个静态弧形物理体从不移动,也不自动与其母游戏对象同步。任何在创建或添加该体后对母体的起源,位置或尺度的更改都需要手动更新到静态体。静态体可以与其他天体碰撞,但从不通过碰撞移动。
+一个静态Arcade 物理体从不移动,也不自动与其父游戏对象同步。任何在创建或添加该体后对母体的起源,位置或尺度的更改都需要手动更新到静态体。静态体可以与其他物理体碰撞,但从不通过碰撞移动。
 
 ##### 同步 {#sync}
 
-以父游戏对象同步天体 _ 位置_ 和 _ 大小_ 。
+以父游戏对象同步物理体 _ 位置_ 和 _ 大小_ 。
 
 ```js
 body.updateFromGameObject();
@@ -1423,8 +1421,8 @@ body.updateFromGameObject();
 
 为视觉调试目的绘制 StaticBody 的图形化表示。
 
-- 身体的束缚
-  - 启用绘图正文
+- 物理体的束缚
+  - 启用绘图物理体
 
     ```js
     body.debugShowBody = true;
@@ -1437,17 +1435,17 @@ body.updateFromGameObject();
     ```
 
 - 速度的方向和规模
-  - 启用绘图正文
+  - 启用绘图物理体
 
     ```js
     body.debugShowVelocity = true;
     ```
 
-## 街机游戏对象 {#arcade-game-object}
+## 带 Arcade 物理的游戏对象 {#arcade-game-object}
 
 游戏对象是您的游戏的构件。常见的街机游戏对象包括:Sprites, Images, and Groups.
 
-### 使用量 {#usage-1}
+### 用法 {#usage-1}
 
 #### 添加游戏对象 {#adding-game-objects}
 
@@ -1465,7 +1463,7 @@ body.updateFromGameObject();
   var image = this.physics.add.image(x, y, key);
   ```
 
-##### 闪烁对象 {#sprite-object}
+##### 精灵对象 {#sprite-object}
 
 - 静态对象,从 [Sprite object](/api/class/physics-arcade-sprite) 延伸
 
@@ -1533,9 +1531,9 @@ body.updateFromGameObject();
     };
     ```
 
-##### 启用正文 {#enable-body}
+##### 启用物理体 {#enable-body}
 
-- 启用正文
+- 启用物理体
 
   ```js
   gameObject.enableBody();
@@ -1551,7 +1549,7 @@ body.updateFromGameObject();
 
   - `enableGameObject` : 也激活此游戏对象 。
   - `showGameObject` : 另显示此游戏对象 。
-- 禁用正文
+- 禁用物理体
 
   ```js
   gameObject.disableBody();
@@ -1585,7 +1583,7 @@ body.updateFromGameObject();
   var vy = gameObject.body.velocity.y;
   ```
 
-###### 最大速度( T) {#max-velocity-1}
+###### 各轴的最大速度 {#max-velocity-1}
 
 - Set
 
@@ -1692,7 +1690,7 @@ body.updateFromGameObject();
   var immovable = gameObject.body.immovable;
   ```
 
-##### 可推车 {#pushable-1}
+##### 可推动 {#pushable-1}
 
 - Enable
 
@@ -1712,9 +1710,9 @@ body.updateFromGameObject();
   var pushable = gameObject.body.pushable;
   ```
 
-###### 幻灯片因数 {#slide-factor-1}
+###### 滑动系数 {#slide-factor-1}
 
-幻灯片因子控制当此天体被另一个天体推动时,其速度被保存多少 。
+幻灯片因子控制当此物理体被另一个物理体推动时,其速度被保存多少 。
 
 ```js
 gameObject.setSlideFactor(x, y);
@@ -1727,7 +1725,7 @@ gameObject.setSlideFactor(x, y);
   - `0`~`1`之间的其他值:在推力结束时保持原速的`x`/`y`.
     - 将此与`setDrag()`方法结合,以创建减速.
 
-###### 闪光灯 {#friction-1}
+###### 摩擦力 {#friction-1}
 
 如果这个机身是`immovable`,并且正在运动,这就是这个机身在每根轴上被骑机体得到的动作比例.
 
@@ -1775,7 +1773,7 @@ gameObject.setSlideFactor(x, y);
 
 ##### 允许旋转 {#allow-rotation-1}
 
-是否受它的角加速和速度影响此天体的旋转.
+是否受它的角加速和速度影响此物理体的旋转.
 
 - 启用( 默认)
 
@@ -1809,7 +1807,7 @@ gameObject.setSlideFactor(x, y);
   var av = gameObject.body.angularVelocity;
   ```
 
-##### 角加速 {#angular-acceleration-1}
+##### 角加速度 {#angular-acceleration-1}
 
 - Set
 
@@ -1823,7 +1821,7 @@ gameObject.setSlideFactor(x, y);
   var aa = gameObject.body.angularAcceleration;
   ```
 
-##### 角拖动 {#angular-drag-1}
+##### 角阻力 {#angular-drag-1}
 
 - Set
 
@@ -1841,7 +1839,7 @@ gameObject.setSlideFactor(x, y);
 
 ##### 碰撞类别 {#collision-category-1}
 
-默认情况下, 所有天体都与其他天体碰撞。 碰撞类定义了不同物理天体在碰撞过程中的相互作用, 它指定了哪些天体应当碰撞,哪些天体不应当碰撞。 碰撞类通常使用一个位图设定, 每个类别由两个的独特力量来代表。 天体可以与多个碰撞类别相碰撞 。
+默认情况下, 所有物理体都与其他物理体碰撞。 碰撞类定义了不同物理物理体在碰撞过程中的相互作用, 它指定了哪些物理体应当碰撞,哪些物理体不应当碰撞。 碰撞类通常使用一个位图设定, 每个类别由两个的独特力量来代表。 物理体可以与多个碰撞类别相碰撞 。
 
 - 碰撞类别
   - Get
@@ -1862,7 +1860,7 @@ gameObject.setSlideFactor(x, y);
       - `(1 << 2)`
       - ...
       - `(1 << 31)`
-  - 重置碰撞类别, 到默认行为( 所有天体与所有其他天体碰撞)
+  - 重置碰撞类别, 到默认行为( 所有物理体与所有其他物理体碰撞)
 
     ```js
     gameObject.resetCollisionCategory();
@@ -1916,13 +1914,13 @@ gameObject.setSlideFactor(x, y);
   gameObject.setCircle(radius, offsetX, offsetY);
   ```
 
-###### 偏移( E) {#offset}
+###### 偏移 {#offset}
 
 ```js
 gameObject.setOffset(x, y);
 ```
 
-##### 推出来 {#push-out-1}
+##### 挤出重叠的物理体 {#push-out-1}
 
 进行两个物理允许对象之间的碰撞检查和分离。
 
@@ -1936,7 +1934,7 @@ this.physics.add.collider(objectsA, objectsB);
   - 物理组( 添加或删除游戏对象)
   - 分组( 添加或删除游戏对象)
 
-##### 回拨 {#callbacks-1}
+##### 回调 {#callbacks-1}
 
 回调是每个步骤在两个对象之间发生碰撞或重叠时调用的函数.
 
@@ -1944,13 +1942,13 @@ this.physics.add.collider(objectsA, objectsB);
 var collider = this.physics.add.collider(objectsA, objectsB, collideCallback, processCallback, callbackContext);
 ```
 
-- `collideCallback` : 当两个对象碰撞时, 需要引用的调值 。
+- `collideCallback` : 当两个对象碰撞时, 需要引用的补间 。
 - `processCallback`: 当两个对象碰撞时, 调用。 必须返回布尔 。
 - `callbackContext` : 调用回调的范围.
 
-#### 指向内侧 {#point-inside-1}
+#### 检测点是否在内部 {#point-inside-1}
 
-`hitTest`功能检查游戏世界中是否有特定的点与任何物理天体相撞,如果发生碰撞则返回`true`,否则返回`false`.
+`hitTest`功能检查游戏世界中是否有特定的点与任何物理物理体相撞,如果发生碰撞则返回`true`,否则返回`false`.
 
 ```js
 var hit = gameObject.hitTest(x, y);
@@ -2010,7 +2008,7 @@ var hit = gameObject.hitTest(x, y);
 
 ##### 同步 {#sync-1}
 
-同步静态游戏对象中的天体位置和大小。
+同步静态游戏对象中的物理体位置和大小。
 
 ```js
 gameObject.refreshBody();

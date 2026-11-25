@@ -69,7 +69,7 @@ static
 
 **说明:**
 
-场景正在通过它的加载器插件装入资产。 装入完成后, 创建方法将被调用 。
+场景正在通过它的加载器插件装入资源。 装入完成后, 创建方法将被调用 。
 
 
 > 源码：[src/scene/const.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/const.js#L45)  
@@ -223,7 +223,7 @@ static
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 用于检查插件的场景系统对象 。 |
 
 
-**返回值:** array - 用于 Scene 的插件密钥。 Scene 级别插件优先于全局默认。 如果没有配置插件, 返回空的数组 。
+**返回值:** array - 用于 Scene 的插件键。 Scene 级别插件优先于全局默认。 如果没有配置插件, 返回空的数组 。
 
 
 > 源码：[src/scene/GetScenePlugins.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/GetScenePlugins.js#L9)  

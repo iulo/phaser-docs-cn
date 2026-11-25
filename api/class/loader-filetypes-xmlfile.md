@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-xmlfile)
 
-适合 Phaser 加载器加载的单个 XML 文件。 装入后, XML 响应文本会被解析成 DOM 文件对象, 并存储在全局 XML 缓存中, 由您提供的文件密钥键键 。 然后您可以随时通过 `this.cache.xml.get(key)` 检索, 并使用标准的 DOM 方法进行转录 。
+适合 Phaser 加载器加载的单个 XML 文件。 装入后, XML 响应文本会被解析成 DOM 文件对象, 并存储在全局 XML 缓存中, 由您提供的文件键键键 。 然后您可以随时通过 `this.cache.xml.get(key)` 检索, 并使用标准的 DOM 方法进行转录 。
 
 这些是使用Phaser.Loader.LoaderPlugin#xml方法创建的,一般不直接创建.
 
@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.XMLFileConfig](/api/typedef/types-loader-filetypes#xmlfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 装入此文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.xml`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. xml" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile自动调用。 使用 `ParseXML` 将原始 XHR 响应文本解析为 XML , 并将生成的 DOM 文档保存在 `this.data` 中。 如果解析成功, 请使用 `onProcessComplete` 将文档添加到 XML 缓存中, 并推进负载队列。 如果解析失败( 即 `ParseXML` 返回一个 falsy 值) , 则使用 `onProcessError` 来替代 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/XMLFile.js#L69](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/XMLFile.js#L69)  

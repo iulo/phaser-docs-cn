@@ -194,7 +194,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将此 WebGL 缓冲器绑定到当前 WebGLRendering Context 。 它使用此包件的 bufferType 来确定使用哪个绑定点 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | unbind | boolean | 是 | false | 是否将缓冲器解开 。 |
 
@@ -270,7 +270,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 更新此 WebGLBaferWrapper 中的数据。 dataBuffer 必须包含要上传到 GPU 的新数据。 指定的数据范围从本地的 dataBuffer 上传到 GPO 上的 WebGLBaffer 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bytes | number | 是 |  | 缓冲器中要更新的字节数。 如果不指定, 则会更新整个缓冲 。 |
 | offset | number | 是 | 0 | 冲抵到缓冲器开始更新数据 。 |

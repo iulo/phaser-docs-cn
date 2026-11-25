@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new WebGLTextureWrapper(renderer, mipLevel, minFilter, magFilter, wrapT, wrapS, format, pixels, width, height, [pma], [forceSize], [flipY])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 拥有这个包装的 WebGLRender 实例 。 |
 | mipLevel | number | 否 |  | 纹理的米普级. |
@@ -291,7 +291,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-电话 `__SPECTOR_Metadata` 财产的损益 `WebGLTexture`,用于添加额外的数据到调试SpectorJS集成中.
+电话 `__SPECTOR_Metadata` 属性的损益 `WebGLTexture`,用于添加额外的数据到调试SpectorJS集成中.
 
 
 > 源码：[src/renderer/webgl/wrappers/WebGLTextureWrapper.js#L491](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/wrappers/WebGLTextureWrapper.js#L491)  
@@ -378,7 +378,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设定每存储值的 WebGLTexture 参数 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/renderer/webgl/wrappers/WebGLTextureWrapper.js#L382](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/wrappers/WebGLTextureWrapper.js#L382)  

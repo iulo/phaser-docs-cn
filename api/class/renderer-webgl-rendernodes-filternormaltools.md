@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-filternormaltools)
 
-这个 RenderNode 使正常 Tools 过滤器效果, 处理正常的地图纹理, 用于照明计算。 它使用视图矩阵来改变正常的矢量, 使其相对于相机正确定向, 从而能够在正常的游戏对象上准确定向照明 。
+这个 RenderNode 使正常 Tools 过滤器效果, 处理正常的地图纹理, 用于照明计算。 它使用视图矩阵来改变正常的矢量, 使其相对于摄像机正确定向, 从而能够在正常的游戏对象上准确定向照明 。
 
 通过控制器可以实现两个可选特性: 面对电,使点产品提高给定的导电器使照明掉落变尖或变软; 比例输出,将正常的贡献与方向向量和半径混合在一起,产生下游照明通道使用的比例值.
 
@@ -75,7 +75,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#setupUniforms
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterNormalTools.js#L86](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterNormalTools.js#L86)  
@@ -100,7 +100,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilterShader#updateShaderConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/filters/FilterNormalTools.js#L54](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/filters/FilterNormalTools.js#L54)  

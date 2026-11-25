@@ -59,7 +59,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 运行过滤器,处理输入绘图上下文,并返回包含输出纹理的绘图上下文。
 
-此基础执行无所作为, 并被子类所覆盖。 每个子类应该通过使用 WebGL 阴影程序对输出绘图上下文进行写入来应用其特定的视觉效果( 例如模糊或发光) 。
+此基础执行无所作为, 并被子类所覆盖。 每个子类应该通过使用 WebGL 着色器程序对输出绘图上下文进行写入来应用其特定的视觉效果( 例如模糊或发光) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -70,7 +70,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | padding | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 输入纹理中添加的粘贴符, 以创建输出纹理。 如果未指定, 控制器将用来获取粘贴符。 内部过滤器应该未定义, 因此控制器会按需要扩展纹理; 定义为外部过滤器的上一个过滤器的负粘贴符, 因此纹理会缩小到正确的大小 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 **返回值:** [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) - 包含输出纹理的绘图上下文 。

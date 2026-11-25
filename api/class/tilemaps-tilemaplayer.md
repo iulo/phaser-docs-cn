@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 蒂莱玛普Layer 是负责从蒂莱玛普中渲染一层瓦片数据的游戏对象。 它与一个或多个蒂莱塞特对象结合工作, 提供了实际的瓦片图像。 您通常会通过 `Tilemap.createLayer` 创建蒂莱玛普Leyer, 而不是直接即时生成 。
 
-每个层对应Tilemap内部的LyerData条目,支持所有四个地图方向:Orthogonal、Isometric、Hixagonal和Stagggered。该层处理自己的相机卷动,只向渲染器发送可见的瓷砖,即使对大地图来说,也保持了性能效率。
+每个层对应Tilemap内部的LyerData条目,支持所有四个地图方向:Orthogonal、Isometric、Hixagonal和Stagggered。该层处理自己的摄像机卷动,只向渲染器发送可见的瓦片,即使对大地图来说,也保持了性能效率。
 
 TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,α,以及其他标准游戏对象属性应用到它们.
 
@@ -15,7 +15,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 `new TilemapLayer(scene, tilemap, layerIndex, tileset, [x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属景点 。 |
 | tilemap | [Phaser.Tilemaps.Tilemap](/api/class/tilemaps-tilemap) | 否 |  | 蒂拉玛普这个层是其中的一部分. |
@@ -241,7 +241,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 **说明:**
 
-瓷砖被挤碎时引用的回调 。
+瓦片被挤碎时引用的回调 。
 
 它将调用基于地图方向的另一种功能:
 
@@ -253,9 +253,9 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 1. 此图层的 Phaser.Tilemaps.LayerData 对象
 
-2. 正在切换层的相机。 您可以检查其 `dirty` 属性, 看看它是否自上次凹槽后有所改变 。
+2. 正在切换层的摄像机。 您可以检查其 `dirty` 属性, 看看它是否自上次凹槽后有所改变 。
 
-3. 引用 `culledTiles` 阵列,该阵列应该用来存储要渲染的瓷砖.
+3. 引用 `culledTiles` 阵列,该阵列应该用来存储要渲染的瓦片.
 
 4. 伦德秩序常数.
 
@@ -275,7 +275,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 **说明:**
 
-内部渲染时使用, 上面有相机内可见的瓷砖 。
+内部渲染时使用, 上面有摄像机内可见的瓦片 。
 
 
 > 源码：[src/tilemaps/TilemapLayer.js#L89](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayer.js#L89)  
@@ -329,7 +329,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 你可以控制摄像机是否在制作之前 粘在地上
 
-默认情况下,相机会尝试将瓷砖堆积在这个层中,以避免过度地拖到渲染器上.
+默认情况下,摄像机会尝试将瓦片堆积在这个层中,以避免过度地拖到渲染器上.
 
 然而,有些情况下,您可能希望禁用此选项, 并使用此标记来显示您可以这样做。 也可以使用`setSkipCull` 来查看可链路方法, 它可以做同样的事情 。
 
@@ -717,7 +717,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 **说明:**
 
-返回相机视图中给定的图层中的牌。 渲染时会内部使用。
+返回摄像机视图中给定的图层中的牌。 渲染时会内部使用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -744,12 +744,12 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 销毁此 TilemapLayer, 清除 culled 牌组并删除 cull 调用。 如果 `removeFromTilemap` 设定为 `true`, 也从 cull 中移除 tull 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | removeFromTilemap | boolean | 是 | true | 在销毁前从母端的 Tilemap 中删除此层 。 |
 
 
-**Overrides:** Phaser.Tilemaps.TilemapLayerBase#销毁
+**重写:** Phaser.Tilemaps.TilemapLayerBase#销毁
 
 
 > 源码：[src/tilemaps/TilemapLayer.js#L439](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/TilemapLayer.js#L439)  
@@ -765,10 +765,10 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 **说明:**
 
-当相机将图片堆积在这个层中时, 它会利用它的视线进入世界, 建立一个矩形, 内有图片, 或它们会被熔化。 有时你可能需要扩大这个“ 凸轮形” 的大小, 尤其是如果您计划旋转相机查看层。 通过提供粘贴值来做到这一点。 给出的值是瓦片, 而不是像素。 所以如果平面宽度为 32px, 您将 `paddingX` 设置为 4, 它会给凸轮形加32px x 4( 调整比例) 。
+当摄像机将图片堆积在这个层中时, 它会利用它的视线进入世界, 建立一个矩形, 内有图片, 或它们会被熔化。 有时你可能需要扩大这个“ 凸轮形” 的大小, 尤其是如果您计划旋转摄像机查看层。 通过提供粘贴值来做到这一点。 给出的值是瓦片, 而不是像素。 所以如果平面宽度为 32px, 您将 `paddingX` 设置为 4, 它会给凸轮形加32px x 4( 调整比例) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | paddingX | number | 是 | 1 | 加入 cull 检查 垫的 水平瓦片 。 |
 | paddingY | number | 是 | 1 | 加入 cull 检查粘贴板的附加垂直瓦片的量 。 |
@@ -798,7 +798,7 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 0=右下 1=左下 2=右上 3=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=左下 1=右下 2=右上 3=左下 1=左下 1=左下 3=左下 1=左下 3=左下 1=左下 3=左下 3=左下 3 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右 右
 
-设定渲染顺序不会改变瓷砖或如何将瓷砖储存在地层中,它会完全影响其渲染顺序.
+设定渲染顺序不会改变瓦片或如何将瓦片储存在地层中,它会完全影响其渲染顺序.
 
 既可以提供整数(0至3),也可以提供顺序的字符串版本.
 
@@ -824,14 +824,14 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 **说明:**
 
-你可以控制摄像机在制作之前是否要磨碎瓷砖。
+你可以控制摄像机在制作之前是否要磨碎瓦片。
 
-默认情况下,相机会尝试将瓷砖堆积在这个层中,以避免过度地拖到渲染器上.
+默认情况下,摄像机会尝试将瓦片堆积在这个层中,以避免过度地拖到渲染器上.
 
 但是,有时您可能希望禁用此功能。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 设定为 `true` 停止 culling 瓦片 设定为 `false` 允许 culling 重现 。 |
 
@@ -860,21 +860,21 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 要删除一个无参数的锡称这种方法,或者通过通过白色的`0xffffff`作为锡的颜色.
 
-如果瓷砖已经装了个小装置 那么使用这种方法就可以超过这个
+如果瓦片已经装了个小装置 那么使用这种方法就可以超过这个
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| tint | number | 是 | "0xffffff" | 区域内每块瓷砖都应用着锡色。 以六进制值为单位, 即红色的 `0xff0000` 。 设置为白色( `0xffffff`) , 以重置锡色 。 |
+| tint | number | 是 | "0xffffff" | 区域内每块瓦片都应用着锡色。 以六进制值为单位, 即红色的 `0xff0000` 。 设置为白色( `0xffffff`) , 以重置锡色 。 |
 | tileX | number | 是 |  | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 |  | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 |  | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 |  | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 |  | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 |  | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 |  | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) - 此 Tilemap 层对象 。
@@ -911,21 +911,21 @@ TilemapLayers通过Arcade Physics和Mater.js支持物理学,并且可以有锡,�
 
 使用此方法没有参数可以重设锡特模式为默认值 。
 
-如果一块瓷砖已经有一个锡模式设置,那么调用这种方法将覆盖它 。
+如果一块瓦片已经有一个锡模式设置,那么调用这种方法将覆盖它 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tintMode | [Phaser.TintModes](/api/namespace/tintmodes) | 是 | "Phaser.TintModes.MULTIPLY" | 使用锡金模式 。 |
 | tileX | number | 是 |  | 左侧最瓦的索引(在瓦片坐标中)作为搜索区域的来源. |
 | tileY | number | 是 |  | 用于搜索区域源头的最顶层的瓦片索引(在瓦片坐标中). |
 | width | number | 是 |  | 有多少块瓦片宽度从 `tileX` 索引区域将。 |
-| height | number | 是 |  | 有多少块高的瓷砖从 `tileY` 索引区域将。 |
-| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 |  | 获得瓷砖时可选择的过滤器。 |
+| height | number | 是 |  | 有多少块高的瓦片从 `tileY` 索引区域将。 |
+| filteringOptions | [Phaser.Types.Tilemaps.FilteringOptions](/api/typedef/types-tilemaps#filteringoptions) | 是 |  | 获得瓦片时可选择的过滤器。 |
 
 
 **返回值:** [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) - 此 Tilemap 层对象 。

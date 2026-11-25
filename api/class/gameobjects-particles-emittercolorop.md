@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 
 ---
 
@@ -165,10 +165,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 
 
-**Overrides:** Phaser.GameObjects.Particles.EmitterOp#easedValueEmit
+**重写:** Phaser.GameObjects.Particles.EmitterOp#easedValueEmit
 
 
 **返回值:** number - [Phaser.GameObjects.Particles.EmitterColorOp#start](https://phaser.io/oss/docs/api-documentation/class/gameobjects-particles-emittercolorop.md#start),作为房产的新价值.
@@ -193,11 +193,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子 粒子 粒子 粒子 |
-| key | string | 否 | 财产名称. |
+| key | string | 否 | 属性名称. |
 | t | number | 否 | 目前粒子的正常寿命,在0(出生)至1(死亡)之间. |
 
 
-**Overrides:** Phaser.GameObjects.Particles.EmitterOp#easeValueUpdate
+**重写:** Phaser.GameObjects.Particles.EmitterOp#easeValueUpdate
 
 
 **返回值:** number - 地产的新价值.
@@ -219,7 +219,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 检查 `EmitterOp.propertyValue` 的类型,以确定需要用何种方法才能从此 op 函数返回值。
 
 
-**Overrides:** Phaser.GameObjects.Particles.EmitterOp#getMethod
+**重写:** Phaser.GameObjects.Particles.EmitterOp#getMethod
 
 
 **返回值:** number - 如果未设置颜色属性值, 则使用 `0` , 如果配置了颜色数组, 则使用 `9` 。 其结果应传递给 `setMethods` 。
@@ -262,7 +262,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 配置此颜色 Op 的发回和更新调用, 其依据是当前 `method` 值。 当一个颜色数组存在( 方法 9) 时, 它会将 `propertyValue` 中每个已包装的六进制颜色分解为单独的红、绿和蓝元件数组, 设置线性宽松和插值功能, 并指定易控的发回和更新处理器。 如果设置了颜色值( 方法 0) , 默认的不操作处理器会被使用 。
 
 
-**Overrides:** Phaser.GameObjects.Particles.EmitterOp#setMethods
+**重写:** Phaser.GameObjects.Particles.EmitterOp#setMethods
 
 
 **返回值:** [Phaser.GameObjects.Particles.EmitterColorOp](/api/class/gameobjects-particles-emittercolorop) - 这个 Emitter Op 对象 。

@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-glslfile)
 
-适合装入器装入的单一 GLSL 文件 。
+适合资源加载器装入的单一 GLSL 文件 。
 
 GLSL(OpenGL Shading Language)文件包含WebGL渲染器用于创建自定义视觉效果的阴影源代码. 原始的GLSL源被装入后,被包裹在一个`BaseShader`实例中,并存储在全球的阴影缓存中,可以在此检索并应用到支持自定义阴影的游戏对象,例如使用`Phaser.GameObjects.Shader`类的游戏对象.
 
@@ -18,7 +18,7 @@ GLSL(OpenGL Shading Language)文件包含WebGL渲染器用于创建自定义视�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.GLSLFileConfig](/api/typedef/types-loader-filetypes#glslfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.glsl`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. glsl" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -70,10 +70,10 @@ GLSL(OpenGL Shading Language)文件包含WebGL渲染器用于创建自定义视�
 
 **说明:**
 
-成功加载和处理后将此文件添加到目标缓存中。 原始的 GLSL 源字符串被新 `BaseShader` 实例包裹, 并存储在这个文件的密钥下的全球缓存中, 使其可用阴影驱动的游戏对象 。
+成功加载和处理后将此文件添加到目标缓存中。 原始的 GLSL 源字符串被新 `BaseShader` 实例包裹, 并存储在这个文件的键下的全球缓存中, 使其可用阴影驱动的游戏对象 。
 
 
-**Overrides:** Phaser.Loader.File#addToCache
+**重写:** Phaser.Loader.File#addToCache
 
 
 > 源码：[src/loader/filetypes/GLSLFile.js#L90](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/GLSLFile.js#L90)  
@@ -92,7 +92,7 @@ GLSL(OpenGL Shading Language)文件包含WebGL渲染器用于创建自定义视�
 由 Loader. nextFile自动调用。 此方法读取了从已完成的 XHR 响应中生成的原始 GLSL 源文本, 并将其存储在 `this.data` 中, 然后立即发出信号, 显示处理完成 。 在此阶段没有进行进一步的解析或转换; 源被存储到 `addToCache` 运行 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/GLSLFile.js#L72](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/GLSLFile.js#L72)  

@@ -32,7 +32,7 @@ static
 
 **说明:**
 
-图形行样式(或中风样式)设置。
+图形行样式(或描边样式)设置。
 
 
 > 源码：[src/gameobjects/graphics/typedefs/LineStyle.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/LineStyle.js#L1)  

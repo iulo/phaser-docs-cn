@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 图像光过滤控制器 。
 
-此过滤器控制器管理相机的图像光效应 。
+此过滤器控制器管理摄像机的图像光效应 。
 
 图像灯(ImageLight)是用于图像基照明(IBL)的滤镜,用于使用环境图和普通地图模拟图像的照明.
 
@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 效果基本上是无限范围内的环境反射。 锐利的环境图将产生尖锐的反射, 而模糊的环境图则会产生分散的反射。 使用全景图Blur过滤器来创建正确的模糊的环境图。 必要时使用普通工具过滤器来操纵普通的地图, 使用动态图来捕捉输出 。
 
-图像灯效果通过过滤列表组件添加到相机中:
+图像灯效果通过过滤列表组件添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -30,7 +30,7 @@ camera.filters.external.addImageLight({ texture: 'lightmap' });
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的摄像机. |
 | config | [Phaser.Types.Filters.ImageLightConfig](/api/typedef/types-filters#imagelightconfig) | 是 | 图像光效果的配置对象 。 |
 
 ---
@@ -172,7 +172,7 @@ camera.filters.external.addImageLight({ texture: 'lightmap' });
 
 **说明:**
 
-图像光效果使用的视图矩阵。此矩阵控制环境图的方向。 您应该设置此矩阵来反映相机的视角 。
+图像光效果使用的视图矩阵。此矩阵控制环境图的方向。 您应该设置此矩阵来反映摄像机的视角 。
 
 
 > 源码：[src/filters/ImageLight.js#L81](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/ImageLight.js#L81)  

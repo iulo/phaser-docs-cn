@@ -61,7 +61,7 @@ static
 如果框架有一个自定义的枢轴点, 也可以改变 `origin`, 如Texture Packer 等包的导出点 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | frame | string \| number | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 纹理内框架的名称或索引,或框架实例。 |
 | updateSize | boolean | 是 | true | 此调用是否应该调整游戏对象的大小 ? |
@@ -86,16 +86,16 @@ static
 
 设置此游戏对象将使用的纹理和框架。
 
-纹理通过基于字符串的密钥来引用, 存储在纹理管理器中.
+纹理通过基于字符串的键来引用, 存储在纹理管理器中.
 
 调用此方法将修改您的游戏对象的 `width` 和 `height` 属性 。
 
 如果框架有一个自定义的枢轴点, 也可以改变 `origin`, 如Texture Packer 等包的导出点 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 要使用的纹理密钥, 如存储在纹理管理器中, 或纹理实例 。 |
+| key | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 要使用的纹理键, 如存储在纹理管理器中, 或纹理实例 。 |
 | frame | string \| number | 是 |  | 纹理内框的名称或索引. |
 | updateSize | boolean | 是 | true | 此调用是否应该调整游戏对象的大小 ? |
 | updateOrigin | boolean | 是 | true | 此调用是否应该改变游戏对象的起源 ? |

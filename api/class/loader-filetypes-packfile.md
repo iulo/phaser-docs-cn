@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-packfile)
 
-一个适合装入器装入的JSON Pack文件.
+一个适合资源加载器装入的JSON Pack文件.
 
-Pack File 是描述要加载的其他资产的集合的JSON 运单。在处理Pack File时,加载者会读取其内容,并排队列出每个资产供加载,这样您就可以在单个外部的JSON文件中定义一组游戏资源,而不是在代码中调用单个加载方法.
+Pack File 是描述要加载的其他资源的集合的JSON 运单。在处理Pack File时,加载者会读取其内容,并排队列出每个资源供加载,这样您就可以在单个外部的JSON文件中定义一组游戏资源,而不是在代码中调用单个加载方法.
 
 这些是使用 Phaser.Loader.LoaderPlugin# pack 方法创建的,一般不直接创建.
 
@@ -18,7 +18,7 @@ Pack File 是描述要加载的其他资产的集合的JSON 运单。在处理Pa
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.PackFileConfig](/api/typedef/types-loader-filetypes#packfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string \| any | 是 | 从或准备中的 JSON 对象加载此文件的绝对或相对的 URL 。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即 `key` 是"外国人", 那么 URL 将是 "alien.json" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 | dataKey | string | 是 | 当 JSON 文件加载时, 将只存储此属性到缓存 。 |
@@ -75,7 +75,7 @@ Pack File 是描述要加载的其他资产的集合的JSON 运单。在处理Pa
 由 Loader. nextFile 自动调用。 此方法控制了文件在加载数据中的额外工作 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/PackFile.js#L52](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/PackFile.js#L52)  

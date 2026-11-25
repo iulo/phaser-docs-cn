@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 输入模糊状态。当窗口失去焦点时,模糊事件会上升。如果用户互换,则会发生
 选项卡,或者如果它们只是将浏览器的焦点转移到另一个应用程序。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/BLUR_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/BLUR_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -23,7 +23,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 本次事件在 Phaser Game 实例完成启动时发出, 但在此之前它已经准备好开始运行 。
 全球系统利用这一活动来了解何时可以自行设置,并根据需要自行发送`ready`事件.
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/BOOT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/BOOT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 渲染器停止所有渲染, 发生后无法恢复 。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/CONTEXT_LOST_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/CONTEXT_LOST_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -49,7 +49,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 许多内部系统都听这个事件,以便自己澄清。
 自定义插件和游戏代码也应该这样做.
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/DESTROY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -61,7 +61,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 当游戏实例嵌入窗口时,此事件由游戏可见度处理器发送
 输入焦点状态。当窗口重现焦点时,焦点事件会上升,因为先前它已经丢失。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/FOCUS_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/FOCUS_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 控制主游戏循环, 将自动暂停。 无法阻止这种情况发生 。
 如果暂停是一个问题(即多人游戏),则您的游戏应在自己的代码中说明。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/HIDDEN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/HIDDEN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 此事件在游戏循环进入暂停状态时发出,通常由于可见度处理器.
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/PAUSE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/PAUSE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -106,7 +106,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) \| [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 参考 Game 实例正在使用的当前渲染器 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/POST_RENDER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/POST_RENDER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -123,7 +123,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/POST_STEP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/POST_STEP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -140,7 +140,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) \| [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 参考 Game 实例正在使用的当前渲染器 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/PRE_RENDER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/PRE_RENDER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -157,7 +157,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/PRE_STEP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/PRE_STEP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -169,7 +169,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 当Phaser游戏实例完成启动时, 纹理管理器已经完全准备好了, 本次事件即为发出。
 并且所有本地系统现在都能够启动。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/READY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/READY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | pauseDuration | number | 否 | 游戏暂停的时间, 以ms计, 如果使用QQlink Phaser.Game#resume} 则使用 0 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/RESUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/RESUME_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -201,7 +201,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/STEP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/STEP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -217,7 +217,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 引用了事件发生的场景系统级。 |
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/SYSTEM_READY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/SYSTEM_READY_EVENT.js#L7)  
 引入版本：3.70.0
 
@@ -231,7 +231,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 只有支持可见度 API 的浏览器才会导致此事件被释放 。
 
-**Member of:** [Phaser.Core.Events](/api/namespace/core-events)
+**所属:** [Phaser.Core.Events](/api/namespace/core-events)
 > 源码：[src/core/events/VISIBLE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/events/VISIBLE_EVENT.js#L7)  
 引入版本：3.0.0
 

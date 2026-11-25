@@ -332,9 +332,9 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | targetIndex | number | 否 | Tween目标阵列内的目标指数. |
-| key | string | 否 | 目标财产到  . |
-| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 | 特温的末端会有什么财产 |
-| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 | 特温号的裁武条约会有什么财产? |
+| key | string | 否 | 目标属性到  . |
+| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 | 特温的末端会有什么属性 |
+| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 | 特温号的裁武条约会有什么属性? |
 | getActive | [Phaser.Types.Tweens.GetActiveCallback](/api/typedef/types-tweens#getactivecallback) | 否 | 如果不是无效,则在TweenData运行后立即引用_imteme_,并设定在目标属性上. |
 | ease | function | 否 | 此 tween 使用的易操作 。 |
 | delay | function | 否 | 函数返回 tween 开始前以毫秒计的时间 。 |
@@ -372,7 +372,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 | ---- | ---- | -------- | ----------- |
 | targetIndex | number | 否 | Tween目标阵列内的目标指数. |
 | texture | string | 否 | 纹理设定目标时的端部为  . |
-| frame | string \| number | 否 | 纹理框架设定在  尾的目标上. |
+| frame | string \| number | 否 | 纹理帧设定在  尾的目标上. |
 | delay | function | 否 | 函数返回 tween 开始前以毫秒计的时间 。 |
 | duration | number | 否 | 千分之长的曲折时间. |
 | hold | number | 否 | 以毫秒计的时间, 如果 Yyo 设定为真实, 则 tween 将暂停重复或返回到它的起始值 。 |
@@ -401,7 +401,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 处理这个 Tween 的破坏过程, 清除 Tween 数据并重设目标。 已被破坏的 Tween 永远不能被玩弄或使用 。
 
 
-**Overrides:** Phaser.Tweens.BaseTween#销毁
+**重写:** Phaser.Tweens.BaseTween#销毁
 
 
 > 源码：[src/tweens/tween/Tween.js#L816](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Tween.js#L816)  
@@ -472,7 +472,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 如果这个Tween被摧毁了,它会归还`null`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 是 | 0 | 数据以返回值. |
 
@@ -522,7 +522,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 这自动称为,一般不应直接援引。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | isSeeking | boolean | 是 | false | 是否将 Tween 数据重新设定为搜索的一部分 ? |
 
@@ -546,7 +546,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 **返回值:** boolean - 如果Tween完成的话,就用`true`,否则用`false`.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop)
 
 
 > 源码：[src/tweens/tween/Tween.js#L365](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Tween.js#L365)  
@@ -565,7 +565,7 @@ Tween 能根据时间和易性类型, 操纵一个或多个对象的属性到任
 处理此  的内部方法完成并启动链中的下一个  ,如果有的话.
 
 
-**Overrides:** Phaser.Tweens.BaseTween#onCompleteHandler
+**重写:** Phaser.Tweens.BaseTween#onCompleteHandler
 
 
 > 源码：[src/tweens/tween/Tween.js#L414](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Tween.js#L414)  
@@ -613,7 +613,7 @@ Tween 完成后调用这种方法将重新开始 Tween 播放。 这与调用 `T
 如果您想要重启此 Tween, 请使用 `Tween.restart` 或 `Tween.seek` 方法 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | skipInit | boolean | 是 | false | 跳过重置 TweenData 和 active 状态 ? |
 
@@ -621,7 +621,7 @@ Tween 完成后调用这种方法将重新开始 Tween 播放。 这与调用 `T
 **返回值:** [Phaser.Tweens.Tween](/api/class/tweens-tween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
 
 
 > 源码：[src/tweens/tween/Tween.js#L596](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Tween.js#L596)  
@@ -703,7 +703,7 @@ Tween 完成后调用这种方法将重新开始 Tween 播放。 这与调用 `T
 如果这个Tween被暂停,寻求将不会改变这个事实,它将将Tween推进到理想点,然后再次暂停.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | amount | number | 是 | 0 | 初明求入特温数毫秒. |
 | delta | number | 是 | 16.6 | 查找 Tween 时每个步骤的大小。 更高的值完成得更快, 但代价更不精确 。 |
@@ -737,7 +737,7 @@ Tween 完成后调用这种方法将重新开始 Tween 播放。 这与调用 `T
 **返回值:** boolean - 如果 Tween 完成并应该从 Tween 管理器中移除, 返回 `true`, 否则返回 `false` 。
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop), [Phaser.Tweens.Events#event:TWEEN_START](/api/event/tweens-events#tween_start)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete), [Phaser.Tweens.Events#event:TWEEN_LOOP](/api/event/tweens-events#tween_loop), [Phaser.Tweens.Events#event:TWEEN_START](/api/event/tweens-events#tween_start)
 
 
 > 源码：[src/tweens/tween/Tween.js#L640](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Tween.js#L640)  
@@ -764,7 +764,7 @@ Tween 完成后调用这种方法将重新开始 Tween 播放。 这与调用 `T
 此外,如果Tween重复,被重置,或被寻求,它会恢复到原来的起始和结尾值.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 设置新值的属性。 您无法通过此方法更新“ 纹理” 属性 。 |
 | value | number | 否 |  | 地产的新价值. |

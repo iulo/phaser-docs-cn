@@ -2,23 +2,23 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/scenes)
 
-Phaser使用Scenes的概念来将游戏分成逻辑部分,一个场景可以像您喜欢的那样大,或者小,但是,一个场景的典型用途是装入屏幕,主菜单,游戏关卡,博士格斗,游戏中物品商店,高分表等,您可以像您喜欢的那样在游戏中拥有尽可能多的Scenes,当你开始的时候,你可能只有一两个,但是随着游戏的复杂度的提高,你会发现自己会添加更多的.
+Phaser 使用场景来组织游戏。加载画面、主菜单、关卡、Boss 战、道具商店和排行榜都可以分别做成场景。项目刚起步时通常只需要一两个场景，之后可以按游戏的规模继续添加。
 
-要了解,您不必每个文件有一个场景,如果您愿意,但这不是一个要求,您可以将您所有的场景都放在一个场景中,也可以将一个场景一个场景一个场面,完全由您决定.
+场景和文件没有固定的对应关系。可以把多个场景写在同一个文件里，也可以为每个场景单独建文件。
 
-内部有一个场景管理器。 此管理器是您在场景之间添加、 删除或切换时的交互内容。 也负责更新和渲染场景。 您完全控制了场景在游戏中渲染的顺序。 例如, 通常的做法是, 将场景完全用于处理您的游戏的 UI, 其渲染量高于其他场景 。
+场景管理器负责添加、移除、切换、更新和渲染场景。你可以控制渲染顺序，例如将专门处理 UI 的场景叠在游戏场景上方。
 
-我们稍后会更详细地审视一个场景的生命周期,但现在值得理解的是,你可以随意暂停,恢复和睡眠一个场景,同时可以轻松地运行多个场景.
+多个场景可以同时运行。每个场景都可以单独暂停、恢复或休眠，具体行为见下文的场景生命周期。
 
 ## 什么是场景? {#what-is-a-scene}
 
-Phaser 2 中有游戏世界和州的概念。 一个国家允许您进入游戏世界, 只有一个国家可以同时运行。 国家可以访问各种系统, 如相机、 Tweens 和游戏对象工厂。 当你使用像 `this.add` 这样的命令时, 您正在和全球游戏对象工厂交谈。 一旦你和一个国家一起完成, 你将移动到下一个国家。 国家常常被分成逻辑部分, 如 Preloader State、 Main Menu State 等。
+Phaser 2 使用游戏世界（Game World）和状态（State）的概念。同一时间只能运行一个状态，状态可以访问摄像机、补间动画和游戏对象工厂等系统。例如，在状态中调用 `this.add`，使用的是全局的游戏对象工厂。加载界面和主菜单通常各用一个状态来组织。
 
-内 Phaser 3 我们完全改变了我们的做法, 第一个变化是国家被重新命名为Scases。 这样做是为了避免与游戏中常用的“ 状态机器” 产生模糊之处。 全球国家管理器也被替换为场景管理器。 这两个术语在概念上是可以互换的, 但Scee是使用和期待看到的正确术语 。 Phaser 3. 如果您在代码或网上找到的教程中找到任何提及国家的内容,则用于 Phaser 2,而且可能不会工作 Phaser 3. 变化不仅仅是在命名这些班级方面,它们比这要深入得多。
+从 Phaser 3 开始，状态改为场景，状态管理器也换成了场景管理器。这避免了与游戏中常见的状态机混淆。旧教程中的 `State` 通常指 Phaser 2 的 API，迁移时需要改用场景。
 
-与其说Phaser管理一个“Game World ” 现在根本没有世界对象。 与其说Scenes只参考了Phaser.Game 实例拥有的所有系统, 不如说他们自己拥有它们。 你可以认为Scenes 几乎完全是自成一体的游戏世界。 他们管理自己的输入、 调制、 游戏对象、 显示列表、 相机等。 在Scen A 中创建的调制完全与在 Scen B 中创建的调式相分离 。
+场景拥有自己的输入插件、补间动画管理器、游戏对象、显示列表和摄像机。场景 A 创建的补间动画与场景 B 的补间动画各自独立。
 
-游戏本身唯一负责的就是将基于全球DOM的事件传递给Scenes,比如何时更新(从RequestAnimationFrame)或输入管理器的核心输入事件。这些事件的处理由Scenes自己完成。
+游戏实例会把动画帧更新和输入等全局事件转发给场景。具体如何处理这些事件，由各场景的插件负责。
 
 ### 游戏还控制着什么? {#what-does-game-still-control}
 
@@ -61,7 +61,7 @@ class MyScene extends Phaser.Scene {
 }
 ```
 
-我们延长 `Phaser.Scene` 对象并给它一个独特的密钥(在这种情况下) `MyFirstScene`) 。在构造器中。有两种方法: `preload` 财务报告和已审计财务报表 `create`。第一个加载图像,第二个显示图像。您没有_有_有_有_有 `preload` 方法,唯一要求成为有效场景的是 `create` 方法,因为这是所有屏幕在 Phaser 3.
+我们延长 `Phaser.Scene` 对象并给它一个独特的键(在这种情况下) `MyFirstScene`) 。在构造器中。有两种方法: `preload` 财务报告和已审计财务报表 `create`。第一个加载图像,第二个显示图像。您没有_有_有_有_有 `preload` 方法,唯一要求成为有效场景的是 `create` 方法,因为这是所有屏幕在 Phaser 3.
 
 使用ES5的同样情况如下:
 
@@ -172,9 +172,9 @@ class BootScene extends Phaser.Scene {
 }
 ```
 
-资产在_ 之前被装入, 您的场景预装方法被调用 。
+资源在_ 之前被装入, 您的场景预装方法被调用 。
 
-它适合装入极少数图形,即背景和进度栏图像,然后在装入游戏所有其它资产时,您可以显示预装机场景。或者您可以使用它装入内部游戏配置,在装入剩余资产之前可以解析该配置。
+它适合装入极少数图形,即背景和进度栏图像,然后在装入游戏所有其它资源时,您可以显示预装机场景。或者您可以使用它装入内部游戏配置,在装入剩余资源之前可以解析该配置。
 
 #### 场景系统 {#scene-systems}
 
@@ -185,30 +185,30 @@ class BootScene extends Phaser.Scene {
 它会自动在您的屏幕中安装 7 ** 核心插件 ** :
 
 * 事件信息报
-* 2D相机管理员
+* 2D摄像机管理员
 * 游戏对象创建器
 * 游戏对象工厂
 * 场景插件
 * 显示列表
 * 更新列表
 
-从上面的列表中可以看出,每个场景都有自己的显示列表,工厂和相机系统。所以当你发出像`this.add.image`这样的命令时,你直接与基于场景的游戏对象工厂进行接口,并将由此产生的图像添加到场景级别显示列表中.
+从上面的列表中可以看出,每个场景都有自己的显示列表,工厂和摄像机系统。所以当你发出像`this.add.image`这样的命令时,你直接与基于场景的游戏对象工厂进行接口,并将由此产生的图像添加到场景级别显示列表中.
 
 这些插件是不可选择的,因为它们都依赖对方在场。 所以每个场景都有它们。 然而, 您可以通过注射地图控制那些在场景对象上作为_ 属性_ 暴露的 。
 
 还有一个 7 ** 默认插件 **。 这些插件安装在您的屏幕中, 除非您通过场景配置指定了其它内容 :
 
-* 3D 相机管理器
+* 3D 摄像机管理器
 * 时钟
 * 数据管理器插件
 * 输入插件
-* 装入器插件
+* 资源加载器插件
 * 特温经理
 * 灯光插件
 
 上面的插件都是可选的。 与核心插件一样, 您可以使用注入图通过属性控制哪些插件。
 
-#### 配置插件( E) {#configuring-plugins}
+#### 配置插件 {#configuring-plugins}
 
 记住核心插件无法删除。 要删除所有默认插件, 您只需通过一个空插件阵列即可 :
 
@@ -226,9 +226,9 @@ class BootScene extends Phaser.Scene {
 }
 ```
 
-如果您现在尝试在您的场景中使用 `this.load`, 它将会失败, 因为装入器插件已被排除于此场景 。
+如果您现在尝试在您的场景中使用 `this.load`, 它将会失败, 因为资源加载器插件已被排除于此场景 。
 
-如果您想要的只是装入器和Tween插件,但其他的都无,您可以指定这些:
+如果您想要的只是资源加载器和Tween插件,但其他的都无,您可以指定这些:
 
 ```
 class BootScene extends Phaser.Scene {
@@ -267,44 +267,50 @@ class BootScene extends Phaser.Scene {
 
 给 `install` 的呼叫是让它安装默认插件 `TweenManager`, 允许您在此场景中添加 tweens 。
 
-#### 弹出场景地图 {#scene-injection-map}
+#### 场景注入映射 {#scene-injection-map}
 
-内 Phaser 2 国家管理者将在贵国境内创建不少于19个属性,这些属性都与全球游戏系统相关联。例如,它将涉及贵国,然后添加 `physics` 财产,它映射 物理经理, `scale` 映射到缩放管理器等 。
+在 Phaser 2 中，状态管理器会向每个状态添加至少 19 个属性，分别引用全局游戏系统。例如，`physics` 指向物理管理器，`scale` 指向缩放管理器。这样访问很方便，但属性名固定，意外覆盖这些属性会影响游戏运行。
 
-这是一把双刃剑。 它使得 Phaser 变得非常容易使用。 系统没有需要的模糊访问, 您只是打出输入, 并且就在那里。 但是, 您对注入的属性的数量或名称没有选择。 如果您真的想使用一个名为 `world` 的本地属性, 您不能不按字面的打破游戏。 如果您不小心翻过19 个默认属性中的其中之一, 也会打破游戏。 经验丰富的devs学会处理这个属性, 但我们觉得 Phaser 3 的更好方法。
+场景注入映射（Scene Injection Map）可以指定哪些插件以哪些属性名注入到场景中。
 
-为此,我们创建了 Scene 注射地图。 此对象控制器被映射到您所处地点的属性, 并控制这些属性的准确名称 。
+默认注入的全局属性如下。
 
-默认情况下,以下所有属性都安装到场景中 :
+| 属性 | 对应系统 |
+| --- | --- |
+| `anims` | 动画管理器 |
+| `cache` | 缓存 |
+| `game` | `Phaser.Game` 实例 |
+| `registry` | 游戏数据管理器 |
+| `sound` | 声音管理器 |
+| `textures` | 纹理管理器 |
 
-'anims' = 动画管理器(全球)
-cache = 快取( 全球)
-“ game” = Phaser.Game 实例( 全球)
-'registry'=游戏数据管理器(全球)
-'sound' = 声音管理器( 全球)
-纹理 = 纹理管理器( 全球)
+默认注入的场景核心属性如下。
 
-添加=游戏对象工厂(本地,核心)
-'cameras' = 2D 相机管理器(本地,核心)
-“ 儿童” = 显示列表( 本地, 核心)
-'evits' = Enitter(当地,核心)
-“ make” = 游戏对象创建器( 本地, 核心)
-“ scene” = 场景管理器插件( 本地, 核心)
+| 属性 | 对应系统 |
+| --- | --- |
+| `add` | 游戏对象工厂 |
+| `cameras` | 2D 摄像机管理器 |
+| `children` | 显示列表 |
+| `events` | 事件发射器 |
+| `make` | 游戏对象创建器 |
+| `scene` | 场景管理器插件 |
 
-以下属性只有在相应的插件可用的情况下才会安装到场景中:
+下列可选属性仅在对应插件可用时注入。
 
-'cameras3d' = 3D 相机管理器(本地,可选)
-'data' = 场景数据管理器(本地,可选)
-“影响”=撞击物理(当地、可选)
-“ 输入” = 输入插件( 本地、 可选)
-'lights' = 灯光管理器插件( 本地, 可选)
-“ load” = 装入器插件( 本地、 可选)
-“ 物质” = 物质 JS 物理( 本地、 可选)
-物理=弧形物理(局部,可选)
-“ 时间” = 时间/ 时钟插件( 本地, 可选)
-'tweens'=tween 管理器(本地,可选)
+| 属性 | 对应系统 |
+| --- | --- |
+| `cameras3d` | 3D 摄像机管理器 |
+| `data` | 场景数据管理器 |
+| `impact` | Impact 物理 |
+| `input` | 输入插件 |
+| `lights` | 灯光管理器插件 |
+| `load` | 资源加载器插件 |
+| `matter` | Matter 物理 |
+| `physics` | Arcade 物理 |
+| `time` | 时间与时钟插件 |
+| `tweens` | 补间动画管理器 |
 
-如果您更愿意选择不给您的场景添加任何属性 :
+如果希望场景不注入任何属性，可以将 `map` 设为空对象。
 
 ```
 class BootScene extends Phaser.Scene {
@@ -402,7 +408,7 @@ function update(time, delta) {}
 
 `init()`的使用较少.
 
-您可以在任意方法中创建游戏对象, 但如果您已经将资产排队于 `preload()` 中, 那么您将无法在 `create()` 之前使用这些资产 。
+您可以在任意方法中创建游戏对象, 但如果您已经将资源排队于 `preload()` 中, 那么您将无法在 `create()` 之前使用这些资源 。
 
 如果你不使用`preload()`,那么模式就是:
 
@@ -524,7 +530,7 @@ demo.update = function (time, delta) {};
 
 * `data`:参数通过自[adding new scene](#add-a-scene-from-a-config-object),或[starting scene](#start).
 
-### 创建单场游戏 {#creating-a-single-scene-game}
+### 创建单场景游戏 {#creating-a-single-scene-game}
 
 最简单的是使用游戏配置,当只给出一个场景时,它会自动启动.
 
@@ -635,9 +641,9 @@ game.scene.add("yin", new Scene("yang"), true);
 
 在这种情况下,现场与键"阳"即时化,然后场景管理器将键改为"yin".
 
-### 创建多场游戏 {#creating-a-multi-scene-game}
+### 创建多场景游戏 {#creating-a-multi-scene-game}
 
-在多场游戏中,每个场景都需要独特的密钥.
+在多场游戏中,每个场景都需要独特的键.
 
 再一次,在游戏配置中加入场景是最简单的,第一个场景加上任何附加的场景,加上`{ active: true }`,都是自动开始的.
 
@@ -702,7 +708,7 @@ new Phaser.Game({
 };
 ```
 
-##### 双幕游戏 {#a-2-scene-game}
+##### 包含两个场景的游戏 {#a-2-scene-game}
 
 ```js
 class Boot extends Phaser.Scene {
@@ -765,7 +771,7 @@ var config = {
 };
 ```
 
-* `key`: 此场景的独有密钥。 必须在游戏的全部实例中独有 。
+* `key`: 此场景的独有键。 必须在游戏的全部实例中独有 。
 * `active`: 场景是否以活动开始? 活动场景更新每个步骤 。
 * `visible`: 场景的开始是否是可见的? 一个可见的场景使每个步骤都成形.
 * `pack`:在场景开始前可以选择加载的[Loader Packfile](/guide/concepts/loader#file-pack).
@@ -842,7 +848,7 @@ var config = {
 
 已经添加到管理器中但从未开始的场景具有状态`INIT`. (这意味着"启动",与场景`init()`方法无关).
 
-当一个场景开始时,它会经历状态 `START`, `LOADING` (如果资产在 `preload()`), `CREATING`,和 `RUNNING`. 其方法 `init()`, `preload()`,和 `create()` 如果存在,也称它们。 `update()` 被调用到每个游戏步骤,而场景则在 `RUNNING` 州立大学。
+当一个场景开始时,它会经历状态 `START`, `LOADING` (如果资源在 `preload()`), `CREATING`,和 `RUNNING`. 其方法 `init()`, `preload()`,和 `create()` 如果存在,也称它们。 `update()` 被调用到每个游戏步骤,而场景则在 `RUNNING` 州立大学。
 
 `RUNNING`场景可以改为`PAUSED`,通过暂停/再休整或`SLEEPING`,通过睡眠/醒后返回.
 
@@ -901,7 +907,7 @@ Shutdown --> |"scene.scene.start()<br>scene.scene.launch()<br>scene.scene.restar
 * `Sleep` : 没有更新,没有渲染
 * `Stop` 关闭( O)
 
-### 改变场景 {#changing-scenes}
+### 切换场景 {#changing-scenes}
 
 有很多方法,因为它取决于你想做什么,Phaser让你同时运行多个场景.
 
@@ -937,7 +943,7 @@ Shutdown --> |"scene.scene.start()<br>scene.scene.launch()<br>scene.scene.restar
 * `start()`停止了呼叫现场。
 * `switch()`睡了电话现场。
 
-##### 启动( ) {#start}
+##### `start()` {#start}
 
 `start('target')`启动目标场景并停止呼叫场景,相当于`stop().launch('target')`.
 
@@ -954,7 +960,7 @@ this.scene.start("C");
 this.scene.start("A");
 ```
 
-##### 切换( ) {#switch}
+##### `switch()` {#switch}
 
 `switch('target')`开始或唤醒目标场景,并睡眠呼叫场景.
 
@@ -985,11 +991,11 @@ if (this.scene.isSleeping('target') {
 
 `switch()` **重新开始**一个暂停的场景,永远不恢复——参见`run()`.
 
-##### 发射() {#launch}
+##### `launch()` {#launch}
 
 `launch()`开始或重启目标场景,它从不恢复或醒悟——参见`run()`.
 
-##### 运行( A) {#run}
+##### `run()` {#run}
 
 `run()`如果暂停,则恢复目标场景;如果睡觉,则唤醒它;如果运行,则重新启动它;然后以其他方式启动它.
 
@@ -998,7 +1004,7 @@ if (this.scene.isSleeping('target') {
 一些常见原因:
 
 * 自己的状态变量尚未重置
-* 您正在工作上一个场景周期的无效对象, 例如游戏对象或相机
+* 您正在工作上一个场景周期的无效对象, 例如游戏对象或摄像机
   * 通常,一个被销毁的游戏对象的方法仍然被注册到事件发送器
 
 #### 示例:重新启动后状态不佳 {#example-bad-state-after-restart}
@@ -1096,9 +1102,9 @@ this.scene.destroy();
 
 #### 用相同的键替换一个场景 {#replacing-a-scene-with-the-same-key}
 
-在原场景被移除之前,不能重新使用密钥.
+在原场景被移除之前,不能重新使用键.
 
-##### 场景会自己消失 {#a-scene-removing-itself}
+##### 场景移除自身 {#a-scene-removing-itself}
 
 ```js
 // After destruction, `this.scene` and `this.sys.scenePlugin` are unusable.
@@ -1112,7 +1118,7 @@ this.events.once('destroy', () => {
 this.scene.remove();
 ```
 
-##### 另一幕删除了第一幕 {#a-second-scene-removing-the-first}
+##### 由第二个场景移除第一个场景 {#a-second-scene-removing-the-first}
 
 ```js
 sceneToRemove.events.once('destroy', () => {
@@ -1140,7 +1146,7 @@ this.scene.add(this.registry.get("levelSceneKey"), Level, true);
 
 Scases有自己的系统,[core plugins](/api/namespace/plugins-defaultplugins#CoreScene)总是安装的,[default plugins](/api/namespace/plugins-defaultplugins#DefaultScene)是安装的,除非被禁用。在游戏配置中您添加的`{ start: true }`或任何`{ mapping: … }`的任何额外的场景插件也是默认的插件.
 
-如果您在游戏配置中添加了没有这些的场景插件,插件并不是默认安装的,可以通过将它的密钥添加到`plugins`阵列中,在特定的场景中安装: .
+如果您在游戏配置中添加了没有这些的场景插件,插件并不是默认安装的,可以通过将它的键添加到`plugins`阵列中,在特定的场景中安装: .
 
 ```js
 new Phaser.Scene({

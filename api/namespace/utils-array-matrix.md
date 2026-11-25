@@ -31,7 +31,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -73,7 +73,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -115,7 +115,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -157,7 +157,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -199,7 +199,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -241,13 +241,13 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | amount | number | 是 | 1 | 左转90度矩阵旋转的次数. |
@@ -288,13 +288,13 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | direction | number \| string | 是 | 90 | 以 90、 -90、 270、 - 270、 180 或 -180 等度值旋转矩阵的量。 或 `rotateLeft`、 `rotateRight` 或 `rotate180` 的字符串命令。 如果给出了未识别值, 矩阵将不会旋转 。 |
@@ -331,13 +331,13 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要旋转的阵列 。 |
 | amount | number | 是 | 1 | 顺时针旋转矩阵的次数 90 度 。 |
@@ -376,13 +376,13 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | matrix | Array.\<Array.\<T>> | 是 |  | 要翻译的矩阵矩阵 。 |
 | x | number | 是 | 0 | 水平翻译矩阵的金额 。 |
@@ -422,7 +422,7 @@ static
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse

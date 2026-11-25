@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TweenConfigDefaults {#static-tweenconfigdefaults}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | targets | object \| Array.\<object> | 否 |  | 运行 tween 的物体,或一系列物体。 |
 | delay | number | 是 | 0 | 开始前要延迟的毫秒数 。 |
@@ -19,12 +19,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | yoyo | boolean | 是 | false | 如果修补完成, 那么将数值递增反转, 回到起始的修补值 。 反修补需要 `duration` 毫秒才能完成 。 |
 | flipX | boolean | 是 | false | 水平翻转 Tween 完成时的目标( 如果设定在 Yoyos 完成前) 。 只为支持 `flipX` 属性的目标工作 。 |
 | flipY | boolean | 是 | false | 垂直翻转 Tween 完成时的目标( 如果设定在 Yoyos 完成前) 。 只为支持 `flipY` 属性的目标工作 。 |
-| persist | boolean | 是 | false | 保留Tween管理器内的调值,即使播放完成后也保留? |
+| persist | boolean | 是 | false | 保留Tween管理器内的补间,即使播放完成后也保留? |
 | interpolation | function | 是 | null | 用于基于数组的 tween 值的插值函数。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/tween/Defaults.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/Defaults.js#L7)  
 引入版本：3.0.0
 
@@ -39,7 +39,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: string
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/Event.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/Event.js#L1)  
 引入版本：3.19.0
 
@@ -51,7 +51,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/GetActiveCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/GetActiveCallback.js#L1)  
 引入版本：3.19.0
 
@@ -63,7 +63,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/GetEndCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/GetEndCallback.js#L1)  
 引入版本：3.18.0
 
@@ -75,7 +75,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/GetStartCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/GetStartCallback.js#L1)  
 引入版本：3.18.0
 
@@ -85,7 +85,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NumberTweenBuilderConfig {#static-numbertweenbuilderconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | from | number | 是 | 0 | 初标号. |
 | to | number | 是 | 1 | 端数. |
@@ -125,7 +125,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/NumberTweenBuilderConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/NumberTweenBuilderConfig.js#L1)  
 引入版本：3.18.0
 
@@ -135,7 +135,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> StaggerConfig {#static-staggerconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 是 | 0 | 启动交错的值。 可以在仍然使用范围来抵消交错时使用。 Name |
 | ease | string \| function | 是 | "'Linear'" | 跨错位值的易用性。 可以是字符串, 如“ 正中” , 也可以是函数 。 |
@@ -144,7 +144,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/StaggerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/StaggerConfig.js#L1)  
 引入版本：3.19.0
 
@@ -154,7 +154,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TweenBuilderConfig {#static-tweenbuilderconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | targets | any | 否 |  | 运行 tween 的物体,或一系列物体。 |
 | delay | number \| function | 是 | 0 | 开始前要延迟的毫秒数 。 |
@@ -162,14 +162,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | ease | string \| function | 是 | "'Power0'" | 放松方程用于  . |
 | easeParams | array | 是 |  | 可选的宽松参数. |
 | hold | number | 是 | 0 | 柳英之前的手提琴数 |
-| repeat | number | 是 | 0 | 每一财产的重复次数。 |
+| repeat | number | 是 | 0 | 每一属性的重复次数。 |
 | repeatDelay | number | 是 | 0 | 重复前的数位数 。 |
 | yoyo | boolean | 是 | false | 如果修补完成, 那么将数值递增反转, 回到起始的修补值 。 反修补需要 `duration` 毫秒才能完成 。 |
 | flipX | boolean | 是 | false | 水平翻转 Tween 完成时的目标( 如果设定在 Yoyos 完成前) 。 只为支持 `flipX` 属性的目标工作 。 |
 | flipY | boolean | 是 | false | 垂直翻转 Tween 完成时的目标( 如果设定在 Yoyos 完成前) 。 只为支持 `flipY` 属性的目标工作 。 |
 | completeDelay | string \| number | function | object | array | 是 | 0 | 时间,Twen将等待 等待onComplete事件 完成后发送,以毫秒。 |
 | loop | string \| number | function | object | array | 是 | 0 | 重复的次数( 1 值表示重复一次的次数) 第一个循环开始于每次完成一次的次数 。 |
-| loopDelay | string \| number | function | object | array | 是 | 0 | 时间, 调子会暂停, 然后再开始一个 YOYO 或返回开始重复 。 |
+| loopDelay | string \| number | function | object | array | 是 | 0 | 时间, 补间动画会暂停, 然后再开始一个 YOYO 或返回开始重复 。 |
 | paused | boolean | 是 | false | 曲折的开始是暂停状态(真)还是播放(假)? |
 | props | Object.\<string, (number, string, [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback), [Phaser.Types.Tweens.TweenPropConfig](/api/typedef/types-tweens#tweenpropconfig))> | 是 |  | 属性至  . |
 | callbackScope | any | 是 |  | 所有调用时的范畴(或上下文),默认范围是 tween. |
@@ -185,7 +185,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | onStopParams | array | 是 |  | 附加参数通过到 `onStop`. |
 | onUpdate | [Phaser.Types.Tweens.TweenOnUpdateCallback](/api/typedef/types-tweens#tweenonupdatecallback) | 是 |  | 每次调用调用时, 每个目标每个属性调用一次 。 |
 | onUpdateParams | array | 是 |  | 附加参数通过到 `onUpdate`. |
-| onYoyo | [Phaser.Types.Tweens.TweenOnYoyoCallback](/api/typedef/types-tweens#tweenonyoyocallback) | 是 |  | 每次调用财产 tween yoyos 的函数。 在每个目标中调用一次 。 |
+| onYoyo | [Phaser.Types.Tweens.TweenOnYoyoCallback](/api/typedef/types-tweens#tweenonyoyocallback) | 是 |  | 每次调用属性 tween yoyos 的函数。 在每个目标中调用一次 。 |
 | onYoyoParams | array | 是 |  | 附加参数通过到 `onYoyo`. |
 | onActive | [Phaser.Types.Tweens.TweenOnActiveCallback](/api/typedef/types-tweens#tweenonactivecallback) | 是 |  | 当 tween 开始活跃于 Tween 管理器内时调用函数 。 |
 | onActiveParams | array | 是 |  | 附加参数通过到 `onActive`. |
@@ -198,7 +198,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenBuilderConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenBuilderConfig.js#L1)  
 引入版本：3.18.0
 
@@ -223,7 +223,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenCallbacks.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenCallbacks.js#L1)  
 引入版本：3.60.0
 
@@ -235,7 +235,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: 'onActive' | 'onComplete' | 'onLoop' | 'onPause' | 'onRepeat' | 'onResume' | 'onStart' | 'onStop' | 'onUpdate' | 'onYoyo'
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenCallbackTypes.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenCallbackTypes.js#L1)  
 引入版本：3.60.0
 
@@ -245,9 +245,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TweenChainBuilderConfig {#static-tweenchainbuilderconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| targets | any | 否 |  | 运行每个调值的对象,或一系列对象。 |
+| targets | any | 否 |  | 运行每个补间的对象,或一系列对象。 |
 | delay | number \| function | 是 | 0 | 链条开始前要延迟的毫秒数 。 |
 | completeDelay | string \| number | function | object | array | 是 | 0 | 链条在onComplete事件完成后发出前, 时间将等待, 以毫秒计 。 |
 | loop | string \| number | function | object | array | 是 | 0 | 链会重复的次数 。 (1 值意味着链会播放两次, 如重复一次 。 ) 第一次循环开始于每次完成一次后 。 |
@@ -273,7 +273,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenChainBuilderConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenChainBuilderConfig.js#L1)  
 引入版本：3.60.0
 
@@ -283,14 +283,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TweenDataConfig {#static-tweendataconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | any | 否 |  | 目标到弯曲。 |
 | index | number | 否 |  | Tween目标阵列内的目标指数. |
-| key | string | 否 |  | 目标的财产被扭曲。 |
+| key | string | 否 |  | 目标的属性被扭曲。 |
 | getActiveValue | [Phaser.Types.Tweens.GetActiveCallback](/api/typedef/types-tweens#getactivecallback) | 否 |  | 如果不是无效,则在TweenData运行后立即引用_imteme_,并设定在目标属性上. |
-| getEndValue | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 |  | 返回的值设定了在Tween的端点将是什么财产。 |
-| getStartValue | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 |  | 归还的值确定在Tween裁武条约上的财产将是什么。 |
+| getEndValue | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 否 |  | 返回的值设定了在Tween的端点将是什么属性。 |
+| getStartValue | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 否 |  | 归还的值确定在Tween裁武条约上的属性将是什么。 |
 | ease | function | 否 |  | 此 tween 使用的易操作 。 |
 | duration | number | 是 | 0 | 以毫秒计的扭矩持续时间,不包括yoyo或重复的时间。 |
 | totalDuration | number | 是 | 0 | 计算出TweenData的总持续时间(根据持续时间、重复、延迟和yoyo) |
@@ -305,15 +305,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | elapsed | number | 是 | 0 | 三角洲计数器 |
 | repeatCounter | number | 是 | 0 | 有多少次重复还剩跑步? |
 | start | number | 是 | 0 | 易地开始时的属性价值. |
-| current | number | 是 | 0 | 现财产值. |
-| previous | number | 是 | 0 | 上个财产价值. |
-| end | number | 是 | 0 | 易经末的财产价值. |
+| current | number | 是 | 0 | 现属性值. |
+| previous | number | 是 | 0 | 上个属性价值. |
+| end | number | 是 | 0 | 易经末的属性价值. |
 | gen | [Phaser.Types.Tweens.TweenDataGenConfig](/api/typedef/types-tweens#tweendatagenconfig) | 是 |  | 装入 Vale 生成函数 。 |
 | state | [Phaser.Tweens.StateType](/api/typedef/tweens#statetype) | 是 | 0 | 已删除 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenDataConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenDataConfig.js#L1)  
 引入版本：3.0.0
 
@@ -333,7 +333,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenDataGenConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenDataGenConfig.js#L1)  
 引入版本：3.0.0
 
@@ -343,11 +343,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TweenFrameDataConfig {#static-tweenframedataconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | any | 否 |  | 目标到弯曲。 |
 | index | number | 否 |  | Tween目标阵列内的目标指数. |
-| key | string | 否 |  | 目标的财产被扭曲。 |
+| key | string | 否 |  | 目标的属性被扭曲。 |
 | duration | number | 是 | 0 | 以毫秒计的扭矩持续时间,不包括yoyo或重复的时间。 |
 | totalDuration | number | 是 | 0 | 计算出TweenData的总持续时间(根据持续时间、重复、延迟和yoyo) |
 | delay | number | 是 | 0 | 时间在毫秒后,Tween开始。 |
@@ -364,7 +364,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenFrameDataConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenFrameDataConfig.js#L1)  
 引入版本：3.60.0
 
@@ -376,7 +376,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnActiveCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnActiveCallback.js#L1)  
 引入版本：3.19.0
 
@@ -388,7 +388,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnCompleteCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnCompleteCallback.js#L1)  
 引入版本：3.18.0
 
@@ -400,7 +400,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnLoopCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnLoopCallback.js#L1)  
 引入版本：3.18.0
 
@@ -412,7 +412,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnPauseCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnPauseCallback.js#L1)  
 引入版本：3.60.0
 
@@ -424,7 +424,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnRepeatCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnRepeatCallback.js#L1)  
 引入版本：3.18.0
 
@@ -436,7 +436,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnResumeCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnResumeCallback.js#L1)  
 引入版本：3.60.0
 
@@ -448,7 +448,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnStartCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnStartCallback.js#L1)  
 引入版本：3.18.0
 
@@ -460,7 +460,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnStopCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnStopCallback.js#L1)  
 引入版本：3.24.0
 
@@ -472,7 +472,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnUpdateCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnUpdateCallback.js#L1)  
 引入版本：3.18.0
 
@@ -484,7 +484,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenOnYoyoCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenOnYoyoCallback.js#L1)  
 引入版本：3.18.0
 
@@ -496,15 +496,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number \| Array.\<number> | string | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | [Phaser.Types.Tweens.TweenPropConfig](/api/typedef/types-tweens#tweenpropconfig) | 是 | 特温的末端会有什么财产 |
-| getActive | [Phaser.Types.Tweens.GetActiveCallback](/api/typedef/types-tweens#getactivecallback) | 是 | 当这小节开始活动时 财产会立即设定什么 |
-| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 是 | 特温的末端会有什么财产 |
-| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 是 | 特温号的裁武条约会有什么财产? |
+| value | number \| Array.\<number> | string | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | [Phaser.Types.Tweens.TweenPropConfig](/api/typedef/types-tweens#tweenpropconfig) | 是 | 特温的末端会有什么属性 |
+| getActive | [Phaser.Types.Tweens.GetActiveCallback](/api/typedef/types-tweens#getactivecallback) | 是 | 当这小节开始活动时 属性会立即设定什么 |
+| getEnd | [Phaser.Types.Tweens.GetEndCallback](/api/typedef/types-tweens#getendcallback) | 是 | 特温的末端会有什么属性 |
+| getStart | [Phaser.Types.Tweens.GetStartCallback](/api/typedef/types-tweens#getstartcallback) | 是 | 特温号的裁武条约会有什么属性? |
 | ease | string \| function | 是 | 此 tween 使用的易操作 。 |
 | delay | number | 是 | 时间在毫秒后,Tween开始。 |
 | duration | number | 是 | 以毫秒计的扭矩持续时间 。 |
 | yoyo | boolean | 是 | 确定在持有到期后, twin是否应该返回其起始值 。 |
-| hold | number | 是 | 时间( 毫秒) , 调值在重现或返回其起始值之前会暂停, 如果 Yyo 设定为真实 。 |
+| hold | number | 是 | 时间( 毫秒) , 补间在重现或返回其起始值之前会暂停, 如果 Yyo 设定为真实 。 |
 | repeat | number | 是 | 重复 tween 的次数。 tween 将总是运行一次, 不管怎样, 因此“ 1” 的重复值将播放两次 tween 。 |
 | repeatDelay | number | 是 | 重复开始前的时长为毫秒。 |
 | flipX | boolean | 是 | 黄  还是重复时,应该叫toggleFlipX? |
@@ -513,7 +513,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tweens
+**所属**: Phaser.Types.Tweens
 > 源码：[src/tweens/typedefs/TweenPropConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/typedefs/TweenPropConfig.js#L1)  
 引入版本：3.18.0
 

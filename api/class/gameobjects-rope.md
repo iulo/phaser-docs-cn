@@ -21,14 +21,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Rope(scene, [x], [y], [texture], [frame], [points], [horizontal], [colors], [alphas])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 此游戏对象在世界的垂直位置 。 |
 | texture | string | 是 |  | 此游戏对象将使用的纹理键用于渲染, 如保存在纹理管理器中。 如果不给出, 则使用 `__DEFAULT` 。 |
 | frame | string \| number | null | 是 |  | 游戏对象正在用此渲染的纹理的可选框架 。 |
-| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 2 | 包含此绳索的顶点数据的数组, 或表示要将纹理框架分割成多少段的数组。 如果未提供, 则创建一个简单的四边形。 请参见 `setPoints` 设置此创建后 。 |
+| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 2 | 包含此绳索的顶点数据的数组, 或表示要将纹理帧分割成多少段的数组。 如果未提供, 则创建一个简单的四边形。 请参见 `setPoints` 设置此创建后 。 |
 | horizontal | boolean | 是 | true | 这个绳子的顶点应水平对齐(`true`),还是垂直对齐(`false`)? |
 | colors | Array.\<number> | 是 |  | 包含此绳索的颜色数据的可选数组。 您应该提供每对顶点一个颜色值 。 |
 | alphas | Array.\<number> | 是 |  | 包含此绳索的α数据的可选数组。 您应该提供每对顶点一个α值 。 |
@@ -336,7 +336,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 横向翻转的游戏对象会让横向轴上反转。翻转总是从纹理中间进行,不会影响比例值。如果游戏对象有一个物理体,它不会改变身体。这只是一个渲染切换。
 
 
-**Overrides:** Phaser.GameObjects.Components.Flip#flipX
+**重写:** Phaser.GameObjects.Components.Flip#flipX
 
 
 > 源码：[src/gameobjects/rope/Rope.js#L1111](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/rope/Rope.js#L1111)  
@@ -357,7 +357,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 垂直翻转的游戏对象会使反转在垂直轴上(即倒转)翻转总是从纹理中间进行,不会影响比例值。如果游戏对象有一个物理体,它不会改变身体。这只是一个渲染切换。
 
 
-**Overrides:** Phaser.GameObjects.Components.Flip#flipY
+**重写:** Phaser.GameObjects.Components.Flip#flipY
 
 
 > 源码：[src/gameobjects/rope/Rope.js#L1139](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/rope/Rope.js#L1139)  
@@ -699,7 +699,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 当游戏对象被添加到场景中时, 由 Phaser 自动调用。 将此绳子与场景的更新列表一起注册, 这样 `preUpdate` 就可以称为每个帧 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/rope/Rope.js#L324](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/rope/Rope.js#L324)  
@@ -718,7 +718,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 开始播放给定的动画.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 动画要播放的基于字符串的键. |
 | ignoreIfPlaying | boolean | 是 | false | 如果动画已经播放了,那么就忽略这个电话. |
@@ -744,7 +744,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 绳索更新环.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -769,7 +769,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 当游戏对象从场景中移除时, 自动由 Phaser 调用。 从场景更新列表中删除此绳索, 这样 `preUpdate` 不再称为每个帧 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/rope/Rope.js#L336](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/rope/Rope.js#L336)  
@@ -970,7 +970,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 包含此绳索的顶点数据的数组, 或表示要将纹理框架分割成多少个段的数组。 如果没有, 则使用当前点长 。 |
+| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 包含此绳索的顶点数据的数组, 或表示要将纹理帧分割成多少个段的数组。 如果没有, 则使用当前点长 。 |
 | colors | number \| Array.\<number> | 是 | 或单一的颜色值,或一系列的数值。 |
 | alphas | number \| Array.\<number> | 是 | 或单个的alpha值,或一系列值. |
 
@@ -1021,9 +1021,9 @@ rope.setPoints(4);
 注意, 使用与绳索不同的点数调用此方法, 将 _ 重置颜色和α 值, 除非您为这种方法提供这些参数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 2 | 包含此绳索的顶点数据的数组, 或者表示要将纹理框架分割成多少个段的数组。 如果没有给出任何一个简单的四段, 则创建一个简单四段 。 |
+| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 2 | 包含此绳索的顶点数据的数组, 或者表示要将纹理帧分割成多少个段的数组。 如果没有给出任何一个简单的四段, 则创建一个简单四段 。 |
 | colors | number \| Array.\<number> | 是 |  | 或单一的颜色值,或一系列的数值。 |
 | alphas | number \| Array.\<number> | 是 |  | 或单个的alpha值,或一系列值. |
 
@@ -1062,12 +1062,12 @@ rope.setPoints(4);
 
 详见`setColors`方法,说明如何给每个顶点配色.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | [Phaser.TintModes](/api/namespace/tintmodes) | 是 | "Phaser.TintModes.MULTIPLY" | 使用锡金模式 。 |
 
@@ -1095,7 +1095,7 @@ rope.setPoints(4);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 包含此绳索的顶点数据的数组, 或表示要将纹理框架分割成多少个段的数组。 如果没有, 则使用当前点长 。 |
+| points | number \| Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> | 是 | 包含此绳索的顶点数据的数组, 或表示要将纹理帧分割成多少个段的数组。 如果没有, 则使用当前点长 。 |
 | colors | number \| Array.\<number> | 是 | 或单一的颜色值,或一系列的数值。 |
 | alphas | number \| Array.\<number> | 是 | 或单个的alpha值,或一系列值. |
 

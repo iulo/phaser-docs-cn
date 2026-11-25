@@ -457,7 +457,7 @@ DOM 目标可以打开键盘事件。 如果未指定默认为 `window` 。
 
 **说明:**
 
-`preventDefault` 将调用此数组中每个有密钥代码的非修改密钥。默认情况下,该密钥为空。
+`preventDefault` 将调用此数组中每个有键代码的非修改键。默认情况下,该键为空。
 
 
 > 源码：[src/core/Config.js#L228](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Config.js#L228)  
@@ -1045,7 +1045,7 @@ WebGL模式下,此模式设置了GPU纹理的最大使用数量。默认的 -1�
 
 **说明:**
 
-光机座单相机范围内允许可见的灯光最大数量.
+光机座单摄像机范围内允许可见的灯光最大数量.
 
 
 > 源码：[src/core/Config.js#L463](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Config.js#L463)  
@@ -1059,7 +1059,7 @@ WebGL模式下,此模式设置了GPU纹理的最大使用数量。默认的 -1�
 
 **说明:**
 
-将自定义 Render 节点地图添加到 WebGL 渲染器中。 数值将被添加到 Render Node Manager 中, 以密钥作为名称 。
+将自定义 Render 节点地图添加到 WebGL 渲染器中。 数值将被添加到 Render Node Manager 中, 以键作为名称 。
 
 
 > 源码：[src/core/Config.js#L468](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Config.js#L468)  
@@ -1171,7 +1171,7 @@ Phaser靴前呼叫。 用于初始化任何与Phaser无关的, 用于Phaser 启�
 
 **说明:**
 
-装入器将尝试平行下载文件的最大数量 。 默认为32 或 6 在 Android 上并行连接受到更多限制 。
+资源加载器将尝试平行下载文件的最大数量 。 默认为32 或 6 在 Android 上并行连接受到更多限制 。
 
 
 > 源码：[src/core/Config.js#L516](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Config.js#L516)  
@@ -1311,7 +1311,7 @@ XHR 的所有请求都可以选择密码 。
 
 **说明:**
 
-装入器认为属于“ 本地” 文件的一系列方案。 默认为: `[ 'file://', 'capacitor://' ]` 。
+资源加载器认为属于“ 本地” 文件的一系列方案。 默认为: `[ 'file://', 'capacitor://' ]` 。
 
 
 > 源码：[src/core/Config.js#L569](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Config.js#L569)  

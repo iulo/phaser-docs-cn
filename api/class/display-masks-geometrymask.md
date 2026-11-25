@@ -2,11 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/display-masks-geometrymask)
 
-几何面具可以应用到游戏对象上,隐藏其中任何不会从几何面具上交叉可见像素的像素,面具本质上是剪辑路径,只能使面具完全可见或完全看不见,而不会改变其α(不透明).
+几何遮罩可以应用到游戏对象上,隐藏其中任何不会从几何遮罩上交叉可见像素的像素,遮罩本质上是剪辑路径,只能使遮罩完全可见或完全看不见,而不会改变其α(不透明).
 
-一个几何面具使用图形游戏对象来决定被遮盖的游戏对象的哪些像素应该被剪辑。对于一个被遮盖的游戏物体的纹理的任何特定点,只有图形游戏对象的几何面具在同一位置具有可见像素,才会显示像素。来自几何面具的像素的颜色和α并不重要。
+一个几何遮罩使用图形游戏对象来决定被遮盖的游戏对象的哪些像素应该被剪辑。对于一个被遮盖的游戏物体的纹理的任何特定点,只有图形游戏对象的几何遮罩在同一位置具有可见像素,才会显示像素。来自几何遮罩的像素的颜色和α并不重要。
 
-几何面具的位置与其图形对象的位置相符,而不是其遮盖对象的位置。移动或转换隐藏的图形对象会改变遮盖(并影响任何遮盖对象的能见度),而移动或转换遮盖对象不会影响遮盖。你可以将几何面具(或更确切地说,其图形对象)视为一个隐形幕,放置在所有遮盖对象面前,这些遮盖对象具有自己的视觉特性,自然尊重相机的视觉特性,但不会受到自己的影响,也不会跟随遮盖对象。
+几何遮罩的位置与其图形对象的位置相符,而不是其遮罩对象的位置。移动或转换隐藏的图形对象会改变遮盖(并影响任何遮罩对象的能见度),而移动或转换遮罩对象不会影响遮盖。你可以将几何遮罩(或更确切地说,其图形对象)视为一个隐形幕,放置在所有遮罩对象面前,这些遮罩对象具有自己的视觉特性,自然尊重摄像机的视觉特性,但不会受到自己的影响,也不会跟随遮罩对象。
 
 几何mask只在 Canvas 渲染器中支持。 如果您想要使用几何来遮盖 WebGL 中的对象, 请参见 [Phaser.GameObjects.Components.FilterList#addMask](/api/class/gameobjects-components-filterlist#addMask) 。
 
@@ -37,7 +37,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-描述几何面具的图形对象。
+描述几何遮罩的图形对象。
 
 
 > 源码：[src/display/mask/GeometryMask.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/mask/GeometryMask.js#L45)  
@@ -55,7 +55,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-摧毁此几何掩码并取消它持有的任何引用 。
+摧毁此几何遮罩并取消它持有的任何引用 。
 
 请注意, 如果游戏对象目前使用此掩码, 它会_ not_ 自动检测您已经销毁了它, 所以在销毁它之前, 请在任何使用它的游戏对象上拨打 `clearMask` 。
 
@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) | 否 | 坎瓦斯的变形器实例 来设定剪辑路径 。 |
 | mask | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 正在渲染游戏对象 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在通过游戏对象的相机。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在通过游戏对象的摄像机。 |
 
 
 > 源码：[src/display/mask/GeometryMask.js#L72](https://github.com/phaserjs/phaser/blob/v4.1.0/src/display/mask/GeometryMask.js#L72)  

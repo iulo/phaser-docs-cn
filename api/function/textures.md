@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 分析一个 XML 纹理图集对象,并将所有框架添加到纹理中。
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -39,7 +39,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将 Canvas 元素添加到纹理中。
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -65,7 +65,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 将图像元素添加到纹理中。
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -91,7 +91,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 分析一个纹理图集 JSON 矩阵, 并将框架添加到纹理中. JSON 格式预计匹配纹理包包定义的, 框架属性包含一个框架阵列.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -118,7 +118,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 解析一个纹理 Atlas JSON Hash 并添加到纹理中. JSON格式预计匹配纹理包包定义的,与包含一个框架对象的框属性相匹配.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 这个parser由`Phaser.Textures.TextureManager#addAtlasPCT`调用,一般不直接引用.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -248,15 +248,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-分析一个 Sprite 工作表, 并将框架添加到纹理中 。
+分析一个 精灵表, 并将框架添加到纹理中 。
 
 在Phaser术语中,Sprite Sheet是一个包含不同框架的纹理,但每个框架的大小完全相同,不能修剪或旋转.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 添加框架的纹理 。 |
 | sourceIndex | number | 否 |  | 纹理源的索引. |
@@ -264,8 +264,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | y | number | 否 |  | 斯普林特工作表的左上角坐标。默认为零。从地图集提取工作表时使用。 |
 | width | number | 否 |  | 源图像的宽度 。 |
 | height | number | 否 |  | 源头图像的高度. |
-| config | object | 否 |  | 描述如何解析Sprite工作表的对象 。 |
-| config.frameWidth | number | 否 |  | 以图示工作表中单个框架的像素显示的宽度。 |
+| config | object | 否 |  | 描述如何解析精灵表的对象 。 |
+| config.frameWidth | number | 否 |  | 以精灵表中单个框架的像素显示的宽度。 |
 | config.frameHeight | number | 是 |  | 显示图纸中单个框架的像素高度。 如果未提供, 默认为 frameWidth 。 |
 | config.startFrame | number | 是 | 0 | 开始提取的框架。默认为零。 |
 | config.endFrame | number | 是 | -1 | 完成提取的帧。 默认为 - 1, 表示“ 所有帧 ” 。 |
@@ -287,20 +287,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-分析一个 Sprite 工作表,并将框架添加到文字中,其中 Sprite 工作表作为框架存储在 Atlas 中。
+分析一个 精灵表,并将框架添加到文字中,其中 精灵表作为框架存储在 Atlas 中。
 
 在Phaser术语中,Sprite Sheet是一个包含不同框架的纹理,但每个框架的大小完全相同,不能修剪或旋转.
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | texture | [Phaser.Textures.Texture](/api/class/textures-texture) | 否 |  | 添加框架的纹理 。 |
-| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 包含 Sprite 工作表的框架 。 |
-| config | object | 否 |  | 描述如何解析Sprite工作表的对象 。 |
-| config.frameWidth | number | 否 |  | 以图示工作表中单个框架的像素显示的宽度。 |
+| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 包含 精灵表的框架 。 |
+| config | object | 否 |  | 描述如何解析精灵表的对象 。 |
+| config.frameWidth | number | 否 |  | 以精灵表中单个框架的像素显示的宽度。 |
 | config.frameHeight | number | 是 |  | 显示图纸中单个框架的像素高度。 如果未提供, 默认为 frameWidth 。 |
 | config.startFrame | number | 是 | 0 | 锦标板中起始框架索引 |
 | config.endFrame | number | 是 | -1 | 显示图纸中尾框的索引。 -1 表示所有框架的其余部分 |
@@ -325,7 +325,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 解析一个 Unity YAML 文件,并在纹理中创建框架。关于Sprite Meta 数据的更多细节,请参见 [https://docs.unity3d.com/ScriptReference/SpriteMetaData.html](https://docs.unity3d.com/ScriptReference/SpriteMetaData.html)
 
 
-**Access:** 私营
+**访问权限:** 私有
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

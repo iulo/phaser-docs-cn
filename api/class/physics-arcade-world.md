@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-world)
 
-拱廊物理世界.
+Arcade 物理世界.
 
 世界负责创建、管理、碰撞和更新它内部的所有机构。
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 这个世界事件所属的场景 |
-| config | [Phaser.Types.Physics.Arcade.ArcadeWorldConfig](/api/typedef/types-physics-arcade#arcadeworldconfig) | 否 | 一个弧形物理配置对象 。 |
+| config | [Phaser.Types.Physics.Arcade.ArcadeWorldConfig](/api/typedef/types-physics-arcade#arcadeworldconfig) | 否 | 一个Arcade 物理配置对象 。 |
 
 ---
 
@@ -44,7 +44,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-模拟中充满活力的天体
+模拟中充满活力的物理体
 
 
 > 源码：[src/physics/arcade/World.js#L78](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L78)  
@@ -60,7 +60,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-边界限制身体。
+边界限制物理体。
 
 
 > 源码：[src/physics/arcade/World.js#L123](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L123)  
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-身体可以碰撞的边界线
+物理体可以碰撞的边界线
 
 
 > 源码：[src/physics/arcade/World.js#L137](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L137)  
@@ -124,7 +124,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-默认调试显示新天体的设置 。
+默认调试显示新物理体的设置 。
 
 
 > 源码：[src/physics/arcade/World.js#L305](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L305)  
@@ -172,7 +172,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-总是在垂直之前横向分开重叠的天体。假(默认)是指天体首先在重力较大的轴上分开,如果两者都不大,则垂直轴上分开。
+总是在垂直之前横向分开重叠的物理体。假(默认)是指物理体首先在重力较大的轴上分开,如果两者都不大,则垂直轴上分开。
 
 
 > 源码：[src/physics/arcade/World.js#L254](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L254)  
@@ -206,7 +206,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重力导致身体加速,以像素每秒为单位.
+重力导致物理体加速,以像素每秒为单位.
 
 
 > 源码：[src/physics/arcade/World.js#L114](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L114)  
@@ -240,7 +240,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 RTree上每个节点的最大项目数量.
 
-如果 `useTree` 是 `false` , 则忽略了此。 如果您在世界上拥有大量天体, 那么您可以通过增加此值来发现搜索性能的改善, 以便允许每个节点和节点的区分都有更多的项目 。
+如果 `useTree` 是 `false` , 则忽略了此。 如果您在世界上拥有大量物理体, 那么您可以通过增加此值来发现搜索性能的改善, 以便允许每个节点和节点的区分都有更多的项目 。
 
 
 > 源码：[src/physics/arcade/World.js#L321](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L321)  
@@ -256,7 +256,7 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-天体每步速度的最大绝对差及其与另一天体的重叠, 将导致在 * 轴* 上分离。 较大的值倾向于分离 。 较小值倾向于不分离 。
+物理体每步速度的最大绝对差及其与另一物理体的重叠, 将导致在 * 轴* 上分离。 较大的值倾向于分离 。 较小值倾向于不分离 。
 
 
 > 源码：[src/physics/arcade/World.js#L229](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L229)  
@@ -304,7 +304,7 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-静态的身体在这个模拟。
+静态的物理体在这个模拟。
 
 
 > 源码：[src/physics/arcade/World.js#L87](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L87)  
@@ -320,7 +320,7 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-静态天体的空间指数.
+静态物理体的空间指数.
 
 
 > 源码：[src/physics/arcade/World.js#L368](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L368)  
@@ -352,7 +352,7 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-天体与一个瓦片重叠的最大绝对值, 会导致在 * 轴* 上分离。 较大的值倾向于分离 。 较小值倾向于不分离 。 最佳值可能与瓦片大小相似 。
+物理体与一个瓦片重叠的最大绝对值, 会导致在 * 轴* 上分离。 较大的值倾向于分离 。 较小值倾向于不分离 。 最佳值可能与瓦片大小相似 。
 
 
 > 源码：[src/physics/arcade/World.js#L241](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L241)  
@@ -406,7 +406,7 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-动态天体的空间指数.
+动态物理体的空间指数.
 
 
 > 源码：[src/physics/arcade/World.js#L359](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L359)  
@@ -438,13 +438,13 @@ RTree上每个节点的最大项目数量.
 
 **说明:**
 
-这个街机物理世界应该使用 RTree 来进行动态物理吗?
+这个Arcade 物理世界应该使用 RTree 来进行动态物理吗?
 
-RTree是世界所有身体的空间分类的快速方式。 然而,在某些限度内,清理和将身体插入树框的成本比它提供的搜索速度增益要昂贵。
+RTree是世界所有物理体的空间分类的快速方式。 然而,在某些限度内,清理和将物理体插入树框的成本比它提供的搜索速度增益要昂贵。
 
-如果您在世界上拥有大量动态天体, 那么最好在物理配置中将此属性设置为 `false` 来禁用 RTree 。
+如果您在世界上拥有大量动态物理体, 那么最好在物理配置中将此属性设置为 `false` 来禁用 RTree 。
 
-它能应付的号码取决于浏览器和设备,但是在使其失效之前,应该先考虑大约5000个身体的保守估计.
+它能应付的号码取决于浏览器和设备,但是在使其失效之前,应该先考虑大约5000个物理体的保守估计.
 
 这只适用于动态体。静态体总是被保存在RTree中,因为它们不需要每个帧都清除,所以你总是从大规模搜索速度中获益。
 
@@ -486,9 +486,9 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-在模拟中添加一个已有的弧形物理体或静态Body.
+在模拟中添加一个已有的Arcade 物理体或静态Body.
 
-身体被启用并添加到当地的搜索树上.
+物理体被启用并添加到当地的搜索树上.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -516,9 +516,9 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 撞机是自动进行两个物体碰撞检查的一种方式,它称碰撞,如果发生,则处理回调.
 
-在所有机构更新后,对撞机将作为世界更新的一部分运行。
+在所有机构更新后,碰撞器将作为世界更新的一部分运行。
 
-通过创建对撞机,你不需要在你的`update`环中拨打`World.collide`,因为会自动处理它。
+通过创建碰撞器,你不需要在你的`update`环中拨打`World.collide`,因为会自动处理它。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -530,7 +530,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 | callbackContext | * | 是 | 呼叫回调的范围。 |
 
 
-**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的对撞机。
+**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的碰撞器。
 
 
 > 源码：[src/physics/arcade/World.js#L804](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L804)  
@@ -550,9 +550,9 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 碰撞器是两个对象之间自动进行重叠检查的一种方式,它会调用碰撞,如果发生时处理回调.
 
-在所有机构更新后,对撞机将作为世界更新的一部分运行。
+在所有机构更新后,碰撞器将作为世界更新的一部分运行。
 
-通过创建对撞机,你不需要在你的`update`环中拨打`World.overlap`,因为会自动处理它。
+通过创建碰撞器,你不需要在你的`update`环中拨打`World.overlap`,因为会自动处理它。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -564,7 +564,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 | callbackContext | * | 是 | 呼叫回调的范围。 |
 
 
-**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的对撞机。
+**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 被创造的碰撞器。
 
 
 > 源码：[src/physics/arcade/World.js#L840](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L840)  
@@ -580,7 +580,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-检查两个给定的拱廊物理体是否会根据其碰撞掩码和碰撞类别碰撞,或不碰撞.
+检查两个给定的Arcade 物理体是否会根据其碰撞掩码和碰撞类别碰撞,或不碰撞.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -589,7 +589,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 | body2 | [Phaser.Types.Physics.Arcade.ArcadeColliderType](/api/typedef/types-physics-arcade#arcadecollidertype) | 否 | 第二身验. |
 
 
-**返回值:** boolean - 如果两具尸体会碰撞 否则会弄虚作假
+**返回值:** boolean - 如果两具物理体会碰撞 否则会弄虚作假
 
 
 > 源码：[src/physics/arcade/World.js#L1972](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1972)  
@@ -614,7 +614,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 | body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 长方形体以试之. |
 
 
-**返回值:** boolean - 如果两具尸体相交,否则是假的,那就是真的了。
+**返回值:** boolean - 如果两具物理体相交,否则是假的,那就是真的了。
 
 
 > 源码：[src/physics/arcade/World.js#L1710](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1710)  
@@ -642,7 +642,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 可提供两个调回; 它们接收碰撞游戏对象作为参数。 如果检测到重叠, 则首先使用 `processCallback` 。 它可以通过返回假来取消碰撞。 接下来是对象分离, 并引用 `collideCallback` 。
 
-弧形物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
+Arcade 物理使用弹射法的碰撞分辨率和分离。虽然它速度快,适合“弧形”风格游戏,但当多个物体相近或彼此间休息时,它缺乏稳定性。停止两个物体穿透的分离可能会形成对不同物体的新穿透。如果需要高度稳定性,请考虑使用替代物理系统,如 Matter.js 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -686,7 +686,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 **返回值:** boolean - 如果有对象重叠(与 `overlapOnly`),则为真;如果有重叠对象被分离,则为真。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide), [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide), [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
 
 
 > 源码：[src/physics/arcade/World.js#L2252](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L2252)  
@@ -704,11 +704,11 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 这一先进方法专门用于测试单个Sprite和一组Tile对象之间的碰撞.
 
-您通常应该使用 `collide` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓷砖过滤和调压, 以及自动处理有趣的面部碰撞 。
+您通常应该使用 `collide` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓦片过滤和调压, 以及自动处理有趣的面部碰撞 。
 
 这种方法提供给那些想要检查与特定平面在一层中碰撞的人,而无需在相关的平面上设置任何碰撞属性。这样您就可以在小平面上进行快速动态碰撞。因此,对于给这种方法的平面阵列,您在将平面传递到这种方法之前,不应进行挤压或检查。
 
-重要: 使用这种方法跳过 Tilemap 层使用的 `interesting faces` 系统。 这意味着, 如果您说出一行或一列的瓷砖, 或者跳进或走过这些瓷砖, 就可以在有趣的面值计算被跳过时被卡在瓷砖的边缘上。 然而, 对于动态地图上的快速点火小碰撞设定测试, 这个方法可以证明非常有用 。
+重要: 使用这种方法跳过 Tilemap 层使用的 `interesting faces` 系统。 这意味着, 如果您说出一行或一列的瓦片, 或者跳进或走过这些瓦片, 就可以在有趣的面值计算被跳过时被卡在瓦片的边缘上。 然而, 对于动态地图上的快速点火小碰撞设定测试, 这个方法可以证明非常有用 。
 
 这种方法不计入碰撞罩或类。
 
@@ -725,7 +725,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 **返回值:** boolean - 如果任何重叠对象被分离,则属实,否则是虚假的。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:TILE_COLLIDE](/api/event/physics-arcade-events#tile_collide)
 
 
 > 源码：[src/physics/arcade/World.js#L2173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L2173)  
@@ -741,7 +741,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-计算一个天体的角速度。
+计算一个物理体的角速度。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -813,7 +813,7 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 关闭模拟并断开它与当前场景的连接.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/physics/arcade/World.js#L2489](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L2489)  
@@ -829,16 +829,16 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-禁用游戏对象的弧形物理体、游戏对象的阵列或组的子体。
+禁用游戏对象的Arcade 物理体、游戏对象的阵列或组的子体。
 
 这与`disableBody`方法的区别在于,你可以将数组或组传递到这种方法.
 
-身体本身没有被删除,它只是有它的`enable`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
+物理体本身没有被删除,它只是有它的`enable`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | Array.\<[Phaser.GameObjects.Group](/api/class/gameobjects-group)> | 否 | 用于禁用尸体的物体。 |
+| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | Array.\<[Phaser.GameObjects.Group](/api/class/gameobjects-group)> | 否 | 用于禁用物理体的物体。 |
 
 
 > 源码：[src/physics/arcade/World.js#L573](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L573)  
@@ -854,16 +854,16 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-禁用已有的弧形物理体或静态Body,并将其从模拟中移除。
+禁用已有的Arcade 物理体或静态Body,并将其从模拟中移除。
 
-尸体被禁用,并被从当地的搜索树上移走.
+物理体被禁用,并被从当地的搜索树上移走.
 
-身体本身没有被删除,它只是有它的`enable`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
+物理体本身没有被删除,它只是有它的`enable`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) \| [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) | 否 | 身体要残疾。 |
+| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) \| [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) | 否 | 物理体要残疾。 |
 
 
 > 源码：[src/physics/arcade/World.js#L624](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L624)  
@@ -879,11 +879,11 @@ RTree是世界所有身体的空间分类的快速方式。 然而,在某些限�
 
 **说明:**
 
-将弧形物理体添加到游戏对象,游戏对象的阵列,或组的子.
+将Arcade 物理体添加到游戏对象,游戏对象的阵列,或组的子.
 
 这与`enableBody`方法的区别在于,你可以将数组或组传递到这种方法.
 
-您可以指定天体是动态还是静态。 动态天体可以通过速度和加速移动。 静态天体仍然固定在原位, 因此能够使用优化的搜索树, 使其理想化为静态元素, 如等位对象。 您仍然可以与静态天体碰撞和重叠 。
+您可以指定物理体是动态还是静态。 动态物理体可以通过速度和加速移动。 静态物理体仍然固定在原位, 因此能够使用优化的搜索树, 使其理想化为静态元素, 如等位对象。 您仍然可以与静态物理体碰撞和重叠 。
 
 通常,你不会直接调用这种方法,而是使用Arcade物理厂现有的辅助方法,例如:
 
@@ -892,13 +892,13 @@ this.physics.add.image(x, y, textureKey);
 this.physics.add.sprite(x, y, textureKey);
 ```
 
-调用工厂方法可以同时封装游戏对象的创建和其身体的创建。 如果您正在创建自定义类, 您可以把它们传递到这种方法, 以便创建它们的身体 。
+调用工厂方法可以同时封装游戏对象的创建和其物理体的创建。 如果您正在创建自定义类, 您可以把它们传递到这种方法, 以便创建它们的物理体 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | Array.\<[Phaser.GameObjects.Group](/api/class/gameobjects-group)> | 否 | 用来创建天体的物体,或称物体. |
-| bodyType | number | 是 | 身体的种类, 要么是`DYNAMIC_BODY`, 要么是`STATIC_BODY`. |
+| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | Array.\<[Phaser.GameObjects.Group](/api/class/gameobjects-group)> | 否 | 用来创建物理体的物体,或称物体. |
+| bodyType | number | 是 | 物理体的种类, 要么是`DYNAMIC_BODY`, 要么是`STATIC_BODY`. |
 
 
 > 源码：[src/physics/arcade/World.js#L421](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L421)  
@@ -914,11 +914,11 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-在单个游戏对象上创建弧形物理体.
+在单个游戏对象上创建Arcade 物理体.
 
 如果游戏对象已经拥有了机身,这种方法将简单地将其添加回模拟中.
 
-您可以指定天体是否是动态或静态。 动态天体可以通过速度和加速移动。 静态天体仍然固定在原位, 因此能够使用优化的搜索树, 使其理想化为静态元素, 如电位对象。 您仍然可以与静态天体碰撞和重叠 。
+您可以指定物理体是否是动态或静态。 动态物理体可以通过速度和加速移动。 静态物理体仍然固定在原位, 因此能够使用优化的搜索树, 使其理想化为静态元素, 如电位对象。 您仍然可以与静态物理体碰撞和重叠 。
 
 通常,你不会直接调用这种方法,而是使用Arcade物理厂现有的辅助方法,例如:
 
@@ -927,16 +927,16 @@ this.physics.add.image(x, y, textureKey);
 this.physics.add.sprite(x, y, textureKey);
 ```
 
-调用工厂方法可以同时封装游戏对象的创建和其身体的创建。 如果您正在创建自定义类, 您可以把它们传递到这种方法, 以便创建它们的身体 。
+调用工厂方法可以同时封装游戏对象的创建和其物理体的创建。 如果您正在创建自定义类, 您可以把它们传递到这种方法, 以便创建它们的物理体 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 创建此天体的游戏对象 。 |
-| bodyType | number | 是 | 身体的种类, 要么是`DYNAMIC_BODY`, 要么是`STATIC_BODY`. |
+| object | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 创建此物理体的游戏对象 。 |
+| bodyType | number | 是 | 物理体的种类, 要么是`DYNAMIC_BODY`, 要么是`STATIC_BODY`. |
 
 
-**返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 创建此天体的游戏对象 。
+**返回值:** [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) - 创建此物理体的游戏对象 。
 
 
 > 源码：[src/physics/arcade/World.js#L489](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L489)  
@@ -952,7 +952,7 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-检查一下两具尸体是否完全交叉
+检查一下两具物理体是否完全交叉
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -961,7 +961,7 @@ this.physics.add.sprite(x, y, textureKey);
 | body2 | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 第二身验. |
 
 
-**返回值:** boolean - 如果两具尸体相交,否则是假的,那就是真的了。
+**返回值:** boolean - 如果两具物理体相交,否则是假的,那就是真的了。
 
 
 > 源码：[src/physics/arcade/World.js#L1662](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1662)  
@@ -1009,7 +1009,7 @@ this.physics.add.sprite(x, y, textureKey);
 
 这种高级方法专门用于测试单个Sprite和一组Tile对象之间的重叠.
 
-您通常应该使用 `overlap` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓷砖过滤和调压, 以及自动处理有趣的面部碰撞 。
+您通常应该使用 `overlap` 方法, 使用 Sprite vs. tilemap 层, 因为它会为你进行瓦片过滤和调压, 以及自动处理有趣的面部碰撞 。
 
 这种方法是提供给想要检查与特定平面重叠层的,而无需在相关的平面上设置任何碰撞属性的人的。这样您就可以对小平面进行快速动态重叠测试。因此,对于给这种方法的平面阵列,您在传递到这种方法之前,不应进行挤压或检查。
 
@@ -1028,7 +1028,7 @@ this.physics.add.sprite(x, y, textureKey);
 **返回值:** boolean - 如果有对象重叠, 否则会错。 @ info: whatsthis
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:TILE_OVERLAP](/api/event/physics-arcade-events#tile_overlap)
 
 
 > 源码：[src/physics/arcade/World.js#L2215](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L2215)  
@@ -1046,7 +1046,7 @@ this.physics.add.sprite(x, y, textureKey);
 
 暂停模拟。
 
-暂停模拟不会更新任何现有的天体,也不会运行任何对撞机.
+暂停模拟不会更新任何现有的物理体,也不会运行任何碰撞器.
 
 然而,您仍然可以启用和禁用其中的躯体,或者手动操作碰撞或重叠检查.
 
@@ -1054,7 +1054,7 @@ this.physics.add.sprite(x, y, textureKey);
 **返回值:** [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) - 此世界物.
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:PAUSE](/api/event/physics-arcade-events#pause)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:PAUSE](/api/event/physics-arcade-events#pause)
 
 
 > 源码：[src/physics/arcade/World.js#L763](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L763)  
@@ -1086,11 +1086,11 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-从模拟中移除现有的弧形物理体或静态Body。
+从模拟中移除现有的Arcade 物理体或静态Body。
 
-尸体被禁用,并被从当地的搜索树上移走.
+物理体被禁用,并被从当地的搜索树上移走.
 
-身体本身没有被删除,它只是有它的`enabled`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
+物理体本身没有被删除,它只是有它的`enabled`属性被设定为虚假,这意味着你可以通过将它传递到`World.enable`或`World.add`来在任何时间再次重新使用.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1113,9 +1113,9 @@ this.physics.add.sprite(x, y, textureKey);
 
 从模拟中移除一个对撞器,所以不再处理它.
 
-这种方法不会破坏对撞机。 如果您想在以后阶段添加, 您可以调用 `World.colliders.add(Collider)` 。
+这种方法不会破坏碰撞器。 如果您想在以后阶段添加, 您可以调用 `World.colliders.add(Collider)` 。
 
-如果您不再需要对撞机, 您可以使用 `Collider.destroy` 方法, 这种方法将自动清除所有引用, 然后从世界中删除。 如果您在对撞机上调用毁灭, 您不需要将它传递给这种方法 。
+如果您不再需要碰撞器, 您可以使用 `Collider.destroy` 方法, 这种方法将自动清除所有引用, 然后从世界中删除。 如果您在碰撞器上调用毁灭, 您不需要将它传递给这种方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1145,7 +1145,7 @@ this.physics.add.sprite(x, y, textureKey);
 **返回值:** [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) - 此世界物.
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:RESUME](/api/event/physics-arcade-events#resume)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:RESUME](/api/event/physics-arcade-events#resume)
 
 
 > 源码：[src/physics/arcade/World.js#L786](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L786)  
@@ -1176,7 +1176,7 @@ this.physics.add.sprite(x, y, textureKey);
 **返回值:** boolean - 如果分居发生,则属实,否则是虚假的。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:COLLIDE](/api/event/physics-arcade-events#collide), [Phaser.Physics.Arcade.Events#event:OVERLAP](/api/event/physics-arcade-events#overlap)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:COLLIDE](/api/event/physics-arcade-events#collide), [Phaser.Physics.Arcade.Events#event:OVERLAP](/api/event/physics-arcade-events#overlap)
 
 
 > 源码：[src/physics/arcade/World.js#L1338](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1338)  
@@ -1192,7 +1192,7 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-分开两个身体,当两者都是圆形的.
+分开两个物理体,当两者都是圆形的.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1205,7 +1205,7 @@ this.physics.add.sprite(x, y, textureKey);
 **返回值:** boolean - 如果分居发生,则属实,否则是虚假的。
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:COLLIDE](/api/event/physics-arcade-events#collide), [Phaser.Physics.Arcade.Events#event:OVERLAP](/api/event/physics-arcade-events#overlap)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:COLLIDE](/api/event/physics-arcade-events#collide), [Phaser.Physics.Arcade.Events#event:OVERLAP](/api/event/physics-arcade-events#overlap)
 
 
 > 源码：[src/physics/arcade/World.js#L1455](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1455)  
@@ -1223,7 +1223,7 @@ this.physics.add.sprite(x, y, textureKey);
 
 设置世界边界的位置、大小和属性。
 
-世界边界是一个无形的矩形,它定义了世界的边缘。如果一个天体被设定与世界边界相撞,那么它就会在到达任何边缘时自动停止。您可以选择选择选择边界的哪个边缘来检查。
+世界边界是一个无形的矩形,它定义了世界的边缘。如果一个物理体被设定与世界边界相撞,那么它就会在到达任何边缘时自动停止。您可以选择选择选择边界的哪个边缘来检查。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1232,10 +1232,10 @@ this.physics.add.sprite(x, y, textureKey);
 | y | number | 否 | 边界的左上角坐标。 |
 | width | number | 否 | 边界的宽度。 |
 | height | number | 否 | 界高处. |
-| checkLeft | boolean | 是 | 尸体应该检查边界左侧吗? |
-| checkRight | boolean | 是 | 尸体应该检查边界的右边缘吗? |
-| checkUp | boolean | 是 | 尸体应该检查边界的顶端吗? |
-| checkDown | boolean | 是 | 尸体应该检查边界底部吗? |
+| checkLeft | boolean | 是 | 物理体应该检查边界左侧吗? |
+| checkRight | boolean | 是 | 物理体应该检查边界的右边缘吗? |
+| checkUp | boolean | 是 | 物理体应该检查边界的顶端吗? |
+| checkDown | boolean | 是 | 物理体应该检查边界底部吗? |
 
 
 **返回值:** [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) - 此世界物.
@@ -1257,12 +1257,12 @@ this.physics.add.sprite(x, y, textureKey);
 启用或禁用世界边界每个边缘的碰撞.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| left | boolean | 是 | true | 尸体应该检查边界左侧吗? |
-| right | boolean | 是 | true | 尸体应该检查边界的右边缘吗? |
-| up | boolean | 是 | true | 尸体应该检查边界的顶端吗? |
-| down | boolean | 是 | true | 尸体应该检查边界底部吗? |
+| left | boolean | 是 | true | 物理体应该检查边界左侧吗? |
+| right | boolean | 是 | true | 物理体应该检查边界的右边缘吗? |
+| up | boolean | 是 | true | 物理体应该检查边界的顶端吗? |
+| down | boolean | 是 | true | 物理体应该检查边界底部吗? |
 
 
 **返回值:** [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) - 此世界物.
@@ -1311,10 +1311,10 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-关闭模拟,清除物理数据,并删除听众.
+关闭模拟,清除物理数据,并删除监听器.
 
 
-**Overrides:** Phaser.Events.EventEmitter# 低调的
+**重写:** Phaser.Events.EventEmitter# 低调的
 
 
 > 源码：[src/physics/arcade/World.js#L2472](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L2472)  
@@ -1333,7 +1333,7 @@ this.physics.add.sprite(x, y, textureKey);
 一步一步推进模拟.
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
 
 
 > 源码：[src/physics/arcade/World.js#L1057](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1057)  
@@ -1357,7 +1357,7 @@ this.physics.add.sprite(x, y, textureKey);
 | delta | number | 否 | 三角洲时间数,以秒计,通过它来推进模拟. |
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
 
 
 > 源码：[src/physics/arcade/World.js#L1010](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L1010)  
@@ -1384,7 +1384,7 @@ this.physics.add.sprite(x, y, textureKey);
 | delta | number | 否 | 三角洲时间,以ms计, 过去了,自上一个框架。 |
 
 
-**Fires:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
+**触发事件:** [Phaser.Physics.Arcade.Events#event:WORLD_STEP](/api/event/physics-arcade-events#world_step)
 
 
 > 源码：[src/physics/arcade/World.js#L927](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/World.js#L927)  
@@ -1400,12 +1400,12 @@ this.physics.add.sprite(x, y, textureKey);
 
 **说明:**
 
-计算一个天体的速度并更新其位置。
+计算一个物理体的速度并更新其位置。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 身体有待更新。 |
+| body | [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | 否 | 物理体有待更新。 |
 | delta | number | 否 | 运动计算中使用的三角洲值, 以秒计. |
 
 
@@ -1427,7 +1427,7 @@ this.physics.add.sprite(x, y, textureKey);
 如果对象位于任何边界边缘(左,上,右,下)之外,则会从相反的边缘(内侧)移到相同的抵消.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | object | any | 否 |  | 一个游戏对象,一个组,一个具有`x`和`y`坐标的物体,或者一个这样的物体的阵列. |
 | padding | number | 是 | 0 | 行动期间每个边界边缘增加一个金额。 |
@@ -1449,7 +1449,7 @@ this.physics.add.sprite(x, y, textureKey);
 将每个物体的坐标 围在[Phaser.Physics.Arcade.World#bounds](/api/class/physics-arcade-world#bounds)内部
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | objects | Array.\<*> | 否 |  | 一系列要包裹的对象。 |
 | padding | number | 是 | 0 | 增加的金额 |
@@ -1471,7 +1471,7 @@ this.physics.add.sprite(x, y, textureKey);
 将物体的坐标圈在[Phaser.Physics.Arcade.World#bounds](/api/class/physics-arcade-world#bounds)内部.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | object | * | 否 |  | 游戏对象、物理对象或任何带有`x`和`y`坐标的物体 |
 | padding | number | 是 | 0 | 增加的金额 |

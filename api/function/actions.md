@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 **说明:**
 
-将 Bloom 效果添加到相机或游戏对象或其中的列表中。
+将 Bloom 效果添加到摄像机或游戏对象或其中的列表中。
 
 Bloom是亮光在图像中扩散的现象,可以用来增加场景的现实主义,尽管太多是显而易见的,而微妙的效果是最好的.
 
@@ -56,7 +56,7 @@ Bloom 最好作为全屏效果。 如果您应用到带有α区域的 Game Objec
 
 **说明:**
 
-将闪光效果添加到相机或游戏对象或其中的列表中。
+将闪光效果添加到摄像机或游戏对象或其中的列表中。
 
 Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,典型的光谱来自相当平坦的表面,它只从某些角度反映亮点。在游戏中,你可能用它来突出一个重要物体,传达一种光泽感,或者将一个干扰波段移动到传输上。
 
@@ -111,27 +111,27 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 **说明:**
 
-使用形状将遮罩应用到游戏对象或相机上或其中的列表中。
+使用形状将遮罩应用到游戏对象或摄像机上或其中的列表中。
 
-这是在对象/相机中添加一个面具的快速方法。 它创建了一个形状, 并使用 FitTroRegion 来正确大小 。
+这是在对象/摄像机中添加一个遮罩的快速方法。 它创建了一个形状, 并使用 FitTroRegion 来正确大小 。
 
-默认情况下,面具是圆形,缩放以适应游戏画布的X和Y轴(因此它不再真正是一个圆形).
+默认情况下,遮罩是圆形,缩放以适应游戏画布的X和Y轴(因此它不再真正是一个圆形).
 
 您可以将形状改为“ 平方 ” 、 “ 矩形 ” 或 “ 椭圆形 ” 。 通过 `config.aspectRatio` 控制矩形或椭圆形 。
 
 您可以像 FitTrongion 那样更改覆盖范围。 您可以在内部、 外部或两个轴上进行缩放。 您可以设定目标区域; 如果您不这样做, 动作会选择适合您的区域 。
 
-动作支持可选的模糊效果, 应用到形状上。 这对口罩上的柔性边缘有好处。 您可以使用 `config.padding` 来缩小形状区域向内, 从而为模糊区域向外扩散到预定边界留下空间 。
+动作支持可选的模糊效果, 应用到形状上。 这对遮罩上的柔性边缘有好处。 您可以使用 `config.padding` 来缩小形状区域向内, 从而为模糊区域向外扩散到预定边界留下空间 。
 
-形状在创建时被从现场移除。 您不需要管理其生命周期; 应该是在面具过滤器被摧毁后收集的垃圾, 通常是当场景或目标被关闭时。 如果您想要访问形状, 它可以在面具过滤器上找到 。
+形状在创建时被从现场移除。 您不需要管理其生命周期; 应该是在遮罩过滤器被摧毁后收集的垃圾, 通常是当场景或目标被关闭时。 如果您想要访问形状, 它可以在遮罩过滤器上找到 。
 
 如果您一次将它应用到多个对象上, 它们都有自己的形状和遮罩过滤器。 请注意, 如果您使用外部过滤器, 遮罩会看起来排成一行。 在这种情况下, 将所有目标放入层或容器并遮盖起来可能更有效。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| items | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | Array.\<([Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera))> | 否 | 用于安装面具的游戏对象或相机或清单。 |
-| config | [Phaser.Types.Actions.AddMaskShapeConfig](/api/typedef/types-actions#addmaskshapeconfig) | 否 | 面具形状的配置. |
+| items | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | Array.\<([Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera))> | 否 | 用于安装遮罩的游戏对象或摄像机或清单。 |
+| config | [Phaser.Types.Actions.AddMaskShapeConfig](/api/typedef/types-actions#addmaskshapeconfig) | 否 | 遮罩形状的配置. |
 
 
 **返回值:** Array.\<[Phaser.Filters.Mask](/api/class/filters-mask)> - 新蒙面滤镜,按目标顺序排列.
@@ -154,12 +154,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 首项不动,第二项与第一项对齐,第三项与第二项对齐,等等.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | position | number | 否 |  | 将项目对齐的位置。 这是一个对齐常数, 如 `Phaser.Display.Align.LEFT_CENTER` 。 |
@@ -187,12 +187,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `Angle(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | number | 否 |  | 以度计的金额, 将加到`angle`的地产中。 |
@@ -217,7 +217,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 取出一系列对象,然后将每个对象传递给给定的回调。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -256,7 +256,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 如果游戏对象没有大小或来源,例如容器,那么如何调整大小使之适合是困难的。 `itemCoverage` 参数允许您设置 `width`, `height`, `originX` 和/或 资源 `originY` 属性以补充可用数据。这些设置优先于原始项目属性,即使存在。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 适合区域的游戏对象或游戏对象。每个对象必须具有Phaser.GameObjects.Components.Transform组件 。 |
 | scaleMode | number | 是 | 0 | 比例尺模式 。 0 设置每个轴以独立填充区域 。 - 1 大小轴均一致, 使项目触及区域 _ inside_ 。 1 大小轴均统一, 使项目触及区域的 _ exide_ 。 |
@@ -278,16 +278,16 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 **说明:**
 
-取一系列对象,返回数组中具有与该矩阵中所有指定对象匹配的属性的第一个元素。 `compare` 对象。例如,如果比较对象是: `{ scaleX: 0.5, alpha: 1 }` 然后它会归还第一个有财产的物品 `scaleX` 设为0.5, `alpha` 设置为 1 。
+取一系列对象,返回数组中具有与该矩阵中所有指定对象匹配的属性的第一个元素。 `compare` 对象。例如,如果比较对象是: `{ scaleX: 0.5, alpha: 1 }` 然后它会归还第一个有属性的物品 `scaleX` 设为0.5, `alpha` 设置为 1 。
 
 使用此选项时, 组为: `GetFirst(group.getChildren(), compare, index)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要搜索的项目数组 。 |
 | compare | object | 否 |  | 比较对象。 此对象中的每个属性将对照数组的项目检查 。 |
@@ -312,12 +312,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `GetLast(group.getChildren(), compare, index)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要搜索的项目数组 。 |
 | compare | object | 否 |  | 比较对象。 此对象中的每个属性将对照数组的项目检查 。 |
@@ -344,7 +344,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 `position`选项控制每个项目如何在单元格内对齐,使用`Phaser.Display.Align`常数之一,如`CENTER`或`TOP_LEFT`.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -375,15 +375,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `IncAlpha(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将增加的`alpha`财产金额。 |
+| value | number | 否 |  | 将增加的`alpha`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -409,15 +409,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `IncX(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将增加的`x`财产金额。 |
+| value | number | 否 |  | 将增加的`x`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -443,15 +443,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `IncXY(group.getChildren(), x, y, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| x | number | 否 |  | 将增加的`x`财产金额。 |
+| x | number | 否 |  | 将增加的`x`属性金额。 |
 | y | number | 是 | "x" | `y` 属性的加法。如果 `undefined` 或 `null` ,则使用 `x` 值 。 |
 | stepX | number | 是 | 0 | 这一点被加到`x`的金额中,乘以迭代计数器. |
 | stepY | number | 是 | 0 | 这一点被加到`y`的金额中,乘以迭代计数器. |
@@ -479,15 +479,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `IncY(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将增加的`y`财产金额。 |
+| value | number | 否 |  | 将增加的`y`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -511,12 +511,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Circle`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | circle | [Phaser.Geom.Circle](/api/class/geom-circle) | 否 |  | 将游戏对象定位在哪个圆形上 。 |
@@ -544,12 +544,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Ellipse`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | ellipse | [Phaser.Geom.Ellipse](/api/class/geom-ellipse) | 否 |  | 将游戏对象定位在椭圆形上 。 |
@@ -573,7 +573,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 沿一行定位一系列游戏对象,设置每个对象的`x`和`y`坐标。默认情况下,游戏对象会被放置在线上的平间间隔。如果提供了`ease`参数,则点之间的间隔由该放松函数控制,从而可以将线上的分布组合或加速。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -603,12 +603,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 放置从矩形的左上方开始,然后顺时针方向进行。如果给出了 `shift` 参数,您可以在开始放置的地方抵消。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | rect | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 |  | 将游戏对象定位在矩形上 。 |
@@ -633,12 +633,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Triangle`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | triangle | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 |  | 三角形将游戏对象定位在 。 |
@@ -661,14 +661,14 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 在阵列中所有具有动画组件的游戏对象上播放动画.
 
-您可以通过动画密钥, 或通过动画配置对象来对播放进行更多的控制 。
+您可以通过动画键, 或通过动画配置对象来对播放进行更多的控制 。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | key | string \| [Phaser.Animations.Animation](/api/class/animations-animation) | [Phaser.Types.Animations.PlayAnimationConfig](/api/typedef/types-animations#playanimationconfig) | 否 |  | 动画要播放的字符串键,或动画实例,或`PlayAnimationConfig`对象. |
@@ -695,16 +695,16 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `PropertyValueInc(group.getChildren(), key, value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | key | string | 否 |  | 需要更新的属性 。 |
-| value | number | 否 |  | 所加财产之数. |
+| value | number | 否 |  | 所加属性之数. |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -730,16 +730,16 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `PropertyValueSet(group.getChildren(), key, value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | key | string | 否 |  | 需要更新的属性 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -763,7 +763,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Circle`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -792,7 +792,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Ellipse`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -821,7 +821,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Line`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -848,7 +848,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 取一系列游戏对象,并将其定位在矩形范围内的随机位置.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -877,7 +877,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 如果您希望通过一个 `Phaser.GameObjects.Triangle`形状来达到此功能, 您应该通过它的 `geom` 属性 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -908,15 +908,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `Rotate(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 加入`rotation`财产(弧度)的金额。 |
+| value | number | 否 |  | 加入`rotation`属性(弧度)的金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -938,7 +938,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 按给定角度围绕给定点旋转每个项目。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -966,7 +966,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 将指定数组中的每个游戏对象按指定角度围绕一个点旋转,将每个项目定位在从该点到的指定距离。如果距离为零,则项目不移动。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -999,15 +999,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `ScaleX(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将增加的`scaleX`财产金额。 |
+| value | number | 否 |  | 将增加的`scaleX`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1033,15 +1033,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `ScaleXY(group.getChildren(), scaleX, scaleY, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| scaleX | number | 否 |  | 将增加的`scaleX`财产金额。 |
+| scaleX | number | 否 |  | 将增加的`scaleX`属性金额。 |
 | scaleY | number | 是 |  | `scaleY` 属性的加法。如果 `undefined` 或 `null` ,则使用 `scaleX` 值 。 |
 | stepX | number | 是 | 0 | 这一点被加到`scaleX`的金额中,乘以迭代计数器. |
 | stepY | number | 是 | 0 | 这一点被加到`scaleY`的金额中,乘以迭代计数器. |
@@ -1069,15 +1069,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `ScaleY(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将增加的`scaleY`财产金额。 |
+| value | number | 否 |  | 将增加的`scaleY`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1103,12 +1103,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetAlpha(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | number | 否 |  | 设定每个项目的α值。 范围应该是 0( 完全透明) 到 1( 完全不透明) 。 |
@@ -1135,12 +1135,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetBlendMode(group.getChildren(), value)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | [Phaser.BlendModes](/api/namespace/blendmodes) \| string | number | 否 |  | 要设置的混合模式 。 |
@@ -1168,12 +1168,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetDepth(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | number | 否 |  | 每个项目的深度值 。 |
@@ -1198,7 +1198,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 在特定阵列中的所有项目上进行迭接,并给每个项目拨打`setInteractive`,对阵列中的每一游戏对象都应用相同的命中区域形状并回调.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1206,7 +1206,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
-| hitArea | [Phaser.Types.Input.InputConfiguration](/api/typedef/types-input#inputconfiguration) \| any | 是 | 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给定, 则会尝试根据纹理框架创建矩形 。 |
+| hitArea | [Phaser.Types.Input.InputConfiguration](/api/typedef/types-input#inputconfiguration) \| any | 是 | 输入配置对象, 或定义游戏对象的命中区域的几何形状。 如果不给定, 则会尝试根据纹理帧创建矩形 。 |
 | hitAreaCallback | [Phaser.Types.Input.HitAreaCallback](/api/typedef/types-input#hitareacallback) | 是 | 用于确定指针是否在 Hit 区域形状之内的调用。 如果您提供了形状, 您也必须提供调用 。 |
 
 
@@ -1230,12 +1230,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetOrigin(group.getChildren(), originX, originY, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | originX | number | 否 |  | 设定 `originX` 属性的金额 。 |
@@ -1266,15 +1266,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetRotation(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 将财产设定为(弧度)的金额。 |
+| value | number | 否 |  | 将属性设定为(弧度)的金额。 |
 | step | number | 是 | 0 | 每一个连续项目都会被加到`value`中,从而使每个对象都得到一个渐进的旋转(弧度),乘以迭代指数。 |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1300,12 +1300,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScale(group.getChildren(), scaleX, scaleY, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | scaleX | number | 否 |  | 设定 `scaleX` 属性的金额 。 |
@@ -1336,12 +1336,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScaleX(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | number | 否 |  | 设置 `scaleX` 属性的值 。 |
@@ -1370,15 +1370,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScaleY(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1404,12 +1404,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScrollFactor(group.getChildren(), scrollFactorX, scrollFactorY, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | scrollFactorX | number | 否 |  | 设定 `scrollFactorX` 属性的金额 。 |
@@ -1440,15 +1440,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScrollFactorX(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1474,15 +1474,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetScrollFactorY(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1504,7 +1504,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 取一系列游戏对象, 或任何具有公用方法 setTint () 的对象, 然后将每个对象的锡值更新到给定值。 您可以指定每个角的锡色, 或者只提供 `topLeft`参数的一个颜色值, 在这种情况下, 整个项目会用该颜色来涂色 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1536,12 +1536,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetVisible(group.getChildren(), value)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | boolean | 否 |  | 设置每个项目的可见状态。 设定为 `true` 使项目可见, 或者 `false` 隐藏它们 。 |
@@ -1569,12 +1569,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetX(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | value | number | 否 |  | x 坐标, 以像素形式设置在每个项上。 |
@@ -1603,12 +1603,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetXY(group.getChildren(), x, y, stepX, stepY)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
 | x | number | 否 |  | 设定 `x` 属性的金额 。 |
@@ -1639,15 +1639,15 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 使用此选项时, 组为: `SetY(group.getChildren(), value, step)`
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 此动作要更新的项目序列 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1679,13 +1679,13 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 把它当成是游戏Snake,在那里"头"被移动,然后每个身体的作品被移动到前一部作品的空间.
 
-**Tags:**
+**标签:**
 
  - generic
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | Array.\<[Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like)> \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象的阵列,或具有公共 x 和 y 位置的对象。此动作将更新此阵列的内容 。 |
 | x | number | 否 |  | 将头项放置在 x 坐标处 。 |
@@ -1710,7 +1710,7 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 正在移动阵列。 正在修改阵列并返回。 Name
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1740,12 +1740,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 函数取决于三个参数, 输入 x, "左边" 和 "右边" , 左边被假定为小于右边。 函数收到一个实际数字 x 作为参数, 如果x 少于或等于左边, 返回 0, 如果x 大于或等于右边, 并且使用 Hermite 多诺米 , 否则将平滑步函数的坡度为 0。 这有利于创建一个转换序列, 使用更平滑的步法将每个段插到一个段, 以替代使用更精密或昂贵的插入技术。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | property | string | 否 |  | 游戏对象的属性 Interpolate 。 |
@@ -1778,18 +1778,18 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 
 这样做便于利用平滑步骤来内插每个段来创建一系列的过渡,作为使用更精密或昂贵的内插技术的替代.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | property | string | 否 |  | 游戏对象的属性 Interpolate 。 |
 | min | number | 否 |  | 平滑步的左边缘。 此值应该小于 `max` 。 |
 | max | number | 否 |  | 平滑步的右边缘。 此值应该大于 `min` 。 |
-| inc | boolean | 是 | false | 财产价值应递增(`true`)还是设定(`false`)? |
+| inc | boolean | 是 | false | 属性价值应递增(`true`)还是设定(`false`)? |
 
 
 **返回值:** array, Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> - 游戏对象的数组被传递到此动作 。
@@ -1816,12 +1816,12 @@ Shine模拟了表面的亮点闪烁。它是一个亮点的短暂光谱反射,�
 Phaser.Actions.Spread(itemsArray, 'alpha', 0, 1);
 ```
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | property | string | 否 |  | 游戏对象的属性要传播 。 |
@@ -1846,7 +1846,7 @@ Phaser.Actions.Spread(itemsArray, 'alpha', 0, 1);
 
 需要一系列游戏对象并切换每个对象的可见度。 先前的 `visible = false` 将会变成 `visible = true`, 反之亦然 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1872,12 +1872,12 @@ Phaser.Actions.Spread(itemsArray, 'alpha', 0, 1);
 
 穿透给定数组,并确保每个对象的x和y属性被包裹,以保持它们被包含在给定矩形区域中.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | items | array \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 游戏对象阵列。 此动作将更新此阵列的内容 。 |
 | rect | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 |  | 物体被包裹的矩形 。 |

@@ -520,7 +520,7 @@ Tween 是否在到达终点和任何可能设定的 `hold` 值后, 能够恢复�
 | isYoyo | boolean | 否 | 这是叫Yoyo检查吗? |
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat), [Phaser.Tweens.Events#event:TWEEN_YOYO](/api/event/tweens-events#tween_yoyo)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat), [Phaser.Tweens.Events#event:TWEEN_YOYO](/api/event/tweens-events#tween_yoyo)
 
 
 > 源码：[src/tweens/tween/BaseTweenData.js#L563](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTweenData.js#L563)  
@@ -690,7 +690,7 @@ Tween 是否在到达终点和任何可能设定的 `hold` 值后, 能够恢复�
 | diff | number | 否 | 需要计入已过期和进度值的任何额外时间。 |
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat), [Phaser.Tweens.Events#event:TWEEN_YOYO](/api/event/tweens-events#tween_yoyo)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat), [Phaser.Tweens.Events#event:TWEEN_YOYO](/api/event/tweens-events#tween_yoyo)
 
 
 > 源码：[src/tweens/tween/BaseTweenData.js#L441](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTweenData.js#L441)  
@@ -714,7 +714,7 @@ Tween 是否在到达终点和任何可能设定的 `hold` 值后, 能够恢复�
 | diff | number | 否 | 需要计入已过期和进度值的任何额外时间。 |
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
 
 
 > 源码：[src/tweens/tween/BaseTweenData.js#L468](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTweenData.js#L468)  

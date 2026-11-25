@@ -19,11 +19,11 @@ static
 设置此物理正体的大小。 设置大小不会调整父游戏对象的尺寸 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 否 |  | 物理体的新宽度,以像素表示. |
 | height | number | 否 |  | 物理体的新高度,以像素表示. |
-| center | boolean | 是 | true | 身体是否应该重新定位, 使其中心与母游戏对象一致 ? |
+| center | boolean | 是 | true | 物理体是否应该重新定位, 使其中心与父游戏对象一致 ? |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Size](/api/namespace/physics-arcade-components-size) - 此游戏对象 。
@@ -48,8 +48,8 @@ static
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | radius | number | 否 | 物理体的半径,以像素表示. |
-| offsetX | number | 是 | 沿x轴从母游戏对象中抵消正体的金额. |
-| offsetY | number | 是 | 沿 Y 轴从母游戏对象中抵消天体的金额 。 |
+| offsetX | number | 是 | 沿x轴从父游戏对象中抵消正体的金额. |
+| offsetY | number | 是 | 沿 Y 轴从父游戏对象中抵消物理体的金额 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Size](/api/namespace/physics-arcade-components-size) - 此游戏对象 。
@@ -68,13 +68,13 @@ static
 
 **说明:**
 
-设置正文偏移。这可以调整正文中心与母游戏对象的x和y坐标之间的差。
+设置物理体偏移。这可以调整物理体中心与父游戏对象的x和y坐标之间的差。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 从父游戏对象沿x轴,以像素表示的抵消正文的金额. |
-| y | number | 是 | "x" | 从母游戏对象沿 Y 轴的正文中抵消的金额, 以像素表示。 默认为 x 轴的值 。 |
+| x | number | 否 |  | 从父游戏对象沿x轴,以像素表示的抵消物理体的金额. |
+| y | number | 是 | "x" | 从父游戏对象沿 Y 轴的物理体中抵消的金额, 以像素表示。 默认为 x 轴的值 。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Size](/api/namespace/physics-arcade-components-size) - 此游戏对象 。
@@ -93,16 +93,16 @@ static
 
 **说明:**
 
-**DEPRECATED**: 请用`setBodySize`代替.
+**已弃用**: 请用`setBodySize`代替.
 
 设置此物理正体的大小。 设置大小不会调整父游戏对象的尺寸 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 否 |  | 物理体的新宽度,以像素表示. |
 | height | number | 否 |  | 物理体的新高度,以像素表示. |
-| center | boolean | 是 | true | 身体是否应该重新定位, 使其中心与母游戏对象一致 ? |
+| center | boolean | 是 | true | 物理体是否应该重新定位, 使其中心与父游戏对象一致 ? |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Size](/api/namespace/physics-arcade-components-size) - 此游戏对象 。

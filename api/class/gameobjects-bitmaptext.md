@@ -21,12 +21,12 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 `new BitmapText(scene, x, y, font, [text], [size], [align])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 它只能在任何特定时间属于一个景点 。 |
 | x | number | 否 |  | 世界空间中此游戏对象的x坐标 。 |
 | y | number | 否 |  | 游戏对象在世界空间中的y坐标 。 |
-| font | string | 否 |  | 从位图字体缓存中要使用的字体的密钥 。 |
+| font | string | 否 |  | 从位图字体缓存中要使用的字体的键 。 |
 | text | string \| Array.\<string> | 是 |  | 字符串,或字符串的数组,将设置为此位图文本的内容 。 |
 | size | number | 是 |  | 此位图文本的字体大小 。 |
 | align | number | 是 | 0 | 多行比图Text对象中的文本对齐。 |
@@ -430,7 +430,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 **说明:**
 
-此位图文本所使用的位图字体的密钥。 要在创建后更改字体, 请使用 `setFont` 。
+此位图文本所使用的位图字体的键。 要在创建后更改字体, 请使用 `setFont` 。
 
 
 > 源码：[src/gameobjects/bitmaptext/static/BitmapText.js#L100](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/static/BitmapText.js#L100)  
@@ -885,7 +885,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 检查的 X 位置 。 |
 | y | number | 否 | 检查位置 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 正在测试的相机。 如果不给它, 将会使用场景默认相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 正在测试的摄像机。 如果不给它, 将会使用场景默认摄像机 。 |
 
 
 **返回值:** [Phaser.Types.GameObjects.BitmapText.BitmapTextCharacter](/api/typedef/types-gameobjects-bitmaptext#bitmaptextcharacter) - 指定位置的字符对象,或`null`.
@@ -915,7 +915,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 对象中还有关于每行长度的数据,如果是多行比特玛普Text。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | round | boolean | 是 | false | 是否将结果整数整数到最近的整数 。 |
 
@@ -944,10 +944,10 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 解析位图字体的场景 。 |
-| fontName | string | 否 | 添加到位图字体缓存的字体密钥 。 |
-| textureKey | string | 否 | 比特玛普方块纹理的密钥. |
-| frameKey | string | 否 | 比特玛普方格纹理框架的密钥. |
-| xmlKey | string | 否 | 字体的 XML 数据解析的密钥 。 |
+| fontName | string | 否 | 添加到位图字体缓存的字体键 。 |
+| textureKey | string | 否 | 比特玛普方块纹理的键. |
+| frameKey | string | 否 | 比特玛普方格纹理帧的键. |
+| xmlKey | string | 否 | 字体的 XML 数据解析的键 。 |
 | xSpacing | number | 是 | 每个字母之间要添加的x轴间隔。 |
 | ySpacing | number | 是 | 线高的Y轴间隔。 |
 
@@ -971,10 +971,10 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 为位图字体缓存分析一个 XML 字体到位图字体数据 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | xml | XMLDocument | 否 |  | XML 文档从中解析字体 。 |
-| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 创建 uv 数据时要考虑的纹理框架 。 |
+| frame | [Phaser.Textures.Frame](/api/class/textures-frame) | 否 |  | 创建 uv 数据时要考虑的纹理帧 。 |
 | xSpacing | number | 是 | 0 | 每个字母之间要添加的x轴间隔。 |
 | ySpacing | number | 是 | 0 | 线高的Y轴间隔。 |
 
@@ -995,10 +995,10 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/bitmaptext/static/BitmapText.js#L1210](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/bitmaptext/static/BitmapText.js#L1210)  
@@ -1063,12 +1063,12 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 要删除一个仅使用 `start` 的锡名称, 并且可以选择, `length` 参数定义 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | start | number | 是 | 0 | 起始字符开始点。 如果是负, 它会从文本的结尾算回来 。 |
 | length | number | 是 | 1 | 要表示的字符数。 请记住空格也算作字符。 pass - 1 将 `start` 开始的所有字符都标记为字符 。 |
@@ -1132,12 +1132,12 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 如果您想要清除阴影, 请使用此方法, 没有指定参数 。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 下降阴影的横向偏移。 |
 | y | number | 是 | 0 | 倒影的垂直偏移 |
@@ -1166,9 +1166,9 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 新的纹理被加载并应用到 BitmapText 中。 现有的文本、 大小和对齐被保留, 除非通过参数被覆盖 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| font | string | 否 |  | 从位图字体缓存中要使用的字体的密钥 。 |
+| font | string | 否 |  | 从位图字体缓存中要使用的字体的键 。 |
 | size | number | 是 |  | 此位图文字的字体大小。 如果不指定当前大小, 将会使用 。 |
 | align | number | 是 | 0 | 在多行比图图文集对象中文本的对齐。如果不指定当前对齐,将使用此方法。 |
 
@@ -1235,7 +1235,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 设置此位图文本每个字符之间的字母间隔。 可以是增加空格的正值, 也可以是缩小空格的负值。 设置 knering 值后, 将应用间隔 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | spacing | number | 是 | 0 | 每个字符之间要添加的横向空间的量 。 |
 
@@ -1263,7 +1263,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 只有在此位图Text对象包含多行文本时才有效果.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | spacing | number | 是 | 0 | 多行文本中每行之间要添加的空格量 。 |
 
@@ -1396,12 +1396,12 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 
 使用 `setCharacterTint` 就可以覆盖此函数设定的锡,反之亦然.
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | word | string \| number | 否 |  | 要搜索的单词。 要么是字符串, 要么是单词数组中的单词索引 。 |
 | count | number | 是 | 1 | 匹配字数到 tin。 ass - 1 到 tin 全部匹配字数 。 |
@@ -1431,7 +1431,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 构建此位图文本的 JSON 代表 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#toJSON
+**重写:** Phaser.GameObjects.GameObject#toJSON
 
 
 **返回值:** [Phaser.Types.GameObjects.BitmapText.JSONBitmapText](/api/typedef/types-gameobjects-bitmaptext#jsonbitmaptext) - JSON 表示此位图文本 。
@@ -1453,7 +1453,7 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 更新存储在此游戏对象上的“显示源”缓存值。您通常不直接调用,但会暴露在边缘大小写中。
 
 
-**Overrides:** Phaser.GameObjects.Components.Origin#updateDisplayOrigin
+**重写:** Phaser.GameObjects.Components.Origin#updateDisplayOrigin
 
 
 **返回值:** [Phaser.GameObjects.BitmapText](/api/class/gameobjects-bitmaptext) - 此游戏对象实例 。

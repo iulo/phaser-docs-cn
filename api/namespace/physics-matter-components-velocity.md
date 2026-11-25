@@ -16,10 +16,10 @@ static
 
 **说明:**
 
-获得当前身体的旋转速度。 等同于其角速度的大小。
+获得当前物理体的旋转速度。 等同于其角速度的大小。
 
 
-**返回值:** number - 身体目前的角速度.
+**返回值:** number - 物理体目前的角速度.
 
 
 > 源码：[src/physics/matter-js/components/Velocity.js#L137](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/components/Velocity.js#L137)  
@@ -35,10 +35,10 @@ static
 
 **说明:**
 
-获得当前身体的旋转速度。
+获得当前物理体的旋转速度。
 
 
-**返回值:** number - 身体目前的角速度.
+**返回值:** number - 物理体目前的角速度.
 
 
 > 源码：[src/physics/matter-js/components/Velocity.js#L106](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/components/Velocity.js#L106)  
@@ -57,7 +57,7 @@ static
 获得物理体的当前线性速度。
 
 
-**返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 身体目前的线性速度.
+**返回值:** [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) - 物理体目前的线性速度.
 
 
 > 源码：[src/physics/matter-js/components/Velocity.js#L75](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/components/Velocity.js#L75)  
@@ -73,7 +73,7 @@ static
 
 **说明:**
 
-设置当前身体的旋转速度。方向得到维护。会影响身体的角速度。
+设置当前物理体的旋转速度。方向得到维护。会影响物理体的角速度。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -97,7 +97,7 @@ static
 
 **说明:**
 
-立即设定身体的角速度。位置、角度、力等不变。
+立即设定物理体的角速度。位置、角度、力等不变。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -124,7 +124,7 @@ static
 设置物理体的横向和纵向速度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 水平速度值。 |
 | y | number | 是 | "x" | 垂直速度值,可以是正的也可以是负的。如果不给定,它将会与`x`值相同。 |

@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-imagefile)
 
-适合装入器加载的单个图像文件 。
+适合资源加载器加载的单个图像文件 。
 
 这些是使用 Phaser.Loader.LoaderPlugin#图像方法创建的,一般不直接创建.
 
@@ -16,10 +16,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.ImageFileConfig](/api/typedef/types-loader-filetypes#imagefileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string \| Array.\<string> | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
-| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 | 框架配置对象。 只提供和用于Sprite工作表 。 |
+| frameConfig | [Phaser.Types.Loader.FileTypes.ImageFrameConfig](/api/typedef/types-loader-filetypes#imageframeconfig) | 是 | 框架配置对象。 只提供和用于精灵表 。 |
 
 ---
 
@@ -71,10 +71,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 成功加载和处理后,将此文件添加到纹理管理器中。
 
-如果此图像有链接的普通地图文件, 方法将等待两个文件完成加载后, 通过 `cache.addImage` 将它们合并为一对。 如果没有正常地图, 图像将自动添加到纹理管理器中 。
+如果此图像有链接的普通地图文件, 方法将等待两个文件完成加载后, 通过 `cache.addImage` 将它们合并为一对。 如果没有法线贴图, 图像将自动添加到纹理管理器中 。
 
 
-**Overrides:** Phaser.Loader.File#addToCache
+**重写:** Phaser.Loader.File#addToCache
 
 
 > 源码：[src/loader/filetypes/ImageFile.js#L192](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ImageFile.js#L192)  
@@ -93,7 +93,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 自动调用 `Loader.nextFile` 作为 XHR 加载路径的一部分。创建 HTML ImageElement 并指定 XHR 的blob 响应通过对象 URL 作为源, 触发浏览器解码图像。 成功时, 调用 `onProcessComplete`; 失败时, 拨打 `onProcessError`。只有在图像通过 XHR(默认)加载时才使用这种方法。当 `loader.imageLoadType` 设置为 `"HTMLImageElement"`,则 `onProcessImage` 方法被使用。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/ImageFile.js#L98](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/ImageFile.js#L98)  

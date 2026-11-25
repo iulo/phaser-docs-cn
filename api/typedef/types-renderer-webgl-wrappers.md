@@ -21,7 +21,7 @@ WebGL常数和功能用于设定遮蔽制服.
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL.Wrappers
+**所属**: Phaser.Types.Renderer.WebGL.Wrappers
 > 源码：[src/renderer/webgl/wrappers/typedefs/ShaderSetter.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/wrappers/typedefs/ShaderSetter.js#L7)  
 引入版本：4.0.0
 
@@ -61,7 +61,7 @@ WebGL常数和功能用于设定遮蔽制服.
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL.Wrappers
+**所属**: Phaser.Types.Renderer.WebGL.Wrappers
 > 源码：[src/renderer/webgl/wrappers/typedefs/ShaderSetterConstants.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/wrappers/typedefs/ShaderSetterConstants.js#L7)  
 引入版本：4.0.0
 

@@ -258,7 +258,7 @@ RenderNodeManager
 如果一个节点没有构建,但有一个构造器,则它将被视为存在。设置 `constructed`为真,以要求该节点已经构建 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 结节之名. |
 | constructed | boolean | 是 | false | 是否必须构建节点以视为存在 。 |
@@ -370,7 +370,7 @@ RenderNodeManager
 | value | number | 是 | 新的数值 `maxParallelTextureUnits`。必须是数字;它将被夹在范围[1],渲染器。maxTextures]. |
 
 
-**Fires:** [Phaser.Renderer.Events#event:SET_PARALLEL_TEXTURE_UNITS](/api/event/renderer-events#set_parallel_texture_units)
+**触发事件:** [Phaser.Renderer.Events#event:SET_PARALLEL_TEXTURE_UNITS](/api/event/renderer-events#set_parallel_texture_units)
 
 
 > 源码：[src/renderer/webgl/renderNodes/RenderNodeManager.js#L406](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/RenderNodeManager.js#L406)  

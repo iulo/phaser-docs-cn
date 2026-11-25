@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/FillStyle.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/FillStyle.js#L1)  
 引入版本：3.0.0
 
@@ -27,17 +27,17 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 ### \<static> LineStyle {#static-linestyle}
 
 
-图形行样式(或中风样式)设置。
+图形行样式(或描边样式)设置。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| width | number | 是 | 中风宽度。 |
-| color | number | 是 | 中风颜色. |
+| width | number | 是 | 描边宽度。 |
+| color | number | 是 | 描边颜色. |
 | alpha | number | 是 | 中风的α。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/LineStyle.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/LineStyle.js#L1)  
 引入版本：3.0.0
 
@@ -57,7 +57,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/Options.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/Options.js#L1)  
 引入版本：3.0.0
 
@@ -67,7 +67,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> RoundedRectRadius {#static-roundedrectradius}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | tl | number | 是 | 20 | 左上角半径。 如果半径为负, 则绘制圆弧 。 |
 | tr | number | 是 | 20 | 右上角半径。 如果半径为负, 绘制圆弧 。 |
@@ -76,7 +76,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/RoundedRectRadius.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/RoundedRectRadius.js#L1)  
 引入版本：3.11.0
 
@@ -96,7 +96,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/Styles.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/Styles.js#L1)  
 引入版本：3.0.0
 
@@ -117,7 +117,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Graphics
+**所属**: Phaser.Types.GameObjects.Graphics
 > 源码：[src/gameobjects/graphics/typedefs/WidePoint.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/graphics/typedefs/WidePoint.js#L1)  
 引入版本：4.0.0
 

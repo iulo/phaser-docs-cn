@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 因为它使用 Canvas API 您可以利用所有这些要约的特性, 比如在文本中应用渐变填充, 或者用中键、 阴影等。 您也可以使用外部加载的自定义字体, 如 Google 或 TypeKit Web 字体 。
 
-**Important:** 如果字体名称包含某些数字或特殊字符组合,在创建文本对象时,或通过`setFont`或`setFontFamily`设置字体时,必须引用该字体名称,例如:
+**重要:** 如果字体名称包含某些数字或特殊字符组合,在创建文本对象时,或通过`setFont`或`setFontFamily`设置字体时,必须引用该字体名称,例如:
 
 ```javascript
 this.add.text(0, 0, 'Hello World', { fontFamily: 'Georgia, "Goudy Bookletter 1911", Times, serif' });
@@ -315,7 +315,7 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 此文本对象的高度 。
 
 
-**Overrides:** Phaser.GameObjects.Components.ComputedSize高音声
+**重写:** Phaser.GameObjects.Components.ComputedSize高音声
 
 
 > 源码：[src/gameobjects/text/Text.js#L211](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/Text.js#L211)  
@@ -452,7 +452,7 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 此文本对象的宽度 。
 
 
-**Overrides:** Phaser.GameObjects.Components.ComputedSize# 摇摆 #
+**重写:** Phaser.GameObjects.Components.ComputedSize# 摇摆 #
 
 
 > 源码：[src/gameobjects/text/Text.js#L201](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/Text.js#L201)  
@@ -755,7 +755,7 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 将用 `\n` 换行符加入一系列字符串 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | string \| Array.\<string> | 否 |  | 字符串,或字符串数组,将附加在本文本对象的现有内容上。 |
 | addCR | boolean | 是 | true | 在字符串值前插入车厢返回 。 |
@@ -862,10 +862,10 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/text/Text.js#L1570](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/text/Text.js#L1570)  
@@ -912,7 +912,7 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 只有当文本对象有不止一行文字时,对齐才有效。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | align | string | 是 | "'left'" | 多行文本的文本对齐。 |
 
@@ -1042,7 +1042,7 @@ this.add.text(0, 0, 'Hello World', { font: '"Press Start 2P"' });
 
 如果给出了某个物体,则设定该物体的`fontFamily`,`fontSize`和`fontStyle`属性.
 
-**Important:** 如果字体名称包含某些数字或特殊字符组合,则必须引用:
+**重要:** 如果字体名称包含某些数字或特殊字符组合,则必须引用:
 
 ```javascript
 Text.setFont('"Press Start 2P"');
@@ -1078,7 +1078,7 @@ Text.setFont('Georgia, "Goudy Bookletter 1911", Times, serif');
 
 设置字体家族 。
 
-**Important:** 如果字体名称包含某些数字或特殊字符组合,则必须引用:
+**重要:** 如果字体名称包含某些数字或特殊字符组合,则必须引用:
 
 ```javascript
 Text.setFontFamily('"Press Start 2P"');
@@ -1217,7 +1217,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 设置要绘制的最大行数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | max | number | 是 | 0 | 绘制的最大行数 。 |
 
@@ -1269,7 +1269,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 
 设置此文本对象所使用的纹理分辨率 。
 
-设置高于 1 的分辨率只有在您正在放大此文本对象( 或祖先) 或放大其上的相机时才有用。 否则, 质素中的任何额外细节都会在渲染过程中丢失 。
+设置高于 1 的分辨率只有在您正在放大此文本对象( 或祖先) 或放大其上的摄像机时才有用。 否则, 质素中的任何额外细节都会在渲染过程中丢失 。
 
 请小心使用,因为你拥有的越高分辨率文本,它使用的记忆就越多.
 
@@ -1298,7 +1298,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 右对左或左对右的文本 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rtl | boolean | 是 | true | 设定为 `true` 从右到左进行渲染. |
 
@@ -1322,7 +1322,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 设置阴影设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 横向阴影抵消。 |
 | y | number | 是 | 0 | 垂直阴影抵消。 |
@@ -1474,8 +1474,8 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| color | string \| CanvasGradient | CanvasPattern | 否 | 中风颜色. |
-| thickness | number | 否 | 中风厚度。 |
+| color | string \| CanvasGradient | CanvasPattern | 否 | 描边颜色. |
+| thickness | number | 否 | 描边粗细。 |
 
 
 **返回值:** [Phaser.GameObjects.Text](/api/class/gameobjects-text) - 此文本对象 。
@@ -1547,7 +1547,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 设置一个自定义的回调线条来包装。 以回调方式删除回调线条是无效的 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | TextStyleWordWrapCallback | 否 |  | 用于包装文本的自定义函数。 它将收到两个参数: 文本( 要包装的字符串) , textObject( 此文本实例) 。 它应该将包装的行作为数组或带有新行字符的字符串返回, 以指示中断点的发生地点 。 |
 | scope | object | 是 | null | 引用回调时将适用的范围 。 |
@@ -1572,7 +1572,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 设置用于包线的宽度( 像素) 。 将空格带入以宽度删除 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number \| null | 否 |  | 线条的最大宽度, 以像素表示。 设置为无法删除包线 。 |
 | useAdvancedWrap | boolean | 是 | false | 是否使用高级的包线算法。 如果为真, 空格会崩溃, 空格会从线条中剪切。 如果错误, 空格和空格会照原样保留 。 |
@@ -1597,7 +1597,7 @@ Text.setFontFamily('Georgia, "Goudy Bookletter 1911", Times, serif');
 构建文本对象的 JSON 表示式。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#toJSON
+**重写:** Phaser.GameObjects.GameObject#toJSON
 
 
 **返回值:** [Phaser.Types.GameObjects.JSONGameObject](/api/typedef/types-gameobjects#jsongameobject) - 文本对象的 JSON 表示式。

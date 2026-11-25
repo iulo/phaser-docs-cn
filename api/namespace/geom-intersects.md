@@ -149,7 +149,7 @@ static
 矢量3的`z`属性包含参数的`t`值(0到1之间的一个标尺),代表着`line1`的交汇点发生多远,可用于排序或比较多个交叉结果,从一组线段找到最接近的交叉点.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line1 | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 第一条线段,或一线,以检查. |
 | line2 | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 第二行段要检查. |
@@ -182,7 +182,7 @@ static
 `x`和`y`组件包含交汇点,`z`组件包含最近的距离.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线段,或射线,以检查。如果有射线,则将 `isRay` 参数设置为 `true` 。 |
 | points | Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> \| Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> | 否 |  | 一系列要检查的点 。 |
@@ -215,7 +215,7 @@ static
 `x`和`y`组件包含交汇点. `z`组件包含最近的距离. `w`组件包含特定阵列中触发交汇的多边形索引.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线段,或射线,以检查。如果有射线,则将 `isRay` 参数设置为 `true` 。 |
 | polygons | [Phaser.Geom.Polygon](/api/class/geom-polygon) \| Array.\<[Phaser.Geom.Polygon](/api/class/geom-polygon)> | 否 |  | 要检查的是一个单一的多边形, 或多边形的数组 。 |
@@ -305,7 +305,7 @@ static
 
 如果矩形物体作为`output`传递,并且有交叉点,则会将交叉区数据加载到其中并返回。如果没有交叉点,则不作任何修改。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -561,7 +561,7 @@ static
 假设线端点是圆形的,而不是方形的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) \| any | 否 |  | 点,或类似点的物体来检查. |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 测试交汇点的线段开始. |
@@ -666,7 +666,7 @@ static
 检查矩形是否与由明确的左、右、上和下边界值定义的区域相交。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rect | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 |  | 检查交叉点的矩形 。 |
 | left | number | 否 |  | 区域左边缘的x坐标以检查是否对应. |

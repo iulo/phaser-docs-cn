@@ -43,7 +43,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 | sys | [Phaser.Scenes.Systems](/api/class/scenes-systems) | 否 | 用于检查插件的场景系统对象 。 |
 
 
-**返回值:** array - 用于 Scene 的插件密钥。 Scene 级别插件优先于全局默认。 如果没有配置插件, 返回空的数组 。
+**返回值:** array - 用于 Scene 的插件键。 Scene 级别插件优先于全局默认。 如果没有配置插件, 返回空的数组 。
 
 
 > 源码：[src/scene/GetScenePlugins.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/GetScenePlugins.js#L9)  

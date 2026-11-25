@@ -26,15 +26,15 @@ this.add.dom(x, y, 'div', 'background-color: lime; width: 220px; height: 100px; 
 
 与其直接指定 CSS 和 HTML , 您可以使用 `load.html` 文件加载器将其加载到缓存中, 然后使用 `createFromCache` 方法。 您也可以使用 `createFromHTML` 和该类中可用的其他各种方法来帮助构建您的要素 。
 
-一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景相机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
+一旦元素被创建, 您就可以像其他游戏对象一样控制它。 您可以设定它的位置、 尺度、 旋转、 α 等属性。 它会随着主要场景摄像机的移动而移动, 并在画布的边缘被剪辑。 必须记住 DOM 元素的一些限制: 显而易见的是它们出现在您的游戏画布上或下方。 您不能把它们混入显示列表, 也就是说您不能有一个 DOM 元素, 然后是 Sprite, 然后是另一个 DOM 元素。
 
-无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用相机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重相机滚动和 scrollFactor 设置, 但是如果您改变相机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
+无法启用它们来输入。 要做到这一点, 您必须使用 `addListener` 方法直接添加本地事件听器。 最后的限制是使用摄像机。 DOM 容器大小可以完全匹配游戏布, 并相应剪辑。 DOM Elements 尊重摄像机滚动和 scrollFactor 设置, 但是如果您改变摄像机的大小, 从而与画布的大小不再匹配, 就不会相应剪辑 。
 
 DOM 游戏对象可以添加到 Phaser 容器中, 但是您只应该将其嵌入** 深一层**。 任何更深的链条都会忽略所有根容器属性 。
 
 此外,所有DOM元素都插入到同一个DOM容器中,不管它们是在哪个场景中创建的.
 
-注意您只应该在带有 _ single_ 相机的场景中设置 DOM Elements。 如果您需要多个相机, 请使用平行的场景来达到此目的 。
+注意您只应该在带有 _ single_ 摄像机的场景中设置 DOM Elements。 如果您需要多个摄像机, 请使用平行的场景来达到此目的 。
 
 DOM Elements 是将本地 HTML 与您的 Phaser 游戏对象对齐的有力方法。 例如, 您可以在您的标题屏幕中直接插入多人游戏的登录表。 或者是高分表的文本输入框。 或者是来自 3rd 派对服务的横幅广告。 或者您想用它们来高分辨率文本显示和UI 。 选择权在你, 请记住您正在处理标的 HTML 和 CSS 浮在游戏顶部, 并应该相应处理它 。
 
@@ -168,7 +168,7 @@ var domElement = new MyDOMElement(scene, x, y, element);
     ```
 
     参考文献: [event emitter](/guide/concepts/events#the-event-emitter)
-- 删除收听器
+- 删除监听器
 
     ```javascript
     domElement.removeListener(eventName);
@@ -178,7 +178,7 @@ var domElement = new MyDOMElement(scene, x, y, element);
     - 单弦,前`'click'`
     - 事件名称与 `' '` 合并
 
-## 带孩子 {#get-child}
+## 获取子对象 {#get-child}
 
 - 取个名字的孩子
 
@@ -192,7 +192,7 @@ var domElement = new MyDOMElement(scene, x, y, element);
     var child = domElement.getChildByID(id)
     ```
 
-- 以财产方式带孩子
+- 以属性方式带孩子
 
     ```javascript
     var child = domElement.getChildByProperty(property, value)
@@ -282,7 +282,7 @@ domElement.rotate3d.w = a;
 1. P3的`'pointermove'`事件不会在DOM游戏对象上方/下发射,除了.
     - 设置 DOM 游戏对象为 invisilbe 。
     - 指定输入( mouse) , 游戏配置的目标参数 。
-1. DOM游戏对象只能通过主相机显示,即Dom游戏对象不能添加到其他相机中.
+1. DOM游戏对象只能通过主摄像机显示,即Dom游戏对象不能添加到其他摄像机中.
 
 ## 其他属性 {#other-properties}
 

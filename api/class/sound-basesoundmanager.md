@@ -231,7 +231,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
@@ -256,7 +256,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
@@ -279,7 +279,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 破坏游戏中的所有声音和所有相关活动.
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/sound/BaseSoundManager.js#L693](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L693)  
@@ -295,9 +295,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-获取此声音管理器中符合给定密钥的第一个声音。 如果找不到, 则返回 `null` 。
+获取此声音管理器中符合给定键的第一个声音。 如果找不到, 则返回 `null` 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -305,7 +305,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
 **返回值:** [Phaser.Sound.BaseSound](/api/class/sound-basesound) - - 声音,或者无效。
@@ -326,9 +326,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 声音管理器中会得到所有的声音 。
 
-您可以选择指定一个密钥,在这种情况下,只返回符合给定密钥的音响实例。
+您可以选择指定一个键,在这种情况下,只返回符合给定键的音响实例。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -336,7 +336,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 是 | 可选资产密钥。 如果给定, 将返回只有带有此密钥的音响实例 。 |
+| key | string | 是 | 可选资源键。 如果给定, 将返回只有带有此键的音响实例 。 |
 
 
 **返回值:** Array.\<[Phaser.Sound.BaseSound](/api/class/sound-basesound)> - - 声音,或者一个空阵列。
@@ -357,7 +357,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回当前正在播放的音效管理器的所有声音。 即, 声音实例将它们的 `isPlaying` 属性设定为 `true` 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -379,14 +379,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-当给定密钥时, 如果有声音使用该密钥, 返回真值 。
+当给定键时, 如果有声音使用该键, 返回真值 。
 
-当未给出密钥时, 如果有声音在播放, 返回真 。
+当未给出键时, 如果有声音在播放, 返回真 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
 **返回值:** boolean - - 任何匹配的声音都是真的 否则是虚假的
@@ -408,7 +408,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果 Phaser.Sound.BaseSoundManager# pauseOnBlur 设定为真实, 则内部用于挖掘声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/sound/BaseSoundManager.js#L601](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L601)  
@@ -427,7 +427,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果 Phaser.Sound.BaseSoundManager# pauseOnBlur 设定为真实,则内部用于恢复声音管理器的方法 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/sound/BaseSoundManager.js#L612](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L612)  
@@ -446,7 +446,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 暂停游戏中的所有声音.
 
 
-**Fires:** [Phaser.Sound.Events#event:PAUSE_ALL](/api/event/sound-events#pause_all)
+**触发事件:** [Phaser.Sound.Events#event:PAUSE_ALL](/api/event/sound-events#pause_all)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L452](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L452)  
@@ -466,12 +466,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复播结束后,声音会自动被移除(销毁).
 
-这使得你无需提及就可以在苍蝇上演奏新声音.
+这使得你无需提及就可以在运行时演奏新声音.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | extra | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) \| [Phaser.Types.Sound.SoundMarker](/api/typedef/types-sound#soundmarker) | 是 | 包含要应用到声音的设置的可选附加对象。 它可以是配置对象,也可以是标记对象 。 |
 
 
@@ -491,12 +491,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-向声音管理器添加一个新的音频图示声音并播放。一旦重播结束,将自动删除(已销毁)该图示。这样您就可以在苍蝇上播放新声音,而无需保留引用。
+向声音管理器添加一个新的音频图示声音并播放。一旦重播结束,将自动删除(已销毁)该图示。这样您就可以在运行时播放新声音,而无需保留引用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | spriteName | string | 否 | 播放的音响图案的名称 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
@@ -557,12 +557,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-从声音管理器中删除所有符合给定值的资产密钥的音效。删除的音效在删除前会被销毁。
+从声音管理器中删除所有符合给定值的资源键的音效。删除的音效在删除前会被销毁。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 删除声音对象时匹配的密钥 。 |
+| key | string | 否 | 删除声音对象时匹配的键 。 |
 
 
 **返回值:** number - 匹配已删除的音效对象的数量 。
@@ -584,7 +584,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 复说游戏中一切声闻.
 
 
-**Fires:** [Phaser.Sound.Events#event:RESUME_ALL](/api/event/sound-events#resume_all)
+**触发事件:** [Phaser.Sound.Events#event:RESUME_ALL](/api/event/sound-events#resume_all)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L469](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L469)  
@@ -600,18 +600,18 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 中所有声音的全球调值。 值的范围为 - 1200 到 1200, 但我们建议将其保持在合理的范围内, 用于音乐目的 。
+设置 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 中所有声音的全球补间。 值的范围为 - 1200 到 1200, 但我们建议将其保持在合理的范围内, 用于音乐目的 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 以美分计的调值,范围是 -1200 到 1200,但我们建议保持合理范围,用于音乐目的。 |
+| value | number | 否 | 以美分计的补间,范围是 -1200 到 1200,但我们建议保持合理范围,用于音乐目的。 |
 
 
 **返回值:** [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_DETUNE](/api/event/sound-events#global_detune)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_DETUNE](/api/event/sound-events#global_detune)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L790](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L790)  
@@ -629,7 +629,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在此 Web 音频上下文设置空间音频听器的 X 和 Y 位置 。
 
-如果您将这种方法调用为没有参数, 它会默认为游戏画布的中点。 根据您正在制作的游戏类型, 您可能需要调用这种方法来不断重置听众位置为相机卷轴 。
+如果您将这种方法调用为没有参数, 它会默认为游戏画布的中点。 根据您正在制作的游戏类型, 您可能需要调用这种方法来不断重置监听器位置为摄像机卷轴 。
 
 调用这种方法对 HTML5Audio 没有任何作用 。
 
@@ -637,7 +637,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | x | number | 是 | 空间音频听器的 x 位置 。 |
-| y | number | 是 | 空间音频听众的y位置 。 |
+| y | number | 是 | 空间音频监听器的y位置 。 |
 
 
 > 源码：[src/sound/BaseSoundManager.js#L486](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L486)  
@@ -666,7 +666,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) - 此音声管理者.
 
 
-**Fires:** [Phaser.Sound.Events#event:GLOBAL_RATE](/api/event/sound-events#global_rate)
+**触发事件:** [Phaser.Sound.Events#event:GLOBAL_RATE](/api/event/sound-events#global_rate)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L738](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L738)  
@@ -685,7 +685,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 停止游戏中的所有声音.
 
 
-**Fires:** [Phaser.Sound.Events#event:STOP_ALL](/api/event/sound-events#stop_all)
+**触发事件:** [Phaser.Sound.Events#event:STOP_ALL](/api/event/sound-events#stop_all)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L503](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L503)  
@@ -701,12 +701,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-停止任何符合给定密钥的声音。
+停止任何符合给定键的声音。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
 **返回值:** number - - 有多少声音被停止。
@@ -730,7 +730,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 更多关于这个问题如何在这里处理,[this article](https://medium.com/@pgoloskokovic/unlocking-web-audio-the-smarter-way-8858218c0e09)。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/sound/BaseSoundManager.js#L588](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L588)  
@@ -749,7 +749,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 更新方法召唤到每个游戏步骤。 删除已销毁的声音, 更新游戏中每个活动的声音 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -758,7 +758,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | delta | number | 否 | 三角洲时间已经过去 自上个框架。 |
 
 
-**Fires:** [Phaser.Sound.Events#event:UNLOCKED](/api/event/sound-events#unlocked)
+**触发事件:** [Phaser.Sound.Events#event:UNLOCKED](/api/event/sound-events#unlocked)
 
 
 > 源码：[src/sound/BaseSoundManager.js#L657](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/BaseSoundManager.js#L657)  

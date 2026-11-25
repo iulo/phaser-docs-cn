@@ -61,7 +61,7 @@ create () {
 - https://developer.mozilla.org/en-US/docs/Web/API/HTMLVideoElement
 - https://developer.mozilla.org/en-US/docs/Web/Media/Formats
 
-## 装入视频 {#load-video}
+## 加载视频 {#load-video}
 
 ```javascript
 this.load.video(key, url, noAudio);
@@ -81,9 +81,9 @@ this.load.video(key, url, noAudio);
 var video = this.add.video(x, y, key);
 ```
 
-- `key`: 此游戏对象将播放的视频的密钥, 如存储在视频缓存中 。
+- `key`: 此游戏对象将播放的视频的键, 如存储在视频缓存中 。
 
-### 从 URL 装入视频 {#load-video-from-url}
+### 从 URL 加载视频 {#load-video-from-url}
 
 1. 添加视频对象
 
@@ -105,7 +105,7 @@ var video = this.add.video(x, y, key);
         - `'anonymous'`
         - `'use-credentials'`
 
-### 从 Media Stream 装入视频 {#load-video-from-mediastream}
+### 从 MediaStream 加载视频 {#load-video-from-mediastream}
 
 ```javascript
 video.loadMediaStream(stream);
@@ -138,7 +138,7 @@ navigator.mediaDevices.getUserMedia({ video: true, audio: false })
 - 初大小:256x265(`video.setSize(256, 256)`)
 - 播放后大小 : 元数据视频大小
 
-## 播放( L) {#play}
+## 播放 {#play}
 
 ```javascript
 video.play();
@@ -175,7 +175,7 @@ video.play();
 
 ## 停下来 {#stop}
 
-停止播放视频,清除所有内部事件听众.
+停止播放视频,清除所有内部事件监听器.
 
 ```javascript
 video.stop();
@@ -312,7 +312,7 @@ var duration = video.getDuration();  // time in seconds
     var key = video.getVideoKey();
     ```
 
-- 更改视频密钥( 视频来源)
+- 更改视频键( 视频来源)
 
     ```javascript
     video.changeSource(key);
@@ -353,7 +353,7 @@ var duration = video.getDuration();  // time in seconds
     video.saveSnapshotTexture(key);
     ```
 
-    - `key` :纹理密钥.
+    - `key` :纹理键.
 2. 拍个快照
 
     ```javascript
@@ -372,7 +372,7 @@ var duration = video.getDuration();  // time in seconds
     - `srcWidth`, `srcHeight` : 从视频中抓取的区域宽度/高度。
     - `destWidth`, `destHeight` : 抓取的目的地宽度/ 高度, 允许您调整大小 。
     - `canvasTexture` : Canvas纹理对象.
-        - 获取纹理密钥
+        - 获取纹理键
 
             ```javascript
             var key = canvasTexture.key;
@@ -523,7 +523,7 @@ var mask = video.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [preFX and postFX effects](/guide/concepts/gameobjects/shader) 软件
 

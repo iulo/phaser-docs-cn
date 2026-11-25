@@ -78,11 +78,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager添加( 添加 )
+**重写:** Phaser.Sound.BaseSoundManager添加( 添加 )
 
 
 **返回值:** [Phaser.Sound.NoAudioSound](/api/class/sound-noaudiosound) - 新声闻例.
@@ -106,11 +106,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#addAudioSprite
+**重写:** Phaser.Sound.BaseSoundManager#addAudioSprite
 
 
 **返回值:** [Phaser.Sound.NoAudioSound](/api/class/sound-noaudiosound) - 新的音频图示音效实例 。
@@ -132,7 +132,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 破坏游戏中的所有声音和所有相关活动.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#销毁
+**重写:** Phaser.Sound.BaseSoundManager#销毁
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L396](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L396)  
@@ -148,9 +148,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-获得管理器中符合给定密钥的第一个声音, 如果有的话 。
+获得管理器中符合给定键的第一个声音, 如果有的话 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -158,10 +158,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager得到的,我发现
+**重写:** Phaser.Sound.BaseSoundManager得到的,我发现
 
 
 **返回值:** [Phaser.Sound.BaseSound](/api/class/sound-basesound) - - 声音,或者无效。
@@ -180,9 +180,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-管理器中获取匹配给定密钥的任何声音 。
+管理器中获取匹配给定键的任何声音 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -190,10 +190,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#getAll
+**重写:** Phaser.Sound.BaseSoundManager#getAll
 
 
 **返回值:** Array.\<[Phaser.Sound.BaseSound](/api/class/sound-basesound)> - - 声音,或者一个空阵列。
@@ -217,7 +217,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的 Sound 管理器中,当浏览器窗口失去焦点时会叫它,如果启用 `pauseOnBlur`,则会暂停所有播放声音.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onBlur
+**重写:** Phaser.Sound.BaseSoundManager#onBlur
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L224](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L224)  
@@ -238,7 +238,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound管理器中,当浏览器窗口重新重现焦点时,会叫它,并恢复任何在焦点丢失时暂停的音效.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onFocus
+**重写:** Phaser.Sound.BaseSoundManager#onFocus
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L236](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L236)  
@@ -259,7 +259,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound管理器中,当Phaser Game 实例失去焦点(例如画布失去指针),并相应暂停声音时,会叫这个.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onGameBlur
+**重写:** Phaser.Sound.BaseSoundManager#onGameBlur
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L248](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L248)  
@@ -280,7 +280,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound Management中,当Phaser Game 实例重拾焦点并恢复任何被暂停在模糊上的声音时,会叫这个.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#onGameFocus
+**重写:** Phaser.Sound.BaseSoundManager#onGameFocus
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L260](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L260)  
@@ -301,7 +301,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的音效管理器中, 这将暂停所有当前播放的音效 。
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#pauseAll
+**重写:** Phaser.Sound.BaseSoundManager#pauseAll
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L272](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L272)  
@@ -322,11 +322,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | extra | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) \| [Phaser.Types.Sound.SoundMarker](/api/typedef/types-sound#soundmarker) | 是 | 包含要应用到声音的设置的可选附加对象。 它可以是配置对象,也可以是标记对象 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager游戏
+**重写:** Phaser.Sound.BaseSoundManager游戏
 
 
 **返回值:** boolean - 总是为无声管理器"假".
@@ -350,12 +350,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 声音的密钥 。 |
+| key | string | 否 | 声音的键 。 |
 | spriteName | string | 否 | 播放的音响图案的名称 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | 包含默认声音设置的可选配置对象。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#playAudioSprite
+**重写:** Phaser.Sound.BaseSoundManager#playAudioSprite
 
 
 **返回值:** boolean - 总是为无声管理器"假".
@@ -382,7 +382,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | sound | [Phaser.Sound.BaseSound](/api/class/sound-basesound) | 否 | 要删除的音效对象 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager# 移动
+**重写:** Phaser.Sound.BaseSoundManager# 移动
 
 
 **返回值:** boolean - 如果声音被成功删除, 否则会是虚假的 。
@@ -404,7 +404,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 从管理器中删除所有声音, 销毁声音 。
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#removeAll
+**重写:** Phaser.Sound.BaseSoundManager#removeAll
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L182](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L182)  
@@ -420,15 +420,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-从声音管理器中删除所有符合给定值的资产密钥的音效。删除的音效在删除前会被销毁。
+从声音管理器中删除所有符合给定值的资源键的音效。删除的音效在删除前会被销毁。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 删除声音对象时匹配的密钥 。 |
+| key | string | 否 | 删除声音对象时匹配的键 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#removeByKey
+**重写:** Phaser.Sound.BaseSoundManager#removeByKey
 
 
 **返回值:** number - 匹配已删除的音效对象的数量 。
@@ -452,7 +452,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的声音管理器中,这可以恢复所有暂停的声音.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#resumeAll
+**重写:** Phaser.Sound.BaseSoundManager#resumeAll
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L283](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L283)  
@@ -470,10 +470,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 这个方法对于无音效管理器没有任何作用,可以保持与其他音效管理器的兼容性.
 
-在真正的Sound Manager中,这可以设置所有声音的全球调值,用美分计,其中百分等于一个半音.
+在真正的Sound Manager中,这可以设置所有声音的全球补间,用美分计,其中百分等于一个半音.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#setDetune
+**重写:** Phaser.Sound.BaseSoundManager#setDetune
 
 
 **返回值:** [Phaser.Sound.NoAudioSoundManager](/api/class/sound-noaudiosoundmanager) - 此音声管理者.
@@ -515,7 +515,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound Manager中,这将设定所有声音的全球回放速率,其中1是正常速度,0.5是半速,2是双速.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#setRate
+**重写:** Phaser.Sound.BaseSoundManager#setRate
 
 
 **返回值:** [Phaser.Sound.NoAudioSoundManager](/api/class/sound-noaudiosoundmanager) - 此音声管理者.
@@ -557,7 +557,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound Manager中,这可以停止所有当前播放的音效.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#stopAll
+**重写:** Phaser.Sound.BaseSoundManager#stopAll
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L294](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L294)  
@@ -573,15 +573,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-停止任何符合给定密钥的声音。
+停止任何符合给定键的声音。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 音响资产密钥. |
+| key | string | 否 | 音响资源键. |
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#stopByKey
+**重写:** Phaser.Sound.BaseSoundManager#stopByKey
 
 
 **返回值:** number - - 有多少声音被停止。
@@ -605,7 +605,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound管理器中,这将会尝试在用户手势后解锁音频上下文,现代浏览器在音频回放开始前需要解锁.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#解锁
+**重写:** Phaser.Sound.BaseSoundManager#解锁
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L368](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L368)  
@@ -626,7 +626,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 在真正的Sound Manager中,这将会被呼吁到每个游戏步骤上更新所有活动声音的状态.
 
 
-**Overrides:** Phaser.Sound.BaseSoundManager#更新日期
+**重写:** Phaser.Sound.BaseSoundManager#更新日期
 
 
 > 源码：[src/sound/noaudio/NoAudioSoundManager.js#L305](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/noaudio/NoAudioSoundManager.js#L305)  

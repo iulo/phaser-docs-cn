@@ -16,12 +16,12 @@ static
 
 **说明:**
 
-设定物理体的质量。质量影响碰撞反应——较重的天体在碰撞时推重更多。
+设定物理体的质量。质量影响碰撞反应——较重的物理体在碰撞时推重更多。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 身体的新质量,一定是一个正数 |
+| value | number | 否 | 物理体的新质量,一定是一个正数 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Mass](/api/namespace/physics-arcade-components-mass) - 此游戏对象 。

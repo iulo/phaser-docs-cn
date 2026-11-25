@@ -54,7 +54,7 @@ git@github.com:phaserjs/phaser.git
 <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.86.0/phaser.min.js"></script>
 ```
 
-## Phaser TypeScript 定义 {#phaser-typescript-definitions}
+## Phaser TypeScript 类型声明 {#phaser-typescript-definitions}
 
 TypeScript定义全称可以在[types folder](https://github.com/phaserjs/phaser/tree/master/types)内部找到,它们也在`package.json`中的`types`条目中被引用,这意味着VSCode等现代编辑器会自动检测到.
 

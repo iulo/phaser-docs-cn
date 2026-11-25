@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> CreateFromObjectLayerConfig {#static-createfromobjectlayerconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | id | number | 是 |  | 要转换的独有对象 ID 。 |
 | gid | number | 是 |  | 要转换的对象 GID 。 |
@@ -22,7 +22,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/CreateFromObjectLayerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/CreateFromObjectLayerConfig.js#L1)  
 引入版本：3.50.0
 
@@ -34,7 +34,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/CreateFromObjectsClassTypeConstructor.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/CreateFromObjectsClassTypeConstructor.js#L1)  
 引入版本：3.60.0
 
@@ -44,15 +44,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> DebugStyleOptions {#static-debugstyleoptions}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| tileColor | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "blue" | 用于绘制非折叠的瓷砖位置的填充矩形的颜色。如果设置为无效,则不绘制非折叠的瓷砖。 |
+| tileColor | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "blue" | 用于绘制非折叠的瓦片位置的填充矩形的颜色。如果设置为无效,则不绘制非折叠的瓦片。 |
 | collidingTileColor | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "orange" | 用于绘制碰撞牌位置的填充矩形的颜色。如果设置为无效,则不绘制碰撞牌。 |
 | faceColor | [Phaser.Display.Color](/api/namespace/display-color) | 是 | "grey" | 用于在有趣的平面画线的颜色。 如果设置为无效, 则不会绘制有趣的平面 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/DebugStyleOptions.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/DebugStyleOptions.js#L1)  
 引入版本：3.0.0
 
@@ -62,15 +62,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> FilteringOptions {#static-filteringoptions}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | isNotEmpty | boolean | 是 | false | 如果为真, 只返回没有 - 1 的索引的牌 。 |
-| isColliding | boolean | 是 | false | 如果是真的,只返回至少一面碰撞的瓷砖。 |
+| isColliding | boolean | 是 | false | 如果是真的,只返回至少一面碰撞的瓦片。 |
 | hasInterestingFace | boolean | 是 | false | 如果真有,则只返回至少有一张有趣面孔的牌. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/FilteringOptions.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/FilteringOptions.js#L1)  
 引入版本：3.0.0
 
@@ -91,7 +91,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/GIDData.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/GIDData.js#L1)  
 引入版本：3.0.0
 
@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> LayerDataConfig {#static-layerdataconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 是 |  | 如果在 Tiled 中指定,则图层的名称 。 |
 | x | number | 是 | 0 | 左上方的 x 偏移到何处 。 |
@@ -126,7 +126,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/LayerDataConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/LayerDataConfig.js#L1)  
 引入版本：3.0.0
 
@@ -136,9 +136,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> MapDataConfig {#static-mapdataconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| 名称 | string | 是 |  | Phaser缓存中对应已装入的图片数据的密钥. |
+| 名称 | string | 是 |  | Phaser缓存中对应已装入的图片数据的键. |
 | width | number | 是 | 0 | 整个瓦片的宽度 。 |
 | height | number | 是 | 0 | 整个瓦片的高度。 |
 | tileWidth | number | 是 | 0 | 瓦片的宽度. |
@@ -154,13 +154,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | images | array | 是 |  | 一个包含所有图层的阵列, 配置到 MapData 。 |
 | objects | object | 是 |  | 平面图像层的阵列 。 |
 | collision | object | 是 |  | 平面对象层的对象。 |
-| tilesets | Array.\<[Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset)> | 是 |  | 地图所用的瓷砖。 |
+| tilesets | Array.\<[Phaser.Tilemaps.Tileset](/api/class/tilemaps-tileset)> | 是 |  | 地图所用的瓦片。 |
 | imageCollections | array | 是 |  | 地图使用的图像的收集( 以斜线表示 ) 。 |
 | tiles | array | 是 |  | 泰尔实例的矩阵 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/MapDataConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/MapDataConfig.js#L1)  
 引入版本：3.0.0
 
@@ -170,7 +170,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ObjectLayerConfig {#static-objectlayerconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 是 | "'object layer'" | 对象层的名称 。 |
 | opacity | number | 是 | 1 | 层层的不透明,在0到1之间. |
@@ -182,7 +182,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/ObjectLayerConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/ObjectLayerConfig.js#L1)  
 引入版本：3.0.0
 
@@ -192,15 +192,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> StyleConfig {#static-styleconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| tileColor | [Phaser.Display.Color](/api/namespace/display-color) \| number | null | 是 | "blue" | 用于绘制非折叠的瓷砖位置的填充矩形的颜色。如果设置为无效,则不绘制非折叠的瓷砖。 |
+| tileColor | [Phaser.Display.Color](/api/namespace/display-color) \| number | null | 是 | "blue" | 用于绘制非折叠的瓦片位置的填充矩形的颜色。如果设置为无效,则不绘制非折叠的瓦片。 |
 | collidingTileColor | [Phaser.Display.Color](/api/namespace/display-color) \| number | null | 是 | "orange" | 用于绘制碰撞牌位置的填充矩形的颜色。如果设置为无效,则不绘制碰撞牌。 |
 | faceColor | [Phaser.Display.Color](/api/namespace/display-color) \| number | null | 是 | "grey" | 用于在有趣的平面画线的颜色。 如果设置为无效, 则不会绘制有趣的平面 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/StyleConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/StyleConfig.js#L1)  
 引入版本：3.0.0
 
@@ -235,7 +235,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/TiledObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/TiledObject.js#L1)  
 引入版本：3.0.0
 
@@ -245,19 +245,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> TilemapConfig {#static-tilemapconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的密钥. |
+| key | string | 是 |  | Phaser缓存中对应已装入的图片数据的键. |
 | data | Array.\<Array.\<number>> | 是 |  | 与其从缓存中加载,还可以直接从2D的片片索引中加载. |
 | tileWidth | number | 是 | 32 | 以像素表示的瓦片宽度 。 |
 | tileHeight | number | 是 | 32 | 瓦片在像素中的高度. |
 | width | number | 是 | 10 | 以瓦片计的地图宽度 。 |
-| height | number | 是 | 10 | 地图的高度,以瓷砖计. |
+| height | number | 是 | 10 | 地图的高度,以瓦片计. |
 | insertNull | boolean | 是 | false | 控制如何处理地图数据中的空牌, 带有 -1 索引的牌。 如果 `true`, 空位置将获得 `null` 值。 如果 `false` , 空位置将得到一个带有 - 1 索引的牌对象, 如果您有大片人烟稀少的地图, 牌块数据不需要更改, 那么设置这个值到 `true` 将会帮助内存消耗。 但是, 如果您的地图很小, 或者您需要动态更新牌, 那么留下默认值设定 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Tilemaps
+**所属**: Phaser.Types.Tilemaps
 > 源码：[src/tilemaps/typedefs/TilemapConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/typedefs/TilemapConfig.js#L1)  
 引入版本：3.0.0
 

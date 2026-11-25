@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 与其他过滤节点不同, FilterSampler 不转换或组合其输入。 它充当快照机制: 它调用 `renderer.snapshotFramebuffer` 上下文中绘制的帧缓冲器,并将结果转发给控制器的调回功能。所抽样的区域由控制器的 `region` 属性。如果 `region` 是一个 `Phaser.Geom.Rectangle`,则该矩形区域被捕获。 `region` 是点(对象为 `x` 财务报告和已审计财务报表 `y` 但没有 `width`,则读取一个像素。如果不是,则读取一个像素。 `region` 设置,整个帧缓冲器都进行了抽样。
 
-当游戏对象或相机通过Sampler过滤器请求帧缓冲器快照时,这个节点被Phaser过滤管内部使用.
+当游戏对象或摄像机通过Sampler过滤器请求帧缓冲器快照时,这个节点被Phaser过滤管内部使用.
 
 **构造函数**
 
@@ -81,7 +81,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | padding | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 辅助的粘贴物绕着渲染区域。 此节点没有使用 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BaseFilter#运行
 
 
 **返回值:** [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) - `inputDrawingContext`, 返回不变。

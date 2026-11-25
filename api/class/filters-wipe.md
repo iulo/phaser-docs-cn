@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 擦拭过滤器控制器 。
 
-这个控制器管理着相机的擦拭效果.
+这个控制器管理着摄像机的擦拭效果.
 
 擦拭或揭示效果是一种视觉技术,它逐渐在游戏中发现或隐藏元素,如图像,文本或场景过渡. 这种效果常用于创造进化感,揭示隐藏的内容,或者提供游戏状态间平滑和视觉吸引人的过渡.
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 由您自己设定 `progress` 值, 例如通过 Tween, 以转换效果 。
 
-通过过滤列表组件将擦拭效果添加到相机中:
+通过过滤列表组件将擦拭效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -33,14 +33,14 @@ camera.filters.external.addWipe();
 `new Wipe(camera, [wipeWidth], [direction], [axis], [reveal], [wipeTexture])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | wipeWidth | number | 是 | 0.1 | 擦拭效果的宽度。 此值在 0 到 1 之间正常化 。 |
 | direction | number | 是 | 0 | 擦拭效果的方向。 要么 0( 左到右, 要么上到下) 要么 1( 右到左, 要么下到上)。 设置与轴属性结合 。 |
 | axis | number | 是 | 0 | 擦拭效果的轴。 要么0( X) 要么1( Y) 。 设定与方向属性结合 。 |
 | reveal | number | 是 | 0 | 这是显示(1)还是擦拭( 0) 效果 ? 启示显示在擦拭区域中的输入; 擦拭显示在未擦拭区域中的输入 。 |
-| wipeTexture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__DEFAULT'" | 输入纹理未显示时使用的纹理或纹理密钥。默认纹理为空白。 使用另一个纹理进行擦拭过渡 。 |
+| wipeTexture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__DEFAULT'" | 输入纹理未显示时使用的纹理或纹理键。默认纹理为空白。 使用另一个纹理进行擦拭过渡 。 |
 
 ---
 
@@ -305,9 +305,9 @@ camera.filters.external.addWipe();
 设置用于删除输入的纹理。 默认纹理是空白的, 所以输入只是隐藏 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__DEFAULT'" | 用于去除输入的区域的纹理或纹理密钥. |
+| texture | string \| [Phaser.Textures.Texture](/api/class/textures-texture) | 是 | "'__DEFAULT'" | 用于去除输入的区域的纹理或纹理键. |
 
 
 **返回值:** [Phaser.Filters.Wipe](/api/class/filters-wipe) - - 这个过滤器

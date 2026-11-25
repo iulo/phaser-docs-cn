@@ -51,7 +51,7 @@ this.load.bitmapFont('key', 'font.png', 'font.xml');
 
 这些是使用字体显示文本的游戏对象。 有两类, [BitmapText](/api/class/gameobjects-bitmaptext)和 [DynamicBitmapText](/api/class/gameobjects-dynamicbitmaptext)。 它们都是“ 动态” , 意思是您可以随时更改文本内容。 不同的是 Dynamic BitmapText 具有 [callbacks](/api/typedef/types-gameobjects-bitmaptext#displaycallbackconfig) , 用于每个字符的渲染效果和 [scrolling](https://labs.phaser.io/view.html?src=src\game%20objects\bitmaptext\dynamic\vertical%20scroller.js) 。
 
-### 装入位图字体 {#load-bitmap-font}
+### 加载位图字体 {#load-bitmap-font}
 
 * 从纹理和xml 配置中装入位图字体
 
@@ -100,7 +100,7 @@ this.load.bitmapFont('key', 'font.png', 'font.xml');
         ```
 
         * Image :
-            * `image`:包含字体的图像的密钥.
+            * `image`:包含字体的图像的键.
             * `offset`:如果字体集没有从给定图像左上方开始,请在此指定 X/Y坐标偏移.
         * Characters :
             * `width`:字体集中每个字符的宽度.
@@ -256,7 +256,7 @@ txt.setFont(key);
 // txt.setFont(key, size, align);
 ```
 
-### 叮当 {#tint}
+### 着色（Tint） {#tint}
 
 见[Tint](/guide/concepts/gameobjects#tint).
 
@@ -416,7 +416,7 @@ var data = txt.getCharacterAt(x, y);
 ```
 
 * `x`, `y` : 世界立场.
-* `camera` 正在测试的相机。
+* `camera` 正在测试的摄像机。
 * `data` :世界位置的人物信息.
 
     ```js
@@ -444,7 +444,7 @@ var data = txt.getCharacterAt(x, y);
 var mask = txt.createBitmapMask();
 ```
 
-### 阴影效果 {#shader-effects}
+### 着色器效果 {#shader-effects}
 
 只支持postFX效果.
 

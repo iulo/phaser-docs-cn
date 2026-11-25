@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 正在更新的“ 活动” Tween 是一个正在更新的
 任意目标属性, 由 `delay` 等设置决定。 如果您需要何时发生事件
-Tween开始更新它的第一个财产,见`TWEEN_START`.
+Tween开始更新它的第一个属性,见`TWEEN_START`.
 
 听听Tween案使用`Tween.on('active', listener)`的音效,即:
 
@@ -34,7 +34,7 @@ this.tweens.existing(tween);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | targets | any \| Array.\<any> | 否 | Tween 的目标。 如果Tween 具有多个目标, 将会是一系列目标 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_ACTIVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_ACTIVE_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -67,7 +67,7 @@ tween.on('complete', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | targets | any \| Array.\<any> | 否 | Tween 的目标。 如果Tween 具有多个目标, 将会是一系列目标 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_COMPLETE_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -103,7 +103,7 @@ tween.on('loop', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | targets | any \| Array.\<any> | 否 | Tween 的目标。 如果Tween 具有多个目标, 将会是一系列目标 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_LOOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_LOOP_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -132,7 +132,7 @@ tween.pause();
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_PAUSE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_PAUSE_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -143,7 +143,7 @@ tween.pause();
 
 当一个属性在反复旋转时, 此事件由 Tween 发送 。
 
-只有Tween拥有一个具有重复计数集的财产,此事件才会被发送.
+只有Tween拥有一个具有重复计数集的属性,此事件才会被发送.
 
 如果一个Tween有`repeatDelay`的设定,此事件将在延迟到期后点燃.
 
@@ -166,12 +166,12 @@ tween.on('repeat', listener);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
-| key | string | 否 | 目标上的财产,刚刚重复, 即`x`或`scaleY`, 或者任何你正在调整的财产。 |
+| key | string | 否 | 目标上的属性,刚刚重复, 即`x`或`scaleY`, 或者任何你正在调整的属性。 |
 | target | any | 否 | 重复的目标对象。 通常是一个游戏对象, 但可以是任意类型的 。 |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_REPEAT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_REPEAT_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -200,7 +200,7 @@ tween.resume();
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_RESUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_RESUME_EVENT.js#L7)  
 引入版本：3.60.0
 
@@ -232,7 +232,7 @@ tween.on('start', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | targets | any \| Array.\<any> | 否 | Tween 的目标。 如果Tween 具有多个目标, 将会是一系列目标 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_START_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -260,7 +260,7 @@ tween.on('stop', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | targets | any \| Array.\<any> | 否 | Tween 的目标。 如果Tween 具有多个目标, 将会是一系列目标 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_STOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_STOP_EVENT.js#L7)  
 引入版本：3.24.0
 
@@ -273,7 +273,7 @@ tween.on('stop', listener);
 
 正在改变目标3个属性的Tween会发出这个事件,每次改变3次,每次一次.
 
-**Note:** 这是一个非常高频事件,可能多次发出,每个帧.
+**注意:** 这是一个非常高频事件,可能多次发出,每个帧.
 
 听听Tween案使用`Tween.on('update', listener)`的音效,即:
 
@@ -292,10 +292,10 @@ tween.on('update', listener);
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
 | key | string | 否 | 目标上刚刚更新的属性,即`x`或`scaleY`,或者任何你正在调整的属性. |
 | target | any | 否 | 更新的目标对象。 通常是一个游戏对象, 但可以是任意类型的 。 |
-| current | number | 否 | 已调整的财产的当前值 。 |
-| previous | number | 否 | 更新前的已调整财产的上一个值 。 |
+| current | number | 否 | 已调整的属性的当前值 。 |
+| previous | number | 否 | 更新前的已调整属性的上一个值 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_UPDATE_EVENT.js#L7)  
 引入版本：3.19.0
 
@@ -304,13 +304,13 @@ tween.on('update', listener);
 
 **说明:** 阳事件.
 
-每当有财产在给Yoyos发短信时, 都会有特温公司发出信号。
+每当有属性在给Yoyos发短信时, 都会有特温公司发出信号。
 
 只有Tween拥有了`yoyo`设定的属性,此事件才会被发出.
 
 如果Tween有`hold`值,则在持有到期时发出此事件.
 
-本次活动是针对每一个财产 以及每个目标 尤尤斯
+本次活动是针对每一个属性 以及每个目标 尤尤斯
 例如,如果一个Tween正在更新2个属性,并且有10个目标,那么这个事件
 将派遣20次,你们要小心地使用它。
 
@@ -330,12 +330,12 @@ tween.on('yoyo', listener);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 提到事件发端的特温事件。 |
-| key | string | 否 | 目标上的财产 刚刚Yoyo'd, 即`x`或`scaleY`, 或任何你正在调整的财产。 |
+| key | string | 否 | 目标上的属性 刚刚Yoyo'd, 即`x`或`scaleY`, 或任何你正在调整的属性。 |
 | target | any | 否 | 原为yoyod的目标对象,通常为游戏对象,但可以是任意类型. |
-| current | number | 否 | 目标上设定的财产的当前值 。 |
+| current | number | 否 | 目标上设定的属性的当前值 。 |
 | previous | number | 否 | 目标上设定的房产的上一个值 。 |
 
-**Member of:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
+**所属:** [Phaser.Tweens.Events](/api/namespace/tweens-events)
 > 源码：[src/tweens/events/TWEEN_YOYO_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/events/TWEEN_YOYO_EVENT.js#L7)  
 引入版本：3.19.0
 

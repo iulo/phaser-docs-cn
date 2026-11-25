@@ -20,8 +20,8 @@ Phaser 4 之前, TileSprite 不支持旋转. WebGL 中,它要求纹理为两大�
 | scene | [Phaser.Scene](/api/class/scene) | 否 | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 | 这个游戏对象在世界的横向位置. |
 | y | number | 否 | 此游戏对象在世界的垂直位置 。 |
-| width | number | 否 | 游戏对象的宽度。 如果为零, 则会使用纹理框架的大小 。 |
-| height | number | 否 | 游戏对象的高度。 如果为零, 则会使用纹理框架的大小 。 |
+| width | number | 否 | 游戏对象的宽度。 如果为零, 则会使用纹理帧的大小 。 |
+| height | number | 否 | 游戏对象的高度。 如果为零, 则会使用纹理帧的大小 。 |
 | textureKey | string | 否 | 此游戏对象将使用的质地键用于渲染, 如保存在质地管理器中。 无法成为动态图案 。 |
 | frameKey | string \| number | 是 | 游戏对象正在用此渲染的纹理的可选框架 。 |
 
@@ -316,7 +316,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 
 梯形螺旋桨是否以某种方式改变,需要重新调整其瓦质纹理.
 
-这些变化包括了Tile Sprite的纹理框架和滚动位置.
+这些变化包括了Tile Sprite的纹理帧和滚动位置.
 
 这在WebGL模式中是无关紧要的.
 
@@ -745,7 +745,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 将这个 TileSprite 添加到 Scene 的更新列表中, 以便其 `preUpdate` 方法被称为每个游戏步骤来推进其动画。 当此游戏对象被添加到 Scene时, 自动调用 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addedToScene
+**重写:** Phaser.GameObjects.GameObject#addedToScene
 
 
 > 源码：[src/gameobjects/tilesprite/TileSprite.js#L290](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/tilesprite/TileSprite.js#L290)  
@@ -761,10 +761,10 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/tilesprite/TileSprite.js#L609](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/tilesprite/TileSprite.js#L609)  
@@ -783,7 +783,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 更新此 TileSprite 的动画 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -808,7 +808,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 从 Scene 更新列表中删除此 TileSprite, 停止调用它的 `preUpdate` 方法。 当此游戏对象从 Scene 中删除时, 自动调用 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removedFromScene
+**重写:** Phaser.GameObjects.GameObject#removedFromScene
 
 
 > 源码：[src/gameobjects/tilesprite/TileSprite.js#L303](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/tilesprite/TileSprite.js#L303)  
@@ -836,7 +836,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 | frame | string \| number | 否 | 纹理内框的名称或索引. |
 
 
-**Overrides:** Phaser.GameObjects.Components.Texture#setFrame
+**重写:** Phaser.GameObjects.Components.Texture#setFrame
 
 
 **返回值:** [Phaser.GameObjects.TileSprite](/api/class/gameobjects-tilesprite) - 此游戏对象实例 。
@@ -868,7 +868,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 | height | number | 否 | 此游戏对象的高度 。 |
 
 
-**Overrides:** Phaser.GameObjects.Components.ComputedSize#setSize
+**重写:** Phaser.GameObjects.Components.ComputedSize#setSize
 
 
 **返回值:** [Phaser.GameObjects.TileSprite](/api/class/gameobjects-tilesprite) - 此游戏对象实例 。
@@ -934,7 +934,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 设置平板纹理的旋转, 以弧度表示, 更新 [Phaser.GameObjects.TileSprite#tileRotation](/api/class/gameobjects-tilesprite#tileRotation)。 纹理会绕着自己的起源旋转, 独立于 TileSprite 的世界旋转 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | radians | number | 是 | 0 | 的旋转纹理,用弧度表示. |
 
@@ -955,7 +955,7 @@ TileSprite 将其填充模式变为 Canvas 元素的背景。 仅用于 Canvas �
 设置平板纹理的横向和纵向尺度,更新 [Phaser.GameObjects.TileSprite#tileScaleX](/api/class/gameobjects-tilesprite#tileScaleX) 财务报告和已审计财务报表 [Phaser.GameObjects.TileSprite#tileScaleY](/api/class/gameobjects-tilesprite#tileScaleY)。该比例表独立于蒂莱Sprite的自身比例表。如果 `x` 提供两个轴的值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 |  | 平板纹理的横向尺度。 如果不给出, 则会使用当前 `tileScaleX` 值 。 |
 | y | number | 是 | "x" | 竖立纹理的垂直比例。 如果不给出, 则使用 `x` 值 。 |

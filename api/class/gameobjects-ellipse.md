@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 椭圆形状是一个游戏对象,可以添加到景物,组或容器中。您可以把它像游戏中其它游戏对象一样对待,比如对它进行扭动,缩放,或者允许它输入或物理。它为您提供了快速和容易的方法,可以在游戏中不使用纹理来渲染此形状,同时仍然利用WebGL进行完整的批量.
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 当它显示椭圆形状时, 您可以控制椭圆的宽度和高度。 如果宽度和高度匹配, 则它会变成圆形。 如果宽度小于高度, 它看起来会更像一个卵形 。
 
@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Ellipse(scene, [x], [y], [width], [height], [fillColor], [fillAlpha])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -461,7 +461,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | height | number | 否 | 椭圆形的高度. |
 
 
-**Overrides:** Phaser.GameObjects.Shape#setSize
+**重写:** Phaser.GameObjects.Shape#setSize
 
 
 **返回值:** [Phaser.GameObjects.Ellipse](/api/class/gameobjects-ellipse) - 此游戏对象实例 。

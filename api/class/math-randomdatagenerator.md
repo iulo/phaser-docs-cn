@@ -203,7 +203,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从给定数组中返回随机元素。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -296,7 +296,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 使用当前种子来调整给定的阵列。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -441,7 +441,7 @@ _Note_:种子阵列的处理量只有第一个`undefined`(或`null`)值,如果�
 
 从给定数组中返回随机元素, 并偏向先前的条目 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse

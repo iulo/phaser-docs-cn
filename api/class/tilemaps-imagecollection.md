@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/tilemaps-imagecollection)
 
-图像集是一个特殊的图案集,每个条目都是完整的单个图像,而不是从更大的图案表中切成的瓦片。与标准图案集不同的是,收藏中的每个图像都是自己独立的资产,以独特的全球ID(GID)为参考。
+图像集是一个特殊的图案集,每个条目都是完整的单个图像,而不是从更大的精灵表中切成的瓦片。与标准图案集不同的是,收藏中的每个图像都是自己独立的资源,以独特的全球ID(GID)为参考。
 
 图像收藏通常在加载平面图数据时自动创建。 当平面图使用“ 图像的集合” 的瓦片集类型而不是标准单像片集类型时, 您将会遇到它们 。
 
@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new ImageCollection(name, firstgid, [width], [height], [margin], [spacing], [properties])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 地图数据中图像收集的名称. |
 | firstgid | number | 否 |  | 此图像收藏包含的第一个图像索引 。 |
@@ -190,7 +190,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | gid | number | 否 | 图像收藏中图像的基调 。 |
-| image | string | 否 | 图像收藏和缓存中图像的密钥 。 |
+| image | string | 否 | 图像收藏和缓存中图像的键 。 |
 | width | number | 否 | 图像收藏中的图像宽度 。 |
 | height | number | 否 | 图像收藏中图像的高度. |
 

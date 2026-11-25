@@ -15,7 +15,7 @@ IsoTriangle 是“ 同位素” 三角形。 把它当金字塔一样看待。 �
 `new IsoTriangle(scene, [x], [y], [size], [height], [reversed], [fillTop], [fillLeft], [fillRight])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 是 | 0 | 这个游戏对象在世界的横向位置. |
@@ -568,7 +568,7 @@ IsoTriangle 是“ 同位素” 三角形。 把它当金字塔一样看待。 �
 设置将渲染异形三角形的面额。 此调用可被链条 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | showTop | boolean | 是 | true | 显示异形三角形的顶部( 只有 `reversed` 属实时) |
 | showLeft | boolean | 是 | true | 显示异形三角形的左面. |
@@ -601,7 +601,7 @@ IsoTriangle 是“ 同位素” 三角形。 把它当金字塔一样看待。 �
 | fillRight | number | 是 | 填充以异形三角形右侧的颜色. |
 
 
-**Overrides:** Phaser.GameObjects.Shape#setFillStyle
+**重写:** Phaser.GameObjects.Shape#setFillStyle
 
 
 **返回值:** [Phaser.GameObjects.IsoTriangle](/api/class/gameobjects-isotriangle) - 此游戏对象实例 。

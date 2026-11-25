@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 这个内部事件由输入插件在它向它的所有系统发出信号以创建自己时发出.
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/BOOT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/BOOT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -20,7 +20,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 内部事件在被摧毁时由输入插件发出,信号到其所有系统自行毁灭.
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DESTROY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -41,7 +41,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针停止拖曳的交互式游戏对象 。 |
 | dropped | boolean | 否 | 游戏对象是否被丢入目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_END_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_END_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针正在拖动的交互式游戏对象 。 |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针已移动到的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_ENTER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_ENTER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -88,7 +88,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | dragX | number | 否 | x 坐标指针当前拖动游戏对象的地方, 在世界空间中. |
 | dragY | number | 否 | 指针当前在世界空间拖动游戏对象的位置的 Y 坐标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -111,7 +111,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针正在拖动的交互式游戏对象 。 |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针所留下的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_LEAVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_LEAVE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -137,7 +137,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针正在拖动的交互式游戏对象 。 |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 这个指针移动到这里的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_OVER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -159,7 +159,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针正在拖动的交互式游戏对象 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DRAG_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DRAG_START_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -180,7 +180,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针所拖曳的交互式游戏对象 。 |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 拖曳目标`gameObject`已经投放。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/DROP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/DROP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -198,14 +198,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_ DOWN] QQlinkcode Phaser.Input.Events#event: GAMEOBJECT_ POINTER_DOWN] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_DOWN] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_DOWN] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_DOWN] 链接码Phaser.Input.Events#事件:GAMEOBJECT_DOWN]
 3. [POINTER_DOWN] 链接码Phaser.Input.Events#事件:POINTER_DOWN]或 [POINTER_DOWN_OUTSIDE] 链接码Phaser.Input.Events#事件:POINTER_DOWN_OUTSIDE]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -213,7 +213,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 将指针按下游戏对象 。 |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DOWN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -225,7 +225,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针停止拖曳,此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('dragend', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详情请见[GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive)。
@@ -237,7 +237,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | dragY | number | 否 | 指针停止拖曳游戏对象的地方的y坐标, 在世界空间中. |
 | dropped | boolean | 否 | 游戏对象是否被丢入目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_END_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_END_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -249,7 +249,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针将其拖入拖动目标,则此事件由交互式游戏对象发送.
 
 使用: `gameObject.on('dragenter', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -259,7 +259,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针已移动到的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_ENTER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_ENTER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -271,7 +271,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果一个指针在拖动时移动,则此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('drag', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -282,7 +282,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | dragX | number | 否 | x 坐标指针当前拖动游戏对象的地方, 在世界空间中. |
 | dragY | number | 否 | 指针当前在世界空间拖动游戏对象的位置的 Y 坐标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -294,7 +294,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针将其拖出拖动目标,此事件由交互式游戏对象发送.
 
 使用: `gameObject.on('dragleave', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -304,7 +304,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 此指针所留下的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_LEAVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_LEAVE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -319,7 +319,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 拖曳目标,它会释放出这个事件。
 
 使用: `gameObject.on('dragover', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -329,7 +329,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 这个指针移动到这里的拖曳目标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_OVER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -341,7 +341,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果一个指针开始拖动,此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('dragstart', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -355,7 +355,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | dragX | number | 否 | x 坐标指针当前拖动游戏对象的地方, 在世界空间中. |
 | dragY | number | 否 | 指针当前在世界空间拖动游戏对象的位置的 Y 坐标 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DRAG_START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DRAG_START_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -367,7 +367,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针在拖放目标上丢弃,此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('drop', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖动 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
@@ -377,7 +377,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | target | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 拖曳目标`gameObject`已经投放。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_DROP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_DROP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -395,14 +395,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_MOVE] QQlinkcode Phaser.Input.Events#event: GameoOBJECT_ POPINTER_MOVE] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBECT_POINTER_移动] QQLinkcode Phaser.Input.Events#事件:GAMEOBJECT_POINTER_移动] 互联网档案馆的存档,存档日期2011-03-02.
 2. [GAMEOBJECT_MOVE] 链接码Phaser.Input.Events#事件:GAMEOBJECT_MOVE] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_MOVE] 链接代码 Phaser.Input.Events活动: 节目(POINTER_MOVE)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -410,7 +410,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 指针被移动的游戏对象 。 |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_MOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_MOVE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -428,14 +428,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_ OUT] \\ linkcode Phaser.Input.Events# event: GameoOBJECT_ PONTER_ OUT] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_OUT] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_OUT] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_OUT] 链接码Phaser.Input.Events#事件:GAMEOBJECT_OUT]
 3. [POINTER_OUT] 链接码Phaser.Input.Events#事件:POINTER_OUT]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身,它不会触发此事件。要处理这些案件,
 请听一下[GAME_OUT]的QQlinkcode Phaser.Input.Events#event:GAME_OUT]事件.
@@ -446,7 +446,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 指针移动出来的游戏对象 。 |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_OUT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_OUT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -464,14 +464,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_ Over] QQlinkcode Phaser.Input.Events#event: GameoOBJECT_ POPINTER_ Over] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_over] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_over] (歌词).
 2. [GAMEOBJECT_over] 链接码Phaser.Input.Events#事件:GAMEOBJECT_over] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_over] 链接码Phaser.Input.Events#事件:POINTER_over] 互联网档案馆的存档,存档日期2014-09-02.
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -479,7 +479,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 指针移动到的游戏对象 。 |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_OVER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -491,19 +491,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果一个指针被压下, 此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('pointerdown', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_DOWN] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_DOWN] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_DOWN] 链接码Phaser.Input.Events#事件:GAMEOBJECT_DOWN]
 3. [POINTER_DOWN] 链接码Phaser.Input.Events#事件:POINTER_DOWN]或 [POINTER_DOWN_OUTSIDE] 链接码Phaser.Input.Events#事件:POINTER_DOWN_OUTSIDE]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -512,7 +512,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | localY | number | 否 | 指针与此对象交互的y坐标,相对于游戏对象的左上方位置. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_DOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_DOWN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -524,19 +524,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果在移动指针时移动了该事件,则由交互式游戏对象发送。
 
 使用: `gameObject.on('pointermove', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBECT_POINTER_移动] QQLinkcode Phaser.Input.Events#事件:GAMEOBJECT_POINTER_移动] 互联网档案馆的存档,存档日期2011-03-02.
 2. [GAMEOBJECT_MOVE] 链接码Phaser.Input.Events#事件:GAMEOBJECT_MOVE] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_MOVE] 链接代码 Phaser.Input.Events活动: 节目(POINTER_MOVE)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -545,7 +545,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | localY | number | 否 | 指针与此对象交互的y坐标,相对于游戏对象的左上方位置. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_MOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_MOVE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -557,19 +557,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针移动出此事件, 则由交互式游戏对象发送 。
 
 使用: `gameObject.on('pointerout', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_OUT] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_OUT] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_OUT] 链接码Phaser.Input.Events#事件:GAMEOBJECT_OUT]
 3. [POINTER_OUT] 链接码Phaser.Input.Events#事件:POINTER_OUT]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身,它不会触发此事件。要处理这些案件,
 请听一下[GAME_OUT]的QQlinkcode Phaser.Input.Events#event:GAME_OUT]事件.
@@ -579,7 +579,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_OUT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_OUT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -591,19 +591,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针移动到它上面,此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('pointerover', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_over] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_over] (歌词).
 2. [GAMEOBJECT_over] 链接码Phaser.Input.Events#事件:GAMEOBJECT_over] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_over] 链接码Phaser.Input.Events#事件:POINTER_over] 互联网档案馆的存档,存档日期2014-09-02.
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -612,7 +612,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | localY | number | 否 | 指针与此对象交互的y坐标,相对于游戏对象的左上方位置. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_OVER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -624,19 +624,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果在游戏上方发布了指针,则此事件由交互式游戏对象发送.
 
 使用: `gameObject.on('pointerup', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_UP] QQLINKE代码Phaser.Input.Events#事件:GAMEOBJECT_POINTER_UP] 互联网档案馆的存档,存档日期2014-09-02.
 2. [GAMEOBJECT_UP] 链接码Phaser.Input.Events#事件:GAMEOBJECT_UP]
 3. [POINTER_UP] 链接代码 Phaser.Input.Events或[POINTER_UP_OUTSIDE] 链接码 Phaser.Input.Events活动: 节目的结束
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -645,7 +645,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | localY | number | 否 | 指针与此对象交互的y坐标,相对于游戏对象的左上方位置. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_UP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_UP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -657,19 +657,19 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 如果指针在移动时其方向盘被移动,则此事件由交互式游戏对象发送 。
 
 使用: `gameObject.on('wheel', listener)` 的游戏对象中收听此事件 。
-注意,听众的范围自动设定为Game Object 实例本身.
+监听器的执行上下文自动设为该游戏对象实例。
 
 要接收此事件, 游戏对象必须设定为交互式 。
 详见[Game Object.ZsetInteractive] ^ 链接Phaser.GameObjects.GameObject#setInteractive] 更多细节.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_WHEEL] 链接码 Phaser.Input.Events活动: 游戏的音乐
 2. [Gameoobject_WHELL] 链接码Phaser.Input.Events#事件:Gameoobject_WHELL] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_WHELL] 链接码Phaser.Input.Events#事件:POINTER_WHELL]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -679,7 +679,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | deltaZ | number | 否 | 由用户移动鼠标轮或类似输入设备而发生的z轴滚动量. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_POINTER_WHEEL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_POINTER_WHEEL_EVENT.js#L7)  
 引入版本：3.18.0
 
@@ -697,14 +697,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_UP] QQ linkcode Phaser.Input.Events#event: GameoOBJECT_ POPINTER_UP] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_UP] QQLINKE代码Phaser.Input.Events#事件:GAMEOBJECT_POINTER_UP] 互联网档案馆的存档,存档日期2014-09-02.
 2. [GAMEOBJECT_UP] 链接码Phaser.Input.Events#事件:GAMEOBJECT_UP]
 3. [POINTER_UP] 链接代码 Phaser.Input.Events或[POINTER_UP_OUTSIDE] 链接码 Phaser.Input.Events活动: 节目的结束
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -712,7 +712,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 游戏对象 指针发布时结束 。 |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_UP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_UP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -730,14 +730,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [GameoOBJECT_ POPINTER_ WHEEL] \\ linkcode Phaser.Input.Events# event: GameoOBJECT_ POINTER_WHEEL] 事件代替 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_WHEEL] 链接码 Phaser.Input.Events活动: 游戏的音乐
 2. [Gameoobject_WHELL] 链接码Phaser.Input.Events#事件:Gameoobject_WHELL] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_WHELL] 链接码Phaser.Input.Events#事件:POINTER_WHELL]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -748,7 +748,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | deltaZ | number | 否 | 由用户移动鼠标轮或类似输入设备而发生的z轴滚动量. |
 | event | [Phaser.Types.Input.EventData](/api/typedef/types-input#eventdata) | 否 | Phaser输入事件。您可以拨打`stopPropagation()`, 阻止事件流中的任何进一步。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAMEOBJECT_WHEEL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAMEOBJECT_WHEEL_EVENT.js#L7)  
 引入版本：3.18.0
 
@@ -767,7 +767,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | event | MouseEvent \| TouchEvent | 否 | 引发画布的DOM事件 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAME_OUT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAME_OUT_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -786,7 +786,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | event | MouseEvent \| TouchEvent | 否 | 引发画布的DOM事件 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/GAME_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/GAME_OVER_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -797,7 +797,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 此内部事件由输入管理器在拖曳时发送 。
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/MANAGER_BOOT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/MANAGER_BOOT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -814,7 +814,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/MANAGER_PROCESS_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/MANAGER_PROCESS_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -825,7 +825,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 内部事件由输入管理器发出,作为其更新步骤的一部分.
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/MANAGER_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/MANAGER_UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -841,7 +841,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | event | Event | 否 | 本地的DOM事件. |
 | locked | boolean | 否 | 鼠标指针的锁定状态 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTERLOCK_CHANGE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTERLOCK_CHANGE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -854,21 +854,21 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerdown', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_DOWN] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_DOWN] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_DOWN] 链接码Phaser.Input.Events#事件:GAMEOBJECT_DOWN]
 3. [POINTER_DOWN] 链接码Phaser.Input.Events#事件:POINTER_DOWN]或 [POINTER_DOWN_OUTSIDE] 链接码Phaser.Input.Events#事件:POINTER_DOWN_OUTSIDE]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | currentlyOver | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 包含事件创建时指针已关闭的所有交互式游戏对象的阵列 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_DOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_DOWN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -881,20 +881,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerdownoutside', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_DOWN] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_DOWN] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_DOWN] 链接码Phaser.Input.Events#事件:GAMEOBJECT_DOWN]
 3. [POINTER_DOWN] 链接码Phaser.Input.Events#事件:POINTER_DOWN]或 [POINTER_DOWN_OUTSIDE] 链接码Phaser.Input.Events#事件:POINTER_DOWN_OUTSIDE]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_DOWN_OUTSIDE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_DOWN_OUTSIDE_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -907,21 +907,21 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointermove', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBECT_POINTER_移动] QQLinkcode Phaser.Input.Events#事件:GAMEOBJECT_POINTER_移动] 互联网档案馆的存档,存档日期2011-03-02.
 2. [GAMEOBJECT_MOVE] 链接码Phaser.Input.Events#事件:GAMEOBJECT_MOVE] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_MOVE] 链接代码 Phaser.Input.Events活动: 节目(POINTER_MOVE)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | currentlyOver | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 包含事件创建时指针已关闭的所有交互式游戏对象的阵列 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_MOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_MOVE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -934,14 +934,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerout', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_OUT] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_OUT] (歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词: 歌词:
 2. [GAMEOBJECT_OUT] 链接码Phaser.Input.Events#事件:GAMEOBJECT_OUT]
 3. [POINTER_OUT] 链接码Phaser.Input.Events#事件:POINTER_OUT]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身,它不会触发此事件。要处理这些案件,
 请听一下[GAME_OUT]的QQlinkcode Phaser.Input.Events#event:GAME_OUT]事件.
@@ -951,7 +951,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | justOut | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 包含所有交互式游戏对象的阵列,指针在事件创建时移动出. |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_OUT_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_OUT_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -964,21 +964,21 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerover', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_over] 链接码 Phaser.Input.Events活动: Gameoobject_POINTER_over] (歌词).
 2. [GAMEOBJECT_over] 链接码Phaser.Input.Events#事件:GAMEOBJECT_over] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_over] 链接码Phaser.Input.Events#事件:POINTER_over] 互联网档案馆的存档,存档日期2014-09-02.
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | justOver | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 包含事件创建时指针移动到所有交互式游戏对象的阵列 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_OVER_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_OVER_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -991,21 +991,21 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerup', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_UP] QQLINKE代码Phaser.Input.Events#事件:GAMEOBJECT_POINTER_UP] 互联网档案馆的存档,存档日期2014-09-02.
 2. [GAMEOBJECT_UP] 链接码Phaser.Input.Events#事件:GAMEOBJECT_UP]
 3. [POINTER_UP] 链接代码 Phaser.Input.Events或[POINTER_UP_OUTSIDE] 链接码 Phaser.Input.Events活动: 节目的结束
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 | currentlyOver | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 | 包含事件创建时指针已关闭的所有交互式游戏对象的阵列 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_UP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_UP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -1018,20 +1018,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('pointerupoutside', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_UP] QQLINKE代码Phaser.Input.Events#事件:GAMEOBJECT_POINTER_UP] 互联网档案馆的存档,存档日期2014-09-02.
 2. [GAMEOBJECT_UP] 链接码Phaser.Input.Events#事件:GAMEOBJECT_UP]
 3. [POINTER_UP] 链接代码 Phaser.Input.Events或[POINTER_UP_OUTSIDE] 链接码 Phaser.Input.Events活动: 节目的结束
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | pointer | [Phaser.Input.Pointer](/api/class/input-pointer) | 否 | 负责触发事件的方向者. |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_UP_OUTSIDE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_UP_OUTSIDE_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -1044,14 +1044,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 使用:`this.input.on('wheel', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [GAMEOBJECT_POINTER_WHEEL] 链接码 Phaser.Input.Events活动: 游戏的音乐
 2. [Gameoobject_WHELL] 链接码Phaser.Input.Events#事件:Gameoobject_WHELL] 互联网档案馆的存档,存档日期2011-09-02.
 3. [POINTER_WHELL] 链接码Phaser.Input.Events#事件:POINTER_WHELL]
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理器可以停止 。
-宣传这一事件。
+事件按列表顺序从最高层向下触发。
+上层事件处理器可以阻止事件继续传播。
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
@@ -1061,7 +1061,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | deltaY | number | 否 | 由用户移动鼠标轮盘或类似输入设备产生的垂直滚动量。 如果用户向上滚动, 则该数值通常小于 0, 向下滚动时大于 0 。 |
 | deltaZ | number | 否 | 由用户移动鼠标轮或类似输入设备而发生的z轴滚动量. |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/POINTER_WHEEL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/POINTER_WHEEL_EVENT.js#L7)  
 引入版本：3.18.0
 
@@ -1073,7 +1073,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 此内部事件由输入插件在其`preUpdate`方法开始时发送.
 这个钩子是专门为输入插件设计的,但也可以从用户-土地代码中听取.
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/PRE_UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/PRE_UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -1084,7 +1084,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 内部事件由输入插件在关闭时发出,信号到其所有系统关闭自己.
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/SHUTDOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/SHUTDOWN_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -1096,7 +1096,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 内部事件由输入插件在完成设置后发送,
 向它的所有内部系统发出信号
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/START_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/START_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -1113,7 +1113,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | time | number | 否 | 当前的时间。 如果来自请求动画框架, 则使用高分辨率定时器值, 或者使用 SetTimeout 。 |
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
-**Member of:** [Phaser.Input.Events](/api/namespace/input-events)
+**所属:** [Phaser.Input.Events](/api/namespace/input-events)
 > 源码：[src/input/events/UPDATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/events/UPDATE_EVENT.js#L7)  
 引入版本：3.0.0
 

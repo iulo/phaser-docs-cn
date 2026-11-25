@@ -66,7 +66,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 此 Render 节点的默认配置 。
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.SubmitterQuad#defaultConfig
+**重写:** Phaser.Renderer.WebGL.RenderNodes.SubmitterQuad#defaultConfig
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterTileSprite.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterTileSprite.js#L43)  
@@ -124,7 +124,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | normalMapRotation | number | 是 | 普通地图纹理的旋转。 如果省略, 将使用 Game Object 的旋转 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.SubmitterQuad#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.SubmitterQuad#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/submitter/SubmitterTileSprite.js#L55](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/submitter/SubmitterTileSprite.js#L55)  

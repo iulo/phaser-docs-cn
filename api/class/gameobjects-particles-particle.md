@@ -196,7 +196,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-本粒子在制作时使用的纹理框架 。
+本粒子在制作时使用的纹理帧 。
 
 
 > 源码：[src/gameobjects/particles/Particle.js#L60](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/Particle.js#L60)  
@@ -394,7 +394,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 锡适用于此粒子。
 
-**Tags:**
+**标签:**
 
  - webglOnly
 
@@ -552,7 +552,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | a5 | any | 是 | 任择论点5。 |
 
 
-**返回值:** boolean - 如果有听众的话,就用`true`,否则用`false`.
+**返回值:** boolean - 如果有监听器的话,就用`true`,否则用`false`.
 
 
 > 源码：[src/gameobjects/particles/Particle.js#L365](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/Particle.js#L365)  
@@ -659,7 +659,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果参数未定义,它会将粒子重新放回(0,0).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 设置此粒子的 x 坐标 。 |
 | y | number | 是 | 0 | 设置此粒子的 Y 坐标 。 |

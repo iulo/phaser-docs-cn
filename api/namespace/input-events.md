@@ -329,7 +329,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_DOWN``](/api/event/input-events#gameobject_pointer_down) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_DOWN``](/api/event/input-events#gameobject_pointer_down)
 
@@ -337,7 +337,7 @@ static
 
 3. [``POINTER_DOWN``](/api/namespace/input-events#pointer_down) or [``POINTER_DOWN_OUTSIDE``](/api/event/input-events#pointer_down_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -364,7 +364,7 @@ static
 
 如果一个指针在拖动时移动,则此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('drag', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('drag', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -393,7 +393,7 @@ static
 
 如果指针停止拖曳,此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('dragend', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('dragend', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -423,7 +423,7 @@ static
 
 如果指针将其拖入拖动目标,则此事件由交互式游戏对象发送.
 
-从游戏对象中听此事件使用: `gameObject.on('dragenter', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('dragenter', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -451,7 +451,7 @@ static
 
 如果指针将其拖出拖动目标,此事件由交互式游戏对象发送.
 
-从游戏对象中听此事件使用: `gameObject.on('dragleave', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('dragleave', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -481,7 +481,7 @@ static
 
 当游戏对象首次进入拖曳目标时, 它会发出 `dragenter`事件。 如果它随后在拖曳目标内移动, 它会发出这个事件 。
 
-从游戏对象中听此事件使用: `gameObject.on('dragover', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('dragover', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -509,7 +509,7 @@ static
 
 如果一个指针开始拖动,此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('dragstart', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('dragstart', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -540,7 +540,7 @@ static
 
 如果指针在拖放目标上丢弃,此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('drop', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('drop', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式并启用拖放。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
@@ -574,7 +574,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_MOVE``](/api/event/input-events#gameobject_pointer_move) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_MOVE``](/api/event/input-events#gameobject_pointer_move)
 
@@ -582,7 +582,7 @@ static
 
 3. [``POINTER_MOVE``](/api/event/input-events#pointer_move)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -615,7 +615,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_OUT``](/api/event/input-events#gameobject_pointer_out) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OUT``](/api/event/input-events#gameobject_pointer_out)
 
@@ -623,7 +623,7 @@ static
 
 3. [``POINTER_OUT``](/api/event/input-events#pointer_out)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身, 它不会触发此事件。 要处理这些案件, 请聆听 [``GAME_OUT``](/api/event/input-events#game_out) 事件 。
 
@@ -658,7 +658,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_OVER``](/api/event/input-events#gameobject_pointer_over) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OVER``](/api/event/input-events#gameobject_pointer_over)
 
@@ -666,7 +666,7 @@ static
 
 3. [``POINTER_OVER``](/api/event/input-events#pointer_over)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -693,11 +693,11 @@ static
 
 如果一个指针被压下, 此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('pointerdown', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('pointerdown', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_DOWN``](/api/event/input-events#gameobject_pointer_down)
 
@@ -705,7 +705,7 @@ static
 
 3. [``POINTER_DOWN``](/api/namespace/input-events#pointer_down) or [``POINTER_DOWN_OUTSIDE``](/api/event/input-events#pointer_down_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -733,11 +733,11 @@ static
 
 如果在移动指针时移动了该事件,则由交互式游戏对象发送。
 
-从游戏对象中听此事件使用: `gameObject.on('pointermove', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('pointermove', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_MOVE``](/api/event/input-events#gameobject_pointer_move)
 
@@ -745,7 +745,7 @@ static
 
 3. [``POINTER_MOVE``](/api/event/input-events#pointer_move)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -773,11 +773,11 @@ static
 
 如果指针移动出此事件, 则由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('pointerout', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('pointerout', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OUT``](/api/event/input-events#gameobject_pointer_out)
 
@@ -785,7 +785,7 @@ static
 
 3. [``POINTER_OUT``](/api/event/input-events#pointer_out)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身, 它不会触发此事件。 要处理这些案件, 请聆听 [``GAME_OUT``](/api/event/input-events#game_out) 事件 。
 
@@ -813,11 +813,11 @@ static
 
 如果指针移动到它上面,此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('pointerover', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('pointerover', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OVER``](/api/event/input-events#gameobject_pointer_over)
 
@@ -825,7 +825,7 @@ static
 
 3. [``POINTER_OVER``](/api/event/input-events#pointer_over)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -853,11 +853,11 @@ static
 
 如果在游戏上方发布了指针,则此事件由交互式游戏对象发送.
 
-从游戏对象中听此事件使用: `gameObject.on('pointerup', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('pointerup', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_UP``](/api/event/input-events#gameobject_pointer_up)
 
@@ -865,7 +865,7 @@ static
 
 3. [``POINTER_UP``](/api/namespace/input-events#pointer_up) or [``POINTER_UP_OUTSIDE``](/api/event/input-events#pointer_up_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -893,11 +893,11 @@ static
 
 如果指针在移动时其方向盘被移动,则此事件由交互式游戏对象发送 。
 
-从游戏对象中听此事件使用: `gameObject.on('wheel', listener)`。 请注意, 听众的范围被自动设定为游戏对象实例本身 。
+从游戏对象中听此事件使用: `gameObject.on('wheel', listener)`。 请注意, 监听器的范围被自动设定为游戏对象实例本身 。
 
 要接收此事件, 游戏对象必须设定为交互式。 详情请参见 [GameObject.setInteractive](/api/class/gameobjects-gameobject#setInteractive) 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_WHEEL``](/api/event/input-events#gameobject_pointer_wheel)
 
@@ -905,7 +905,7 @@ static
 
 3. [``POINTER_WHEEL``](/api/event/input-events#pointer_wheel)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -940,7 +940,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_UP``](/api/event/input-events#gameobject_pointer_up) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_UP``](/api/event/input-events#gameobject_pointer_up)
 
@@ -948,7 +948,7 @@ static
 
 3. [``POINTER_UP``](/api/namespace/input-events#pointer_up) or [``POINTER_UP_OUTSIDE``](/api/event/input-events#pointer_up_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -981,7 +981,7 @@ static
 
 要从 _ 特定_ 游戏对象中聆听此事件, 请使用 [``GAMEOBJECT_POINTER_WHEEL``](/api/event/input-events#gameobject_pointer_wheel) 事件 。
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_WHEEL``](/api/event/input-events#gameobject_pointer_wheel)
 
@@ -989,7 +989,7 @@ static
 
 3. [``POINTER_WHEEL``](/api/event/input-events#pointer_wheel)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1081,7 +1081,7 @@ static
 
 使用:`this.input.on('pointerdown', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_DOWN``](/api/event/input-events#gameobject_pointer_down)
 
@@ -1089,7 +1089,7 @@ static
 
 3. [``POINTER_DOWN``](/api/namespace/input-events#pointer_down) or [``POINTER_DOWN_OUTSIDE``](/api/event/input-events#pointer_down_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1117,7 +1117,7 @@ static
 
 使用:`this.input.on('pointerdownoutside', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_DOWN``](/api/event/input-events#gameobject_pointer_down)
 
@@ -1125,7 +1125,7 @@ static
 
 3. [``POINTER_DOWN``](/api/namespace/input-events#pointer_down) or [``POINTER_DOWN_OUTSIDE``](/api/event/input-events#pointer_down_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1152,7 +1152,7 @@ static
 
 使用:`this.input.on('pointermove', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_MOVE``](/api/event/input-events#gameobject_pointer_move)
 
@@ -1160,7 +1160,7 @@ static
 
 3. [``POINTER_MOVE``](/api/event/input-events#pointer_move)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1188,7 +1188,7 @@ static
 
 使用:`this.input.on('pointerout', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OUT``](/api/event/input-events#gameobject_pointer_out)
 
@@ -1196,7 +1196,7 @@ static
 
 3. [``POINTER_OUT``](/api/event/input-events#pointer_out)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 如果指针离开游戏布局本身, 它不会触发此事件。 要处理这些案件, 请聆听 [``GAME_OUT``](/api/event/input-events#game_out) 事件 。
 
@@ -1226,7 +1226,7 @@ static
 
 使用:`this.input.on('pointerover', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_OVER``](/api/event/input-events#gameobject_pointer_over)
 
@@ -1234,7 +1234,7 @@ static
 
 3. [``POINTER_OVER``](/api/event/input-events#pointer_over)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1262,7 +1262,7 @@ static
 
 使用:`this.input.on('pointerup', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_UP``](/api/event/input-events#gameobject_pointer_up)
 
@@ -1270,7 +1270,7 @@ static
 
 3. [``POINTER_UP``](/api/namespace/input-events#pointer_up) or [``POINTER_UP_OUTSIDE``](/api/event/input-events#pointer_up_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1298,7 +1298,7 @@ static
 
 使用:`this.input.on('pointerupoutside', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_UP``](/api/event/input-events#gameobject_pointer_up)
 
@@ -1306,7 +1306,7 @@ static
 
 3. [``POINTER_UP``](/api/namespace/input-events#pointer_up) or [``POINTER_UP_OUTSIDE``](/api/event/input-events#pointer_up_outside)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1333,7 +1333,7 @@ static
 
 使用:`this.input.on('wheel', listener)`,从场内听这个事件.
 
-事件等级如下:
+事件按以下顺序触发。
 
 1. [``GAMEOBJECT_POINTER_WHEEL``](/api/event/input-events#gameobject_pointer_wheel)
 
@@ -1341,7 +1341,7 @@ static
 
 3. [``POINTER_WHEEL``](/api/event/input-events#pointer_wheel)
 
-将先发送顶级事件, 然后从列表中流出。 请注意, 更高级的事件处理者可以停止此事件的传播 。
+事件按列表顺序从最高层向下触发。上层事件处理器可以阻止事件继续传播。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |

@@ -35,7 +35,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 引用此插件运行在 Game 实例 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/plugins/BasePlugin.js#L43](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/BasePlugin.js#L43)  
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 方便的引用用于此插件的插件管理器。 可用于获取游戏系统和事件。 Name
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/plugins/BasePlugin.js#L32](https://github.com/phaserjs/phaser/blob/v4.1.0/src/plugins/BasePlugin.js#L32)  

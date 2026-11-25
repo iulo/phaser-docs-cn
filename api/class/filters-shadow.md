@@ -4,13 +4,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 影影滤镜.
 
-此过滤控制器管理相机的阴影效果 。
+此过滤控制器管理摄像机的阴影效果 。
 
 影子效应是一种视觉技术,通过增加更暗,抵消游戏对象,人物或环境下的淤积或形状来创造深度和现实主义的幻觉. 这些模拟的影子有助于增强视觉吸引力和浸润,使2D游戏世界显得更具活力和三维.
 
-此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大相机 。
+此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大摄像机 。
 
-通过过滤列表组件在相机中添加阴影效果:
+通过过滤列表组件在摄像机中添加阴影效果:
 
 ```js
 const camera = this.cameras.main;
@@ -24,9 +24,9 @@ camera.filters.external.addShadow();
 `new Shadow(camera, [x], [y], [decay], [power], [color], [samples], [intensity])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | x | number | 是 | 0 | 横向抵消阴影效应. |
 | y | number | 是 | 0 | 阴影效应的垂直抵消. |
 | decay | number | 是 | 0.1 | 阴之衰减之量. |
@@ -229,7 +229,7 @@ camera.filters.external.addShadow();
 返回此过滤器在渲染时所需的额外粘贴量, 以像素计。 粘贴值会记录扩展至过滤游戏对象的原始界限以外的阴影效果 。
 
 
-**Overrides:** Phaser.Filters.Controller#getPadding
+**重写:** Phaser.Filters.Controller#getPadding
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 贴板矩形

@@ -60,20 +60,20 @@ var config = {
 var game = new Phaser.Game(config);
 ```
 
-## 正在装入音频文件 {#loading-audio-files}
+## 加载音频文件 {#loading-audio-files}
 
 请参看 [Media container formats](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers)和 [Web audio codec guide](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Audio_codecs) 的细节。 如果您要发布游戏, 您应该至少支持 [MP3](https://developer.mozilla.org/en-US/docs/Web/Media/Formats/Containers#mpegmpeg-2) 。
 
-在加载音频时, Phaser 匹配了介质类型( 从 URL 或 您给出的) , 设备支持该类型 。 如果没有匹配, ** 无任何信息 ** 会被下载, 如果您尝试用该密钥创建或播放声音, 则会因错误而失败 。
+在加载音频时, Phaser 匹配了介质类型( 从 URL 或 您给出的) , 设备支持该类型 。 如果没有匹配, ** 无任何信息 ** 会被下载, 如果您尝试用该键创建或播放声音, 则会因错误而失败 。
 
 ```js
 this.load.audio(key, urls, config, xhrSettings);
 ```
 
-- `key` : 此文件使用的密钥, 或文件配置对象, 或其中的数组 。
+- `key` : 此文件使用的键, 或文件配置对象, 或其中的数组 。
 - `urls`:从音频文件装入的绝对或相对URL.
 - `config`: HTML5Audio 包含实例属性的对象。默认为 1 。
-- `xhrSettings`: 一个 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。
+- `xhrSettings`: 一个 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。
 
 ### 解码音频 {#decode-audio}
 
@@ -142,7 +142,7 @@ sound.play(config);
 
 ## 空间音频听器的位置 {#position-of-the-spatial-audio-listener}
 
-设置此 Web Audios 上下文空间音频收听器的 `x`和 `y` 位置 。
+设置此 Web Audios 上下文空间音频监听器的 `x`和 `y` 位置 。
 
 ```js
 this.sound.setListenerPosition(x, y);
@@ -210,7 +210,7 @@ var music = this.sound.add(key, config);
     - `'HRTF'`
   - `orientationX`,`orientationY`:音频源矢量在右手笛卡尔坐标系统中的横向/垂直位置.
   - `orientationZ`:代表音频源矢量在右手笛卡尔坐标系统中的纵向(前后)位置.
-  - `refDistance` : 表示音频源离听众更远时减小音量的参考距离的双值。 对于比此更大的音量,则会根据`rolloffFactor`和`distanceModel`来减小音量。
+  - `refDistance` : 表示音频源离监听器更远时减小音量的参考距离的双值。 对于比此更大的音量,则会根据`rolloffFactor`和`distanceModel`来减小音量。
   - `maxDistance`:音频源与听器的最大距离,之后音量不再进一步缩小.
   - `rolloffFactor` : 描述源移离听器时音量减少的双值。 此值被所有距离模型使用 。
   - `coneInnerAngle`: 内有圆锥的角, 以度计, 其内无减量 。
@@ -365,7 +365,7 @@ var music = this.sound.add(key, config);
   var isPaused = music.isPaused;
   ```
 
-- 资产密钥
+- 资源键
 
   ```js
   var key = music.key;
@@ -498,7 +498,7 @@ music.play(markerName, config);
 
 ## 音频图示 {#audio-sprite}
 
-### 装入音频图示 {#load-audio-sprite}
+### 加载音频精灵 {#load-audio-sprite}
 
 ```js
 scene.load.audioSprite(key, urls, markersConfig, config);
@@ -647,7 +647,7 @@ music.play(markerName, config);
 
 ### 删除音乐实例 {#remove-music-instance}
 
-- 以密钥删除
+- 以键删除
 
   ```js
   var removed = this.sound.removeByKey(key);
@@ -662,7 +662,7 @@ music.play(markerName, config);
 
 ### 停止音乐实例 {#stop-music-instance}
 
-- 由密钥停车
+- 由键停车
 
   ```js
   var stopped = this.sound.stopByKey(key);

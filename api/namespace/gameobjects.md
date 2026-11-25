@@ -131,17 +131,17 @@ static
 
 **说明:**
 
-计算给定的游戏对象和相机的变换矩阵,如果提供的话,在母矩阵中计算。
+计算给定的游戏对象和摄像机的变换矩阵,如果提供的话,在母矩阵中计算。
 
 注意此结果包含 _References_ to the Transform Matrices,而不是新实例。因此,您应该立即使用它们的值,或者将其复制到自己的矩阵中,因为一旦推出另一个游戏对象,它们就会被替换 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | src | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 计算变换矩阵的游戏对象 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 用于渲染游戏对象的相机 。 |
-| parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 母容器的变换矩阵,如果有的话。 |
-| ignoreCameraPosition | boolean | 是 | false | 相机的翻译是否应当忽略? 这就是在屏幕上移动相机的原因, 但是当相机被传送到帧缓冲器时, 却应该忽略它 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 用于渲染游戏对象的摄像机 。 |
+| parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 父容器的变换矩阵,如果有的话。 |
+| ignoreCameraPosition | boolean | 是 | false | 摄像机的翻译是否应当忽略? 这就是在屏幕上移动摄像机的原因, 但是当摄像机被传送到帧缓冲器时, 却应该忽略它 。 |
 
 
 **返回值:** [Phaser.Types.GameObjects.GetCalcMatrixResults](/api/typedef/types-gameobjects#getcalcmatrixresults) - 包含更新的变换矩阵的结果对象.

@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/CreateSceneFromObjectConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/CreateSceneFromObjectConfig.js#L1)  
 引入版本：3.17.0
 
@@ -30,11 +30,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 可以在您自己的屏幕上定义。 使用它来创建您的游戏对象 。
 这种方法在现场开始时由场景管理者调用,在`init()`和`preload()`之后.
-如果装入器Plugin在`preload()`之后开始,那么这种方法只有在装入完成后才被调用.
+如果资源加载器Plugin在`preload()`之后开始,那么这种方法只有在装入完成后才被调用.
 
 **类型**: function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneCreateCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneCreateCallback.js#L1)  
 引入版本：3.0.0
 
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneInitCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneInitCallback.js#L1)  
 引入版本：3.0.0
 
@@ -61,13 +61,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 ### \<static> ScenePreloadCallback {#static-scenepreloadcallback}
 
 
-可以用自己的场景定义。 使用它来装入资产 。
+可以用自己的场景定义。 使用它来装入资源 。
 这种方法由场景管理器调用,在`init()`之后和`create()`之前,只有在场景有加载器普鲁金的情况下才使用.
 此方法完成后,如果加载器Plugin的队列不是空的,加载器Plugin会自动启动.
 
 **类型**: function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/ScenePreloadCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/ScenePreloadCallback.js#L1)  
 引入版本：3.0.0
 
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SceneTransitionConfig {#static-scenetransitionconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | target | string | 否 |  | 向中转的场景关键 。 |
 | duration | number | 是 | 1000 | 过渡期,以毫秒计。 |
@@ -94,7 +94,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneTransitionConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneTransitionConfig.js#L1)  
 引入版本：3.5.0
 
@@ -104,13 +104,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SceneTransitionOnStartCallback {#static-scenetransitiononstartcallback}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | duration | number | 是 | 1000 | 过渡期,以毫秒计。 |
 
 **类型**: function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneTransitionStartCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneTransitionStartCallback.js#L1)  
 引入版本：3.60.0
 
@@ -122,7 +122,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: [Phaser.Scene](/api/class/scene) | [Phaser.Types.Scenes.SettingsConfig](/api/typedef/types-scenes#settingsconfig) | [Phaser.Types.Scenes.CreateSceneFromObjectConfig](/api/typedef/types-scenes#createscenefromobjectconfig) | function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneType.js#L1)  
 引入版本：3.60.0
 
@@ -134,7 +134,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SceneUpdateCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SceneUpdateCallback.js#L1)  
 引入版本：3.0.0
 
@@ -144,13 +144,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SettingsConfig {#static-settingsconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| key | string | 是 |  | 此场景的独特密钥。 必须在游戏的全部实例中独有 。 |
+| key | string | 是 |  | 此场景的独特键。 必须在游戏的全部实例中独有 。 |
 | active | boolean | 是 | false | 场景是否以活动开始? 活动场景更新每个步骤 。 |
 | visible | boolean | 是 | true | 场景的开始是否是可见的? 可见的场景使每个步骤都成形 。 |
 | pack | false \| [Phaser.Types.Loader.FileTypes.PackFileSection](/api/typedef/types-loader-filetypes#packfilesection) | 是 | false | 场景开始前要加载的文件 。 |
-| cameras | [Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig) \| Array.\<[Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig)> | 是 | null | 相机配置对象可选 。 |
+| cameras | [Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig) \| Array.\<[Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig)> | 是 | null | 摄像机配置对象可选 。 |
 | map | Object.\<string, string> | 是 |  | 覆盖一个场景的默认注射映射。 |
 | mapAdd | Object.\<string, string> | 是 |  | 将注入图扩展为场景 。 |
 | physics | [Phaser.Types.Core.PhysicsConfig](/api/typedef/types-core#physicsconfig) | 是 | "{}" | 场景的物理配置对象 。 |
@@ -159,7 +159,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SettingsConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SettingsConfig.js#L1)  
 引入版本：3.0.0
 
@@ -172,7 +172,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | status | number | 否 | 场景的当前状态 映射到场景常数. |
-| key | string | 否 | 此场景的独特密钥。 在整个游戏实例中独一无二 。 |
+| key | string | 否 | 此场景的独特键。 在整个游戏实例中独一无二 。 |
 | active | boolean | 否 | 此场景的活跃状态。 活动场景更新了每个步骤 。 |
 | visible | boolean | 否 | 此场景的可见状态。 可见的场景使每个步骤都成为了 。 |
 | isBooted | boolean | 否 | 场景是否完成了启动? |
@@ -182,7 +182,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | transitionAllowInput | boolean | 否 | 此场景是否允许在过渡期间接收输入 ? |
 | data | object | 否 | 由场景管理器传送到此场景的数据捆绑 。 |
 | pack | false \| [Phaser.Types.Loader.FileTypes.PackFileSection](/api/typedef/types-loader-filetypes#packfilesection) | 否 | 场景开始前要加载的文件 。 |
-| cameras | [Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig) \| Array.\<[Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig)> | 否 | 相机配置对象. |
+| cameras | [Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig) \| Array.\<[Phaser.Types.Cameras.Scene2D.CameraConfig](/api/typedef/types-cameras-scene2d#cameraconfig)> | 否 | 摄像机配置对象. |
 | map | Object.\<string, string> | 否 | 景德镇注入图. |
 | physics | [Phaser.Types.Core.PhysicsConfig](/api/typedef/types-core#physicsconfig) | 否 | 场景的物理配置对象 。 |
 | loader | [Phaser.Types.Core.LoaderConfig](/api/typedef/types-core#loaderconfig) | 否 | 场景的加载器配置对象 。 |
@@ -190,7 +190,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Scenes
+**所属**: Phaser.Types.Scenes
 > 源码：[src/scene/typedefs/SettingsObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/typedefs/SettingsObject.js#L1)  
 引入版本：3.0.0
 

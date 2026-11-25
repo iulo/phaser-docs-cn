@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/tilemaps-tile)
 
-平面图是图层内单砖的表示。 每个平面图在图网格内有一个位置( 以平面坐标表示), 大小像素, 其四个边缘的碰撞标志, 从平面图编辑器中导入的可选自定义属性, 以及可选的碰撞回调。 平面是轻量级数据对象 - 它们不扩展 Game Object - 因此其像素位置相对于图层来源是存储的, 并且不考虑相机滚动、 层尺度或层位置 。 使用该图板 。 `getLeft`, `getRight`, `getTop`, `getBottom`,和 `getBounds` 获得世界空间坐标的方法,以说明这些变化。
+平面图是图层内单砖的表示。 每个平面图在图网格内有一个位置( 以平面坐标表示), 大小像素, 其四个边缘的碰撞标志, 从平面图编辑器中导入的可选自定义属性, 以及可选的碰撞回调。 平面是轻量级数据对象 - 它们不扩展 Game Object - 因此其像素位置相对于图层来源是存储的, 并且不考虑摄像机滚动、 层尺度或层位置 。 使用该图板 。 `getLeft`, `getRight`, `getTop`, `getBottom`,和 `getBounds` 获得世界空间坐标的方法,以说明这些变化。
 
 平面由 `TilemapLayer` 创建和管理,通常不应直接被即时化。您可以通过 `TilemapLayer.getTileAt` 或类似的 Tilemap 方法访问它们 。
 
@@ -15,8 +15,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | layer | [Phaser.Tilemaps.LayerData](/api/class/tilemaps-layerdata) | 否 | Tilemap 中的 LayerData 对象属于此牌。 |
 | index | number | 否 | 地图中这种瓦片的独特索引 。 |
-| x | number | 否 | 这块瓷砖的x坐标在瓷砖坐标中. |
-| y | number | 否 | 这张瓷砖的Y坐标在瓷砖坐标中. |
+| x | number | 否 | 这块瓦片的x坐标在瓦片坐标中. |
+| y | number | 否 | 这张瓦片的Y坐标在瓦片坐标中. |
 | width | number | 否 | 瓦片的宽度以像素表示. |
 | height | number | 否 | 瓦片高度以像素表示. |
 | baseWidth | number | 否 | 地图中基底宽度为瓦片(以像素计). 平面图支持一个地图内多个瓦片大小,但它们仍然被放置在基底瓦片宽度的间隔处. |
@@ -130,7 +130,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果这瓷砖能撞到它的脸 或者有碰撞回调装置的话,那就是真的了。
+如果这瓦片能撞到它的脸 或者有碰撞回调装置的话,那就是真的了。
 
 
 > 源码：[src/tilemaps/Tile.js#L872](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L872)  
@@ -146,7 +146,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否将瓷砖与底部的任何物体相撞。
+是否将瓦片与底部的任何物体相撞。
 
 这块地产只被Arcade物理使用, 不过,你也可以在自己的支票中使用.
 
@@ -164,7 +164,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否将瓷砖与左边的任何物体相撞。
+是否将瓦片与左边的任何物体相撞。
 
 这块地产只被Arcade物理使用, 不过,你也可以在自己的支票中使用.
 
@@ -200,7 +200,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果这瓷砖能撞到它的脸上 是真的
+如果这瓦片能撞到它的脸上 是真的
 
 
 > 源码：[src/tilemaps/Tile.js#L889](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L889)  
@@ -216,7 +216,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否将瓷砖与任何物体碰撞在顶端 。
+是否将瓦片与任何物体碰撞在顶端 。
 
 这块地产只被Arcade物理使用, 不过,你也可以在自己的支票中使用.
 
@@ -298,7 +298,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-瓷砖的右边缘是否对碰撞有意思.
+瓦片的右边缘是否对碰撞有意思.
 
 
 > 源码：[src/tilemaps/Tile.js#L257](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L257)  
@@ -330,7 +330,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-如果这瓷砖有有趣的面孔的话,那就是真的了。
+如果这瓦片有有趣的面孔的话,那就是真的了。
 
 
 > 源码：[src/tilemaps/Tile.js#L906](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L906)  
@@ -378,7 +378,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此瓷砖所属的 Tilemap 数据中的 LayerData 。
+此瓦片所属的 Tilemap 数据中的 LayerData 。
 
 
 > 源码：[src/tilemaps/Tile.js#L61](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L61)  
@@ -410,7 +410,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此瓦片左上方的x坐标以像素表示。 这是相对于此瓦片内部制成的图层左上方的。 此属性不考虑相机滚动、 图层缩放或图层位置 。
+此瓦片左上方的x坐标以像素表示。 这是相对于此瓦片内部制成的图层左上方的。 此属性不考虑摄像机滚动、 图层缩放或图层位置 。
 
 
 > 源码：[src/tilemaps/Tile.js#L158](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L158)  
@@ -426,7 +426,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-以像素表示的此瓦片左上方的y坐标。 这是相对于此瓦片在内部制成的图层左上方的。 此属性不考虑相机滚动、 图层缩放或图层位置 。
+以像素表示的此瓦片左上方的y坐标。 这是相对于此瓦片在内部制成的图层左上方的。 此属性不考虑摄像机滚动、 图层缩放或图层位置 。
 
 
 > 源码：[src/tilemaps/Tile.js#L169](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L169)  
@@ -492,7 +492,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-包含此图案的图案。 只有在图案放在图案表内之前, 才能从图案数据库中访问到此图案, 才会返回无效 。
+包含此图案的图案。 只有在图案放在精灵表内之前, 才能从图案数据库中访问到此图案, 才会返回无效 。
 
 
 > 源码：[src/tilemaps/Tile.js#L972](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L972)  
@@ -673,7 +673,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-检查给定的 x 和 y 世界坐标是否在此图中。 这不计入相机滚动、 层缩放或层位置 。
+检查给定的 x 和 y 世界坐标是否在此图中。 这不计入摄像机滚动、 层缩放或层位置 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -698,7 +698,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将所给的瓷砖数据及属性复制到此瓷砖。 除了位置和有趣的面部计算之外, 其它所有都复制 。
+将所给的瓦片数据及属性复制到此瓦片。 除了位置和有趣的面部计算之外, 其它所有都复制 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -787,7 +787,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-获得瓷砖中心的世界X位置,在层的位置,尺度和卷轴中进行计分.
+获得瓦片中心的世界X位置,在层的位置,尺度和卷轴中进行计分.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -862,7 +862,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用来检查的摄像机 |
 
 
-**返回值:** number - 此瓷砖的左( x) 值 。
+**返回值:** number - 此瓦片的左( x) 值 。
 
 
 > 源码：[src/tilemaps/Tile.js#L421](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L421)  
@@ -878,7 +878,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-获得瓷砖右侧的世界X位置,在层的位置,尺度和卷轴中进行计分.
+获得瓦片右侧的世界X位置,在层的位置,尺度和卷轴中进行计分.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -929,7 +929,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用来检查的摄像机 |
 
 
-**返回值:** number - 此瓷砖的顶值( Y) 。
+**返回值:** number - 此瓦片的顶值( Y) 。
 
 
 > 源码：[src/tilemaps/Tile.js#L464](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tilemaps/Tile.js#L464)  
@@ -945,7 +945,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-检查与此牌的交叉点。 这不考虑相机滚动、 层缩放或层位置 。
+检查与此牌的交叉点。 这不考虑摄像机滚动、 层缩放或层位置 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -977,8 +977,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| collides | boolean | 否 | 如果是真的,如果瓷砖在任何一边碰撞,那么它会觉得这瓷砖很有趣。 |
-| faces | boolean | 否 | 如果是真的,如果它有有趣的面孔,它会觉得瓷砖很有趣. |
+| collides | boolean | 否 | 如果是真的,如果瓦片在任何一边碰撞,那么它会觉得这瓦片很有趣。 |
+| faces | boolean | 否 | 如果是真的,如果它有有趣的面孔,它会觉得瓦片很有趣. |
 
 
 **返回值:** boolean - 如果这牌子有趣的话,否则就是假的
@@ -1000,9 +1000,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 将此牌盘上的所有碰撞状态标记重置到 `false`, 清除其四个边缘上设置的任何碰撞。 如果 `recalculateFaces` 是真的( 默认) , 也会重新计算该牌盘及其在层中的邻居的有趣的面旗 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| recalculateFaces | boolean | 是 | true | 是否要为这瓷砖和它的邻居 重新计算有趣的面孔 |
+| recalculateFaces | boolean | 是 | true | 是否要为这瓦片和它的邻居 重新计算有趣的面孔 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 此拼图对象实例 。
@@ -1021,7 +1021,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-重新设置所有四个有趣的面旗( R)`faceTop`, `faceBottom`, `faceLeft`, `faceRight`改为 `false`。与 `resetCollision`,这并不影响碰撞的旗帜,也不会引发对邻近的瓷砖的面部重新计算.
+重新设置所有四个有趣的面旗( R)`faceTop`, `faceBottom`, `faceLeft`, `faceRight`改为 `false`。与 `resetCollision`,这并不影响碰撞的旗帜,也不会引发对邻近的瓦片的面部重新计算.
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 此拼图对象实例 。
@@ -1043,13 +1043,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置此牌的两侧的碰撞标记, 并更新有趣的面额列表 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | left | boolean | 否 |  | 表示与左边任何物体相撞。 |
 | right | boolean | 是 |  | 指与任何物体在右边相撞。 |
 | up | boolean | 是 |  | 表示与任何物体在顶部相撞。 |
 | down | boolean | 是 |  | 表示与底部任何物体相撞。 |
-| recalculateFaces | boolean | 是 | true | 是否要为这瓷砖和它的邻居 重新计算有趣的面孔 |
+| recalculateFaces | boolean | 是 | true | 是否要为这瓦片和它的邻居 重新计算有趣的面孔 |
 
 
 **返回值:** [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) - 此拼图对象实例 。

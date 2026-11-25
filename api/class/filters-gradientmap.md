@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 渐变映射过滤控制器 。
 
-此控制器管理相机的渐变映射效果 。
+此控制器管理摄像机的渐变映射效果 。
 
 渐变映射重映射图像使用 ColorRamp 。 图像在每个点转换成进度值, 并且该进度被评价为斜坡沿线的颜色 。
 
@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的摄像机. |
 | config | [Phaser.Types.Filters.GradientMapConfig](/api/typedef/types-filters#gradientmapconfig) | 是 | 渐变映射效果的配置对象 。 |
 
 ---

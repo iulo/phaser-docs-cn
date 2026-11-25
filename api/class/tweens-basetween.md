@@ -47,7 +47,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 `onActive` - 当 Tween 创建之初, 它会移动到“ 活动” 状态, 当添加到 Tween 管理器中时。 “ 主动” 并不意味着“ 玩” 。 `onStart` 当Tween在延迟状态或暂停状态后开始播放时。这将会同时发生。 `onActive` 如果这个圈子没有拖延,也没有停顿。 `onLoop` - 当一个Tween循环,如果它被设定这样做。这发生在_after_ the `loopDelay` 过期, 如果设置 。 `onComplete` 当Tween完全重播时, 如果Tween被设定为无限重播, 则永远不要引用 。 `onStop` - 只有在 `Tween.stop` 方法叫做 。 `onPause` - 只有在 `Tween.pause` 方法。如果 Tween 管理器被暂停,则不引用。 `onResume` - 只有在 `Tween.resume` 方法。如果 Tween 管理器恢复使用,则不引用。
 
-以下类型也可用,并被引用在`TweenData`级别上——即每个对象,每个财产,被加成  .
+以下类型也可用,并被引用在`TweenData`级别上——即每个对象,每个属性,被加成  .
 
 `onYoyo` 当TweenData开始一个优等生。 `hold` 如果设置, 延迟过期 。 `onRepeat` 当TweenData重复播放时。这种情况发生在_after_ the `repeatDelay` 过期, 如果设置 。 `onUpdate` - 当TweenData在播放时更新源目标上的属性时。
 
@@ -159,7 +159,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 通常这在配置对象中设置,但也可以直接设置,只要Tween暂停,没有开始播放.
 
-启用后, 它将再次通过所有调值器播放 。
+启用后, 它将再次通过所有补间器播放 。
 
 使用 TweenData.repeat 循环单个元素.
 
@@ -369,7 +369,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果你不需要延迟或没有`onComplete`调用,那么就叫`Tween.stop`。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | delay | number | 是 | 0 | 等待时间,然后启动完全回调 如果0,它会立即开火。 |
 
@@ -377,7 +377,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L404](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L404)  
@@ -400,7 +400,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果你没有回路 那就叫`Tween.stop`来代替
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loops | number | 是 | 0 | 完成此 tween 之前的循环数。 0 表示仅完成当前循环 。 |
 
@@ -408,7 +408,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_COMPLETE](/api/event/tweens-events#tween_complete)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L438](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L438)  
@@ -424,10 +424,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-处理这个 Tween 的破坏过程, 销毁所有 TweenData 对象, 移除所有事件听众, 并取消内部引用 。 已被破坏的 Tween 将永远无法被玩弄或使用 。
+处理这个 Tween 的破坏过程, 销毁所有 TweenData 对象, 移除所有事件监听器, 并取消内部引用 。 已被破坏的 Tween 将永远无法被玩弄或使用 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L851](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L851)  
@@ -443,10 +443,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-获得这个 Tween 应用的时间尺度值。 1 的值在实时运行。 0. 5 的值在运行中慢50% 。
+获得这个 Tween 应用的时间缩放倍率值。 1 的值在实时运行。 0. 5 的值在运行中慢50% 。
 
 
-**返回值:** number - 时间尺度的值适用于这个Tween.
+**返回值:** number - 时间缩放倍率的值适用于这个Tween.
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L285](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L285)  
@@ -559,7 +559,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 检查当前是否暂停 Tween 。
 
-这和直接检查`BaseTween.paused`财产相同.
+这和直接检查`BaseTween.paused`属性相同.
 
 
 **返回值:** boolean - 如果Tween被暂停的话,`true`,否则`false`.
@@ -678,7 +678,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 内部方法使这个Tween在TweenManager内活动,并发布onActive事件和回调.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_ACTIVE](/api/event/tweens-events#tween_active)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L375](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L375)  
@@ -718,7 +718,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_PAUSE](/api/event/tweens-events#tween_pause)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_PAUSE](/api/event/tweens-events#tween_pause)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L329](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L329)  
@@ -763,7 +763,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_RESUME](/api/event/tweens-events#tween_resume)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_RESUME](/api/event/tweens-events#tween_resume)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L352](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L352)  
@@ -803,7 +803,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 `onActive` - 当 Tween 创建之初, 它会移动到“ 活动” 状态, 当添加到 Tween 管理器中时。 “ 主动” 并不意味着“ 玩” 。 `onStart` 当Tween在延迟状态或暂停状态后开始播放时。这将会同时发生。 `onActive` 如果这个圈子没有拖延,也没有停顿。 `onLoop` - 当一个Tween循环,如果它被设定这样做。这发生在_after_ the `loopDelay` 过期, 如果设置 。 `onComplete` 当Tween完全重播时, 如果Tween被设定为无限重播, 则永远不要引用 。 `onStop` - 只有在 `Tween.stop` 方法叫做 。 `onPause` - 只有在 `Tween.pause` 方法。如果 Tween 管理器被暂停,则不引用。 `onResume` - 只有在 `Tween.resume` 方法。如果 Tween 管理器恢复使用,则不引用。
 
-以下类型也可用,并被引用在`TweenData`级别上——即每个对象,每个财产,被加成  .
+以下类型也可用,并被引用在`TweenData`级别上——即每个对象,每个属性,被加成  .
 
 `onYoyo` 当TweenData开始一个优等生。 `hold` 如果设置, 延迟过期 。 `onRepeat` 当TweenData重复播放时。这种情况发生在_after_ the `repeatDelay` 过期, 如果设置 。 `onUpdate` - 当TweenData在播放时更新源目标上的属性时。
 
@@ -959,7 +959,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置适用于 Tween 的时间尺度的值。 1 的值在实时运行。 0. 5 的值在运行中慢了 50% , 以此类推 。
+设置适用于 Tween 的时间缩放倍率的值。 1 的值在实时运行。 0. 5 的值在运行中慢了 50% , 以此类推 。
 
 计算  的总持续时间时不使用该值,它只是运行时三角洲调整.
 
@@ -968,7 +968,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | number | 否 | 要设置的时间尺度值 。 |
+| value | number | 否 | 要设置的时间缩放倍率值 。 |
 
 
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
@@ -1001,7 +1001,7 @@ Tween将在下一个游戏框中被移除,但应该从此被视为"毁灭".
 **返回值:** [Phaser.Tweens.BaseTween](/api/class/tweens-basetween) - 此特云证.
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_STOP](/api/event/tweens-events#tween_stop)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_STOP](/api/event/tweens-events#tween_stop)
 
 
 > 源码：[src/tweens/tween/BaseTween.js#L488](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/BaseTween.js#L488)  

@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/AudioSpriteSound.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/AudioSpriteSound.js#L1)  
 引入版本：3.0.0
 
@@ -33,12 +33,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 要用于引用音频缓存中解码音频的基于字符串的密钥 。 |
+| key | string | 否 | 要用于引用音频缓存中解码音频的基于字符串的键 。 |
 | data | ArrayBuffer \| string | 否 | 音频数据,要么是一个基数64编码字符串,一个音频媒体类型的数据uri,要么是一个ArrayBuffer实例. |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/DecodeAudioConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/DecodeAudioConfig.js#L1)  
 引入版本：3.18.0
 
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/EachActiveSoundCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/EachActiveSoundCallback.js#L1)  
 引入版本：3.0.0
 
@@ -63,7 +63,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 包含各种声音设置的配置对象。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | mute | boolean | 是 | false | 布尔表示声音是否应当变音 。 |
 | volume | number | 是 | 1 | 0(静态)到1(全容积)之间的值. |
@@ -77,7 +77,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/SoundConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/SoundConfig.js#L1)  
 引入版本：3.0.0
 
@@ -90,7 +90,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 标记以名称表示的声音的段落,并选择起始时间,持续时间,和配置对象.
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 声音标记的独特标识符 。 |
 | start | number | 是 | 0 | 音响位置抵消,该位置应开始播放。 |
@@ -99,7 +99,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/SoundMarker.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/SoundMarker.js#L1)  
 引入版本：3.0.0
 
@@ -114,7 +114,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 见https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API/Web_audio_spatialization_basics
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 音频在右手笛卡尔坐标系统中的横向位置. |
 | y | number | 是 | 0 | 音频在右手笛卡尔坐标系统中的垂直位置. |
@@ -134,7 +134,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/SpatialSoundConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/SpatialSoundConfig.js#L1)  
 引入版本：3.60.0
 
@@ -156,7 +156,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Sound
+**所属**: Phaser.Types.Sound
 > 源码：[src/sound/typedefs/WebAudioDecodeEntry.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/typedefs/WebAudioDecodeEntry.js#L1)  
 引入版本：3.60.0
 

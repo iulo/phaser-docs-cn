@@ -8,7 +8,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Renderer.Snapshot
+**所属**: Phaser.Types.Renderer.Snapshot
 > 源码：[src/renderer/snapshot/typedefs/SnapshotCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/snapshot/typedefs/SnapshotCallback.js#L1)  
 引入版本：3.16.1
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> SnapshotState {#static-snapshotstate}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | callback | [Phaser.Types.Renderer.Snapshot.SnapshotCallback](/api/typedef/types-renderer-snapshot#snapshotcallback) | 否 |  | 抓取到快照后调用功能 。 |
 | 类型 | string | 是 | "'image/png'" | 图像创建的格式,通常为`image/png`或`image/jpeg`. |
@@ -35,7 +35,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.Snapshot
+**所属**: Phaser.Types.Renderer.Snapshot
 > 源码：[src/renderer/snapshot/typedefs/SnapshotState.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/snapshot/typedefs/SnapshotState.js#L1)  
 引入版本：3.16.1
 

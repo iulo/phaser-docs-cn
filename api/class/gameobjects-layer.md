@@ -158,7 +158,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-需要排序的属性密钥 。
+需要排序的属性键 。
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L512](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L512)  
@@ -363,7 +363,7 @@ layer.add([ spaceman, bunny, elephant ]);
 您应该将此属性视为只读。 您不能简单地更改它, 而将游戏对象移动到另一个场景 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#风景
+**重写:** Phaser.GameObjects.GameObject#风景
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L102](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L102)  
@@ -529,7 +529,7 @@ layer.add([ spaceman, bunny, elephant ]);
 将给定的项目添加到列表的末尾。每个项目必须是独一无二的。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 将项目或项目数组添加到列表中。 |
 | skipCallback | boolean | 是 | false | 跳过呼叫列表。 addCallback 如果成功添加此孩子 。 |
@@ -554,7 +554,7 @@ layer.add([ spaceman, bunny, elephant ]);
 添加到列表中, 开始于指定的索引。 每个条目必须在列表中独有。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 将项目或项目数组添加到列表中。 |
 | index | number | 是 | 0 | 插入元素的列表中的索引。 |
@@ -577,17 +577,17 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-为指定事件添加一个听众 。
+为指定事件添加一个监听器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#addListener
+**重写:** Phaser.GameObjects.GameObject#addListener
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -630,7 +630,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-返回清单上具有与给定值相符的财产的总数。
+返回清单上具有与给定值相符的属性的总数。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -680,15 +680,15 @@ layer.add([ spaceman, bunny, elephant ]);
 如果您只是想要暂时禁用一个对象, 那么请看看使用游戏对象池而不是销毁它, 因为已销毁的对象无法复活 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | fromScene | boolean | 是 | false | `True` 如果游戏对象被场景所破坏, `false` 如果不是的话。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#销毁
+**重写:** Phaser.GameObjects.GameObject#销毁
 
 
-**Fires:** [Phaser.GameObjects.Events#event:DESTROY](/api/event/gameobjects-events#destroy)
+**触发事件:** [Phaser.GameObjects.Events#event:DESTROY](/api/event/gameobjects-events#destroy)
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L915](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L915)  
@@ -709,7 +709,7 @@ layer.add([ spaceman, bunny, elephant ]);
 这个方法无所作为,被保存以确保图层的形状与游戏对象相同.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#disableInteractive
+**重写:** Phaser.GameObjects.GameObject#disableInteractive
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个游戏对象 。
@@ -751,7 +751,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-给每个注册参加特定活动的听众打电话。
+给每个注册参加特定活动的监听器打电话。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -760,10 +760,10 @@ layer.add([ spaceman, bunny, elephant ]);
 | args | * | 是 | 将传递给事件处理者的附加参数 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#闪米
+**重写:** Phaser.GameObjects.GameObject#闪米
 
 
-**返回值:** boolean - 如果有听众的话,就用`true`,否则用`false`.
+**返回值:** boolean - 如果有监听器的话,就用`true`,否则用`false`.
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L374](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L374)  
@@ -782,7 +782,7 @@ layer.add([ spaceman, bunny, elephant ]);
 返回一个列出发送器已注册的听器的事件的数组 。
 
 
-**Overrides:** Phaser.GameObjects.GameObject#eventNames
+**重写:** Phaser.GameObjects.GameObject#eventNames
 
 
 **返回值:** Array.\<(string | symbol)> - 
@@ -829,11 +829,11 @@ layer.add([ spaceman, bunny, elephant ]);
 
 您可以选择使用 `property` 和 `value` 参数指定匹配标准 。
 
-例如:`getAll('parent')`只归还拥有名为`parent`的财产的儿童.
+例如:`getAll('parent')`只归还拥有名为`parent`的属性的儿童.
 
 您还可以指定一个值来比较属性 :
 
-`getAll('visible', true)`只把那些 拥有明显财产的孩子送回`true`
+`getAll('visible', true)`只把那些 拥有明显属性的孩子送回`true`
 
 您可以选择指定一个起始和结束索引。 例如, 如果此列表有100个孩子, 您将 `startIndex` 设置为 0, `endIndex` 设置为 50, 它将会从列表中仅返回前50个孩子的匹配 。
 
@@ -841,7 +841,7 @@ layer.add([ spaceman, bunny, elephant ]);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | property | string | 是 | 用于测试值参数的可选属性 。 |
-| value | any | 是 | 如果设定了财产,则Child.财产必须严格地与这一价值相等,才能列入结果。 |
+| value | any | 是 | 如果设定了属性,则Child.属性必须严格地与这一价值相等,才能列入结果。 |
 | startIndex | number | 是 | 首个启动搜索的孩子索引. |
 | endIndex | number | 是 | 最后的婴儿索引要搜索到 |
 
@@ -934,9 +934,9 @@ layer.add([ spaceman, bunny, elephant ]);
 返回清单某一部分中符合特定标准的第一要素。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| property | string | 否 |  | 财产名称用于测试,或者虚构价值用于无标准. |
+| property | string | 否 |  | 属性名称用于测试,或者虚构价值用于无标准. |
 | value | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| undefined | 否 |  | 测试 `property` 相对于,或 `undefined` 允许任何值, 并且只检查存在值 。 |
 | startIndex | number | 是 | 0 | 列表中要开始搜索的位置 。 |
 | endIndex | number | 是 |  | 列表中的位置可以选择停止搜索, 将不会被检查 。 |
@@ -985,7 +985,7 @@ layer.add([ spaceman, bunny, elephant ]);
 从列表中返回随机子 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | startIndex | number | 是 | 0 | 从列表前方除去(最小的孩子). |
 | length | number | 是 | "(to top)" | 限制您想要随机选择的数值数量。 |
@@ -1007,7 +1007,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-返回收听特定事件的听众数量 。
+返回收听特定事件的监听器数量 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1015,7 +1015,7 @@ layer.add([ spaceman, bunny, elephant ]);
 | event | string \| symbol | 否 | 事件名称. |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#listenerCount
+**重写:** Phaser.GameObjects.GameObject#listenerCount
 
 
 **返回值:** number - 众听者数.
@@ -1034,7 +1034,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-返回已注册的听众 。
+返回已注册的监听器 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1042,10 +1042,10 @@ layer.add([ spaceman, bunny, elephant ]);
 | event | string \| symbol | 否 | 事件名称. |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#听众
+**重写:** Phaser.GameObjects.GameObject#监听器
 
 
-**返回值:** Array.\<function()> - 注册听众。
+**返回值:** Array.\<function()> - 注册监听器。
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L352](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L352)  
@@ -1178,18 +1178,18 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-删除特定事件的听众。
+删除特定事件的监听器。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | event | string \| symbol | 否 | 事件名称. |
-| fn | function | 是 | 只删除匹配此函数的听众 。 |
-| context | * | 是 | 只删除有此上下文的听众. |
-| once | boolean | 是 | 只删除一次性的听众. |
+| fn | function | 是 | 只删除匹配此函数的监听器 。 |
+| context | * | 是 | 只删除有此上下文的监听器. |
+| once | boolean | 是 | 只删除一次性的监听器. |
 
 
-**Overrides:** Phaser.GameObjects.GameObject关闭( O)
+**重写:** Phaser.GameObjects.GameObject关闭( O)
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -1208,17 +1208,17 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-为指定事件添加一个听众 。
+为指定事件添加一个监听器 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#ON 时速
+**重写:** Phaser.GameObjects.GameObject#ON 时速
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -1240,14 +1240,14 @@ layer.add([ spaceman, bunny, elephant ]);
 为特定事件添加一次性的听觉.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | event | string \| symbol | 否 |  | 事件名称. |
 | fn | function | 否 |  | 听者功能. |
-| context | * | 是 | "this" | 用来引用听众的上下文 。 |
+| context | * | 是 | "this" | 用来引用监听器的上下文 。 |
 
 
-**Overrides:** 刚开始的 Phaser.GameObjects.GameObject#on
+**重写:** 刚开始的 Phaser.GameObjects.GameObject#on
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -1285,7 +1285,7 @@ layer.add([ spaceman, bunny, elephant ]);
 从列表中删除一个或多个项目。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) \| Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 要删除的项目, 或项目数组 。 |
 | skipCallback | boolean | 是 | false | 跳过名单。 removeCallback。 |
@@ -1310,7 +1310,7 @@ layer.add([ spaceman, bunny, elephant ]);
 删除所有项目。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | skipCallback | boolean | 是 | false | 跳过名单。 removeCallback。 |
 
@@ -1331,7 +1331,7 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-删除全部听众, 或指定事件的听众 。
+删除全部监听器, 或指定事件的监听器 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1339,7 +1339,7 @@ layer.add([ spaceman, bunny, elephant ]);
 | event | string \| symbol | 是 | 事件名称. |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removeAllListeners
+**重写:** Phaser.GameObjects.GameObject#removeAllListeners
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -1361,7 +1361,7 @@ layer.add([ spaceman, bunny, elephant ]);
 删除列表中指定位置的项目。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | index | number | 否 |  | 删除项目的位置 。 |
 | skipCallback | boolean | 是 | false | 跳过名单。 removeCallback。 |
@@ -1386,7 +1386,7 @@ layer.add([ spaceman, bunny, elephant ]);
 删除列表中指定范围内的项目。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | startIndex | number | 是 | 0 | 开始删除的索引 。 |
 | endIndex | number | 是 |  | 停止删除的位置, 此位置的项目不会被移除 。 |
@@ -1414,7 +1414,7 @@ layer.add([ spaceman, bunny, elephant ]);
 这个方法无所作为,被保存以确保图层的形状与游戏对象相同.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removeInteractive
+**重写:** Phaser.GameObjects.GameObject#removeInteractive
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个游戏对象 。
@@ -1433,18 +1433,18 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-删除特定事件的听众。
+删除特定事件的监听器。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | event | string \| symbol | 否 | 事件名称. |
-| fn | function | 是 | 只删除匹配此函数的听众 。 |
-| context | * | 是 | 只删除有此上下文的听众. |
-| once | boolean | 是 | 只删除一次性的听众. |
+| fn | function | 是 | 只删除匹配此函数的监听器 。 |
+| context | * | 是 | 只删除有此上下文的监听器. |
+| once | boolean | 是 | 只删除一次性的监听器. |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#removeListener
+**重写:** Phaser.GameObjects.GameObject#removeListener
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个图层实例 。
@@ -1560,7 +1560,7 @@ layer.add([ spaceman, bunny, elephant ]);
 这个方法无所作为,被保存以确保图层的形状与游戏对象相同.
 
 
-**Overrides:** Phaser.GameObjects.GameObject#setInteractive
+**重写:** Phaser.GameObjects.GameObject#setInteractive
 
 
 **返回值:** [Phaser.GameObjects.Layer](/api/class/gameobjects-layer) - 这个游戏对象 。
@@ -1601,7 +1601,7 @@ layer.add([ spaceman, bunny, elephant ]);
 清除列表并重现其内部阵列。
 
 
-**Overrides:** Phaser.GameObjects.GameObject# 低调的
+**重写:** Phaser.GameObjects.GameObject# 低调的
 
 
 > 源码：[src/gameobjects/layer/Layer.js#L859](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/layer/Layer.js#L859)  
@@ -1689,15 +1689,15 @@ layer.add([ spaceman, bunny, elephant ]);
 
 **说明:**
 
-将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的相机排除列表检查游戏对象 。
+将 renderMask 和 renderFlags 比较,看看此游戏对象是否渲染。 还可以根据给定的摄像机排除列表检查游戏对象 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用于检查此游戏对象的摄像机 。 |
 
 
-**Overrides:** Phaser.GameObjects.GameObject#willRender
+**重写:** Phaser.GameObjects.GameObject#willRender
 
 
 **返回值:** boolean - 如果游戏对象应该被渲染, 否则会弄虚作假 。

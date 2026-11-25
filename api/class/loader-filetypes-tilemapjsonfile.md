@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-tilemapjsonfile)
 
-一个适合装入器加载的单层Tilemap JSON文件.
+一个适合资源加载器加载的单层Tilemap JSON文件.
 
 这些是使用Phaser.Loader.LoaderPlugin#tilemapTiledJSON方法创建的,一般不直接创建.
 
@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TilemapJSONFileConfig](/api/typedef/types-loader-filetypes#tilemapjsonfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | object \| string | 是 | 从此文件加载的绝对或相对的 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是“ 外国人 ” 那么 URL 将是“ 外国人. json ” 。 或者, 一个 已形成好的 JSON 对象 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -80,7 +80,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 成功加载和处理后将此文件添加到目标缓存中。
 
 
-**Overrides:** Phaser.Loader.FileTypes.JSONFile#addToCache
+**重写:** Phaser.Loader.FileTypes.JSONFile#addToCache
 
 
 > 源码：[src/loader/filetypes/TilemapJSONFile.js#L46](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TilemapJSONFile.js#L46)  

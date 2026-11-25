@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 Phaser物质插件提供了在您的Phaser游戏中使用物质JS物理引擎的能力.
 
-与拱廊物理不同的是,另一个物理系统提供Phaser, Matter JS是一个全身物理系统。
+与Arcade 物理不同的是,另一个物理系统提供Phaser, Matter JS是一个全身物理系统。
 
 * 硬体
 
@@ -30,7 +30,7 @@ Phaser物质插件提供了在您的Phaser游戏中使用物质JS物理引擎的
 
 * Gravity
 
-* 睡眠和静态身体
+* 睡眠和静态物理体
 
 * 圆角( 圆角)
 
@@ -71,7 +71,7 @@ physics: {
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| scene | [Phaser.Scene](/api/class/scene) | 否 | 拥有这个物质物理实例的 Phaser场景。 |
+| scene | [Phaser.Scene](/api/class/scene) | 否 | 拥有这个Matter 物理实例的 Phaser场景。 |
 
 ---
 
@@ -146,7 +146,7 @@ physics: {
 
 参考`Matter.Body`模块.
 
-`Matter.Body`模块包含创建和操纵车体模型的方法. A`Matter.Body`是一个刚性车体,可以由`Matter.Engine`模拟. 常用车体配置(如矩形,圆形和其他多边形)的工厂可以在`Bodies`模块中找到.
+`Matter.Body`模块包含创建和操纵物理体模型的方法. A`Matter.Body`是一个刚性物理体,可以由`Matter.Engine`模拟. 常用物理体配置(如矩形,圆形和其他多边形)的工厂可以在`Bodies`模块中找到.
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L164](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L164)  
@@ -162,7 +162,7 @@ physics: {
 
 **说明:**
 
-身体边界类的一个实例。该类包含用于从物理体的界限周围的多个点获得世界位置的函数。
+物理体边界类的一个实例。该类包含用于从物理体的界限周围的多个点获得世界位置的函数。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L152](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L152)  
@@ -198,9 +198,9 @@ physics: {
 
 参考`Matter.Collision`模块.
 
-`Matter.Collision`模块包含探测特定对天体碰撞的方法.
+`Matter.Collision`模块包含探测特定对物理体碰撞的方法.
 
-关于在尸体清单之间进行有效的检测,见`Matter.Detector`和`Matter.Query`。
+关于在物理体清单之间进行有效的检测,见`Matter.Detector`和`Matter.Query`。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L193](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L193)  
@@ -376,7 +376,7 @@ physics: {
 
 **说明:**
 
-拥有这个物质物理实例的 Phaser场景。
+拥有这个Matter 物理实例的 Phaser场景。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L101](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L101)  
@@ -412,7 +412,7 @@ physics: {
 
 **说明:**
 
-指属于拥有这个物质物理实例的场景系统.
+指属于拥有这个Matter 物理实例的场景系统.
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L110](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L110)  
@@ -500,13 +500,13 @@ Matter World 类的一个实例。该类负责更新 Matter Physics 界,以及�
 
 **说明:**
 
-将一个正文,或 Matter Game Object, 对齐给定的坐标 。
+将一个物理体,或 Matter Game Object, 对齐给定的坐标 。
 
 校对时使用体界,其中考虑到体积和旋转等因素.
 
-虽然一个天体有`position`属性,但它是基于身体的质量中心,而不是基于维度的中心。这使得对齐天体变得困难,特别是如果它们旋转或缩放的话。这种方法将基于身体的界限及其质量抵消中心得出正确的位置,以便使身体与给定坐标一致。
+虽然一个物理体有`position`属性,但它是基于物理体的质量中心,而不是基于维度的中心。这使得对齐物理体变得困难,特别是如果它们旋转或缩放的话。这种方法将基于物理体的界限及其质量抵消中心得出正确的位置,以便使物理体与给定坐标一致。
 
-例如,如果你想调整一个身体,所以它坐落在景点的下层中心,世界大小为800×600:
+例如,如果你想调整一个物理体,所以它坐落在景点的下层中心,世界大小为800×600:
 
 ```javascript
 this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
@@ -517,13 +517,13 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) | 否 | 身体要对齐。 |
-| x | number | 否 | 横向位置使身体与. |
-| y | number | 否 | 垂直位置使身体与它一致。 |
+| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) | 否 | 物理体要对齐。 |
+| x | number | 否 | 横向位置使物理体与. |
+| y | number | 否 | 垂直位置使物理体与它一致。 |
 | align | number | 否 | 其中一个`Phaser.Display.Align`常数,例如`Phaser.Display.Align.TOP_LEFT`. |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1202](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1202)  
@@ -539,16 +539,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-将力量运用到身体,在身体目前的位置,包括由此产生的扭矩.
+将力量运用到物理体,在物理体目前的位置,包括由此产生的扭矩.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | force | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 | 指定要施用的力量的矢量。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1067](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1067)  
@@ -564,19 +564,19 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-将一个力应用到基于给定角度和速度的天体。如果没有给定角度,则使用当前天体角度。
+将一个力应用到基于给定角度和速度的物理体。如果没有给定角度,则使用当前物理体角度。
 
 视质量和要求的速度,使用极小的速度值,如0.1.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | speed | number | 否 | 用于方向力的速度值 。 |
-| angle | number | 是 | 角度,用弧度表示,以应用力。请不要定义,以使用当前身体角度。 |
+| angle | number | 是 | 角度,用弧度表示,以应用力。请不要定义,以使用当前物理体角度。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1133](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1133)  
@@ -592,20 +592,20 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-将一个力应用到一个身体,从给定的世界位置,包括产生的扭矩。如果没有给出角度,则使用当前身体角度。
+将一个力应用到一个物理体,从给定的世界位置,包括产生的扭矩。如果没有给出角度,则使用当前物理体角度。
 
 视质量和要求的速度,使用极小的速度值,如0.1.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | position | [Phaser.Types.Math.Vector2Like](/api/typedef/types-math#vector2like) | 否 | 指定世界空间位置的矢量,用于施加力。 |
 | speed | number | 否 | 用于方向力的速度值 。 |
-| angle | number | 是 | 角度,用弧度表示,以应用力。请不要定义,以使用当前身体角度。 |
+| angle | number | 是 | 角度,用弧度表示,以应用力。请不要定义,以使用当前物理体角度。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1095](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1095)  
@@ -621,7 +621,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查给定身体的顶点,或一系列的体,是否包含给定点。
+检查给定物理体的顶点,或一系列的体,是否包含给定点。
 
 您可以通过单个机构, 或者要检查的一系列机构。 如果阵列中的 _ 任何机构包含点, 此方法将会返回 `true` 。 如果您需要获取一个交叉机构列表, 请参见 `intersectPoint` 方法 。
 
@@ -630,7 +630,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 身体,或一系列身体, 来检查点。 |
+| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 物理体,或一系列物理体, 来检查点。 |
 | x | number | 否 | 点的横向坐标. |
 | y | number | 否 | 点的垂直坐标. |
 
@@ -694,19 +694,19 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-取一个数组,然后返回从原始数组中找到的所有物质天体中制成的新数组。
+取一个数组,然后返回从原始数组中找到的所有物质物理体中制成的新数组。
 
 例如,在 Matter Game Objects,比如一串 Matter Sprites 中传递到这种方法,将会返回一个包含所有其原生 Matter body 对象的阵列.
 
-如果`bodies`的争论是虚假的,它会归还世界上所有的尸体.
+如果`bodies`的争论是虚假的,它会归还世界上所有的物理体.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | array | 是 | 一系列物体来提取尸体。如果假象,它会归还世界上所有的尸体。 |
+| bodies | array | 是 | 一系列物体来提取物理体。如果假象,它会归还世界上所有的物理体。 |
 
 
-**返回值:** Array.\<MatterJS.BodyType> - 本地物质天体的数组。
+**返回值:** Array.\<MatterJS.BodyType> - 本地物质物理体的数组。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L917](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L917)  
@@ -722,15 +722,15 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查给定的物质体,看看它是否与给定的任何天体相交.
+检查给定的物质体,看看它是否与给定的任何物理体相交.
 
-如果没有人提供尸体,它将与物质世界的所有机构进行核对。
+如果没有人提供物理体,它将与物质世界的所有机构进行核对。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) | 否 | 目标身体。 |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 一系列的人体来检查目标身体,如果不提供它,它将搜索世界上所有的身体。 |
+| body | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) | 否 | 目标物理体。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 一系列的人体来检查目标物理体,如果不提供它,它将搜索世界上所有的物理体。 |
 
 
 **返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 一系列的躯体,其顶点与目标体相交.
@@ -749,9 +749,9 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查给定的坐标,看看给定的天体是否有顶点包含它。
+检查给定的坐标,看看给定的物理体是否有顶点包含它。
 
-如果没有提供尸体,它将搜寻物质世界的所有尸体,包括综合体内部的遗体。
+如果没有提供物理体,它将搜寻物质世界的所有物理体,包括综合体内部的遗体。
 
 坐标应提前转换成 Matter World 坐标系统。 默认情况下, 输入指针会发生这种情况, 但是如果您想要使用来自另一个系统的坐标, 您可能需要在通过它们之前进行转换 。
 
@@ -760,10 +760,10 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 | ---- | ---- | -------- | ----------- |
 | x | number | 否 | 点的横向坐标. |
 | y | number | 否 | 点的垂直坐标. |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 一系列要检查的尸体。 如果不提供, 它将搜索世界上所有的尸体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 一系列要检查的物理体。 如果不提供, 它将搜索世界上所有的物理体 。 |
 
 
-**返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 包含给定点的天体阵列 。
+**返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 包含给定点的物理体阵列 。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L586](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L586)  
@@ -779,21 +779,21 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查给定的射线段,看看给定的天体是否有顶点与它相交.
+检查给定的射线段,看看给定的物理体是否有顶点与它相交.
 
-如果没有尸体,它将搜索物质世界的所有尸体。
+如果没有物理体,它将搜索物质世界的所有物理体。
 
 射线的宽度可以通过`rayWidth`参数指定.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x1 | number | 否 |  | 射线段起始的横向坐标. |
 | y1 | number | 否 |  | 射线段起始的垂直坐标. |
 | x2 | number | 否 |  | 射线段末端的横向坐标. |
 | y2 | number | 否 |  | 射线段末端的垂直坐标. |
 | rayWidth | number | 是 | 1 | 射线段的宽度 。 |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 |  | 一系列要检查的尸体。 如果不提供, 它将搜索世界上所有的尸体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 |  | 一系列要检查的物理体。 如果不提供, 它将搜索世界上所有的物理体 。 |
 
 
 **返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 一系列的体体,其顶点与射线段相交.
@@ -812,22 +812,22 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查给定的矩形区域, 以查看给定天体是否有顶点与它相交。 或者, 如果 `outside` 参数设置为 `true`, 它检查哪些天体没有与之相交 。
+检查给定的矩形区域, 以查看给定物理体是否有顶点与它相交。 或者, 如果 `outside` 参数设置为 `true`, 它检查哪些物理体没有与之相交 。
 
-如果没有提供尸体,它将搜寻物质世界的所有尸体,包括综合体内部的遗体。
+如果没有提供物理体,它将搜寻物质世界的所有物理体,包括综合体内部的遗体。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 区域左上角的横向坐标. |
 | y | number | 否 |  | 区域左上角的垂直坐标. |
 | width | number | 否 |  | 面积宽度. |
 | height | number | 否 |  | 地区高度. |
 | outside | boolean | 是 | false | 如果`false`检查区内的顶点,如果`true`检查区内外的顶点. |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 |  | 一系列要检查的尸体。 如果不提供, 它将搜索世界上所有的尸体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 |  | 一系列要检查的物理体。 如果不提供, 它将搜索世界上所有的物理体 。 |
 
 
-**返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 与指定区域交汇的一组天体.
+**返回值:** Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> - 与指定区域交汇的一组物理体.
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L625](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L625)  
@@ -843,7 +843,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-检查是否与任何给定的天体交叉,以查看目标体,或一系列目标体.
+检查是否与任何给定的物理体交叉,以查看目标体,或一系列目标体.
 
 如果发生交叉,此方法将返回`true`,如果提供,则引用回调。
 
@@ -851,9 +851,9 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **Note that bodies can only overlap if they are in non-colliding collision groups or categories.**
 
-如果您提供了 `processCallback`, 那么重叠的两具尸体将被发送到它。 此调回必须返回布尔, 并用于允许您在最后结果确定之前进行额外的处理测试。 如果返回 `true`, 那么如果设定的话, 尸体最终会传递到 `overlapCallback` 。
+如果您提供了 `processCallback`, 那么重叠的两具物理体将被发送到它。 此调回必须返回布尔, 并用于允许您在最后结果确定之前进行额外的处理测试。 如果返回 `true`, 那么如果设定的话, 物理体最终会传递到 `overlapCallback` 。
 
-如果你提供`overlapCallback`,那么相匹配的对重叠的天体会被发送到它.
+如果你提供`overlapCallback`,那么相匹配的对重叠的物理体会被发送到它.
 
 这两种回调都有以下的签名: `function (bodyA, bodyB, collisionInfo)`,其中`bodyA`总是目标体. `collisionInfo`对象包含额外数据,如渗透角和深度.
 
@@ -861,7 +861,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | target | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 目标体,或一系列目标体,以检查. |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 第二具尸体,或者说尸体的种类,来检查。如果伪造,它会检查世界上所有的尸体。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 是 | 第二具物理体,或者说物理体的种类,来检查。如果伪造,它会检查世界上所有的物理体。 |
 | overlapCallback | [Phaser.Types.Physics.Arcade.ArcadePhysicsCallback](/api/typedef/types-physics-arcade#arcadephysicscallback) | 是 | 如果机构重叠,则可以调用可选的回调函数。 |
 | processCallback | [Phaser.Types.Physics.Arcade.ArcadePhysicsCallback](/api/typedef/types-physics-arcade#arcadephysicscallback) | 是 | 一个可选的回调函数,如果两个机构重叠,您可以对这两个机构进行额外检查。如果设置了此功能,则只有在返回 `true`时才会引用 `overlapCallback`。 |
 | callbackContext | * | 是 | 运行回调的上下文,或范围. |
@@ -891,7 +891,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 **返回值:** [Phaser.Physics.Matter.World](/api/class/physics-matter-world) - 物质世界对象。
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:PAUSE](/api/event/physics-matter-events#pause)
+**触发事件:** [Phaser.Physics.Matter.Events#event:PAUSE](/api/event/physics-matter-events#pause)
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L460](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L460)  
@@ -929,7 +929,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 设置在 30Hz 的固定时间步运行的物质引擎并启用 `autoUpdate`。 如果您设置了自定义的 `getDelta` 函数, 这将覆盖它 。
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L506](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L506)  
@@ -948,7 +948,7 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 设置在 60Hz 的固定时间步运行物质引擎, 并启用 `autoUpdate` 。 如果您设置了自定义的 `getDelta` 函数, 这将覆盖它 。
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L489](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L489)  
@@ -964,16 +964,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-立即设定天体的角速度。位置、角度、力等保持不变。
+立即设定物理体的角速度。位置、角度、力等保持不变。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | value | number | 否 | 角速法门. |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1043](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1043)  
@@ -991,16 +991,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 将所有给定物质体的碰撞过滤罩设置到给定值。
 
-两个不同碰撞组的物质体只有在基于位法和操作将其他类别纳入其面具时才会碰撞:`(categoryA & maskB) !== 0`和`(categoryB & maskA) !== 0`都是真实的。
+两个不同碰撞组的物质体只有在基于位法和操作将其他类别纳入其遮罩时才会碰撞:`(categoryA & maskB) !== 0`和`(categoryB & maskA) !== 0`都是真实的。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的天体。 如果假的, 它会使用世界上所有的身体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的物理体。 如果假的, 它会使用世界上所有的物理体 。 |
 | categories | number \| Array.\<number> | 否 | 独有的类位场,或其中的数组. |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L876](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L876)  
@@ -1020,16 +1020,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 此数必须是2^0(=1)至2^31之间的二位功率.
 
-具有不同碰撞组的物体(见[#setCollisionGroup](#setCollisionGroup))只有在其碰撞口罩中包括碰撞类别时才会发生碰撞(见[#setCollidesWith](#setCollidesWith))。
+具有不同碰撞组的物体(见[#setCollisionGroup](#setCollisionGroup))只有在其碰撞遮罩中包括碰撞类别时才会发生碰撞(见[#setCollidesWith](#setCollidesWith))。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的天体。 如果假的, 它会使用世界上所有的身体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的物理体。 如果假的, 它会使用世界上所有的物理体 。 |
 | value | number | 否 | 独特的类位元 。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L819](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L819)  
@@ -1054,11 +1054,11 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的天体。 如果假的, 它会使用世界上所有的身体 。 |
+| bodies | Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 一系列要更新的物理体。 如果假的, 它会使用世界上所有的物理体 。 |
 | value | number | 否 | 独具群指数. |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L847](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L847)  
@@ -1079,12 +1079,12 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | x | number | 否 | 水平线性速度值。 |
 | y | number | 否 | 垂直线性速度值 。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L956](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L956)  
@@ -1100,16 +1100,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-设定物理体的水平线性速度。 天体的垂直速度不变 。
+设定物理体的水平线性速度。 物理体的垂直速度不变 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | x | number | 否 | 水平线性速度值。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L985](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L985)  
@@ -1125,16 +1125,16 @@ this.matter.alignBody(body, 400, 600, Phaser.Display.Align.BOTTOM_CENTER);
 
 **说明:**
 
-设定物理体的垂直线性速度。 天体的横向速度不变 。
+设定物理体的垂直线性速度。 物理体的横向速度不变 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的身体,要么是一系列的身体来更新。如果弄虚作假,它就会使用世界上所有的身体。 |
+| bodies | [Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody) \| Array.\<[Phaser.Types.Physics.Matter.MatterBody](/api/typedef/types-physics-matter#matterbody)> | 否 | 要么是单一的物理体,要么是一系列的物理体来更新。如果弄虚作假,它就会使用世界上所有的物理体。 |
 | y | number | 否 | 垂直线性速度值 。 |
 
 
-**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个物质物理实例。
+**返回值:** [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics) - 这个Matter 物理实例。
 
 
 > 源码：[src/physics/matter-js/MatterPhysics.js#L1014](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterPhysics.js#L1014)  
@@ -1165,7 +1165,7 @@ positionIterations (违约6) velocityIterations (默认为4) constraintIteration
 调整这些值在某些情况下可以帮助性能,这取决于游戏的物理要求.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | delta | number | 是 | 16.666 | 三角洲的价值。 |
 | correction | number | 是 | 1 | 可选三角洲校正值 。 |

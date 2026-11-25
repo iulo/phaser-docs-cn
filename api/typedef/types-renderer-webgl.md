@@ -7,10 +7,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 ### \<static> ShaderAdditionConfig {#static-shaderadditionconfig}
 
 
-一个ShaderAddition Config定义了要添加到阴影程序中的附加.
+一个ShaderAddition Config定义了要添加到着色器程序中的附加.
 它包括一个名称,一组阴影加法,以及可选标记.
 
-名称作为识别阴影加法的密钥.
+名称作为识别阴影加法的键.
 它被用作遮荫程序的独特标识符的一部分.
 
 着色器的添加是键值对弦,
@@ -20,14 +20,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| 名称 | string | 否 | 遮荫加法名,用作密钥. |
+| 名称 | string | 否 | 遮荫加法名,用作键. |
 | additions | object | 否 | 应用阴影添加。每个添加是按键值对字符串,其中键是添加该值的模板。如果模板在两个字符串中都存在,则键既适用于顶点编码,也适用于碎片阴影代码。 |
 | tags | Array.\<string> | 是 | 用于描述遮荫器添加的可选标记. |
 | disable | boolean | 是 | 是否在编译阴影时忽略此添加 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/ShaderAdditionConfig.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/ShaderAdditionConfig.js#L7)  
 引入版本：4.0.0
 
@@ -37,7 +37,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> WebGLAttributeLayout {#static-webglattributelayout}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | 名称 | string | 否 |  | 属性名称,按阴影定义. |
 | size | number | 否 |  | 每个顶点属性的组件数量. |
@@ -49,7 +49,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLAttributeBufferLayout.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLAttributeBufferLayout.js#L7)  
 引入版本：4.0.0
 
@@ -69,7 +69,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLAttributeBufferLayout.js#L20](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLAttributeBufferLayout.js#L20)  
 引入版本：4.0.0
 
@@ -89,7 +89,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLBatchEntry.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLBatchEntry.js#L1)  
 引入版本：4.0.0
 
@@ -108,7 +108,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLBlendParameters.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLBlendParameters.js#L7)  
 引入版本：4.0.0
 
@@ -125,7 +125,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLConst.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLConst.js#L1)  
 引入版本：3.50.0
 
@@ -161,7 +161,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLGlobalParameters.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLGlobalParameters.js#L7)  
 引入版本：4.0.0
 
@@ -177,7 +177,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 | func | object | 是 | Stencil 函数参数 。 |
 | func.func | GLenum | 否 | 比较功能. |
 | func.ref | GLint | 否 | 速记测试的参考值 。 |
-| func.mask | GLuint | 否 | 口罩适用于天花板测试. |
+| func.mask | GLuint | 否 | 遮罩适用于天花板测试. |
 | op | object | 是 | 斯坦西尔的操作参数. |
 | op.fail | GLenum | 否 | 如果天线测试失败, 操作要进行 。 |
 | op.zfail | GLenum | 否 | 如果深度测试失败, 操作要进行 。 |
@@ -186,7 +186,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLStencilParameters.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLStencilParameters.js#L7)  
 引入版本：4.0.0
 
@@ -211,7 +211,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLTextureCompression.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLTextureCompression.js#L1)  
 引入版本：3.55.0
 
@@ -230,7 +230,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Renderer.WebGL
+**所属**: Phaser.Types.Renderer.WebGL
 > 源码：[src/renderer/webgl/typedefs/WebGLUniform.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/typedefs/WebGLUniform.js#L7)  
 引入版本：4.0.0
 

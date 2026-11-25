@@ -101,7 +101,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-一个将密钥映射到现场的物体,这样我们就可以从一个密钥上快速地得到一个没有迭代的场景.
+一个将键映射到现场的物体,这样我们就可以从一个键上快速地得到一个没有迭代的场景.
 
 
 > 源码：[src/scene/SceneManager.js#L54](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/SceneManager.js#L54)  
@@ -151,7 +151,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将新场景添加到场景管理器中。您必须给每个场景一个独特的密钥,您可以通过它来识别它。
+将新场景添加到场景管理器中。您必须给每个场景一个独特的键,您可以通过它来识别它。
 
 The `sceneConfig` can be:
 
@@ -168,7 +168,7 @@ The `sceneConfig` can be:
 如果给定了一个函数,那么通过调用将创建一个新场景.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 一个独特的键用于引用景色,即`MainMenu`或`Level1`. |
 | sceneConfig | [Phaser.Types.Scenes.SceneType](/api/typedef/types-scenes#scenetype) | 否 |  | 场景的配置 |
@@ -196,7 +196,7 @@ The `sceneConfig` can be:
 
 也就是说它会让其他的幕后人物 都更受欢迎
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -261,7 +261,7 @@ The `sceneConfig` can be:
 
 按数值索引检索一个场景。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -290,7 +290,7 @@ The `sceneConfig` can be:
 
 检索一个场景的数值索引。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -317,11 +317,11 @@ The `sceneConfig` can be:
 
 **说明:**
 
-基于给定的密钥获取一个场景 。
+基于给定的键获取一个场景 。
 
 如果将实际的场景传递到这种方法,可以用来检查其目前是否在场景管理器内,或者没有.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -353,13 +353,13 @@ The `sceneConfig` can be:
 
 您可以通过 Scene 的活跃状态过滤输出, 选择使数组按正常或反转顺序返回 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | isActive | boolean | 是 | true | 只包括目前活动场景的场景吗? |
 | inReverse | boolean | 是 | false | 倒转返回Scenes的阵列吗 ? |
@@ -383,7 +383,7 @@ The `sceneConfig` can be:
 
 确定是否正在运行场景 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -412,7 +412,7 @@ The `sceneConfig` can be:
 
 确定是否暂停场景。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -441,7 +441,7 @@ The `sceneConfig` can be:
 
 确定场景是否在睡觉。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -470,7 +470,7 @@ The `sceneConfig` can be:
 
 确定场景是否可见。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -501,7 +501,7 @@ The `sceneConfig` can be:
 
 这意味着它会超越其他场景的顶部
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -533,7 +533,7 @@ The `sceneConfig` can be:
 
 这意味着它会让另一个场景出现
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -563,7 +563,7 @@ The `sceneConfig` can be:
 
 将 Scene 列表中的一个位置下移 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -592,7 +592,7 @@ The `sceneConfig` can be:
 
 将 Scenes 列表中的一个位置移动到上 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -621,7 +621,7 @@ The `sceneConfig` can be:
 
 暂停给定的场景。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -667,7 +667,7 @@ The `sceneConfig` can be:
 
 从场景管理器中删除场景。
 
-场景从局部场景阵列中移除,其密钥从密钥缓存中清除出来,然后将Scene.Systems.destroy调用.
+场景从局部场景阵列中移除,其键从键缓存中清除出来,然后将Scene.Systems.destroy调用.
 
 如果SceneManager在使用这种方法时正在处理Scenes,它会为下一次更新序列排队操作.
 
@@ -716,7 +716,7 @@ The `sceneConfig` can be:
 
 复次给定场场.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -750,7 +750,7 @@ The `sceneConfig` can be:
 
 如果您希望打开模式景, 请使用此选项, 请使用当前模式景上的 `pause` , 然后使用模式景中的 `run` 。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -782,7 +782,7 @@ The `sceneConfig` can be:
 
 这意味着它会做出低于所有其他的幕后。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -811,7 +811,7 @@ The `sceneConfig` can be:
 
 使给定的场景入睡.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -843,7 +843,7 @@ The `sceneConfig` can be:
 
 如果场景在运行,暂停,或睡觉,它会关闭然后开始.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -873,7 +873,7 @@ The `sceneConfig` can be:
 
 停止给定的场景。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -903,7 +903,7 @@ The `sceneConfig` can be:
 
 换掉两个Scenes在Scenes列表中的位置.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -933,7 +933,7 @@ The `sceneConfig` can be:
 
 睡一幕而起彼处.
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse
@@ -986,7 +986,7 @@ The `sceneConfig` can be:
 
 唤醒了给定的场景。
 
-**Tags:**
+**标签:**
 
  - generic
  - genericUse

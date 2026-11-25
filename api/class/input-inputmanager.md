@@ -332,7 +332,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 前10个指针通过`InputPlugin.pointerX`属性提供,一旦通过这种方法添加出来.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | quantity | number | 是 | 1 | 新建指针的数量。 最多允许总共创建10个指针 。 |
 
@@ -356,10 +356,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 靴子手柄在刚启动时由Phaser.Game调用,渲染器现在已经可用.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Fires:** [Phaser.Input.Events#event:MANAGER_BOOT](/api/event/input-events#manager_boot)
+**触发事件:** [Phaser.Input.Events#event:MANAGER_BOOT](/api/event/input-events#manager_boot)
 
 
 > 源码：[src/input/InputManager.js#L302](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/InputManager.js#L302)  
@@ -393,9 +393,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-使用给定的指针和相机对一组交互式游戏对象进行命中测试。
+使用给定的指针和摄像机对一组交互式游戏对象进行命中测试。
 
-游戏对象被与相机对峙,然后坐标被翻译为局部相机空间,并用来确定它们是否属于剩余的游戏对象命中区.
+游戏对象被与摄像机对峙,然后坐标被翻译为局部摄像机空间,并用来确定它们是否属于剩余的游戏对象命中区.
 
 如果无任何匹配的空数组会被返回 。
 

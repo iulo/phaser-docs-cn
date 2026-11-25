@@ -157,7 +157,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 数据由顶点和指数化三角组成,每个三角由三个指数定义,进入顶点阵列.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | currentContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 |  | 当前绘图背景 。 |
 | indexes | Array.\<number> | 否 |  | 指数数据。每个三角形由三个指数定义,进入顶点阵列,因此这个长度应该是3的倍数. |
@@ -166,7 +166,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | lighting | boolean | 是 | false | 这批货应该用照明吗? |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L326](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L326)  
@@ -192,7 +192,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L264](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L264)  
@@ -252,7 +252,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将任何待决的渲染选项修改应用到阴影程序。此方法在当前批次被冲洗后, 当 `_renderOptionsChanged` 谓 `true`同步 `renderOptions` 与 `nextRenderOptions` ,并相应启用或禁用照明阴影添加。启用照明时,它也会更新 `LIGHT_COUNT` 预处理器定义以匹配渲染器配置的最大灯光数量。
+将任何待决的渲染选项修改应用到着色器程序。此方法在当前批次被冲洗后, 当 `_renderOptionsChanged` 谓 `true`同步 `renderOptions` 与 `nextRenderOptions` ,并相应启用或禁用照明阴影添加。启用照明时,它也会更新 `LIGHT_COUNT` 预处理器定义以匹配渲染器配置的最大灯光数量。
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L223](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerTriFlat.js#L223)  

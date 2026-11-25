@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-asepritefile)
 
-适合装入器装入的单个 Aseprite 动画文件 。
+适合资源加载器装入的单个 Aseprite 动画文件 。
 
-Aseprite 是一个动画的图示编辑器和像素艺术工具。这个文件类型既处理Aseprite 图示工作表图像的加载,又处理其附带的JSON数据文件,其中包含帧和动画标记信息。一旦加载,纹理和动画数据将添加到纹理管理器中,并可用于通过`AnimationManager.createFromAseprite`创建动画.
+Aseprite 是一个动画的图示编辑器和像素艺术工具。这个文件类型既处理Aseprite 精灵表图像的加载,又处理其附带的JSON数据文件,其中包含帧和动画标记信息。一旦加载,纹理和动画数据将添加到纹理管理器中,并可用于通过`AnimationManager.createFromAseprite`创建动画.
 
 这些是使用 Phaser.Loader.LoaderPlugin#aseprite 方法创建的,一般不直接创建.
 
@@ -18,10 +18,10 @@ Aseprite 是一个动画的图示编辑器和像素艺术工具。这个文件�
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AsepriteFileConfig](/api/typedef/types-loader-filetypes#asepritefileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
-| atlasURL | object \| string | 是 | 从中加载纹理地图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| atlasURL | object \| string | 是 | 从中加载纹理图集 json 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则它将被设定为 `<key>.json`, 即如果 `key` 是"外国人" , 那么 URL 将是 "alien.json" 。 或者, 一个已形成良好的 JSON 对象 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集 json 文件的 XHR 设置配置对象。 用于替换加载器默认 XHR 设置 。 |
 
 ---

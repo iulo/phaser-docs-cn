@@ -21,7 +21,7 @@ timeline.play();
 | ---- | ---- | -------- | ----------- |
 | timeline | [Phaser.Time.Timeline](/api/class/time-timeline) | 否 | 引用事件发射时间线 。 |
 
-**Member of:** [Phaser.Time.Events](/api/namespace/time-events)
+**所属:** [Phaser.Time.Events](/api/namespace/time-events)
 > 源码：[src/time/events/COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/time/events/COMPLETE_EVENT.js#L7)  
 引入版本：3.70.0
 

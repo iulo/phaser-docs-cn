@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-rendernodes-shaderquad)
 
-一个使用自定义的 GLSL 阴影程序使一个四边形实现一个单一的RenderNode。它被Shader Game Object 用来执行用户定义的顶点和碎片阴影,与游戏对象的维度匹配的四边形。该四边形通过场景相机转换,并支持可选渲染直接通过纹理 `renderToTexture`。通过这个节点管理了遮蔽器、纹理取样器和遮蔽器的添加变体,使其成为定制的主要切入点。 WebGL 阴影效果在 Phaser.
+一个使用自定义的 GLSL 着色器程序使一个四边形实现一个单一的RenderNode。它被Shader Game Object 用来执行用户定义的顶点和碎片阴影,与游戏对象的维度匹配的四边形。该四边形通过场景摄像机转换,并支持可选渲染直接通过纹理 `renderToTexture`。通过这个节点管理了遮蔽器、纹理取样器和遮蔽器的添加变体,使其成为定制的主要切入点。 WebGL 阴影效果在 Phaser.
 
 **构造函数**
 
@@ -116,7 +116,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-绑定的便利函数,将一个要应用到当前阴影程序的一致值排队。 程序管理器的代表 `setUniform` 方法。 。 方法。
+绑定的便利函数,将一个要应用到当前着色器程序的一致值排队。 程序管理器的代表 `setUniform` 方法。 。 方法。
 
 
 > 源码：[src/renderer/webgl/renderNodes/ShaderQuad.js#L110](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/ShaderQuad.js#L110)  
@@ -193,7 +193,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 否 | 母变矩阵. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/ShaderQuad.js#L222](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/ShaderQuad.js#L222)  

@@ -237,7 +237,7 @@ var timeline = this.add.timeline([
   - `if`: 一个函数。 引用每个勾选, 返回 `true`时运行动作 。
 - Actions :
 
-  - `set`:一个要设置在`target`上的属性的密钥值对象.
+  - `set`:一个要设置在`target`上的属性的键值对象.
   - `tween` : [tween config](/guide/concepts/tweens#creating-a-tween)
   - `run` : 事件发生时将称为函数。
 
@@ -257,7 +257,7 @@ var timeline = this.add.timeline([
 
   - `sound` :
 
-    - 字符串:要播放的音效管理器的密钥
+    - 字符串:要播放的音效管理器的键
     - 当事件发生时要播放声音的配置对象 。
 
       ```js
@@ -266,7 +266,7 @@ var timeline = this.add.timeline([
       }
       ```
 
-      - `key`:要播放的音响的密钥
+      - `key`:要播放的音响的键
       - `config` : [config of playing sound](/guide/concepts/audio#configuration)
 
   - `event`: 事件发生时以字符串为基础的事件名称。 事件由时间线实例释放 。
@@ -352,7 +352,7 @@ timeline.resume();
 // timeline.paused = false;
 ```
 
-### 重置( E) {#reset}
+### 重置 {#reset}
 
 将这个时间线重新放回开始,包括循环计数器.
 

@@ -12,7 +12,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 您不必填充两个列表。 如果只包含一个列表, 则它将被与结尾的原始输入混合。 如果您想要保留在过滤过程中丢失的图像数据, 这样做将很有用 。
 
-通过过滤列表组件,将一个平行过滤器效果添加到相机中:
+通过过滤列表组件,将一个平行过滤器效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -27,7 +27,7 @@ camera.filters.external.addParallelFilters();
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 拥有这个过滤器的摄像机. |
 
 ---
 

@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 缩放管理器处理游戏画布的缩放,调整大小和对齐.
 
-缩放处理方式是设置游戏画布到固定大小, 并在游戏配置中定义。 您也会定义游戏配置中的母容器。 如果没有给出父容器, 则默认使用文档正文。 缩放管理器将查看_ parent_ 内可用的空间, 并相应缩放画布。 缩放处理方式是通过设置画布 CSS 宽度和高度属性, 使画布元素本身的宽度和高度不受影响。 因此, 缩放是通过保持核心画布的大小和“ 伸缩” 来达到的。 这样可以给出与使用 CSS 属性相同的结果和速度 。 `transform-scale` CSS属性,不需要浏览器前缀处理.
+缩放处理方式是设置游戏画布到固定大小, 并在游戏配置中定义。 您也会定义游戏配置中的父容器。 如果没有给出父容器, 则默认使用文档正文。 缩放管理器将查看_ parent_ 内可用的空间, 并相应缩放画布。 缩放处理方式是通过设置画布 CSS 宽度和高度属性, 使画布元素本身的宽度和高度不受影响。 因此, 缩放是通过保持核心画布的大小和“ 伸缩” 来达到的。 这样可以给出与使用 CSS 属性相同的结果和速度 。 `transform-scale` CSS属性,不需要浏览器前缀处理.
 
 对比例尺的计算受到边框父大小的很大影响,这是画布母大小的计算维度。 母元素的 CSS 规则在比例尺管理器的操作中起着重要作用。 例如, 如果父方没有定义的宽度或高度, 则自动中心化等动作将无法实现所需的结果。 比例尺管理器与您在主机页面上设置的 CSS 同步工作, 而不是控制它 。
 
@@ -307,7 +307,7 @@ baseSize与canvasBounds之间的比例系数.
 
 游戏大小组件 。
 
-未修改的游戏大小, 如游戏配置( 原始宽度 / 高度) 中要求的, 如用于世界界限, 相机等
+未修改的游戏大小, 如游戏配置( 原始宽度 / 高度) 中要求的, 如用于世界界限, 摄像机等
 
 
 > 源码：[src/scale/ScaleManager.js#L194](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L194)  
@@ -593,10 +593,10 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 靴子手柄在开始时由Phaser.Game调用,渲染器现在已经可用,帆布已经添加到DOM中.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L418](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L418)  
@@ -615,7 +615,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 销毁此缩放管理器, 释放所有外部资源的引用。 一旦销毁, 缩放管理器将无法再次使用 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/scale/ScaleManager.js#L1755](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1755)  
@@ -711,12 +711,12 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 
 计算并返回一个矩形,代表游戏画布目前可见的区域,计算画布位置、父边框和显示尺度。如果画布延伸到父边框可见区域之外,则矩形会相应被剪切。
 
-可提供可选相机,在这种情况下,对返回的矩形作进一步调整,以计入相机的缩放级别和滚动位置.
+可提供可选摄像机,在这种情况下,对返回的矩形作进一步调整,以计入摄像机的缩放级别和滚动位置.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算视图的相机。如果提供了,则对矩形进行相机缩放和滚动调整。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 是 | 用于计算视图的摄像机。如果提供了,则对矩形进行摄像机缩放和滚动调整。 |
 | out | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | 保留结果的可选矩形。如果不提供,则创建新的矩形。 |
 
 
@@ -739,7 +739,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 浏览器已成功离开全屏模式.
 
 
-**Fires:** [Phaser.Scale.Events#event:LEAVE_FULLSCREEN](/api/event/scale-events#leave_fullscreen)
+**触发事件:** [Phaser.Scale.Events#event:LEAVE_FULLSCREEN](/api/event/scale-events#leave_fullscreen)
 
 
 > 源码：[src/scale/ScaleManager.js#L1472](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1472)  
@@ -784,7 +784,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 当DOM发送全屏更改事件时触发.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/scale/ScaleManager.js#L1586](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1586)  
@@ -819,7 +819,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 解析游戏配置以设置缩放默认值。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -843,7 +843,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 调用 _ 在_ 画布对象创建并添加到 DOM 中 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/scale/ScaleManager.js#L402](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L402)  
@@ -875,7 +875,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L950](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L950)  
@@ -927,7 +927,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L802](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L802)  
@@ -957,7 +957,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L751](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L751)  
@@ -979,7 +979,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L903](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L903)  
@@ -1007,7 +1007,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L729](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L729)  
@@ -1032,7 +1032,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 使用这种方法自动引用 `ScaleManager.refresh` , 从而发出 `RESIZE` 事件 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | snapWidth | number | 是 | 0 | 宽度的大小。 如果您不想宽度的大小, 则通过 0 值 。 |
 | snapHeight | number | 是 | "snapWidth" | 将高度调高到的数值。 如果不提供, 它将使用 `snapWidth` 值。 如果您不想调高, 请通过 0 值 。 |
@@ -1041,7 +1041,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L920](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L920)  
@@ -1068,7 +1068,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 **返回值:** [Phaser.Scale.ScaleManager](/api/class/scale-scalemanager) - 缩放管理器实例 。
 
 
-**Fires:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L884](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L884)  
@@ -1102,7 +1102,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 | fullscreenOptions | object | 是 | Fullscreen Options字典用于在进入全屏幕时提供配置选项. |
 
 
-**Fires:** [Phaser.Scale.Events#event:ENTER_FULLSCREEN](/api/event/scale-events#enter_fullscreen), [Phaser.Scale.Events#event:FULLSCREEN_FAILED](/api/event/scale-events#fullscreen_failed), [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported), [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:ENTER_FULLSCREEN](/api/event/scale-events#enter_fullscreen), [Phaser.Scale.Events#event:FULLSCREEN_FAILED](/api/event/scale-events#fullscreen_failed), [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported), [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L1290](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1290)  
@@ -1118,7 +1118,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 
 **说明:**
 
-启动不同 DOM 事件听众运行的内部方法 。
+启动不同 DOM 事件监听器运行的内部方法 。
 
 
 > 源码：[src/scale/ScaleManager.js#L1520](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1520)  
@@ -1159,7 +1159,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 如果浏览器已输入, 调用此方法将取消全屏模式 。
 
 
-**Fires:** [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported)
+**触发事件:** [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported)
 
 
 > 源码：[src/scale/ScaleManager.js#L1446](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1446)  
@@ -1175,7 +1175,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 
 **说明:**
 
-停止所有 DOM 事件听众 。
+停止所有 DOM 事件监听器 。
 
 
 > 源码：[src/scale/ScaleManager.js#L1721](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1721)  
@@ -1203,7 +1203,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 | fullscreenOptions | object | 是 | Fullscreen Options字典用于在进入全屏幕时提供配置选项. |
 
 
-**Fires:** [Phaser.Scale.Events#event:ENTER_FULLSCREEN](/api/event/scale-events#enter_fullscreen), [Phaser.Scale.Events#event:LEAVE_FULLSCREEN](/api/event/scale-events#leave_fullscreen), [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported), [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
+**触发事件:** [Phaser.Scale.Events#event:ENTER_FULLSCREEN](/api/event/scale-events#enter_fullscreen), [Phaser.Scale.Events#event:LEAVE_FULLSCREEN](/api/event/scale-events#leave_fullscreen), [Phaser.Scale.Events#event:FULLSCREEN_UNSUPPORTED](/api/event/scale-events#fullscreen_unsupported), [Phaser.Scale.Events#event:RESIZE](/api/event/scale-events#resize)
 
 
 > 源码：[src/scale/ScaleManager.js#L1489](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L1489)  
@@ -1310,7 +1310,7 @@ Canvas 的母对象。 通常是一个 div, 或者浏览器窗口, 或者在非�
 如果方向改变,则更新方向属性,然后发送方向改变事件.
 
 
-**Fires:** [Phaser.Scale.Events#event:ORIENTATION_CHANGE](/api/event/scale-events#orientation_change)
+**触发事件:** [Phaser.Scale.Events#event:ORIENTATION_CHANGE](/api/event/scale-events#orientation_change)
 
 
 > 源码：[src/scale/ScaleManager.js#L998](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/ScaleManager.js#L998)  

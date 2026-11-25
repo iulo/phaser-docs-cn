@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 矩形形状是游戏对象,可以添加到景物、组或容器中。您可以把它当作游戏中的其他任何游戏对象,比如对它进行曲折、缩放或允许输入或物理。它为您提供了快速和容易的方法,在游戏中不使用纹理来制作此形状,同时仍然利用WebGL的完整批量。
 
-此形状既支持填充颜色,也支持中风颜色.
+此形状支持设置填充颜色和描边颜色。
 
 通过改变`width`和`height`的属性,可以改变矩形的大小.
 
@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Rectangle(scene, x, y, [width], [height], [fillColor], [fillAlpha])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 一个游戏对象只能一次属于一个景点 。 |
 | x | number | 否 |  | 这个游戏对象在世界的横向位置. |
@@ -477,7 +477,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 要禁用圆角, 请将 `radius` 参数设置为 0 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | radius | number | 是 | 16 | 四个圆角的半径。 |
 
@@ -509,7 +509,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | height | number | 否 | 此游戏对象的高度 。 |
 
 
-**Overrides:** Phaser.GameObjects.Shape#setSize
+**重写:** Phaser.GameObjects.Shape#setSize
 
 
 **返回值:** [Phaser.GameObjects.Rectangle](/api/class/gameobjects-rectangle) - 此游戏对象实例 。

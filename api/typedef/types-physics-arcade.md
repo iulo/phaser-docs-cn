@@ -15,7 +15,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeBodyBounds.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeBodyBounds.js#L1)  
 引入版本：3.0.0
 
@@ -27,15 +27,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| none | boolean | 否 | 如果尸体没有碰撞的话,那就是真的了。 |
-| up | boolean | 否 | 如果尸体在上边碰撞的话,那就是真的了。 |
-| down | boolean | 否 | 如果尸体在它的下边缘发生碰撞,那就是真的了。 |
-| left | boolean | 否 | 如果身体在左边缘相撞的话,那就是真的了。 |
-| right | boolean | 否 | 如果身体在右边缘相撞的话,那就是真的了。 |
+| none | boolean | 否 | 如果物理体没有碰撞的话,那就是真的了。 |
+| up | boolean | 否 | 如果物理体在上边碰撞的话,那就是真的了。 |
+| down | boolean | 否 | 如果物理体在它的下边缘发生碰撞,那就是真的了。 |
+| left | boolean | 否 | 如果物理体在左边缘相撞的话,那就是真的了。 |
+| right | boolean | 否 | 如果物理体在右边缘相撞的话,那就是真的了。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeBodyCollision.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeBodyCollision.js#L1)  
 引入版本：3.0.0
 
@@ -46,11 +46,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 ### \<static> ArcadeColliderType {#static-arcadecollidertype}
 
 
-拱廊物理对撞器类型.
+Arcade 物理对撞器类型.
 
 **类型**: [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | [Phaser.Physics.Arcade.Sprite](/api/class/physics-arcade-sprite) | [Phaser.Physics.Arcade.Image](/api/class/physics-arcade-image) | [Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup) | [Phaser.Physics.Arcade.Group](/api/class/physics-arcade-group) | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | Array.\<([Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body) | [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody) | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | [Phaser.GameObjects.Group](/api/class/gameobjects-group) | [Phaser.Physics.Arcade.Sprite](/api/class/physics-arcade-sprite) | [Phaser.Physics.Arcade.Image](/api/class/physics-arcade-image) | [Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup) | [Phaser.Physics.Arcade.Group](/api/class/physics-arcade-group) | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer))>
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeColliderType.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeColliderType.js#L1)  
 引入版本：3.0.0
 
@@ -62,7 +62,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: function
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadePhysicsCallback.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadePhysicsCallback.js#L1)  
 
 
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> ArcadeWorldConfig {#static-arcadeworldconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | fps | number | 是 | 60 | 设定 QQLink Phaser.Physics.Arcade.World#fps}. |
 | fixedStep | boolean | 是 | true | 设置 QQlink 选项 Phaser.Physics.Arcade.World#fixedStep}. |
@@ -100,7 +100,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeWorldConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeWorldConfig.js#L1)  
 引入版本：3.0.0
 
@@ -112,16 +112,16 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| debugShowBody | boolean | 否 | 设定为 `true` , 以将动态天体大纲渲染到调试显示中 。 |
-| debugShowStaticBody | boolean | 否 | 设定为 `true` , 以将静态的车体轮廓制成调试显示 。 |
+| debugShowBody | boolean | 否 | 设定为 `true` , 以将动态物理体大纲渲染到调试显示中 。 |
+| debugShowStaticBody | boolean | 否 | 设定为 `true` , 以将静态的物理体轮廓制成调试显示 。 |
 | debugShowVelocity | boolean | 否 | 设定为 `true` , 以将机体速度标记转换为调试显示 。 |
 | bodyDebugColor | number | 否 | 向调试显示器渲染时动态体的颜色轮廓 。 |
-| staticBodyDebugColor | number | 否 | 向调试显示器渲染时的静态身体轮廓颜色. |
+| staticBodyDebugColor | number | 否 | 向调试显示器渲染时的静态物理体轮廓颜色. |
 | velocityDebugColor | number | 否 | 向调试显示器渲染时速度标记的颜色 。 |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeWorldDefaults.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeWorldDefaults.js#L1)  
 引入版本：3.0.0
 
@@ -140,7 +140,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ArcadeWorldTreeMinMax.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ArcadeWorldTreeMinMax.js#L1)  
 引入版本：3.0.0
 
@@ -152,14 +152,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| up | boolean | 否 | 身体会和世界顶端相撞吗? |
-| down | boolean | 否 | 尸体会和世界的底部碰撞吗? |
-| left | boolean | 否 | 身体会和世界左侧相撞吗? |
-| right | boolean | 否 | 身体会和世界的右侧相撞吗? |
+| up | boolean | 否 | 物理体会和世界顶端相撞吗? |
+| down | boolean | 否 | 物理体会和世界的底部碰撞吗? |
+| left | boolean | 否 | 物理体会和世界左侧相撞吗? |
+| right | boolean | 否 | 物理体会和世界的右侧相撞吗? |
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/CheckCollisionObject.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/CheckCollisionObject.js#L1)  
 引入版本：3.0.0
 
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/GameObjectWithBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/GameObjectWithBody.js#L1)  
 
 
@@ -191,7 +191,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/GameObjectWithDynamicBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/GameObjectWithDynamicBody.js#L1)  
 
 
@@ -207,7 +207,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/GameObjectWithStaticBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/GameObjectWithStaticBody.js#L1)  
 
 
@@ -223,7 +223,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ImageWithDynamicBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ImageWithDynamicBody.js#L1)  
 
 
@@ -239,7 +239,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/ImageWithStaticBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/ImageWithStaticBody.js#L1)  
 
 
@@ -249,7 +249,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> PhysicsGroupConfig {#static-physicsgroupconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | collideWorldBounds | boolean | 是 | false | 设置 QQlink 选项 Phaser.Physics.Arcade.Body#collideWorldBounds}. |
 | customBoundsRectangle | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 | null | 设置 QQlink 选项 Phaser.Physics.Arcade.Body#setBoundsRectangle setBoundsRectangle}. |
@@ -281,7 +281,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/PhysicsGroupConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/PhysicsGroupConfig.js#L1)  
 引入版本：3.0.0
 
@@ -321,7 +321,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/PhysicsGroupDefaults.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/PhysicsGroupDefaults.js#L1)  
 引入版本：3.0.0
 
@@ -337,7 +337,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/SpriteWithDynamicBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/SpriteWithDynamicBody.js#L1)  
 
 
@@ -353,7 +353,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.Physics.Arcade
+**所属**: Phaser.Types.Physics.Arcade
 > 源码：[src/physics/arcade/typedefs/SpriteWithStaticBody.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/typedefs/SpriteWithStaticBody.js#L1)  
 
 

@@ -2,21 +2,21 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/physics/matter)
 
-物质物理是一个开源第三方物理库,Phaser有它自己的自定义版本捆绑。 加入物质的理由是它提供了一个更先进的“ 完整的” 物理系统。 如果您需要超越矩形和圆形, 物理形状更复杂, 以及约束、 关节和行为等特征, 那么物质就是要使用的系统 。
+Matter 物理是一个开源第三方物理库,Phaser有它自己的自定义版本捆绑。 加入物质的理由是它提供了一个更先进的“ 完整的” 物理系统。 如果您需要超越矩形和圆形, 物理形状更复杂, 以及约束、 关节和行为等特征, 那么物质就是要使用的系统 。
 
-物质物理必须启用后才能使用。 可以通过游戏配置或每场游戏完成。 一旦启用, 您可以在游戏中添加物理化的游戏对象。 这将允许您使用内置物理函数来控制 Sprite, 如速度、 加速、 重力等 。
+Matter 物理必须启用后才能使用。 可以通过游戏配置或每场游戏完成。 一旦启用, 您可以在游戏中添加物理化的游戏对象。 这将允许您使用内置物理函数来控制 Sprite, 如速度、 加速、 重力等 。
 
 默认情况下, 无法为物理启用游戏对象。 这是因为并非所有游戏对象都需要。 例如, 背景图像或游戏标志可能不需要受到物理影响, 而玩家字符需要。 因此, 您必须启用您特别希望受其影响的游戏对象上的物理。 我们将在后面章节中详细论述这个问题 。
 
-弧形物理和物质物理是两个独立的系统。例如,弧形物理图案不能与物质物理图案相撞。不能在两个系统上添加相同的Sprite,你需要选择一个或另一个。尽管这样做是不寻常的,但这两个系统实际上可以在同一场景中平行运行。这意味着可以有一个使用Arcade物理的Sprite和一个使用物质物理的Sprite,它们将同时工作,尽管它们不会一起互动。
+Arcade 物理和Matter 物理是两个独立的系统。例如,Arcade 物理图案不能与Matter 物理图案相撞。不能在两个系统上添加相同的Sprite,你需要选择一个或另一个。尽管这样做是不寻常的,但这两个系统实际上可以在同一场景中平行运行。这意味着可以有一个使用Arcade物理的Sprite和一个使用Matter 物理的Sprite,它们将同时工作,尽管它们不会一起互动。
 
 ## 物质世界 {#matter-world}
 
-物质物理学世界提供了比Arcade物理更先进和更现实的物理相互作用模拟。 它在 Matter.js 库上建构了这样的模拟,它允许更复杂的物理行为,如刚性的身体动力学、约束和高级碰撞探测。
+Matter 物理学世界提供了比Arcade物理更先进和更现实的物理相互作用模拟。 它在 Matter.js 库上建构了这样的模拟,它允许更复杂的物理行为,如刚性的物理体动力学、约束和高级碰撞探测。
 
 ### 世界组合 {#world-configuration}
 
-物质物理`config`对象定义了物质物理系统在全球的行为.
+Matter 物理`config`对象定义了Matter 物理系统在全球的行为.
 
 - 基本配置对象
 
@@ -127,7 +127,7 @@ var config = {
 var game = new Phaser.Game(config);
 ```
 
-### 控制器 {#control}
+### 控制 {#control}
 
 #### 暂停 {#pause}
 
@@ -206,7 +206,7 @@ var constraint = this.matter.add.constraint(gameObjectA, gameObjectB);
 // var constraint = this.matter.add.constraint(gameObjectA, gameObjectB, length, stiffness, options);
 ```
 
-- `gameObjectA`,`gameObjectB`:物质游戏对象,或物质身体对象.
+- `gameObjectA`,`gameObjectB`:物质游戏对象,或物质物理体对象.
 - `length` : 约束的剩余目标长度。
   - `undefined`:当前gameObjectA和gameObjectB之间的距离。 (默认值)
 - `stiffness` : 约束的僵硬性.
@@ -332,7 +332,7 @@ var composite = this.matter.add.chain(
     - `0.2` :扮演柔软的弹簧.
 
 - `composite`
-  - `composite.bodies` : 一系列身体。
+  - `composite.bodies` : 一系列物理体。
   - `composite.constraints`:一系列制约因素
 
 #### 删除约束 {#remove-constraint}
@@ -345,7 +345,7 @@ this.matter.world.removeConstraint(constraint);
 
 游戏对象是您的游戏的构件。常见的物质游戏对象包括:Sprites, Images和TileBody 。
 
-### 使用量 {#usage}
+### 用法 {#usage}
 
 #### 添加游戏对象 {#add-game-objects}
 
@@ -360,7 +360,7 @@ var image = this.matter.add.image(x, y, key, frame);
 
 - `config` : [Config object](#game-object-configuration)
 
-##### 闪烁对象 {#sprite-object}
+##### 精灵对象 {#sprite-object}
 
 ```js
 var image = this.matter.add.sprite(x, y, key, frame);
@@ -393,7 +393,7 @@ var composite = this.matter.add.imageStack(key, frame, x, y, columns, rows);
 - `columnGap`, `rowGap` : 每个列/行之间的距离。
 - `config` : [Config object](#game-object-configuration)
 - `composite` : 复合物质对象。
-  - `composite.bodies` : 一系列身体。
+  - `composite.bodies` : 一系列物理体。
 
 ##### 游戏对象配置 {#game-object-configuration}
 
@@ -440,7 +440,7 @@ var composite = this.matter.add.imageStack(key, frame, x, y, columns, rows);
 }
 ```
 
-- `label`:一个任意的`String`名称,帮助用户识别和管理尸体.
+- `label`:一个任意的`String`名称,帮助用户识别和管理物理体.
 - `shape` :
 
   - 字符串 : `'rectangle'`, `'circle'`, `'trapezoid'`, `'polygon'`, `'fromVertices'`, `'fromPhysicsEditor'`
@@ -506,31 +506,31 @@ var composite = this.matter.add.imageStack(key, frame, x, y, columns, rows);
   - 数字
   - `{radius: value}`
   - `{radius: [topLeft, topRight, bottomRight, bottomLeft]}`
-- `isStatic` : 表示一个身体是否被视为静止的旗帜,一个静止的身体永远不能改变位置或角度,并且是完全固定的.
-- `isSensor`:指向身体是否是传感器的旗帜,传感器触发碰撞事件,但不会与碰撞身体发生物理反应.
-- `isSleeping`:表示身体是否被视为睡眠的旗帜,睡眠的身体行为类似于静态的身体,但只是暂时的,可以震动.
-- `sleepThreshold`:在设定为睡眠前,这个身体必须拥有_近零速度_的更新数量.
-- `density` : 身体密度,即单位面积的质量。
-- `restitution`: 身体的还原/弹跳/弹性。数值总是正值,在`(0, 1)`的范围之内。
+- `isStatic` : 表示一个物理体是否被视为静止的旗帜,一个静止的物理体永远不能改变位置或角度,并且是完全固定的.
+- `isSensor`:指向物理体是否是传感器的旗帜,传感器触发碰撞事件,但不会与碰撞物理体发生物理反应.
+- `isSleeping`:表示物理体是否被视为睡眠的旗帜,睡眠的物理体行为类似于静态的物理体,但只是暂时的,可以震动.
+- `sleepThreshold`:在设定为睡眠前,这个物理体必须拥有_近零速度_的更新数量.
+- `density` : 物理体密度,即单位面积的质量。
+- `restitution`: 物理体的还原/弹跳/弹性。数值总是正值,在`(0, 1)`的范围之内。
   - `0` :碰撞可能完全没有弹性,并且不会发生波澜.
-  - `0.8` :身体可能以大约80%的动能反弹.
-- `friction` : 身体的滑动。 数值总是正值, 并且范围是 。 `(0, 1)`.
-  - `0` :身体可能无限期滑动.
-  - `1` : 施用武力后,尸体几乎会立即停机。
-- `frictionStatic`:身体的静电摩擦(在库伦布摩擦模型中).
-  - `0` :身体在接近静止状态时,只有动态状态时,就不会"棒" `friction` 用于使用。
-  - `10`:值越高,在接近固定状态时,它会用更多的力量来让身体开始运动.
-- `frictionAir` :身体的空气摩擦(空气阻力).
-  - `0` :身体在太空中移动时永远不会减速.
-  - 值越高,一个身体在穿越空间时速度越快.
+  - `0.8` :物理体可能以大约80%的动能反弹.
+- `friction` : 物理体的滑动。 数值总是正值, 并且范围是 。 `(0, 1)`.
+  - `0` :物理体可能无限期滑动.
+  - `1` : 施用武力后,物理体几乎会立即停机。
+- `frictionStatic`:物理体的静电摩擦(在库伦布摩擦模型中).
+  - `0` :物理体在接近静止状态时,只有动态状态时,就不会"棒" `friction` 用于使用。
+  - `10`:值越高,在接近固定状态时,它会用更多的力量来让物理体开始运动.
+- `frictionAir` :物理体的空气摩擦(空气阻力).
+  - `0` :物理体在太空中移动时永远不会减速.
+  - 值越高,一个物理体在穿越空间时速度越快.
 - `force` : 适用于当前步骤的力。
-- `angle` :身体角,以弧度表示.
+- `angle` :物理体角,以弧度表示.
 - `torque`:当前步骤中应用的扭矩(转力).
 - `collisionFilter`:一个指定了这个机体碰撞过滤特性的`Object`.
   - `collisionFilter.group`
-  - `collisionFilter.category`: 指定此天体所属碰撞类别的位字段 。
-  - `collisionFilter.mask`:一个指定了身体可能碰撞的碰撞类别的小遮罩.
-- `slop` : 容忍一个身体被允许"沉入"或旋转到其它身体的距离.
+  - `collisionFilter.category`: 指定此物理体所属碰撞类别的位字段 。
+  - `collisionFilter.mask`:一个指定了物理体可能碰撞的碰撞类别的小遮罩.
+- `slop` : 容忍一个物理体被允许"沉入"或旋转到其它物理体的距离.
   - 默认一般应足够,尽管非常大的体可能需要更大的值来进行稳定的堆叠.
 
 ###### 游戏对象碰撞 {#game-object-collision}
@@ -562,7 +562,7 @@ gameObject.setVelocityY(x);
 
 ###### 强制 {#force}
 
-- 将力量应用到身体上.
+- 将力量应用到物理体上.
 
   ```js
   gameObject.applyForce(force);
@@ -570,7 +570,7 @@ gameObject.setVelocityY(x);
 
   - `force` : `{x, y}`
 
-- 从特定位置对身体施加力量.
+- 从特定位置对物理体施加力量.
 
   ```js
   gameObject.applyForceFrom(position, force); // position, force: {x, y}
@@ -579,7 +579,7 @@ gameObject.setVelocityY(x);
   - `position` : `{x, y}`
   - `force` : `{x, y}`
 
-- 将推力应用到身体的前进位置.
+- 将推力应用到物理体的前进位置.
 
   ```js
   gameObject.thrust(speed);
@@ -587,7 +587,7 @@ gameObject.setVelocityY(x);
 
   - `speed` : 一个数字。
 
-- 将推力应用到身体的左侧位置.
+- 将推力应用到物理体的左侧位置.
 
   ```js
   gameObject.thrustLeft(speed);
@@ -595,7 +595,7 @@ gameObject.setVelocityY(x);
 
   - `speed` : 一个数字。
 
-- 将推力应用到身体的正确位置.
+- 将推力应用到物理体的正确位置.
 
   ```js
   gameObject.thrustRight(speed);
@@ -603,7 +603,7 @@ gameObject.setVelocityY(x);
 
   - `speed` : 一个数字。
 
-- 将推力应用到身体的后方位置.
+- 将推力应用到物理体的后方位置.
 
   ```js
   gameObject.thrustBack(speed);
@@ -611,7 +611,7 @@ gameObject.setVelocityY(x);
 
   - `speed` : 一个数字。
 
-- 将推力应用到身体的后方位置.
+- 将推力应用到物理体的后方位置.
 
   ```js
   gameObject.thrustBack(speed);
@@ -629,7 +629,7 @@ gameObject.setVelocityY(x);
 
   - `ignore` : 设定为真实,以忽略世界引力的影响
 
-###### 闪光灯 {#friction}
+###### 摩擦力 {#friction}
 
 ```js
 gameObject.setFriction(value, air, fstatic);

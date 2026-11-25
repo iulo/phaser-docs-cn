@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GradientConfig {#static-gradientconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.Gradient.GradientQuadConfig](/api/typedef/types-gameobjects-gradient#gradientquadconfig) | 是 |  | 此渐变将使用的配置对象 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Gradient
+**所属**: Phaser.Types.GameObjects.Gradient
 > 源码：[src/gameobjects/gradient/typedefs/GradientConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/gradient/typedefs/GradientConfig.js#L1)  
 引入版本：4.0.0
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> GradientQuadConfig {#static-gradientquadconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | bands | [Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) \| [Phaser.Display.ColorBand](/api/class/display-colorband) | Array.\<([Phaser.Types.Display.ColorBandConfig](/api/typedef/types-display#colorbandconfig) | [Phaser.Display.ColorBand](/api/class/display-colorband))> | 是 | "{colorStart: 0x000000, colorEnd: 0xffffff}" | 用于渐变的色彩框配置或实例。这些配置用于创建 `ColorRamp` 。 |
 | offset | number | 是 | 0 | 梯度相抵。此梯度沿形状推进或撤回梯度 。 |
@@ -38,7 +38,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.Gradient
+**所属**: Phaser.Types.GameObjects.Gradient
 > 源码：[src/gameobjects/gradient/typedefs/GradientQuadConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/gradient/typedefs/GradientQuadConfig.js#L1)  
 引入版本：4.0.0
 

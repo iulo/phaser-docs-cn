@@ -7,7 +7,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 缩放管理器已成功进入全屏模式 。
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/ENTER_FULLSCREEN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/ENTER_FULLSCREEN_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -16,7 +16,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** 缩放管理器尝试进入全屏模式, 但失败 。
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/FULLSCREEN_FAILED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/FULLSCREEN_FAILED_EVENT.js#L7)  
 引入版本：3.17.0
 
@@ -25,7 +25,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 
 **说明:** Scale管理器曾尝试输入全屏模式,但浏览器不支持.
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/FULLSCREEN_UNSUPPORTED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/FULLSCREEN_UNSUPPORTED_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -35,7 +35,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 **说明:** 缩放管理器处于全屏模式,但后来离开了,要么直接通过游戏代码,
 或者通过用户手势,例如按下ESC键.
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/LEAVE_FULLSCREEN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/LEAVE_FULLSCREEN_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -50,7 +50,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | orientation | string | 否 | 新方向值, 要么是`Phaser.Scale.Orientation.LANDSCAPE`, 要么是`Phaser.Scale.Orientation.PORTRAIT`. |
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/ORIENTATION_CHANGE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/ORIENTATION_CHANGE_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -72,7 +72,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | previousWidth | number | 否 | 如果 `gameSize` 已更改,则此值包含其先前的宽度,否则包含当前宽度. |
 | previousHeight | number | 否 | 如果 `gameSize` 已改变,则此值包含其先前的高度,否则包含当前高度. |
 
-**Member of:** [Phaser.Scale.Events](/api/namespace/scale-events)
+**所属:** [Phaser.Scale.Events](/api/namespace/scale-events)
 > 源码：[src/scale/events/RESIZE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scale/events/RESIZE_EVENT.js#L7)  
 引入版本：3.16.1
 

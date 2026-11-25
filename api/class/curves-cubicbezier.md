@@ -154,18 +154,18 @@ Phaser中通常使用立方体贝塞尔曲线来定义运动路径,沿弧线动�
 
 将这个曲线绘制到指定的图形对象。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 图形对象此曲线应绘制到。 |
 | pointsTotal | number | 是 | 32 | 构成这个曲线的中间点数,如果点数多一点,则会使曲线更平滑。 |
 
 
-**Overrides:** Phaser.Curves.Curve画画
+**重写:** Phaser.Curves.Curve画画
 
 
 **返回值:** [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) - 图形对象此曲线被绘制。 可用于方法链。 Name
@@ -210,7 +210,7 @@ Phaser中通常使用立方体贝塞尔曲线来定义运动路径,沿弧线动�
 
 使用立方贝塞尔插值计算该曲线上给定的正态位置(`t`)的点坐标。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -263,7 +263,7 @@ Phaser中通常使用立方体贝塞尔曲线来定义运动路径,沿弧线动�
 
 获得曲线的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -273,7 +273,7 @@ Phaser中通常使用立方体贝塞尔曲线来定义运动路径,沿弧线动�
 | out | [Phaser.Math.Vector2](/api/class/math-vector2) | 是 | 用于存储结果的矢量2 对象。 如果不给定, 将会创建 。 |
 
 
-**Overrides:** Phaser.Curves.Curve#getStartPoint
+**重写:** Phaser.Curves.Curve#getStartPoint
 
 
 **返回值:** [Phaser.Math.Vector2](/api/class/math-vector2) - 曲线上点的坐标。 如果给定了 `out` 对象, 将会返回 。

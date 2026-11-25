@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new ParticleBounds(x, y, width, height, [collideLeft], [collideRight], [collideTop], [collideBottom])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 界界的x位置(左上),在世界空间. |
 | y | number | 否 |  | 界界的y位置(左上),在世界空间. |
@@ -171,7 +171,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | particle | [Phaser.GameObjects.Particles.Particle](/api/class/gameobjects-particles-particle) | 否 | 粒子要更新。 |
 
 
-**Overrides:** Phaser.GameObjects.Particles.ParticleProcessor#更新日期
+**重写:** Phaser.GameObjects.Particles.ParticleProcessor#更新日期
 
 
 > 源码：[src/gameobjects/particles/ParticleBounds.js#L109](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/particles/ParticleBounds.js#L109)  

@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/tweens-tweenframedata)
 
-TweenFrameData是一个包含一个单一目标,在Tween结尾会改变纹理框架的类.
+TweenFrameData是一个包含一个单一目标,在Tween结尾会改变纹理帧的类.
 
 TweenFrameData 实例通常由 TweenBuilder 自动创建,当它检测到存在一个“ 纹理” 属性时, 键被调解 。
 
@@ -19,8 +19,8 @@ TweenFrameData 实例通常由 TweenBuilder 自动创建,当它检测到存在�
 | ---- | ---- | -------- | ----------- |
 | tween | [Phaser.Tweens.Tween](/api/class/tweens-tween) | 否 | 这个TweenData实例属于这个. |
 | targetIndex | number | 否 | Tween目标阵列内的目标指数. |
-| texture | string | 否 | 纹理密钥将设置于此 tween 的尾端 。 |
-| frame | string \| number | 否 | 纹理框架将设置在这个  的尾端. |
+| texture | string | 否 | 纹理键将设置于此 tween 的尾端 。 |
+| frame | string \| number | 否 | 纹理帧将设置在这个  的尾端. |
 | delay | function | 否 | 函数返回 tween 开始前以毫秒计的时间 。 |
 | duration | number | 否 | 千分之长的曲折时间. |
 | hold | number | 否 | 以毫秒计的时间, 双胞胎在重复或返回其起始纹理和框架之前会暂停, 如果 Yyo 被设定为真实的话 。 |
@@ -113,7 +113,7 @@ TweenFrameData 实例通常由 TweenBuilder 自动创建,当它检测到存在�
 
 **说明:**
 
-目标的财产要被扭曲。
+目标的属性要被扭曲。
 
 总是为 TweenFrameData 对象的“ 纹理 ” 。
 
@@ -166,7 +166,7 @@ TweenFrameData 实例通常由 TweenBuilder 自动创建,当它检测到存在�
 Tween 到达终点和任何可能设定的 `hold` 值后, 是否会恢复到它的起始纹理和框架 ?
 
 
-**Overrides:** Phaser.Tweens.BaseTweenData# 哟#
+**重写:** Phaser.Tweens.BaseTweenData# 哟#
 
 
 > 源码：[src/tweens/tween/TweenFrameData.js#L102](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenFrameData.js#L102)  
@@ -220,7 +220,7 @@ Tween 到达终点和任何可能设定的 `hold` 值后, 是否会恢复到它�
 立即摧毁这个TweenData, 取消它的所有引用。
 
 
-**Overrides:** Phaser.Tweens.BaseTweenData#销毁
+**重写:** Phaser.Tweens.BaseTweenData#销毁
 
 
 > 源码：[src/tweens/tween/TweenFrameData.js#L298](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenFrameData.js#L298)  
@@ -263,12 +263,12 @@ Tween 到达终点和任何可能设定的 `hold` 值后, 是否会恢复到它�
 由父 Tween 自动调用。 不应直接调用 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | isSeeking | boolean | 是 | false | 是否将 Tween 数据作为 Tween 请求的一部分重置 ? |
 
 
-**Overrides:** Phaser.Tweens.BaseTweenData# 重置( 重置)
+**重写:** Phaser.Tweens.BaseTweenData# 重置( 重置)
 
 
 > 源码：[src/tweens/tween/TweenFrameData.js#L113](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenFrameData.js#L113)  
@@ -295,7 +295,7 @@ Tween 到达终点和任何可能设定的 `hold` 值后, 是否会恢复到它�
 **返回值:** boolean - 如果这个TweenData还在播放,则`true`;如果它已经完全完成,则`false`。
 
 
-**Fires:** [Phaser.Tweens.Events#event:TWEEN_UPDATE](/api/event/tweens-events#tween_update), [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
+**触发事件:** [Phaser.Tweens.Events#event:TWEEN_UPDATE](/api/event/tweens-events#tween_update), [Phaser.Tweens.Events#event:TWEEN_REPEAT](/api/event/tweens-events#tween_repeat)
 
 
 > 源码：[src/tweens/tween/TweenFrameData.js#L141](https://github.com/phaserjs/phaser/blob/v4.1.0/src/tweens/tween/TweenFrameData.js#L141)  

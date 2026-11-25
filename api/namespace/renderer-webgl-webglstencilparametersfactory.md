@@ -19,7 +19,7 @@ static
 创建新 `WebGLStencilParameters` 对象,将全速缓冲配置封装为 a WebGL 使参数通过。返回对象将参数分组到渲染器预期的三个子对象中: `func` (传至 `gl.stencilFunc`), `op` (传至 `gl.stencilOp`),以及 `clear` (清除时所写的值) 所有参数都是可选的,并返回到合理的不开放默认值,所以该定时缓冲符的行为就像被禁用一样。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 创建 WebGLStencilParameters 的 WebGLRenderer 程序 。 |
 | enabled | GLboolean | 是 | false | 是否启用了天线测试 。 |

@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | item | * | 否 | 添加到进程队列的项目 。 |
 
-**Member of:** [Phaser.Structs.Events](/api/namespace/structs-events)
+**所属:** [Phaser.Structs.Events](/api/namespace/structs-events)
 > 源码：[src/structs/events/PROCESS_QUEUE_ADD_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/structs/events/PROCESS_QUEUE_ADD_EVENT.js#L7)  
 引入版本：3.20.0
 
@@ -36,7 +36,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | ---- | ---- | -------- | ----------- |
 | item | * | 否 | 进程队列中删除的项目 。 |
 
-**Member of:** [Phaser.Structs.Events](/api/namespace/structs-events)
+**所属:** [Phaser.Structs.Events](/api/namespace/structs-events)
 > 源码：[src/structs/events/PROCESS_QUEUE_REMOVE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/structs/events/PROCESS_QUEUE_REMOVE_EVENT.js#L7)  
 引入版本：3.20.0
 

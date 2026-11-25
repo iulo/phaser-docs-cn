@@ -6,7 +6,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseCell3DConfig {#static-noisecell3dconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | config | string \| [Phaser.Types.GameObjects.NoiseCell3D.NoiseCell3DQuadConfig](/api/typedef/types-gameobjects-noisecell3d#noisecell3dquadconfig) | 是 |  | 此噪声Cell3D 将使用的配置对象 。 |
 | width | number | 是 | 128 | 游戏对象的宽度 。 |
@@ -14,7 +14,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.NoiseCell3D
+**所属**: Phaser.Types.GameObjects.NoiseCell3D
 > 源码：[src/gameobjects/noise/noisecell3d/typedefs/NoiseCell3DConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/noisecell3d/typedefs/NoiseCell3DConfig.js#L1)  
 引入版本：4.0.0
 
@@ -24,7 +24,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 ### \<static> NoiseCell3DQuadConfig {#static-noisecell3dquadconfig}
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | noiseCells | Array.\<number> | 是 | "[ 32, 32, 32 ]" | 每个维度的单元格数。 |
 | noiseWrap | Array.\<number> | 是 |  | 在模式重复之前, 每个维度中有多少个单元格。 `noiseCells`必须是整数才能正常工作。 默认情况下, 这和 `noiseCells` 相同 。 |
@@ -41,7 +41,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.NoiseCell3D
+**所属**: Phaser.Types.GameObjects.NoiseCell3D
 > 源码：[src/gameobjects/noise/noisecell3d/typedefs/NoiseCell3DQuadConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/noise/noisecell3d/typedefs/NoiseCell3DQuadConfig.js#L1)  
 引入版本：4.0.0
 

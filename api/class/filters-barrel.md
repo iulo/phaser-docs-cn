@@ -4,9 +4,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 弹匣过滤器控制器。
 
-此过滤器控制器管理相机的枪管扭曲效果。 枪管效果允许您对视图应用“ pinch” 或“ 扩展” 扭曲效果。 效果的大小可以实时修改 。
+此过滤器控制器管理摄像机的枪管扭曲效果。 枪管效果允许您对视图应用“ pinch” 或“ 扩展” 扭曲效果。 效果的大小可以实时修改 。
 
-透过过滤列表组件, 将Barrel效果添加到相机中:
+透过过滤列表组件, 将Barrel效果添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -20,9 +20,9 @@ camera.filters.external.addBarrel();
 `new Barrel(camera, [amount])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机. |
 | amount | number | 是 | 1 | 用于枪管效果的扭曲量。 1 值不是扭曲值。 通常保持在+-1 内 。 |
 
 ---

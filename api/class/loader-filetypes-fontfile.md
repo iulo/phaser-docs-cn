@@ -15,10 +15,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new FontFile(loader, key, [url], [format], [descriptors], [xhrSettings])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 |  | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig) | 否 |  | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.FontFileConfig](/api/typedef/types-loader-filetypes#fontfileconfig) | 否 |  | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 |  | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 它将被设定为 `<key>.ttf`, 即如果 `key` 是" 外国人", 那么 URL 将是" alien. ttf" 。 |
 | format | string | 是 | "'truetype'" | 字体类型。 应该是字符串, 如“ truetype ” 或“ opentype ” 。 |
 | descriptors | object | 是 |  | 含有字体面部字体描述符的可选对象。 详见 https://developer.mozilla.org/en-US/docs/Web/API/FontFace/FontFace#descriptors 。 |
@@ -73,10 +73,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-由 Loader. nextFile自动调用。 这种方法解决了字体的源地址, 并使用浏览器的 FontFace API 构造并同步加载字体。 成功后, 字体会添加到文档的字体收藏中, CSS 类 `fonts-loaded` 将应用到文档正文中。 如果失败, 警告会登录到控制台上。 在这两种情况下, `onProcessComplete`都会被调用来推进装入器 。
+由 Loader. nextFile自动调用。 这种方法解决了字体的源地址, 并使用浏览器的 FontFace API 构造并同步加载字体。 成功后, 字体会添加到文档的字体收藏中, CSS 类 `fonts-loaded` 将应用到文档正文中。 如果失败, 警告会登录到控制台上。 在这两种情况下, `onProcessComplete`都会被调用来推进资源加载器 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/FontFile.js#L87](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/FontFile.js#L87)  

@@ -127,7 +127,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 
 **说明:**
 
-创建新组成员时使用的默认纹理框架 。
+创建新组成员时使用的默认纹理帧 。
 
 
 > 源码：[src/gameobjects/group/Group.js#L184](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/Group.js#L184)  
@@ -143,7 +143,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 
 **说明:**
 
-创建新组成员时要使用的默认纹理密钥 。
+创建新组成员时要使用的默认纹理键 。
 
 用于[Phaser.GameObjects.Group#create](/api/class/gameobjects-group#create),但用于[Phaser.GameObjects.Group#createMultiple](/api/class/gameobjects-group#createMultiple).
 
@@ -303,7 +303,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 电话 [Phaser.GameObjects.Group#createCallback](/api/class/gameobjects-group#createCallback).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 要添加的游戏对象 。 |
 | addToScene | boolean | 是 | false | 还将游戏对象添加到场景中. |
@@ -346,7 +346,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 电话 [Phaser.GameObjects.Group#createCallback](/api/class/gameobjects-group#createCallback).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 要添加的游戏对象 。 |
 | addToScene | boolean | 是 | false | 同时在现场添加游戏对象. |
@@ -371,7 +371,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将给定的值添加到每个组成员的角度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 以度数表示的加角值。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
@@ -398,7 +398,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 不叫[Phaser.GameObjects.Group#removeCallback](/api/class/gameobjects-group#removeCallback)。 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | removeFromScene | boolean | 是 | false | 可选地将每个组成员从场景中移除. |
 | destroyChild | boolean | 是 | false | 逐一向被除名的集团成员发出毁灭信号 |
@@ -447,7 +447,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 计算活动(或非活动)组成员的数目。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 是 | true | 计数活动( true)或不活动(假)组成员. |
 
@@ -473,12 +473,12 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 电话 [Phaser.GameObjects.Group#createCallback](/api/class/gameobjects-group#createCallback).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 新的游戏对象在世界的横向位置. |
 | y | number | 是 | 0 | 新的游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 新游戏对象的纹理密钥 。 |
-| frame | string \| number | 是 | "defaultFrame" | 新游戏对象的纹理框架. |
+| key | string | 是 | "defaultKey" | 新游戏对象的纹理键 。 |
+| frame | string \| number | 是 | "defaultFrame" | 新游戏对象的纹理帧. |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见] 新游戏对象状态. |
 | active | boolean | 是 | true | QQlink Phaser.GameObjects.GameObject#Active}新游戏对象状态. |
 
@@ -560,13 +560,13 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 此组的子也会通过调用此方法被销毁_ not_, 除非您指定 `destroyChildren` 参数 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | destroyChildren | boolean | 是 | false | 也来点小菜一碟 Phaser.GameObjects.GameObject每一个集团成员。 |
 | removeFromScene | boolean | 是 | false | 可选地将每个组成员从场景中移除. |
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/gameobjects/group/Group.js#L1725](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/group/Group.js#L1725)  
@@ -587,12 +587,12 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果找不到不活跃的成员, 且组不满, 那么它将会使用 `x`, `y`, `key`, `frame`,和 `visible`。新的游戏对象将设定其活动状态为 `true`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -636,14 +636,14 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果没有找到匹配的成员, `createIfNull` 真实, 且组不全, 然后它将使用 `x`, `y`, `key`, `frame`,和 `visible`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | boolean | 是 | false | QQlink Phaser.GameObjects.GameObject#Action} 值匹配 。 |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -668,13 +668,13 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果找不到活跃成员, `createIfNull` 谓 `true` 组员不满 然后将用 `x`, `y`, `key`, `frame`,和 `visible`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -699,13 +699,13 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果没有非活动成员, `createIfNull` 谓 `true` 组员不满 然后将用 `x`, `y`, `key`, `frame`,和 `visible`。新的游戏对象将设置一个活动状态,以 `true`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -730,15 +730,15 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果没有找到匹配的成员, `createIfNull` 真实, 且组不全, 然后它将使用 `x`, `y`, `key`, `frame`,和 `visible`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | nth | number | 否 |  | Nth匹配组成员要搜索 。 |
 | state | boolean | 是 | false | QQlink Phaser.GameObjects.GameObject#Action} 值匹配 。 |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -763,14 +763,14 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果没有找到匹配的成员, `createIfNull` 真实, 且组不全, 然后它将使用 `x`, `y`, `key`, `frame`,和 `visible`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | state | boolean | 是 | false | QQlink Phaser.GameObjects.GameObject#Action} 值匹配 。 |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -795,15 +795,15 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 如果没有找到匹配的成员, `createIfNull` 真实, 且组不全, 然后它将使用 `x`, `y`, `key`, `frame`,和 `visible`除非设立新成员, `key`, `frame`,和 `visible` 被忽略了,我们没有被忽略。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | nth | number | 否 |  | Nth匹配组成员要搜索 。 |
 | state | boolean | 是 | false | QQlink Phaser.GameObjects.GameObject#Action} 值匹配 。 |
 | createIfNull | boolean | 是 | false | 如果找不到匹配的成员, 则使用以下参数创建新的 Game Object 。 |
 | x | number | 是 |  | 游戏对象在世界的横向位置. |
 | y | number | 是 |  | 游戏对象在世界的垂直位置. |
-| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理密钥( 如果创建了) 。 |
-| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理框架(如果创建了). |
+| key | string | 是 | "defaultKey" | 指定给新游戏对象的纹理键( 如果创建了) 。 |
+| frame | string \| number | 是 | "defaultFrame" | 指定给新游戏对象的纹理帧(如果创建了). |
 | visible | boolean | 是 | true | QQlink Phaser.GameObjects.Components.Visible#可见的] 新游戏对象状态(如果创建了). |
 
 
@@ -844,7 +844,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 
 返回这个小组中符合基于`property`和`value`参数的指定标准的所有儿童。
 
-例如:`getMatching('visible', true)`只将拥有`visible`财产的孩子们送回.
+例如:`getMatching('visible', true)`只将拥有`visible`属性的孩子们送回.
 
 可选的, 您可以指定一个起始和结束索引。 例如, 如果 Group 具有100 个元素, 您将 `startIndex` 设置为 0, `endIndex` 设置为 50, 它只会从前50 个返回匹配 。
 
@@ -916,9 +916,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将给定的值添加到每个组成员的x。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 将增加的`x`财产金额。 |
+| value | number | 否 |  | 将增加的`x`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -941,9 +941,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将给定的值添加到每个组成员的x,y。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| x | number | 否 |  | 将增加的`x`财产金额。 |
+| x | number | 否 |  | 将增加的`x`属性金额。 |
 | y | number | 是 | "x" | `y` 属性的加法。如果 `undefined` 或 `null` ,则使用 `x` 值 。 |
 | stepX | number | 是 | 0 | 这一点被加到`x`的金额中,乘以迭代计数器. |
 | stepY | number | 是 | 0 | 这一点被加到`y`的金额中,乘以迭代计数器. |
@@ -968,9 +968,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将给定的值添加到每个组成员的y。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 将增加的`y`财产金额。 |
+| value | number | 否 |  | 将增加的`y`属性金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1054,7 +1054,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 [Plays](/api/class/animations-animationstate#play)是本组所有成员的动画.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 动画要播放的基于字符串的键. |
 | startFrame | string | 是 | 0 | 选择从此帧索引开始播放动画. |
@@ -1101,10 +1101,10 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将给定值添加到每个组成员的`key`中定义的属性。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 需要更新的属性 。 |
-| value | number | 否 |  | 增财产之数. |
+| value | number | 否 |  | 增属性之数. |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1129,10 +1129,10 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 将每个组成员的 `key` 定义属性设定为给定值。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | key | string | 否 |  | 需要更新的属性 。 |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
 | direction | number | 是 | 1 | 向上通过阵列的方向 。 1 从头到尾, - 1 从头到尾。 |
@@ -1159,7 +1159,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 电话 [Phaser.GameObjects.Group#removeCallback](/api/class/gameobjects-group#removeCallback).
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | child | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 要删除的游戏对象 。 |
 | removeFromScene | boolean | 是 | false | 可选地将组成员从所属场馆中移除. |
@@ -1201,7 +1201,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的旋转。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 将旋转设为弧度的金额。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
@@ -1277,9 +1277,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的 scaleX 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1302,7 +1302,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的scaleX,scaleY.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scaleX | number | 否 |  | 设定 `scaleX` 属性的金额 。 |
 | scaleY | number | 是 |  | 设置 `scaleY` 属性的金额。 如果 `undefined` 或 `null` , 它使用 `scaleX` 值 。 |
@@ -1329,9 +1329,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的 scaleY 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1378,7 +1378,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设置每个组成员的α。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 设定α到的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
@@ -1427,9 +1427,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的深度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1474,7 +1474,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 
 **说明:**
 
-设定 `name` 。该组的财产。 `name` 财产不为 Phaser 并呈上供你们使用。
+设定 `name` 。该组的属性。 `name` 属性不为 Phaser 并呈上供你们使用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1501,7 +1501,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的originX,originY.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | originX | number | 否 |  | 设定 `originX` 属性的金额 。 |
 | originY | number | 是 |  | 设置 `originY` 属性的金额。 如果 `undefined` 或 `null` , 它使用 `originX` 值 。 |
@@ -1555,7 +1555,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的可见度。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | boolean | 否 |  | 设置属性的值 。 |
 | index | number | 是 | 0 | 选择的偏移, 开始从项目数组中查找 。 |
@@ -1581,9 +1581,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设置每个组成员的x。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1606,7 +1606,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设置每个组成员的 x, y 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | 设定 `x` 属性的金额 。 |
 | y | number | 是 | "x" | 设置 `y` 属性的金额。 如果 `undefined` 或 `null` , 它使用 `x` 值 。 |
@@ -1633,9 +1633,9 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 设定每个组成员的y。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | number | 否 |  | 设定财产的金额 。 |
+| value | number | 否 |  | 设定属性的金额 。 |
 | step | number | 是 | 0 | 这一点被加到`value`的金额中,乘以迭代计数器. |
 
 
@@ -1660,7 +1660,7 @@ A组是您创建,操纵,或回收类似游戏对象的一种方法.
 第一个组成员位置设定为x/y.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 否 |  | x 坐标将第一个项目放在数组中 。 |
 | y | number | 否 |  | y 坐标将第一个项目放在数组中。 |

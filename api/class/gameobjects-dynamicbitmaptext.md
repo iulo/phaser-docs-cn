@@ -23,12 +23,12 @@ BMFont(Windows,免费):[http://www.angelcode.com/products/bmfont/](http://www.an
 `new DynamicBitmapText(scene, x, y, font, [text], [size], [align])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | scene | [Phaser.Scene](/api/class/scene) | 否 |  | 此游戏对象所属的景点。 它只能在任何特定时间属于一个景点 。 |
 | x | number | 否 |  | 世界空间中此游戏对象的x坐标 。 |
 | y | number | 否 |  | 游戏对象在世界空间中的y坐标 。 |
-| font | string | 否 |  | 从位图字体缓存中要使用的字体的密钥 。 |
+| font | string | 否 |  | 从位图字体缓存中要使用的字体的键 。 |
 | text | string \| Array.\<string> | 是 |  | 字符串,或字符串的数组,将设置为此位图文本的内容 。 |
 | size | number | 是 |  | 此位图文本的字体大小 。 |
 | align | number | 是 | 0 | 多行比图Text对象中的文本对齐。 |

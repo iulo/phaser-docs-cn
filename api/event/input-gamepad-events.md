@@ -19,7 +19,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | button | [Phaser.Input.Gamepad.Button](/api/class/input-gamepad-button) | 否 | 被按下按钮的提示 。 |
 | value | number | 否 | 按钮按下时的值。 0 至 1 之间, 有些 Gamepad 具有压力敏感按钮 。 |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/BUTTON_DOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/BUTTON_DOWN_EVENT.js#L7)  
 引入版本：3.10.0
 
@@ -40,7 +40,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | button | [Phaser.Input.Gamepad.Button](/api/class/input-gamepad-button) | 否 | 引用了已经发布的按钮。 |
 | value | number | 否 | 发布时按钮的值。 0 到 1 之间, 有些 Gamepad 具有压力敏感按钮 。 |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/BUTTON_UP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/BUTTON_UP_EVENT.js#L7)  
 引入版本：3.10.0
 
@@ -63,7 +63,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pad | [Phaser.Input.Gamepad](/api/namespace/input-gamepad) | 否 | 引用了连接的 Gamepad 。 |
 | event | Event | 否 | 引发了连接的本地 DOM事件. |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/CONNECTED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/CONNECTED_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -81,7 +81,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | pad | [Phaser.Input.Gamepad](/api/namespace/input-gamepad) | 否 | 提到Gamepad时断开的 |
 | event | Event | 否 | 引发断开的本地 DOM 事件 。 |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/DISCONNECTED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/DISCONNECTED_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -105,7 +105,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | value | number | 否 | 按钮按下时的值。 0 至 1 之间, 有些 Gamepad 具有压力敏感按钮 。 |
 | button | [Phaser.Input.Gamepad.Button](/api/class/input-gamepad-button) | 否 | 被按下按钮的提示 。 |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/GAMEPAD_BUTTON_DOWN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/GAMEPAD_BUTTON_DOWN_EVENT.js#L7)  
 引入版本：3.10.0
 
@@ -129,7 +129,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/eve
 | value | number | 否 | 发布时按钮的值。 0 到 1 之间, 有些 Gamepad 具有压力敏感按钮 。 |
 | button | [Phaser.Input.Gamepad.Button](/api/class/input-gamepad-button) | 否 | 引用了已经发布的按钮。 |
 
-**Member of:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
+**所属:** [Phaser.Input.Gamepad.Events](/api/namespace/input-gamepad-events)
 > 源码：[src/input/gamepad/events/GAMEPAD_BUTTON_UP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/events/GAMEPAD_BUTTON_UP_EVENT.js#L7)  
 引入版本：3.10.0
 

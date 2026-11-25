@@ -21,7 +21,7 @@ music.play();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/COMPLETE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/COMPLETE_EVENT.js#L7)  
 引入版本：3.16.1
 
@@ -43,7 +43,7 @@ this.sound.once('decodedall', handler);
 this.sound.decodeAudio([ audioFiles ]);
 ```
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/DECODED_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DECODED_ALL_EVENT.js#L7)  
 引入版本：3.18.0
 
@@ -63,9 +63,9 @@ this.sound.decodeAudio(key, audioData);
 
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | string | 否 | 解码后添加到音频缓存中的音频文件的密钥. |
+| key | string | 否 | 解码后添加到音频缓存中的音频文件的键. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/DECODED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DECODED_EVENT.js#L7)  
 引入版本：3.18.0
 
@@ -89,7 +89,7 @@ music.destroy();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/DESTROY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DESTROY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -112,9 +112,9 @@ music.setDetune(200);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
-| detune | number | 否 | 声音的新调值 。 |
+| detune | number | 否 | 声音的新补间 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/DETUNE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/DETUNE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -132,9 +132,9 @@ music.setDetune(200);
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
-| detune | number | 否 | 更新的调值 。 |
+| detune | number | 否 | 更新的补间 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/GLOBAL_DETUNE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/GLOBAL_DETUNE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -153,7 +153,7 @@ music.setDetune(200);
 | soundManager | [Phaser.Sound.WebAudioSoundManager](/api/class/sound-webaudiosoundmanager) \| [Phaser.Sound.HTML5AudioSoundManager](/api/class/sound-html5audiosoundmanager) | 否 | 引用事件发售的音效管理器 。 |
 | mute | boolean | 否 | 哑值。 `true` 如果声音管理器现在已哑音, 否则 `false` 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/GLOBAL_MUTE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/GLOBAL_MUTE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -173,7 +173,7 @@ music.setDetune(200);
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 | rate | number | 否 | 更新的利率值 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/GLOBAL_RATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/GLOBAL_RATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -192,7 +192,7 @@ music.setDetune(200);
 | soundManager | [Phaser.Sound.WebAudioSoundManager](/api/class/sound-webaudiosoundmanager) \| [Phaser.Sound.HTML5AudioSoundManager](/api/class/sound-html5audiosoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 | volume | number | 否 | 音响管理器全球新卷. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/GLOBAL_VOLUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/GLOBAL_VOLUME_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -218,7 +218,7 @@ music.play();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/LOOPED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/LOOPED_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -244,7 +244,7 @@ music.setLoop(true);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | loop | boolean | 否 | 新的循环值。 `true` 如果声音会循环, 否则 `false`. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/LOOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/LOOP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -269,7 +269,7 @@ music.setMute(true);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | mute | boolean | 否 | 哑值。 `true` 如果声音现在被哑音, 否则`false`. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/MUTE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/MUTE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -294,7 +294,7 @@ sound.setPan(0.5);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | pan | number | 否 | 声闻新锅. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/PAN_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/PAN_EVENT.js#L7)  
 引入版本：3.50.0
 
@@ -313,7 +313,7 @@ sound.setPan(0.5);
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/PAUSE_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/PAUSE_ALL_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -337,7 +337,7 @@ music.pause();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/PAUSE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/PAUSE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -360,7 +360,7 @@ music.play();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/PLAY_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/PLAY_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -385,7 +385,7 @@ music.setRate(0.5);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | rate | number | 否 | 声闻新率. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/RATE_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/RATE_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -404,7 +404,7 @@ music.setRate(0.5);
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/RESUME_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/RESUME_ALL_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -429,7 +429,7 @@ music.resume();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/RESUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/RESUME_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -454,7 +454,7 @@ music.setSeek(5000);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | seek | number | 否 | 声音的新求值 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/SEEK_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/SEEK_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -473,7 +473,7 @@ music.setSeek(5000);
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/STOP_ALL_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/STOP_ALL_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -497,7 +497,7 @@ music.stop();
 | ---- | ---- | -------- | ----------- |
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/STOP_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/STOP_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -516,7 +516,7 @@ Web Audio 这是在页面上的第一个用户手势.
 | ---- | ---- | -------- | ----------- |
 | soundManager | [Phaser.Sound.BaseSoundManager](/api/class/sound-basesoundmanager) | 否 | 引用事件发声的音效管理器 。 |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/UNLOCKED_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/UNLOCKED_EVENT.js#L7)  
 引入版本：3.0.0
 
@@ -541,7 +541,7 @@ music.setVolume(0.5);
 | sound | [Phaser.Sound.WebAudioSound](/api/class/sound-webaudiosound) \| [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) | 否 | 提到事件发声的音响。 |
 | volume | number | 否 | 音声新卷. |
 
-**Member of:** [Phaser.Sound.Events](/api/namespace/sound-events)
+**所属:** [Phaser.Sound.Events](/api/namespace/sound-events)
 > 源码：[src/sound/events/VOLUME_EVENT.js#L7](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/events/VOLUME_EVENT.js#L7)  
 引入版本：3.0.0
 

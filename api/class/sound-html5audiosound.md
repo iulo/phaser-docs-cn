@@ -6,7 +6,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 
 它在Web AudioSound API无法使用时被HTML5AudioSoundManager自动使用,一般在不支持它或它被禁用的环境下使用. HTML5AudioSound 与WebAudioSund类不同,HTML5AidioSound 依赖本地的`<audio>`元素进行回放,这意味着它的能力比较有限,比如没有支持音频的播音.
 
-每个声音都保留着通过`Loader.audio`加载的`HTMLAudioElement`标记集合。由于HTML5音频不能在同时播放的回放中共享一个单一元素,所以如果想要同时多播放一次相同声音,就必须加载该资产的多个实例.
+每个声音都保留着通过`Loader.audio`加载的`HTMLAudioElement`标记集合。由于HTML5音频不能在同时播放的回放中共享一个单一元素,所以如果想要同时多播放一次相同声音,就必须加载该资源的多个实例.
 
 您不直接创建此类的例。 相反, 请使用 Scene 中的 `this.sound.add(key)`, 它将返回基于正在使用的音频系统的正确声音类型 。
 
@@ -15,10 +15,10 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 `new HTML5AudioSound(manager, key, [config])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | manager | [Phaser.Sound.HTML5AudioSoundManager](/api/class/sound-html5audiosoundmanager) | 否 |  | 引用当前声音管理器实例 。 |
-| key | string | 否 |  | 声音的密钥 。 |
+| key | string | 否 |  | 声音的键 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "{}" | 包含默认声音设置的可选配置对象。 |
 
 ---
@@ -83,10 +83,10 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 
 **说明:**
 
-此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议设定为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 
-**Fires:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
+**触发事件:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L739](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L739)  
@@ -105,7 +105,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 显示声音或当前声音标记是否循环的旗帜 。
 
 
-**Fires:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
+**触发事件:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L871](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L871)  
@@ -124,7 +124,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 布尔表示声音是否变音。 获取或设置此声音的变音状态 。
 
 
-**Fires:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
+**触发事件:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L583](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L583)  
@@ -145,7 +145,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 对HTML5音频声音没有可调效果,但仍生成PAN Event.
 
 
-**Fires:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
+**触发事件:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L924](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L924)  
@@ -180,7 +180,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 播放此声音的速度 。 值为 1.0 的播放音频全速, 值为 0. 5 的播放音频半速, 值为 2.0 的播放速度的两倍 。
 
 
-**Fires:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
+**触发事件:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L682](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L682)  
@@ -199,7 +199,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 代表此声音的播放位置的属性, 以秒计。 设置到特定值后, 将当前播放的播放移动到该位置。 给出的值被夹在 0 到当前标记持续时间之间。 设置一个已停止的声音的搜索没有效果 。
 
 
-**Fires:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
+**触发事件:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L793](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L793)  
@@ -250,7 +250,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 获取或设置此声音的音量,值介于 0(静态)到 1(全音量)之间.
 
 
-**Fires:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
+**触发事件:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L633](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L633)  
@@ -307,7 +307,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 这种方法在内部用于更新此声音的回放速率.
 
 
-**Overrides:** Phaser.Sound.BaseSound#calculateRate
+**重写:** Phaser.Sound.BaseSound#calculateRate
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L567](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L567)  
@@ -326,7 +326,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 呼叫 Phaser.Sound.BaseSound#destroy 方法并清理所有 HTML5 音频相关资源.
 
 
-**Overrides:** Phaser.Sound.BaseSound#销毁
+**重写:** Phaser.Sound.BaseSound#销毁
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L520](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L520)  
@@ -377,13 +377,13 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 暂停声闻.
 
 
-**Overrides:** Phaser.Sound.BaseSound# 暂停
+**重写:** Phaser.Sound.BaseSound# 暂停
 
 
 **返回值:** boolean - 声音是否被成功暂停 。
 
 
-**Fires:** [Phaser.Sound.Events#event:PAUSE](/api/event/sound-events#pause)
+**触发事件:** [Phaser.Sound.Events#event:PAUSE](/api/event/sound-events#pause)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L148](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L148)  
@@ -444,19 +444,19 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 如果您想要同时播放相同的声音, 您需要创建另一个实例并播放该声音。 对于 HTML5 音频, 这还需要在加载音频文件时创建多个音频实例 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | markerName | string \| [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 | "''" | 如果您想要播放标记, 请在此提供标记名称。 或者, 此参数可以是 SoundConfig 对象 。 |
 | config | [Phaser.Types.Sound.SoundConfig](/api/typedef/types-sound#soundconfig) | 是 |  | 如果未提供标记名称, 可选的音效配置对象将应用到此标记或整个音效上。 它会被记住, 用于当前音节的未来播放 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSound游戏
+**重写:** Phaser.Sound.BaseSound游戏
 
 
 **返回值:** boolean - 声音是否开始成功播放 。
 
 
-**Fires:** [Phaser.Sound.Events#event:PLAY](/api/event/sound-events#play)
+**触发事件:** [Phaser.Sound.Events#event:PLAY](/api/event/sound-events#play)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L106](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L106)  
@@ -507,13 +507,13 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 复说声闻.
 
 
-**Overrides:** Phaser.Sound.BaseSound继续
+**重写:** Phaser.Sound.BaseSound继续
 
 
 **返回值:** boolean - 声音是否成功恢复 。
 
 
-**Fires:** [Phaser.Sound.Events#event:RESUME](/api/event/sound-events#resume)
+**触发事件:** [Phaser.Sound.Events#event:RESUME](/api/event/sound-events#resume)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L184](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L184)  
@@ -529,7 +529,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 
 **说明:**
 
-设置此声音的调值, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
+设置此声音的补间, 以 [cents](https://en.wikipedia.org/wiki/Cent_%28music%29) 给出。 值的范围为 - 1200 到 1200, 但我们建议将其设置为 [50](https://en.wikipedia.org/wiki/50_Cent) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -540,7 +540,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
+**触发事件:** [Phaser.Sound.Events#event:DETUNE](/api/event/sound-events#detune)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L774](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L774)  
@@ -567,7 +567,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
+**触发事件:** [Phaser.Sound.Events#event:LOOP](/api/event/sound-events#loop)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L906](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L906)  
@@ -594,7 +594,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
+**触发事件:** [Phaser.Sound.Events#event:MUTE](/api/event/sound-events#mute)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L615](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L615)  
@@ -623,7 +623,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
+**触发事件:** [Phaser.Sound.Events#event:PAN](/api/event/sound-events#pan)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L950](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L950)  
@@ -652,7 +652,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
+**触发事件:** [Phaser.Sound.Events#event:RATE](/api/event/sound-events#rate)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L718](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L718)  
@@ -679,7 +679,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
+**触发事件:** [Phaser.Sound.Events#event:SEEK](/api/event/sound-events#seek)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L853](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L853)  
@@ -706,7 +706,7 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 **返回值:** [Phaser.Sound.HTML5AudioSound](/api/class/sound-html5audiosound) - 这个声音的例子。
 
 
-**Fires:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
+**触发事件:** [Phaser.Sound.Events#event:VOLUME](/api/event/sound-events#volume)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L664](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L664)  
@@ -725,13 +725,13 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 别再弹了
 
 
-**Overrides:** Phaser.Sound.BaseSound停下来
+**重写:** Phaser.Sound.BaseSound停下来
 
 
 **返回值:** boolean - 声音是否成功停止 。
 
 
-**Fires:** [Phaser.Sound.Events#event:STOP](/api/event/sound-events#stop)
+**触发事件:** [Phaser.Sound.Events#event:STOP](/api/event/sound-events#stop)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L221](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L221)  
@@ -771,10 +771,10 @@ HTML5AudioSound是Phaser内部一个声音的HTML5音频API执行.
 | time | number | 否 | 请求动画框架或SetTimeout生成的当前时间戳 。 |
 
 
-**Overrides:** Phaser.Sound.BaseSound#更新日期
+**重写:** Phaser.Sound.BaseSound#更新日期
 
 
-**Fires:** [Phaser.Sound.Events#event:COMPLETE](/api/event/sound-events#complete), [Phaser.Sound.Events#event:LOOPED](/api/event/sound-events#looped)
+**触发事件:** [Phaser.Sound.Events#event:COMPLETE](/api/event/sound-events#complete), [Phaser.Sound.Events#event:LOOPED](/api/event/sound-events#looped)
 
 
 > 源码：[src/sound/html5/HTML5AudioSound.js#L452](https://github.com/phaserjs/phaser/blob/v4.1.0/src/sound/html5/HTML5AudioSound.js#L452)  

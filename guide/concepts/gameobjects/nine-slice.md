@@ -58,7 +58,7 @@ Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gam
 
 至 Phaser 3. 70 此游戏对象如果设定在 Tetriure Packer 7. 1.0 或以上, 并用 json 地图集导出, 现在可以自动填充其值。 如果是这样, 您可以使用这种方法, 而不指定 纹理 键和框架 , 并且它会从 地图集 中提取区域数据 。
 
-## 装入纹理 {#load-texture}
+## 加载纹理 {#load-texture}
 
 ```javascript
 this.load.image(key, url);
@@ -164,7 +164,7 @@ var mask = nineSlice.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 

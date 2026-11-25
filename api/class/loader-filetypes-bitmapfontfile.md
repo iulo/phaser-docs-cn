@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-bitmapfontfile)
 
-适合装入器装入的基于位图字体的单文件 。
+适合资源加载器装入的基于位图字体的单文件 。
 
 这些是使用Phaser.Loader.LoaderPlugin#bitmapFont方法创建的,一般不直接创建.
 
@@ -16,11 +16,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.BitmapFontFileConfig](/api/typedef/types-loader-filetypes#bitmapfontfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入字体图像文件的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | fontDataURL | string | 是 | 装入字体 xml 数据文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.xml`, 即如果 `key` 是"外国人", 那么 URL 将是 "alien. xml" 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 字体图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
-| fontDataXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 字体数据 xml 文件的设置对象。 用于替换装入器默认的 XHR 设置 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 字体图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
+| fontDataXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | XHR 字体数据 xml 文件的设置对象。 用于替换资源加载器默认的 XHR 设置 。 |
 
 ---
 

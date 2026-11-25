@@ -4,11 +4,11 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个键盘Combo会从键盘中监听一个特定的串键,当它收到键盘时,它会从键盘管理器中发出一个`keycombomatch`事件.
 
-需要听的密钥可以定义为:
+需要听的键可以定义为:
 
 字符串(即“ ATARI”) 组合整数( 键码) 或字符串, 或两个组合的组合 。 组合对象( 如“ 键对象”) 具有公共“ keyCode” 属性
 
-例如,要听 Konami 代码( 上, 上, 下, 下, 左, 右, 左, 右, b, a, 输入) , 您可以通过以下数组密钥代码 :
+例如,要听 Konami 代码( 上, 上, 下, 下, 左, 右, 左, 右, b, a, 输入) , 您可以通过以下数组键代码 :
 
 ```javascript
 this.input.keyboard.createCombo([ 38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13 ], { resetOnMatch: true });
@@ -32,8 +32,8 @@ this.input.keyboard.createCombo('PHASER');
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | keyboardPlugin | [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) | 否 | 键盘插件的引用 。 |
-| keys | string \| Array.\<number> | Array.\<object> | 否 | 构成这个组合的密钥 。 |
-| config | [Phaser.Types.Input.Keyboard.KeyComboConfig](/api/typedef/types-input-keyboard#keycomboconfig) | 是 | 一个密钥组合对象 。 |
+| keys | string \| Array.\<number> | Array.\<object> | 否 | 构成这个组合的键 。 |
+| config | [Phaser.Types.Input.Keyboard.KeyComboConfig](/api/typedef/types-input-keyboard#keycomboconfig) | 是 | 一个键组合对象 。 |
 
 ---
 
@@ -84,7 +84,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-用于控制此密钥是否正在积极处理密钥的旗帜 。
+用于控制此键是否正在积极处理键的旗帜 。
 
 
 > 源码：[src/input/keyboard/combo/KeyCombo.js#L74](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/combo/KeyCombo.js#L74)  
@@ -100,7 +100,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-`keyCodes`阵列中等待的密钥的当前索引 。
+`keyCodes`阵列中等待的键的当前索引 。
 
 
 > 源码：[src/input/keyboard/combo/KeyCombo.js#L123](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/combo/KeyCombo.js#L123)  
@@ -116,7 +116,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-包含此组合的密钥代码组 。
+包含此组合的键代码组 。
 
 
 > 源码：[src/input/keyboard/combo/KeyCombo.js#L84](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/combo/KeyCombo.js#L84)  
@@ -148,7 +148,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-这个密钥Combo是否匹配?
+这个键Combo是否匹配?
 
 
 > 源码：[src/input/keyboard/combo/KeyCombo.js#L152](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/combo/KeyCombo.js#L152)  
@@ -164,7 +164,7 @@ this.input.keyboard.createCombo('PHASER');
 
 **说明:**
 
-每个密钥按键之间的最大延迟 。 重置此组合 。 0 表示禁用 。
+每个键按键之间的最大延迟 。 重置此组合 。 0 表示禁用 。
 
 
 > 源码：[src/input/keyboard/combo/KeyCombo.js#L182](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/combo/KeyCombo.js#L182)  

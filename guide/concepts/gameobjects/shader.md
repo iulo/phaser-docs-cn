@@ -2,7 +2,7 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gameobjects/shader)
 
-此游戏对象允许您在显示列表中轻松添加带有自身遮蔽器的四重奏,并像您一样操纵它,包括缩放,旋转,定位和添加到容器中. 阴影可以被比特玛普或几何口罩遮盖,也可以作为相机或其他游戏对象的比特玛普面具,也可以被交互并用于输入事件.
+此游戏对象允许您在显示列表中轻松添加带有自身遮蔽器的四重奏,并像您一样操纵它,包括缩放,旋转,定位和添加到容器中. 阴影可以被比特玛普或几何遮罩遮盖,也可以作为摄像机或其他游戏对象的比特玛普遮罩,也可以被交互并用于输入事件.
 
 它通过引用一个 `Phaser.Display.BaseShader` 实例来工作, 其实例见于 Shader 缓存。 这些可以在运行时动态创建, 或者通过 GLSL 文件加载器加载 :
 
@@ -28,7 +28,7 @@ function create ()
 
 因为它会阻断管道,所以它会中断任何正在进行中的批量,所以你应该节制使用这些游戏对象。如果需要一个完整的批量自定义遮阳器,请查看使用自定义管道。但是,对于背景效果或特殊遮阳效果,它们非常有效。
 
-## 装入 GLSL {#load-glsl}
+## 加载 GLSL {#load-glsl}
 
 ```javascript
 this.load.glsl(key, url);
@@ -42,7 +42,7 @@ this.load.glsl(key, url);
 var shader = this.add.shader(key, x, y, width, height, textures);
 ```
 
-- `key`:从*shader缓存* 或一个 [BaseShader instance](#baseshader) 中用到的遮荫器的密钥.
+- `key`:从*shader缓存* 或一个 [BaseShader instance](#baseshader) 中用到的遮荫器的键.
 - `x`, `y` : 位置。
 - `width`, `height` : 大小( 缩写).
 - `textures` : 用于绑定到 iChannel0, iChannel1, iChannel2, iChannel3 制服,你穿的怎么样?
@@ -72,7 +72,7 @@ var shader = this.make.shader({
 });
 ```
 
-- `key`:从遮荫缓存中使用的遮荫器的密钥,或 BaseShader 实例.
+- `key`:从遮荫缓存中使用的遮荫器的键,或 BaseShader 实例.
   - 字符串
   - 随机选择一个元素的字符串阵列
 - `x`, `y`, `scale.x`, `scale.y` :
@@ -142,13 +142,13 @@ var shader = this.make.shader({
     var uniform = shader.getUniform(key);
     ```
 
-  - 纹理密钥
+  - 纹理键
 
     ```javascript
     var textureKey = uniform.textureKey;
     ```
 
-  - 获得`iChannel0`的纹理密钥,`iChannel1`,`iChannel2`,`iChannel3`采样机2D制服.
+  - 获得`iChannel0`的纹理键,`iChannel1`,`iChannel2`,`iChannel3`采样机2D制服.
 
     ```javascript
     var textureKey = shader.getUniform('iChannel0').textureKey;
@@ -163,7 +163,7 @@ var shader = this.make.shader({
     shader.setUniform(key, value);
     ```
 
-  - `key`: 修改制服的密钥, 深属性使用点, 即 `resolution.value.x` 。
+  - `key`: 修改制服的键, 深属性使用点, 即 `resolution.value.x` 。
 - 从纹理管理器中设置一个采样器2D制服.
 
     ```javascript
@@ -187,7 +187,7 @@ var shader = this.make.shader({
   - `uniformKey` : `'iChannel0'`, `'iChannel1'`, `'iChannel2'`,或 ,或 , `'iChannel3'`.
   - `textureIndex` : `0`(单位:千美元) iChannel0), `1`(单位:千美元) iChannel1), `2`(单位:千美元) iChannel2), `3`(单位:千美元) iChannel3).
   - `textureData` : 额外的纹理数据.
-  - `textureKey`: 纹理管理器缓存的密钥。 它不能是纹理的单个框架, 只包含完整的图像。 许多遮蔽器预计纹理是** 2 个大小的** 。
+  - `textureKey`: 纹理管理器缓存的键。 它不能是纹理的单个框架, 只包含完整的图像。 许多遮蔽器预计纹理是** 2 个大小的** 。
 - 设置一个网格纹理的采样器2D制服。
 
     ```javascript
@@ -307,7 +307,7 @@ var mask = shader.createBitmapMask();
 var baseShader = new Phaser.Display.BaseShader(key, fragmentSrc, vertexSrc, uniforms);
 ```
 
-- `key` : 此阴影的密钥
+- `key` : 此阴影的键
 - `fragmentSrc` : 遮阳器的碎片源.
 - `vertexSrc` : 遮荫者顶部源.
   - `undefined`,或称`''`:使用默认顶点源.

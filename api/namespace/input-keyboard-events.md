@@ -22,11 +22,11 @@ static
 
 使用:`this.input.keyboard.on('keydown', listener)`,从场内听这个事件.
 
-您也可以监听按下的特定密钥。详情请参见 [``Keyboard.Events.KEY_DOWN``](/api/event/input-keyboard-events#key_down) 。
+您也可以监听按下的特定键。详情请参见 [``Keyboard.Events.KEY_DOWN``](/api/event/input-keyboard-events#key_down) 。
 
-最后,您可以创建密钥对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.DOWN``](/api/event/input-keyboard-events#down) 。
+最后,您可以创建键对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.DOWN``](/api/event/input-keyboard-events#down) 。
 
-_Note_:由于被称为鬼神的硬件限制,许多键盘无法处理某些组合的密钥. 读[此篇关于鬼神的文章]QQlink [http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/](http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/)]以了解细节.
+_Note_:由于被称为鬼神的硬件限制,许多键盘无法处理某些组合的键. 读[此篇关于鬼神的文章]QQlink [http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/](http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/)]以了解细节.
 
 另外,请注意,一些浏览器扩展可以禁用或覆盖 Phaser键盘处理。例如, Chrome扩展维米被已知可以禁用 Phaser 使用 D 键, 而 EverNote 则禁用反键。 还有其它。 如果您发现您有特定的键不能工作, 请检查您的扩展 。
 
@@ -55,9 +55,9 @@ _Note_:由于被称为鬼神的硬件限制,许多键盘无法处理某些组合
 
 使用:`this.input.keyboard.on('keyup', listener)`,从场内听这个事件.
 
-您也可以监听正在发布的特定密钥。详情请参见 [``Keyboard.Events.KEY_UP``](/api/event/input-keyboard-events#key_up) 。
+您也可以监听正在发布的特定键。详情请参见 [``Keyboard.Events.KEY_UP``](/api/event/input-keyboard-events#key_up) 。
 
-最后,您可以创建密钥对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.UP``](/api/event/input-keyboard-events#up) 。
+最后,您可以创建键对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.UP``](/api/event/input-keyboard-events#up) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -78,11 +78,11 @@ _Note_:由于被称为鬼神的硬件限制,许多键盘无法处理某些组合
 
 **说明:**
 
-密钥Combo火柴事件.
+键Combo火柴事件.
 
 当一个 [Key Combo](/api/class/input-keyboard-keycombo) 匹配时,此事件由键盘插件发送 。
 
-组合创建后从密钥插件中听到此事件 :
+组合创建后从键插件中听到此事件 :
 
 ```javascript
 this.input.keyboard.createCombo([ 38, 38, 40, 40, 37, 39, 37, 39, 66, 65, 13 ], { resetOnMatch: true });
@@ -95,7 +95,7 @@ this.input.keyboard.on('keycombomatch', function (event) {
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| keycombo | [Phaser.Input.Keyboard.KeyCombo](/api/class/input-keyboard-keycombo) | 否 | 匹配的密钥Combo 对象 。 |
+| keycombo | [Phaser.Input.Keyboard.KeyCombo](/api/class/input-keyboard-keycombo) | 否 | 匹配的键Combo 对象 。 |
 | event | KeyboardEvent | 否 | 组合中最终键的本地 DOM 键盘事件。 您可以检查此选项以了解更多关于任何修改符等的信息 。 |
 
 
@@ -154,9 +154,9 @@ spaceBar.on('down', listener)
 
 您也可以创建通用的“ 全球” 听器。 详情请参见 [``Keyboard.Events.ANY_KEY_DOWN``](/api/event/input-keyboard-events#any_key_down) 。
 
-最后,您可以创建密钥对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.DOWN``](/api/event/input-keyboard-events#down) 。
+最后,您可以创建键对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.DOWN``](/api/event/input-keyboard-events#down) 。
 
-_Note_:由于硬件限制被称为鬼神,许多键盘无法处理某些组合的密钥. Read [此篇关于鬼神的文章]QQlink http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/}的详情.
+_Note_:由于硬件限制被称为鬼神,许多键盘无法处理某些组合的键. Read [此篇关于鬼神的文章]QQlink http://www.html5gamedevs.com/topic/4876-impossible-to-use-more-than-2-keyboard-input-buttons-at-the-same-time/}的详情.
 
 另外,请注意,一些浏览器扩展可以禁用或覆盖 Phaser键盘处理。例如, Chrome扩展维米被已知可以禁用 Phaser 使用 D 键, 而 EverNote 则禁用反键。 还有其它。 如果您发现您有特定的键不能工作, 请检查您的扩展 。
 
@@ -183,11 +183,11 @@ _Note_:由于硬件限制被称为鬼神,许多键盘无法处理某些组合的
 
 当键盘上的任何键被发布时,此事件由键盘插件发出.
 
-与 `ANY_KEY_UP` 事件不同, 此事件有一个特殊的动态事件名称。 例如, 要为正在释放的 `A` 密钥聆听, 请使用以下 Scene 中的内容 : `this.input.keyboard.on('keyup-A', listener)` 。 您可以用任何有效的 [Key Code string](/api/namespace/input-keyboard-keycodes) 来替换事件名称中的 `-A` 部分 。 例如, 这将为空间栏监听 : `this.input.keyboard.on('keyup-SPACE', listener)` 。
+与 `ANY_KEY_UP` 事件不同, 此事件有一个特殊的动态事件名称。 例如, 要为正在释放的 `A` 键聆听, 请使用以下 Scene 中的内容 : `this.input.keyboard.on('keyup-A', listener)` 。 您可以用任何有效的 [Key Code string](/api/namespace/input-keyboard-keycodes) 来替换事件名称中的 `-A` 部分 。 例如, 这将为空间栏监听 : `this.input.keyboard.on('keyup-SPACE', listener)` 。
 
 您也可以创建通用的“ 全球” 听器。 详情请参见 [``Keyboard.Events.ANY_KEY_UP``](/api/event/input-keyboard-events#any_key_up) 。
 
-最后,您可以创建密钥对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.UP``](/api/event/input-keyboard-events#up) 。
+最后,您可以创建键对象, 您也可以从中听到事件。 详情请参见 [``Keyboard.Events.UP``](/api/event/input-keyboard-events#up) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -225,7 +225,7 @@ spaceBar.on('up', listener)
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 | 已发布的密钥对象 。 |
+| key | [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) | 否 | 已发布的键对象 。 |
 | event | KeyboardEvent | 否 | 本地 DOM 键盘事件。 您可以检查此事件, 以便了解更多修改器等 。 |
 
 

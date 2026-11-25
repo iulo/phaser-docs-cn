@@ -4,15 +4,15 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 博基过滤器控制器
 
-这个过滤控制器管理相机的bokeh效应.
+这个过滤控制器管理摄像机的bokeh效应.
 
 博凯(Bokeh)是指模仿摄影技术创造浅深场的视觉效果,这种效果用来强调游戏的主题或动作,通过模糊背景或前缘元素,导致更浸润和视觉吸引人的经历,通过模拟外焦区域,给游戏图形带来深度感和现实感的渲染技术实现.
 
 这种效果也可以用来产生倾斜的Shift效应,这是一种通过模糊除图像小区域以外的一切事物来创建微型效应的技术,这种效果是通过模糊上下元素来实现的,同时保持中心区域的重点.
 
-此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大相机 。
+此效果样本跨越一个区域。 为了避免在边缘丢失数据, 请使用 `controller.setPaddingOverride(null)` 自动垫下游戏对象, 或是 `camera.getPaddingWrapper(x)` 来放大摄像机 。
 
-通过过滤列表组件,将波克效应添加到相机中:
+通过过滤列表组件,将波克效应添加到摄像机中:
 
 ```js
 const camera = this.cameras.main;
@@ -26,7 +26,7 @@ camera.filters.external.addBokeh();
 `new Bokeh(camera, [radius], [amount], [contrast], [isTiltShift], [blurX], [blurY], [strength])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 |  | 拥有这个过滤器的摄像机。 |
 | radius | number | 是 | 0.5 | 博克效应的半径. |
@@ -218,10 +218,10 @@ bokeh效果的颜色对比。 这控制了偏重区域与偏重区域之间的�
 
 **说明:**
 
-返回此过滤器在渲染时所需的额外粘贴量, 以像素计 。 粘贴值会记录波克效应的延伸超过过滤相机的原始界限 。
+返回此过滤器在渲染时所需的额外粘贴量, 以像素计 。 粘贴值会记录波克效应的延伸超过过滤摄像机的原始界限 。
 
 
-**Overrides:** Phaser.Filters.Controller#getPadding
+**重写:** Phaser.Filters.Controller#getPadding
 
 
 **返回值:** [Phaser.Geom.Rectangle](/api/class/geom-rectangle) - 贴板矩形

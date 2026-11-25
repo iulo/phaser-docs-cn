@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/math-matrix4)
 
-4x4 列主要矩阵作为浮点32 的矩阵存储, 共 16 个值。 用于3D 转换, 包括投影、 视图和模型矩阵。 这是主要矩阵类 WebGL 正在运行到 Phaser,支持视角/地形投影,视相机设置,以及afine变换(翻译,旋转,比例).
+4x4 列主要矩阵作为浮点32 的矩阵存储, 共 16 个值。 用于3D 转换, 包括投影、 视图和模型矩阵。 这是主要矩阵类 WebGL 正在运行到 Phaser,支持视角/地形投影,视摄像机设置,以及afine变换(翻译,旋转,比例).
 
 改编自 [gl-matrix](https://github.com/toji/gl-matrix) 由藤间和 [vecmath](https://github.com/mattdesl/vecmath) 由 mattdesl 编辑
 
@@ -347,7 +347,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | eye | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 观众的位置 |
 | center | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 指着观众看 |
-| up | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 一种矢量3指向上,用来引导相机卷. |
+| up | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 一种矢量3指向上,用来引导摄像机卷. |
 
 
 **返回值:** [Phaser.Math.Matrix4](/api/class/math-matrix4) - 这个矩阵4。
@@ -373,7 +373,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | eye | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 观者位. |
 | target | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 指观者所观. |
-| up | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 一种矢量3指向上,用来引导相机卷. |
+| up | [Phaser.Math.Vector3](/api/class/math-vector3) | 否 | 一种矢量3指向上,用来引导摄像机卷. |
 
 
 **返回值:** [Phaser.Math.Matrix4](/api/class/math-matrix4) - 这个矩阵4。

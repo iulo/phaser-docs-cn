@@ -2,9 +2,9 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/filters-controller)
 
-处理后过滤器效果的基类适用于相机.
+处理后过滤器效果的基类适用于摄像机.
 
-滤镜是相机输出顶端的视觉效果, 如模糊、 发光或颜色分级。 每个滤镜由控制器管理, 控制器会保持其配置, 并向渲染器提供粘贴信息 。
+滤镜是摄像机输出顶端的视觉效果, 如模糊、 发光或颜色分级。 每个滤镜由控制器管理, 控制器会保持其配置, 并向渲染器提供粘贴信息 。
 
 您通常不应该直接创建此类的实例, 而是使用一个内置的过滤器来扩展它, 如 `Phaser.Filters` 命名空间中发现的 。
 
@@ -37,7 +37,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-切换此布尔以启用或禁用此过滤器,而不将其从相机的过滤器列表中移除并重新添加到其中 。
+切换此布尔以启用或禁用此过滤器,而不将其从摄像机的过滤器列表中移除并重新添加到其中 。
 
 
 > 源码：[src/filters/Controller.js#L34](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Controller.js#L34)  
@@ -71,7 +71,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-指拥有这个过滤器的相机
+指拥有这个过滤器的摄像机
 
 
 > 源码：[src/filters/Controller.js#L44](https://github.com/phaserjs/phaser/blob/v4.1.0/src/filters/Controller.js#L44)  
@@ -244,7 +244,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置粘贴覆盖。 如果设置了, 过滤器会使用此粘贴而不是计算。 呼叫 `setPaddingOverride(null)` 来清除覆盖。 呼叫 `setPaddingOverride()` 来设定粘贴到 0 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | left | number \| null | 是 | 0 | 左胁贴. |
 | top | number | 是 | 0 | 顶上贴. |

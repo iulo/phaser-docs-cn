@@ -220,7 +220,7 @@ this.lights.setAmbientColor(color);
 
 ## 游戏对象 {#game-object}
 
-### 装入正常地图的纹理 {#load-texture-with-normal-map}
+### 加载带法线贴图的纹理 {#load-texture-with-normal-map}
 
 ```javascript
 this.load.image(key, [url, normalMapUrl]);
@@ -228,7 +228,7 @@ this.load.image(key, [url, normalMapUrl]);
 
 - `url` : 脏脏脏腑.
 - `url` : 脏脏脏腑.
-- `normalMapUrl` : 正常地图的Url.
+- `normalMapUrl` : 法线贴图的Url.
 
 ### 应用轻管 {#apply-light-pipeline}
 

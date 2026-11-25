@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Circle([x], [y], [radius])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 圆形中心位置的x位置. |
 | y | number | 是 | 0 | 圆心的y位置. |
@@ -86,7 +86,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矢量2对象,其中包含一个点的坐标,该点根据给定角度环绕圆圈。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -241,7 +241,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复制本 `x`, `y` 财务报告和已审计财务报表 `radius` 从“属性”中 `source` 圆圈进入给定 `dest` 圆形,然后返回 `dest` 圆.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -295,7 +295,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回圆形对象的界限。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -324,7 +324,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个点对象,其中包含一个点的坐标,该点以给定角度为基础,使0至1. 之间正常化,即0.5的值将给出圆周180度的点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -353,7 +353,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矢量2物体,其中含有一个点的坐标,该点以给定角度为基础,使圆周的圆周度正常化到0至1. I. 即0.5的值会在圆周180度时给出点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -383,7 +383,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回含有环绕圆周度的点坐标的点对象数组,以给定的数量或stepRate值为基础。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -440,7 +440,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从圆圈内的任意位置返回一个统一分布的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -487,7 +487,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 以给出的值来抵消圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -517,7 +517,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 以矢量2对象的`x`和`y`属性中给出的值来抵消圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -546,7 +546,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个来自指定圆内任意位置的分布一致的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -595,7 +595,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置此圆的位置。 如果省略 `y` 参数, x 和 y 位置都将设置为 `x` 的值 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 圆形中心位置的x位置. |
 | y | number | 是 | 0 | 圆心的y位置. |
@@ -620,7 +620,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置此圆的 x, y 和半径 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 圆形中心位置的x位置. |
 | y | number | 是 | 0 | 圆心的y位置. |

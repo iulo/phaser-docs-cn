@@ -27,7 +27,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 
 
@@ -44,7 +44,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 
 
@@ -72,7 +72,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 | x | number | 否 | 摄像机的新scrollX坐标。 |
 | y | number | 否 | 摄像机的新scrollY坐标。 |
@@ -91,7 +91,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 | rotation | number | 否 | 摄像机的新旋转是弧度的 |
 
@@ -109,7 +109,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 
 
@@ -126,7 +126,7 @@ static
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 效果运行的摄像机 。 |
 | progress | number | 否 | 效果的进展,值在 0 到 1 之间 |
 | zoom | number | 否 | 摄像机的新放大值 |
 

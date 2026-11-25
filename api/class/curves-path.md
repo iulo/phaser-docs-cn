@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Path([x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 路径起点的X坐标或QQlink Phaser.Types.Curves.JSONPath}. |
 | y | number | 是 | 0 | 路径起点的Y坐标. |
@@ -164,7 +164,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 创建路径末端的圆形椭圆曲线。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | radius | number | 否 |  | 圆之半径. |
 | clockwise | boolean | 是 | false | `true`用来创建顺时针圆,而不是逆时针圆. |
@@ -257,12 +257,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在图形游戏对象的路径中绘制全部曲线。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 要绘制的图形游戏对象 。 |
 | pointsTotal | number | 是 | 32 | 每个曲线的绘图点数。 数字越多, 曲线越平滑, 需要更多的处理 。 |
@@ -287,7 +287,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 使用给定参数创建位于上一个终点的椭圆曲线。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | xRadius | number | 是 | 0 | 椭圆的横向半径. |
 | yRadius | number | 是 | 0 | 椭圆的垂直半径. |
@@ -341,12 +341,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个矩形,其位置和大小与此路径的界限相符。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | out | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 是 |  | 矩形以存储界限. |
 | accuracy | number | 是 | 16 | 边界计算准确性。 较高的数值在计算速度上更为准确 。 |
@@ -417,7 +417,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 一个路径的终点相当于路径中最后一个曲线的终点。对于一个空路径,终点位于路径定义的[#startPoint](#startPoint)。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -466,7 +466,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 位置相对于整个路径,而不是单个曲线。 0. 5 的位置总是位于路径中间, 从而与其起点和终点相距相当。 在一条路径中, 它会位于曲线中间; 在一条路径中, 有两个曲线, 它可能随其长度而出现在其中任何一个位置。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -522,7 +522,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在多次调用这种方法时,不保证各点在空间上相等.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -553,7 +553,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由此得出的点数在点数在路径上的位置上具有同等的间距,但不一定在空间上具有同等的间距.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | divisions | number | 是 | 40 | 将此路径分割成的点数 。 |
 
@@ -576,7 +576,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回路径的起点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -604,7 +604,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获得路径上相对位置的单位矢量正切值。
 
-**Tags:**
+**标签:**
 
  - generic
 

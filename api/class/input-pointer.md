@@ -113,9 +113,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-指针在上次更新时与之交互的相机.
+指针在上次更新时与之交互的摄像机.
 
-指针只能一次与一台相机进行交互,如果多台相机被定位在对方的顶部,这台相机将成为列表中最高的相机.
+指针只能一次与一台摄像机进行交互,如果多台摄像机被定位在对方的顶部,这台摄像机将成为列表中最高的摄像机.
 
 
 > 源码：[src/input/Pointer.js#L94](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/Pointer.js#L94)  
@@ -655,7 +655,7 @@ Y 指针坐标当按钮 1( 左键) 时, 或 Touch , 释放出来, 用于拖动�
 
 **说明:**
 
-这个指针的x位置,被翻译为它与之相互作用的最新相机的坐标空间.
+这个指针的x位置,被翻译为它与之相互作用的最新摄像机的坐标空间.
 
 如果您想使用输入事件处理器的这个值_ 外部_, 您应该先使用 `Pointer.updateWorldPoint` 方法更新它 。
 
@@ -673,7 +673,7 @@ Y 指针坐标当按钮 1( 左键) 时, 或 Touch , 释放出来, 用于拖动�
 
 **说明:**
 
-这个指针的y位置, 翻译为它与之交互的最近相机的坐标空间 。
+这个指针的y位置, 翻译为它与之交互的最近摄像机的坐标空间 。
 
 如果您想使用输入事件处理器的这个值_ 外部_, 您应该先使用 `Pointer.updateWorldPoint` 方法更新它 。
 
@@ -691,7 +691,7 @@ Y 指针坐标当按钮 1( 左键) 时, 或 Touch , 释放出来, 用于拖动�
 
 **说明:**
 
-此指针的 x 位置。 值位于屏幕空间。 请参见 `worldX` 以获得相机转换位置 。
+此指针的 x 位置。 值位于屏幕空间。 请参见 `worldX` 以获得摄像机转换位置 。
 
 
 > 源码：[src/input/Pointer.js#L1260](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/Pointer.js#L1260)  
@@ -707,7 +707,7 @@ Y 指针坐标当按钮 1( 左键) 时, 或 Touch , 释放出来, 用于拖动�
 
 **说明:**
 
-此指针的y位置。 值位于屏幕空间。 请参见 `worldY` 以获得相机转换位置 。
+此指针的y位置。 值位于屏幕空间。 请参见 `worldY` 以获得摄像机转换位置 。
 
 
 > 源码：[src/input/Pointer.js#L1283](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/Pointer.js#L1283)  
@@ -946,7 +946,7 @@ var points = pointer.getInterpolatedPosition(4);
 内部采用平滑步法插值计算.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | steps | number | 是 | 10 | 插法步骤数用之. |
 | out | array | 是 |  | 将保存结果的数组。 如果不提供新的数组, 将会创建 。 |
@@ -1063,16 +1063,16 @@ var points = pointer.getInterpolatedPosition(4);
 
 **说明:**
 
-取一个相机, 返回一个包含该相机内这个指针的翻译位置的矢量2。 这可用于将这个指针位置转换成相机空间 。
+取一个摄像机, 返回一个包含该摄像机内这个指针的翻译位置的矢量2。 这可用于将这个指针位置转换成摄像机空间 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来翻译的相机. |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 用来翻译的摄像机. |
 | output | [Phaser.Math.Vector2](/api/class/math-vector2) \| object | 是 | 一个向量2式对象,用于存储翻译位置。 |
 
 
-**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2), object - 包含此指针的翻译坐标的矢量2,基于给定的相机.
+**返回值:** [Phaser.Math.Vector2](/api/class/math-vector2), object - 包含此指针的翻译坐标的矢量2,基于给定的摄像机.
 
 
 > 源码：[src/input/Pointer.js#L523](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/Pointer.js#L523)  

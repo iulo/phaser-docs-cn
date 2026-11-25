@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/input-keyboard-key)
 
-代表键盘上的单一键。键盘对象由键盘插件通过 `addKey()` 并跟踪特定密钥的状态,包括是否当前被扣住,所持时间,新闻发布事件的时间戳,以及重复计数。您可以使用诸如属性等属性直接在游戏循环中查看密钥对象。 `isDown` 财务报告和已审计财务报表 `isUp`,或者通过 `on` 方法。该方法 keyCode 必须是与 `Phaser.Input.Keyboard.KeyCodes` 值。
+代表键盘上的单一键。键盘对象由键盘插件通过 `addKey()` 并跟踪特定键的状态,包括是否当前被扣住,所持时间,新闻发布事件的时间戳,以及重复计数。您可以使用诸如属性等属性直接在游戏循环中查看键对象。 `isDown` 财务报告和已审计财务报表 `isUp`,或者通过 `on` 方法。该方法 keyCode 必须是与 `Phaser.Input.Keyboard.KeyCodes` 值。
 
 **构造函数**
 
@@ -11,8 +11,8 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| plugin | [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) | 否 | 拥有此密钥对象的键盘插件实例 。 |
-| keyCode | number | 否 | 此密钥的密钥代码 。 |
+| plugin | [Phaser.Input.Keyboard.KeyboardPlugin](/api/class/input-keyboard-keyboardplugin) | 否 | 拥有此键对象的键盘插件实例 。 |
+| keyCode | number | 否 | 此键的键代码 。 |
 
 ---
 
@@ -54,7 +54,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
+CTRL 键的下方状态, 如果按下此键同时进行 。
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L106](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L106)  
@@ -70,7 +70,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-此密钥的毫秒数在上一个下调序列中被按住。 只有在密钥更改状态时, 此值不会更新每个游戏步骤。 要获得当前持续时间, 请使用 `getDuration` 方法 。
+此键的毫秒数在上一个下调序列中被按住。 只有在键更改状态时, 此值不会更新每个游戏步骤。 要获得当前持续时间, 请使用 `getDuration` 方法 。
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L157](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L157)  
@@ -104,7 +104,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-此密钥能否处理 ?
+此键能否处理 ?
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L66](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L66)  
@@ -152,7 +152,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-此密钥的密钥代码 。
+此键的键代码 。
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L48](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L48)  
@@ -216,7 +216,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-拥有此密钥对象的键盘插件实例 。
+拥有此键对象的键盘插件实例 。
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L39](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L39)  
@@ -324,7 +324,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 删除任何约束事件处理器,并删除本地引用。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L383](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L383)  
@@ -340,7 +340,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-返回密钥被扣下的时间, 以毫秒计 。
+返回键被扣下的时间, 以毫秒计 。
 
 如果当前键盘没有下, 则返回零 。
 
@@ -363,7 +363,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-处理此密钥的密钥下行。 由键盘插件自动调用 。
+处理此键的键下行。 由键盘插件自动调用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -371,7 +371,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 | event | KeyboardEvent | 否 | 本地 DOM 键盘事件. |
 
 
-**Fires:** [Phaser.Input.Keyboard.Events#event:DOWN](/api/event/input-keyboard-events#down)
+**触发事件:** [Phaser.Input.Keyboard.Events#event:DOWN](/api/event/input-keyboard-events#down)
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L253](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L253)  
@@ -387,7 +387,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-处理此密钥的密钥上动作。 由键盘插件自动调用 。
+处理此键的键上动作。 由键盘插件自动调用 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -395,7 +395,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 | event | KeyboardEvent | 否 | 本地 DOM 键盘事件. |
 
 
-**Fires:** [Phaser.Input.Keyboard.Events#event:UP](/api/event/input-keyboard-events#up)
+**触发事件:** [Phaser.Input.Keyboard.Events#event:UP](/api/event/input-keyboard-events#up)
 
 
 > 源码：[src/input/keyboard/keys/Key.js#L297](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/keyboard/keys/Key.js#L297)  
@@ -411,7 +411,7 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-将此密钥对象重置为默认未压缩状态 。
+将此键对象重置为默认未压缩状态 。
 
 截至3.60.0版本,它不再重新设置`enabled`或`preventDefault`旗.
 
@@ -432,12 +432,12 @@ CTRL 密钥的下方状态, 如果按下此密钥同时进行 。
 
 **说明:**
 
-控制此密钥是否在被扣下时会持续释放一个 `down` 事件( 真实), 或者在第一次按下时仅发出一次, 然后跳过未来事件( 假) 。
+控制此键是否在被扣下时会持续释放一个 `down` 事件( 真实), 或者在第一次按下时仅发出一次, 然后跳过未来事件( 假) 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| value | boolean | 否 | 重复的密钥关闭动作的释放`down`事件,还是只一次?. |
+| value | boolean | 否 | 重复的键关闭动作的释放`down`事件,还是只一次?. |
 
 
 **返回值:** [Phaser.Input.Keyboard.Key](/api/class/input-keyboard-key) - 这个关键例子。

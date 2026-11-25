@@ -2,11 +2,11 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-matter-world)
 
-物质世界级负责管理Phaser的单一物质物理世界实例。
+物质世界级负责管理Phaser的单一Matter 物理世界实例。
 
 透过场景内`this.matter.world`通过这个进入.
 
-该课在即时演练期间与Mater JS引擎一起创建了Mater JS World Complex,同时还处理三角洲时间,界限,身体和约束的创建和调试绘图.
+该课在即时演练期间与Mater JS引擎一起创建了Mater JS World Complex,同时还处理三角洲时间,界限,物理体和约束的创建和调试绘图.
 
 如果您希望直接访问 Matter JS World 对象, 请查看 `localWorld` 属性。 如果您希望直接访问 Matter 引擎, 请查看 `engine` 属性 。
 
@@ -68,7 +68,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 当一个新的body或约束被加到世界_时,它们会被赋予存储在这个对象中的值,除非它们有它们自己的`render`对象集,将覆盖它们.
 
-注意, 您可以在运行时修改此对象的属性值, 但它不会改变任何已添加_ a 的天体。 它只会撞击新添加到世界的物体, 或者一个被移除, 并在稍后重新添加的物体 。
+注意, 您可以在运行时修改此对象的属性值, 但它不会改变任何已添加_ a 的物理体。 它只会撞击新添加到世界的物体, 或者一个被移除, 并在稍后重新添加的物体 。
 
 
 > 源码：[src/physics/matter-js/World.js#L198](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L198)  
@@ -305,7 +305,7 @@ Matter JS 运行器配置对象 。
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tilemapLayer | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 否 | 包含要转换的瓷砖的 Tilemap 层 。 |
+| tilemapLayer | [Phaser.Tilemaps.TilemapLayer](/api/class/tilemaps-tilemaplayer) | 否 | 包含要转换的瓦片的 Tilemap 层 。 |
 | options | object | 是 | 选项要传递给 MatterTileBody 构建器 。\\\ x见 Phaser.Physics.Matter.TileBody} |
 
 
@@ -327,12 +327,12 @@ Matter JS 运行器配置对象 。
 
 为所有给定的牌片创建 `MatterTileBody` 实例。这创建了机构,无论牌片是否被设定为碰撞,或者它们是否已经存在。
 
-如果您想要通过可能已经存在天体的牌盘数组, 您应该先过滤该牌盘 。
+如果您想要通过可能已经存在物理体的牌盘数组, 您应该先过滤该牌盘 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| tiles | Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> | 否 | 一系列的瓷砖。 |
+| tiles | Array.\<[Phaser.Tilemaps.Tile](/api/class/tilemaps-tile)> | 否 | 一系列的瓦片。 |
 | options | object | 是 | 选项要传递给 MatterTileBody 构建器 。\\\ x见 Phaser.Physics.Matter.TileBody} |
 
 
@@ -357,8 +357,8 @@ Matter JS 运行器配置对象 。
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| x | number | 否 | 身体在世界的横向位置. |
-| y | number | 否 | 身体在世界的垂直位置. |
+| x | number | 否 | 物理体在世界的横向位置. |
+| y | number | 否 | 物理体在世界的垂直位置. |
 | width | number | 否 | 体之宽. |
 | height | number | 否 | 身高之高处. |
 | options | object | 否 | 可选物质配置对象 。 |
@@ -405,12 +405,12 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-将删除所有物质物理事件听众,并清除物质物理世界,引擎和任何调试图形,如果有的话.
+将删除所有Matter 物理事件监听器,并清除Matter 物理世界,引擎和任何调试图形,如果有的话.
 
 摧毁世界之后,它不能再被再次使用。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 > 源码：[src/physics/matter-js/World.js#L2288](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L2288)  
@@ -445,7 +445,7 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-递归物质世界中所有的身体,包括所有儿童的身体。
+递归物质世界中所有的物理体,包括所有儿童的物理体。
 
 
 **返回值:** Array.\<MatterJS.BodyType> - 世界上所有物质JS机构都存在
@@ -502,7 +502,7 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-如果在世界范围内可以找到给定的天体,则返回 `true`。
+如果在世界范围内可以找到给定的物理体,则返回 `true`。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -510,7 +510,7 @@ Matter JS 运行器配置对象 。
 | body | MatterJS.Body \| [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 物质体,或游戏对象, 寻找世界范围内。 |
 
 
-**返回值:** boolean - 如果尸体在世界上被发现,则`true`,否则则`false`.
+**返回值:** boolean - 如果物理体在世界上被发现,则`true`,否则则`false`.
 
 
 > 源码：[src/physics/matter-js/World.js#L1325](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L1325)  
@@ -545,12 +545,12 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-返回下一个唯一组合索引, 天体将碰撞。 如果 `isNonColliding` 是 `true`, 则返回下一个唯一组合索引, 天体不会碰撞 。
+返回下一个唯一组合索引, 物理体将碰撞。 如果 `isNonColliding` 是 `true`, 则返回下一个唯一组合索引, 物理体不会碰撞 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| isNonColliding | boolean | 是 | false | 如果 `true`,返回下一个唯一组索引,其中的天体将_ not_ 碰撞。 |
+| isNonColliding | boolean | 是 | false | 如果 `true`,返回下一个唯一组索引,其中的物理体将_ not_ 碰撞。 |
 
 
 **返回值:** number - 唯一类位字
@@ -577,7 +577,7 @@ Matter JS 运行器配置对象 。
 **返回值:** [Phaser.Physics.Matter.World](/api/class/physics-matter-world) - 此物质世界对象 。
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:PAUSE](/api/event/physics-matter-events#pause)
+**触发事件:** [Phaser.Physics.Matter.Events#event:PAUSE](/api/event/physics-matter-events#pause)
 
 
 > 源码：[src/physics/matter-js/World.js#L1114](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L1114)  
@@ -600,7 +600,7 @@ Matter JS 运行器配置对象 。
 触发`beforeRemove`和`afterRemove`事件.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | object | object \| Array.\<object> | 否 |  | 可以是单物体,也可以是数组,也可以是体,复合体或约束体. |
 | deep | boolean | 是 | false | 选择性地搜查儿童的物品,并递归地去除这些物品。 |
@@ -627,7 +627,7 @@ Matter JS 运行器配置对象 。
 触发`beforeRemove`和`afterRemove`事件.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | constraint | MatterJS.ConstraintType \| Array.\<MatterJS.ConstraintType> | 否 |  | 联合来文约束,或一系列限制,有待消除。 |
 | deep | boolean | 是 | false | 选择性地搜查儿童的物品,并递归地去除这些物品。 |
@@ -651,12 +651,12 @@ Matter JS 运行器配置对象 。
 
 将一个物质体渲染到给定的 Phaser Graphics 游戏对象上.
 
-这种方法被 Matter Rebug 渲染器内部使用, 但是如果您想要将一个天体变成自己的图形实例, 也会被公开曝光 。
+这种方法被 Matter Rebug 渲染器内部使用, 但是如果您想要将一个物理体变成自己的图形实例, 也会被公开曝光 。
 
-如果你不想在身体周围画一条线,就设置 `lineColor` 参数改为 `null`同样,如果你不想填满,请设置 `fillColor` 参数改为 `null`.
+如果你不想在物理体周围画一条线,就设置 `lineColor` 参数改为 `null`同样,如果你不想填满,请设置 `fillColor` 参数改为 `null`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | body | MatterJS.BodyType | 否 |  | 物质体要被改造出来 |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 图形对象要渲染到 。 |
@@ -684,16 +684,16 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-将一系列天体的所有轴或单个轴指标都渲染到给定的图形实例。
+将一系列物理体的所有轴或单个轴指标都渲染到给定的图形实例。
 
 如果设置了 `showAxes` 或 `showAngleIndicator` 配置值,调试渲染器会调用这种方法 。
 
-这种方法被Mater Debug Renderer内部使用,但如果您想将身体轴转换成自己的图形实例,也会公开曝光.
+这种方法被Mater Debug Renderer内部使用,但如果您想将物理体轴转换成自己的图形实例,也会公开曝光.
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | array | 否 | 一群来自localWorld的尸体 |
+| bodies | array | 否 | 一群来自localWorld的物理体 |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 | 图形对象要渲染到 。 |
 | showAxes | boolean | 否 | 如果 `true` 它会变成所有车轴 如果 `false` 它会变成一个单一的轴指示器 |
 | lineColor | number | 否 | 线条色. |
@@ -713,9 +713,9 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-将一系列天体的界限显示为给定的图形实例。
+将一系列物理体的界限显示为给定的图形实例。
 
-如果尸体是复合体,它会为母体复合物制造界.
+如果物理体是复合体,它会为母体复合物制造界.
 
 如果设置了 `showBounds` 配置值,调试渲染器会调用这种方法 。
 
@@ -724,7 +724,7 @@ Matter JS 运行器配置对象 。
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | array | 否 | 一群来自localWorld的尸体 |
+| bodies | array | 否 | 一群来自localWorld的物理体 |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 | 图形对象要渲染到 。 |
 | lineColor | number | 否 | 线条色. |
 | lineOpacity | number | 否 | 线条不透明,在0到1之间. |
@@ -743,7 +743,7 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-将一系列天体的速度指标显示为给定的图形实例。
+将一系列物理体的速度指标显示为给定的图形实例。
 
 如果设置了 `showVelocity` 配置值,调试渲染器会调用这种方法 。
 
@@ -752,7 +752,7 @@ Matter JS 运行器配置对象 。
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| bodies | array | 否 | 一群来自localWorld的尸体 |
+| bodies | array | 否 | 一群来自localWorld的物理体 |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 | 图形对象要渲染到 。 |
 | lineColor | number | 否 | 线条色. |
 | lineOpacity | number | 否 | 线条不透明,在0到1之间. |
@@ -837,10 +837,10 @@ Matter JS 运行器配置对象 。
 
 将 Convex 游戏标本为单个物质体, 以给定的 Phaser 图形游戏对象 。
 
-这种方法被Mater Rebug Render 内部使用,但是如果您想让身体壳切换到自己的图形实例,也会被公开曝光.
+这种方法被Mater Rebug Render 内部使用,但是如果您想让物理体壳切换到自己的图形实例,也会被公开曝光.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | body | MatterJS.BodyType | 否 |  | 物质体要被改造出来 |
 | graphics | [Phaser.GameObjects.Graphics](/api/class/gameobjects-graphics) | 否 |  | 图形对象要渲染到 。 |
@@ -925,7 +925,7 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-重置内碰撞ID, 用于身体碰撞组。
+重置内碰撞ID, 用于物理体碰撞组。
 
 如果您需要在同一页上再次重启游戏, 无需重新装入页面, 请在销毁游戏前先拨打此选项。 或者, 如果您想要一致销毁包含 Matter.js 的场景, 然后在同一游戏中再次运行它 。
 
@@ -949,7 +949,7 @@ Matter JS 运行器配置对象 。
 **返回值:** [Phaser.Physics.Matter.World](/api/class/physics-matter-world) - 此物质世界对象 。
 
 
-**Fires:** [Phaser.Physics.Matter.Events#event:RESUME](/api/event/physics-matter-events#resume)
+**触发事件:** [Phaser.Physics.Matter.Events#event:RESUME](/api/event/physics-matter-events#resume)
 
 
 > 源码：[src/physics/matter-js/World.js#L1134](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L1134)  
@@ -971,7 +971,7 @@ Matter JS 运行器配置对象 。
 
 如果您想要跳过一个参数, 因此它保留其当前值, 请通过 `false` 。
 
-如果您想要重置天体使颜色符合世界调试配置中发现的默认值, 那么使用仅提供的 `body` 参数调用此方法 。
+如果您想要重置物理体使颜色符合世界调试配置中发现的默认值, 那么使用仅提供的 `body` 参数调用此方法 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1005,7 +1005,7 @@ Matter JS 运行器配置对象 。
 您可以选择设置要创建的“ 墙” : 左、 右、 上或下。 如果没有墙壁被赋予, 将默认使用它以前设置的墙壁。 I. , 如果你以前告诉它没有左右墙壁, 然后调整世界大小, 新建的界限也不会有左右墙壁。 明确在参数中声明它们以覆盖此设置 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 界左上角的x坐标. |
 | y | number | 是 | 0 | 界上左上角的y坐标. |
@@ -1036,7 +1036,7 @@ Matter JS 运行器配置对象 。
 
 设置给定物质复合的子程序的调试渲染样式。
 
-复合物本身并不产生,但可以包含身体、约束和其他可能产生的复合物。因此,这种复合物的子孙被传给了人类。 `setBodyRenderStyle`, `setCompositeRenderStyle` 财务报告和已审计财务报表 `setConstraintRenderStyle` 相应方法。
+复合物本身并不产生,但可以包含物理体、约束和其他可能产生的复合物。因此,这种复合物的子孙被传给了人类。 `setBodyRenderStyle`, `setCompositeRenderStyle` 财务报告和已审计财务报表 `setConstraintRenderStyle` 相应方法。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -1114,10 +1114,10 @@ Matter JS 运行器配置对象 。
 
 设定世界对给出的值的重力。
 
-重力效应了世界上所有的身体,除非它们有`ignoreGravity`旗设定.
+重力效应了世界上所有的物理体,除非它们有`ignoreGravity`旗设定.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | 世界重力X组件. |
 | y | number | 是 | 1 | 世界引力Y组件. |
@@ -1140,10 +1140,10 @@ Matter JS 运行器配置对象 。
 
 **说明:**
 
-将删除所有物质物理事件听众,并清除物质物理世界,引擎和任何调试图形,如果有的话.
+将删除所有Matter 物理事件监听器,并清除Matter 物理世界,引擎和任何调试图形,如果有的话.
 
 
-**Overrides:** Phaser.Events.EventEmitter# 低调的
+**重写:** Phaser.Events.EventEmitter# 低调的
 
 
 > 源码：[src/physics/matter-js/World.js#L2265](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/World.js#L2265)  
@@ -1174,7 +1174,7 @@ positionIterations (违约6) velocityIterations (默认为4) constraintIteration
 调整这些值在某些情况下可以帮助性能,这取决于游戏的物理要求.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | delta | number | 是 | 16.666 | 三角洲的价值。 |
 

@@ -12,7 +12,7 @@ Phaser数学函数都包含在自己的命名空间中。我们不会,也永远�
 
 计算给定的 `values` 的平均值 。
 
-#### 使用量 {#usage}
+#### 用法 {#usage}
 
 ```js
 var result = Phaser.Math.Average(values);
@@ -25,7 +25,7 @@ var result = Phaser.Math.Average(values);
 
 计算两个给定数字的正差。
 
-#### 使用量 {#usage-1}
+#### 用法 {#usage-1}
 
 ```js
 var result = Phaser.Math.Difference(a, b);
@@ -39,7 +39,7 @@ var result = Phaser.Math.Difference(a, b);
 
 计算大于 0 的整数值的给定 `value` 的因子。
 
-#### 使用量 {#usage-2}
+#### 用法 {#usage-2}
 
 ```js
 var result = Phaser.Math.Factorial(value);
@@ -52,7 +52,7 @@ var result = Phaser.Math.Factorial(value);
 
 检查给定的 `value`是否是使用抽象的等号 `==`的偶数 。
 
-#### 使用量 {#usage-3}
+#### 用法 {#usage-3}
 
 ```js
 var result = Phaser.Math.IsEven(value); // returns true or false
@@ -62,7 +62,7 @@ var result = Phaser.Math.IsEven(value); // returns true or false
 
 检查给定的 `value`是否是使用严格等价 `===`的偶数.
 
-#### 使用量 {#usage-4}
+#### 用法 {#usage-4}
 
 ```js
 var result = Phaser.Math.IsEvenStrict(value); // returns true or false
@@ -72,7 +72,7 @@ var result = Phaser.Math.IsEvenStrict(value); // returns true or false
 
 检查给出的值是否与 2 的功率有关 。
 
-#### 使用量 {#usage-5}
+#### 用法 {#usage-5}
 
 - 得到最近的2的功率 到给定的`value`。
 
@@ -122,7 +122,7 @@ var result = Phaser.Math.IsEvenStrict(value); // returns true or false
 
 计算 t (0~ 1) 上的内置Phaser方法的内置相位值。
 
-#### 使用量 {#usage-6}
+#### 用法 {#usage-6}
 
 - 线性内插( lerp) 2 值
 
@@ -181,7 +181,7 @@ var result = Phaser.Math.IsEvenStrict(value); // returns true or false
 
 研究`value`在`min`和`max`之间的百分比,即内置的Phaser方法.
 
-#### 使用量 {#usage-7}
+#### 用法 {#usage-7}
 
 - 获得`value`在`min`和`max`之间的百分比:
 
@@ -210,7 +210,7 @@ var result = Phaser.Math.IsEvenStrict(value); // returns true or false
 
 将`value`夹在范围范围内,使其与射程`min`,`max`,内置的Phaser方法相接.
 
-#### 使用量 {#usage-8}
+#### 用法 {#usage-8}
 
 ```js
 var result = Phaser.Math.Clamp(value, min, max);
@@ -224,7 +224,7 @@ var result = Phaser.Math.Clamp(value, min, max);
 
 将`amount`加到`value`上,将最大结果限制在`max`上.
 
-#### 使用量 {#usage-9}
+#### 用法 {#usage-9}
 
 ```js
 var result = Phaser.Math.MaxAdd(value, amount, max);
@@ -238,7 +238,7 @@ var result = Phaser.Math.MaxAdd(value, amount, max);
 
 从`value`中减掉一个`amount`,将最小结果限制在`min`.
 
-#### 使用量 {#usage-10}
+#### 用法 {#usage-10}
 
 ```js
 var result = Phaser.Math.MinSub(value, amount, min);
@@ -252,7 +252,7 @@ var result = Phaser.Math.MinSub(value, amount, min);
 
 将给定的`value`包在`min`和`max`之间,是Phaser的内置方法.
 
-#### 使用量 {#usage-11}
+#### 用法 {#usage-11}
 
 ```js
 var result = Phaser.Math.Wrap(value, min, max);
@@ -266,7 +266,7 @@ var result = Phaser.Math.Wrap(value, min, max);
 
 易功能,内置的Phaser方法.
 
-#### 使用量 {#usage-12}
+#### 用法 {#usage-12}
 
 ##### 易用函数 {#ease-functions}
 
@@ -401,7 +401,7 @@ var result = easeFunction(t);
 
 这个地方的标志是 用来获取那个地方的权力。
 
-#### 使用量 {#usage-13}
+#### 用法 {#usage-13}
 
 ```js
 var result = Phaser.Math.CeilTo(value);
@@ -423,7 +423,7 @@ var result = Phaser.Math.CeilTo(value, place, base);
 
 这个地方的标志是 用来获取那个地方的权力。
 
-#### 使用量 {#usage-14}
+#### 用法 {#usage-14}
 
 ```js
 var result = Phaser.Math.floorTo(value);
@@ -443,7 +443,7 @@ var result = Phaser.Math.floorTo(value, place, base);
 
 绕一个给定的数字,使它离零更远。也就是说,正数被四舍五入,负数被四舍五入。
 
-#### 使用量 {#usage-15}
+#### 用法 {#usage-15}
 
 ```js
 var result = Phaser.Math.RoundAwayFromZero(value);
@@ -464,7 +464,7 @@ RoundAwayFromZero(-123.45) = -124
 
 圆向给定精度的值 。
 
-#### 使用量 {#usage-16}
+#### 用法 {#usage-16}
 
 ```js
 var result = Phaser.Math.RoundTo(value);
@@ -493,7 +493,7 @@ RoundTo(123.456789, -3) = 123.457
 
 将一个值与最近的网格切片, Phaser的内置方法相匹配 。
 
-#### 使用量 {#usage-17}
+#### 用法 {#usage-17}
 
 - 使用四舍五入键将值与最近的网格切片对齐 。
 
@@ -1762,7 +1762,7 @@ or
 path.quadraticBezierTo(endPoint, controlPoint); // point : Phaser.Math.Vector2
 ```
 
-#### 立方体贝塞尔曲线 {#cubic-bezier-curve}
+#### 三次贝塞尔曲线 {#cubic-bezier-curve}
 
 1. 创建四边形比齐尔曲线对象
 

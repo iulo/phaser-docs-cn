@@ -819,7 +819,7 @@ fps: {
 唤醒 TimeStep, 重新启动请求动画框架( 或 SetTimeout) , 并将 `running` 旗向真向移动。 `seamless` 参数控制是否该提醒是否调整启动时间 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | seamless | boolean | 是 | false | 调整 startTime 以 lastTime 价值。 |
 

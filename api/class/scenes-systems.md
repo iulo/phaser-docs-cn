@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,通过`sys`属性(如`this.sys`)从Scene内部可以访问.
 
-系统管理一个景物的生命周期——启动,踩踏每个帧,渲染,并在需要时关闭或销毁它. 它拥有所有核心景物插件的引用(如显示列表,更新列表,相机管理器,以及事件 Emitter),以及只读引用全球游戏级别管理器(如纹理管理器,声音管理器,以及缓存).
+系统管理一个景物的生命周期——启动,踩踏每个帧,渲染,并在需要时关闭或销毁它. 它拥有所有核心景物插件的引用(如显示列表,更新列表,摄像机管理器,以及事件 Emitter),以及只读引用全球游戏级别管理器(如纹理管理器,声音管理器,以及缓存).
 
 您很少需要直接与系统交互; 相反, 使用 Phaser 注入到每个场景中的方便属性( 如 `this.add`, `this.cameras`, `this.events`) 。 然而, Systems 是查询 Scene 当前状态、 暂停、 恢复、 睡眠或唤醒它的权威场所 。
 
@@ -73,7 +73,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 
 **说明:**
 
-引用全局缓存。 缓存存储所有通过装入器带入的 Phaser 的文件, 除了图像。 图像存储在纹理管理器中 。
+引用全局缓存。 缓存存储所有通过资源加载器带入的 Phaser 的文件, 除了图像。 图像存储在纹理管理器中 。
 
 在默认设置中, 您可以通过 `this.cache` 属性从场景内部访问此功能 。
 
@@ -91,9 +91,9 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 
 **说明:**
 
-斯凯斯的相机经理的参考文献
+斯凯斯的摄像机经理的参考文献
 
-使用此操作并创建此特定场景的相机.
+使用此操作并创建此特定场景的摄像机.
 
 在默认设置中, 您可以通过 `this.cameras` 属性从场景内部访问此功能 。
 
@@ -495,7 +495,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 这种方法在Scene 管理器即时调用时仅被Scene 管理者调用一次,负责设置所有Scene 插件和引用,永远不应直接调用.
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -503,7 +503,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 | game | [Phaser.Game](/api/class/game) | 否 | 参考 Phaser游戏实例. |
 
 
-**Fires:** [Phaser.Scenes.Events#event:BOOT](/api/event/scenes-events#boot)
+**触发事件:** [Phaser.Scenes.Events#event:BOOT](/api/event/scenes-events#boot)
 
 
 > 源码：[src/scene/Systems.js#L301](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L301)  
@@ -665,7 +665,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 **返回值:** [Phaser.Scenes.Systems](/api/class/scenes-systems) - 此系统对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:PAUSE](/api/event/scenes-events#pause)
+**触发事件:** [Phaser.Scenes.Events#event:PAUSE](/api/event/scenes-events#pause)
 
 
 > 源码：[src/scene/Systems.js#L409](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L409)  
@@ -697,7 +697,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 
 **说明:**
 
-由场景管理器自动调用。 指示场景通过相机管理器向给定的渲染器进行自我渲染 。
+由场景管理器自动调用。 指示场景通过摄像机管理器向给定的渲染器进行自我渲染 。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -705,7 +705,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) \| [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 | 提起"渲染"的造物师 |
 
 
-**Fires:** [Phaser.Scenes.Events#event:PRE_RENDER](/api/event/scenes-events#pre_render), [Phaser.Scenes.Events#event:RENDER](/api/event/scenes-events#render)
+**触发事件:** [Phaser.Scenes.Events#event:PRE_RENDER](/api/event/scenes-events#pre_render), [Phaser.Scenes.Events#event:RENDER](/api/event/scenes-events#render)
 
 
 > 源码：[src/scene/Systems.js#L363](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L363)  
@@ -734,7 +734,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 **返回值:** [Phaser.Scenes.Systems](/api/class/scenes-systems) - 此系统对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:RESUME](/api/event/scenes-events#resume)
+**触发事件:** [Phaser.Scenes.Events#event:RESUME](/api/event/scenes-events#resume)
 
 
 > 源码：[src/scene/Systems.js#L443](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L443)  
@@ -809,7 +809,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 | data | object | 是 | 一个数据对象,将在“shutdown”事件中传递 。 |
 
 
-**Fires:** [Phaser.Scenes.Events#event:SHUTDOWN](/api/event/scenes-events#shutdown)
+**触发事件:** [Phaser.Scenes.Events#event:SHUTDOWN](/api/event/scenes-events#shutdown)
 
 
 > 源码：[src/scene/Systems.js#L759](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L759)  
@@ -838,7 +838,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 **返回值:** [Phaser.Scenes.Systems](/api/class/scenes-systems) - 此系统对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:SLEEP](/api/event/scenes-events#sleep)
+**触发事件:** [Phaser.Scenes.Events#event:SLEEP](/api/event/scenes-events#sleep)
 
 
 > 源码：[src/scene/Systems.js#L474](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L474)  
@@ -862,7 +862,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 | data | object | 否 | 可能从另一个位置传递到此景点的可选数据对象 。 |
 
 
-**Fires:** [Phaser.Scenes.Events#event:START](/api/event/scenes-events#start), [Phaser.Scenes.Events#event:READY](/api/event/scenes-events#ready)
+**触发事件:** [Phaser.Scenes.Events#event:START](/api/event/scenes-events#start), [Phaser.Scenes.Events#event:READY](/api/event/scenes-events#ready)
 
 
 > 源码：[src/scene/Systems.js#L726](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L726)  
@@ -887,7 +887,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 | delta | number | 否 | 自上一个框架以来的三角洲值。 这是为避免三角洲的悬崖被 TimeStep 级所覆盖而平滑的 。 |
 
 
-**Fires:** [Phaser.Scenes.Events#event:PRE_UPDATE](/api/event/scenes-events#pre_update), [Phaser.Scenes.Events#event:UPDATE](/api/event/scenes-events#update), [Phaser.Scenes.Events#event:POST_UPDATE](/api/event/scenes-events#post_update)
+**触发事件:** [Phaser.Scenes.Events#event:PRE_UPDATE](/api/event/scenes-events#pre_update), [Phaser.Scenes.Events#event:UPDATE](/api/event/scenes-events#update), [Phaser.Scenes.Events#event:POST_UPDATE](/api/event/scenes-events#post_update)
 
 
 > 源码：[src/scene/Systems.js#L337](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L337)  
@@ -905,7 +905,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 
 唤醒这个场景,如果它之前被送去睡觉。
 
-摇晃一幕将状态设定为运行状态,并标为活动状态和可见状态,允许其更新循环执行,并再次渲染相机。不同于 `resume`,它只恢复了活动旗帜, `wake` 如果场景是正在进行的过渡的一部分,则 a `TRANSITION_WAKE` 事件也会被释放。
+摇晃一幕将状态设定为运行状态,并标为活动状态和可见状态,允许其更新循环执行,并再次渲染摄像机。不同于 `resume`,它只恢复了活动旗帜, `wake` 如果场景是正在进行的过渡的一部分,则 a `TRANSITION_WAKE` 事件也会被释放。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -916,7 +916,7 @@ Scene Systems类是Phaser中每个Scene的主干,由Scene管理器自动创建,�
 **返回值:** [Phaser.Scenes.Systems](/api/class/scenes-systems) - 此系统对象 。
 
 
-**Fires:** [Phaser.Scenes.Events#event:WAKE](/api/event/scenes-events#wake)
+**触发事件:** [Phaser.Scenes.Events#event:WAKE](/api/event/scenes-events#wake)
 
 
 > 源码：[src/scene/Systems.js#L512](https://github.com/phaserjs/phaser/blob/v4.1.0/src/scene/Systems.js#L512)  

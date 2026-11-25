@@ -11,9 +11,9 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入此文件的装入器 。 |
-| 类型 | string | 否 | 在装入器内排序的文件类型字符串 。 |
-| key | string | 否 | 装填器内文件的密钥 。 |
+| loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 装入此文件的资源加载器 。 |
+| 类型 | string | 否 | 在资源加载器内排序的文件类型字符串 。 |
+| key | string | 否 | 装填器内文件的键 。 |
 | files | Array.\<[Phaser.Loader.File](/api/class/loader-file)> | 否 | 构成此多文件的文件阵列 。 |
 
 ---
@@ -33,7 +33,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-引用了创建多文件时的装入器 baseURL 。 用于插入子文件 。
+引用了创建多文件时的资源加载器 baseURL 。 用于插入子文件 。
 
 
 > 源码：[src/loader/MultiFile.js#L150](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/MultiFile.js#L150)  
@@ -113,7 +113,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-独有缓存密钥( 在其文件类型中独一无二) 。
+独有缓存键( 在其文件类型中独一无二) 。
 
 
 > 源码：[src/loader/MultiFile.js#L65](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/MultiFile.js#L65)  
@@ -129,7 +129,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-引用要装入此文件的装入器 。
+引用要装入此文件的资源加载器 。
 
 
 > 源码：[src/loader/MultiFile.js#L47](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/MultiFile.js#L47)  
@@ -209,7 +209,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-在装入器内排序的文件类型字符串 。
+在资源加载器内排序的文件类型字符串 。
 
 
 > 源码：[src/loader/MultiFile.js#L56](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/MultiFile.js#L56)  
@@ -333,7 +333,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 它将从装填器中发出`filecomplete`事件.
 
 
-**Fires:** [Phaser.Loader.Events#event:FILE_COMPLETE](/api/event/loader-events#file_complete), [Phaser.Loader.Events#event:FILE_KEY_COMPLETE](/api/event/loader-events#file_key_complete)
+**触发事件:** [Phaser.Loader.Events#event:FILE_COMPLETE](/api/event/loader-events#file_complete), [Phaser.Loader.Events#event:FILE_KEY_COMPLETE](/api/event/loader-events#file_key_complete)
 
 
 > 源码：[src/loader/MultiFile.js#L262](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/MultiFile.js#L262)  

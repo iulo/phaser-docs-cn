@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new MoveTo([x], [y])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x | number | 是 | 0 | `x`像素坐标. |
 | y | number | 是 | 0 | `y`像素坐标. |
@@ -86,7 +86,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回此 MoveTo 曲线所代表的单一点。 因为 MoveTo 只有一个点, 其值为 `t` 被忽略,并且 `p0` 总是返回。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -115,7 +115,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 获取曲线中指定位置的点。 这将总是返回此曲线的唯一点 。
 
-**Tags:**
+**标签:**
 
  - generic
 

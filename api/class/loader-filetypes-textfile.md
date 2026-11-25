@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/loader-filetypes-textfile)
 
-适合装入器加载的单一文本文件 。
+适合资源加载器加载的单一文本文件 。
 
 文本文件从外部文件装入纯文本内容, 并将其保存在文本缓存中, 并将其作为原始字符串。 这些文件对于载入任何基于文本的数据, 如对话框脚本、 CSV 数据、 GLSL 阴影源代码、 级别数据, 或任何其他可以作为字符串显示的内容, 都非常有用。 文本一旦装入, 可以按游戏要求从缓存中检索并解析或处理 。
 
@@ -18,7 +18,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.TextFileConfig](/api/typedef/types-loader-filetypes#textfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | url | string | 是 | 装入此文件的绝对或相对的 URL。 如果未定义或 `null` , 则会设置为 `<key>.txt`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. txt" 。 |
 | xhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 专门为此文件设置额外的 XHR 设置 。 |
 
@@ -74,7 +74,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 由 Loader. nextFile 自动调用。 此方法控制了文件对已装入的数据的额外工作。 它从 XHR 响应中读取纯文本内容, 并将其保存在 `this.data` 中, 然后调用 `onProcessComplete` 来标记文件, 以备文本缓存使用 。
 
 
-**Overrides:** Phaser.Loader.File#onProcess
+**重写:** Phaser.Loader.File#onProcess
 
 
 > 源码：[src/loader/filetypes/TextFile.js#L75](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/filetypes/TextFile.js#L75)  

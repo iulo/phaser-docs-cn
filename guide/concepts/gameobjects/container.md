@@ -2,29 +2,21 @@
 
 Phaser 4 指南 · [英文原文](https://phaser.io/oss/docs/phaser/concepts/gameobjects/container)
 
-容器,如其名称所暗示的,可以“包含”其他类型的游戏对象。当一个游戏对象被添加到容器中时,容器将承担渲染责任。默认它将从显示列表中删除,而是添加到容器内部列表中。
+容器（Container）可以包含其他游戏对象。对象加入容器后，由容器负责渲染。默认情况下，对象会从场景的显示列表移到容器的内部列表，坐标也会变为相对于容器的局部坐标。
 
-游戏对象的位置会自动与容器的位置相对.
+容器的变换原点固定为局部坐标 `[0, 0]`。添加子对象时，可以此原点为中心，为子对象设置正坐标或负坐标。
 
-容器的变换原点固定为局部坐标 `[0, 0]`。添加子对象时，以这个原点为容器的中心，按需要为子对象设置正坐标或负坐标。
+渲染容器时，会按内部列表的顺序渲染子对象。可以用 `moveUp`、`moveDown` 和 `sendToBack` 等方法调整顺序。修改容器的 `x`、`rotation` 等变换属性时，子对象也会受到影响。容器还可以嵌套。
 
-集装箱建成后,其所有儿童也按照集装箱内存在的顺序被改造,集装箱儿童可以采用诸如MoveUp、MoveDown和SendToBack等方法重新定位。
+容器可以设置遮罩，也可以作为遮罩使用。容器的子对象不应用单独的遮罩。只有位于显示列表根层的容器才会应用自己的遮罩，嵌套遮罩不会叠加。
 
-如果修改集装箱的变换财产,如Contain.x或Contain.rotation,那么它也会自动影响所有儿童。
+容器可以接收输入。容器本身没有纹理，启用交互时需显式提供一个形状作为命中区域。子对象也可以独立启用输入。给子对象启用交互时，同时调整原点和使用负缩放可能造成命中区域错位。
 
-集装箱可以包括用于深层嵌入式变压器的其他集装箱.
+可在使用 Arcade、Impact 或 Matter 物理时为容器添加物理体。物理引擎计算子对象的物理体时不会计入父容器的变换。如果父容器或更上层容器的位置偏离 `[0, 0]`，子对象的物理体可能出现偏移。
 
-集装箱上可以设置口罩,也可以用作口罩。 但是, 集装箱儿童不能被遮盖。 口罩不会“ 装入” 。 只有显示列表根部的集装箱才会使用其口罩 。
+每层容器都会增加子对象的处理开销，输入事件尤其如此。子对象的渲染深度也受容器内部排序限制。需要统一变换多个对象时，使用容器更方便。
 
-容器可以允许输入。由于它们没有纹理,所以需要提供形状,以便用作攻击区。集装箱儿童也可以允许输入,独立于集装箱。
-
-如果输入可以使孩子成为可能,则不应同时设定儿童的起源和负比例因素,或输入区域会变得不匹配。
-
-集装箱可以被赋予一个物理体,用于弧形物理、撞击物理或物质物理。但是,如果集装箱儿童能够用于物理,那么如果集装箱本身或其祖先在除0x0以外的任何地方被定位,则可能会得到意外的结果,例如抵消体。 由于需要过多的额外计算,集装箱儿童不会在集装箱中被考虑。 请安排游戏围绕此进行。
-
-了解使用集装箱的影响很重要。它们会给每个孩子增加额外的处理费用。你越是窝住他们,成本就越高。对于输入事件,尤其如此。你也会松动将集装箱儿童的显示深度设置在与那些不在集装箱内的儿童相同的灵活方式上。简言之,不要为了它而使用集装箱。每次你创建一个容器,都要付出小的代价,尽量在可能时避免这样做。
-
-## 添加容器( E) {#add-container}
+## 添加容器 {#add-container}
 
 ```javascript
 var container = this.add.container(x, y);
@@ -64,7 +56,7 @@ var container = this.add.container(x, y);
 container.destroy();
 ```
 
-也摧毁所有儿童游戏的物体。
+也摧毁所有子游戏对象。
 
 ## 设置属性 {#set-properties}
 
@@ -84,7 +76,7 @@ container.setSize(width, height);
 container.setScrollFactor(x, y);
 ```
 
-对所有集装箱儿童适用这个scrollFactor。
+对所有容器儿童适用这个scrollFactor。
 
 ```javascript
 container.setScrollFactor(x, y, true);
@@ -99,7 +91,7 @@ container.setInteractive(new Phaser.Geom.Circle(0, 0, radius), Phaser.Geom.Circl
 
 指定带有圆形的命中区域.
 
-## 非排他性 {#non-exclusive}
+## 非独占模式 {#non-exclusive}
 
 ```javascript
 container.setExclusive(false);
@@ -107,9 +99,9 @@ container.setExclusive(false);
 
 允许多次添加到容器中的游戏对象.
 
-## 儿童 {#children}
+## 子对象 {#children}
 
-### 添加子项目 {#add-child}
+### 添加子对象 {#add-child}
 
 ```javascript
 container.add(child);  // child: a game object or an array of game objects
@@ -119,13 +111,13 @@ container.add(child);  // child: a game object or an array of game objects
 container.addAt(child, index);
 ```
 
-### 容器中存在儿童 {#child-exists-in-container}
+### 检查容器中是否有该子对象 {#child-exists-in-container}
 
 ```javascript
 var hasChild = container.exists(child);
 ```
 
-### 带孩子 {#get-child}
+### 获取子对象 {#get-child}
 
 ```javascript
 var firstChild = container.first;
@@ -157,7 +149,7 @@ var amount = container.count(property, value, startIndex, endIndex);
 // value: the value to test the property against. Must pass a strict (`===`) comparison check.
 ```
 
-### 排序孩子 {#sort-children}
+### 子对象排序 {#sort-children}
 
 排序此容器的内容, 使项目根据给定属性排列。 例如: `sort('alpha')` 会根据它们的α属性值排序元素 。
 
@@ -171,7 +163,7 @@ container.sort(property, function(childA, childB){
 });
 ```
 
-### 删除子 {#remove-child}
+### 移除子对象 {#remove-child}
 
 ```javascript
 container.remove(child);
@@ -195,7 +187,7 @@ container.removeAll();
 
 将孩子从容器中移除而不销毁,会重新放回现场的显示列表中.
 
-### 子女顺序 {#order-of-child}
+### 子对象的排列顺序 {#order-of-child}
 
 ```javascript
 container.moveTo(child, index);
@@ -237,7 +229,7 @@ container.reverse();
 container.shuffle();
 ```
 
-### 替换子 {#replace-child}
+### 替换子对象 {#replace-child}
 
 ```javascript
 container.replace(oldChild, newChild);
@@ -250,9 +242,9 @@ container.replace(oldChild, newChild);
 container.setAll(property, value, startIndex, endIndex);
 ```
 
-### 每名儿童 {#for-each-child}
+### 遍历子对象 {#for-each-child}
 
-- 现有儿童名单
+- 现有子对象列表
 
     ```javascript
     container.iterate(callback);
@@ -268,7 +260,7 @@ container.setAll(property, value, startIndex, endIndex);
         }
         ```
 
-- 分发一份现有儿童名单
+- 分发一份现有子对象列表
 
     ```javascript
     container.each(callback);
@@ -284,7 +276,7 @@ container.setAll(property, value, startIndex, endIndex);
         }
         ```
 
-### 获得世界位置、旋转、比例 {#get-world-position-rotation-scale}
+### 获取世界坐标中的位置、旋转与缩放 {#get-world-position-rotation-scale}
 
 ```javascript
 var matrix = child.getWorldTransformMatrix();
@@ -307,7 +299,7 @@ var mask = container.createBitmapMask();
 
 见[mask](/guide/concepts/display#masks)
 
-## 阴影效果 {#shader-effects}
+## 着色器效果 {#shader-effects}
 
 支持 [postFX effects](/guide/concepts/gameobjects/shader) 软件
 
@@ -316,7 +308,7 @@ var mask = container.createBitmapMask();
 
 ## 与 [group object](/guide/concepts/gameobjects/group) 比较 {#compare-with-group-object}
 
-- 集装箱和团体物品都有儿童名单。
+- 容器和团体物品都有子对象列表。
 - 容器有位置,角度,α,可见,.etc,但组没有.
 - 容器控制儿童属性(位置,角度,α,可见,.etc),但组不会.
 - 游戏对象可以添加到许多组中,但只能添加到一个容器中(`exclusive`模式).

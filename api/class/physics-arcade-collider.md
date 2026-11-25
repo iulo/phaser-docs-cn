@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/physics-arcade-collider)
 
-弧形物理对撞器会自动检查每个步骤两个对象之间的碰撞,或重叠。如果发生碰撞,或重叠,它会引用给定的回调。
+Arcade 物理对撞器会自动检查每个步骤两个对象之间的碰撞,或重叠。如果发生碰撞,或重叠,它会引用给定的回调。
 
 注意, 如果将 `overlapOnly` 设置为 `true`, 而其中一个物体是 `TilemapLayer`, 则将检查层中的每个瓦片, 不论瓦片的ID 是否发生碰撞。 即使层中只允许有子集的瓦片ID 来进行碰撞, 仍然会检查所有瓦片的重叠 。
 
@@ -13,7 +13,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 **参数**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 | 将管理碰撞的拱廊物理世界. |
+| world | [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world) | 否 | 将管理碰撞的Arcade 物理世界. |
 | overlapOnly | boolean | 否 | 是否检查碰撞或重叠 。 |
 | object1 | [Phaser.Types.Physics.Arcade.ArcadeColliderType](/api/typedef/types-physics-arcade#arcadecollidertype) | 否 | 第一个检查碰撞的物体 。 |
 | object2 | [Phaser.Types.Physics.Arcade.ArcadeColliderType](/api/typedef/types-physics-arcade#arcadecollidertype) | 否 | 第二个检查碰撞的物体 。 |
@@ -38,7 +38,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-是否对撞机活动 。
+是否碰撞器活动 。
 
 
 > 源码：[src/physics/arcade/Collider.js#L54](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Collider.js#L54)  
@@ -166,7 +166,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-身体会碰撞的世界
+物理体会碰撞的世界
 
 
 > 源码：[src/physics/arcade/Collider.js#L36](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Collider.js#L36)  
@@ -184,7 +184,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-从世界中删除对撞机并处理其资源.
+从世界中删除碰撞器并处理其资源.
 
 
 > 源码：[src/physics/arcade/Collider.js#L156](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Collider.js#L156)  
@@ -207,10 +207,10 @@ Phaser没有使用这个值,这是为你自己参考.
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| 名称 | string | 否 | 指定对撞机的名称 。 |
+| 名称 | string | 否 | 指定碰撞器的名称 。 |
 
 
-**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 这个对撞机的例子。
+**返回值:** [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider) - 这个碰撞器的例子。
 
 
 > 源码：[src/physics/arcade/Collider.js#L119](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/arcade/Collider.js#L119)  

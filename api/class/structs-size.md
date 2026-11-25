@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Size([width], [height], [aspectMode], [parent])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 大小组件的宽度 。 |
 | height | number | 是 | "width" | 大小组件的高度。 如果不给出, 它将使用 `width` 。 |
@@ -206,7 +206,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果此大小组件有父集, 那么将夹住此方法的宽度和高度, 使其不能超过父集 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 大小组件的新宽度 。 |
 | height | number | 是 |  | 大小组件的新高度。 如果不给出, 它将使用宽度值 。 |
@@ -280,7 +280,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果此大小组件有父集, 那么会将值夹住, 以便它不会超过最长轴上的父集 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 大小组件的新宽度 。 |
 | height | number | 是 |  | 大小组件的新高度。 如果不给出, 它将使用宽度值 。 |
@@ -309,7 +309,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果此大小组件有父集, 那么将夹住此方法的宽度和高度, 使其不能超过父集 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 大小组件的新宽度 。 |
 | height | number | 是 |  | 大小组件的新高度。 如果不给出, 它将使用宽度值 。 |
@@ -334,7 +334,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 取一个新的高度,然后通过分/最大夹,然后检查它不会超过母高.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 夹住和检查的值 。 |
 | checkParent | boolean | 是 | true | 如果设定, 请对照父方检查给定的值 。 |
@@ -359,7 +359,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 取一个新的宽度,然后通过分/最大夹,然后检查它不会超过母宽.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 否 |  | 夹住和检查的值 。 |
 | checkParent | boolean | 是 | true | 如果设定, 请对照父方检查给定的值 。 |
@@ -386,7 +386,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 它不会_ doesn_改变`aspectMode`,并且仍然会改变大小限制的因子,如min max和父边界.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 否 |  | 大小组件的新宽度 。 |
 | height | number | 是 | "width" | 大小组件的新高度。 如果不给出, 它将会使用 `width` 。 |
@@ -427,7 +427,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 必要时,调用这种方法会自动重新计算`width`和`height`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | value | number | 是 | 0 | 侧面模式值 。 |
 
@@ -528,7 +528,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 注意基于侧面模式,如果此大小组件是否有父集,则在此设置的最大值_可_在某些情况下被超越 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | "Number.MAX_VALUE" | 大小组件的最大允许宽度 。 |
 | height | number | 是 | "width" | 大小组件的最大允许高度。 如果不给出, 则会使用 `width` 。 |
@@ -559,7 +559,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 注意基于侧面模式,如果此大小组件是否有父集,则在此设置的最小值_可_在某些情况下被超越 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 最小允许宽度大小组件 。 |
 | height | number | 是 | "width" | 大小组件的最小允许高度。 如果不给出, 它会使用 `width` 。 |
@@ -624,7 +624,7 @@ None - 母端夹宽度和高度。 WIDTH_ CONTROLS_HEIGH - 母端夹长度。 HE
 如果此大小组件有父集, 且侧面模式为 `fit` 或 `envelop`, 那么给定的大小将被夹在父集指定的范围 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | width | number | 是 | 0 | 大小组件的新宽度 。 |
 | height | number | 是 | "width" | 大小组件的新高度。 如果不给出, 它将会使用 `width` 。 |
@@ -655,7 +655,7 @@ None - 母端夹宽度和高度。 WIDTH_ CONTROLS_HEIGH - 母端夹长度。 HE
 必要时,调用这种方法会自动重新计算`width`和`height`.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | snapWidth | number | 是 | 0 | 宽度的大小。 如果您不想宽度的大小, 则通过 0 值 。 |
 | snapHeight | number | 是 | "snapWidth" | 将高度调高到的数值。 如果不提供, 它将使用 `snapWidth` 值。 如果您不想调高, 请通过 0 值 。 |

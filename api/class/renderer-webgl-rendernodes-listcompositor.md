@@ -57,15 +57,15 @@ ListCompositor
 如果一个孩子的混合模式与上一个孩子不同, 此会分配一个新的“ 显示” 。 如果正在进行中, 这将启动新的批次 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | displayContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 |  | 目前使用的上下文 。 |
-| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 儿童名单。 |
-| parentTransformMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 母游戏对象的累积变换矩阵,当此列表作为嵌入式显示结构的一部分被渲染出来时,会传递下来. |
+| children | Array.\<[Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject)> | 否 |  | 子对象列表。 |
+| parentTransformMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 |  | 父游戏对象的累积变换矩阵,当此列表作为嵌入式显示结构的一部分被渲染出来时,会传递下来. |
 | renderStep | number | 是 | 0 | 当前在此框架执行的渲染函数列表中显示的渲染步骤索引 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.RenderNode#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/ListCompositor.js#L35](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/ListCompositor.js#L35)  

@@ -324,7 +324,7 @@ var converted = CounterClockwise(gameobject.rotation);
 旋转 `currentAngle` 向 `targetAngle`,使用最短的旋转距离。 `lerp` 参数是此调用中要旋转的金额。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | currentAngle | number | 否 |  | 以弧度表示的当前角度. |
 | targetAngle | number | 否 |  | 目标角度旋转到弧度 |

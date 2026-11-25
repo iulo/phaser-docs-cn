@@ -17,7 +17,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | ---- | ---- | -------- | ----------- |
 | world | [Phaser.Physics.Matter.World](/api/class/physics-matter-world) | 否 | 该机构属于物质世界实例。 |
 | tile | [Phaser.Tilemaps.Tile](/api/class/tilemaps-tile) | 否 | 目标瓦,应该有一个物质体。 |
-| options | [Phaser.Types.Physics.Matter.MatterTileOptions](/api/typedef/types-physics-matter#mattertileoptions) | 是 | 创建 Matter 天体时要使用的选项 。 |
+| options | [Phaser.Types.Physics.Matter.MatterTileOptions](/api/typedef/types-physics-matter#mattertileoptions) | 是 | 创建 Matter 物理体时要使用的选项 。 |
 
 ---
 
@@ -64,7 +64,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-与身体相关的瓷砖物体.
+与物理体相关的瓦片物体.
 
 
 > 源码：[src/physics/matter-js/MatterTileBody.js#L70](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterTileBody.js#L70)  
@@ -80,7 +80,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-身体存在于物质世界里
+物理体存在于物质世界里
 
 
 > 源码：[src/physics/matter-js/MatterTileBody.js#L79](https://github.com/phaserjs/phaser/blob/v4.1.0/src/physics/matter-js/MatterTileBody.js#L79)  
@@ -209,10 +209,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-摧毁这个 TileBody, 从 Mater 世界上移除当前天体, 清除砖块上的引用, 并删除所有事件听众 。
+摧毁这个 TileBody, 从 Mater 世界上移除当前物理体, 清除砖块上的引用, 并删除所有事件监听器 。
 
 
-**Overrides:** Phaser.Events.EventEmitter#销毁
+**重写:** Phaser.Events.EventEmitter#销毁
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 此 TileBody 对象 。
@@ -231,7 +231,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-从TileBody和物质世界中移除当前身体。
+从TileBody和物质世界中移除当前物理体。
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 此 TileBody 对象 。
@@ -250,13 +250,13 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将当前正文设置为给定正文。 如果已存在, 这将删除上一个正文 。
+将当前物理体设置为给定物理体。 如果已存在, 这将删除上一个物理体 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | body | MatterJS.BodyType | 否 |  | 新的物质体要使用。 |
-| addToWorld | boolean | 是 | true | 是否要将身体添加到物质世界中. |
+| addToWorld | boolean | 是 | true | 是否要将物理体添加到物质世界中. |
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 此 TileBody 对象 。
@@ -275,14 +275,14 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置当前与 Tile 相关的碰撞组的天体。 这通常会设置在 Tiled 的碰撞编辑器中 。
+设置当前与 Tile 相关的碰撞组的物理体。 这通常会设置在 Tiled 的碰撞编辑器中 。
 
 注:物质不支持斜拉面的所有形状,矩形和多边形直接支持,椭圆形被转换成圆形。多线被当做封闭多边形对待。如果一个瓦片有多个形状,则会创建多段形。如果包含多解库,则支持凸轮形状。解构不保证为复杂形状(如孔)工作,所以将凸轮多边形自行分解成多个凸轮多边形往往最好。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| options | [Phaser.Types.Physics.Matter.MatterBodyTileOptions](/api/typedef/types-physics-matter#matterbodytileoptions) | 是 | 创建 Matter 天体时要使用的选项。 有关 MatterJS. Body 接受什么的列表请参见 MatterJS. Body 。 |
+| options | [Phaser.Types.Physics.Matter.MatterBodyTileOptions](/api/typedef/types-physics-matter#matterbodytileoptions) | 是 | 创建 Matter 物理体时要使用的选项。 有关 MatterJS. Body 接受什么的列表请参见 MatterJS. Body 。 |
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 此 TileBody 对象 。
@@ -301,12 +301,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-将当前正文设置为与瓷砖的界限相匹配的矩形。
+将当前物理体设置为与瓦片的界限相匹配的矩形。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
-| options | [Phaser.Types.Physics.Matter.MatterBodyTileOptions](/api/typedef/types-physics-matter#matterbodytileoptions) | 是 | 创建 Matter 天体时要使用的选项。 有关 MatterJS. Body 接受什么的列表请参见 MatterJS. Body 。 |
+| options | [Phaser.Types.Physics.Matter.MatterBodyTileOptions](/api/typedef/types-physics-matter#matterbodytileoptions) | 是 | 创建 Matter 物理体时要使用的选项。 有关 MatterJS. Body 接受什么的列表请参见 MatterJS. Body 。 |
 
 
 **返回值:** [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody) - 此 TileBody 对象 。

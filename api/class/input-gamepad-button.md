@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Button(pad, index, [isPressed])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | pad | [Phaser.Input.Gamepad.Gamepad](/api/class/input-gamepad-gamepad) | 否 |  | 提到这个按钮属于Gamepad. |
 | index | number | 否 |  | 此按钮的索引 。 |

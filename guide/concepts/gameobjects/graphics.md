@@ -28,7 +28,7 @@ graphics.strokeRect(50, 50, 400, 200);
 
 如你所知,图形对象有点相互权衡。虽然它们非常有用,但游戏中需要小心其复杂性和数量。
 
-## 基本使用 {#basic-usage}
+## 基本用法 {#basic-usage}
 
 ### 添加图形对象 {#add-graphics-object}
 
@@ -384,7 +384,7 @@ var arc = this.add.arc(
     arc.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -404,10 +404,10 @@ var arc = this.add.arc(
     arc.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`arc.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha}
+#### 不透明度（Alpha） {#alpha}
 
 - Get
 
@@ -604,7 +604,7 @@ var circle = this.add.circle(x, y, radius, fillColor);
     circle.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -624,10 +624,10 @@ var circle = this.add.circle(x, y, radius, fillColor);
     circle.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`circle.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-1}
+#### 不透明度（Alpha） {#alpha-1}
 
 - Get
 
@@ -771,7 +771,7 @@ var curve = this.add.curve(x, y, path, fillColor);
     curve.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -791,10 +791,10 @@ var curve = this.add.curve(x, y, path, fillColor);
     curve.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`curve.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-2}
+#### 不透明度（Alpha） {#alpha-2}
 
 - Get
 
@@ -912,7 +912,7 @@ var ellipse = this.add.ellipse(x, y, width, height, fillColor);
     ellipse.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -932,10 +932,10 @@ var ellipse = this.add.ellipse(x, y, width, height, fillColor);
     ellipse.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`ellipse.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-3}
+#### 不透明度（Alpha） {#alpha-3}
 
 - Get
 
@@ -1114,7 +1114,7 @@ var grid = this.add.grid(
     grid.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -1174,10 +1174,10 @@ var grid = this.add.grid(
     grid.setOutlineStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`grid.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-4}
+#### 不透明度（Alpha） {#alpha-4}
 
 - Get
 
@@ -1292,10 +1292,10 @@ var isoBox = this.add.isobox(
 
   - 装上`showTop`,`showLeft`,`showRight`:设置`true`,以显示面部.
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`isoBox.setFillStyle(fillTop, fillLeft, fillRight)`来改变颜色.
 
-#### 阿尔法 {#alpha-5}
+#### 不透明度（Alpha） {#alpha-5}
 
 - Get
 
@@ -1444,10 +1444,10 @@ var isoTriangle = this.add.isotriangle(
 
   - 装上`showTop`,`showLeft`,`showRight`:设置`true`,以显示面部.
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`isoTriangle.setFillStyle(fillTop, fillLeft, fillRight)`来改变颜色.
 
-#### 阿尔法 {#alpha-6}
+#### 不透明度（Alpha） {#alpha-6}
 
 - Get
 
@@ -1536,7 +1536,7 @@ var mask = isoTriangle.createGeometryMask();
 
 ### 行线 {#line}
 
-线形允许您在游戏中绘制两点之间的线条。 您可以控制线条的中风颜色和厚度。 在 WebGL 中, 您只能指定线条的起始和结尾的厚度, 允许您渲染线条的自启动 。
+线形允许您在游戏中绘制两点之间的线条。 您可以控制线条的描边颜色和厚度。 在 WebGL 中, 您只能指定线条的起始和结尾的厚度, 允许您渲染线条的自启动 。
 
 如果您需要绘制序列中的多行,您可能希望使用 [Polygon Shape](#polygon) 来代替 。
 
@@ -1597,7 +1597,7 @@ var line = this.add.line(x, y, x1, y1, x2, y2, strokeColor);
     line.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -1617,10 +1617,10 @@ var line = this.add.line(x, y, x1, y1, x2, y2, strokeColor);
     line.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`line.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-7}
+#### 不透明度（Alpha） {#alpha-7}
 
 - Get
 
@@ -1756,7 +1756,7 @@ var polygon = this.add.polygon(x, y, points, fillColor);
     polygon.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -1776,10 +1776,10 @@ var polygon = this.add.polygon(x, y, points, fillColor);
     polygon.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`polygon.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-8}
+#### 不透明度（Alpha） {#alpha-8}
 
 - Get
 
@@ -1904,7 +1904,7 @@ var rect = this.add.rectangle(x, y, width, height, fillColor);
     rect.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -1924,10 +1924,10 @@ var rect = this.add.rectangle(x, y, width, height, fillColor);
     rect.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`rect.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-9}
+#### 不透明度（Alpha） {#alpha-9}
 
 - Get
 
@@ -2067,7 +2067,7 @@ var star = this.add.star(x, y, points, innerRadius, outerRadius, fillColor);
     star.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -2087,10 +2087,10 @@ var star = this.add.star(x, y, points, innerRadius, outerRadius, fillColor);
     star.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`star.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-10}
+#### 不透明度（Alpha） {#alpha-10}
 
 - Get
 
@@ -2256,7 +2256,7 @@ var triangle = this.add.triangle(x, y, x1, y1, x2, y2, x3, y3, fillColor);
     triangle.setFillStyle();
     ```
 
-- 划线颜色
+- 描边颜色
 
   - Get
 
@@ -2276,10 +2276,10 @@ var triangle = this.add.triangle(x, y, x1, y1, x2, y2, x3, y3, fillColor);
     triangle.setStrokeStyle();
     ```
 
-警告"不要用任何手段"
+此对象没有着色（Tint）方法。
 使用`triangle.setFillStyle(color, alpha)`来改变颜色.
 
-#### 阿尔法 {#alpha-11}
+#### 不透明度（Alpha） {#alpha-11}
 
 - Get
 

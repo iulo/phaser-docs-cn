@@ -55,7 +55,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回一个矢量2对象,其中包含一个点的坐标,该点根据给定角度环绕圆圈。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -175,7 +175,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 复制本 `x`, `y` 财务报告和已审计财务报表 `radius` 从“属性”中 `source` 圆圈进入给定 `dest` 圆形,然后返回 `dest` 圆.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -225,7 +225,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回圆形对象的界限。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -252,7 +252,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回一个矢量2物体,其中含有一个点的坐标,该点以给定角度为基础,使圆周的圆周度正常化到0至1. I. 即0.5的值会在圆周180度时给出点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -305,7 +305,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 以给出的值来抵消圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -333,7 +333,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 以矢量2对象的`x`和`y`属性中给出的值来抵消圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -360,7 +360,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回一个来自指定圆内任意位置的分布一致的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -433,7 +433,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回一个矢量2,其中包含一个点的坐标,这个点根据给定角度在椭圆上。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -553,7 +553,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 复制本 `x`, `y`, `width` 财务报告和已审计财务报表 `height` 从“属性”中 `source` 椭圆进入给定 `dest` 椭圆,然后返回 `dest` 椭圆形.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -603,7 +603,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回椭圆对象的界限。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -630,7 +630,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回一个矢量2物体,其中含有一个点的坐标,该点在椭圆周长上,基于给定角度的正态化到0到1之间,即0.5的值会在椭圆周围180度给出点.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -658,7 +658,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 返回含有椭圆周轴周围点坐标的矢量2对象阵列,以给定的数量或stepRate值为基础。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -687,7 +687,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 以给出的数值来抵消椭圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -715,7 +715,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 以矢量2对象的`x`和`y`属性中给出的值来抵消椭圆。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -742,7 +742,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 从给定椭圆内的任何位置返回一个统一分布的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -892,7 +892,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 矢量3的`z`属性包含参数的`t`值(0到1之间的一个标尺),代表着`line1`的交汇点发生多远,可用于排序或比较多个交叉结果,从一组线段找到最接近的交叉点.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line1 | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 第一条线段,或一线,以检查. |
 | line2 | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 第二行段要检查. |
@@ -923,7 +923,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 `x`和`y`组件包含交汇点,`z`组件包含最近的距离.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线段,或射线,以检查。如果有射线,则将 `isRay` 参数设置为 `true` 。 |
 | points | Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> \| Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> | 否 |  | 一系列要检查的点 。 |
@@ -954,7 +954,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 `x`和`y`组件包含交汇点. `z`组件包含最近的距离. `w`组件包含特定阵列中触发交汇的多边形索引.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线段,或射线,以检查。如果有射线,则将 `isRay` 参数设置为 `true` 。 |
 | polygons | [Phaser.Geom.Polygon](/api/class/geom-polygon) \| Array.\<[Phaser.Geom.Polygon](/api/class/geom-polygon)> | 否 |  | 要检查的是一个单一的多边形, 或多边形的数组 。 |
@@ -1038,7 +1038,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 如果矩形物体作为`output`传递,并且有交叉点,则会将交叉区数据加载到其中并返回。如果没有交叉点,则不作任何修改。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1276,7 +1276,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 假设线端点是圆形的,而不是方形的.
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | point | [Phaser.Math.Vector2](/api/class/math-vector2) \| any | 否 |  | 点,或类似点的物体来检查. |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 测试交汇点的线段开始. |
@@ -1373,7 +1373,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 检查矩形是否与由明确的左、右、上和下边界值定义的区域相交。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | rect | [Phaser.Geom.Rectangle](/api/class/geom-rectangle) | 否 |  | 检查交叉点的矩形 。 |
 | left | number | 否 |  | 区域左边缘的x坐标以检查是否对应. |
@@ -1501,7 +1501,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 电话 `start` 财务报告和已审计财务报表 `end` 点数在此运行前随算法对整数起作用而四舍五入。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线条. |
 | stepRate | number | 是 | 1 | 控制沿线对点进行取样的密度。一个值为 1 返回每个整数坐标;一个值为 2 返回其他坐标,等等。 |
@@ -1570,7 +1570,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/fun
 
 复制一行的值到目的地行 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1663,12 +1663,12 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 注意,如果您提供了串联阈值,所产生的阵列可能并不总是包含`quantity`点.
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | line | [Phaser.Geom.Line](/api/class/geom-line) | 否 |  | 线条对象. |
 | ease | string \| function | 否 |  | 使用方便。 这可以是 EaseMap 的字符串, 也可以是自定义函数 。 |
@@ -1693,7 +1693,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 获取给定线的中点 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1720,7 +1720,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 将指定线段定义的无限线上最接近点到指定点。请注意,返回点将投射到全线上,而不是夹在段端点上。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1750,7 +1750,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 线的正常是从它中指向垂直的矢量.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1777,7 +1777,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 获得一个点的线,这个线的长度是一定的百分数.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1811,7 +1811,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 另见`GetEasedPoints`,以按照易性类型或输入函数将点数分布到横线的方法.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -1973,7 +1973,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 将给定线的端点都通过指定的水平和垂直量翻译,在保留长度和角度的同时,有效将线向2D空间中的新位置移动.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2023,7 +2023,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 返回给定行上的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2073,7 +2073,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度的给定角度绕其中点旋转一条线。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2100,7 +2100,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度以给定角度绕一个点旋转一条线 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2128,7 +2128,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 以弧度以给定角度绕给定坐标旋转一条线 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2157,7 +2157,7 @@ const points = Phaser.Geom.Line.GetEasedPoints(line, 'sine.out', 32)
 
 设置一条线到给定的位置、角度和长度。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2340,7 +2340,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 更多信息见[https://github.com/mapbox/earcut](https://github.com/mapbox/earcut)
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | Array.\<number> | 否 |  | 一个平坦的顶点坐标阵列,如\[x0,y0,x1,y1,x2,y2,.\] |
 | holeIndices | Array.\<number> | 是 |  | 如果有孔指数阵列(例如12顶点输入的[5, 8]),则指一个孔有顶点5-7,另一个孔有8-11。 |
@@ -2363,7 +2363,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 计算多边形的边界 AABB 矩形。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2390,7 +2390,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 将一个多边形的所有点存储到一个按照顺序\[x,y,x,y,x\]排列的平整数组中,即多边形的每个点,按照定义的顺序,对应该点的X和Y坐标的后产生的数组的两个元素.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2464,7 +2464,7 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 反转多边形点的顺序。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2490,12 +2490,12 @@ var deviation = earcut.deviation(vertices, holes, dimensions, triangles);
 
 取一个多边形对象,并通过道格拉斯-佩克和拉达尔远程算法的组合来运行来简化点数。简化在保留多边形形状的同时会大幅降低点数,在处理时会给予巨大的性能助推,同时也会减少视觉噪声。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | polygon | [Phaser.Geom.Polygon](/api/class/geom-polygon) | 否 |  | 要简化的多边形。 多边形将按原位修改并返回。 |
 | tolerance | number | 是 | 1 | 影响简化的量(与点坐标相同的度量). |
@@ -2522,7 +2522,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 多边形在位置上被修改,并返回相同的多边形对象。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2548,7 +2548,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 翻译给定的多边形的点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2600,7 +2600,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 绕一个矩形的位置,其最小整数大于或等于每个电流坐标。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2626,7 +2626,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 圆形矩形的位置和大小,以大于或等于每个相应值的最小整数为限。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2652,7 +2652,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 移动矩形左上角,使其中心位于给定坐标。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2772,7 +2772,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 将一个矩形的值复制到一个目的地矩形。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2847,7 +2847,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 与`FitOutside`函数不同,源区内部可能有一些空间没有覆盖.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2876,7 +2876,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 与`FitInside`函数不同,目标矩形可能比源头更远的延伸.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2903,7 +2903,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 向下(地板)圆,向下(底),向下(底),向下(底),向下(底),向下),向下(底),向下(底),向下),向下(底),向下(底),向下),向下(底),向下(底),向下),向下(底),向下),向下(底),向下(底),向下),向下(底),向下(底),向下(底),向下),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下(底),向下,向下(底),向下(底),向下,向下),向下(底,向下),向下(底),向上),向上(底),向下(底),向下),(底,向上(底),向下),(底),(底,(底),向下),向下(底,向下),向下(底(底),(底),向下),向下),(底,(底,(底,(底),(底),(底),(底),(底,(底),(底),(底)/底),(底),(底),(底(底)和(底),(底),(底),(底),向上),(底),(底),(底),(底),(底),向(底),(底),(底),(底),(底),(底),(底),(底),(底),(底),
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2929,7 +2929,7 @@ Chaikin的算法是一种切角技术,它用沿边的两个新点位置来取代
 
 圆矩形的位置和大小下至最大整数小于或等于每个电流坐标或维度。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2965,7 +2965,7 @@ const points = [
 ]
 ```
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -2992,7 +2992,7 @@ const points = [
 
 创建最小的矩形, 包含两个坐标对 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3044,7 +3044,7 @@ const points = [
 
 返回矩形中心作为点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3075,7 +3075,7 @@ const points = [
 
 0或1值返回矩形左上角的点,0.5值返回矩形右下角的点。0至0.5值位于上方或右侧,0.5至1值位于下方或左侧。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3103,7 +3103,7 @@ const points = [
 
 从矩形的周长返回一个矢量2的数组点,每个点根据所需数量或步骤而间隔.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3132,7 +3132,7 @@ const points = [
 
 返回矩形的大小, 以矢量2 对象表示。 以 `width` 的值为 `x` 属性, 以 `height` 属性为 `y` 属性。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3161,7 +3161,7 @@ const points = [
 
 矩形的中心保持不变,金额被加到两侧,所以实际的宽度或高度的增加比相应的参数大2倍.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3189,7 +3189,7 @@ const points = [
 
 需要两个矩形并首先检查它们是否交叉。 如果它们相交, 则返回`out`矩形中的交叉区域。 如果它们不相交, `out`矩形的宽度和高度为0 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3219,7 +3219,7 @@ const points = [
 
 您可以通过提供每个点之间的像素`step`距离来控制点间距, 或者指定在全周周周周平均分布点的`quantity`。 如果省略了两者, 则返回空阵列。 如果提供了`step`, `quantity` 则从周周长中导出, 由该步位除以。 如果只提供了 `quantity`, 则取而代之 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3248,7 +3248,7 @@ const points = [
 
 将矩形与点列表合并,重新定位和/或重新调整大小,使所有点都位于其界限或界限内。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3275,7 +3275,7 @@ const points = [
 
 将源矩合并到目标矩形中并返回目标。两个矩形都不应该有负宽度或高度。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3302,7 +3302,7 @@ const points = [
 
 通过重新定位和/或重新调整大小将矩形与点合并,使点处于或在其界限内。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3330,7 +3330,7 @@ const points = [
 
 以给定的横向和纵向数量翻译一个矩形,在保留其大小的同时移动其位置。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3358,7 +3358,7 @@ const points = [
 
 用翻译向量的坐标翻译矩形左上角。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3430,7 +3430,7 @@ const points = [
 
 返回一个点,从矩形的周界,以给定角度为基础,从矩形的中心以度数测量。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3458,7 +3458,7 @@ const points = [
 
 返回矩形内的随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3485,7 +3485,7 @@ const points = [
 
 计算位于 `outer` 矩形,但外侧 `inner` 矩形。 内矩形必须完全包含在外矩形内才能产生点。 如果 `inner` 尚未完全纳入 `outer`,函数返回 `out` 矢量不变。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3536,7 +3536,7 @@ const points = [
 
 以给定的因子缩放给定的矩形的宽度和高度。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3564,7 +3564,7 @@ const points = [
 
 创建新的矩形或重新定位和/或调整已有矩形的大小,使其包含两个给定的矩形,即计算它们的结合。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3640,12 +3640,12 @@ const points = [
 
 然后返回三角形的数组,其中给定的顶点已分解成一系列三角形。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | array | 否 |  | 平坦的顶点数组坐标,如 \[x0,y0, x1,y1, x2,y2,...\] |
 | holes | array | 是 | null | 如果有孔指数阵列(例如12顶点输入的[5, 8]),则指一个孔有顶点5-7,另一个孔有8-11。 |
@@ -3695,7 +3695,7 @@ const points = [
 
 定位三角,使其以给定坐标为中心。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3726,7 +3726,7 @@ const points = [
 
 中间体是其三个中位数(从顶点到对面的两段线)在三角交汇的点,它以2:1的比例将每个中间体分成.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3755,7 +3755,7 @@ const points = [
 
 改编自 [http://bjornharrtell.github.io/jsts/doc/api/jsts_geom_Triangle.js.html](http://bjornharrtell.github.io/jsts/doc/api/jsts_geom_Triangle.js.html)
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3784,7 +3784,7 @@ const points = [
 
 改编自 [https://gist.github.com/mutoo/5617691](https://gist.github.com/mutoo/5617691)
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3860,7 +3860,7 @@ const points = [
 如果 `returnFirst` 是真的, 则返回只包含三角形内所提供阵列中第一个点的阵列( 或如果没有这样的点, 则返回空阵列) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | triangle | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 |  | 检查点的三角形 |
 | points | Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> | 否 |  | 要检查它们是否位于三角形之内, 需要一系列的矢量2 对象 。 |
@@ -3907,7 +3907,7 @@ const points = [
 
 复制一个三角的值到目的地三角 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -3982,7 +3982,7 @@ const points = [
 
 `position`参数是一个0到1之间的值,其中0到1都映射到A线(第一个顶点)的起始点,该点通过绕过三角形的周长来计算,顺序是:A线,然后是B线,然后是C线.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4012,7 +4012,7 @@ const points = [
 
 点沿三角形的三边排列顺序(A,B,然后C),其位置根据总周长按比例计算.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4041,7 +4041,7 @@ const points = [
 
 计算三角形物体的中间位置。这是其三个角双扇形交汇的点,也是圆圈的中心,即三角形内嵌的圆圈。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4068,7 +4068,7 @@ const points = [
 
 以给定的偏移移动三角的每个点(顶点),从而以偏移移动整个三角。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4118,7 +4118,7 @@ const points = [
 
 从给定三角区域范围内返回随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4145,7 +4145,7 @@ const points = [
 
 旋转三角形的中间点,这是其三角双扇交汇点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4172,7 +4172,7 @@ const points = [
 
 在一个给定的矢量2 点上以一定角度旋转三角形。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -4200,7 +4200,7 @@ const points = [
 
 在一个特定点上以特定角度旋转整个三角。
 
-**Tags:**
+**标签:**
 
  - generic
 

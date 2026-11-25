@@ -4,7 +4,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 定时器事件代表延迟函数调用。 它由 Scene 的 [Clock](https://phaser.io/oss/docs/api-documentation/class/Clock.md) 管理, 并在设定的时间量过后调用它的职能。 定时器事件可以可选择重复, 即完成前多次调用它的职能, 或者无限循环 。
 
-由于它由时钟管理,一个时钟事件基于游戏时间,会受到其时钟的时间尺度的影响,如果其时钟暂停,则会暂停.
+由于它由时钟管理,一个时钟事件基于游戏时间,会受到其时钟的时间缩放倍率的影响,如果其时钟暂停,则会暂停.
 
 **构造函数**
 
@@ -98,7 +98,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 时间事件开始后 以毫秒的速度计算
 
-此值是时钟事件本地值, 相对于它的时钟值。 因此, 它受到时钟的时间尺度和暂停状态, 时钟事件初始的 [#startAt](#startAt) 属性, 以及时钟事件 [#timeScale](#timeScale) 和 [#paused](#paused) 状态的影响 。
+此值是时钟事件本地值, 相对于它的时钟值。 因此, 它受到时钟的时间缩放倍率和暂停状态, 时钟事件初始的 [#startAt](#startAt) 属性, 以及时钟事件 [#timeScale](#timeScale) 和 [#paused](#paused) 状态的影响 。
 
 
 > 源码：[src/time/TimerEvent.js#L119](https://github.com/phaserjs/phaser/blob/v4.1.0/src/time/TimerEvent.js#L119)  
@@ -212,7 +212,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-用于更新此计时器事件的时间尺度因子。 大于1 的值会让事件更快点火, 而低于1 的值会延迟点火。 时间尺度独立于时钟本身的时间尺度, 并随时间尺度的乘以。
+用于更新此计时器事件的时间缩放倍率因子。 大于1 的值会让事件更快点火, 而低于1 的值会延迟点火。 时间缩放倍率独立于时钟本身的时间缩放倍率, 并随时间缩放倍率的乘以。
 
 
 > 源码：[src/time/TimerEvent.js#L99](https://github.com/phaserjs/phaser/blob/v4.1.0/src/time/TimerEvent.js#L99)  
@@ -424,7 +424,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 迫使计时器事件立即到期,从而安排在下一个框架中删除。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | dispatchCallback | boolean | 是 | false | 如果 `true`,在删除前将调用计时器事件的功能. |
 

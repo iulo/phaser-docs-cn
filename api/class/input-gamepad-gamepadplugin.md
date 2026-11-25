@@ -61,7 +61,7 @@ this.input.gamepad.once('connected', function (pad) {
 
 **说明:**
 
-如果启用 Gamepad 管理器, 则控制布尔值。 可以切换到苍蝇上 。
+如果启用 Gamepad 管理器, 则控制布尔值。 可以在运行时切换 。
 
 
 > 源码：[src/input/gamepad/GamepadPlugin.js#L98](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/GamepadPlugin.js#L98)  

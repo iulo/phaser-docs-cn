@@ -263,10 +263,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-内部破坏处理器,作为破坏过程的一部分而叫作.
+销毁对象时调用的内部处理函数。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/gameobjects/shape/Shape.js#L391](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/shape/Shape.js#L391)  
@@ -284,7 +284,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 设定此形状路径在中键渲染时是否关闭 。 注意一些形状总是在中键时关闭( 如椭圆形状) 。
 
-这个电话可以被锁起来。
+此方法支持链式调用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -310,7 +310,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 通过调整形状的显示像素大小来设定此形状的大小 `scaleX` 财务报告和已审计财务报表 `scaleY` 属性相对于其本地宽度和高度。这相当于调用 `setScale` 但允许您指定像素中想要的渲染维度,而不是比例乘数。
 
-这个电话可以被锁起来。
+此方法支持链式调用。
 
 **参数:**
 | 名称 | 类型 | 可选 | 说明 |
@@ -341,10 +341,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 注意一些形状不支持填充颜色,例如行形状.
 
-这个电话可以被锁起来。
+此方法支持链式调用。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | color | number | 是 |  | 填充此形状所用的颜色。 如果不提供形状, 则不会填充 。 |
 | alpha | number | 是 | 1 | 如果给填充颜色, 填充此形状时所用的α值 。 |
@@ -366,20 +366,20 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-设置此形状的中风颜色和α 。
+设置此形状的描边颜色和α 。
 
 如果您不希望形状被中键, 那就使用这种方法, 没有参数, 或者将 `isStroked` 设置为 `false` 。
 
 注意一些形状不支持被中键,例如Iso Box形状.
 
-这个电话可以被锁起来。
+此方法支持链式调用。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | lineWidth | number | 是 |  | 中键的线宽。 如果不提供或未定义形状, 将不会中键 。 |
 | color | number | 是 |  | 用于中转此形状的颜色。 如果不提供形状, 则不会被中转 。 |
-| alpha | number | 是 | 1 | 如果给定了中风颜色, 拖动此形状时所用的α值 。 |
+| alpha | number | 是 | 1 | 如果给定了描边颜色, 拖动此形状时所用的α值 。 |
 
 
 **返回值:** [Phaser.GameObjects.Shape](/api/class/gameobjects-shape) - 此游戏对象实例 。
@@ -757,7 +757,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 **说明:**
 
-此形状所用的中风颜色, 作为六进制值( 如 0x00ff00 for green) 。 仅当使用时 。 `isStroked` 谓 `true`设置。 `setStrokeStyle`.
+此形状所用的描边颜色, 作为六进制值( 如 0x00ff00 for green) 。 仅当使用时 。 `isStroked` 谓 `true`设置。 `setStrokeStyle`.
 
 
 > 源码：[src/gameobjects/shape/Shape.js#L125](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/shape/Shape.js#L125)  

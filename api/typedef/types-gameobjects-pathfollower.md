@@ -9,7 +9,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 路径跟踪器的设置 。
 
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | duration | number | 是 | 1000 | 路径持续时间以毫秒计。 必须是 `> 0` 。 |
 | from | number | 是 | 0 | 路径的起始位置在0到1之间,必须小于`to`. |
@@ -21,7 +21,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/typ
 
 **类型**: object
 
-**Member of**: Phaser.Types.GameObjects.PathFollower
+**所属**: Phaser.Types.GameObjects.PathFollower
 > 源码：[src/gameobjects/pathfollower/typedefs/PathConfig.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/gameobjects/pathfollower/typedefs/PathConfig.js#L1)  
 引入版本：3.0.0
 

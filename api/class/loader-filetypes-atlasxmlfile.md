@@ -16,10 +16,10 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | 名称 | 类型 | 可选 | 说明 |
 | ---- | ---- | -------- | ----------- |
 | loader | [Phaser.Loader.LoaderPlugin](/api/class/loader-loaderplugin) | 否 | 引用此文件的加载器 。 |
-| key | string \| [Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig) | 否 | 此文件使用的密钥, 或文件配置对象 。 |
+| key | string \| [Phaser.Types.Loader.FileTypes.AtlasXMLFileConfig](/api/typedef/types-loader-filetypes#atlasxmlfileconfig) | 否 | 此文件使用的键, 或文件配置对象 。 |
 | textureURL | string \| Array.\<string> | 是 | 装入纹理图像文件的绝对或相对 URL。 如果未定义或 `null` , 则会设置为 `<key>.png`, 即如果 `key` 是"外国人", 那么 URL 将是"外国人. png" 。 |
 | atlasURL | string | 是 | 从中加载纹理图集 xml 数据文件的绝对或相对的 URL 。 如果未定义或 `null` , 则它将被设定为 `<key>.xml` , 即如果 `key` 是"外国人" , 那么 URL 将是 "alien. xml" 。 |
-| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换装入器默认 XHR 设置 。 |
+| textureXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于地图集图像文件的 XHR 设置配置对象。 用于替换资源加载器默认 XHR 设置 。 |
 | atlasXhrSettings | [Phaser.Types.Loader.XHRSettingsObject](/api/typedef/types-loader#xhrsettingsobject) | 是 | 用于替换加载器默认 XHR 设置的 XHR 设置对象 。 |
 
 ---

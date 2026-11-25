@@ -99,7 +99,7 @@ static
 在一个给定的游戏对象上执行渲染操作的函数。 通常这是游戏对象本身的 `renderWebGL` 方法, 但是 `Phaser.GameObjects.Components.RenderSteps` 允许您定义一系列按顺序运行的步骤。 该函数不会在任何特定范围内运行, 因此它不应该使用 `this` 。 相反, 所有所需的属性都应该通过 `gameObject` 访问 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | renderer | [Phaser.Renderer.WebGL.WebGLRenderer](/api/class/renderer-webgl-webglrenderer) | 否 |  | 参考当前活动WebGL渲染器. |
 | gameObject | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 |  | 此调用中正在提供游戏对象 。 |

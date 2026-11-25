@@ -2,7 +2,7 @@
 
 Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/class/renderer-webgl-wrappers-webglprogramwrapper)
 
-环绕 a WebGL 阴影程序,即GPU侧面程序,由顶点阴影和片段阴影编译。这些阴影程序共同定义几何的变形方式以及几何中每个像素的颜色。 Phaser的,因为 WebGL 渲染器由WebGLProgramWrapper支持.
+环绕 a WebGL 着色器程序,即GPU侧面程序,由顶点阴影和片段阴影编译。这些着色器程序共同定义几何的变形方式以及几何中每个像素的颜色。 Phaser的,因为 WebGL 渲染器由WebGLProgramWrapper支持.
 
 除了持有编译的程序,这个包装器管理了相关的WebGL资源的整个生命周期:它跟踪顶点属性位置和布局,存储统一值,并在程序被绑定用于绘图时,排队使用统一更新请求.
 

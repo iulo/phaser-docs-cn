@@ -11,7 +11,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 `new Triangle([x1], [y1], [x2], [y2], [x3], [y3])`
 
 **参数**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x1 | number | 是 | 0 | `x` 坐标为第一点。 |
 | y1 | number | 是 | 0 | `y` 坐标为第一点。 |
@@ -89,12 +89,12 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 然后返回三角形的数组,其中给定的顶点已分解成一系列三角形。
 
-**Tags:**
+**标签:**
 
  - generic
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | data | array | 否 |  | 平坦的顶点数组坐标,如 [x0,y0, x1,y1, x2,y2,...] |
 | holes | array | 是 | null | 12个顶点输入的孔指数(如[5,8])是指一个顶点5-7的孔,另一个顶点8-11的孔。 |
@@ -148,7 +148,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 定位三角,使其以给定坐标为中心。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -181,7 +181,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 中间体是其三个中位数(从顶点到对面的两段线)在三角交汇的点,它以2:1的比例将每个中间体分成.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -212,7 +212,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 改编自 [http://bjornharrtell.github.io/jsts/doc/api/jsts_geom_Triangle.js.html](http://bjornharrtell.github.io/jsts/doc/api/jsts_geom_Triangle.js.html)
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -243,7 +243,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 改编自 [https://gist.github.com/mutoo/5617691](https://gist.github.com/mutoo/5617691)
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -350,7 +350,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 如果 `returnFirst` 是真的, 则返回只包含三角形内所提供阵列中第一个点的阵列( 或如果没有这样的点, 则返回空阵列) 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | triangle | [Phaser.Geom.Triangle](/api/class/geom-triangle) | 否 |  | 检查点的三角形 |
 | points | Array.\<[Phaser.Math.Vector2](/api/class/math-vector2)> | 否 |  | 要检查它们是否位于三角形之内, 需要一系列的矢量2 对象 。 |
@@ -401,7 +401,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 复制一个三角的值到目的地三角 。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -480,7 +480,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个与此三角形的 A 线相对应的线对象, 从顶点 1 运行( Q)`x1`, `y1`)到顶点2(`x2`, `y2`).
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -508,7 +508,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个与此三角形的B线相对应的线对象,运行于顶点 2 ()`x2`, `y2`)到顶点3(`x3`, `y3`).
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -536,7 +536,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回一个与这个三角形的C线相对应的线对象,运行于顶点 3 ()`x3`, `y3`返回顶点 1 ()`x1`, `y1`),关闭形状.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -564,7 +564,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 返回三角形周边某个特定正常化位置的点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -595,7 +595,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 `position`参数是一个0到1之间的值,其中0到1都映射到A线(第一个顶点)的起始点,该点通过绕过三角形的周长来计算,顺序是:A线,然后是B线,然后是C线.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -625,7 +625,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 计算三角形周边分布均匀点的列表。或者通过点数生成(`quantity`),或者通过连续点之间的距离(`stepRate`)。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -657,7 +657,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 点沿三角形的三边排列顺序(A,B,然后C),其位置根据总周长按比例计算.
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -688,7 +688,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从三角形区域内返回随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -716,7 +716,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 计算三角形物体的中间位置。这是其三个角双扇形交汇的点,也是圆圈的中心,即三角形内嵌的圆圈。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -745,7 +745,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 以给定的偏移移动三角的每个点(顶点),从而以偏移移动整个三角。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -799,7 +799,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 从给定三角区域范围内返回随机点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -828,7 +828,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 旋转三角形的中间点,这是其三角双扇交汇点。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -857,7 +857,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在一个给定的矢量2 点上以一定角度旋转三角形。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -887,7 +887,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 
 在一个特定点上以特定角度旋转整个三角。
 
-**Tags:**
+**标签:**
 
  - generic
 
@@ -919,7 +919,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 设置三角形的所有三个点。 任何坐标都设置为 `0` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | x1 | number | 是 | 0 | `x` 坐标为第一点。 |
 | y1 | number | 是 | 0 | `y` 坐标为第一点。 |

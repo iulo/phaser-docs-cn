@@ -16,7 +16,7 @@ Gamepad 对象, 取自 GamepadEvent 。
 
 **类型**: object
 
-**Member of**: Phaser.Types.Input.Gamepad
+**所属**: Phaser.Types.Input.Gamepad
 > 源码：[src/input/gamepad/typedefs/Pad.js#L1](https://github.com/phaserjs/phaser/blob/v4.1.0/src/input/gamepad/typedefs/Pad.js#L1)  
 引入版本：3.10.0
 

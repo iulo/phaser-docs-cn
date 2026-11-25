@@ -181,7 +181,7 @@ static
 
 **说明:**
 
-装货机已完成装货和加工.
+资源加载器已完成装货和加工.
 
 
 > 源码：[src/loader/const.js#L36](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L36)  
@@ -197,7 +197,7 @@ static
 
 **说明:**
 
-装货机已经被毁了。
+资源加载器已经被毁了。
 
 
 > 源码：[src/loader/const.js#L54](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L54)  
@@ -213,7 +213,7 @@ static
 
 **说明:**
 
-装货机闲置.
+资源加载器闲置.
 
 
 > 源码：[src/loader/const.js#L9](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L9)  
@@ -229,7 +229,7 @@ static
 
 **说明:**
 
-装货机正在积极装货.
+资源加载器正在积极装货.
 
 
 > 源码：[src/loader/const.js#L18](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L18)  
@@ -245,7 +245,7 @@ static
 
 **说明:**
 
-装入器正在处理它装入的文件 。
+资源加载器正在处理它装入的文件 。
 
 
 > 源码：[src/loader/const.js#L27](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L27)  
@@ -261,7 +261,7 @@ static
 
 **说明:**
 
-装货机要关机了
+资源加载器要关机了
 
 
 > 源码：[src/loader/const.js#L45](https://github.com/phaserjs/phaser/blob/v4.1.0/src/loader/const.js#L45)  
@@ -365,10 +365,10 @@ static
 
 创建一个带有默认值的 XHRSettings 对象。
 
-XHRSettings 对象用于: Phaser 装入器在制作 XMLHttp 请求调用以获取外部资产,例如图像、音频、 JSON 和其他文件时。您可以将自定义的 XHRSettings 对象传递给单个文件装入调用(例如, `this.load.image`) 在每个文件的基础上推翻默认请求配置,或通过加载器设置全局默认 `xhr` 属性。在从服务器上加载需要认证证书、自定义头、特定的 MIME 类型覆盖或非默认响应类型时,此功能是有用的。
+XHRSettings 对象用于: Phaser 资源加载器在制作 XMLHttp 请求调用以获取外部资源,例如图像、音频、 JSON 和其他文件时。您可以将自定义的 XHRSettings 对象传递给单个文件装入调用(例如, `this.load.image`) 在每个文件的基础上推翻默认请求配置,或通过加载器设置全局默认 `xhr` 属性。在从服务器上加载需要认证证书、自定义头、特定的 MIME 类型覆盖或非默认响应类型时,此功能是有用的。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | responseType | XMLHttpRequestResponseType | 是 | "''" | The responseType, such as 'text'. |
 | async | boolean | 是 | true | XHR请求是否使用同步? |

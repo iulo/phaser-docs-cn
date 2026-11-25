@@ -40,23 +40,23 @@ static
 
 **说明:**
 
-引用 Canvas 渲染器、 Canvas 渲染上下文、 游戏对象、 相机和母矩阵, 然后执行以下步骤 :
+引用 Canvas 渲染器、 Canvas 渲染上下文、 游戏对象、 摄像机和母矩阵, 然后执行以下步骤 :
 
-1. 检查源的α与相机α结合。 如果 0 或 更小, 则中止 。
+1. 检查源的α与摄像机α结合。 如果 0 或 更小, 则中止 。
 
-2. 使用相机和游戏对象矩阵,并把它们乘以,如果给出的话,与母矩阵结合。
+2. 使用摄像机和游戏对象矩阵,并把它们乘以,如果给出的话,与母矩阵结合。
 
 3. 设置上下文的混合模式,以作为游戏对象所使用的模式。
 
-4. 设定上下文的α值,以游戏对象与相机结合使用。
+4. 设定上下文的α值,以游戏对象与摄像机结合使用。
 
 5. 保存上下文状态。
 
 6. 通过 setTransform 将最终矩阵值设置到上下文中。
 
-7. 如果游戏对象有纹理框架, imageSmoothingEnabled 以帧. source 设置。scaleMode.
+7. 如果游戏对象有纹理帧, imageSmoothingEnabled 以帧. source 设置。scaleMode.
 
-8. 如果游戏对象没有纹理框架,imageSmoothingEnabled则基于Render.antalias设定.
+8. 如果游戏对象没有纹理帧,imageSmoothingEnabled则基于Render.antalias设定.
 
 此功能仅用于内部, 大部分Canvas Renderer 类都使用它 。
 
@@ -66,7 +66,7 @@ static
 | renderer | [Phaser.Renderer.Canvas.CanvasRenderer](/api/class/renderer-canvas-canvasrenderer) | 否 | 参考当前活跃的Canvas渲染器. |
 | ctx | CanvasRenderingContext2D | 否 | 设置转换的画布上下文 。 |
 | src | [Phaser.GameObjects.GameObject](/api/class/gameobjects-gameobject) | 否 | 正在渲染游戏对象。 可以是扩展基类的任意类型 。 |
-| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在制作游戏对象的相机 。 |
+| camera | [Phaser.Cameras.Scene2D.Camera](/api/class/cameras-scene2d-camera) | 否 | 正在制作游戏对象的摄像机 。 |
 | parentMatrix | [Phaser.GameObjects.Components.TransformMatrix](/api/class/gameobjects-components-transformmatrix) | 是 | 父变换矩阵,在渲染前应用到 Game Object 上. |
 
 

@@ -139,7 +139,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | lightY | number | 否 | 光中心的世界y坐标,被遮蔽器用来计算光圈落变. |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler# 批量着
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerPointLight.js#L213](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerPointLight.js#L213)  
@@ -165,7 +165,7 @@ Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/cla
 | drawingContext | [Phaser.Renderer.WebGL.DrawingContext](/api/class/renderer-webgl-drawingcontext) | 否 | 当前绘图背景 。 |
 
 
-**Overrides:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
+**重写:** Phaser.Renderer.WebGL.RenderNodes.BatchHandler#运行
 
 
 > 源码：[src/renderer/webgl/renderNodes/BatchHandlerPointLight.js#L163](https://github.com/phaserjs/phaser/blob/v4.1.0/src/renderer/webgl/renderNodes/BatchHandlerPointLight.js#L163)  

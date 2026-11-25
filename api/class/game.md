@@ -52,7 +52,7 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 
 缓存管理员的例子 。
 
-缓存管理器是一个全球性系统,负责缓存,访问和释放外部游戏资产.
+缓存管理器是一个全球性系统,负责缓存,访问和释放外部游戏资源.
 
 
 > 源码：[src/core/Game.js#L173](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L173)  
@@ -401,10 +401,10 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 当 DOM 准备好时, 这种方法会自动被调用。 它负责创建渲染器, 显示调试头, 将游戏布布加入 DOM 并释放“ 启动” 事件。 它会从基系统中听到“ 准备” 事件, 一旦收到, 就会调用 `Game.start` 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Fires:** [Phaser.Core.Events#event:BOOT](/api/event/core-events#boot)
+**触发事件:** [Phaser.Core.Events#event:BOOT](/api/event/core-events#boot)
 
 
 > 源码：[src/core/Game.js#L339](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L339)  
@@ -429,13 +429,13 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 如果您** 不需要** 再次在同一网页上运行 Phaser 您可以将 `noReturn` 参数设置为 `true` , 并且它将释放核心 Phaser 插件所持有的内存。 如果您需要在同一页上创建另一个游戏实例, 请将此保留为 `false` 。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
 | removeCanvas | boolean | 否 |  | 如果您希望将主帆布元素从 DOM 中移除, 或 `false` 将其留在原位, 请设定为 `true` 。 |
 | noReturn | boolean | 是 | false | 如果 `true` 全部核心 Phaser 插件被销毁。 如果您这样做, 您无法在同一网页上创建另一个 Phaser 实例 。 |
 
 
-**Fires:** [Phaser.Core.Events#event:DESTROY](/api/event/core-events#destroy)
+**触发事件:** [Phaser.Core.Events#event:DESTROY](/api/event/core-events#destroy)
 
 
 > 源码：[src/core/Game.js#L695](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L695)  
@@ -506,7 +506,7 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
 
-**Fires:** [Phaser.Core.Events#event:PRE_RENDER](/api/event/core-events#pre_render), [Phaser.Core.Events#event:POST_RENDER](/api/event/core-events#post_render)
+**触发事件:** [Phaser.Core.Events#event:PRE_RENDER](/api/event/core-events#pre_render), [Phaser.Core.Events#event:POST_RENDER](/api/event/core-events#post_render)
 
 
 > 源码：[src/core/Game.js#L505](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L505)  
@@ -525,7 +525,7 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 由可见度处理器自动调用。 这将将主循环设置为“ blured” 状态, 从而暂停它 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/core/Game.js#L637](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L637)  
@@ -544,7 +544,7 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 由可见度处理器自动调用。 这将将主循环设置为“ 聚焦” 状态, 恢复它 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/core/Game.js#L652](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L652)  
@@ -563,10 +563,10 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 由可见度处理器自动调用。 这将暂停主循环, 然后发出暂停事件 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Fires:** [Phaser.Core.Events#event:PAUSE](/api/event/core-events#pause)
+**触发事件:** [Phaser.Core.Events#event:PAUSE](/api/event/core-events#pause)
 
 
 > 源码：[src/core/Game.js#L561](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L561)  
@@ -585,10 +585,10 @@ Phaser.Game实例是整个Phaser游戏的主要控制器,负责处理启动进�
 由可见度处理器自动调用。 这将恢复主循环, 然后发出一个恢复事件 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
-**Fires:** [Phaser.Core.Events#event:RESUME](/api/event/core-events#resume)
+**触发事件:** [Phaser.Core.Events#event:RESUME](/api/event/core-events#resume)
 
 
 > 源码：[src/core/Game.js#L600](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L600)  
@@ -611,7 +611,7 @@ Phaser的所有内部系统都会暂停,游戏不会重新发售.
 注意它不暂停任何正在飞行的装货者请求。
 
 
-**Fires:** [Phaser.Core.Events#event:PAUSE](/api/event/core-events#pause)
+**触发事件:** [Phaser.Core.Events#event:PAUSE](/api/event/core-events#pause)
 
 
 > 源码：[src/core/Game.js#L577](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L577)  
@@ -632,7 +632,7 @@ Phaser的所有内部系统都会暂停,游戏不会重新发售.
 Phaser的所有内部系统都将恢复,游戏将重新开始渲染.
 
 
-**Fires:** [Phaser.Core.Events#event:RESUME](/api/event/core-events#resume)
+**触发事件:** [Phaser.Core.Events#event:RESUME](/api/event/core-events#resume)
 
 
 > 源码：[src/core/Game.js#L616](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L616)  
@@ -651,7 +651,7 @@ Phaser的所有内部系统都将恢复,游戏将重新开始渲染.
 由 Game. boot 自动调用, 一旦全球系统都完成设置。 此时游戏已准备好启动主循环运行, 也可以启用可见度处理器 。
 
 
-**Access:** 保护
+**访问权限:** 受保护
 
 
 > 源码：[src/core/Game.js#L401](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L401)  
@@ -680,7 +680,7 @@ Phaser的所有内部系统都将恢复,游戏将重新开始渲染.
 | delta | number | 否 | 自上一个帧以来的三角洲时间( ms) 。 这是一个平滑和上限的数值, 基于 FPS 速率 。 |
 
 
-**Fires:** [Phaser.Core.Events#event:PRE_STEP](/api/event/core-events#pre_step), [Phaser.Core.Events#event:STEP](/api/event/core-events#step), [Phaser.Core.Events#event:POST_STEP](/api/event/core-events#post_step), [Phaser.Core.Events#event:PRE_RENDER](/api/event/core-events#pre_render), [Phaser.Core.Events#event:POST_RENDER](/api/event/core-events#post_render)
+**触发事件:** [Phaser.Core.Events#event:PRE_STEP](/api/event/core-events#pre_step), [Phaser.Core.Events#event:STEP](/api/event/core-events#step), [Phaser.Core.Events#event:POST_STEP](/api/event/core-events#post_step), [Phaser.Core.Events#event:PRE_RENDER](/api/event/core-events#pre_render), [Phaser.Core.Events#event:POST_RENDER](/api/event/core-events#post_render)
 
 
 > 源码：[src/core/Game.js#L435](https://github.com/phaserjs/phaser/blob/v4.1.0/src/core/Game.js#L435)  

@@ -16,14 +16,14 @@ static
 
 **说明:**
 
-设定此天体在与其他天体碰撞时能否分离 。
+设定此物理体在与其他物理体碰撞时能否分离 。
 
-当一个身体是不可移动的,它意味着它根本动不了,甚至连碰撞重叠都无法分离。如果你只是想防止一个身体被其他身体撞倒,请参见`setPushable`方法。
+当一个物理体是不可移动的,它意味着它根本动不了,甚至连碰撞重叠都无法分离。如果你只是想防止一个物理体被其他物理体撞倒,请参见`setPushable`方法。
 
 **参数:**
-| 名称 | 类型 | 可选 | default | 说明 |
+| 名称 | 类型 | 可选 | 默认值 | 说明 |
 | ---- | ---- | -------- | ------- | ----------- |
-| value | boolean | 是 | true | 碰撞时,这具尸体是不可移动的(`true`)还是可移动的(`false`)。 |
+| value | boolean | 是 | true | 碰撞时,这具物理体是不可移动的(`true`)还是可移动的(`false`)。 |
 
 
 **返回值:** [Phaser.Physics.Arcade.Components.Immovable](/api/namespace/physics-arcade-components-immovable) - 此游戏对象 。
