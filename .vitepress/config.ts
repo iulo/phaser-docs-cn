@@ -1,9 +1,11 @@
 import { defineConfig } from 'vitepress'
+import { tokenizeSearch } from './search'
 
 export default defineConfig({
   lang: 'zh-CN',
   title: 'Phaser 4 中文文档',
   description: 'Phaser 4 简体中文社区文档，涵盖版本迁移与 WebGL 着色器。',
+  cleanUrls: true,
   srcExclude: ['README.md'],
   themeConfig: {
     nav: [
@@ -35,26 +37,7 @@ export default defineConfig({
       provider: 'local',
       options: {
         miniSearch: {
-          options: {
-            tokenize: (text) => {
-              const tokens: string[] = []
-              const segmenter = typeof Intl.Segmenter === 'function'
-                ? new Intl.Segmenter('zh-CN', { granularity: 'word' })
-                : undefined
-
-              for (const part of text.match(/\p{Script=Han}+|[a-z0-9_]+/gi) ?? []) {
-                if (/^\p{Script=Han}/u.test(part) && segmenter) {
-                  for (const segment of segmenter.segment(part)) {
-                    if (segment.isWordLike) tokens.push(segment.segment)
-                  }
-                } else {
-                  tokens.push(part)
-                }
-              }
-
-              return tokens
-            },
-          },
+          options: { tokenize: tokenizeSearch },
         },
         translations: {
           button: {
