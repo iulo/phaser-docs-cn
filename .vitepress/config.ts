@@ -49,12 +49,16 @@ export default defineConfig({
   description: 'Phaser 4 的简体中文指南、API 参考与 Phaser Editor v5 手册。',
   cleanUrls: true,
   srcExclude: ['README.md'],
+  vue: {
+    template: {
+      compilerOptions: { isCustomElement: tag => tag.startsWith('pagefind-') },
+    },
+  },
   themeConfig: {
     nav: [
       { text: '指南', link: '/guide/', activeMatch: '^/guide/' },
       { text: 'API 参考', link: '/api/', activeMatch: '^/api/' },
       { text: 'Editor 手册', link: '/editor/', activeMatch: '^/editor/' },
-      { text: '搜索', link: '/search' },
     ],
     sidebar: {
       '/guide/': [
@@ -87,7 +91,8 @@ export default defineConfig({
     lightModeSwitchTitle: '切换到浅色模式',
     darkModeSwitchTitle: '切换到深色模式',
     footer: {
-      message: '社区翻译 · <a href="/license.txt">上游 MIT 许可证</a>',
+      message: '<a href="https://github.com/iulo/phaser-docs-cn">社区翻译</a>',
+      copyright: 'Phaser 原始文档的版权归原权利人所有，本网站为非官方社区译本。',
     },
   },
 })

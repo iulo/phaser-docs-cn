@@ -1,0 +1,217 @@
+html:root {
+  --arcade-bg: #fff;
+  --arcade-surface: #f7f7f7;
+  --arcade-raised: #fff;
+  --arcade-ink: #181818;
+  --arcade-muted: #515151;
+  --arcade-line: #d6d6d6;
+  --arcade-accent: #242424;
+  --arcade-button-text: #fff;
+
+  --vp-c-bg: var(--arcade-bg);
+  --vp-c-bg-alt: var(--arcade-surface);
+  --vp-c-bg-elv: var(--arcade-raised);
+  --vp-c-bg-soft: var(--arcade-surface);
+  --vp-c-text-1: var(--arcade-ink);
+  --vp-c-text-2: var(--arcade-muted);
+  --vp-c-text-3: var(--arcade-muted);
+  --vp-c-divider: var(--arcade-line);
+  --vp-c-gutter: var(--arcade-line);
+  --vp-c-border: var(--arcade-line);
+  --vp-c-brand-1: var(--arcade-accent);
+  --vp-c-brand-2: var(--arcade-accent);
+  --vp-c-brand-3: var(--arcade-accent);
+  --vp-c-brand-soft: color-mix(in srgb, var(--arcade-accent) 14%, transparent);
+  --vp-sidebar-bg-color: var(--arcade-surface);
+  --vp-code-block-bg: var(--arcade-surface);
+}
+
+html.dark:root {
+  --arcade-bg: #151515;
+  --arcade-surface: #202020;
+  --arcade-raised: #191919;
+  --arcade-ink: #ededed;
+  --arcade-muted: #b9b9b9;
+  --arcade-line: #363636;
+  --arcade-accent: #e6e6e6;
+  --arcade-button-text: #151515;
+}
+
+.vp-doc p {
+  line-height: 1.85;
+}
+
+.vp-doc div[class*='language-'] {
+  border: 1px solid var(--arcade-line);
+}
+
+.arcade-home {
+  width: min(1184px, calc(100% - 64px));
+  margin: 0 auto;
+}
+
+.arcade-hero {
+  margin-top: 23px;
+  padding: 54px 24px 46px;
+  border: 2px solid var(--arcade-ink);
+  background:
+    linear-gradient(90deg, var(--arcade-line) 1px, transparent 1px),
+    linear-gradient(var(--arcade-line) 1px, transparent 1px),
+    var(--arcade-surface);
+  background-size: 24px 24px;
+  box-shadow: 6px 6px 0 var(--arcade-ink);
+  text-align: center;
+}
+
+.arcade-version {
+  color: var(--arcade-accent);
+  font-family: var(--vp-font-family-mono);
+  font-size: 18px;
+  font-weight: 650;
+  letter-spacing: 0.05em;
+}
+
+.arcade-hero h1 {
+  margin: 6px 0 20px;
+  font-size: clamp(44px, 6vw, 84px);
+  font-weight: 750;
+  line-height: 1.1;
+  letter-spacing: -0.035em;
+}
+
+.arcade-description {
+  color: var(--arcade-muted);
+  font-size: clamp(17px, 2vw, 21px);
+  line-height: 1.7;
+}
+
+.arcade-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 30px;
+}
+
+.arcade-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 46px;
+  padding: 0 20px;
+  border: 2px solid var(--arcade-accent);
+  background: var(--arcade-raised);
+  font-size: 15px;
+  font-weight: 650;
+}
+
+.arcade-button.primary {
+  background: var(--arcade-accent);
+  color: var(--arcade-button-text);
+}
+
+.arcade-button:hover {
+  opacity: 0.85;
+}
+
+.arcade-directory {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+  gap: 16px;
+  margin-top: 27px;
+}
+
+.arcade-directory a {
+  padding: 22px 22px 25px;
+  border: 2px solid var(--arcade-ink);
+  background: var(--arcade-raised);
+  box-shadow: 4px 4px 0 var(--arcade-ink);
+}
+
+.arcade-directory a:first-child {
+  background: var(--arcade-surface);
+}
+
+.arcade-directory a:hover {
+  border-color: var(--arcade-accent);
+}
+
+.arcade-home a:focus-visible {
+  outline: 2px solid var(--arcade-accent);
+  outline-offset: 4px;
+}
+
+.arcade-directory h2 {
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.arcade-directory p {
+  margin-top: 7px;
+  color: var(--arcade-muted);
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+.arcade-symbol {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  margin-bottom: 13px;
+  border: 1px solid var(--arcade-accent);
+  background: var(--vp-c-brand-soft);
+  color: var(--arcade-accent);
+  font-family: var(--vp-font-family-mono);
+  font-size: 17px;
+  font-weight: 700;
+}
+
+:is(pagefind-modal, pagefind-modal-trigger, pagefind-searchbox) {
+  --pf-background: var(--arcade-raised);
+  --pf-text: var(--arcade-ink);
+  --pf-text-secondary: var(--arcade-muted);
+  --pf-text-muted: var(--arcade-muted);
+  --pf-hover: var(--arcade-surface);
+  --pf-border: var(--arcade-line);
+  --pf-border-focus: var(--arcade-accent);
+  --pf-outline-focus: var(--arcade-accent);
+  --pf-mark: var(--arcade-ink);
+  --pf-skeleton: var(--arcade-surface);
+  --pf-skeleton-shine: var(--arcade-line);
+  --pf-border-radius: 0;
+  --pf-font: var(--vp-font-family-base);
+}
+
+.arcade-nav-search {
+  display: flex;
+  flex: none;
+  margin-inline: 24px 16px;
+  pointer-events: auto;
+}
+
+@media (max-width: 800px) {
+  .arcade-home {
+    width: calc(100% - 40px);
+  }
+
+  .arcade-directory {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 767px) {
+  .arcade-nav-search {
+    margin-inline: 0;
+  }
+
+  pagefind-modal-trigger :is(.pf-trigger-text, .pf-trigger-shortcut) {
+    display: none !important;
+  }
+}
+
+@media (max-width: 600px) {
+  .arcade-home {
+    width: calc(100% - 32px);
+  }
+}
