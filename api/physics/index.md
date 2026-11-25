@@ -1,0 +1,55 @@
+# Physics {#page-title}
+
+Phaser v4.1.0 · [英文原文](https://phaser.io/oss/docs/api-documentation/physics/)
+
+## Arcade 物理 {#arcade-physics}
+
+* [Phaser.Physics.Arcade.ArcadePhysics](/api/class/physics-arcade-arcadephysics)
+* [Phaser.Physics.Arcade.Body](/api/class/physics-arcade-body)
+* [Phaser.Physics.Arcade.Collider](/api/class/physics-arcade-collider)
+* [Phaser.Physics.Arcade.Components](/api/namespace/physics-arcade-components)
+* [Phaser.Physics.Arcade.DYNAMIC_BODY](/api/namespace/physics-arcade#DYNAMIC_BODY)
+* [Phaser.Physics.Arcade.Events](/api/namespace/physics-arcade-events)
+* [Phaser.Physics.Arcade.FACING_DOWN](/api/namespace/physics-arcade#FACING_DOWN)
+* [Phaser.Physics.Arcade.FACING_LEFT](/api/namespace/physics-arcade#FACING_LEFT)
+* [Phaser.Physics.Arcade.FACING_NONE](/api/namespace/physics-arcade#FACING_NONE)
+* [Phaser.Physics.Arcade.FACING_RIGHT](/api/namespace/physics-arcade#FACING_RIGHT)
+* [Phaser.Physics.Arcade.FACING_UP](/api/namespace/physics-arcade#FACING_UP)
+* [Phaser.Physics.Arcade.Factory](/api/class/physics-arcade-factory)
+* [Phaser.Physics.Arcade.GetCollidesWith](/api/function/physics#GetCollidesWith)
+* [Phaser.Physics.Arcade.GetOverlapX](/api/function/physics#GetOverlapX)
+* [Phaser.Physics.Arcade.GetOverlapY](/api/function/physics#GetOverlapY)
+* [Phaser.Physics.Arcade.Group](/api/class/physics-arcade-group)
+* [Phaser.Physics.Arcade.GROUP](/api/namespace/physics-arcade#GROUP)
+* [Phaser.Physics.Arcade.Image](/api/class/physics-arcade-image)
+* [Phaser.Physics.Arcade.ProcessX](/api/namespace/physics-arcade-processx)
+* [Phaser.Physics.Arcade.ProcessY](/api/namespace/physics-arcade-processy)
+* [Phaser.Physics.Arcade.SeparateX](/api/function/physics#SeparateX)
+* [Phaser.Physics.Arcade.SeparateY](/api/function/physics#SeparateY)
+* [Phaser.Physics.Arcade.SetCollisionObject](/api/function/physics#SetCollisionObject)
+* [Phaser.Physics.Arcade.Sprite](/api/class/physics-arcade-sprite)
+* [Phaser.Physics.Arcade.STATIC_BODY](/api/namespace/physics-arcade#STATIC_BODY)
+* [Phaser.Physics.Arcade.StaticBody](/api/class/physics-arcade-staticbody)
+* [Phaser.Physics.Arcade.StaticGroup](/api/class/physics-arcade-staticgroup)
+* [Phaser.Physics.Arcade.Tilemap](/api/namespace/physics-arcade-tilemap)
+* [Phaser.Physics.Arcade.TILEMAPLAYER](/api/namespace/physics-arcade#TILEMAPLAYER)
+* [Phaser.Physics.Arcade.World](/api/class/physics-arcade-world)
+
+## Matter 物理 {#matter-physics}
+
+* [Phaser.Physics.Matter.BodyBounds](/api/class/physics-matter-bodybounds)
+* [Phaser.Physics.Matter.Components](/api/namespace/physics-matter-components)
+* [Phaser.Physics.Matter.Events](/api/namespace/physics-matter-events)
+* [Phaser.Physics.Matter.Factory](/api/class/physics-matter-factory)
+* [Phaser.Physics.Matter.Image](/api/class/physics-matter-image)
+* [Phaser.Physics.Matter.Matter](/api/namespace/physics-matter-matter)
+* [Phaser.Physics.Matter.MatterGameObject](/api/function/physics#MatterGameObject)
+* [Phaser.Physics.Matter.MatterPhysics](/api/class/physics-matter-matterphysics)
+* [Phaser.Physics.Matter.PhysicsEditorParser](/api/namespace/physics-matter-physicseditorparser)
+* [Phaser.Physics.Matter.PhysicsJSONParser](/api/namespace/physics-matter-physicsjsonparser)
+* [Phaser.Physics.Matter.PointerConstraint](/api/class/physics-matter-pointerconstraint)
+* [Phaser.Physics.Matter.Sprite](/api/class/physics-matter-sprite)
+* [Phaser.Physics.Matter.TileBody](/api/class/physics-matter-tilebody)
+* [Phaser.Physics.Matter.World](/api/class/physics-matter-world)
+
+---

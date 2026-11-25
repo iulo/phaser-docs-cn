@@ -3,3 +3,4 @@ node_modules/
 .vitepress/dist/
 .wrangler/
 .DS_Store
+__pycache__/

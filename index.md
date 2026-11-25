@@ -4,22 +4,22 @@ title: 首页
 hero:
   name: Phaser 4
   text: 简体中文文档
-  tagline: 查阅 Phaser 4 的迁移步骤、渲染机制和着色器用法。
+  tagline: 从第一个游戏到场景、渲染和物理，查阅 Phaser 4 的中文指南与 API。
   actions:
     - theme: brand
-      text: 从 Phaser 3 迁移
-      link: /guide/migration
+      text: 阅读指南
+      link: /guide/
     - theme: alt
-      text: 着色器指南
-      link: /guide/shaders
+      text: 浏览 API
+      link: /api/
 features:
-  - title: 迁移指南
-    details: 按影响范围了解 Phaser 4 的破坏性变更，逐项核对项目升级。
+  - title: Phaser 4 指南
+    details: 学习游戏结构、渲染、输入、资源和物理系统。
+    link: /guide/
+  - title: Phaser v4.1.0 API
+    details: 查阅类、命名空间、函数、事件和类型定义。
+    link: /api/
+  - title: 从 Phaser 3 迁移
+    details: 核对 Phaser 4 的破坏性变更和升级步骤。
     link: /guide/migration
-  - title: 着色器指南
-    details: 理解 WebGL 渲染、批处理和渲染节点，编写自定义着色器与滤镜。
-    link: /guide/shaders
-  - title: 官方 API 参考
-    details: 在 Phaser 官网按版本查看类、方法、事件和类型。
-    link: https://www.phaser.io/oss/docs/api-documentation/api-documentation
 ---

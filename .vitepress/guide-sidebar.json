@@ -1,0 +1,230 @@
+[
+  {
+    "text": "什么是 Phaser？",
+    "link": "/guide/getting-started/what-is-phaser"
+  },
+  {
+    "text": "安装 Phaser",
+    "link": "/guide/getting-started/installation"
+  },
+  {
+    "text": "配置开发环境",
+    "link": "/guide/getting-started/set-up-dev-environment"
+  },
+  {
+    "text": "项目模板",
+    "link": "/guide/getting-started/project-templates"
+  },
+  {
+    "text": "制作第一个 Phaser 游戏",
+    "link": "/guide/getting-started/making-your-first-phaser-game"
+  },
+  {
+    "text": "动作（Actions）",
+    "link": "/guide/concepts/actions"
+  },
+  {
+    "text": "动画",
+    "link": "/guide/concepts/animations"
+  },
+  {
+    "text": "音频",
+    "link": "/guide/concepts/audio"
+  },
+  {
+    "text": "摄像机",
+    "link": "/guide/concepts/cameras"
+  },
+  {
+    "text": "数据管理器",
+    "link": "/guide/concepts/data-manager"
+  },
+  {
+    "text": "设备",
+    "link": "/guide/concepts/device"
+  },
+  {
+    "text": "显示",
+    "link": "/guide/concepts/display"
+  },
+  {
+    "text": "事件",
+    "link": "/guide/concepts/events"
+  },
+  {
+    "text": "视觉特效（FX）",
+    "link": "/guide/concepts/fx"
+  },
+  {
+    "text": "游戏",
+    "link": "/guide/concepts/game"
+  },
+  {
+    "text": "游戏对象",
+    "link": "/guide/concepts/gameobjects"
+  },
+  {
+    "text": "游戏对象组件",
+    "link": "/guide/concepts/gameobjects/components"
+  },
+  {
+    "text": "游戏对象工厂",
+    "link": "/guide/concepts/gameobjects/factories"
+  },
+  {
+    "text": "位图文本",
+    "link": "/guide/concepts/gameobjects/bitmap-text"
+  },
+  {
+    "text": "位块传送器（Blitter）",
+    "link": "/guide/concepts/gameobjects/blitter"
+  },
+  {
+    "text": "容器",
+    "link": "/guide/concepts/gameobjects/container"
+  },
+  {
+    "text": "显示列表",
+    "link": "/guide/concepts/gameobjects/display-list"
+  },
+  {
+    "text": "DOM 元素",
+    "link": "/guide/concepts/gameobjects/dom-element"
+  },
+  {
+    "text": "图形",
+    "link": "/guide/concepts/gameobjects/graphics"
+  },
+  {
+    "text": "组（Group）",
+    "link": "/guide/concepts/gameobjects/group"
+  },
+  {
+    "text": "图像",
+    "link": "/guide/concepts/gameobjects/image"
+  },
+  {
+    "text": "层",
+    "link": "/guide/concepts/gameobjects/layer"
+  },
+  {
+    "text": "光源",
+    "link": "/guide/concepts/gameobjects/light"
+  },
+  {
+    "text": "网格（Mesh）",
+    "link": "/guide/concepts/gameobjects/mesh"
+  },
+  {
+    "text": "九宫格（NineSlice）",
+    "link": "/guide/concepts/gameobjects/nine-slice"
+  },
+  {
+    "text": "粒子",
+    "link": "/guide/concepts/gameobjects/particles"
+  },
+  {
+    "text": "平面（Plane）",
+    "link": "/guide/concepts/gameobjects/plane"
+  },
+  {
+    "text": "渲染纹理",
+    "link": "/guide/concepts/gameobjects/render-texture"
+  },
+  {
+    "text": "绳索",
+    "link": "/guide/concepts/gameobjects/rope"
+  },
+  {
+    "text": "着色器",
+    "link": "/guide/concepts/gameobjects/shader"
+  },
+  {
+    "text": "精灵",
+    "link": "/guide/concepts/gameobjects/sprite"
+  },
+  {
+    "text": "文本",
+    "link": "/guide/concepts/gameobjects/text"
+  },
+  {
+    "text": "平铺精灵",
+    "link": "/guide/concepts/gameobjects/tile-sprite"
+  },
+  {
+    "text": "视频",
+    "link": "/guide/concepts/gameobjects/video"
+  },
+  {
+    "text": "几何",
+    "link": "/guide/concepts/geometry"
+  },
+  {
+    "text": "输入",
+    "link": "/guide/concepts/input"
+  },
+  {
+    "text": "资源加载器",
+    "link": "/guide/concepts/loader"
+  },
+  {
+    "text": "缓存",
+    "link": "/guide/concepts/loader/cache"
+  },
+  {
+    "text": "数学",
+    "link": "/guide/concepts/math"
+  },
+  {
+    "text": "物理",
+    "link": "/guide/concepts/physics"
+  },
+  {
+    "text": "Arcade 物理",
+    "link": "/guide/concepts/physics/arcade"
+  },
+  {
+    "text": "Matter 物理",
+    "link": "/guide/concepts/physics/matter"
+  },
+  {
+    "text": "缩放管理器",
+    "link": "/guide/concepts/scale-manager"
+  },
+  {
+    "text": "场景",
+    "link": "/guide/concepts/scenes"
+  },
+  {
+    "text": "场景间通信",
+    "link": "/guide/concepts/scenes/cross-scene-communication"
+  },
+  {
+    "text": "纹理",
+    "link": "/guide/concepts/textures"
+  },
+  {
+    "text": "时间",
+    "link": "/guide/concepts/time"
+  },
+  {
+    "text": "补间动画",
+    "link": "/guide/concepts/tweens"
+  },
+  {
+    "text": "实用工具",
+    "link": "/guide/concepts/utils"
+  },
+  {
+    "text": "混合模式",
+    "link": "/guide/concepts/display/blend-mode"
+  },
+  {
+    "text": "颜色",
+    "link": "/guide/concepts/display/color"
+  },
+  {
+    "text": "遮罩",
+    "link": "/guide/concepts/display/masks"
+  }
+]

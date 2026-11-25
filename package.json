@@ -5,10 +5,11 @@
   "packageManager": "pnpm@10.34.9",
   "scripts": {
     "dev": "vitepress dev",
-    "build": "vitepress build",
+    "build": "vitepress build && pagefind --site .vitepress/dist --root-selector .vp-doc",
     "preview": "vitepress preview"
   },
   "devDependencies": {
+    "pagefind": "1.6.0",
     "vitepress": "1.6.4"
   }
 }
